@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>help2man</Name>
+        <Homepage>http://www.gnu.org/software/help2man</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>GNU utility to convert program --help output to a man page</Summary>
+        <Description>Help2man is a tool which generate man page from help text of programs.</Description>
+        <Archive sha1sum="f131dc48c94ce6760a6ee90bb508d9b4b857cfa9" type="tarxz">http://ftp.gnu.org/gnu/help2man/help2man-1.47.8.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>perl-Locale-gettext</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>help2man-1.46.1-linguas.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>help2man</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-Locale-gettext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>help2man-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for help2man</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">help2man</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>help2man-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for help2man</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">help2man</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>1.47.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

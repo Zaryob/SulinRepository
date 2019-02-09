@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gettext</Name>
+        <Homepage>http://www.gnu.org/software/gettext/gettext.html</Homepage>
+        <Packager>
+             <Name>Süleyman POYRAZ</Name>
+             <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>GNU libraries and utilities for producing multi-lingual messages</Summary>
+        <Description>The GNU gettext package provides a set of tools and documentation for producing multi-lingual messages in programs. Tools include a set of conventions about how programs should be written to support message catalogs, a directory and file naming organization for the message catalogs, a runtime library which supports the retrieval of translated messages, and stand-alone programs for handling the translatable and the already translated strings. Gettext provides an easy to use library and tools for creating, using, and modifying natural language catalogs and is a powerful and simple method for internationalizing programs.</Description>
+        <Archive sha1sum="b5d24ba2958c91fc5cc0058165837c99a0f58784" type="targz">http://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libunistring-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>gettext</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libunistring</Dependency>
+            <Dependency>libgomp</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/gettext-0.19.8</Path>
+            <Path fileType="data">/usr/share/gettext</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gettext-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for gettext</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gettext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="header">/usr/include</Path>>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gettext-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>gettext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/gettext/html</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gettext-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>gettext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>0.19.8.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

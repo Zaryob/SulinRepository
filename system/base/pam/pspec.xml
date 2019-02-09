@@ -1,0 +1,74 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pam</Name>
+        <Homepage>http://www.kernel.org/pub/linux/libs/pam/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>PAM</License>
+        <IsA>library</IsA>
+        <Summary>Pluggable Authentication Modules</Summary>
+        <Description>PAM (Pluggable Authentication Modules) is a system security tool that allows system administrators to set authentication policy without having to recompile programs that handle authentication.</Description>
+        <Archive sha1sum="e956252e81d824c35a60c9b50919ca0767f8a8ec" type="tarbz2">http://www.linux-pam.org/library/Linux-PAM-1.3.0.tar.bz2</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="dlopen.sh" permission="0755">dlopen.sh</AdditionalFile>
+            <AdditionalFile target="dlopen-test.sh" permission="0755">dlopen-test.sh</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>cracklib-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pam</Name>
+        <RuntimeDependencies>
+            <Dependency>cracklib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="data">/var/run/console</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/limit.d/90-nproc.conf">90-nproc.conf</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>pam-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for pam</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">pam</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

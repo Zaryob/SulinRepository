@@ -1,0 +1,120 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libxml2</Name>
+        <Homepage>http://www.xmlsoft.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Version 2 of the library to manipulate XML files</Summary>
+        <Description>Libxml2 is the XML C parser and toolkit developed for the Gnome project (but usable outside of the Gnome platform).</Description>
+        <Archive sha1sum="16730247d995dd4f3636298075f13301456f7d45" type="targz">ftp://xmlsoft.org/libxml2/libxml2-2.9.9-rc2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+          <Patch>libxml2-2.9.8-python3_hack-1.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libxml2</Name>
+        <RuntimeDependencies>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/cmake</Path>
+            <Path fileType="library">/usr/lib/xml2Conf.sh</Path>
+            <Path fileType="library">/usr/lib/libxml2.so*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-libxml2</Name>
+	<PartOf>programming.language.python</PartOf>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/lib/python3.7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libxml2-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libxml2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libxml2-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libxml2-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for libxml2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libxml2-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libxml2</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>xz-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>readline-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libxml2</Dependency>
+            <Dependency>xz-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/cmake</Path>
+            <Path fileType="library">/usr/lib32/xml2Conf.sh</Path>
+            <Path fileType="library">/usr/lib32/libxml2.so*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>2.9.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

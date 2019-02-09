@@ -1,0 +1,12 @@
+<INARY>
+    <Source>
+        <Name>ca-certificates</Name>
+        <Summary xml:lang="tr">Genel CA sertifikaları</Summary>
+        <Description xml:lang="en">Common CA certificates</Description>
+    </Source>
+    <Package>
+        <Name>ca-certificates-pages</Name>
+        <Summary xml:lang="tr">ca-certificates için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour biosdevname</Summary>
+    </Package>
+</INARY>

@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libpipeline</Name>
+        <Homepage>http://libpipeline.nongnu.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>library</IsA>
+        <Summary>pipeline manipulation library</Summary>
+        <Description>libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way.</Description>
+        <Archive sha1sum="1c885e4d5551933c905e751048abb119593c53f4" type="targz">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libpipeline</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libpipeline*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libpipeline-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libpipeline</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpipeline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libpipeline-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for libpipeline</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpipeline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libpipeline-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for libpipeline</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpipeline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

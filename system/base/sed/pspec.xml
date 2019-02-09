@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>sed</Name>
+        <Homepage>http://sed.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>GNU Stream Editor</Summary>
+        <Description>Sed is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).</Description>
+        <Archive sha1sum="dbc842f6fdf538f366d97e7c4b4f241eaefd14a5" 
+type="tarxz">mirrors://gnu/sed/sed-4.7.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>acl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sed</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+        <Package>
+            <Name>sed-docs</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <RuntimeDependencies>
+                <Dependency>sed</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>sed-pages</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <Summary>Manpages for sed</Summary>
+            <RuntimeDependencies>
+                <Dependency release="current">sed</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+    <History>
+        <Update release="2">
+            <Date>2019-01-19</Date>
+            <Version>4.7</Version>
+            <Comment>Kararlı son sürüme yükseltildi.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>4.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

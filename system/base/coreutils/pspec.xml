@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>coreutils</Name>
+        <Homepage>http://www.gnu.org/software/coreutils/</Homepage>
+        <Packager>
+          <Name>Süleyman POYRAZ</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>app:console</IsA>
+        <Summary>A set of basic GNU tools commonly used in shell scripts</Summary>
+        <Description>Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)</Description>
+        <Archive sha1sum="bd5d495c162730873a2774acd1c5091fbf0c55a4" type="tarxz">http://ftp.gnu.org/gnu/coreutils/coreutils-8.30.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>shadow</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <Dependency>texinfo</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>coreutils</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>libcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>coreutils-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for coreutils package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">coreutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>coreutils-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for coreutils package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">coreutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>8.30</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

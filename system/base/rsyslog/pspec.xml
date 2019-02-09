@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rsyslog</Name>
+        <Homepage>http://www.rsyslog.com</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>service</IsA>
+        <Summary>Enhanced system logging and kernel message trapping daemons</Summary>
+        <Description>rsyslog is an enhanced multi-threaded syslogd supporting, among others, MySQL, syslog/tcp, RFC 3195, permitted sender lists, filtering on any message part, and fine grain output format control. It is quite compatible with stock sysklogd and can be used as a drop-in replacement.</Description>
+        <Archive sha1sum="d3e949feccc29e432e0586cbcd7b9fd25aaf1a24" type="targz">http://www.rsyslog.com/files/download/rsyslog/rsyslog-8.40.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>json-c-devel</Dependency>
+            <Dependency>libestr-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>liblogging-devel</Dependency>
+            <Dependency>libfastjson-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rsyslog</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>json-c</Dependency>
+            <Dependency>libestr</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>liblogging</Dependency>
+            <Dependency>libfastjson</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/rsyslogd</Path>
+            <Path fileType="library">/usr/lib/rsyslog</Path>
+            <Path fileType="config">/etc/logrotate.d</Path>
+            <Path fileType="config">/etc/conf.d</Path>
+            <Path fileType="config">/etc/rsyslog.d</Path>
+            <Path fileType="config">/etc/rsyslog.conf</Path>
+            <Path fileType="data">/var</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/rsyslog">rsyslog.logrotate</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/rsyslog.conf">rsyslog.conf</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/etc/rsyslog.d/50-default.conf">50-default.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/rsyslog">rsyslog.sysconfig</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>rsyslog-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>rsyslog</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>rsyslog-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for rsyslog</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">rsyslog</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>8.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

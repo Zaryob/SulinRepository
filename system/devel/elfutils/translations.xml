@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>elfutils</Name>
+        <Summary xml:lang="tr">Derlenmiş objeleri işlemek için gereken aletler koleksiyonu</Summary>
+        <Description xml:lang="tr">elfutils derlenmiş objeleri işlemek için gereken çeşitli araçlar içerir.</Description>
+    </Source>
+    <Package>
+        <Name>elfutils-32bit</Name>
+        <Summary xml:lang="tr">elfutils için 32-bit paylaşımlı kitaplıklar</Summary>
+    </Package>
+    <Package>
+        <Name>elfutils-docs</Name>
+        <Summary xml:lang="tr">elfutils için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour elfutils</Summary>
+    </Package>
+</INARY>

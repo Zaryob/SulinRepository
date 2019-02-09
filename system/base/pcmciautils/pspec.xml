@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pcmciautils</Name>
+        <Homepage>http://www.kernel.org/pub/linux/utils/kernel/pcmcia/pcmcia.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Various utilities dealing with the PCMCIA bus</Summary>
+        <Description>pcmciautils contains the initialization tools necessary to allow the PCMCIA subsystem to behave as every other hotpluggable bus system.</Description>
+        <Archive sha1sum="a0d55fed0bab64b618b1e3a8639733316084cb51" type="targz">http://http.us.debian.org/debian/pool/main/p/pcmciautils/pcmciautils_018.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>sysfsutils-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>config-opts-fallback.patch</Patch>
+            <Patch>no-modprobe-rules.patch</Patch>
+            <Patch>remove-libsysfs-dep.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>pcmciautils</Name>
+        <RuntimeDependencies>
+            <Dependency>sysfsutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/lib/udev</Path>
+            <Path fileType="config">/etc/pcmcia</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pcmciautils-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>pcmciautils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pcmciautils-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for pcmciautils</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">pcmciautils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>018</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

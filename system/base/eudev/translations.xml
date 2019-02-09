@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>eudev</Name>
+        <Summary xml:lang="tr">eudev sistemd-udev uygulamasının çatalı</Summary>
+        <Description xml:lang="tr">eudev sistem-udev uygulamasının OpenRC, Upstart gibi başlangıç sistemleri ile uyumu için  hazırlanmış çatalı</Description>
+    </Source>
+    <Package>
+        <Name>eudev-docs</Name>
+        <Summary xml:lang="tr">eudev için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour eudev</Summary>
+    </Package>
+    <Package>
+        <Name>eudev-pages</Name>
+        <Summary xml:lang="tr">eudev için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour eudev</Summary>
+    </Package>
+</INARY>

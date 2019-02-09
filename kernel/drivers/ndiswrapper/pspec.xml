@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ndiswrapper</Name>
+        <Homepage>http://ndiswrapper.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>driver</IsA>
+        <Summary>A network driver wrapper</Summary>
+        <Description>module-ndiswrapper allows you to use Windows XP drivers for WLAN cards without proper Linux drivers.</Description>
+        <Archive sha1sum="213854ca8a83f9b5972db8fa873d346124e4bcb5" type="targz">http://download.sourceforge.net/ndiswrapper/ndiswrapper-1.61.tar.gz</Archive>
+        <BuildDependencies>
+             <Dependency>kernel-module-headers</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>linux-4.11.patch</Patch>
+            <Patch>linux-4.13.patch</Patch>
+            <Patch>linux-4.15.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>ndiswrapper</Name>
+        <RuntimeDependencies>
+            <Dependency>kernel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library" permanent="true">/lib/modules</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/etc/ndiswrapper</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-10-05</Date>
+            <Version>1.61</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

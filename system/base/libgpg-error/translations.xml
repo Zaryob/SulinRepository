@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libgpg-error</Name>
+        <Summary xml:lang="tr">GnuPG bileşenlerinin kullandığı hata değerleri için kitaplık</Summary>
+        <Summary xml:lang="fr">Contient les fonctions de gestion d'erreur utilisées par le logiciel GnuPG.</Summary>
+        <Description xml:lang="tr">libgpg-error, tüm GnuPG bileşenleri için ortak olan hata değerlerini tanımlayan bir kitaplıktır.</Description>
+    </Source>
+
+    <Package>
+        <Name>libgpg-error-devel</Name>
+        <Summary xml:lang="tr">libgpg-error için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>libgpg-error-32bit</Name>
+        <Summary xml:lang="tr">libgpg-error için 32-bit paylaşımlı kitaplıklar</Summary>
+    </Package>
+    <Package>
+        <Name>libgpg-error-docs</Name>
+        <Summary xml:lang="tr">libgpg-error için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour libgpg-error</Summary>
+    </Package>
+    <Package>
+        <Name>libgpg-error-pages</Name>
+        <Summary xml:lang="tr">libgpg-error için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour libgpg-error</Summary>
+    </Package>
+</INARY>

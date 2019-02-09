@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>klibc</Name>
+        <Homepage>http://www.zytor.com/mailman/listinfo/klibc</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A minimal libc subset for use with initramfs</Summary>
+        <Description>klibc, or "early userspace", is library part of an effort which tries to move as much initialization code in Linux as possible out of the kernel.</Description>
+        <Archive sha1sum="3dd48eaf29be52a01e90544624e9e88a0c70ea30" type="tarxz">https://www.kernel.org/pub/linux/libs/klibc/2.0/klibc-2.0.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>kernel-module-headers</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>klibc</Name>
+        <Files>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib/klibc/bin</Path>
+            <Path fileType="header">/usr/lib/klibc/include</Path>
+            <Path fileType="library">/usr/lib/klibc/lib</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/aclocal/klibc.m4" permission="0644" owner="root">klibc.m4</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>klibc-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for klibc package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">klibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <Package>
+        <Name>klibc-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for klibc package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">klibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

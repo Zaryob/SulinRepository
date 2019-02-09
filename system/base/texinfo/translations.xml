@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>texinfo</Name>
+        <Summary xml:lang="tr">GNU info (bilgi) programı ve araçları</Summary>
+        <Summary xml:lang="fr">programme et utilitaires GNU info.</Summary>
+        <Summary xml:lang="de">GNU Info Prgramm und Werkzeuge</Summary>
+    </Source>
+    <Package>
+        <Name>texinfo-docs</Name>
+        <Summary xml:lang="tr">texinfo için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour texinfo</Summary>
+    </Package>
+    <Package>
+        <Name>texinfo-pages</Name>
+        <Summary xml:lang="tr">texinfo için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour texinfo</Summary>
+    </Package>
+</INARY>

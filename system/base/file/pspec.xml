@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>file</Name>
+        <Homepage>http://www.darwinsys.com/file/</Homepage>
+        <Packager>
+          <Name>Süleyman POYRAZ</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Program to identify a file's format by scanning binary data for patterns</Summary>
+        <Description>Program to identify a file's format by scanning binary data for patterns.</Description>
+        <Archive sha1sum="a6f73580a93b768bfedd01ba54868375b7eb7bd0" type="targz">ftp://ftp.astron.com/pub/file/file-5.35.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>file</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/misc</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-filemagic</Name>
+	<IsA>system.base</IsA>
+        <RuntimeDependencies>
+            <Dependency>file</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+		<Path fileType="executable">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>file-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for file package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">file</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>file-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for file package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">file</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-01-17</Date>
+            <Version>5.35</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

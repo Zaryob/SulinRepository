@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>polkit</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/PolicyKit</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>service</IsA>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>PolicyKit Authorization Framework</Summary>
+        <Description>polkit is a toolkit for defining and handling authorizations. It is used for allowing unprivileged processes to speak to privileged processes.</Description>
+        <Archive sha1sum="208b7e44fcf0f515d067d37307af9ea1419eb305" type="targz">http://www.freedesktop.org/software/polkit/releases/polkit-0.115.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>spidermonkey-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">use-system-locale-in-gobject-api.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>polkit-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development headers for polkit</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">polkit</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>polkit</Name>
+        <RuntimeDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>spidermonkey</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib64</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/var/lib/polkit-1</Path>
+            <Path fileType="data">/lib/systemd</Path>
+            <Path fileType="data">/usr/share/gettext</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/polkit-1/rules.d/70-desktop-policy.conf">70-desktop-policy.conf</AdditionalFile>
+            <!-- Example policy files from fedora
+            <AdditionalFile owner="root" permission="0644" target="/var/lib/polkit-1/localauthority/10-vendor.d/10-desktop-policy.pkla">10-desktop-policy.pkla</AdditionalFile>
+            -->
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>polkit-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>polkit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>polkit-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for polkit</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">polkit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/pklocalauthority.8">man/pklocalauthority.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/polkit.8">man/polkit.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/polkitd.8">man/polkitd.8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/pkaction.1">man/pkaction.1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/pkcheck.1">man/pkcheck.1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/pkexec.1">man/pkexec.1</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>0.115</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

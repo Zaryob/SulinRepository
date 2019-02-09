@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gawk</Name>
+        <Homepage>http://www.gnu.org/software/gawk/gawk.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>GNU awk pattern-matching language</Summary>
+        <Description>The awk utility interprets a special-purpose programming language that makes it possible to handle simple data-reformatting jobs with just a few lines of code. It helps you to make changes in various text files wherever certain patterns appear, or extract data from parts of certain lines while discarding the rest. Gawk is the GNU implementation of awk.</Description>
+        <Archive sha1sum="71fc3595865ea6ea859587cbbb35cbf9aeb39d2d" type="tarxz">http://mirrors.kernel.org/gnu/gawk/gawk-4.2.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>mpfr-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gawk</Name>
+        <RuntimeDependencies>
+            <Dependency>readline</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>mpfr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="config">/etc/profile.d</Path>
+            <Path fileType="library">/usr/lib/gawk</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/awk</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gawk-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for gawk package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gawk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gawk-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for gawk package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gawk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>4.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

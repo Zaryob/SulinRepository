@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libgcrypt</Name>
+        <Homepage>http://www.gnupg.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>General purpose crypto library</Summary>
+        <Description>Libgcrypt is a general purpose crypto library based on the code used in GNU Privacy Guard.</Description>
+        <Archive sha1sum="4a8ef9db6922f3a31992aca5640b4198a69b58fc" type="tarbz2">https://ftp.osuosl.org/pub/blfs/conglomeration/libgcrypt/libgcrypt-1.8.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libgpg-error-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgcrypt</Name>
+        <RuntimeDependencies>
+            <Dependency>libgpg-error</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libgcrypt.so*</Path>
+            <Path fileType="config">/etc/gcrypt</Path>
+            <Path fileType="executable">/usr/bin/dumpsexp</Path>
+            <Path fileType="executable">/usr/bin/hmac256</Path>
+            <Path fileType="executable">/usr/bin/mpicalc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgcrypt-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libgcrypt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libgcrypt</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="executable">/usr/bin/*-config</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgcrypt-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libgcrypt</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libgpg-error-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libgpg-error-32bit</Dependency>
+            <Dependency release="current">libgcrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libgcrypt.so*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgcrypt-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for libgcrypt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libgcrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libgcrypt-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for libgcrypt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libgcrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>1.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

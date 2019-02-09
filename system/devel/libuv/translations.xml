@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libuv</Name>
+        <Summary xml:lang="tr">Coklu platform destek kutuphanesi.</Summary>
+    </Source>
+
+    <Package>
+        <Name>libuv-docs</Name>
+        <Summary xml:lang="tr">libuv için belgelendirme dosyaları</Summary>
+    </Package>
+    <Package>
+        <Name>libuv-devel</Name>
+        <Summary xml:lang="tr">libuv için geliştirme dosyaları</Summary>
+    </Package>
+
+</INARY>

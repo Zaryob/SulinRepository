@@ -1,0 +1,63 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>scomd</Name>
+        <Homepage>http://www.sulin.org</Homepage>
+        <Packager>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Sulin boot and initialization system</Summary>
+        <Description>SCOMd is a boot manager is system initializer which is connected to scom for starting services</Description>
+        <Archive sha1sum="ca42e4d3ef487a59279707d233d4f4ac79151049" type="targz">https://gitlab.com/Zaryob/scom/-/archive/master/scom-master.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>scomd</Name>
+        <RuntimeDependencies>
+            <Dependency>kbd</Dependency>
+            <Dependency>bash</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>kmod</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>scom</Dependency>
+            <Dependency>procps</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>rsyslog</Dependency>
+            <Dependency>sysvinit</Dependency>
+            <Dependency>coreutils</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>net-tools</Dependency>
+            <Dependency>baselayout</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>wireless-tools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/conf.d</Path>
+            <Path fileType="data">/etc/scomd/services</Path>
+            <Path fileType="executable">/etc/init.d</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+        <Provides>
+            <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+            <SCOM script="netfs.py" name="netfs">System.Service</SCOM>
+            <SCOM script="package.py">System.Package</SCOM>
+            <SCOM script="system.py">System.Settings</SCOM>
+            <SCOM script="disk.py">Disk.Manager</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Update>
+    </History>
+</INARY>

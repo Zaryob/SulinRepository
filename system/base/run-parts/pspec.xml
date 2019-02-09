@@ -1,0 +1,44 @@
+<INARY>
+    <Source>
+        <Name>run-parts</Name>
+        <Homepage>http://packages.qa.debian.org/d/debianutils.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <Summary>run scripts or programs in a directory</Summary>
+        <Description>run scripts or programs in a directory</Description>
+        <Archive sha1sum="09a68238373b8683c1bd85a310108ca34b1aa05b" type="tarxz">https://mirror.fccn.pt/repos/pub/ubuntu/ubuntu/pool/main/d/debianutils/debianutils_4.8.6.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>run-parts</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+        </Files>
+    </Package>
+
+        <Package>
+            <Name>run-parts-pages</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <Summary>Manpages for runparts</Summary>
+            <RuntimeDependencies>
+                <Dependency release="current">runparts</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>4.8.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

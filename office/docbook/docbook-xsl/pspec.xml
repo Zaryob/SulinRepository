@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>docbook-xsl</Name>
+        <Homepage>http://wiki.docbook.org/topic/DocBookXslStylesheets</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>data</IsA>
+        <Summary>Norman Walsh's XSL stylesheets for DocBook XML</Summary>
+        <Description>These XSL stylesheets allow you to transform any DocBook XML document to other formats such as HTML, FO and XHTML.</Description>
+        <Archive sha1sum="7487b2acc7106253bb77fcddc7e1a9788601ad23" type="tarbz2">http://sourceforge.net/projects/docbook/files/docbook-xsl/1.79.1/docbook-xsl-1.79.1.tar.bz2</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="Makefile">Makefile</AdditionalFile>
+        </AdditionalFiles>
+        <Patches>
+            <Patch level="1">docbook-xsl-pagesetup.patch</Patch>
+            <Patch level="1">docbook-xsl-newmethods.patch</Patch>
+            <Patch level="1">docbook-xsl-non-constant-expressions.patch</Patch>
+            <Patch level="1">docbook-xsl-list-item-body.patch</Patch>
+<!--             <Patch level="1">docbook-xsl-mandir.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>docbook-xsl</Name>
+        <RuntimeDependencies>
+            <Dependency>docbook-xml</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/docbook-xsl</Path>
+            <Path fileType="data">/usr/share/xml</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>1.79.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

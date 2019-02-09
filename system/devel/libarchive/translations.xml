@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libarchive</Name>
+        <Summary xml:lang="tr">Birçok farklı akış arşiv formatını yaratan ve okuyan programlama kitaplığı</Summary>
+        <Description xml:lang="tr">libarchive, tar, cpio, zip, ISO ve diğer arşiv biçimlerini okumak ve yazmak için bir kitaplık ve komut satırı araçları içerir.</Description>
+    </Source>
+
+    <Package>
+        <Name>libarchive-devel</Name>
+        <Summary xml:lang="tr">libarchive için geliştirme dosyaları</Summary>
+    </Package>
+    <Package>
+        <Name>libarchive-docs</Name>
+        <Summary xml:lang="tr">libarchive için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour libarchive</Summary>
+    </Package>
+    <Package>
+        <Name>libarchive-pages</Name>
+        <Summary xml:lang="tr">libarchive için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour libarchive</Summary>
+    </Package>
+</INARY>

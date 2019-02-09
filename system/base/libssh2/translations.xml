@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libssh2</Name>
+        <Summary xml:lang="tr">SSH2 protokolü için kütüphane</Summary>
+        <Description xml:lang="tr">libssh2, SECSH-TRANS, SECSH-USERAUTH, SECSH-CONNECTION, SECSH-ARCH, SECSH-FILEXFER, SECSH-DHGEX, SECSH-NUMBERS ve SECSH-PUBLICKEY gibi Internet Taslakları tarafından belirlenen SSH2 protokolü için geliştirilmiş bir kütüphanedir.</Description>
+    </Source>
+
+    <Package>
+        <Name>libssh2-devel</Name>
+        <Summary xml:lang="tr">libssh2 için geliştirme dosyaları</Summary>
+    </Package>
+    <Package>
+        <Name>libssh2-docs</Name>
+        <Summary xml:lang="tr">libssh2 için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour libssh2</Summary>
+    </Package>
+    <Package>
+        <Name>libssh2-pages</Name>
+        <Summary xml:lang="tr">libssh2 için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour libssh2</Summary>
+    </Package>
+</INARY>

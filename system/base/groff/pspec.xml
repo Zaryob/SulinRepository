@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>groff</Name>
+        <Homepage>http://www.gnu.org/software/groff/groff.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <License>BSD</License>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>A document formatting system</Summary>
+        <Description>groff is a document formatting system. Groff takes standard text and formatting commands as input and produces formatted output.</Description>
+        <Archive sha1sum="2ce4ab107e3fab1414fef2c5b5312f562a4e4d35" type="targz">http://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>texinfo</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>groff-1.19.2-man-unicode-dashes.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>groff</Name>
+        <RuntimeDependencies>
+            <Dependency>texinfo</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/groff</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>groff-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>groff</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>1.22.4</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

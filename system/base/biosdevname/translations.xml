@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>biosdevname</Name>
+        <Summary xml:lang="fr">Biosdevname est un udev helper utilitaire développé</Summary>
+        <Description xml:lang="fr">Biosdevname est un utilitaire d'aide udev développé par Dell et publié sous la Licence Publique Générale GNU (GPL). Il fournit un mécanisme de nommage cohérent pour les périphériques réseau en fonction de leur emplacement physique tel que suggéré par le BIOS du système.</Description>
+        <Summary xml:lang="tr">Biosdevname geliştirilen bir udev yardımcı programıdır</Summary>
+        <Description xml:lang="tr">Biosdevname Dell tarafından geliştirilen ve GNU Genel Kamu Lisansı (GPL) altında yayımlanan bir udev yardımcı programıdır . Sistem BIOS tarafından önerildiği gibi fiziksel konumlarına dayalı ağ cihazları için tutarlı bir adlandırma mekanizması sağlar.</Description>
+    </Source>
+    <Package>
+        <Name>biosdevname-docs</Name>
+        <Summary xml:lang="tr">biosdevname için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour biosdevname</Summary>
+    </Package>
+    <Package>
+        <Name>biosdevname-pages</Name>
+        <Summary xml:lang="tr">biosdevname için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour biosdevname</Summary>
+    </Package>
+</INARY>

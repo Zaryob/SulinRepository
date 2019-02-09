@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mdadm</Name>
+        <Homepage>http://www.kernel.org/pub/linux/utils/raid/mdadm</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Utility to control Linux MD devices (software RAID arrays)</Summary>
+        <Description>mdadm is used to create, manage, and monitor Linux MD (software RAID) devices.</Description>
+        <Archive sha1sum="0b6c284970567bfa30dbc14ea5c0e2320582b80c" type="tarxz">https://www.kernel.org/pub/linux/utils/raid/mdadm/mdadm-3.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>dietlibc</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">sysmacros.patch</Patch>
+        </Patches>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Source>
+
+    <Package>
+        <Name>mdadm</Name>
+        <Files>
+            <Path fileType="executable">/sbin/mdadm</Path>
+            <Path fileType="executable">/sbin/mdmon</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/lib/tmpfiles.d</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/etc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/mdadm.conf">mdadm.tmpfiles.conf</AdditionalFile>
+            <!-- Add a cron job to run a weekly repair of the array to correct bad sectors -->
+            <AdditionalFile owner="root" permission="0755" target="/etc/cron.weekly/raid-check">scripts/raid-check</AdditionalFile>
+
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/mdadm">mdadm.confd</AdditionalFile>
+
+            <!-- Udev rules file for device assembly. This is different than the mdadm rules file shipped with udev -->
+            <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/65-md-incremental.rules">mdadm.rules</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>mdadm-static</Name>
+        <PartOf>system.base</PartOf>
+        <Files>
+            <Path fileType="executable">/sbin/mdadm.static</Path>
+            <Path fileType="executable">/sbin/mdassemble.static</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>3.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>rhash</Name>
+        <Summary xml:lang="tr">RHash mıknatıs bağlantılarının hesaplanması</Summary>
+        <Description xml:lang="tr">RHash mıknatıs bağlantılarının hesaplanması ve doğrulanması için bir konsol programıdır ve CRC32, MD4, MD5, SHA1, SHA256, SHA512, SHA3, AICH, ED2K, Kaplan, DC ++ TTH, BitTorrent BTIH, GOST R 34.11-94,RIPEMD-160, HAS-160, EDON-R, Whirlpool ve Snefru.</Description>
+    </Source>
+    <Package>
+        <Name>rhash-docs</Name>
+        <Summary xml:lang="tr">rhash için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour rhash</Summary>
+    </Package>
+    <Package>
+        <Name>rhash-pages</Name>
+        <Summary xml:lang="tr">rhash için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour rhash</Summary>
+    </Package>
+</INARY>

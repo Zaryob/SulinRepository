@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ncurses</Name>
+        <Homepage>http://www.gnu.org/software/ncurses/ncurses.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Console display library</Summary>
+        <Description>The NCurses is a library of functions that manage an application's display on character-cell terminals. The NCurses library defines many functions such as moving mouse and cursor, keyboard mapping and dispaying in color.</Description>
+        <Archive sha1sum="57acf6bc24cacd651d82541929f726f4def780cc" type="targz">mirrors://gnu/ncurses/ncurses-6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnuconfig</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ncurses</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/share/terminfo</Path>
+            <Path fileType="data">/usr/share/tabset</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ncurses-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for ncurses</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="library">/usr/lib32/*.a</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ncurses-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for ncurses</Summary>
+        <BuildType>_emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/lib*.so*</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ncurses-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ncurses-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for ncurses</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>acl</Name>
+        <Homepage>http://acl.bestbits.at/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Access control list utilities</Summary>
+        <Description>acl contains the getfacl and setfacl utilities needed for manipulating access control lists along with the needed libraries.</Description>
+        <Archive sha1sum="6c9e46602adece1c2dae91ed065899d7f810bf01" type="targz">http://download.savannah.gnu.org/releases/acl/acl-2.2.53.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>attr-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>acl</Name>
+        <RuntimeDependencies>
+            <Dependency>attr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>acl-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for acl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">acl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+      	<Name>acl-docs</Name>
+	      <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+	      <Summary>Documentation for acl package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">acl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+      	<Name>acl-pages</Name>
+	      <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+	      <Summary>Man pages for acl package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">acl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>2.2.53</Version>
+            <Comment>First release for Sulin bootstrapt.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

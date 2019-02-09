@@ -1,0 +1,60 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>fuse</Name>
+        <Homepage>http://fuse.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>An interface for filesystems implemented in userspace</Summary>
+        <Description>fuse is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
+        <Archive sha1sum="fcb3641d5297938f4e183296eccaf0ccc1a0f892" type="targz">https://github.com/libfuse/libfuse/archive/fuse-2.9.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>skip_umount_test.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>fuse</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>fuse-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for fuse</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">fuse</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>2.9.7</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Update>
+    </History>
+</INARY>

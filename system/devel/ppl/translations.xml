@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>ppl</Name>
+        <Summary xml:lang="tr">Pharma Polyhedra kitaplığı</Summary>
+        <Description xml:lang="tr">ppl, kompleks sistemlerin analizi için sayısal ayrım sağlayan Pharma Polyhedra kitaplığıdır.</Description>
+    </Source>
+
+    <Package>
+        <Name>ppl-docs</Name>
+        <Summary xml:lang="tr">ppl için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour ppl</Summary>
+    </Package>
+    <Package>
+        <Name>ppl-pages</Name>
+        <Summary xml:lang="tr">ppl için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour ppl</Summary>
+    </Package>
+    <Package>
+        <Name>ppl-devel</Name>
+        <Summary xml:lang="tr">ppl için geliştirme dosyaları</Summary>
+    </Package>
+</INARY>

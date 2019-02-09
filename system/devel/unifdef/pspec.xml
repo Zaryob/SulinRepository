@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>unifdef</Name>
+        <Homepage>http://www.freebsd.org/cgi/cvsweb.cgi/src/usr.bin/unifdef/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>The unifdef utility selectively processes conditional cpp(1) directives</Summary>
+        <Description>The unifdef utility selectively processes conditional cpp(1) directives. It removes from a file both the directives and any additional text that they specify should be removed, while otherwise leaving the file alone.</Description>
+        <Archive sha1sum="0658debaedb71b83f79d0531a51c29418396fe12" type="targz">http://dotat.at/prog/unifdef/unifdef-2.11.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>unifdef</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>unifdef-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for unifdef package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">unifdef</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+        <Name>unifdef-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for unifdef package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">unifdef</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.11</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

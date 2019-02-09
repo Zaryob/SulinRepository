@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libatomic_ops</Name>
+        <Homepage>https://github.com/ivmai/libatomic_ops/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Atomic memory update operations library</Summary>
+        <Description>libatomic_ops provides implementations for atomic memory update operations on a number of architectures. This allows direct use of these in reasonably portable code.</Description>
+        <Archive sha1sum="84b0afa2ae9341bf8fe8fba566f7721f1f32bb32" type="targz">http://www.ivmaisoft.com/_bin/atomic_ops/libatomic_ops-7.6.4.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libatomic_ops</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libatomic_ops*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libatomic_ops-devel</Name>
+        <Summary>libatomic_ops için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libatomic_ops</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>7.6.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cpupowertools</Name>
+        <Homepage>http://www.kernel.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>CPU power management tools</Summary>
+        <Description>cpupowertools contains utilities to manage power management and frequency scaling policies of modern CPUs.</Description>
+        <Archive sha1sum="1631a93d870d11efc7ecaa1450c39ad0a7ad7408" type="targz">https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.14.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pciutils-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1" compressionType="xz">patches/linux/patch-4.14.73.xz</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>cpupowertools</Name>
+        <RuntimeDependencies>
+            <Dependency>pciutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/conf.d</Path>
+            <Path fileType="executable">/usr/bin/cpupower</Path>
+            <Path fileType="executable">/usr/bin/*-decode</Path>
+            <Path fileType="library">/usr/lib/libcpupower*</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man1/cpupower*</Path>
+            <Path fileType="locale">/usr/share/locale/*/*/cpupower.mo</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/cpupower">cpupower.conf.d</AdditionalFile>
+        </AdditionalFiles>
+        <!--<Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>-->
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-10-05</Date>
+            <Version>4.14.73</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

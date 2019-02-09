@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lsb-release</Name>
+        <Homepage>http://www.linuxbase.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>LSB version query program</Summary>
+        <Description>lsb-release prints certain LSB (Linux Standard Base) and distribution information.</Description>
+        <Archive sha1sum="ecf883ada9bf4e1feca3f2e1494bd798792aee18" type="targz">mirrors://sourceforge/project/lsb/lsb_release/1.4/lsb-release-1.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>util-linux</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>lsb-release-1.4-os-release.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>lsb-release</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/etc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/lsb-release">lsb-release</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>lsb-release-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for lsb-release</Summary>
+        <RuntimeDependencies>
+            <Dependency>lsb-release</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>lsb-release-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for lsb-release</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lsb-release</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

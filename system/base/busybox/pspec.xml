@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>busybox</Name>
+        <Homepage>http://www.busybox.net</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Statically linked binary providing simplified versions of system commands</Summary>
+        <Description>busybox is a single binary which includes versions of a large number of system commands, including a shell.</Description>
+        <BuildDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>linux-headers</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="c855f6fa3144654345ef4cae9b80ab68449fd090" type="tarbz2">http://busybox.net/downloads/busybox-1.29.3.tar.bz2</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target=".config">config</AdditionalFile>
+        </AdditionalFiles>
+    </Source>
+
+    <Package>
+        <Name>busybox</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/conf.d/busybox-klogd">klogd.confd</AdditionalFile>
+            <AdditionalFile target="/etc/conf.d/busybox-ntpd">ntpd.confd</AdditionalFile>
+            <AdditionalFile target="/etc/conf.d/busybox-syslogd">syslogd.confd</AdditionalFile>
+            <AdditionalFile target="/etc/conf.d/busybox-watchdog">watchdog.confd</AdditionalFile>
+            <AdditionalFile target="/etc/init.d/busybox-klogd">klogd.initd</AdditionalFile>
+            <AdditionalFile target="/etc/init.d/mdev">mdev.initd</AdditionalFile>
+            <AdditionalFile target="/etc/init.d/busybox-ntpd">ntpd.initd</AdditionalFile>
+            <AdditionalFile target="/etc/init.d/busybox-syslogd">syslogd.initd</AdditionalFile>
+            <AdditionalFile target="/etc/init.d/busybox-watchdog">watchdog.initd</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.29.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libunistring</Name>
+        <Homepage>http://www.gnu.org/software/libunistring</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Unicode string library</Summary>
+        <Description>This library provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard.</Description>
+        <Archive sha1sum="1e7493a3ad8c4a1e514600b768c7229576fe5125" type="targz">mirrors://gnu/libunistring/libunistring-0.9.10.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libunistring</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libunistring-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libunistring</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libunistring</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libunistring-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for libunistring</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libunistring</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>0.9.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

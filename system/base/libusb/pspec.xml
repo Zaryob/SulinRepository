@@ -1,0 +1,100 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libusb</Name>
+        <Homepage>http://libusb.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Userspace access to USB devices</Summary>
+        <Description>Project's main aim is to create a library for use by user level applications to access USB devices regardless of OS.</Description>
+        <Archive sha1sum="10116aa265aac4273a0c894faa089370262ec0dc" type="tarbz2">https://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.22/libusb-1.0.22.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>eudev-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libusb</Name>
+        <Replaces>
+            <Package>libusbx</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>libusbx</Package>
+        </Conflicts>
+        <RuntimeDependencies>
+            <Dependency>eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libusb-devel</Name>
+        <Replaces>
+            <Package>libusbx-devel</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>libusbx-devel</Package>
+        </Conflicts>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libusb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libusb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libusb-32bit</Name>
+        <Replaces>
+            <Package>libusbx-32bit</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>libusbx-32bit</Package>
+        </Conflicts>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libusb</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>eudev-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libusb</Dependency>
+       	    <Dependency>eudev-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libusb-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for libusb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libusb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>1.0.22</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

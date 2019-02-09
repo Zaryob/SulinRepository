@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/standarts/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>iana-etc</Name>
+        <Homepage>http://www.gnu.org/software/help2man</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>The Iana-Etc package provides data for network services and protocols.</Summary>
+        <Description>The Iana-Etc package provides data for network services and protocols.</Description>
+        <Archive sha1sum="218593bcb9264014c4e397d838b2c218eac9df06" type="tarbz2">http://anduin.linuxfromscratch.org/LFS/iana-etc-2.30.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>iana-etc</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-01-19</Date>
+            <Version>2.30</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>dbus-glib</Name>
+        <Summary xml:lang="tr">D-Bus için GLib bağlayıcıları</Summary>
+        <Description xml:lang="tr">dbus-glib, standart D-Bus kitaplığını GLib ana döngüsüyle bütünleştirmek için kullanılan bir kitaplıktır.</Description>
+    </Source>
+
+    <Package>
+        <Name>dbus-glib-devel</Name>
+        <Summary xml:lang="tr">dbus-glib için geliştirme dosyaları</Summary>
+    </Package>
+    <Package>
+        <Name>dbus-glib-docs</Name>
+        <Summary xml:lang="tr">dbus-glib için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour dbus-glib</Summary>
+    </Package>
+    <Package>
+        <Name>dbus-glib-pages</Name>
+        <Summary xml:lang="tr">dbus-glib için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour dbus-glib</Summary>
+    </Package>
+</INARY>
