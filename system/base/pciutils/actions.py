@@ -12,6 +12,7 @@ def build():
     autotools.make('OPT="%s" \
                     SHARED="yes" \
                     PREFIX=/usr \
+                    MANDIR=/usr/share/man \
                     IDSDIR="/usr/share/misc" \
                     all' % get.CFLAGS())
 
@@ -19,6 +20,7 @@ def install():
     autotools.rawInstall('DESTDIR="%s" \
                           PREFIX=/usr \
                           SHARED="yes" \
+                          MANDIR=/usr/share/man \
                           IDSDIR="/usr/share/misc" \
                           install-lib' % get.installDIR())
    
