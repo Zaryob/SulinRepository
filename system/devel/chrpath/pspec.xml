@@ -12,7 +12,8 @@
         <IsA>app:console</IsA>
         <Summary>Change the dynamic library load path (rpath) of binaries</Summary>
         <Description>chrpath allows you to modify the dynamic library load path (rpath and runpath) of compiled programs and libraries.</Description>
-        <Archive sha1sum="356d89881419ef1f554021b9c92c416bb495656e" type="targz">https://gitlab.com/sulinos/chrpath/-/archive/master/chrpath-master.tar.gz</Archive>
+        <Archive sha1sum="356d89881419ef1f554021b9c92c416bb495656e" 
+type="targz">https://sourceforge.net/projects/sulinos/files/archives//chrpath-master.tar.gz</Archive>
     </Source>
 
     <Package>

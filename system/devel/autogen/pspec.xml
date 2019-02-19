@@ -12,7 +12,9 @@
         <IsA>app:console</IsA>
         <Summary>The automated text and program generation tool</Summary>
         <Description>autogen is a tool designed to simplify the creation and maintenance of programs that contain large amounts of repetitious text.</Description>
-        <Archive sha1sum="e539a6340e4bde7409593c03be012036d37a9ca9" type="targz">mirrors://gnu/autogen/rel5.18.16/autogen-5.18.16.tar.gz</Archive>
+        <Archive 
+sha1sum="fff5c0bf812cb1c65ccb9f56d25f7c77914fa72c" 
+type="targz">mirrors://gnu/autogen/rel5.18.12/autogen-5.18.12.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gc-devel</Dependency>
             <Dependency>gmp-devel</Dependency>
@@ -77,7 +79,7 @@
     <History>
         <Update release="1">
             <Date>2018-12-28</Date>
-            <Version>5.18.16</Version>
+            <Version>5.18.12</Version>
             <Comment>First release</Comment>
             <Name>Süleyman POYRAZ</Name>
             <Email>zaryob.dev@gmail.com</Email>

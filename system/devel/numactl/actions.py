@@ -9,12 +9,12 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.autoreconf("-vfi")    
+#    autotools.autoreconf("-vfi")    
     autotools.configure("--prefix=/usr")
       
     
 def build():
-    autotools.make("CFLAGS='%s -I.'" % get.CFLAGS())
+    autotools.make() #"CFLAGS='%s -I.'" % get.CFLAGS())
 
 def install():
     autotools.install()
@@ -22,4 +22,3 @@ def install():
     inarytools.remove("/usr/lib/*.a")
     inarytools.removeDir("/usr/share/man/man2")
 
-    inarytools.dodoc("CHANGES", "DESIGN")

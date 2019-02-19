@@ -7,14 +7,15 @@
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
-
+import os
 
 def setup():
     autotools.autoreconf("-vfi")
     autotools.configure("--prefix=/usr \
-                         --disable-static")
+			 --disable-dependency-tracking \
+                         --disable-static ")
     
-    #inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
     autotools.make()

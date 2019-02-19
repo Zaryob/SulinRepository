@@ -11,11 +11,11 @@ from inary.actionsapi import get
 
 
 def setup():
-    #autotools.autoreconf("-fiv")
-    autotools.configure("--disable-static \
-                         --disable-doctool")
+    autotools.autoreconf("-fiv")
+    autotools.configure("--prefix=/usr \
+           		 --disable-static")
     
-    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+#    inarytools.dosed("libtool", "CC -shared ", "CC -Wl,-O1,--as-needed -shared ")
 
 def build():
     autotools.make()
