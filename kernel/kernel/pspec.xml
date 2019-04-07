@@ -12,10 +12,10 @@
         <IsA>kernel</IsA>
         <Summary>The Linux kernel (the core of the Linux operating system) for Sul'n</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="8fa9a9303e8bbbd1a057259752939c53debe119b" type="targz">https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.20.1.tar.gz</Archive>
+        <Archive sha1sum="8fa9a9303e8bbbd1a057259752939c53debe119b" type="tarxz">https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.20.1.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
-            <AdditionalFile permission="0755" target=".config">kernel.config</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>

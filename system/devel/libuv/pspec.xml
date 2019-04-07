@@ -13,9 +13,6 @@
         <Summary>Multi-platform support library with a focus on asynchronous I/O</Summary>
         <Description>libuv is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node.js, but it's also used by Luvit, Julia, pyuv, and others.</Description>
         <Archive sha1sum="54f0972aa0d3f6a6036d477b381c01f030f9a2b5" type="targz">https://github.com/libuv/libuv/archive/v1.11.0.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>python3-sphinx</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>

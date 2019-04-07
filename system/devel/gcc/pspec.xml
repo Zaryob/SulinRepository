@@ -64,6 +64,7 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
         <Summary>Contains a shared library of support routines used by GCC's runtime, and thus by every program on the system</Summary>
         <Files>
             <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib/libiberty.a</Path>
             <Path fileType="library">/usr/lib/libstdc++.so*</Path>
             <Path fileType="library">/usr/lib/libgcc_s.so*</Path>
             <Path fileType="library">/usr/lib32/libstdc++.so*</Path>
@@ -109,6 +110,29 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
             <Path fileType="library">/usr/lib/libgfortran.a</Path>
             <Path fileType="library">/usr/lib32/libgfortran.so*</Path>
             <Path fileType="library">/usr/lib32/libgfortran.a</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgccgo</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libgomp</Dependency>
+        </RuntimeDependencies>
+        <IsA>library</IsA>
+        <Summary>Contains GCC shared support library for golang.</Summary>
+        <Files>
+             <Path fileType="info">/usr/share/info/gccgo.info</Path>
+             <Path fileType="library">/usr/lib/libgo.so*</Path>
+             <Path fileType="library">/usr/lib/libgo.a*</Path>
+             <Path fileType="library">/usr/lib/libgolibbegin.a</Path>
+             <Path fileType="library">/usr/lib/libgobegin.a</Path>
+             <Path fileType="library">/usr/lib/go/8.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/lib32/libgo.so*</Path>
+             <Path fileType="library">/usr/lib32/libgo.a*</Path>
+             <Path fileType="library">/usr/lib32/libgolibbegin.a</Path>
+             <Path fileType="library">/usr/lib32/libgobegin.a</Path>
+             <Path fileType="library">/usr/lib32/go/8.2.0/x86_64-pc-linux-gnu/</Path>
         </Files>
     </Package>
 
@@ -182,17 +206,10 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     </Package>
 
     <History>
-        <Update release="2">
+        <Update release="1">
             <Date>2019-01-19</Date>
             <Version>8.2.0</Version>
             <Comment>Kararlı son sürüme yükseltildi.</Comment>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2018-01-12</Date>
-            <Version>8.1.0</Version>
-            <Comment>First release</Comment>
             <Name>Süleyman POYRAZ</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

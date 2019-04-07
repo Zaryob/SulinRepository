@@ -42,7 +42,8 @@
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="executable">/lib/udev</Path>
             <Path fileType="library">/lib</Path>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/libudev.so*</Path>
+            <Path fileType="library">/usr/lib/libudev.a*</Path>
             <Path fileType="config">/etc</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/udev.conf</Path>
             <Path fileType="data">/run/udev</Path>

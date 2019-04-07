@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Yacc: Yet Another Compiler-Compiler</Summary>
         <Description>Yacc provides a general tool for describing the input to a computer program. The Yacc user specifies the structures of his input, together with code to be invoked as each such structure is recognized. Yacc turns such a specification into a subroutine that handles the input process</Description>
-        <Archive sha1sum="697ea853533e325f47b6b13401d05e7c97012729" type="tarZ">http://ibiblio.org/pub/linux/devel/compiler-tools/yacc-1.9.1.tar.Z</Archive>
+        <Archive sha1sum="3a91ed8adf5ed6da96695f224e108b7564b9ede4" type="tar">http://ibiblio.org/pub/linux/devel/compiler-tools/yacc-1.9.1.tar</Archive>
         <Patches>
             <Patch>mkstemp.patch</Patch>
             <Patch level="1">skeleton.c.diff</Patch>

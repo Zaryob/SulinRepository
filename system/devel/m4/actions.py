@@ -13,7 +13,7 @@ def setup():
 #    shelltools.system("sed -i -e '/gets is a/d' lib/stdio.in.h")
     shelltools.system("sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' lib/*.c")
     shelltools.system("echo '#define _IO_IN_BACKUP 0x100' >> lib/stdio-impl.h")
-    autotools.autoreconf("-vif")
+    
     autotools.configure("--enable-nls \
                          --enable-changeword")
 

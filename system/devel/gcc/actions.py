@@ -21,9 +21,9 @@ else:
 
 arch = get.ARCH().replace("x86_64", "x86-64")
 
-#opt_unwind = "--with-system-libunwind" if get.ARCH() == "x86_64" else "--without-system-libunwind"
+opt_unwind = "--with-system-libunwind" if get.ARCH() == "x86_64" else "--without-system-libunwind"
 opt_arch = "--with-arch_32=i686" if get.ARCH() == "x86_64" else "--with-arch=i686"
-opt_multilib = "--enable-multilib" if get.ARCH() == "x86_64" else ""
+opt_multilib = "--enable-multilib --with-multilib-list=m32,m64" if get.ARCH() == "x86_64" else ""
 
 # WARNING: even -fomit-frame-pointer may break the build, stack protector, fortify source etc. are off limits
 cflags = "-O2 -g"
@@ -70,8 +70,7 @@ def setup():
                        --mandir=/usr/share/man \
                        --infodir=/usr/share/info \
                        --with-bugurl=http://gitlab.com/sulinos/main/issues \
-                       --enable-languages=c,c++,fortran,lto,objc,obj-c++ \
-                       --disable-libgcj \
+                       --enable-languages=c,c++,go,fortran,lto,objc,obj-c++ \
                        --enable-shared \
                        --enable-threads=posix \
                        --with-system-zlib \
@@ -82,23 +81,29 @@ def setup():
                        --disable-libssp \
                        --enable-gnu-unique-object \
                        --enable-linker-build-id \
-                       --enable-cloog-backend=isl \
-                       --disable-cloog-version-check \
                        --enable-lto \
-                       --enable-plugin \
+                       --enable-install-libiberty \
+                       --enable-gnu-indirect-function \
                        --with-linker-hash-style=gnu \
+                       --enable-plugin \
                        --with-pkgversion="Sulin" \
                        --disable-werror \
                        --enable-checking=release \
+                       --enable-default-pie \
+                       --enable-default-ssp \
+                       --enable-cet=auto \
                        --build=x86_64-pc-linux-gnu \
+                       --target=x86_64-pc-linux-gnu \
+                       --host=x86_64-pc-linux-gnu \
                                %s \
-                               %s ' % ( verMajor, opt_arch, opt_multilib))
+                               %s \
+                               %s  ' % ( verMajor, opt_unwind, opt_arch, opt_multilib))
 
 def build():
     exportFlags()
 
     shelltools.cd("../build")
-    autotools.make('BOOT_CFLAGS="%s" profiledbootstrap' % cflags)
+    autotools.make('BOOT_CFLAGS="%s" bootstrap' % cflags)
 
 def install():
     shelltools.cd("../build")
