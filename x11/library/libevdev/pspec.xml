@@ -1,0 +1,49 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libevdev</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/libevdev/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Wrapper library for evdev devices</Summary>
+        <Description>Wrapper library for evdev devices</Description>
+        <Archive sha1sum="94292b014f65bf4665db68ae997ed76c2e12a016" type="tarxz">https://www.freedesktop.org/software/libevdev/libevdev-1.5.6.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>check-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch level="1">0001-Revert-Drop-deprecated-functions.patch</Patch> -->
+<!--             <Patch level="1">0001-Revert-Drop-some-leftover-deprecated-constants.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libevdev</Name>
+        <RuntimeDependencies>
+<!--             <Dependency>acl</Dependency> -->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.5.6</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

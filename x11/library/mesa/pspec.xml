@@ -1,0 +1,193 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mesa</Name>
+        <Homepage>http://www.mesa3d.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Mesa graphics libraries and utilities</Summary>
+        <Description>Mesa is an open-source implementation of the OpenGL specification - a system for rendering interactive 3D graphics.</Description>
+        <Archive sha1sum="41e825653b29c847912d51a37ff4cff4bab3d878" type="tarxz">https://mesa.freedesktop.org/archive/mesa-19.0.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-proto</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>libvdpau-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libtalloc-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libomxil-bellagio-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>libXvMC-devel</Dependency>
+            <Dependency>libXv-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>nettle-devel</Dependency>
+            <Dependency>python-mako</Dependency>
+            <Dependency>llvm</Dependency>
+            <Dependency>llvm-libs</Dependency>
+            <Dependency>llvm-clang-devel</Dependency>
+            <Dependency>libxshmfence-devel</Dependency>
+        </BuildDependencies>
+        <!--Patches>
+            <Patch level="1">n_VDPAU-XVMC-libs-Replace-hardlinks-with-copies.patch</Patch>
+            <Patch level="1">n_Define-GLAPIVAR-separate-from-GLAPI.patch</Patch>
+            <Patch level="1">N_01-WIP-nouveau-add-locking.patch</Patch>
+            <Patch level="1">N_02-nouveau-more-locking-make-sure-that-fence-work-is-always-done-with-the-push-mutex-acquired.patch</Patch>
+            <Patch level="1">N_03-nv30-locking-fixes.patch</Patch>
+            <Patch level="1">N_04-nv50-Fix-double-lock-in-nv50_hw_sm_get_query_result.patch</Patch>
+            <Patch level="1">N_05-Use-nv50_render_condition-in-nv50_blitctx_post_blit.patch</Patch>
+        </Patches-->
+    </Source>
+
+    <Package>
+        <Name>mesa</Name>
+        <RuntimeDependencies>
+            <Dependency>elfutils</Dependency>
+            <Dependency>libdrm-amd</Dependency>
+            <Dependency>alternatives</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>libXvMC</Dependency>
+            <Dependency>libdrm-intel</Dependency>
+            <Dependency>libdrm-radeon</Dependency>
+            <Dependency>libdrm-nouveau</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>libomxil-bellagio</Dependency>
+            <Dependency>nettle</Dependency>
+            <Dependency>libxshmfence</Dependency>
+            <Dependency>llvm</Dependency>
+            <Dependency>llvm-clang</Dependency>
+            <Dependency>llvm-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/usr/share/drirc.d/00-mesa-defaults.conf</Path>
+            <Path fileType="data">/usr/share/vulkan/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/drirc">drirc</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>mesa-devel</Name>
+        <Summary>Development files for mesa</Summary>
+        <RuntimeDependencies>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>libxshmfence-devel</Dependency>
+            <Dependency release="current">mesa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mesa-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for mesa</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>elfutils-32bit</Dependency>
+            <Dependency>expat-32bit</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXv-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libcap-32bit</Dependency>
+            <Dependency>libdrm-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXvMC-32bit</Dependency>
+            <Dependency>eudev-32bit</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>wayland-32bit</Dependency>
+            <Dependency>libvdpau-32bit</Dependency>
+            <Dependency>libXfixes-32bit</Dependency>
+            <Dependency>libXdamage-32bit</Dependency>
+            <Dependency>libXxf86vm-32bit</Dependency>
+            <Dependency>libdrm-intel-32bit</Dependency>
+            <Dependency>libdrm-radeon-32bit</Dependency>
+            <Dependency>libdrm-amd-32bit</Dependency>
+            <Dependency>libdrm-nouveau-32bit</Dependency>
+            <Dependency>libxshmfence-32bit</Dependency>
+            <Dependency>nettle-32bit</Dependency>
+            <Dependency>llvm-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>elfutils-32bit</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>alternatives</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb-32bit</Dependency>
+            <Dependency>expat-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libdrm-32bit</Dependency>
+            <Dependency>libxcb-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXfixes-32bit</Dependency>
+            <Dependency>libXdamage-32bit</Dependency>
+            <Dependency>libXxf86vm-32bit</Dependency>
+            <Dependency>libXv-32bit</Dependency>
+            <Dependency>libXvMC-32bit</Dependency>
+            <Dependency>libdrm-intel-32bit</Dependency>
+            <Dependency>libxshmfence-32bit</Dependency>
+            <Dependency>libdrm-radeon-32bit</Dependency>
+            <Dependency>libdrm-amd-32bit</Dependency>
+            <Dependency>libdrm-nouveau-32bit</Dependency>
+            <Dependency>wayland-32bit</Dependency>
+            <Dependency release="current">mesa</Dependency>
+            <Dependency>llvm-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package-emul32.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>19.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

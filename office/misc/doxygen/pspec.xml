@@ -1,0 +1,76 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>doxygen</Name>
+        <Homepage>http://www.doxygen.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Documentation and analysis tool for C++, C, Java, IDL, PHP and C#</Summary>
+        <Description>Doxygen is a documentation system for C++, C, Java, Objective-C, Python, IDL (Corba and Microsoft flavors) and to some extent PHP, C#, and D.</Description>
+        <Archive sha1sum="bb5d7456a7ff63768e8755762860d64debd3a4ff" type="targz">http://doxygen.nl/files/doxygen-1.8.15.src.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+        <!--
+        Doxygen might use the following binaries at runtime:
+
+         - /usr/bin/dot (from graphviz package)
+         - /usr/bin/gs (from ghostscript package)
+         - /usr/bin/dvips (from texlive-bin package)
+         - /usr/bin/latex (from texlive-bin package)
+
+        We do not write these as build dependencies since it doesn't
+        check for their existance. This is good for bootstrapping ;)
+        -->
+        <!--Patches>
+            <Patch level="1">fedora/doxygen-1.8.6-config.patch</Patch>
+            <Patch level="1">fedora/doxygen-1.8.3-multilib.patch</Patch>
+            <Patch level="1">fedora/doxygen-1.8.7-html_timestamp_default_false.patch</Patch>
+        </Patches-->
+    </Source>
+
+    <Package>
+        <Name>doxygen</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin/doxygen</Path>
+            <Path fileType="man">/usr/share/man/man1/doxygen.1</Path>
+        </Files>
+    </Package>
+
+    <!--<Package>
+        <Name>doxywizard</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Summary>A GUI for creating and editing doxygen configuration files</Summary>
+        <Files>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="executable">/usr/bin/doxywizard</Path>
+            <Path fileType="man">/usr/share/man/man1/doxywizard.1</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/pixmaps/doxywizard.png" permission="0644">doxywizard.png</AdditionalFile>
+            <AdditionalFile target="/usr/share/applications/doxywizard.desktop" permission="0644">doxywizard.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>-->
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.8.15</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

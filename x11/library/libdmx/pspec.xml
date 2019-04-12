@@ -1,0 +1,58 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libdmx</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>X.Org dmx library</Summary>
+        <Description>libdmx is the X Window System DMX (Distributed Multihead X) extension library.</Description>
+        <Archive sha1sum="0eeac14a06cffb04a1c78793563f233a8f8b79be" type="tarbz2">mirrors://xorg/individual/lib/libdmx-1.1.3.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libdmx</Name>
+        <RuntimeDependencies>
+            <Dependency>libXext</Dependency>
+	    <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdmx-devel</Name>
+        <Summary>Development files for libdmx</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libdmx</Dependency>
+            <Dependency>libXext-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.1.3</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

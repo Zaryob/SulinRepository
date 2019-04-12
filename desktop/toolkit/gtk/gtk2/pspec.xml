@@ -1,0 +1,193 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gtk2</Name>
+        <Homepage>http://www.gtk.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <Summary>The GIMP Toolkit version 2</Summary>
+        <Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
+        <Archive sha1sum="c3d828135994a52cc9428a60175bd2b294656611" type="tarxz">mirrors://gnome/gtk+/2.24/gtk+-2.24.31.tar.xz</Archive>
+        <BuildDependencies>
+            <!--Dependency>cups-devel</Dependency--><!--It was disabled to avoid circle-->
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>graphite2-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">gtk2-fixdso.patch</Patch> -->
+            <Patch level="1">xid-collision-debug.patch</Patch>
+
+            <!-- fedora patches -->
+            <Patch level="1">fedora/system-python.patch</Patch>
+            <Patch level="1">fedora/icon-padding.patch</Patch>
+            <Patch level="1">fedora/tooltip-positioning.patch</Patch>
+            <Patch level="1">fedora/window-dragging.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gtk2</Name>
+        <RuntimeDependencies>
+            <Dependency>libXi</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>dejavu-fonts</Dependency>
+	    <!--<Dependency>gtk-theme-mediterranean</Dependency>--><!--it need gtk2-engines-murrine is need gtk2 too-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+            <Path fileType="data">/usr/share/gtk-2.0</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+        <!-- Use Clearlooks as default theme for now until native Oxygen GTK style is ready -->
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/gtk-2.0/gtkrc">gtkrc</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>gtk2-demo</Name>
+        <IsA>app:gui</IsA>
+        <Summary>GTK demo application</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/gtk-demo</Path>
+            <Path fileType="data">/usr/share/gtk-2.0/demo</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gtk2-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>GTK reference documents</Summary>
+        <Files>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gtk2-devel</Name>
+        <Summary>Development files for gtk2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtk2</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gtk2-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for gtk2</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>cairo-32bit</Dependency>
+            <!--Dependency>cups-32bit</Dependency-->
+            <Dependency>fontconfig-32bit</Dependency>
+            <Dependency>pango-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+            <Dependency>atk-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>gdk-pixbuf-32bit</Dependency>
+            <Dependency>libXcomposite-32bit</Dependency>
+            <Dependency>libXcursor-32bit</Dependency>
+            <Dependency>libXdamage-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXfixes-32bit</Dependency>
+            <Dependency>libXi-32bit</Dependency>
+            <Dependency>libXinerama-32bit</Dependency>
+            <Dependency>libXrandr-32bit</Dependency>
+            <Dependency>libXrender-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">gtk2</Dependency>
+            <Dependency>cairo-32bit</Dependency>
+            <Dependency>pango-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+            <Dependency>atk-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>cups-32bit</Dependency>
+            <Dependency>fontconfig-32bit</Dependency>
+            <Dependency>gdk-pixbuf-32bit</Dependency>
+            <Dependency>libXcomposite-32bit</Dependency>
+            <Dependency>libXcursor-32bit</Dependency>
+            <Dependency>libXdamage-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXfixes-32bit</Dependency>
+            <Dependency>libXi-32bit</Dependency>
+            <Dependency>libXinerama-32bit</Dependency>
+            <Dependency>libXrandr-32bit</Dependency>
+            <Dependency>libXrender-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*-32bit</Path>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.24.31</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>itstool</Name>
+        <Homepage>http://itstool.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>XML to PO and back again</Summary>
+        <Description>XML to PO and back again</Description>
+        <Archive sha1sum="9a7a3cd6e33763f6f369a907e79da98cc47b86e7" type="tarbz2">http://files.itstool.org/itstool/itstool-2.0.6.tar.bz2</Archive>
+        <Patches/>
+    </Source>
+
+    <Package>
+        <Name>itstool</Name>
+        <Files>
+            <Path fileType="data">/usr</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

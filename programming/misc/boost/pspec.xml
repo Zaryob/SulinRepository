@@ -1,0 +1,92 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>boost</Name>
+        <Homepage>http://boost.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>programming.language</PartOf>
+        <IsA>library</IsA>
+        <Summary>Peer-reviewed portable C++ source libraries</Summary>
+        <Description>Boost provides free portable peer-reviewed C++ libraries. The emphasis is on portable libraries which work well with the C++ Standard Library.</Description>
+        <Archive sha1sum="9f1dd4fa364a3e3156a77dc17aa562ef06404ff6" type="tarbz2">mirrors://sourceforge/boost/boost_1_63_0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>bzip2</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <!-- libsxlt is needed for xsltproc -->
+            <Dependency>libxslt</Dependency>
+            <!--Dependency>openmpi-devel</Dependency-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>boost</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libgcc</Dependency>
+            <!--Dependency>openmpi</Dependency-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/boostbook</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>boost-devel</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Headers and library documentation for boost</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">boost</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc/*/html</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>boost-python</Name>
+        <Summary>a C++ library which enables seamless interoperability between C++ and the Python</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">boost</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libboost_python.so*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>boost-python3</Name>
+        <Summary>Headers and library documentation for boosta C++ library which enables seamless interoperability between C++ and the Python3</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">boost</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libboost_python3.so*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.63.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

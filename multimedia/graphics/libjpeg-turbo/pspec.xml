@@ -1,0 +1,65 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libjpeg-turbo</Name>
+        <Homepage>http://www.libjpeg-turbo.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>multimedia.graphics</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>MMX, SSE, and SSE2 SIMD accelerated JPEG library</Summary>
+        <Description>libjpeg-turbo is a derivative of libjpeg for x86 and x86-64 processors which uses SIMD instructions (MMX, SSE2, etc.) to accelerate baseline JPEG compression and decompression. libjpeg-turbo is generally 2-4x as fast as the unmodified version of libjpeg v6b, all else being equal.</Description>
+        <Archive sha1sum="1cff52d50b81755d0bdcf9055eb22157f39a1695" type="targz">http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>nasm</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libjpeg-turbo</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+	      <Name>libjpeg-turbo-devel</Name>
+        <Files>
+            <Path fileType="data">/usr/include/</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>libjpeg-turbo-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for jpeg</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>jpeg-32bit</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+		<Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

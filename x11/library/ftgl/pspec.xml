@@ -1,0 +1,59 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ftgl</Name>
+        <Homepage>http://ftgl.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Font rendering library for OpenGL</Summary>
+        <Description>FTGL is a free, open source library to enable developers to use arbitrary fonts in their OpenGL (www.opengl.org) applications. FTGL uses the Freetype (www.freetype.org) font library to open and 'decode' the fonts.</Description>
+        <Archive sha1sum="03815348ac22ef46675ee71c1f7740f48e43b299" type="zip">https://github.com/frankheckenbach/ftgl/archive/master.zip</Archive>
+        <BuildDependencies>
+            <Dependency>freeglut-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ftgl</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>freetype</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ftgl-devel</Name>
+        <Summary>Development files for ftgl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">ftgl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>        
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community(gulle)</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

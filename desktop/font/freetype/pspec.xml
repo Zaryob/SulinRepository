@@ -1,0 +1,81 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>freetype</Name>
+        <Homepage>http://www.freetype.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>FTL</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A high-quality and portable font engine</Summary>
+        <Description>FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output. It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.</Description>
+        <Archive sha1sum="220c82062171c513e4017c523d196933c9de4a7d" type="tarbz2">mirrors://sourceforge/freetype/freetype-2.9.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libpng-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>freetype</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>freetype-devel</Name>
+        <Summary>Development files for freetype</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">freetype</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>freetype-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for freetype</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+        </Update>
+    </History>
+</INARY>

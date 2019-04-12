@@ -1,0 +1,84 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libXmu</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>X.Org Xmu library</Summary>
+        <Description>libXmu provides a set of miscellaneous utility convenience functions for X libraries to use.</Description>
+        <Archive sha1sum="7e6aeef726743d21aa272c424e7d7996e92599eb" type="tarbz2">mirrors://xorg/individual/lib/libXmu-1.1.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>util-macros</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libXmu</Name>
+        <RuntimeDependencies>
+            <Dependency>libXt</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libXmu-devel</Name>
+        <Summary>Development files for libXmu</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libXmu</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libXmu-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libXmu</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libXt-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libXmu</Dependency>
+            
+            <Dependency>libXt-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
