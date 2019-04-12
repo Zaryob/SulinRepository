@@ -25,7 +25,7 @@
 
     <Package>
         <Name>dbus-python-common</Name>
-        <PartOf>system.devel</PartOf>
+        <PartOf>programming.language.python</PartOf>
         <Summary>Common dbus-python files shared between dbus-python and dbus-python3</Summary>
         <RuntimeDependencies>
             <Dependency>dbus-devel</Dependency>
@@ -53,7 +53,7 @@
     </Package>
     <Package>
         <Name>dbus-python3</Name>
-        <PartOf>system.base</PartOf>
+        <PartOf>programming.language.python</PartOf>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
             <Dependency>python3</Dependency>
