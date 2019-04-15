@@ -1,4 +1,4 @@
-<!DOCTYPE INARY SYSTEM "https://www.sulin.com/standard/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>openrc</Name>
@@ -26,18 +26,15 @@
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
 	          <Dependency>ncurses</Dependency>
+            <Dependency>sysvinit</Dependency>
         </RuntimeDependencies>
-        <Replaces>
-            <Package>scomd</Package>
-            <Package>sysvinit</Package>
-        </Replaces>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/sbin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="doc">/usr/share/openrc</Path> 
+            <Path fileType="doc">/usr/share/openrc</Path>
        </Files>
     </Package>
     <Package>

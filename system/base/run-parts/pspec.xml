@@ -23,10 +23,10 @@
         <Package>
             <Name>run-parts-pages</Name>
             <IsA>data:doc</IsA>
-        <PartOf>system.doc</PartOf>
+            <PartOf>system.doc</PartOf>
             <Summary>Manpages for runparts</Summary>
             <RuntimeDependencies>
-                <Dependency release="current">runparts</Dependency>
+                <Dependency release="current">run-parts</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man</Path>
