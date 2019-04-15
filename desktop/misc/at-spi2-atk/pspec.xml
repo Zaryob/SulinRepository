@@ -1,0 +1,86 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>at-spi2-atk</Name>
+        <Homepage>http://www.linuxfoundation.org/collaborate/workgroups/accessibility</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>service</IsA>
+        <Summary>Protocol definitions and daemons for D-Bus at-spi</Summary>
+        <Description>at-spi allows assistive technologies to access GTK-based applications. Essentially it exposes the internals of applications over D-Bus for automation.</Description>
+        <Archive sha1sum="94b575c5376f6d250adfcbcb705dbdfeededc50b" type="tarxz">mirrors://gnome/at-spi2-atk/2.32/at-spi2-atk-2.32.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>at-spi2-atk</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>at-spi2-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>at-spi2-atk-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for at-spi2-atk</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>at-spi2-core-32bit</Dependency>
+            <Dependency>atk-32bit</Dependency>
+            <Dependency>dbus-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>atk-32bit</Dependency>
+            <Dependency>dbus-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+            <Dependency>at-spi2-core-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>at-spi2-atk-devel</Name>
+        <Summary>at-spi2-atk için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">at-spi2-atk</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.32.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
