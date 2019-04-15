@@ -1,0 +1,1098 @@
+<INARY>
+    <Distribution>
+        <SourceName>Sulin</SourceName>
+        <Description xml:lang="tr">Sulin rooling release (year 2019) Core Deposu</Description>
+        <Description xml:lang="en">Sulin rooling release (year 2019) Core Repository</Description>
+        <Description xml:lang="es">Sulin rooling release (year 2019) Core Repositorio</Description>
+        <Description xml:lang="nl">Sulin rooling release (year 2019) Core Opslagplaats</Description>
+        <Version>2019</Version>
+        <Type>Core</Type>
+        <BinaryName xml:lang="en">Sulib</BinaryName>
+    </Distribution>
+    <SpecFile>
+        <Source>
+            <Name>perl-URI</Name>
+            <Homepage>http://search.cpan.org/~gaas/URI</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl module for Uniform Resource Identifiers (absolute and relative)</Summary>
+            <Description xml:lang="en">A Uniform Resource Identifier is a compact string of characters that identifies an abstract or physical resource. A Uniform Resource Identifier can be further classified as either a Uniform Resource Locator (URL) or a Uniform Resource Name (URN).</Description>
+            <Description xml:lang="tr">Bir URI (Uniform Resource Identifiers- Tektip Kaynak Belirleyicileri), soyut veya fiziki bir kaynağı belirleyen bir tekparça karakter dizgesidir. Bir URI, bir URL (Uniform Resource Locator – Tektip Kaynak Bulucu) veya bir URN (Uniform Resource Name – Tektip Kaynak Adı)’den daha ötede sınıflandırılabilir.</Description>
+            <Description xml:lang="es">Un identificador de recurso uniformado (URI) es una cadena de caracteres compacta que identifica un recurso físico o abstracto. Se puede clasificar los URI en Uniform Resource Locator (URL) o Uniform Resource Name (URN).</Description>
+            <Archive type="targz" sha1sum="c609c5830899176b61100fce8f10436128471064">http://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.71.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-URI/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-URI</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-15</Date>
+                <Version>1.71</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-ExtUtils-PkgConfig</Name>
+            <Homepage>http://search.cpan.org/~gaas/URI</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Simplistic interface to pkg-config</Summary>
+            <Summary xml:lang="tr">Basit PkgConfig arayüzü.</Summary>
+            <Description xml:lang="en">The pkg-config program retrieves information about installed libraries, usually for the purposes of compiling against and linking to them.</Description>
+            <Description xml:lang="tr">Bu modül, pkg-config programı, yüklü kitaplıklar hakkında, genellikle bunlara karşı derleme ve bağlantı kurma amacıyla bilgi alır.</Description>
+            <Archive type="targz" sha1sum="18ff3b44c9bb281f85eec4bb1145f83cc759df93">https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-PkgConfig-1.16.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-ExtUtils-PkgConfig/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-ExtUtils-PkgConfig</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.16</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Data-Dumper</Name>
+            <Homepage>https://metacpan.org/pod/Data::Dumper</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">stringified perl data structures, suitable for both printing and eval</Summary>
+            <Summary xml:lang="tr">Hem yazdırmaya hem de değerlendirmeye uygun, genişletilmiş perl veri yapıları</Summary>
+            <Description xml:lang="en">Given a list of scalars or reference variables, writes out their contents in perl syntax. The references can also be objects. The content of each variable is output in a single Perl statement. Handles self-referential structures correctly.</Description>
+            <Description xml:lang="tr">Bir skalar listesi veya referans değişkenleri göz önüne alındığında, içeriklerini perl sözdiziminde yazar. Referanslar ayrıca nesneler olabilir. Her değişkenin içeriği tek bir Perl ifadesinde çıkar. Kendi kendine başvuru yapıları doğru şekilde işler.</Description>
+            <Archive type="targz" sha1sum="91ca53fd5499b913996009e763d73ebeb51be8c3">https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Data-Dumper-2.173.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Data-Dumper/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Data-Dumper</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>2.173</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-ExtUtils-MakeMaker</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::MakeMaker</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>perl_5</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Create a module Makefile</Summary>
+            <Description xml:lang="en">This utility is designed to write a Makefile for an extension module from a Makefile.PL. It is based on the Makefile.SH model provided by Andy Dougherty and the perl5-porters.</Description>
+            <Archive type="targz" sha1sum="d0b625774460453a01f3da4bbf8a6f37576ff621">https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.34.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-ExtUtils-MakeMaker/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-ExtUtils-MakeMaker</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>7.34</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-ExtUtils-Depends</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::Depends</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Easily build XS extensions that depend on XS extensions</Summary>
+            <Summary xml:lang="tr">XS uzantılarına bağlı olan XS uzantılarını kolayca oluşturun</Summary>
+            <Description xml:lang="en">This module tries to make it easy to build Perl extensions that use functions and typemaps provided by other perl extensions. This means that a perl extension is treated like a shared library that provides also a C and an XS interface besides the perl one.</Description>
+            <Description xml:lang="tr">Bu modül, diğer perl uzantıları tarafından sağlanan işlevleri ve yazı tiplerini kullanan Perl uzantılarını oluşturmayı kolaylaştırmaya çalışır. Bu, bir perl uzantısının perl dışında bir C ve XS arayüzü de sağlayan paylaşılan bir kütüphane gibi ele alındığı anlamına gelir.</Description>
+            <Archive type="targz" sha1sum="0561e114df3861dcde0073418513eff1209bd419">https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-0.8000.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Data-Dumper</Dependency>
+                <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+                <Dependency>perl-File-Spec</Dependency>
+                <Dependency>perl-IO</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-ExtUtils-Depends/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-ExtUtils-Depends</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Data-Dumper</Dependency>
+                <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+                <Dependency>perl-File-Spec</Dependency>
+                <Dependency>perl-IO</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>0.8000</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Glib</Name>
+            <Homepage>https://metacpan.org/pod/Glib</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl wrappers for the GLib utility and Object libraries</Summary>
+            <Summary xml:lang="tr">GLib yardımcı programı ve Nesne kitaplıkları için Perl sarmalayıcılar</Summary>
+            <Description xml:lang="en">This wrapper attempts to provide a perlish interface while remaining as true as possible to the underlying C API, so that any reference materials you can find on using GLib may still apply to using the libraries from perl. This module also provides facilities for creating wrappers for other GObject-based libraries. The &quot;SEE ALSO&quot; section contains pointers to all sorts of good information.</Description>
+            <Description xml:lang="tr">Bu sarmalayıcı, altta yatan C API&apos;sine olabildiğince doğru kalırken bir perlish arayüzü sağlamaya çalışır, böylece GLib&apos;i kullanırken bulabileceğiniz herhangi bir referans materyali perl&apos;den kütüphaneleri kullanmak için hala geçerli olabilir. Bu modül aynı zamanda diğer GObject tabanlı kütüphaneler için sarmalayıcılar oluşturma olanakları sağlar. &quot;SEE ALSO&quot; bölümü, her türlü iyi bilgiye işaretçiler içerir.</Description>
+            <Archive type="targz" sha1sum="3b448b18e58fca06c0829f0186f859d2019cec29">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-1.329.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Log-Agent</Dependency>
+                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Glib/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Glib</Name>
+            <RuntimeDependencies>
+                <Dependency>perl-Log-Agent</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.3.29</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-IO</Name>
+            <Homepage>https://metacpan.org/pod/IO</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Load various IO module</Summary>
+            <Summary xml:lang="tr">Çeşitli GÇ (IO) modüllerini yükleyin.</Summary>
+            <Description xml:lang="en">IO provides a simple mechanism to load several of the IO modules in one go.</Description>
+            <Description xml:lang="tr">GÇ, birçok GÇ modülünü bir seferde yüklemek için basit bir mekanizma sağlar.</Description>
+            <Archive type="targz" sha1sum="124826b2c097e6d761ef292d8d56bf0bd199d5d6">https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-1.39.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-IO/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-IO</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.39</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Log-Agent</Name>
+            <Homepage>https://metacpan.org/pod/Log::Agent</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">logging agent</Summary>
+            <Summary xml:lang="tr">Günlüğe kaydetme aracısı.</Summary>
+            <Description xml:lang="en">The Log::Agent module provides an abstract layer for logging and tracing, which is independent from the actual method used to physically perform those activities. It acts as an agent (hence the name) that collects the requests and delegates processing to a sublayer: the logging driver.</Description>
+            <Description xml:lang="tr">Log::Agent modülü, günlük olarak kayıt yapmak ve takip etmek için soyut bir katman sağlar ve bu işlemleri fiziksel olarak gerçekleştirmek için kullanılan gerçek yöntemden bağımsızdır. İstekleri toplayan ve işlemeyi bir alt katmana atayan bir aracı (dolayısıyla adı) görevi görür: günlük sürücüsü.</Description>
+            <Archive type="targz" sha1sum="97844208761919ddd6b279390eabf5775945a514">https://cpan.metacpan.org/authors/id/M/MR/MROGASKI/Log-Agent-1.003.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Log-Agent/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Log-Agent</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.39</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-File-Spec</Name>
+            <Homepage>https://metacpan.org/pod/File::Spec</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>perl_5</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Portably perform operations on file names.</Summary>
+            <Summary xml:lang="tr">Dosya adlarında taşınabilir işlemleri gerçekleştirme</Summary>
+            <Description xml:lang="en">This module is designed to support operations commonly performed on file specifications (usually called &quot;file names&quot;, but not to be confused with the contents of a file, or Perl&apos;s file handles), such as concatenating several directory and file names into a single path, or determining whether a path is rooted. It is based on code directly taken from MakeMaker 5.17, code written by Andreas König, Andy Dougherty, Charles Bailey, Ilya Zakharevich, Paul Schinder, and others.</Description>
+            <Description xml:lang="tr">Bu modül, dosya dizinlerinde yaygın olarak yapılan işlemleri (genellikle &quot;dosya adları&quot; olarak adlandırılır, ancak bir dosyanın içeriğiyle veya Perl&apos;in dosya tanıtıcılarıyla karıştırılmamalıdır), birkaç dizin ve dosya adını bir araya getirmek gibi tasarlanmıştır. tek bir yol veya bir yolun köklü olup olmadığını belirleme. Doğrudan MakeMaker 5.17&apos;den alınan kod, Andreas König, Andy Dougherty, Charles Bailey, Ilya Zakharevich, Paul Schinder ve diğerleri tarafından yazılan kodlara dayanmaktadır.</Description>
+            <Archive type="targz" sha1sum="ff2f9e55e33a1cfe1247e29f4e136b9a78f4be3a">https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/PathTools-3.75.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-File-Spec/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-File-Spec</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>3.75</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <Package>
+        <Name>perl-Data-Dumper</Name>
+        <Summary xml:lang="en">stringified perl data structures, suitable for both printing and eval</Summary>
+        <Summary xml:lang="tr">Hem yazdırmaya hem de değerlendirmeye uygun, genişletilmiş perl veri yapıları</Summary>
+        <Description xml:lang="en">Given a list of scalars or reference variables, writes out their contents in perl syntax. The references can also be objects. The content of each variable is output in a single Perl statement. Handles self-referential structures correctly.</Description>
+        <Description xml:lang="tr">Bir skalar listesi veya referans değişkenleri göz önüne alındığında, içeriklerini perl sözdiziminde yazar. Referanslar ayrıca nesneler olabilir. Her değişkenin içeriği tek bir Perl ifadesinde çıkar. Kendi kendine başvuru yapıları doğru şekilde işler.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>2.173</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>267903</InstalledSize>
+        <PackageSize>81557</PackageSize>
+        <PackageHash>cc10c8296fa2fffa819a66a2d62e0389e2842fb8</PackageHash>
+        <InstallTarHash>012a3549c75ead72828ed4c48574499eed6de724</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-Data-Dumper/perl-Data-Dumper-2.173-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-Data-Dumper</Name>
+            <Homepage>https://metacpan.org/pod/Data::Dumper</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-ExtUtils-Depends</Name>
+        <Summary xml:lang="en">Easily build XS extensions that depend on XS extensions</Summary>
+        <Summary xml:lang="tr">XS uzantılarına bağlı olan XS uzantılarını kolayca oluşturun</Summary>
+        <Description xml:lang="en">This module tries to make it easy to build Perl extensions that use functions and typemaps provided by other perl extensions. This means that a perl extension is treated like a shared library that provides also a C and an XS interface besides the perl one.</Description>
+        <Description xml:lang="tr">Bu modül, diğer perl uzantıları tarafından sağlanan işlevleri ve yazı tiplerini kullanan Perl uzantılarını oluşturmayı kolaylaştırmaya çalışır. Bu, bir perl uzantısının perl dışında bir C ve XS arayüzü de sağlayan paylaşılan bir kütüphane gibi ele alındığı anlamına gelir.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Data-Dumper</Dependency>
+            <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+            <Dependency>perl-File-Spec</Dependency>
+            <Dependency>perl-IO</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>0.8000</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>31755</InstalledSize>
+        <PackageSize>10983</PackageSize>
+        <PackageHash>79a1e6cee60fd52f49caa0104e56043e760ff64a</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-ExtUtils-Depends/perl-ExtUtils-Depends-0.8000-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-ExtUtils-Depends</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::Depends</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-ExtUtils-MakeMaker</Name>
+        <Summary xml:lang="en">Create a module Makefile</Summary>
+        <Description xml:lang="en">This utility is designed to write a Makefile for an extension module from a Makefile.PL. It is based on the Makefile.SH model provided by Andy Dougherty and the perl5-porters.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>perl_5</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>7.34</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>802499</InstalledSize>
+        <PackageSize>163449</PackageSize>
+        <PackageHash>d30bfe379aca026a301ddaa9d71f647ac9fa4588</PackageHash>
+        <InstallTarHash>956acdc59ba91e984ea9213f3f01c4a8d0de6115</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker-7.34-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-ExtUtils-MakeMaker</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::MakeMaker</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-ExtUtils-PkgConfig</Name>
+        <Summary xml:lang="en">Simplistic interface to pkg-config</Summary>
+        <Summary xml:lang="tr">Basit PkgConfig arayüzü.</Summary>
+        <Description xml:lang="en">The pkg-config program retrieves information about installed libraries, usually for the purposes of compiling against and linking to them.</Description>
+        <Description xml:lang="tr">Bu modül, pkg-config programı, yüklü kitaplıklar hakkında, genellikle bunlara karşı derleme ve bağlantı kurma amacıyla bilgi alır.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.16</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>15724</InstalledSize>
+        <PackageSize>6348</PackageSize>
+        <PackageHash>c9ad02737fa2c0141fe7b4235f23a4df094102a5</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-ExtUtils-PkgConfig/perl-ExtUtils-PkgConfig-1.16-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-ExtUtils-PkgConfig</Name>
+            <Homepage>http://search.cpan.org/~gaas/URI</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-File-Spec</Name>
+        <Summary xml:lang="en">Portably perform operations on file names.</Summary>
+        <Summary xml:lang="tr">Dosya adlarında taşınabilir işlemleri gerçekleştirme</Summary>
+        <Description xml:lang="en">This module is designed to support operations commonly performed on file specifications (usually called &quot;file names&quot;, but not to be confused with the contents of a file, or Perl&apos;s file handles), such as concatenating several directory and file names into a single path, or determining whether a path is rooted. It is based on code directly taken from MakeMaker 5.17, code written by Andreas König, Andy Dougherty, Charles Bailey, Ilya Zakharevich, Paul Schinder, and others.</Description>
+        <Description xml:lang="tr">Bu modül, dosya dizinlerinde yaygın olarak yapılan işlemleri (genellikle &quot;dosya adları&quot; olarak adlandırılır, ancak bir dosyanın içeriğiyle veya Perl&apos;in dosya tanıtıcılarıyla karıştırılmamalıdır), birkaç dizin ve dosya adını bir araya getirmek gibi tasarlanmıştır. tek bir yol veya bir yolun köklü olup olmadığını belirleme. Doğrudan MakeMaker 5.17&apos;den alınan kod, Andreas König, Andy Dougherty, Charles Bailey, Ilya Zakharevich, Paul Schinder ve diğerleri tarafından yazılan kodlara dayanmaktadır.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>perl_5</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>3.75</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>293778</InstalledSize>
+        <PackageSize>72562</PackageSize>
+        <PackageHash>aec8a86223462f3335e2585924aa49a0d360e0dd</PackageHash>
+        <InstallTarHash>5fd9141ba8d706bf527c76a71146745e385225ac</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-File-Spec/perl-File-Spec-3.75-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-File-Spec</Name>
+            <Homepage>https://metacpan.org/pod/File::Spec</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-Glib</Name>
+        <Summary xml:lang="en">Perl wrappers for the GLib utility and Object libraries</Summary>
+        <Summary xml:lang="tr">GLib yardımcı programı ve Nesne kitaplıkları için Perl sarmalayıcılar</Summary>
+        <Description xml:lang="en">This wrapper attempts to provide a perlish interface while remaining as true as possible to the underlying C API, so that any reference materials you can find on using GLib may still apply to using the libraries from perl. This module also provides facilities for creating wrappers for other GObject-based libraries. The &quot;SEE ALSO&quot; section contains pointers to all sorts of good information.</Description>
+        <Description xml:lang="tr">Bu sarmalayıcı, altta yatan C API&apos;sine olabildiğince doğru kalırken bir perlish arayüzü sağlamaya çalışır, böylece GLib&apos;i kullanırken bulabileceğiniz herhangi bir referans materyali perl&apos;den kütüphaneleri kullanmak için hala geçerli olabilir. Bu modül aynı zamanda diğer GObject tabanlı kütüphaneler için sarmalayıcılar oluşturma olanakları sağlar. &quot;SEE ALSO&quot; bölümü, her türlü iyi bilgiye işaretçiler içerir.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl-Log-Agent</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.3.29</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>2621981</InstalledSize>
+        <PackageSize>534695</PackageSize>
+        <PackageHash>38b98778e0229cc84392bc23df42965139ec3be9</PackageHash>
+        <InstallTarHash>d461235afc969a64ea18c42b7538df85c60696fa</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-Glib/perl-Glib-1.3.29-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-Glib</Name>
+            <Homepage>https://metacpan.org/pod/Glib</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-IO</Name>
+        <Summary xml:lang="en">Load various IO module</Summary>
+        <Summary xml:lang="tr">Çeşitli GÇ (IO) modüllerini yükleyin.</Summary>
+        <Description xml:lang="en">IO provides a simple mechanism to load several of the IO modules in one go.</Description>
+        <Description xml:lang="tr">GÇ, birçok GÇ modülünü bir seferde yüklemek için basit bir mekanizma sağlar.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.39</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>302096</InstalledSize>
+        <PackageSize>76134</PackageSize>
+        <PackageHash>27fd258cbabef1a8259cecc0e64fe62cc9b6c81a</PackageHash>
+        <InstallTarHash>bcb0709122cec11088341871f121f86054598d33</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-IO/perl-IO-1.39-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-IO</Name>
+            <Homepage>https://metacpan.org/pod/IO</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-Log-Agent</Name>
+        <Summary xml:lang="en">logging agent</Summary>
+        <Summary xml:lang="tr">Günlüğe kaydetme aracısı.</Summary>
+        <Description xml:lang="en">The Log::Agent module provides an abstract layer for logging and tracing, which is independent from the actual method used to physically perform those activities. It acts as an agent (hence the name) that collects the requests and delegates processing to a sublayer: the logging driver.</Description>
+        <Description xml:lang="tr">Log::Agent modülü, günlük olarak kayıt yapmak ve takip etmek için soyut bir katman sağlar ve bu işlemleri fiziksel olarak gerçekleştirmek için kullanılan gerçek yöntemden bağımsızdır. İstekleri toplayan ve işlemeyi bir alt katmana atayan bir aracı (dolayısıyla adı) görevi görür: günlük sürücüsü.</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-04-13</Date>
+                <Version>1.39</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>311153</InstalledSize>
+        <PackageSize>50461</PackageSize>
+        <PackageHash>860938b379adedf68c7f92b91863dd005dc8e1c9</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-Log-Agent/perl-Log-Agent-1.39-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-Log-Agent</Name>
+            <Homepage>https://metacpan.org/pod/Log::Agent</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>perl-URI</Name>
+        <Summary xml:lang="en">Perl module for Uniform Resource Identifiers (absolute and relative)</Summary>
+        <Description xml:lang="en">A Uniform Resource Identifier is a compact string of characters that identifies an abstract or physical resource. A Uniform Resource Identifier can be further classified as either a Uniform Resource Locator (URL) or a Uniform Resource Name (URN).</Description>
+        <Description xml:lang="tr">Bir URI (Uniform Resource Identifiers- Tektip Kaynak Belirleyicileri), soyut veya fiziki bir kaynağı belirleyen bir tekparça karakter dizgesidir. Bir URI, bir URL (Uniform Resource Locator – Tektip Kaynak Bulucu) veya bir URN (Uniform Resource Name – Tektip Kaynak Adı)’den daha ötede sınıflandırılabilir.</Description>
+        <Description xml:lang="es">Un identificador de recurso uniformado (URI) es una cadena de caracteres compacta que identifica un recurso físico o abstracto. Se puede clasificar los URI en Uniform Resource Locator (URL) o Uniform Resource Name (URN).</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>Artistic</License>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2017-01-24</Date>
+                <Version>1.71</Version>
+                <Comment>First release</Comment>
+                <Name>Sulin Community</Name>
+                <Email>admin@sulin.org</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>281636</InstalledSize>
+        <PackageSize>59774</PackageSize>
+        <PackageHash>1257782c24625ffa3382c5111e674146c80836d8</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/perl/perl-URI/perl-URI-1.71-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>perl-URI</Name>
+            <Homepage>http://search.cpan.org/~gaas/URI</Homepage>
+            <Packager>
+                <Name>Sulin Community</Name>
+                <Email>admins@sulin.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Component>
+        <Name>programming</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.library</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.build</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.debug</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.language</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.language.perl</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.misc</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.profiler</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.docs</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.environment</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.tool</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>programming.devel</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>programming</Group>
+        <Maintainer>
+            <Name xml:lang="en">Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Maintainer>
+    </Component>
+    <Group>
+        <Name>accessibility</Name>
+        <LocalName xml:lang="en">Accessibility</LocalName>
+        <LocalName xml:lang="nl">Toegankelijkheid</LocalName>
+        <LocalName xml:lang="sv">Handikappstöd</LocalName>
+        <LocalName xml:lang="tr">Erişilebilirlik</LocalName>
+        <LocalName xml:lang="fr">Accessibilité</LocalName>
+        <LocalName xml:lang="es">Accesibilidad</LocalName>
+        <LocalName xml:lang="de">Eingabehilfen</LocalName>
+        <LocalName xml:lang="it">Accessibilità</LocalName>
+        <Icon>preferences-desktop-accessibility</Icon>
+    </Group>
+    <Group>
+        <Name>accessories</Name>
+        <LocalName xml:lang="en">Accessories</LocalName>
+        <LocalName xml:lang="nl">Toebehoren</LocalName>
+        <LocalName xml:lang="sv">Tillbehör</LocalName>
+        <LocalName xml:lang="tr">Donatılar</LocalName>
+        <LocalName xml:lang="fr">Accessoires</LocalName>
+        <LocalName xml:lang="es">Accesorios</LocalName>
+        <LocalName xml:lang="de">Zubehör</LocalName>
+        <LocalName xml:lang="it">Accessori</LocalName>
+        <Icon>applications-accessories</Icon>
+    </Group>
+    <Group>
+        <Name>education</Name>
+        <LocalName xml:lang="en">Education</LocalName>
+        <LocalName xml:lang="nl">Educatie</LocalName>
+        <LocalName xml:lang="sv">Utbildning</LocalName>
+        <LocalName xml:lang="tr">Eğitim</LocalName>
+        <LocalName xml:lang="fr">Éducation</LocalName>
+        <LocalName xml:lang="es">Educación</LocalName>
+        <LocalName xml:lang="de">Lernen</LocalName>
+        <LocalName xml:lang="it">Educazione</LocalName>
+        <Icon>applications-education</Icon>
+    </Group>
+    <Group>
+        <Name>games</Name>
+        <LocalName xml:lang="en">Games</LocalName>
+        <LocalName xml:lang="nl">Spelen</LocalName>
+        <LocalName xml:lang="sv">Spel</LocalName>
+        <LocalName xml:lang="tr">Oyunlar</LocalName>
+        <LocalName xml:lang="fr">Jeux</LocalName>
+        <LocalName xml:lang="es">Juegos</LocalName>
+        <LocalName xml:lang="de">Spiele</LocalName>
+        <LocalName xml:lang="it">Giochi</LocalName>
+        <Icon>applications-games</Icon>
+    </Group>
+    <Group>
+        <Name>graphics</Name>
+        <LocalName xml:lang="en">Graphics</LocalName>
+        <LocalName xml:lang="nl">Grafisch</LocalName>
+        <LocalName xml:lang="sv">Grafik</LocalName>
+        <LocalName xml:lang="tr">Grafik</LocalName>
+        <LocalName xml:lang="fr">Graphisme</LocalName>
+        <LocalName xml:lang="es">Gráficos</LocalName>
+        <LocalName xml:lang="de">Design</LocalName>
+        <LocalName xml:lang="it">Grafica</LocalName>
+        <Icon>applications-graphics</Icon>
+    </Group>
+    <Group>
+        <Name>internet</Name>
+        <LocalName xml:lang="en">Internet</LocalName>
+        <LocalName xml:lang="nl">Internet</LocalName>
+        <LocalName xml:lang="sv">Internet</LocalName>
+        <LocalName xml:lang="tr">İnternet</LocalName>
+        <LocalName xml:lang="fr">Internet</LocalName>
+        <LocalName xml:lang="es">Internet</LocalName>
+        <LocalName xml:lang="de">Internet</LocalName>
+        <LocalName xml:lang="it">Internet</LocalName>
+        <Icon>applications-internet</Icon>
+    </Group>
+    <Group>
+        <Name>office</Name>
+        <LocalName xml:lang="en">Office</LocalName>
+        <LocalName xml:lang="nl">Kantoor</LocalName>
+        <LocalName xml:lang="sv">Kontor</LocalName>
+        <LocalName xml:lang="tr">Ofis</LocalName>
+        <LocalName xml:lang="fr">Bureautique</LocalName>
+        <LocalName xml:lang="es">Oficina</LocalName>
+        <LocalName xml:lang="de">Büro</LocalName>
+        <LocalName xml:lang="it">Ufficio</LocalName>
+        <Icon>applications-office</Icon>
+    </Group>
+    <Group>
+        <Name>other</Name>
+        <LocalName xml:lang="en">Other</LocalName>
+        <LocalName xml:lang="nl">Overige</LocalName>
+        <LocalName xml:lang="sv">Övrigt</LocalName>
+        <LocalName xml:lang="tr">Diğer</LocalName>
+        <LocalName xml:lang="fr">Autres</LocalName>
+        <LocalName xml:lang="es">Otros</LocalName>
+        <LocalName xml:lang="de">Sonstiges</LocalName>
+        <LocalName xml:lang="it">Altro</LocalName>
+        <Icon>applications-other</Icon>
+    </Group>
+    <Group>
+        <Name>programming</Name>
+        <LocalName xml:lang="en">Programming</LocalName>
+        <LocalName xml:lang="nl">Programmeren</LocalName>
+        <LocalName xml:lang="sv">Utveckling</LocalName>
+        <LocalName xml:lang="tr">Programlama</LocalName>
+        <LocalName xml:lang="fr">Programmation</LocalName>
+        <LocalName xml:lang="es">Programación</LocalName>
+        <LocalName xml:lang="de">Programmierung</LocalName>
+        <LocalName xml:lang="it">Programmazione</LocalName>
+        <Icon>applications-development</Icon>
+    </Group>
+    <Group>
+        <Name>multimedia</Name>
+        <LocalName xml:lang="en">Multimedia</LocalName>
+        <LocalName xml:lang="nl">Multimedia</LocalName>
+        <LocalName xml:lang="sv">Multimedia</LocalName>
+        <LocalName xml:lang="tr">Çoklu Ortam</LocalName>
+        <LocalName xml:lang="fr">Multimédia</LocalName>
+        <LocalName xml:lang="es">Multimedia</LocalName>
+        <LocalName xml:lang="de">Multimedia</LocalName>
+        <LocalName xml:lang="it">Multimedia</LocalName>
+        <Icon>applications-multimedia</Icon>
+    </Group>
+    <Group>
+        <Name>system</Name>
+        <LocalName xml:lang="en">System</LocalName>
+        <LocalName xml:lang="nl">Systeem</LocalName>
+        <LocalName xml:lang="sv">System</LocalName>
+        <LocalName xml:lang="tr">Sistem</LocalName>
+        <LocalName xml:lang="fr">Système</LocalName>
+        <LocalName xml:lang="es">Sistema</LocalName>
+        <LocalName xml:lang="de">System</LocalName>
+        <LocalName xml:lang="it">Sistema</LocalName>
+        <Icon>applications-system</Icon>
+    </Group>
+    <Group>
+        <Name>fonts</Name>
+        <LocalName xml:lang="en">Fonts</LocalName>
+        <LocalName xml:lang="nl">Lettertypen</LocalName>
+        <LocalName xml:lang="sv">Teckensnitt</LocalName>
+        <LocalName xml:lang="tr">Fontlar</LocalName>
+        <LocalName xml:lang="fr">Polices</LocalName>
+        <LocalName xml:lang="es">Fuentes</LocalName>
+        <LocalName xml:lang="de">Fonts</LocalName>
+        <LocalName xml:lang="it">Caratteri</LocalName>
+        <Icon>preferences-desktop-font</Icon>
+    </Group>
+    <Group>
+        <Name>localization</Name>
+        <LocalName xml:lang="en">Localization</LocalName>
+        <LocalName xml:lang="nl">Lokalisatie</LocalName>
+        <LocalName xml:lang="sv">Internationalisering</LocalName>
+        <LocalName xml:lang="tr">Yerelleştirme</LocalName>
+        <LocalName xml:lang="fr">Internationalisation</LocalName>
+        <LocalName xml:lang="es">Localización</LocalName>
+        <LocalName xml:lang="it">Localizzazione</LocalName>
+        <Icon>preferences-desktop-locale</Icon>
+    </Group>
+    <Group>
+        <Name>documentation</Name>
+        <LocalName xml:lang="en">Documentation</LocalName>
+        <LocalName xml:lang="nl">Documentatie</LocalName>
+        <LocalName xml:lang="sv">Dokumentation</LocalName>
+        <LocalName xml:lang="tr">Belgeleme</LocalName>
+        <LocalName xml:lang="fr">Documentation</LocalName>
+        <LocalName xml:lang="es">Documentación</LocalName>
+        <LocalName xml:lang="de">Dokumentation</LocalName>
+        <LocalName xml:lang="it">Documentazione</LocalName>
+        <Icon>graphics-viewer-document</Icon>
+    </Group>
+    <Group>
+        <Name>unknown</Name>
+        <LocalName xml:lang="en">Unknown</LocalName>
+        <LocalName xml:lang="nl">Onbekend</LocalName>
+        <LocalName xml:lang="sv">Okända</LocalName>
+        <LocalName xml:lang="tr">Bilinmeyen</LocalName>
+        <LocalName xml:lang="fr">Inconnu</LocalName>
+        <LocalName xml:lang="es">Desconocido</LocalName>
+        <LocalName xml:lang="de">Unbekannt</LocalName>
+        <LocalName xml:lang="it">Sconosciuto</LocalName>
+        <Icon>unknown</Icon>
+    </Group>
+    <Group>
+        <Name>all</Name>
+        <LocalName xml:lang="en">All</LocalName>
+        <LocalName xml:lang="nl">Alles</LocalName>
+        <LocalName xml:lang="sv">Samtliga</LocalName>
+        <LocalName xml:lang="tr">Tümü</LocalName>
+        <LocalName xml:lang="fr">Tout</LocalName>
+        <LocalName xml:lang="es">Todos</LocalName>
+        <LocalName xml:lang="de">Alle</LocalName>
+        <LocalName xml:lang="it">Tutti</LocalName>
+        <Icon>media-optical</Icon>
+    </Group>
+</INARY>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-ExtUtils-PkgConfig</Name>
+        <Summary xml:lang="tr">Basit PkgConfig arayüzü.</Summary>
+        <Description xml:lang="tr"> Bu modül, pkg-config programı, yüklü kitaplıklar hakkında, genellikle bunlara karşı derleme ve bağlantı kurma amacıyla bilgi alır. </Description>
+    </Source>
+</INARY>

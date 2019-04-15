@@ -1,0 +1,136 @@
+<INARY>
+    <Components>
+        <Component>
+            <Name>programming</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.library</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.build</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.debug</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.language</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.language.perl</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.misc</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.profiler</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.docs</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.environment</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.tool</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>programming.devel</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+    </Components>
+</INARY>
