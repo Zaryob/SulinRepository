@@ -1,0 +1,82 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libwnck2</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+          <Name>Suleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A window navigation construction kit</Summary>
+        <Description>libwnck (pronounced "libwink") is used to implement pagers, tasklists, and other such things. It allows applications to monitor information about open windows, workspaces, their names/icons, and so forth.</Description>
+        <Archive sha1sum="964861e1213fbd04cd7999f855064cfa4888f5bf" type="tarxz">https://download.gnome.org/sources/libwnck/2.31/libwnck-2.31.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>libXres-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>gettext</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">libwnck-2.18.0-above.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libwnck2</Name>
+        <RuntimeDependencies>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXres</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libwnck2-devel</Name>
+        <Summary>Development files for libwnck2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libwnck2</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libXres-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-16</Date>
+            <Version>2.31.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
