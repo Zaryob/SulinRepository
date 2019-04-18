@@ -55,4 +55,5 @@ def install():
         for binaries in ["gtk-query-immodules-3.0"]:
             inarytools.domove("/usr/bin/%s" % binaries, "/usr/bin/", "%s-32bit" % binaries)
         inarytools.removeDir("/usr/bin32")
-#    inarytools.rename("/usr/bin/gtk3-update-icon-cache", "gtk3-update-icon-cache")
+    else:
+        inarytools.rename("/usr/bin/gtk-update-icon-cache", "gtk3-update-icon-cache")
