@@ -1,6 +1,7 @@
 <INARY>
     <Components>
         <Component>
+<<<<<<< HEAD
             <Name>system</Name>
 <<<<<<< HEAD
             <LocalName xml:lang="en">System Package.</LocalName>
@@ -366,6 +367,8 @@
             </Maintainer>
         </Component>
         <Component>
+=======
+>>>>>>> perl-toolkit
             <Name>programming</Name>
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
@@ -373,10 +376,14 @@
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
@@ -388,8 +395,11 @@
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
+=======
+>>>>>>> perl-toolkit
                 <Name>Suleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
@@ -413,7 +423,10 @@
             <Group>programming</Group>
             <Maintainer>
                 <Name>Suleyman Poyraz</Name>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
@@ -425,105 +438,150 @@
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
         <Component>
+<<<<<<< HEAD
             <Name>programming.language.python</Name>
+=======
+            <Name>programming.language.perl</Name>
+>>>>>>> perl-toolkit
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
             <Description xml:lang="en">FIXME</Description>
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
         <Component>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Name>programming.docs</Name>
 =======
             <Name>programming.language.python.django</Name>
 >>>>>>> main
+=======
+            <Name>programming.misc</Name>
+>>>>>>> perl-toolkit
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
             <Description xml:lang="en">FIXME</Description>
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
         <Component>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Name>programming.environment</Name>
 =======
             <Name>programming.language.perl</Name>
 >>>>>>> main
+=======
+            <Name>programming.profiler</Name>
+>>>>>>> perl-toolkit
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
             <Description xml:lang="en">FIXME</Description>
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
         <Component>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Name>programming.environment.eric</Name>
 =======
             <Name>programming.language.dotnet</Name>
 >>>>>>> main
+=======
+            <Name>programming.docs</Name>
+>>>>>>> perl-toolkit
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
             <Description xml:lang="en">FIXME</Description>
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
         <Component>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Name>programming.environment.eclipse</Name>
 =======
             <Name>programming.language.gambas</Name>
 >>>>>>> main
+=======
+            <Name>programming.environment</Name>
+>>>>>>> perl-toolkit
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
             <Description xml:lang="en">FIXME</Description>
             <Group>programming</Group>
             <Maintainer>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Name>Süleyman POYRAZ</Name>
 =======
                 <Name>Suleyman Poyraz</Name>
 >>>>>>> main
+=======
+                <Name>Suleyman Poyraz</Name>
+>>>>>>> perl-toolkit
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
         <Component>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Name>programming.environment.kdevelop</Name>
 =======
@@ -894,6 +952,9 @@
         </Component>
         <Component>
             <Name>programming.tool</Name>
+=======
+            <Name>programming.tool</Name>
+>>>>>>> perl-toolkit
             <LocalName xml:lang="en">FIXME</LocalName>
             <Summary xml:lang="en">FIXME</Summary>
             <Description xml:lang="en">FIXME</Description>
@@ -914,6 +975,7 @@
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
+<<<<<<< HEAD
         <Component>
             <Name>security</Name>
             <LocalName xml:lang="en">FIXME</LocalName>
@@ -2653,5 +2715,7 @@
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
+=======
+>>>>>>> perl-toolkit
     </Components>
 </INARY>
