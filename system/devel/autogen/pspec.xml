@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>autogen</Name>
+        <Homepage>http://www.gnu.org/software/autogen</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>The automated text and program generation tool</Summary>
+        <Description>autogen is a tool designed to simplify the creation and maintenance of programs that contain large amounts of repetitious text.</Description>
+        <Archive 
+sha1sum="fff5c0bf812cb1c65ccb9f56d25f7c77914fa72c" 
+type="targz">mirrors://gnu/autogen/rel5.18.12/autogen-5.18.12.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gc-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>guile-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>which</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>autogen</Name>
+        <RuntimeDependencies>
+            <Dependency>guile</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/autogen</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>autogen-devel</Name>
+        <Summary>Development files for autogen</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">autogen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="executable">/usr/bin/autoopts-config</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>autogen-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for autogen package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">autogen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <Package>
+        <Name>autogen-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for autogen package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">autogen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>5.18.12</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

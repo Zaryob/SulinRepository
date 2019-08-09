@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libuv</Name>
+        <Homepage>http://libuv.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>library</IsA>
+        <Summary>Multi-platform support library with a focus on asynchronous I/O</Summary>
+        <Description>libuv is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node.js, but it's also used by Luvit, Julia, pyuv, and others.</Description>
+        <Archive sha1sum="54f0972aa0d3f6a6036d477b381c01f030f9a2b5" type="targz">https://github.com/libuv/libuv/archive/v1.11.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libuv</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libuv*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libuv-devel</Name>
+        <Summary>Development files for libuv</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libuv</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libuv-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for libuv package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libuv</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>1.11.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

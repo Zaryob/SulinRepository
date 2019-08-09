@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>eudev</Name>
+        <Homepage>https://www.gentoo.org/proj/en/eudev/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <License>MIT</License>
+        <IsA>console</IsA>
+        <Summary>eudev is a fork of system-udev</Summary>
+        <Description>eudev is a fork of system-udev with the goal of obtaining better compatibility with existing software such as OpenRC and Upstart, older kernels, various toolchains and anything else required by users and various distributions.</Description>
+        <Archive sha1sum="135114374709918f7f8ebf6e531d08ad690148c9" type="targz">https://github.com/gentoo/eudev/archive/v3.2.7.tar.gz</Archive>
+        <AdditionalFiles>
+             <AdditionalFile target="config.cache">config.cache</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libkmod-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>gperf</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>eudev</Name>
+        <RuntimeDependencies>
+            <Dependency>libkmod</Dependency>
+            <Dependency>libutil-linux</Dependency>-
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/lib/udev</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib/libudev.so*</Path>
+            <Path fileType="library">/usr/lib/libudev.a*</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/udev.conf</Path>
+            <Path fileType="data">/run/udev</Path>
+            <Path fileType="data">/lib/systemd</Path>
+            <Path fileType="data">/etc/udev/rules.d</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/udev.conf">tmpfiles.conf</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+    <Package>
+        <Name>eudev-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for eudev package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>eudev-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for eudev package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>eudev-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for eudev</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path> <!-- check this path usr/share/pkgconfig -->
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>eudev-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for eudev</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libkmod-32bit</Dependency>
+            <Dependency>libutil-linux-32bit</Dependency>
+        </BuildDependencies>
+        <Files>
+            <Path fileType="library">/lib32</Path>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>3.2.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

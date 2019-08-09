@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>cracklib</Name>
+        <Summary xml:lang="tr">Parola Kontrol Kütüphanesi</Summary>
+        <Summary xml:lang="fr">Librairie de vérification de mot de passe.</Summary>
+        <Summary xml:lang="de">Bibliothek, um Passwörter zu prüfen</Summary>
+        <Description xml:lang="tr">CrackLib, kullanıcıların kolay tahmin edilebilir parolalar seçmelerini engellemek amacıyla parolaların güvenlik odaklı bazı özelliklere sahip olup olmadıklarını denetler.</Description>
+    </Source>
+
+    <Package>
+        <Name>cracklib-docs</Name>
+        <Summary xml:lang="tr">cracklib için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour cracklib</Summary>
+    </Package>
+</INARY>

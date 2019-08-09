@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>check</Name>
+        <Summary xml:lang="tr">C için birim test ortamı</Summary>
+        <Description xml:lang="tr">check C dili için yazılmış bir birim test ortamıdır. Birim test tanımlamak için bir arayüz sunan check, geliştiriciye test yapabilmesi için kolay bir ortam sağlar.</Description>
+    </Source>
+
+    <Package>
+        <Name>check-devel</Name>
+        <Summary xml:lang="tr">check için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>check-docs</Name>
+        <Summary xml:lang="tr">check için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour check</Summary>
+    </Package>
+    <Package>
+        <Name>check-pages</Name>
+        <Summary xml:lang="tr">check için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour check</Summary>
+    </Package>
+</INARY>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>util-macros</Name>
+        <Summary xml:lang="fr">Macros X.Org utilisées pour compiler X.Org</Summary>
+        <Summary xml:lang="de">X.Org Makros zum Kompilieren von X.Org</Summary>
+        <Summary xml:lang="tr">X.Org X11 Autotools makroları</Summary>
+        <Description xml:lang="tr">X.Org X11 Autotools makroları, X pencere sistemini oluşturan çeşitli paketleri derlemek için gereklidir.</Description>
+    </Source>
+    <Package>
+        <Name>util-macros-docs</Name>
+        <Summary xml:lang="tr">util-macros için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour util-macros</Summary>
+    </Package>
+</INARY>

@@ -1,0 +1,126 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kmod</Name>
+        <Homepage>http://git.kernel.org/?p=utils/kernel/kmod/kmod.git;a=summary</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Linux kernel module management utilities</Summary>
+        <Description>Linux kernel module management utilities</Description>
+        <Archive sha1sum="761ee76bc31f5db10d470dad607a5f9d68acef68" type="tarxz">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-25.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>chrpath</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>kernel-module-headers</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kmod</Name>
+        <RuntimeDependencies>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency version="current">libkmod</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/kmod</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist.conf">blacklist/blacklist.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-firewire.conf">blacklist/blacklist-firewire.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-framebuffer.conf">blacklist/blacklist-framebuffer.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-watchdog.conf">blacklist/blacklist-watchdog.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/modprobe.conf">modprobe.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/depmod.d/depmod.conf">depmod.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/depmod.d/search.conf">depmod-search.conf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>kmod-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for kmod</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kmod</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>kmod-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for kmod</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kmod</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libkmod-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency version="current">libkmod</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libkmod</Name>
+        <RuntimeDependencies>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Summary>kmod libraries</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/libkmod.so*</Path>
+            <Path fileType="library">/usr/lib/depmod.d</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libkmod-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32bit libraries of libkmod</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>xz-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>xz-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libkmod.so*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>25</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

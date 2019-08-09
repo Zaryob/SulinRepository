@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>scons</Name>
+        <Summary xml:lang="tr">Python temelli, esnek, geliştirilebilir inşa aracı</Summary>
+        <Description xml:lang="tr">Python temelli, esnek, geliştirilebilir inşa aracı. SCons, klasik &quot;make&quot; aracına &quot;autconf/automake&quot; özellikleri ve &quot;ccache&quot; gibi derleyici önbelleği eklenmiş, gelişmiş bir araç olarak düşünülebilir.</Description>
+        <Description xml:lang="fr">Utilitaire extensible écrit en python. On peut considérer SCons comme un substitut amélioré multi-plateforme de Make intégrant des fonctionnalités similaires à celles d'autoconf/automake et un gestionnaire de cache de compilateur tel ccache.</Description>
+    </Source>
+    <Package>
+        <Name>scons-docs</Name>
+        <Summary xml:lang="tr">scons için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour scons</Summary>
+    </Package>
+    <Package>
+        <Name>scons-pages</Name>
+        <Summary xml:lang="tr">scons için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour scons</Summary>
+    </Package>
+</INARY>

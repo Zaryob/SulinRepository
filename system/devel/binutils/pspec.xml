@@ -1,0 +1,60 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>binutils</Name>
+        <Homepage>http://www.gnu.org/software/binutils/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Assembler and linker tools</Summary>
+        <Description>Contains commands like as, ld, nm, objdump, ar, ranlib for compiling assembly code to the machine language, and for linking and manipulating the binary object files.</Description>
+        <Archive sha1sum="3b031410897fe224412f3a6a1b052402d2fbcc6a" type="tarxz">http://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.xz</Archive>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>binutils</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/x86_64-pc-linux-gnu</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>binutils-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for binutils package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">binutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2019-01-18</Date>
+            <Version>2.31.1</Version>
+            <Comment>Kararlı son sürüme yükseltildi</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.30</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

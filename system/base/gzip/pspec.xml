@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gzip</Name>
+        <Homepage>http://www.gnu.org/software/gzip</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>Standard GNU compressor</Summary>
+        <Description>gzip (GNU zip) is a popular data compression program written for the GNU project.</Description>
+        <Archive sha1sum="48d28c77cb8cac38573809fdd1665ecf75f91fa9" type="tarxz">http://ftp.gnu.org/gnu/gzip/gzip-1.10.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>gzip</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gzip-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for gzip</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gzip</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gzip-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for gzip</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gzip</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-01-19</Date>
+            <Version>1.10</Version>
+            <Comment>Son kararlı versiyona yükseltildi.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

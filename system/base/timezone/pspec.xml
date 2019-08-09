@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>timezone</Name>
+        <Homepage>ftp://elsie.nci.nih.gov/pub/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <License>public-domain</License>
+        <IsA>app:console</IsA>
+        <IsA>data</IsA>
+        <Summary>Timezone data files and tools</Summary>
+        <Description>timezone includes timezone data files and tools to use them. Package contents are synchronized with glibc tree.</Description>
+        <Archive sha1sum="9ab1932256674075fb74ff84792582b5ac12c476" type="targz">http://www.iana.org/time-zones/repository/releases/tzdata2018e.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>gawk</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>timezone</Name>
+        <Files>
+            <Path fileType="data">/usr/share/zoneinfo</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>2018e</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

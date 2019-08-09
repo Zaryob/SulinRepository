@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gc</Name>
+        <Homepage>http://www.hpl.hp.com/personal/Hans_Boehm/gc</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A garbage collector for C and C++</Summary>
+        <Description>The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage collecting replacement for C malloc or C++ new.</Description>
+        <Archive sha1sum="1a3f91a6ea004dcd1f5fc93defcdb2c2bc0c3941" type="targz">http://hboehm.info/gc/gc_source/gc-7.6.4.tar.gz</Archive>
+        <BuildDependencies>
+          <Dependency>libatomic_ops-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gc</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gc-devel</Name>
+        <Summary>Development files for gc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>7.6.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

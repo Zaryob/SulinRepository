@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>xorg-proto</Name>
+        <Summary xml:lang="fr">Entêtes de protocole de X.Org.</Summary>
+        <Summary xml:lang="de">X.Org Protokoll Header</Summary>
+        <Summary xml:lang="tr">X.Org Protokol Başlıkları</Summary>
+        <Description xml:lang="tr">Bu paket, X11 geliştirme için gerekli protokol başlıklarını içerir.</Description>
+    </Source>
+    <Package>
+        <Name>xorg-proto-docs</Name>
+        <Summary xml:lang="tr">xorg-proto için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour xorg-proto</Summary>
+    </Package>
+    <Package>
+        <Name>xorg-proto-pages</Name>
+        <Summary xml:lang="tr">xorg-proto için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour xorg-proto</Summary>
+    </Package>
+</INARY>

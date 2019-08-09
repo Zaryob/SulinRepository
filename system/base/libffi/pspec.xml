@@ -1,0 +1,87 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libffi</Name>
+        <Homepage>http://sourceware.org/libffi</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A portable foreign function interface library</Summary>
+        <Description>The libffi library provides a portable, high level programming interface to various calling conventions.</Description>
+        <Archive sha1sum="280c265b789e041c02e5c97815793dfc283fb1e6" type="targz">ftp://sourceware.org/pub/libffi/libffi-3.2.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libffi</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libffi.*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libffi-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for libffi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libffi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libffi-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for libffi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libffi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libffi-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libffi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libffi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/lib/libffi-*</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libffi-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libffi</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libffi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libffi.*</Path>
+            <Path fileType="header">/usr/lib32/libffi-*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>3.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

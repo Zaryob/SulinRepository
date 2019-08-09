@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>numactl</Name>
+        <Summary xml:lang="tr">NUMA makineleri optimize etmek için bir kitaplık</Summary>
+        <Description xml:lang="tr">numactl, uygulamaları farklı NUMA (Tekdüze Olmayan Bellek Erişimi) politikalarıyla çalıştırmak için gerekli bir araç ve kitaplıktır.</Description>
+    </Source>
+
+    <Package>
+        <Name>numactl-devel</Name>
+        <Summary xml:lang="tr">numactl için geliştirme dosyaları</Summary>
+    </Package>
+    <Package>
+        <Name>numactl-docs</Name>
+        <Summary xml:lang="tr">numactl için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour numactl</Summary>
+    </Package>
+    <Package>
+        <Name>numactl-pages</Name>
+        <Summary xml:lang="tr">numactl için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour numactl</Summary>
+    </Package>
+</INARY>

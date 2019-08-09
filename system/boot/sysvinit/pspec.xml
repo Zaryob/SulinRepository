@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>sysvinit</Name>
+        <Homepage>http://freshmeat.net/projects/sysvinit/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Programs which control basic system processes</Summary>
+        <Description>sysvinit package contains a group of utilities that control the very basic functions of your system. sysvinit contains the init program, the first program started by the Linux kernel when the system boots.</Description>
+        <Archive sha1sum="fa706acd2a60f13d4364c0952bf4325d491c6ad2" type="tarxz">http://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.93.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>sysvinit</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sysvinit-tools</Name>
+        <Summary>Tools used for process and utmp management</Summary>
+        <Files>
+            <Path fileType="executable">/bin/mountpoint</Path>
+            <Path fileType="executable">/sbin/pidof</Path>
+            <Path fileType="executable">/sbin/killall5</Path>
+            <Path fileType="executable">/sbin/sulogin</Path>
+            <Path fileType="executable">/usr/bin/wall</Path>
+            <Path fileType="executable">/usr/bin/last</Path>
+            <Path fileType="executable">/usr/bin/lastb</Path>
+            <Path fileType="executable">/usr/bin/mesg</Path>
+            <Path fileType="executable">/usr/bin/utmpdump</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="man">/usr/share/man/man8/killall5*</Path>
+            <Path fileType="man">/usr/share/man/man8/pidof*</Path>
+            <Path fileType="man">/usr/share/man/man8/sulogin*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-01-22</Date>
+            <Version>2.93</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

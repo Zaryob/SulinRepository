@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>chrpath</Name>
+        <Summary xml:lang="tr">Dinamik kitaplık yükleme yolunu (rpath) değiştirme aracı</Summary>
+        <Description xml:lang="tr">chrpath ile derlenmiş kitaplıkların ve programların dinamik kitaplık yükleme yolunu (rpath ve runpath) değiştirebilirsiniz.</Description>
+    </Source>
+    <Package>
+        <Name>chrpath-docs</Name>
+        <Summary xml:lang="tr">chrpath için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour chrpath</Summary>
+    </Package>
+    <Package>
+        <Name>chrpath-pages</Name>
+        <Summary xml:lang="tr">chrpath için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour chrpath</Summary>
+    </Package>
+</INARY>
