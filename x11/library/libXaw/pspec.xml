@@ -1,0 +1,98 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libXaw</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>X Athena Widgets Library</Summary>
+        <Description>Xaw is a widget set based on the X Toolkit Intrinsics (Xt) Library.</Description>
+        <Archive sha1sum="15f891fb88aae966b3064dcc1510790a0ebc75a0" type="tarbz2">mirrors://xorg/individual/lib/libXaw-1.0.13.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libXaw</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libXt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libXaw-devel</Name>
+        <Summary>Development files for libXaw</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libXaw</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+	    </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libXaw-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libSM</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXmu-32bit</Dependency>
+            <Dependency>libXpm-32bit</Dependency>
+            <Dependency>libXt-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libXaw</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXmu-32bit</Dependency>
+            <Dependency>libXpm-32bit</Dependency>
+            <Dependency>libXt-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.0.13</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

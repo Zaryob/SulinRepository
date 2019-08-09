@@ -7,7 +7,11 @@
       <LocalName xml:lang="sv">Handikappstöd</LocalName>
       <LocalName xml:lang="tr">Erişilebilirlik</LocalName>
       <LocalName xml:lang="fr">Accessibilité</LocalName>
+<<<<<<< HEAD
       <LocalName xml:lang="es">Accesibilidad</LocalName>
+=======
+      <LocalName xml:lang="es">Acesibilidad</LocalName>
+>>>>>>> main
       <LocalName xml:lang="de">Eingabehilfen</LocalName>
       <LocalName xml:lang="it">Accessibilità</LocalName>
       <Icon>preferences-desktop-accessibility</Icon>
@@ -19,7 +23,11 @@
       <LocalName xml:lang="sv">Tillbehör</LocalName>
       <LocalName xml:lang="tr">Donatılar</LocalName>
       <LocalName xml:lang="fr">Accessoires</LocalName>
+<<<<<<< HEAD
       <LocalName xml:lang="es">Accesorios</LocalName>
+=======
+      <LocalName xml:lang="es">Acesorios</LocalName>
+>>>>>>> main
       <LocalName xml:lang="de">Zubehör</LocalName>
       <LocalName xml:lang="it">Accessori</LocalName>
       <Icon>applications-accessories</Icon>
@@ -31,7 +39,11 @@
       <LocalName xml:lang="sv">Utbildning</LocalName>
       <LocalName xml:lang="tr">Eğitim</LocalName>
       <LocalName xml:lang="fr">Éducation</LocalName>
+<<<<<<< HEAD
       <LocalName xml:lang="es">Educación</LocalName>
+=======
+      <LocalName xml:lang="es">Educativos</LocalName>
+>>>>>>> main
       <LocalName xml:lang="de">Lernen</LocalName>
       <LocalName xml:lang="it">Educazione</LocalName>
       <Icon>applications-education</Icon>
@@ -133,6 +145,68 @@
       <Icon>applications-system</Icon>
     </Group>
     <Group>
+<<<<<<< HEAD
+=======
+      <Name>gnome.desktop</Name>
+      <LocalName xml:lang="en">Gnome Desktop</LocalName>
+      <LocalName xml:lang="nl">Gnome Desktop</LocalName>
+      <LocalName xml:lang="sv">Skrivbord, GNOME</LocalName>
+      <LocalName xml:lang="tr">Gnome Masaüstü</LocalName>
+      <LocalName xml:lang="fr">Bureau Gnome</LocalName>
+      <LocalName xml:lang="es">Gnome</LocalName>
+      <LocalName xml:lang="de">Gnome</LocalName>
+      <LocalName xml:lang="it">Gnome</LocalName>
+      <Icon>preferences-desktop</Icon> <!-- FIXME: Gnome Desktop Icon -->
+    </Group>
+    <Group>
+      <Name>kde.desktop</Name>
+      <LocalName xml:lang="en">KDE Desktop</LocalName>
+      <LocalName xml:lang="nl">KDE Desktop</LocalName>
+      <LocalName xml:lang="sv">Skrivbord, KDE</LocalName>
+      <LocalName xml:lang="tr">KDE Masaüstü</LocalName>
+      <LocalName xml:lang="fr">Bureau KDE</LocalName>
+      <LocalName xml:lang="es">KDE</LocalName>
+      <LocalName xml:lang="de">KDE</LocalName>
+      <LocalName xml:lang="it">KDE</LocalName>
+      <Icon>kde</Icon>
+    </Group>
+    <Group>
+      <Name>other.desktop</Name>
+      <LocalName xml:lang="en">Other Desktops</LocalName>
+      <LocalName xml:lang="nl">Overige Desktop</LocalName>
+      <LocalName xml:lang="sv">Skrivbord, Övrigt</LocalName>
+      <LocalName xml:lang="tr">Diğer Masaüstü Ortamları</LocalName>
+      <LocalName xml:lang="fr">Autres bureaux</LocalName>
+      <LocalName xml:lang="es">Otros escritorios</LocalName>
+      <LocalName xml:lang="de">Andere Desktopumgebungen</LocalName>
+      <LocalName xml:lang="it">Altri desktop</LocalName>
+      <Icon>preferences-desktop</Icon>
+    </Group>
+    <Group>
+      <Name>publishing</Name>
+      <LocalName xml:lang="en">Publishing</LocalName>
+      <LocalName xml:lang="nl">Publiceren</LocalName>
+      <LocalName xml:lang="sv">Publicering</LocalName>
+      <LocalName xml:lang="tr">Yayıncılık</LocalName>
+      <LocalName xml:lang="fr">Publication</LocalName>
+      <LocalName xml:lang="es">Publicación</LocalName>
+      <LocalName xml:lang="it">Pubblicazione</LocalName>
+      <Icon>accessories-dictionary</Icon>
+    </Group>
+    <Group>
+      <Name>servers</Name>
+      <LocalName xml:lang="en">Servers</LocalName>
+      <LocalName xml:lang="nl">Servers</LocalName>
+      <LocalName xml:lang="sv">Servrar</LocalName>
+      <LocalName xml:lang="tr">Sunucular</LocalName>
+      <LocalName xml:lang="fr">Serveurs</LocalName>
+      <LocalName xml:lang="es">Servidores</LocalName>
+      <LocalName xml:lang="de">Server</LocalName>
+      <LocalName xml:lang="it">Server</LocalName>
+      <Icon>network-server</Icon>
+    </Group>
+    <Group>
+>>>>>>> main
       <Name>fonts</Name>
       <LocalName xml:lang="en">Fonts</LocalName>
       <LocalName xml:lang="nl">Lettertypen</LocalName>
@@ -145,6 +219,31 @@
       <Icon>preferences-desktop-font</Icon>
     </Group>
     <Group>
+<<<<<<< HEAD
+=======
+      <Name>admin.tools</Name>
+      <LocalName xml:lang="en">Admin Tools</LocalName>
+      <LocalName xml:lang="nl">Administratie</LocalName>
+      <LocalName xml:lang="sv">Administrativa verktyg</LocalName>
+      <LocalName xml:lang="tr">Yönetici Araçları</LocalName>
+      <LocalName xml:lang="fr">Outils d'administration</LocalName>
+      <LocalName xml:lang="es">Administración</LocalName>
+      <LocalName xml:lang="de">Admin Tools</LocalName>
+      <LocalName xml:lang="it">Strumenti d'amministrazione</LocalName>
+      <Icon>application-x-shellscript</Icon>
+    </Group>
+    <Group>
+      <Name>legacy</Name>
+      <LocalName xml:lang="en">Legacy</LocalName>
+      <LocalName xml:lang="nl">Legacy</LocalName>
+      <LocalName xml:lang="sv">Legat</LocalName>
+      <LocalName xml:lang="tr">Uyumluluk</LocalName>
+      <LocalName xml:lang="fr">Anciens</LocalName>
+      <LocalName xml:lang="it">Obsoleti/in disuso</LocalName>
+      <Icon>media-floppy</Icon>
+    </Group>
+    <Group>
+>>>>>>> main
       <Name>localization</Name>
       <LocalName xml:lang="en">Localization</LocalName>
       <LocalName xml:lang="nl">Lokalisatie</LocalName>
@@ -156,6 +255,80 @@
       <Icon>preferences-desktop-locale</Icon>
     </Group>
     <Group>
+<<<<<<< HEAD
+=======
+      <Name>virtualization</Name>
+      <LocalName xml:lang="en">Virtualization</LocalName>
+      <LocalName xml:lang="nl">Virtualisatie</LocalName>
+      <LocalName xml:lang="sv">Virtualisering</LocalName>
+      <LocalName xml:lang="tr">Sanallaştırma</LocalName>
+      <LocalName xml:lang="fr">Virtualisation</LocalName>
+      <LocalName xml:lang="es">Virtualización</LocalName>
+      <LocalName xml:lang="de">Virtualisierung</LocalName>
+      <LocalName xml:lang="it">Virtualizzazione</LocalName>
+      <Icon>video-display</Icon>
+    </Group>
+    <Group>
+      <Name>power.management</Name>
+      <LocalName xml:lang="en">Power Management</LocalName>
+      <LocalName xml:lang="nl">Stroombeheer</LocalName>
+      <LocalName xml:lang="sv">Strömsparhantering</LocalName>
+      <LocalName xml:lang="tr">Güç Yönetimi</LocalName>
+      <LocalName xml:lang="fr">Gestion de l'énergie</LocalName>
+      <LocalName xml:lang="es">Gestión de energía</LocalName>
+      <LocalName xml:lang="it">Gestione energetica</LocalName>
+      <Icon>preferences-system-power-management</Icon>
+    </Group>
+    <Group>
+      <Name>security</Name>
+      <LocalName xml:lang="en">Security</LocalName>
+      <LocalName xml:lang="nl">Veiligheid</LocalName>
+      <LocalName xml:lang="sv">Säkerhet</LocalName>
+      <LocalName xml:lang="tr">Güvenlik</LocalName>
+      <LocalName xml:lang="fr">Sécurité</LocalName>
+      <LocalName xml:lang="es">Seguridad</LocalName>
+      <LocalName xml:lang="de">Sicherheit</LocalName>
+      <LocalName xml:lang="it">Sicurezza</LocalName>
+      <Icon>preferences-desktop-cryptography</Icon>
+    </Group>
+    <Group>
+      <Name>communication</Name>
+      <LocalName xml:lang="en">Communication</LocalName>
+      <LocalName xml:lang="nl">Communicatie</LocalName>
+      <LocalName xml:lang="sv">Kommunikation</LocalName>
+      <LocalName xml:lang="tr">İletişim</LocalName>
+      <LocalName xml:lang="fr">Communication</LocalName>
+      <LocalName xml:lang="es">Comunicación</LocalName>
+      <LocalName xml:lang="de">Kommunikation</LocalName>
+      <LocalName xml:lang="it">Comunicazione</LocalName>
+      <Icon>internet-telephony</Icon>
+    </Group>
+    <Group>
+      <Name>network</Name>
+      <LocalName xml:lang="en">Network</LocalName>
+      <LocalName xml:lang="nl">Netwerk</LocalName>
+      <LocalName xml:lang="sv">Nätverk</LocalName>
+      <LocalName xml:lang="tr">Ağ</LocalName>
+      <LocalName xml:lang="fr">Réseau</LocalName>
+      <LocalName xml:lang="es">Red</LocalName>
+      <LocalName xml:lang="de">Netzwerk</LocalName>
+      <LocalName xml:lang="it">Rete</LocalName>
+      <Icon>network-workgroup</Icon>
+    </Group>
+    <Group>
+      <Name>science</Name>
+      <LocalName xml:lang="en">Science</LocalName>
+      <LocalName xml:lang="nl">Wetenschap</LocalName>
+      <LocalName xml:lang="sv">Vetenskap</LocalName>
+      <LocalName xml:lang="tr">Bilim</LocalName>
+      <LocalName xml:lang="fr">Science</LocalName>
+      <LocalName xml:lang="es">Ciencia</LocalName>
+      <LocalName xml:lang="de">Wissenschaft</LocalName>
+      <LocalName xml:lang="it">Scienze</LocalName>
+      <Icon>applications-science</Icon>
+    </Group>
+    <Group>
+>>>>>>> main
       <Name>documentation</Name>
       <LocalName xml:lang="en">Documentation</LocalName>
       <LocalName xml:lang="nl">Documentatie</LocalName>
@@ -168,6 +341,21 @@
       <Icon>graphics-viewer-document</Icon>
     </Group>
     <Group>
+<<<<<<< HEAD
+=======
+      <Name>electronics</Name>
+      <LocalName xml:lang="en">Electronics</LocalName>
+      <LocalName xml:lang="nl">Elektronica</LocalName>
+      <LocalName xml:lang="sv">Elektroniskt</LocalName>
+      <LocalName xml:lang="tr">Elektronik</LocalName>
+      <LocalName xml:lang="fr">Électronique</LocalName>
+      <LocalName xml:lang="es">Electrónica</LocalName>
+      <LocalName xml:lang="de">Elektronik</LocalName>
+      <LocalName xml:lang="it">Elettronica</LocalName>
+      <Icon>utilities-system-monitor</Icon>
+    </Group>
+    <Group>
+>>>>>>> main
       <Name>unknown</Name>
       <LocalName xml:lang="en">Unknown</LocalName>
       <LocalName xml:lang="nl">Onbekend</LocalName>

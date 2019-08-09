@@ -1,0 +1,55 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>obconf</Name>
+        <Homepage>http://openbox.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>obconf</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Openbox preferences manager</Summary>
+        <Description>ObConf is a graphical configuration tool for the Openbox window manager.</Description>
+        <Archive sha1sum="90638645b53275fda175281a1826c8c4c01746df" type="targz">http://openbox.org/dist/obconf/obconf-2.0.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>openbox-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>obconf</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>openbox</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

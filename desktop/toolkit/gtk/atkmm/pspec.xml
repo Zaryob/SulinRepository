@@ -1,0 +1,69 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>atkmm</Name>
+        <Homepage>http://www.gtkmm.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>C++ interface for the ATK library</Summary>
+        <Description>atkmm provides a C++ interface for the ATK library.</Description>
+        <Archive sha1sum="a01d1c2ab97777f1e087d723744cb6951d5c9488" type="tarxz">mirrors://gnome/atkmm/2.28/atkmm-2.28.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libtool</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>atkmm</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libsigc++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>atkmm-devel</Name>
+        <Summary>Development files for atkmm</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">atkmm</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/atkmm-1.6/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.28.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,11 +1,20 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>freetype</Name>
         <Homepage>http://www.freetype.org/</Homepage>
         <Packager>
+<<<<<<< HEAD
             <Name>Sulin Community</Name>
             <Email>admins@sulin.org</Email>
+=======
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+>>>>>>> main
         </Packager>
         <License>FTL</License>
         <License>GPLv2</License>
@@ -61,7 +70,10 @@
             <Dependency>libpng-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
+<<<<<<< HEAD
             
+=======
+>>>>>>> main
             <Dependency>zlib-32bit</Dependency>
             <Dependency>libpng-32bit</Dependency>
         </RuntimeDependencies>
@@ -72,11 +84,18 @@
 
     <History>
         <Update release="1">
+<<<<<<< HEAD
             <Date>2017-02-02</Date>
             <Version>2.9.1</Version>
             <Comment>First release</Comment>
             <Name>Sulin Community</Name>
             <Email>admin@sulin.org</Email>
+=======
+            <Date>2019-04-12</Date>
+            <Version>2.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+>>>>>>> main
         </Update>
     </History>
 </INARY>

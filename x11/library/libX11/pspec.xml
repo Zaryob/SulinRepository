@@ -1,0 +1,86 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libX11</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>X.Org X11 library</Summary>
+        <Description>Core X11 protocol client library.</Description>
+        <Archive sha1sum="94f375f28e592a599594d3d6ce982516afdc212c" type="tarbz2">mirrors://xorg/individual/lib/libX11-1.6.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>xorg-proto</Dependency>
+            <Dependency>util-macros</Dependency>
+            <Dependency>xtrans</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--<Patch level="1">fix_typo.diff</Patch>
+            <Patch level="1">fix-segfault.diff</Patch>
+            <Patch level="1">fix-null-pointer.patch</Patch>-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libX11</Name>
+        <RuntimeDependencies>
+            <Dependency>libxcb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libX11*</Path>
+            <Path fileType="data">/usr/lib/X11</Path>
+            <Path fileType="data">/usr/share/X11</Path>
+            <Path fileType="doc">/usr/share/doc/libX11</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libX11-devel</Name>
+        <Summary>Development files for X11 library</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libX11</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>xorg-proto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libX11-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libX11</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libxcb-32bit</Dependency>
+
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libX11</Dependency>
+            <Dependency>libxcb-32bit</Dependency>
+
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.6.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

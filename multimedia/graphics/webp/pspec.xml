@@ -1,0 +1,63 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>webp</Name>
+        <Homepage>http://code.google.com/p/webp/downloads/list</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Copyright (c) 2010, Google Inc. All rights reserved.</License>
+        <IsA>application</IsA>
+        <Summary>webp image format and format conversion png,jpeg,tiff</Summary>
+        <Description>webp image format and format conversion png,jpeg,tiff</Description>
+        <Archive sha1sum="7cdff7beabc073ab0c5ecf888c326722e2f5688e" type="targz">http://downloads.webmproject.org/releases/webp/libwebp-1.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mesa</Dependency>
+	    <Dependency>mesa-glu</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>freeglut</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>webp</Name>
+        <RuntimeDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>freeglut</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/webp</Path>
+        </Files>
+    </Package>
+    <Package>
+	<Name>webp-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>webp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+		<Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

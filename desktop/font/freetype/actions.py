@@ -11,6 +11,10 @@ from inary.actionsapi import get
 
 def setup():
     autotools.configure("--disable-static \
+<<<<<<< HEAD
+=======
+                         --enable-biarch-config \
+>>>>>>> main
                          --with-harfbuzz=no")
 
 def build():

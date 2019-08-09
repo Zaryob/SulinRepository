@@ -1,0 +1,209 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>llvm</Name>
+        <Homepage>http://www.llvm.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>NCSA</License>
+        <Summary>The Low Level Virtual Machine</Summary>
+        <Description>The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines, though it does provide helpful libraries that can be used to build them.</Description>
+       <Archive sha1sum="f97632fcc3186eb0d396492ef8acfc807648580f" type="tarxz">http://llvm.org/releases/7.0.1/llvm-7.0.1.src.tar.xz</Archive>
+       <Archive sha1sum="427e12762836d808583fb4149c033d02de0a8db2" type="binary">http://llvm.org/releases/7.0.1/cfe-7.0.1.src.tar.xz</Archive>
+       <Archive sha1sum="6f4048482c4cf1818133120565c2dcd1d3a62747" type="binary">http://llvm.org/releases/7.0.1/clang-tools-extra-7.0.1.src.tar.xz</Archive>
+       <Archive sha1sum="6286b90b2762404baee55a69a2a7e9ed0fce58a2" type="binary">http://llvm.org/releases/7.0.1/lldb-7.0.1.src.tar.xz</Archive>
+       <Archive sha1sum="5ac063b474abe730b551477cdc02db789228f9c7" type="binary">http://llvm.org/releases/7.0.1/compiler-rt-7.0.1.src.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>ocaml</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>groff</Dependency>
+            <Dependency>swig</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libedit-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <!-- Use new plugin-api.h header file from binutils to enable LLVM gold plugin -->
+            <Dependency>binutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+     <Package>
+        <Name>llvm</Name>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-libs</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libffi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin/llvm-config</Path>
+            <Path fileType="header">/usr/include/llvm*</Path>
+            <Path fileType="library">/usr/lib/llvm</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="conf">/etc/ld.so.conf.d</Path>
+            <Path fileType="data">/etc/llvm</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/vim</Path>
+            <Path fileType="data">/usr/share/llvm/cmake</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/ld.so.conf.d/51-llvm.conf">51-llvm.conf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>llvm-libs</Name>
+        <IsA>library</IsA>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libedit</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libLLVM.*</Path>
+            <Path fileType="library">/usr/share/opt-viewer</Path>
+            <Path fileType="library">/usr/lib/LLVMgold.*</Path>
+            <Path fileType="library">/usr/lib/libLTO.*</Path>
+            <Path fileType="library">/usr/lib/bfd-plugins/LLVMgold.so</Path>
+            <Path fileType="data">/usr/share/licenses/llvm-libs/LICENSE</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lldb</Name>
+        <Summary>Next generation, high-performance debugger</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libedit</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/argdumper</Path>
+            <Path fileType="executable">/usr/bin/lldb*</Path>
+            <Path fileType="library">/usr/lib/liblldb</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/readline.so</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/lldb/*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lldb-devel</Name>
+        <Summary>Development headers lldb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lldb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/lldb/*</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>llvm-clang-analyzer</Name>
+        <IsA>app:console</IsA>
+        <Summary>A source code analysis framework</Summary>
+        <Description>The Clang Static Analyzer consists of both a source code analysis framework and a standalone tool that finds bugs in C and Objective-C programs.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-clang</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/lib/clang-analyzer</Path>
+            <Path fileType="executable">/usr/bin/scan-*</Path>
+            <Path fileType="data">/usr/share/scan*</Path>
+            <Path fileType="executable">/usr/libexec/ccc-*</Path>
+             <Path fileType="executable">/usr/libexec/c++-*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>llvm-clang</Name>
+        <Summary>A C language family front-end for LLVM</Summary>
+        <Description>The goal of the Clang project is to create a new C, C++, Objective C and Objective C++ front-end for the LLVM compiler.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-libs</Dependency>
+	    <Dependency>libgcc</Dependency>
+	    <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/clang*</Path>
+            <Path fileType="executable">/usr/bin/tblgen</Path>
+            <Path fileType="library">/usr/lib/clang</Path>
+            <Path fileType="library">/usr/lib/clang/libclang.so</Path>
+            <Path fileType="man">/usr/share/man/man1/clang.1</Path>
+            <Path fileType="data">/usr/share/clang</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>llvm-clang-devel</Name>
+        <Summary>Development headers for llvm-clang</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-clang</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/clang</Path>
+            <Path fileType="header">/usr/include/clang-c</Path>
+        </Files>
+    </Package>
+
+    <!--Package>
+        <Name>llvm-docs</Name>
+        <PartOf>programming.docs</PartOf>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation for LLVM</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/llvm/html</Path>
+            <Path fileType="doc">/usr/share/doc/llvm/ocamldoc</Path>
+        </Files>
+    </Package-->
+
+    <Package>
+        <Name>llvm-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for llvm</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>libffi-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libedit</Dependency>
+            <Dependency>ncurses-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>libffi-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/llvm-config-32</Path>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>7.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

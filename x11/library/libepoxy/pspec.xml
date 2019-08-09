@@ -1,0 +1,76 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libepoxy</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>OpenGL function pointer management library</Summary>
+        <Description>Epoxy is a library for handling OpenGL function pointer management for you.</Description>
+        <Archive sha1sum="e390e2b1e20938be0cfb171afa51116663e8db26" type="tarxz">https://github.com/anholt/libepoxy/releases/download/v1.4/libepoxy-1.4.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libepoxy</Name>
+        <Files>
+            <Path fileType="config">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libepoxy-devel</Name>
+	<Summary>Development files for libepoxy</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libepoxy</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libepoxy-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libeproxy</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/lib32</Path>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
