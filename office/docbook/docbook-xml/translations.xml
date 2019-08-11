@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<INARY>
-    <Source>
-        <Name>docbook-xml</Name>
-        <Summary xml:lang="tr">Docbook XML DTD</Summary>
-        <Description xml:lang="tr">Docbook XML belirtimi (DTD) sürümlerini içerir.</Description>
-    </Source>
-</INARY>

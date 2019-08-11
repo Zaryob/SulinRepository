@@ -1,8 +1,0 @@
-
-<INARY>
-    <Source>
-        <Name>gtk-doc</Name>
-        <Summary xml:lang="tr">GTK+ API belge oluşturucusu</Summary>
-        <Description xml:lang="tr">gtk-doc, GNOME ve GTK+ gibi kitaplıkların API'lerinin belgelendirilmesi için yazılmış bir uygulama projesidir.</Description>
-    </Source>
-</INARY>

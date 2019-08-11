@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<INARY>
-    <Source>
-        <Name>perl-IO</Name>
-        <Summary xml:lang="tr">Çeşitli GÇ (IO) modüllerini yükleyin.</Summary>
-        <Description xml:lang="tr">GÇ, birçok GÇ modülünü bir seferde yüklemek için basit bir mekanizma sağlar. </Description>
-    </Source>
-</INARY>

@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<INARY>
-    <Source>
-        <Name>perl-Glib</Name>
-        <Summary xml:lang="tr">GLib yardımcı programı ve Nesne kitaplıkları için Perl sarmalayıcılar</Summary>
-        <Description xml:lang="tr">Bu sarmalayıcı, altta yatan C API'sine olabildiğince doğru kalırken bir perlish arayüzü sağlamaya çalışır, böylece GLib'i kullanırken bulabileceğiniz herhangi bir referans materyali perl'den kütüphaneleri kullanmak için hala geçerli olabilir. Bu modül aynı zamanda diğer GObject tabanlı kütüphaneler için sarmalayıcılar oluşturma olanakları sağlar. "SEE ALSO" bölümü, her türlü iyi bilgiye işaretçiler içerir.</Description>
-    </Source>
-</INARY>

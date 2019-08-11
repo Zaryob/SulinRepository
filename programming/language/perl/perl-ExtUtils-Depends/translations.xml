@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<INARY>
-    <Source>
-        <Name>perl-ExtUtils-Depends</Name>
-        <Summary xml:lang="tr">XS uzantılarına bağlı olan XS uzantılarını kolayca oluşturun</Summary>
-        <Description xml:lang="tr"> Bu modül, diğer perl uzantıları tarafından sağlanan işlevleri ve yazı tiplerini kullanan Perl uzantılarını oluşturmayı kolaylaştırmaya çalışır. Bu, bir perl uzantısının perl dışında bir C ve XS arayüzü de sağlayan paylaşılan bir kütüphane gibi ele alındığı anlamına gelir.</Description>
-    </Source>
-</INARY>
