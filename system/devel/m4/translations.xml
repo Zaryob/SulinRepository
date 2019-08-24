@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>m4</Name>
+        <Summary xml:lang="tr">GNU makro işleyicisi</Summary>
+        <Description xml:lang="tr">m4, bir ya da daha fazla metin dosyasını okuyan; içerdikleri makro kurallarına göre bu dosyaları işleyen ve sonuçlarını standart çıktıya ileten bir makro işlemcisidir.</Description>
+        <Description xml:lang="fr">L'utilitaire m4 est processeur de macro permettant de lire un ou plusieurs fichiers, les traiter en fonction leurs directives macro puis écrire le résultat dans la sortie standard.</Description>
+    </Source>
+
+    <Package>
+        <Name>m4-docs</Name>
+        <Summary xml:lang="tr">m4 için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour m4</Summary>
+    </Package>
+
+    <Package>
+        <Name>m4-pages</Name>
+        <Summary xml:lang="tr">m4 için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour m4</Summary>
+    </Package>
+</INARY>

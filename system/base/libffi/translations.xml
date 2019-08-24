@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libffi</Name>
+        <Summary xml:lang="tr">Yabancı işlev arayüzleri için taşınabilir bir kitaplık</Summary>
+        <Description xml:lang="tr">libffi kitaplığı, çeşitli işlev çağırma konvansiyonları için taşınabilir ve yüksek düzeyli bir programlama arayüzü sunar.</Description>
+    </Source>
+
+    <Package>
+        <Name>libffi-devel</Name>
+        <Summary xml:lang="tr">libffi için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>libffi-32bit</Name>
+        <Summary xml:lang="tr">libffi için 32-bit paylaşımlı kitaplıklar</Summary>
+    </Package>
+
+    <Package>
+        <Name>libffi-docs</Name>
+        <Summary xml:lang="tr">libffi için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour libffi</Summary>
+    </Package>
+
+    <Package>
+        <Name>libffi-pages</Name>
+        <Summary xml:lang="tr">libffi için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour libffi</Summary>
+    </Package>
+</INARY>

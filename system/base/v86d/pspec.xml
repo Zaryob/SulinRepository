@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>v86d</Name>
+        <Homepage>http://dev.gentoo.org/~spock/projects/uvesafb/</Homepage>
+        <!--<Homepage>ftp://143.106.60.118/pub/gentoo/distfiles</Homepage>-->
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <Summary>Userspace helper for uvesafb</Summary>
+        <Description>v86d is a userspace helper that runs x86 code in an emulated environment. It is used by the kernel framebuffer driver uvesafb.</Description>
+        <Archive sha1sum="1088c58e0aba6aaf92a877528d8529eb4af5bef2" type="targz">https://github.com/mjanusz/v86d/archive/v86d-0.1.10.tar.gz</Archive>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>v86d</Name>
+        <Files>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>0.1.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

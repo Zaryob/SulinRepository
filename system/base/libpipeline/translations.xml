@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libpipeline</Name>
+        <Summary xml:lang="tr">pipeline yönetim kitaplığı</Summary>
+        <Description xml:lang="tr">libpipeline, alt-süreç girdi/çıktı hatlarını (pipeline) yönetmek için geliştirilmiş bir C kitaplığıdır.</Description>
+    </Source>
+
+    <Package>
+        <Name>libpipeline-devel</Name>
+        <Summary xml:lang="tr">libpipeline için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>libpipeline-docs</Name>
+        <Summary xml:lang="tr">libpipeline için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour libpipeline</Summary>
+    </Package>
+
+    <Package>
+        <Name>libpipeline-pages</Name>
+        <Summary xml:lang="tr">libpipeline için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour libpipeline</Summary>
+    </Package>
+</INARY>

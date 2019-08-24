@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>mailcap</Name>
+        <Summary xml:lang="tr">Dosya türleri için yardımcı uygulama ve MIME türü ilişkilendirmeleri</Summary>
+        <Description xml:lang="tr">mailcap dosyası metamail ve bazı diğer uygulamalar tarafından, metin olmayan dosyaların ya da çokluortam dosyalarının nasıl açılacağını keşfetmek için kullanılır.</Description>
+    </Source>
+
+    <Package>
+        <Name>mailcap-docs</Name>
+        <Summary xml:lang="tr">mailcap için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour mailcap</Summary>
+    </Package>
+
+    <Package>
+        <Name>mailcap-pages</Name>
+        <Summary xml:lang="tr">mailcap için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour mailcap</Summary>
+    </Package>
+</INARY>

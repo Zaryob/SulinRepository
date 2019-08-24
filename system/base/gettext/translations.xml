@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>gettext</Name>
+        <Summary xml:lang="tr">Farklı dillerde ileti katalogları üretmek için gerekli GNU araçları ve kütüphaneleri</Summary>
+        <Description xml:lang="tr">gettext, uygulamalarda farklı dillerde iletiler kullanılmasını sağlayan yerelleştirme araçları ve kütüphanelerini içerir.</Description>
+        <Description xml:lang="fr">gettext est une librairie d'internationalisation GNU.</Description>
+        <Description xml:lang="de">gettext ist eine GNU Bibliothek für Internationalisierung</Description>
+    </Source>
+
+    <Package>
+        <Name>gettext-devel</Name>
+        <Summary xml:lang="tr">gettext için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>gettext-docs</Name>
+        <Summary xml:lang="tr">gettext için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour gettext</Summary>
+    </Package>
+
+    <Package>
+        <Name>gettext-pages</Name>
+        <Summary xml:lang="tr">gettext için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour gettext</Summary>
+    </Package>
+</INARY>

@@ -1,0 +1,47 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libfastjson</Name>
+        <Homepage>https://github.com/rsyslog/libfastjson</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A performance-focused json library for C</Summary>
+        <Description>A performance-focused json library for C</Description>
+        <Archive sha1sum="df1ab2602bc73cf4c49a16860cf6a065b636fe6d" type="targz">https://github.com/rsyslog/libfastjson/archive/v0.99.8.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libfastjson</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libfastjson.so*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libfastjson-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libfastjson</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libfastjson</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>0.99.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

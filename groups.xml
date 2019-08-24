@@ -1,0 +1,195 @@
+<INARY>
+  <Groups>
+    <Group>
+      <Name>accessibility</Name>
+      <LocalName xml:lang="en">Accessibility</LocalName>
+      <LocalName xml:lang="nl">Toegankelijkheid</LocalName>
+      <LocalName xml:lang="sv">Handikappstöd</LocalName>
+      <LocalName xml:lang="tr">Erişilebilirlik</LocalName>
+      <LocalName xml:lang="fr">Accessibilité</LocalName>
+      <LocalName xml:lang="es">Accesibilidad</LocalName>
+      <LocalName xml:lang="de">Eingabehilfen</LocalName>
+      <LocalName xml:lang="it">Accessibilità</LocalName>
+      <Icon>preferences-desktop-accessibility</Icon>
+    </Group>
+    <Group>
+      <Name>accessories</Name>
+      <LocalName xml:lang="en">Accessories</LocalName>
+      <LocalName xml:lang="nl">Toebehoren</LocalName>
+      <LocalName xml:lang="sv">Tillbehör</LocalName>
+      <LocalName xml:lang="tr">Donatılar</LocalName>
+      <LocalName xml:lang="fr">Accessoires</LocalName>
+      <LocalName xml:lang="es">Accesorios</LocalName>
+      <LocalName xml:lang="de">Zubehör</LocalName>
+      <LocalName xml:lang="it">Accessori</LocalName>
+      <Icon>applications-accessories</Icon>
+    </Group>
+    <Group>
+      <Name>education</Name>
+      <LocalName xml:lang="en">Education</LocalName>
+      <LocalName xml:lang="nl">Educatie</LocalName>
+      <LocalName xml:lang="sv">Utbildning</LocalName>
+      <LocalName xml:lang="tr">Eğitim</LocalName>
+      <LocalName xml:lang="fr">Éducation</LocalName>
+      <LocalName xml:lang="es">Educación</LocalName>
+      <LocalName xml:lang="de">Lernen</LocalName>
+      <LocalName xml:lang="it">Educazione</LocalName>
+      <Icon>applications-education</Icon>
+    </Group>
+    <Group>
+      <Name>games</Name>
+      <LocalName xml:lang="en">Games</LocalName>
+      <LocalName xml:lang="nl">Spelen</LocalName>
+      <LocalName xml:lang="sv">Spel</LocalName>
+      <LocalName xml:lang="tr">Oyunlar</LocalName>
+      <LocalName xml:lang="fr">Jeux</LocalName>
+      <LocalName xml:lang="es">Juegos</LocalName>
+      <LocalName xml:lang="de">Spiele</LocalName>
+      <LocalName xml:lang="it">Giochi</LocalName>
+      <Icon>applications-games</Icon>
+    </Group>
+    <Group>
+      <Name>graphics</Name>
+      <LocalName xml:lang="en">Graphics</LocalName>
+      <LocalName xml:lang="nl">Grafisch</LocalName>
+      <LocalName xml:lang="sv">Grafik</LocalName>
+      <LocalName xml:lang="tr">Grafik</LocalName>
+      <LocalName xml:lang="fr">Graphisme</LocalName>
+      <LocalName xml:lang="es">Gráficos</LocalName>
+      <LocalName xml:lang="de">Design</LocalName>
+      <LocalName xml:lang="it">Grafica</LocalName>
+      <Icon>applications-graphics</Icon>
+    </Group>
+    <Group>
+      <Name>internet</Name>
+      <LocalName xml:lang="en">Internet</LocalName>
+      <LocalName xml:lang="nl">Internet</LocalName>
+      <LocalName xml:lang="sv">Internet</LocalName>
+      <LocalName xml:lang="tr">İnternet</LocalName>
+      <LocalName xml:lang="fr">Internet</LocalName>
+      <LocalName xml:lang="es">Internet</LocalName>
+      <LocalName xml:lang="de">Internet</LocalName>
+      <LocalName xml:lang="it">Internet</LocalName>
+      <Icon>applications-internet</Icon>
+    </Group>
+    <Group>
+      <Name>office</Name>
+      <LocalName xml:lang="en">Office</LocalName>
+      <LocalName xml:lang="nl">Kantoor</LocalName>
+      <LocalName xml:lang="sv">Kontor</LocalName>
+      <LocalName xml:lang="tr">Ofis</LocalName>
+      <LocalName xml:lang="fr">Bureautique</LocalName>
+      <LocalName xml:lang="es">Oficina</LocalName>
+      <LocalName xml:lang="de">Büro</LocalName>
+      <LocalName xml:lang="it">Ufficio</LocalName>
+      <Icon>applications-office</Icon>
+    </Group>
+    <Group>
+      <Name>other</Name>
+      <LocalName xml:lang="en">Other</LocalName>
+      <LocalName xml:lang="nl">Overige</LocalName>
+      <LocalName xml:lang="sv">Övrigt</LocalName>
+      <LocalName xml:lang="tr">Diğer</LocalName>
+      <LocalName xml:lang="fr">Autres</LocalName>
+      <LocalName xml:lang="es">Otros</LocalName>
+      <LocalName xml:lang="de">Sonstiges</LocalName>
+      <LocalName xml:lang="it">Altro</LocalName>
+      <Icon>applications-other</Icon>
+    </Group>
+    <Group>
+      <Name>programming</Name>
+      <LocalName xml:lang="en">Programming</LocalName>
+      <LocalName xml:lang="nl">Programmeren</LocalName>
+      <LocalName xml:lang="sv">Utveckling</LocalName>
+      <LocalName xml:lang="tr">Programlama</LocalName>
+      <LocalName xml:lang="fr">Programmation</LocalName>
+      <LocalName xml:lang="es">Programación</LocalName>
+      <LocalName xml:lang="de">Programmierung</LocalName>
+      <LocalName xml:lang="it">Programmazione</LocalName>
+      <Icon>applications-development</Icon>
+    </Group>
+    <Group>
+      <Name>multimedia</Name>
+      <LocalName xml:lang="en">Multimedia</LocalName>
+      <LocalName xml:lang="nl">Multimedia</LocalName>
+      <LocalName xml:lang="sv">Multimedia</LocalName>
+      <LocalName xml:lang="tr">Çoklu Ortam</LocalName>
+      <LocalName xml:lang="fr">Multimédia</LocalName>
+      <LocalName xml:lang="es">Multimedia</LocalName>
+      <LocalName xml:lang="de">Multimedia</LocalName>
+      <LocalName xml:lang="it">Multimedia</LocalName>
+      <Icon>applications-multimedia</Icon>
+    </Group>
+    <Group>
+      <Name>system</Name>
+      <LocalName xml:lang="en">System</LocalName>
+      <LocalName xml:lang="nl">Systeem</LocalName>
+      <LocalName xml:lang="sv">System</LocalName>
+      <LocalName xml:lang="tr">Sistem</LocalName>
+      <LocalName xml:lang="fr">Système</LocalName>
+      <LocalName xml:lang="es">Sistema</LocalName>
+      <LocalName xml:lang="de">System</LocalName>
+      <LocalName xml:lang="it">Sistema</LocalName>
+      <Icon>applications-system</Icon>
+    </Group>
+    <Group>
+      <Name>fonts</Name>
+      <LocalName xml:lang="en">Fonts</LocalName>
+      <LocalName xml:lang="nl">Lettertypen</LocalName>
+      <LocalName xml:lang="sv">Teckensnitt</LocalName>
+      <LocalName xml:lang="tr">Fontlar</LocalName>
+      <LocalName xml:lang="fr">Polices</LocalName>
+      <LocalName xml:lang="es">Fuentes</LocalName>
+      <LocalName xml:lang="de">Fonts</LocalName>
+      <LocalName xml:lang="it">Caratteri</LocalName>
+      <Icon>preferences-desktop-font</Icon>
+    </Group>
+    <Group>
+      <Name>localization</Name>
+      <LocalName xml:lang="en">Localization</LocalName>
+      <LocalName xml:lang="nl">Lokalisatie</LocalName>
+      <LocalName xml:lang="sv">Internationalisering</LocalName>
+      <LocalName xml:lang="tr">Yerelleştirme</LocalName>
+      <LocalName xml:lang="fr">Internationalisation</LocalName>
+      <LocalName xml:lang="es">Localización</LocalName>
+      <LocalName xml:lang="it">Localizzazione</LocalName>
+      <Icon>preferences-desktop-locale</Icon>
+    </Group>
+    <Group>
+      <Name>documentation</Name>
+      <LocalName xml:lang="en">Documentation</LocalName>
+      <LocalName xml:lang="nl">Documentatie</LocalName>
+      <LocalName xml:lang="sv">Dokumentation</LocalName>
+      <LocalName xml:lang="tr">Belgeleme</LocalName>
+      <LocalName xml:lang="fr">Documentation</LocalName>
+      <LocalName xml:lang="es">Documentación</LocalName>
+      <LocalName xml:lang="de">Dokumentation</LocalName>
+      <LocalName xml:lang="it">Documentazione</LocalName>
+      <Icon>graphics-viewer-document</Icon>
+    </Group>
+    <Group>
+      <Name>unknown</Name>
+      <LocalName xml:lang="en">Unknown</LocalName>
+      <LocalName xml:lang="nl">Onbekend</LocalName>
+      <LocalName xml:lang="sv">Okända</LocalName>
+      <LocalName xml:lang="tr">Bilinmeyen</LocalName>
+      <LocalName xml:lang="fr">Inconnu</LocalName>
+      <LocalName xml:lang="es">Desconocido</LocalName>
+      <LocalName xml:lang="de">Unbekannt</LocalName>
+      <LocalName xml:lang="it">Sconosciuto</LocalName>
+      <Icon>unknown</Icon>
+    </Group>
+    <Group>
+      <Name>all</Name>
+      <LocalName xml:lang="en">All</LocalName>
+      <LocalName xml:lang="nl">Alles</LocalName>
+      <LocalName xml:lang="sv">Samtliga</LocalName>
+      <LocalName xml:lang="tr">Tümü</LocalName>
+      <LocalName xml:lang="fr">Tout</LocalName>
+      <LocalName xml:lang="es">Todos</LocalName>
+      <LocalName xml:lang="de">Alle</LocalName>
+      <LocalName xml:lang="it">Tutti</LocalName>
+      <Icon>media-optical</Icon>
+    </Group>
+  </Groups>
+</INARY>

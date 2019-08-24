@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>sysfsutils</Name>
+        <Homepage>http://linux-diag.sourceforge.net/Sysfsutils.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>System Utilities Based on Sysfs</Summary>
+        <Description>These are a set of utilites built upon sysfs, a new virtual filesystem in Linux kernel versions 2.5+ that exposes a system's device tree.</Description>
+        <Archive sha1sum="b3cb316c652b09ec66f93f4ea98a93a7a1001678" type="targz">mirrors://sourceforge/linux-diag/sysfsutils-2.1.0.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">sysfsutils-2.0.0-class-dup.patch</Patch>
+            <Patch level="1">sysfsutils-2.1.0-get_link.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>sysfsutils</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sysfsutils-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for sysfsutils</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">sysfsutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+        <Package>
+            <Name>sysfsutils-docs</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <RuntimeDependencies>
+                <Dependency>sysfsutils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>sysfsutils-pages</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <Summary>Manpages for sysfsutils</Summary>
+            <RuntimeDependencies>
+                <Dependency release="current">sysfsutils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>2.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

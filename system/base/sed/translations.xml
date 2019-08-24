@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>sed</Name>
+        <Summary xml:lang="tr">GNU stream düzenleyici</Summary>
+        <Description xml:lang="tr">Sed bir dosyadan veya standart girdiden (klavyeden) bilgi okur ve standart çıktıya (ekrana) okuduğu bilgileri kullanıcının belirlediği düzene sokarak yazar.</Description>
+        <Description xml:lang="fr">Sed est un éditeur de flux. Un éditeur de flux est utilisé pour réaliser des opérations basiques de modification de texte sur un flux d'entrée (un fichier ou un tuyau unix).</Description>
+    </Source>
+
+    <Package>
+        <Name>sed-docs</Name>
+        <Summary xml:lang="tr">sed için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour sed</Summary>
+    </Package>
+
+    <Package>
+        <Name>sed-pages</Name>
+        <Summary xml:lang="tr">sed için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour sed</Summary>
+    </Package>
+</INARY>

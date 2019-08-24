@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>unifdef</Name>
+        <Description xml:lang="fr">L'utilitaire unifdef traite sélectivement les directives conditionnelles cpp(1). Il supprime d'un fichier les directives ainsi que le texte additionnel qu'elles indiquent comme à supprimer tout en laissant le reste du fichier intact.</Description>
+    </Source>
+
+    <Package>
+        <Name>unifdef-docs</Name>
+        <Summary xml:lang="tr">unifdef için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour unifdef</Summary>
+    </Package>
+
+    <Package>
+        <Name>unifdef-pages</Name>
+        <Summary xml:lang="tr">unifdef için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour unifdef</Summary>
+    </Package>
+</INARY>

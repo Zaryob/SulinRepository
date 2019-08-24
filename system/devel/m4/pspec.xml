@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>m4</Name>
+        <Homepage>http://www.gnu.org/software/m4/m4.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>GNU macro processor</Summary>
+        <Description>The m4 utility is a macro processor that shall read one or more text files, process them according to their included macro statements, and write the results to standard output</Description>
+        <Archive sha1sum="228604686ca23f42e48b98930babeb5d217f1899" type="tarxz">mirrors://gnu/m4/m4-1.4.18.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+            <Dependency>libsigsegv-devel</Dependency>
+        </BuildDependencies>
+    <!--Patches>
+        <Patch level="1">glibc-change-workaround.patch</Patch>
+    </Patches-->
+    </Source>
+
+    <Package>
+        <Name>m4</Name>
+        <RuntimeDependencies>
+            <Dependency>libsigsegv</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>m4-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for m4 package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">m4</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <Package>
+        <Name>m4-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for m4 package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">m4</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>1.4.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>klibc</Name>
+        <Summary xml:lang="tr">Küçük bir C kütüphanesi (libc) uyarlaması</Summary>
+        <Description xml:lang="tr">klibc, sistem başlangıcı için gerekli olan kodların mümkün olduğunca çok kısmını Linux çekirdeği dışına atma hedefiyle oluşturulmuş bir kütüphanedir.</Description>
+        <Description xml:lang="fr">klibc ou &quot;espace utilisateur tôt&quot;, est une librairie résultante de l'effort pour transférer autant de code d'initialisation de Linux que possible hors du noyau.</Description>
+    </Source>
+
+    <Package>
+        <Name>klibc-docs</Name>
+        <Summary xml:lang="tr">klibc için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour klibc</Summary>
+    </Package>
+
+    <Package>
+        <Name>klibc-pages</Name>
+        <Summary xml:lang="tr">klibc için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour klibc</Summary>
+    </Package>
+</INARY>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>tar</Name>
+        <Summary xml:lang="tr">GNU dosya arşivleme uygulaması</Summary>
+        <Description xml:lang="tr">GNU tar birden fazla dosyayı tek bir arşiv dosyasında birleştiren ve daha sonra bu arşiv dosyasından geri çıkartabilen bir uygulamadır.</Description>
+        <Description xml:lang="fr">Le programme tar fournit la possibilité de manipuler des archives de type tar. Vous pouvez l'utiliser pour créer ou extraires des archives. Ajouter des fichiers à des archives existantes, les mettre à jour ou tout simplement lister leur contenu.</Description>
+    </Source>
+
+    <Package>
+        <Name>tar-docs</Name>
+        <Summary xml:lang="tr">tar için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour tar</Summary>
+    </Package>
+
+    <Package>
+        <Name>tar-pages</Name>
+        <Summary xml:lang="tr">tar için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour tar</Summary>
+    </Package>
+</INARY>

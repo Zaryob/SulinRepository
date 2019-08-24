@@ -1,0 +1,50 @@
+<INARY>
+    <Source>
+        <Name>autoconf-archive</Name>
+        <Homepage>http://www.gnu.org/software/autoconf-archive/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <Summary>A collection of freely re-usable Autoconf macros</Summary>
+        <Description>The GNU Autoconf Archive is a collection of more than 500 macros for GNU Autoconf that have been contributed as free software by friendly supporters of the cause from all over the Internet.</Description>
+        <BuildDependencies>
+            <Dependency>autoconf</Dependency>
+            <Dependency>automake</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="6177513edcf3998e07684cf65fbb7470acc72997" type="tarxz">mirrors://gnu/autoconf-archive/autoconf-archive-2018.03.13.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>autoconf-archive</Name>
+        <Summary>A collection of freely re-usable Autoconf macros</Summary>
+        <RuntimeDependencies>
+            <Dependency>autoconf</Dependency>
+            <Dependency>automake</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>autoconf-archive-docs</Name>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for autoconf-archive package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">autoconf-archive</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2018.03.13</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bash</Name>
+        <Homepage>http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html</Homepage>
+        <Packager>
+              <Name>Süleyman POYRAZ</Name>
+              <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>The standard GNU Bourne again shell</Summary>
+        <Description>Bash is the GNU Project's Bourne Again SHell, a complete implementation of the IEEE POSIX and Open Group shell specification with interactive command line editing, csh-like features such as history substitution.</Description>
+        <Archive sha1sum="d116b469b9e6ea5264a74661d3a4c797da7f997b" 
+type="targz">mirrors://gnu/bash/bash-5.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>bash</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+      	<Name>bash-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for bash package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+      	<Name>bash-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for bash package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-01-17</Date>
+            <Version>5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

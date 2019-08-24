@@ -1,0 +1,7 @@
+README.md
+magic.py
+setup.py
+file_magic.egg-info/PKG-INFO
+file_magic.egg-info/SOURCES.txt
+file_magic.egg-info/dependency_links.txt
+file_magic.egg-info/top_level.txt

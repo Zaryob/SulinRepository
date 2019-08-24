@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<INARY>
+	<Source>
+		<Name>file</Name>
+		<Homepage>http://www.darwinsys.com/file/</Homepage>
+		<Packager>
+			<Name>Süleyman POYRAZ</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Packager>
+	</Source>
+	<Package>
+		<Name>python3-filemagic</Name>
+		<Summary xml:lang="en">Program to identify a file's format by scanning binary data for patterns</Summary>
+		<Summary xml:lang="tr">Dosya tipini belirlemek için kullanılan bir uygulamadır</Summary>
+		<Description xml:lang="en">Program to identify a file's format by scanning binary data for patterns.</Description>
+		<Description xml:lang="tr">İkili veri taraması kullanarak (dosya uzantısına bakmadan) dosya biçimini tanımlamaya yarayan bir uygulamadır.</Description>
+		<Description xml:lang="fr">Programme servant à identifiant le format d'un fichier en analysant les données binaires en cherchant des patrons connus.</Description>
+		<IsA>system.base</IsA>
+		<IsA>app:console</IsA>
+		<PartOf>system.base</PartOf>
+		<License>as-is</License>
+		<RuntimeDependencies>
+			<Dependency>file</Dependency>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/lib/python3*</Path>
+		</Files>
+		<History>
+			<Update release="1">
+				<Date>2018-01-17</Date>
+				<Version>5.35</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>uluhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>9963</InstalledSize>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>file</Name>
+			<Homepage>http://www.darwinsys.com/file/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+</INARY>

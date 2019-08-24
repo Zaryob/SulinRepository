@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>intltool</Name>
+        <Summary xml:lang="tr">Çeşitli kaynak kod dosyalarından satırları ayıklamak için kullanılan betikler</Summary>
+        <Description xml:lang="tr">Çeşitli kaynak kod dosyalarından satırları ayıklamak için kullanılan betikler.</Description>
+        <Description xml:lang="fr">Scripts d'extraction depuis divers fichiers sources de chaînes traduisibles.</Description>
+    </Source>
+
+    <Package>
+        <Name>intltool-docs</Name>
+        <Summary xml:lang="tr">intltool için dokumentasyon dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour intltool</Summary>
+    </Package>
+
+    <Package>
+        <Name>intltool-pages</Name>
+        <Summary xml:lang="tr">intltool için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour intltool</Summary>
+    </Package>
+</INARY>

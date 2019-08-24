@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>libseccomp</Name>
+        <Summary xml:lang="tr">Gelişmiş seccomp kütüphanesi</Summary>
+        <Description xml:lang="tr">Linux Kernel'in seccomp süzgecine yüksek seviyeli arayüz</Description>
+    </Source>
+
+    <Package>
+        <Name>libseccomp-pages</Name>
+        <Summary xml:lang="tr">libseccomp için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour libseccomp</Summary>
+    </Package>
+</INARY>

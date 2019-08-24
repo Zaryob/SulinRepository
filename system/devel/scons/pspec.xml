@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>scons</Name>
+        <Homepage>http://www.scons.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>An Open Source software construction tool</Summary>
+        <Description>Think of SCons as an improved, cross-platform substitute for the classic Make utility with integrated functionality similar to autoconf/automake and compiler caches such as ccache.</Description>
+        <Archive sha1sum="f742350251734df75355e51c70f291e119ef927a" type="targz">mirrors://sourceforge/scons/scons-2.5.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>scons</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>scons-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for scons package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">scons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+        <Name>scons-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for scons package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">scons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

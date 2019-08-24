@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>coreutils</Name>
+        <Summary xml:lang="tr">Standart dosya, metin ve kabuk uygulamaları</Summary>
+        <Description xml:lang="tr">GNU dosya uygulamaları (chmod, cp, dd, dir, ls...), sh uygulamaları (whoami, who,...) ve metin uygulamalarının (sort, tr, head, wc..) birlikteliğinden oluşmaktadır.</Description>
+        <Description xml:lang="en">Utilitaires standards GNU pour fichiers (chmod, cp, dd, dir, ls...), utilitaires texte (sort, tr, head, wc...) et utilitaires d'interpréteur de commande (shell) (whoami, who...)</Description>
+    </Source>
+
+    <Package>
+        <Name>coreutils-docs</Name>
+        <Summary xml:lang="tr">coreutils için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour coreutils</Summary>
+    </Package>
+
+    <Package>
+        <Name>coreutils-pages</Name>
+        <Summary xml:lang="tr">coreutils için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour coreutils</Summary>
+    </Package>
+</INARY>

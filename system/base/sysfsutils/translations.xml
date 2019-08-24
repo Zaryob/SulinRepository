@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>sysfsutils</Name>
+        <Summary xml:lang="tr">Çeşitli sistem araç ve gereçleri</Summary>
+        <Description xml:lang="tr">sysfsutils sysfs sanal dosya sistemi üzerine kurulu bir araç setidir.</Description>
+        <Description xml:lang="fr">Ceci est un ensemble d'utilitaires se basant sur sysfsm un nouveau système de fichier virtuel des noyaux Linux 2.5 et + exposant l'arbre des périphériques du système.</Description>
+    </Source>
+
+    <Package>
+        <Name>sysfsutils-devel</Name>
+        <Summary xml:lang="tr">sysfsutils için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>sysfsutils-docs</Name>
+        <Summary xml:lang="tr">sysfsutils için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour sysfsutils</Summary>
+    </Package>
+
+    <Package>
+        <Name>sysfsutils-pages</Name>
+        <Summary xml:lang="tr">sysfsutils için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour sysfsutils</Summary>
+    </Package>
+</INARY>

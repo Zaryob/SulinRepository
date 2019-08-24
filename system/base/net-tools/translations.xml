@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>net-tools</Name>
+        <Summary xml:lang="tr">Linux ağ araçları</Summary>
+        <Description xml:lang="tr">Net-tools, Linux işletim sisteminde kullanılan ağ ile ilgili temel araçların bir birleşimidir. Arp, hostname, ifconfig, ipmaddr, iptunnel, mii-tool, nameif, netstat, plipconfig, rarp, route ve slattach programlarını içerir.</Description>
+        <Description xml:lang="fr">net-tools est une collection de programmes représentant les outils réseau de base du système d'exploitation Linux. S'y trouvent arp, hostname, ifconfig, ipmaddr, iptunnel, mii-tool, nameif, netstat, plipconfig, rarp, route et slattach.</Description>
+    </Source>
+
+    <Package>
+        <Name>net-tools-docs</Name>
+        <Summary xml:lang="tr">net-tools için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour net-tools</Summary>
+    </Package>
+
+    <Package>
+        <Name>net-tools-pages</Name>
+        <Summary xml:lang="tr">net-tools için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour net-tools</Summary>
+    </Package>
+</INARY>

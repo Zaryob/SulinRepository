@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>xorg-util</Name>
+        <Summary xml:lang="tr">X.Org araçları</Summary>
+        <Summary xml:lang="fr">Utilitaires de X.Org</Summary>
+        <Summary xml:lang="de">X.Org Werkzeuge</Summary>
+    </Source>
+
+    <Package>
+        <Name>xorg-util-pages</Name>
+        <Summary xml:lang="tr">xorg-util için man-pages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de man-pages pour xorg-util</Summary>
+    </Package>
+</INARY>

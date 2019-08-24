@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>unzip</Name>
+        <Summary xml:lang="tr">pkzip ile sıkıştırılmış dosyalar için açıcı</Summary>
+        <Description xml:lang="tr">UnZip, zip formatında sıkıştırılmış dosyaları açmamızı sağlar.</Description>
+        <Description xml:lang="fr">Unzip nous permet d'extraires des archives compressées aux format .zip (également appelées &quot;fichiers zip&quot;).</Description>
+    </Source>
+
+    <Package>
+        <Name>unzip-docs</Name>
+        <Summary xml:lang="tr">unzip için belgelendirme dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de Documentation pour unzip</Summary>
+    </Package>
+
+    <Package>
+        <Name>unzip-pages</Name>
+        <Summary xml:lang="tr">unzip için manpages dosyaları</Summary>
+        <Summary xml:lang="fr">Fichiers de ManPages pour unzip</Summary>
+    </Package>
+</INARY>

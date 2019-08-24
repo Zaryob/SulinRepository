@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python</Name>
+        <Homepage>http://www.python.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>PSF-2.2</License>
+        <IsA>app:console</IsA>
+        <Summary>An interpreted, interactive, object-orientated programming language</Summary>
+        <Description>Python is a dynamic object-oriented programming language that can be used for many kinds of software development. It offers strong support for integration with other languages and tools, comes with extensive standard libraries, and can be learned in a few days.</Description>
+        <Archive sha1sum="f99348a095ec4a6411c84c0d15343d11920c9724" type="tarxz">http://www.python.org/ftp/python/2.7.15/Python-2.7.15.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>bzip2</Dependency>
+            <!--<Dependency>tcl-devel</Dependency>-->
+            <Dependency>gdbm-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <!--<Dependency>tcltk-devel</Dependency>-->
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <!-- Bootstrap -->
+            <!-- Comment these deps when bootstrapping -->
+        </BuildDependencies>
+        <Patches>
+            <Patch>sulin_platform.patch</Patch>
+            <!-- Look into /usr/lib/inary-linux first -->
+            <Patch>add-sulin-to-search-path.patch</Patch>
+            <!-- Use UTF-8 by default -->
+            <Patch>default-utf8.patch</Patch>
+            <!-- Disable egginfo -->
+            <Patch level="1">disable-egginfo.patch</Patch>
+            <!-- some Turkish locale fixes, usually caused by tolower() -->
+            <Patch level="1">trfix_emaillib.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>python</Name>
+        <RuntimeDependencies>
+            <Dependency>gdbm</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <!-- "Makefile" and the config-32/64.h file are needed by
+            distutils/sysconfig.py:_init_posix(), so we include them in the core
+            package, along with their parent directories (https://bugzilla.redhat.com/show_bug.cgi?id=531901)
+            -->
+            <Path fileType="header">/usr/include/python2.7/pyconfig.h</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/a*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/c*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/d*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/e*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/h*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/imp*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/j*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib2*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/log*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/m*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/p*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/s*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/te*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/u*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/v*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/w*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/x*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/*.py</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/*.txt</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_a*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/a*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/b*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_b*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/c*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_c*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_d*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/d*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_e*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/e*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/f*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_f*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/g*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_g*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_h*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/h*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/i*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_i*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/j*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_j*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_k*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/k*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/l*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_l*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/m*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_m*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/n*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_n*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/o*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_o*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_p*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/p*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/r*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_r*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_s*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/s*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/te*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/_te*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/ti*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/u*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/x*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/lib-dynload/z*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/__pycache__</Path>
+            <Path fileType="library" permanent="0">/usr/lib/libpython2.7*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/pythonstart">pythonstart</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/env.d/04python">04python</AdditionalFile>
+        </AdditionalFiles>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <Package>
+        <Name>python-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for python</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python-tk</Name>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <Summary>Python modules for Tk</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">python</Dependency>
+            <Dependency>tcl</Dependency>
+            <Dependency>tcltk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/lib-tk/test/README</Path>
+            <Path fileType="library">/usr/lib/python2*/tkinter</Path>
+            <Path fileType="library">/usr/lib/python2*/lib-dynload/_tkinter.cpython-27m-x86_64-linux-gnu.so</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python2.7/turtledemo</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>idle</Name>
+        <Icon>idle</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>programming.environment</PartOf>
+        <Summary>An Integrated Development Environment for Python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-tk</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+<!--             <Path fileType="executable">/usr/bin/idle*</Path> -->
+            <Path fileType="library">/usr/lib/python*/idlelib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-01-15</Date>
+            <Version>2.7.15</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

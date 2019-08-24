@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cracklib</Name>
+        <Homepage>http://www.sourceforge.net/projects/cracklib</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Password Checking Library</Summary>
+        <Description>CrackLib tests passwords to determine whether they match certain security-oriented characteristics, with the purpose of stopping users from choosing passwords that are easy to guess.</Description>
+        <Archive sha1sum="9199e7b8830717565a844430653f5a90a04fcd65" type="targz">https://sourceforge.net/projects/sulinos/files/archives/cracklib-2.9.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cracklib</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/cracklib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>cracklib-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for cracklib</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cracklib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>cracklib-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for cracklib package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cracklib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>cracklib-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>manpages for cracklib package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cracklib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>2.9.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>isl</Name>
+        <Homepage>http://www.kotnet.org/~skimo/isl/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Integer Set Library</Summary>
+        <Description>isl is a library for manipulating sets and relations of integer points bounded by linear constraints.</Description>
+        <Archive sha1sum="bbffc5a2b05e4f0c97e882f96c448504491dc4ed" type="tarbz2">http://isl.gforge.inria.fr/isl-0.18.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gmp-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>isl-0.07-gdb-autoload-dir.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>isl</Name>
+        <RuntimeDependencies>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libisl*</Path>
+            <Path fileType="data">/usr/share/gdb</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>isl-devel</Name>
+        <Summary>Development files for isl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">isl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>isl-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for isl package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">isl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>0.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
