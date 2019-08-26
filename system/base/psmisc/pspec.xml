@@ -1,0 +1,66 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>psmisc</Name>
+        <Homepage>http://psmisc.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A set of tools that use the proc filesystem</Summary>
+        <Description>PSmisc is a collection of small utilities using /proc file system, and providing the system administrator with some help in common tasks.</Description>
+        <Archive sha1sum="2bf3ec1c87ab3bc0610c819452c21cf4b849b0b8" type="tarxz">mirrors://sourceforge/psmisc/psmisc-23.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>gettext</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>psmisc</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>psmisc-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>psmisc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>psmisc-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for psmisc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">psmisc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>23.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

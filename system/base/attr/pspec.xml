@@ -1,0 +1,102 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>attr</Name>
+        <Homepage>http://acl.bestbits.at/</Homepage>
+        <Packager>
+          <Name>Süleyman POYRAZ</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>A set of tools for manipulatig extended attributes on filesystem objects.</Summary>
+	<Description>The attr package contains utilities to administer the extended attributes on filesystem objects.</Description>
+        <Archive sha1sum="d7c88cb5db51c5e255a511b0a15e832fcdda5b4f" type="targz">http://download.savannah.nongnu.org/releases/attr/attr-2.4.48.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>attr-2.4.48-perl-5.26.patch</Patch>
+            <Patch>attr-2.4.48-switch-back-to-syscall.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>attr</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="conf">/etc</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>attr-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for attr</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">attr</Dependency>
+        </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/include/attr/xattr.h">xattr-shim.h</AdditionalFile>
+        </AdditionalFiles>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>attr-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for attr</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">attr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/lib32</Path>
+        </Files>
+    </Package>
+    <Package>
+      	<Name>attr-docs</Name>
+	      <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+	      <Summary>Documentation for attr package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">attr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+      	<Name>attr-pages</Name>
+	      <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+	      <Summary>Man pages for attr package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">attr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>2.4.48</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

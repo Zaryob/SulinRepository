@@ -1,0 +1,115 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cryptsetup</Name>
+        <Homepage>https://gitlab.com/cryptsetup/cryptsetup</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>cryptsetup</Icon>
+        <IsA>app:cli</IsA>
+        <Summary>Userspace setup tool for transparent encryption of block devices using dm-crypt</Summary>
+        <Description>Userspace setup tool for transparent encryption of block devices using dm-crypt</Description>
+        <Archive sha1sum="eaf688f2ae74c562bc341573b8c0dca63727e9c8" type="tarxz">https://www.kernel.org/pub/linux/utils/cryptsetup/v1.7/cryptsetup-1.7.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="2.02.118">device-mapper-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>popt-devel</Dependency>
+            <Dependency>popt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cryptsetup</Name>
+        <PartOf>util.crypt</PartOf>
+        <RuntimeDependencies>
+            <Dependency version="current">libcryptsetup</Dependency>
+            <Dependency>popt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libcryptsetup</Name>
+        <PartOf>util.crypt</PartOf>
+        <Summary>cryptsetup libraries</Summary>
+        <RuntimeDependencies>
+            <Dependency>device-mapper</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/lib/libcryptsetup.so*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+      	<Name>cryptsetup-docs</Name>
+	      <PartOf>system.doc</PartOf>
+	      <Summary>Documentation for cryptsetup package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cryptsetup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+      	<Name>cryptsetup-pages</Name>
+	<PartOf>system.pages</PartOf>
+	<Summary>Man pages for cryptsetup package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cyrptsetup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libcryptsetup-devel</Name>
+        <PartOf>programming.devel</PartOf>
+        <Summary>libcryptsetup devel files</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">libcryptsetup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/libcryptsetup.pc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-pycryptsetup</Name>
+        <PartOf>programming.language.python3</PartOf>
+        <Summary>Python backend for cryptsetup</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency version="current">libcryptsetup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>1.7.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

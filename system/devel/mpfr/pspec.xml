@@ -1,0 +1,67 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mpfr</Name>
+        <Homepage>http://www.mpfr.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Multiple precision floating point library</Summary>
+        <Description>The MPFR library is a C library for multiple-precision floating-point computations with exact rounding (also called correct rounding). It is based on the GMP multiple-precision library.</Description>
+        <Archive sha1sum="ae555c56a6fccd21a0ffe3dd3bdc5eb5cc1a5fce" 
+type="tarxz">https://ftp.gnu.org/gnu/mpfr/mpfr-4.0.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gmp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mpfr</Name>
+        <RuntimeDependencies>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mpfr-devel</Name>
+        <Summary>Development files for mpfr</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mpfr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>mpfr-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for mpfr package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mpfr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-01-19</Date>
+            <Version>4.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

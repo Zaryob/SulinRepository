@@ -1,0 +1,75 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>texinfo</Name>
+        <Homepage>http://www.gnu.org/software/texinfo/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>The GNU info program and utilities</Summary>
+        <Description>Texinfo is a documentation system that can produce both online information and printed output from a single source file. The GNU Project uses the Texinfo file format for most of its documentation.</Description>
+        <Archive sha1sum="0f8e69781e28ec102b6a9487b093c440f5bb8545" type="targz">mirrors://gnu/texinfo/texinfo-6.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>texinfo</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/texinfo</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/texinfo</Path>
+	          <Path fileType="data">/usr/share/texmf/tex/texinfo</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+	          <Path fileType="data">/usr/share/texmf/</Path>
+        </Files>
+       <Provides>
+           <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+       </Provides>
+
+    </Package>
+
+        <Package>
+            <Name>texinfo-docs</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <RuntimeDependencies>
+                <Dependency>texinfo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>texinfo-pages</Name>
+            <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+            <Summary>Manpages for texinfo</Summary>
+            <RuntimeDependencies>
+                <Dependency release="current">texinfo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>6.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

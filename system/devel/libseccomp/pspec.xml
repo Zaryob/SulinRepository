@@ -1,0 +1,63 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libseccomp</Name>
+        <Homepage>http://sourceforge.net/projects/libseccomp/</Homepage>
+        <Packager>
+            <Name>Aydın Demirel</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>app:library</IsA>
+        <Summary>Enhanced seccomp library</Summary>
+        <Description>High level interface to the Linux Kernel's seccomp filter.</Description>
+        <Archive sha1sum="38ba89d3bfe0faecb058727f797cd4f25c94ce73" type="targz">https://github.com/seccomp/libseccomp/archive/v2.3.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libseccomp</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libseccomp*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libseccomp-devel</Name>
+        <Summary>Development files for libseccomp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libseccomp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libseccomp-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for libseccomp package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libseccomp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

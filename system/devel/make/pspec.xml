@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>make</Name>
+        <Homepage>http://www.gnu.org/software/make/make.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Standard tool to compile source trees</Summary>
+        <Description>Standard tool to compile source trees. Make gets its knowledge of how to build your program from a file called the makefile. When you write a program, you should write a makefile for it, so that it is possible to use Make to build and install the program</Description>
+        <Archive sha1sum="7d9d11eb36cfb752da1fb11bb3e521d2a3cc8830" type="tarbz2">mirrors://gnu/make/make-4.2.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>texinfo</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>gnuconfig</Dependency>
+            <Dependency>patch</Dependency>
+            <Dependency>gc-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>make</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>4.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

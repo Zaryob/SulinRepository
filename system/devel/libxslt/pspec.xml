@@ -1,0 +1,98 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libxslt</Name>
+        <Homepage>http://xmlsoft.org/XSLT/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>XSLT libraries and tools</Summary>
+        <Description>Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML.</Description>
+        <Archive sha1sum="edcaeabb3555ae44853bdc406ee9521fb65c620d" type="targz">ftp://ftp.xmlsoft.org/libxml2/libxslt-1.1.29.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libxslt</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libxslt-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libxslt</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libxml2-32bit</Dependency>
+            <Dependency>libgcrypt-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libxslt</Dependency>
+            <Dependency>libxml2-32bit</Dependency>
+            <Dependency>libgcrypt-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libxslt-docs</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libxslt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libxslt-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for libxslt package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libxslt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libxslt-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency release="current">libxslt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>1.1.29</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

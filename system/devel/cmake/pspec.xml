@@ -1,0 +1,80 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cmake</Name>
+        <Homepage>http://www.cmake.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Cross-platform, open-source make system</Summary>
+        <Description>CMake, the cross-platform, open-source make system. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.</Description>
+        <Archive sha1sum="591fc2fabd44f3612676beef6e15f81fbe5417f7" type="targz">https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>libarchive-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>rhash-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>libuv-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cmake</Name>
+        <RuntimeDependencies>
+            <Dependency>curl</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>rhash</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libuv</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/cmake</Path>
+            <Path fileType="data">/usr/share/aclocal/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>cmake-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for cmake package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cmake</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <Package>
+        <Name>cmake-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for cmake package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cmake</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>3.11.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

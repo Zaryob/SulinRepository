@@ -1,0 +1,71 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>liblogging</Name>
+        <Homepage>https://www.rsyslog.com/liblogging/</Homepage>
+        <Packager>
+            <Name>Suleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD-2</License>
+        <IsA>library</IsA>
+        <Summary>Easy to use, portable, open source library for system logging</Summary>
+        <Description>Liblogging offers an enhanced replacement for the syslog() call, but retains its ease of use.</Description>
+        <Archive sha1sum="f07012fc8bd74e0c7bdcacaa772828639d1a9657" type="targz">http://download.rsyslog.com/liblogging/liblogging-1.0.6.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>liblogging</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/liblogging-stdlog.so*</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>liblogging-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for liblogging</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">liblogging</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/liblogging/stdlog.h</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/liblogging-stdlog.pc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>liblogging-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for liblogging</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">liblogging</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>liblogging-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for liblogging</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">liblogging</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>1.0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

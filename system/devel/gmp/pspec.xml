@@ -1,0 +1,78 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gmp</Name>
+        <Homepage>http://gmplib.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3+</License>
+        <IsA>library</IsA>
+        <Summary>Arbitrary precision arithmetic library</Summary>
+        <Description>GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating point numbers. There is no practical limit to the precision except the ones implied by the available memory in the machine GMP runs on. GMP has a rich set of functions, and the functions have a regular interface.</Description>
+        <Archive sha1sum="9dc6981197a7d92f339192eea974f5eca48fcffe" type="tarxz">mirrors://gnu/gmp/gmp-6.1.2.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>gmp</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libgmp*.so*</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gmp-devel</Name>
+        <Summary>Development files for gmp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gmp-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for gmp</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency release="current">gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gmp-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for gmp package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>6.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

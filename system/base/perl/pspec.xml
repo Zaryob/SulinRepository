@@ -1,0 +1,63 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl</Name>
+        <Homepage>http://www.perl.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Larry Wall's Practical Extraction and Reporting Language</Summary>
+        <Description>Perl is a high-level programming language with roots in C, sed, awk and shell scripting. Perl is good at handling processes and files, and is especially good at handling text. Perl's hallmarks are practicality and efficiency. While it is used to do a lot of different things, Perl's most common applications are system administration utilities and web programming. A large proportion of the CGI scripts on the web are written in Perl. You need the perl package installed on your system so that your system can handle Perl scripts.</Description>
+        <Archive sha1sum="5fc239bebb8c484c3f5c58e663274ce668981651" type="tarxz">https://www.cpan.org/src/5.0/perl-5.28.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>db-devel</Dependency>
+            <Dependency>gdbm-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation files for perl</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/html</Path>
+            <Path fileType="doc">/usr/share/doc/perl/html</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>perl</Name>
+        <RuntimeDependencies>
+            <Dependency>db</Dependency>
+            <Dependency>gdbm</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/perl5/vendor_perl/5.28.0/Turkish.pm">Turkish.pm</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-01-11</Date>
+            <Version>5.28.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

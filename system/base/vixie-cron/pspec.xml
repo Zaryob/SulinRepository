@@ -1,0 +1,66 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vixie-cron</Name>
+        <Homepage>http://www.gentoo.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>service</IsA>
+        <Summary>Paul Vixie's cron daemon, a fully featured crond implementation</Summary>
+        <Description>Vixie cron (Cron is a daemon that runs scheduled tasks.) is a full featured cron implementation based on SysV cron. Each user has his own crontab ( Crontab (CRON TABle) is a file which contains the schedule of cron) and is allowed to specify environment variables within that crontab.</Description>
+        <Archive sha1sum="d8b087c0e5f7a2a9c74e3400b660756ab6d800c9" type="tarbz2">http://ftp.linux.org.tr/gentoo/distfiles/vixie-cron-4.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>sed</Dependency>
+            <Dependency>pam-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch compressionType="bz2" level="1">vixie-cron-4.1-gentoo-r4.patch.bz2</Patch>
+            <Patch level="0">crontab.5.diff</Patch>
+            <Patch level="0">vixie-cron-4.1-commandline.patch</Patch>
+            <Patch level="1">vixie-cron-4.1-pam.patch</Patch>
+            <Patch level="1">vixie-cron-4.1-CAN-2005-1038.patch</Patch>
+            <Patch>CVE-2006-2607.patch</Patch>
+            <Patch>CVE-2007-1856.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>vixie-cron</Name>
+        <RuntimeDependencies>
+            <Dependency>pam</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/var/spool</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/sbin/run-crons">run-crons-0.3.1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0600" target="/etc/crontab">crontab</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/cron.deny">vixie-cron-4.1-cron.deny</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/cron">cron.pam.d</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

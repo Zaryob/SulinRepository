@@ -1,0 +1,45 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bc</Name>
+        <Homepage>http://www.gnu.org/software/bc</Homepage>
+        <Packager>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Console-based calculator utility</Summary>
+        <Description>bc is an arbitrary precision numeric processing language and can be used as a calculator. Syntax is similar to C, but differs in many substantial areas. For example, it supports interactive execution of statements.</Description>
+        <Archive sha1sum="18717e0543b1dda779a71e6a812f11b8261a705a" type="tarbz2">ftp://alpha.gnu.org/gnu/bc/bc-1.06.95.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>flex</Dependency>
+            <Dependency>texinfo</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>bc</Name>
+        <RuntimeDependencies>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-01-27</Date>
+            <Version>1.06.95</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community</Name>
+            <Email>admin@sulin.org</Email>
+        </Update>
+    </History>
+</INARY>

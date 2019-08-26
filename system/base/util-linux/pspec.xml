@@ -1,0 +1,173 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>util-linux</Name>
+        <Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Various useful Linux utilities</Summary>
+        <Description>The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+        <Archive sha1sum="a2c01c4817723f2f1d803e377f26cd025b166400" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.33/util-linux-2.33.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>shadow</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libcap-ng-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>util-linux</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">libutil-linux</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>libcap-ng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/misc</Path>
+            <Path fileType="data">/usr/share/getopt</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>uuidd</Name>
+        <IsA>service</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>util.misc</PartOf>
+        <Summary>Helper daemon to guarantee uniqueness of time-based UUIDs</Summary>
+        <RuntimeDependencies>
+            <Dependency>libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/uuidgen</Path>
+            <Path fileType="executable">/usr/sbin/uuidd</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/uuidd.conf</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/lib/tmpfiles.d/uuidd.conf" permission="0644" owner="root">uuidd.tmpfiles</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>libutil-linux</Name>
+        <IsA>library</IsA>
+        <Summary>util-linux runtime library</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libblkid</Package>
+            <Package>libuuid</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-libmount</Name>
+        <IsA>library</IsA>
+        <Summary>util-linux python3 library</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib64/python3.6/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libutil-linux-devel</Name>
+        <IsA>header</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>libutil-linux header files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libblkid-devel</Package>
+            <Package>libuuid-devel</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/*.pc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libutil-linux-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libutil-linux</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>ncurses-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>libblkid-32bit</Package>
+            <Package>libuuid-32bit</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="library">/usr/lib32/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>util-linux-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for util-linux</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">util-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>util-linux-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for util-linux</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">util-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>2.31.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

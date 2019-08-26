@@ -1,0 +1,96 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtool</Name>
+        <Homepage>http://www.gnu.org/software/libtool/libtool.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A shared library tool for developers</Summary>
+        <Description>Libtool is a shared library tool for developers.</Description>
+        <Archive sha1sum="3e7504b832eb2dd23170c91b6af72e15b56eb94e" type="tarxz">mirrors://gnu/libtool/libtool-2.4.6.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnuconfig</Dependency>
+            <Dependency>autoconf</Dependency>
+            <Dependency>automake</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libtool-ltdl</Name>
+        <PartOf>system.base</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtool</Name>
+        <RuntimeDependencies>
+            <Dependency>gnuconfig</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/libtool</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtool-ltdl-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libtool-ltdl</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libtool-ltdl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtool-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for libtool package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtool</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <Package>
+        <Name>libtool-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for libtool package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtool</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.4.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

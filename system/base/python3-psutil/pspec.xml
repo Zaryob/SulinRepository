@@ -1,0 +1,41 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python3-psutil</Name>
+        <Homepage>https://github.com/giampaolo/psutil</Homepage>
+        <Packager>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A cross-platform process utilities module for Python</Summary>
+        <Description>python3-psutil is a module providing an interface for retrieving information on all running processes and system utilization (CPU, memory) in a portable way by using Python, implementing many functionalities offered by command line tools like ps, top, kill, lsof and netstat.</Description>
+        <Archive sha1sum="0cfc35492185bc6ebe768c70ed86a4eb32e25e4f" type="targz">https://github.com/giampaolo/psutil/archive/release-5.0.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-psutil</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>5.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community</Name>
+            <Email>admins@sulin.org</Email>
+        </Update>
+    </History>
+</INARY>

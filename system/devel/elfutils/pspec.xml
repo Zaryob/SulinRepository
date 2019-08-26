@@ -1,0 +1,78 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>elfutils</Name>
+        <Homepage>http://www.redhat.com/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>OpenSoftware</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Libraries/utilities to handle ELF objects</Summary>
+        <Description>elfutils contains libraries and utilities to handle ELF objects and is a replacement for libelf.</Description>
+        <Archive sha1sum="361f835640ecffddc6d4543fb044eb53f673026f" type="tarbz2">ftp://sourceware.org/pub/elfutils/0.175/elfutils-0.175.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>bzip2</Dependency>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>elfutils</Name>
+        <RuntimeDependencies>
+            <Dependency>xz</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>elfutils-32bit</Name>
+        <Summary>32-bit shared libraries for elfutils</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>xz-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>xz-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency release="current">elfutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>elfutils-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for elfutils package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">elfutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-01-19</Date>
+            <Version>0.175</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

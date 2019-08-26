@@ -1,0 +1,57 @@
+
+<INARY>
+    <Source>
+        <Name>mailcap</Name>
+        <Homepage>http://git.fedorahosted.org/git/mailcap.git</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>public-domain</License>
+        <IsA>data</IsA>
+        <Summary>Helper application and MIME type associations for file types</Summary>
+        <Description>mailcap file is used by the metamail program. Metamail reads the mailcap file to determine how it should display non-text or multimedia material.</Description>
+        <Archive sha1sum="448f6bd36925d1379e2109b6682fc8b649fbbf21" type="tarxz">https://releases.pagure.org/mailcap/mailcap-2.1.48.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>mailcap</Name>
+        <Files>
+            <Path fileType="data">/etc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>mailcap-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>mailcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>mailcap-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for mailcap</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mailcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>2.1.48</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

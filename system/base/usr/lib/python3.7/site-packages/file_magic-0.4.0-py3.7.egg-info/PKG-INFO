@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: file-magic
+Version: 0.4.0
+Summary: (official) libmagic Python bindings
+Home-page: https://github.com/file/file
+Author: Reuben Thomas, Álvaro Justen
+Author-email: rrt@sc3d.org, alvarojusten@gmail.com
+License: BSD
+Description: # `file-magic`: Python Bindings
+        
+        This library is a Python ctypes interface to `libmagic`.
+        
+        
+        ## Installing
+        
+        You can install `file-magic` either with:
+        
+            python setup.py install
+            # or
+            easy_install .
+            # or
+            pip install file-magic
+        
+        
+        ## Using
+        
+            import magic
+        
+            detected = magic.detect_from_filename('magic.py')
+            print 'Detected MIME type: {}'.format(detected.mime_type)
+            print 'Detected encoding: {}'.format(detected.encoding)
+            print 'Detected file type name: {}'.format(detected.name)
+        
+        
+        ## Developing/Contributing
+        
+        To run the tests:
+        
+            python setup.py test
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown

@@ -1,0 +1,58 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>which</Name>
+        <Homepage>http://www.xs4all.nl/~carlo17/which/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Prints the location of specified executable in your path</Summary>
+        <Description>which , Locates a program file in the user's path.</Description>
+        <Archive sha1sum="6b6bec3d2b3d4661c164feb81b9b1d22d1359ded" type="targz">mirrors://gnu/which/which-2.21.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>which</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>which-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <RuntimeDependencies>
+            <Dependency>which</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>which-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Manpages for which</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">which</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-24</Date>
+            <Version>2.21</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,72 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bzip2</Name>
+        <Homepage>http://www.bzip.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BZIP2</License>
+        <IsA>app:console</IsA>
+        <Summary>A high-quality data compressor</Summary>
+        <Description>bzip2 is high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.</Description>
+        <Archive sha1sum="3f89f861209ce81a6bab1fd1998c0ef311712002" type="targz">mirrors://sourceforge/project/bzip2/bzip2-1.0.6.tar.gz</Archive>
+        <Patches>
+          <Patch>bzip2-1.0.4-makefile-CFLAGS.patch</Patch>
+          <Patch>bzip2-1.0.6-saneso.patch</Patch>
+          <Patch>bzip2-1.0.6-progress.patch</Patch>
+          <Patch>bzip2-1.0.3-no-test.patch</Patch>
+          <Patch>bzip2-1.0.4-POSIX-shell.patch</Patch>
+          <Patch>bzip2-1.0.6-mingw.patch</Patch>
+          <Patch>bzip2-1.0.6-out-of-tree-build.patch</Patch>
+          <Patch>bzip2-1.0.6-CVE-2016-3189.patch</Patch>
+          <Patch>bzip2-1.0.6-ubsan-error.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>bzip2</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>bzip2-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for bzip2 package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bzip2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>bzip2-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for bzip2 package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bzip2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

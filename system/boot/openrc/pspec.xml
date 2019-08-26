@@ -1,0 +1,74 @@
+
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>openrc</Name>
+        <Homepage>http://www.gentoo.org/proj/en/base/openrc/</Homepage>
+        <Packager>
+            <Name>Sulin Community</Name>
+            <Email>admin@sulin.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Dependency based init system that works with sysvinit.</Summary>
+        <Description>Dependency based init system that works with sysvinit.</Description>
+        <Archive sha1sum="dfc5e16a1f32d320f6056f774997e5f6dfbfcba9" type="targz">https://github.com/OpenRC/openrc/archive/0.24.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>perl</Dependency>
+	        <Dependency>ncurses</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>openrc</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+	          <Dependency>ncurses</Dependency>
+            <Dependency>sysvinit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/openrc</Path>
+       </Files>
+    </Package>
+    <Package>
+      	<Name>openrc-docs</Name>
+	      <PartOf>system.doc</PartOf>
+	      <Summary>Documentation for openrc package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">openrc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+      	<Name>openrc-pages</Name>
+	      <PartOf>system.pages</PartOf>
+	      <Summary>Man pages for openrc package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">openrc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>0.24.2</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community</Name>
+            <Email>admin@sulin.com</Email>
+        </Update>
+    </History>
+</INARY>
