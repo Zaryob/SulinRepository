@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>spidermonkey</Name>
+        <Homepage>http://www.mozilla.org/js/spidermonkey/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>NPL-1.1</License>
+        <IsA>library</IsA>
+        <Summary>Stand-alone JavaScript C Library</Summary>
+        <Description>Spidermonkey is Mozilla's C implementation of JavaScript.</Description>
+        <Archive type="targz" sha1sum="1ec6399a90c7060908bfc3b96d1f1068ab2bfc78">http://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-52.2.1gnome1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>nspr-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>autoconf213</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>spidermonkey</Name>
+        <RuntimeDependencies>
+            <Dependency>nspr</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>spidermonkey-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for spidermonkey</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">spidermonkey</Dependency>
+            <Dependency>nspr-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="executable">/usr/bin/js17-config</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-07</Date>
+            <Version>52.2.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

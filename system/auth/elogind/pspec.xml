@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>elogind</Name>
+        <Homepage>https://github.com/elogind/elogind</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>service</IsA>
+        <IsA>library</IsA>
+        <Summary>eLogind systemd-logind extracted package</Summary>
+        <Description>The systemd project's logind, extracted to a standalone package</Description>
+        <Archive sha1sum="bc60623b90da52c958fb9ae721b0fa2424a9b8a9" type="targz">https://github.com/elogind/elogind/archive/v241.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>libtool</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>gperf</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>acl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>elogind</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus-x11</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>acl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+              <Path fileType="config">/etc</Path>
+              <Path fileType="executable">/bin</Path>
+              <Path fileType="executable">/usr/bin</Path>
+              <Path fileType="localedata">/usr/share/locale</Path>
+              <Path fileType="data">/usr/share/polkit-1</Path>
+              <Path fileType="data">/usr/share/dbus-1</Path>
+              <Path fileType="data">/usr/share/factory</Path>
+              <Path fileType="data">/usr/share/zsh</Path>
+              <Path fileType="data">/usr/share/bash-completion</Path>
+              <Path fileType="library">/lib/elogind</Path>
+              <Path fileType="library">/lib/libelogind.so*</Path>
+              <Path fileType="library">/lib/security</Path>
+              <Path fileType="library">/lib/udev</Path>
+              <Path fileType="man">/usr/share/man</Path>
+              <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>elogind-devel</Name>
+        <Summary>Development headers for elogind</Summary>
+        <RuntimeDependencies>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>acl-devel</Dependency>
+            <Dependency release="current">elogind</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-08</Date>
+            <Version>241.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
