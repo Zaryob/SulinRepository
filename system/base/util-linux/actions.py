@@ -36,7 +36,6 @@ def setup():
                --disable-mountpoint \
                --disable-makeinstall-chown \
                --disable-socket-activation \
-               --with-python=3 \
               "
 
     if get.buildTYPE() == "emul32":
@@ -47,13 +46,9 @@ def setup():
                      --libdir=/usr/lib32 \
                      --without-ncurses \
                      --disable-static \
-                     --disable-partx \
-                     --disable-raw \
-                     --disable-write \
-                     --disable-mount \
-                     --disable-fsck \
-                     --disable-libmount \
+                     --enable-libmount \
                      --with-audit=no \
+                     --without-python \
                    "
     else:
         options += "\
@@ -67,6 +62,7 @@ def setup():
                      --without-audit \
                      --with-udev \
                      --without-utempter \
+                     --with-python=3 \
                    "
 
     autotools.autoreconf("-fi")

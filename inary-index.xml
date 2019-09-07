@@ -4277,6 +4277,146 @@
 	</SpecFile>
 	<SpecFile>
 		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+			<License>LGPLv2.1</License>
+			<IsA>library</IsA>
+			<PartOf>system.base</PartOf>
+			<Summary xml:lang="en">A library of handy utility functions</Summary>
+			<Summary xml:lang="tr">C programlama dili için glib kütüphanesi</Summary>
+			<Summary xml:lang="fr">La librairie GLib2 de routines C.</Summary>
+			<Description xml:lang="en">glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
+			<Description xml:lang="tr">glib2, GTK+ ve GNOME gibi projelerin temelini oluşturan düşük seviyeli çekirdek kütüphanedir. C için veri yapıları, taşınabilirlik katmanları ve çeşitli çalışma zamanı işlevleri için arabirimler sunar.</Description>
+			<Archive sha1sum="8b18a92f81a8d033abfb43a628bae3bbaf71800c" type="tarxz">mirrors://gnome/glib/2.50/glib-2.56.2.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>libpcre-devel</Dependency>
+				<Dependency>zlib-devel</Dependency>
+				<Dependency>libutil-linux</Dependency>
+				<Dependency>libffi-devel</Dependency>
+				<Dependency>libxslt</Dependency>
+				<Dependency>elfutils</Dependency>
+				<Dependency>docbook-xml</Dependency>
+			</BuildDependencies>
+			<Patches>
+				<Patch level="1">revert-warn-glib-compile-schemas.patch</Patch>
+			</Patches>
+			<SourceURI>system/base/glib2/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>glib2</Name>
+			<RuntimeDependencies>
+				<Dependency>libpcre</Dependency>
+				<Dependency>zlib</Dependency>
+				<Dependency>libffi</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/etc/profile.d</Path>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="library">/usr/lib</Path>
+				<Path fileType="executable">/usr/share/bash-completion/completions/</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share/glib-2.0</Path>
+				<Path fileType="data">/usr/share/systemtap</Path>
+				<Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+				<Path fileType="data">/usr/share/gettext</Path>
+			</Files>
+			<Provides>
+				<SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+			</Provides>
+			<AdditionalFiles>
+				<AdditionalFile owner="root" permission="0644" target="/etc/profile.d/glib2.sh">glib2.sh</AdditionalFile>
+				<AdditionalFile owner="root" permission="0644" target="/etc/profile.d/glib2.csh">glib2.csh</AdditionalFile>
+			</AdditionalFiles>
+		</Package>
+		<Package>
+			<Name>glib2-devel</Name>
+			<Summary xml:lang="en">Development files for glib2</Summary>
+			<Summary xml:lang="tr">glib2 için geliştirme dosyaları</Summary>
+			<PartOf>system.devel</PartOf>
+			<RuntimeDependencies>
+				<Dependency release="1">glib2</Dependency>
+				<Dependency>libpcre-devel</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin/gtester</Path>
+				<Path fileType="executable">/usr/bin/gtester-report</Path>
+				<Path fileType="executable">/usr/bin/gobject-query</Path>
+				<Path fileType="executable">/usr/bin/glib-genmarshal</Path>
+				<Path fileType="executable">/usr/bin/glib-gettextize</Path>
+				<Path fileType="executable">/usr/bin/glib-mkenums</Path>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="header">/usr/lib/glib-2.0/include</Path>
+				<Path fileType="data">/usr/lib/pkgconfig</Path>
+				<Path fileType="data">/usr/lib32/pkgconfig</Path>
+				<Path fileType="data">/usr/share/aclocal</Path>
+				<Path fileType="data">/usr/share/glib-2.0/schemas/gschema.dtd</Path>
+				<Path fileType="data">/usr/share/glib-2.0/gettext</Path>
+				<Path fileType="data">/usr/share/glib-2.0/gdb</Path>
+				<Path fileType="data">/usr/share/gdb/auto-load/libglib-2.0.so.*-gdb.py*</Path>
+				<Path fileType="data">/usr/share/gdb/auto-load/libgobject-2.0.so.*-gdb.py*</Path>
+				<Path fileType="man">/usr/share/man/man3</Path>
+				<Path fileType="man">/usr/share/man/man1/glib-genmarshal.1</Path>
+				<Path fileType="man">/usr/share/man/man1/glib-gettextize.1</Path>
+				<Path fileType="man">/usr/share/man/man1/glib-mkenums.1</Path>
+				<Path fileType="man">/usr/share/man/man1/gobject-query.1</Path>
+				<Path fileType="man">/usr/share/man/man1/gtester-report.1</Path>
+				<Path fileType="man">/usr/share/man/man1/gtester.1</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>glib2-32bit</Name>
+			<Summary xml:lang="en">32-bit shared libraries for glib2</Summary>
+			<Summary xml:lang="tr">glib2 için 32-bit paylaşımlı kitaplıklar</Summary>
+			<PartOf>emul32</PartOf>
+			<BuildType>_emul32</BuildType>
+			<BuildDependencies>
+				<Dependency>libutil-linux-32bit</Dependency>
+				<Dependency>libpcre-32bit</Dependency>
+				<Dependency>zlib-32bit</Dependency>
+				<Dependency>libffi-32bit</Dependency>
+				<Dependency>dbus-32bit</Dependency>
+			</BuildDependencies>
+			<RuntimeDependencies>
+				<Dependency release="1">glib2</Dependency>
+				<Dependency>libpcre-32bit</Dependency>
+				<Dependency>zlib-32bit</Dependency>
+				<Dependency>libffi-32bit</Dependency>
+				<Dependency>dbus-32bit</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin/32</Path>
+				<Path fileType="library">/usr/lib32</Path>
+			</Files>
+			<Provides>
+				<SCOM script="pakhandler32.py">System.PackageHandler</SCOM>
+			</Provides>
+		</Package>
+		<Package>
+			<Name>glib2-docs</Name>
+			<Summary xml:lang="en">Documentation files for glib2</Summary>
+			<Description xml:lang="en">Extensive documentation for developers wanting to use the GLib Library</Description>
+			<Files>
+				<Path fileType="doc">/usr/share/gtk-doc</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
 			<Name>sed</Name>
 			<Homepage>http://sed.sourceforge.net/</Homepage>
 			<Packager>
@@ -7901,7 +8041,7 @@
 			<Description xml:lang="en">baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
 			<Description xml:lang="tr">Bu paket, Sulin dosya sisteminin temelini oluşturur.</Description>
 			<Description xml:lang="fr">Ce paquet crée la hiérarchie du système de fichier principal de Sulin.</Description>
-			<Archive sha1sum="dfb7918d0182dd53c4eb3260590e1c7c0a2071f0" type="targz">baselayout-3.10.2.tar.gz</Archive>
+			<Archive sha1sum="da22e6283ca02fa51cda3161b303dc8ba4da517b" type="targz">baselayout-3.10.2.tar.gz</Archive>
 			<SourceURI>system/base/baselayout/pspec.xml</SourceURI>
 		</Source>
 		<Package>
@@ -7939,7 +8079,6 @@
 				<AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/baselayout.conf">baselayout.conf</AdditionalFile>
 				<AdditionalFile owner="root" permission="0644" target="/etc/sysctl.conf">sysctl.conf</AdditionalFile>
 				<AdditionalFile owner="root" permission="0644" target="/etc/sulin-release">sulin-release</AdditionalFile>
-				<AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/start-stop-daemon.8">start-stop-daemon.8</AdditionalFile>
 			</AdditionalFiles>
 		</Package>
 		<History>
@@ -14318,6 +14457,893 @@
 			</Update>
 		</History>
 	</SpecFile>
+	<Package>
+		<Name>baselayout</Name>
+		<Summary xml:lang="en">Filesystem baselayout</Summary>
+		<Summary xml:lang="tr">Dosya sisteminin temel planı</Summary>
+		<Description xml:lang="en">baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
+		<Description xml:lang="tr">Bu paket, Sulin dosya sisteminin temelini oluşturur.</Description>
+		<Description xml:lang="fr">Ce paquet crée la hiérarchie du système de fichier principal de Sulin.</Description>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<IsA>data</IsA>
+		<PartOf>system.base</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency>python3-libuser</Dependency>
+		</RuntimeDependencies>
+		<Provides>
+			<SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+			<SCOM script="package.py">System.Package</SCOM>
+			<SCOM script="stack.py">Network.Stack</SCOM>
+		</Provides>
+		<History>
+			<Update release="1">
+				<Date>2019-09-04</Date>
+				<Version>3.10.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>20945</InstalledSize>
+		<PackageSize>17152</PackageSize>
+		<PackageHash>8cfcd93de0d74969a218e695d6787a8af411dd18</PackageHash>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageURI>system/base/baselayout/baselayout-3.10.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>baselayout</Name>
+			<Homepage>http://www.sulin.org</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>glib2-dbginfo</Name>
+		<Summary xml:lang="en">Debug files for glib2</Summary>
+		<Description xml:lang="en">Debug files for glib2</Description>
+		<IsA>library</IsA>
+		<PartOf>dbginfo</PartOf>
+		<License>LGPLv2.1</License>
+		<RuntimeDependencies>
+			<Dependency release="1">glib2</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>14765960</InstalledSize>
+		<PackageSize>3255162</PackageSize>
+		<PackageHash>869250e791ae3084e6c8155d601dcd78e62126f9</PackageHash>
+		<InstallTarHash>be760483b57d1fdab00a9bd692e4018f7c3aeb14</InstallTarHash>
+		<PackageURI>system/base/glib2/glib2-dbginfo-2.56.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>glib2-32bit-dbginfo</Name>
+		<Summary xml:lang="en">Debug files for glib2-32bit</Summary>
+		<Description xml:lang="en">Debug files for glib2-32bit</Description>
+		<IsA>library</IsA>
+		<PartOf>dbginfo</PartOf>
+		<License>LGPLv2.1</License>
+		<RuntimeDependencies>
+			<Dependency release="1">glib2-32bit</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>9736000</InstalledSize>
+		<PackageSize>2767096</PackageSize>
+		<PackageHash>ae8571b1ea9fc4052d1211b092fcfdbdb6d3d7f8</PackageHash>
+		<InstallTarHash>44e069b316359e8fcd0beb63bcb3a44c35efc181</InstallTarHash>
+		<PackageURI>system/base/glib2/glib2-32bit-dbginfo-2.56.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>glib2</Name>
+		<Summary xml:lang="en">A library of handy utility functions</Summary>
+		<Summary xml:lang="tr">C programlama dili için glib kütüphanesi</Summary>
+		<Summary xml:lang="fr">La librairie GLib2 de routines C.</Summary>
+		<Description xml:lang="en">glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
+		<Description xml:lang="tr">glib2, GTK+ ve GNOME gibi projelerin temelini oluşturan düşük seviyeli çekirdek kütüphanedir. C için veri yapıları, taşınabilirlik katmanları ve çeşitli çalışma zamanı işlevleri için arabirimler sunar.</Description>
+		<IsA>library</IsA>
+		<PartOf>system.base</PartOf>
+		<License>LGPLv2.1</License>
+		<RuntimeDependencies>
+			<Dependency>libpcre</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>libffi</Dependency>
+		</RuntimeDependencies>
+		<Provides>
+			<SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+		</Provides>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>18432387</InstalledSize>
+		<PackageSize>3354079</PackageSize>
+		<PackageHash>0ab402499674864fbdf86d8534fd30f5804c74d1</PackageHash>
+		<InstallTarHash>a3b8866e0c3225ea6a7a9da192f8d5e3eff24cc8</InstallTarHash>
+		<PackageURI>system/base/glib2/glib2-2.56.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>glib2-docs</Name>
+		<Summary xml:lang="en">Documentation files for glib2</Summary>
+		<Description xml:lang="en">Extensive documentation for developers wanting to use the GLib Library</Description>
+		<IsA>library</IsA>
+		<PartOf>programming.docs</PartOf>
+		<License>LGPLv2.1</License>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>20517470</InstalledSize>
+		<PackageSize>1372427</PackageSize>
+		<PackageHash>df4cbee52ded786a31b14c102ef4066801ad4f8e</PackageHash>
+		<InstallTarHash>842212944cb6f1646719626f64b9ea7f7e55537b</InstallTarHash>
+		<PackageURI>system/base/glib2/glib2-docs-2.56.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>glib2-32bit</Name>
+		<Summary xml:lang="en">32-bit shared libraries for glib2</Summary>
+		<Summary xml:lang="tr">glib2 için 32-bit paylaşımlı kitaplıklar</Summary>
+		<Description xml:lang="en">glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
+		<Description xml:lang="tr">glib2, GTK+ ve GNOME gibi projelerin temelini oluşturan düşük seviyeli çekirdek kütüphanedir. C için veri yapıları, taşınabilirlik katmanları ve çeşitli çalışma zamanı işlevleri için arabirimler sunar.</Description>
+		<IsA>library</IsA>
+		<PartOf>emul32</PartOf>
+		<License>LGPLv2.1</License>
+		<RuntimeDependencies>
+			<Dependency release="1">glib2</Dependency>
+			<Dependency>libpcre-32bit</Dependency>
+			<Dependency>zlib-32bit</Dependency>
+			<Dependency>libffi-32bit</Dependency>
+			<Dependency>dbus-32bit</Dependency>
+		</RuntimeDependencies>
+		<Provides>
+			<SCOM script="pakhandler32.py">System.PackageHandler</SCOM>
+		</Provides>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>3904535</InstalledSize>
+		<PackageSize>1093187</PackageSize>
+		<PackageHash>5ba0759b8f7b6f4f88fc391ae171e61cdeaf5f60</PackageHash>
+		<InstallTarHash>469aefb2ea7167262ba4f634f7b34c33c8f50e79</InstallTarHash>
+		<PackageURI>system/base/glib2/glib2-32bit-2.56.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>glib2-devel</Name>
+		<Summary xml:lang="en">Development files for glib2</Summary>
+		<Summary xml:lang="tr">glib2 için geliştirme dosyaları</Summary>
+		<Description xml:lang="en">glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
+		<Description xml:lang="tr">glib2, GTK+ ve GNOME gibi projelerin temelini oluşturan düşük seviyeli çekirdek kütüphanedir. C için veri yapıları, taşınabilirlik katmanları ve çeşitli çalışma zamanı işlevleri için arabirimler sunar.</Description>
+		<IsA>library</IsA>
+		<PartOf>system.devel</PartOf>
+		<License>LGPLv2.1</License>
+		<RuntimeDependencies>
+			<Dependency release="1">glib2</Dependency>
+			<Dependency>libpcre-devel</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2019-09-07</Date>
+				<Version>2.56.2</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>2202197</InstalledSize>
+		<PackageSize>281136</PackageSize>
+		<PackageHash>c3471d781fefa5f790e98147af66af2a88b4b139</PackageHash>
+		<InstallTarHash>259fb2fce67dafd799fedeca78ed378a3777a109</InstallTarHash>
+		<PackageURI>system/base/glib2/glib2-devel-2.56.2-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>glib2</Name>
+			<Homepage>http://www.gtk.org/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>polkit</Name>
+		<Summary xml:lang="tr">Sistem bileşenleri için erişim politikası servisi</Summary>
+		<Summary xml:lang="en">PolicyKit Authorization Framework</Summary>
+		<Description xml:lang="fr">polkit est un cadre de développement (framework) pour définir des politiques à appliquer à des composants du système ainsi que fournir à des parties du bureau la possibilité de les configurer.</Description>
+		<Description xml:lang="tr">polkit, sistem genelindeki bileşenlerin ve masaüstü bileşenlerinin ayarlayabileceği şekilde ilkeler tanımlamak için araçlardan oluşur.</Description>
+		<Description xml:lang="en">polkit is a toolkit for defining and handling authorizations. It is used for allowing unprivileged processes to speak to privileged processes.</Description>
+		<IsA>service</IsA>
+		<IsA>library</IsA>
+		<IsA>app:console</IsA>
+		<PartOf>system.base</PartOf>
+		<License>LGPLv2+</License>
+		<RuntimeDependencies>
+			<Dependency>pam</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>expat</Dependency>
+			<Dependency>spidermonkey</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2017-01-29</Date>
+				<Version>0.113</Version>
+				<Comment>First release</Comment>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2018</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>720152</InstalledSize>
+		<PackageSize>142639</PackageSize>
+		<PackageHash>986ebb8b97ef35c598cd7bc96c2e923aff05bc00</PackageHash>
+		<InstallTarHash>fa6f742d6059ff8ff015dd7600be9544fe1fc23d</InstallTarHash>
+		<PackageURI>system/base/polkit/polkit-0.113-1-s18-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>polkit</Name>
+			<Homepage>http://www.freedesktop.org/wiki/Software/PolicyKit</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>polkit-devel</Name>
+		<Summary xml:lang="tr">polkit geliştirme başlıkları</Summary>
+		<Summary xml:lang="en">Development headers for polkit</Summary>
+		<Description xml:lang="fr">polkit est un cadre de développement (framework) pour définir des politiques à appliquer à des composants du système ainsi que fournir à des parties du bureau la possibilité de les configurer.</Description>
+		<Description xml:lang="tr">polkit, sistem genelindeki bileşenlerin ve masaüstü bileşenlerinin ayarlayabileceği şekilde ilkeler tanımlamak için araçlardan oluşur.</Description>
+		<Description xml:lang="en">polkit is a toolkit for defining and handling authorizations. It is used for allowing unprivileged processes to speak to privileged processes.</Description>
+		<IsA>service</IsA>
+		<IsA>library</IsA>
+		<IsA>app:console</IsA>
+		<PartOf>system.devel</PartOf>
+		<License>LGPLv2+</License>
+		<RuntimeDependencies>
+			<Dependency release="1">polkit</Dependency>
+			<Dependency>glib2-devel</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2017-01-29</Date>
+				<Version>0.113</Version>
+				<Comment>First release</Comment>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2018</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>90632</InstalledSize>
+		<PackageSize>11186</PackageSize>
+		<PackageHash>594d5bad787f4cf27dccf3db401bef0d750c1da5</PackageHash>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageURI>system/base/polkit/polkit-devel-0.113-1-s18-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>polkit</Name>
+			<Homepage>http://www.freedesktop.org/wiki/Software/PolicyKit</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>pypolkit</Name>
+		<Summary xml:lang="en">Python binding of PolicyKit</Summary>
+		<Summary xml:lang="tr">PolicyKit için Python bağlayıcısı</Summary>
+		<Description xml:lang="en">pypolkit is a Python binding for the PolicyKit library.</Description>
+		<Description xml:lang="tr">pypolkit PolicyKit için geliştirilmiş bir Python bağlayıcısıdır.</Description>
+		<IsA>library</IsA>
+		<PartOf>system.base</PartOf>
+		<License>MIT</License>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+			<Dependency>polkit</Dependency>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2017-01-30</Date>
+				<Version>1.0.2</Version>
+				<Comment>First release</Comment>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2018</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>18883</InstalledSize>
+		<PackageSize>7014</PackageSize>
+		<PackageHash>bf4b560fa919536b50b4fc79979dd03a4dc783fb</PackageHash>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageURI>system/base/pypolkit/pypolkit-1.0.2-1-s18-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>pypolkit</Name>
+			<Homepage>http://www.sulin.org</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>spidermonkey-devel</Name>
+		<Summary xml:lang="tr">spidermonkey için geliştirme dosyaları</Summary>
+		<Summary xml:lang="en">Development files for spidermonkey</Summary>
+		<Description xml:lang="tr">Mozilla'nın Javascript'in C implementasyonu.</Description>
+		<Description xml:lang="es">Spidermonkey es la implementación de JavaScript con C de Mozilla.</Description>
+		<Description xml:lang="en">Spidermonkey is Mozilla's C implementation of JavaScript.</Description>
+		<Description xml:lang="fr">Spidermonkey est l'Implémentation C de Javascript par Mozilla.</Description>
+		<IsA>library</IsA>
+		<PartOf>system.devel</PartOf>
+		<License>NPL-1.1</License>
+		<RuntimeDependencies>
+			<Dependency release="1">spidermonkey</Dependency>
+			<Dependency>nspr-devel</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2017-01-29</Date>
+				<Version>17.0.0</Version>
+				<Comment>First release</Comment>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2018</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>902539</InstalledSize>
+		<PackageSize>184286</PackageSize>
+		<PackageHash>7ff1b3f182fb2ebb9221aa279614c3158f80f3ba</PackageHash>
+		<InstallTarHash>73a2704dc0fdc3f92bbb8217a21f8ab44977f073</InstallTarHash>
+		<PackageURI>system/base/spidermonkey/spidermonkey-devel-17.0.0-1-s18-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>spidermonkey</Name>
+			<Homepage>http://www.mozilla.org/js/spidermonkey/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>spidermonkey</Name>
+		<Summary xml:lang="tr">Javascript C Kitaplığı</Summary>
+		<Summary xml:lang="en">Stand-alone JavaScript C Library</Summary>
+		<Description xml:lang="tr">Mozilla'nın Javascript'in C implementasyonu.</Description>
+		<Description xml:lang="es">Spidermonkey es la implementación de JavaScript con C de Mozilla.</Description>
+		<Description xml:lang="en">Spidermonkey is Mozilla's C implementation of JavaScript.</Description>
+		<Description xml:lang="fr">Spidermonkey est l'Implémentation C de Javascript par Mozilla.</Description>
+		<IsA>library</IsA>
+		<PartOf>system.base</PartOf>
+		<License>NPL-1.1</License>
+		<RuntimeDependencies>
+			<Dependency>nspr</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>readline</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2017-01-29</Date>
+				<Version>17.0.0</Version>
+				<Comment>First release</Comment>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2018</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>7888359</InstalledSize>
+		<PackageSize>1487143</PackageSize>
+		<PackageHash>575f00b463cb4fd80aa5fa22fce5bc5537a156bb</PackageHash>
+		<InstallTarHash>98f5949916ff746e9c01dc28445f60a42ecc1c51</InstallTarHash>
+		<PackageURI>system/base/spidermonkey/spidermonkey-17.0.0-1-s18-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>spidermonkey</Name>
+			<Homepage>http://www.mozilla.org/js/spidermonkey/</Homepage>
+			<Packager>
+				<Name>Sulin Community</Name>
+				<Email>admins@sulin.org</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>util-linux-dbginfo</Name>
+		<Summary xml:lang="en">Debug files for util-linux</Summary>
+		<Description xml:lang="en">Debug files for util-linux</Description>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>dbginfo</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency release="1">util-linux</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>8808</InstalledSize>
+		<PackageSize>2460</PackageSize>
+		<PackageHash>15ff47aa021f1a3c5c110e5c6acdc44274043790</PackageHash>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageURI>system/base/util-linux/util-linux-dbginfo-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>uuidd</Name>
+		<Summary xml:lang="en">Helper daemon to guarantee uniqueness of time-based UUIDs</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>service</IsA>
+		<IsA>app:console</IsA>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>util.misc</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency>libutil-linux</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>50636</InstalledSize>
+		<PackageSize>15620</PackageSize>
+		<PackageHash>96a74210bd402317a01760997e1771503e0ef0eb</PackageHash>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageURI>system/base/util-linux/uuidd-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>python3-libmount</Name>
+		<Summary xml:lang="en">util-linux python3 library</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>library</IsA>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>system.base</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>297497</InstalledSize>
+		<PackageSize>68852</PackageSize>
+		<PackageHash>af559cfb31c4c68922322464416ca6b12c69bd8e</PackageHash>
+		<InstallTarHash>e0e2ef134679158b63f93b710d1eb8095feb6ef5</InstallTarHash>
+		<PackageURI>system/base/util-linux/python3-libmount-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>libutil-linux-devel</Name>
+		<Summary xml:lang="en">libutil-linux header files</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>header</IsA>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>system.devel</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency release="1">libutil-linux</Dependency>
+		</RuntimeDependencies>
+		<Replaces>
+			<Package>libblkid-devel</Package>
+			<Package>libuuid-devel</Package>
+		</Replaces>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>99797</InstalledSize>
+		<PackageSize>19210</PackageSize>
+		<PackageHash>d2fb799320ea7935eacfbdc0b07fbd2293922d33</PackageHash>
+		<InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+		<PackageURI>system/base/util-linux/libutil-linux-devel-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>util-linux-pages</Name>
+		<Summary xml:lang="en">Manpages for util-linux</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>data:doc</IsA>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>system.doc</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency release="1">util-linux</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>633904</InstalledSize>
+		<PackageSize>155768</PackageSize>
+		<PackageHash>3cb2500e0cdd07bd524f2c21c0766f1c882c7834</PackageHash>
+		<InstallTarHash>fc609ddc18b65e4bad476ceb6a7738daa0b3801e</InstallTarHash>
+		<PackageURI>system/base/util-linux/util-linux-pages-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>util-linux-docs</Name>
+		<Summary xml:lang="en">Documentation for util-linux</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>data:doc</IsA>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>system.doc</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency release="1">util-linux</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>1039859</InstalledSize>
+		<PackageSize>224437</PackageSize>
+		<PackageHash>d78d61fd654fe30be1d25aa674cca1fe01ea6efd</PackageHash>
+		<InstallTarHash>1defd25f8157f00937e7bd6239d00b238d89677b</InstallTarHash>
+		<PackageURI>system/base/util-linux/util-linux-docs-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>libutil-linux</Name>
+		<Summary xml:lang="en">util-linux runtime library</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>library</IsA>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>system.base</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Replaces>
+			<Package>libblkid</Package>
+			<Package>libuuid</Package>
+		</Replaces>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>8744426</InstalledSize>
+		<PackageSize>1394723</PackageSize>
+		<PackageHash>682743e4135810563009eaef0626c4e740bc598b</PackageHash>
+		<InstallTarHash>d1c1e413e47bd0adebb29945de78d09655835e1d</InstallTarHash>
+		<PackageURI>system/base/util-linux/libutil-linux-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>util-linux</Name>
+		<Summary xml:lang="en">Various useful Linux utilities</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>system.base</PartOf>
+		<License>GPLv2</License>
+		<RuntimeDependencies>
+			<Dependency version="2.31.1">libutil-linux</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>pam</Dependency>
+			<Dependency>perl</Dependency>
+			<Dependency>ncurses</Dependency>
+			<Dependency>readline</Dependency>
+			<Dependency>eudev</Dependency>
+			<Dependency>libcap-ng</Dependency>
+		</RuntimeDependencies>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>10852268</InstalledSize>
+		<PackageSize>1649073</PackageSize>
+		<PackageHash>bd218eb804da6f971bc41127f77baa8a6cd71c86</PackageHash>
+		<InstallTarHash>9cbda121af1d7c0b04f8ddbb2fac9c33a7f34998</InstallTarHash>
+		<PackageURI>system/base/util-linux/util-linux-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
+	<Package>
+		<Name>libutil-linux-32bit</Name>
+		<Summary xml:lang="en">32-bit shared libraries for libutil-linux</Summary>
+		<Description xml:lang="en">The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
+		<IsA>app:console</IsA>
+		<IsA>library</IsA>
+		<PartOf>emul32</PartOf>
+		<License>GPLv2</License>
+		<Replaces>
+			<Package>libblkid-32bit</Package>
+			<Package>libuuid-32bit</Package>
+		</Replaces>
+		<History>
+			<Update release="1">
+				<Date>2018-12-22</Date>
+				<Version>2.31.1</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+		<BuildHost>localhost</BuildHost>
+		<Distribution>Sulin</Distribution>
+		<DistributionRelease>2019</DistributionRelease>
+		<Architecture>x86_64</Architecture>
+		<InstalledSize>4687442</InstalledSize>
+		<PackageSize>1135878</PackageSize>
+		<PackageHash>829bc6d97a94efa194e83bf73ba1688e969d5331</PackageHash>
+		<InstallTarHash>33e65ecb7a477479bf76e245668a4b8634182f96</InstallTarHash>
+		<PackageURI>system/base/util-linux/libutil-linux-32bit-2.31.1-1-s19-x86_64.inary</PackageURI>
+		<PackageFormat>1.2</PackageFormat>
+		<Source>
+			<Name>util-linux</Name>
+			<Homepage>http://userweb.kernel.org/~kzak/util-linux-ng/</Homepage>
+			<Packager>
+				<Name>Süleyman POYRAZ</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+		</Source>
+	</Package>
 	<Package>
 		<Name>dietlibc-pages</Name>
 		<Summary xml:lang="en">Man pages for dietlibc package.</Summary>
