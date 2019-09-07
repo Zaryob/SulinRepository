@@ -36,8 +36,8 @@ def install():
     inarytools.remove("/usr/share/man/man1/pidof.1")
     
     # for mudur and scom
-    inarytools.dosym("/usr/bin/sysctl", "/sbin/sysctl")
-    inarytools.dosym("/usr/bin/ps", "/bin/ps")
+    inarytools.dosym("../usr/bin/sysctl", "/sbin/sysctl")
+    inarytools.dosym("../usr/bin/ps", "/bin/ps")
 
     #inarytools.dosym("libproc-%s.so" % get.srcVERSION(), "/lib/libproc.so")
 

@@ -1,4 +1,4 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -10,8 +10,9 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
-        <Summary>Assembler and linker tools</Summary>
-        <Description>Contains commands like as, ld, nm, objdump, ar, ranlib for compiling assembly code to the machine language, and for linking and manipulating the binary object files.</Description>
+        <PartOf>system.devel</PartOf>
+        <Summary>Toolkit for handling assembly object files.</Summary>
+        <Description>Contains linker, assembler and other tools like as, ld, nm, objdump, ar, ranlib for compiling assembly code to the machine language, and for linking and manipulating the binary object files.</Description>
         <Archive sha1sum="3b031410897fe224412f3a6a1b052402d2fbcc6a" type="tarxz">http://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.xz</Archive>
         <Patches>
         </Patches>

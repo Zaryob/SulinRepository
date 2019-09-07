@@ -15,7 +15,7 @@ def setup():
 
     autotools.autoreconf("-fi")
     autotools.configure("--disable-static \
-                         --with-python3")
+                         --with-python")
 
 def build():
     autotools.make()

@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
@@ -11,9 +10,10 @@
         </Packager>
         <License>GPLv3+</License>
         <IsA>app:console</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>A GNU file archiving program</Summary>
         <Description>The GNU tar program saves many files together in one archive and can restore individual files (or all of the files) from that archive.</Description>
-        <Archive sha1sum="ad53ec4fa815177ab8dbcaa27a42557295142f94" 
+        <Archive sha1sum="ad53ec4fa815177ab8dbcaa27a42557295142f94"
 type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.31.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="doc/tar.1">tar.1</AdditionalFile>
@@ -42,7 +42,7 @@ type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.31.tar.xz</Archive>
         <Package>
             <Name>tar-docs</Name>
             <IsA>data:doc</IsA>
-        <PartOf>system.doc</PartOf>
+            <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
                 <Dependency>readline</Dependency>
             </RuntimeDependencies>
@@ -53,7 +53,7 @@ type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.31.tar.xz</Archive>
         <Package>
             <Name>tar-pages</Name>
             <IsA>data:doc</IsA>
-        <PartOf>system.doc</PartOf>
+            <PartOf>system.doc</PartOf>
             <Summary>Manpages for readline</Summary>
             <RuntimeDependencies>
                 <Dependency release="current">tar</Dependency>

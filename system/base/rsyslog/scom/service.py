@@ -2,8 +2,8 @@
 from scom.service import *
 
 serviceType = "local"
-serviceDesc = _({"en": "System Message Logger",
-                 "tr": "Sistem Günlükleme Hizmeti"})
+serviceDesc = {"en": "System Message Logger",
+                 "tr": "Sistem Günlükleme Hizmeti"}
 serviceDefault = "on"
 
 PIDFILE = "/var/run/rsyslogd.pid"

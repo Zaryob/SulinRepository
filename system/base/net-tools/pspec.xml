@@ -1,4 +1,4 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -10,6 +10,7 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>Standard Linux networking tools</Summary>
         <Description>net-tools is a collection of programs that form the base set of the networking tools for the Linux operating system. It includes arp, hostname, ifconfig, ipmaddr, iptunnel, mii-tool, nameif, netstat, plipconfig, rarp, route and slattach.</Description>
         <Archive sha1sum="944fb70641505d5d1139dba3aeb81ba124574b83" type="tarbz2">https://sourceforge.net/projects/net-tools/files/net-tools-1.60.tar.bz2</Archive>

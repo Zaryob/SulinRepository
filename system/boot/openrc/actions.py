@@ -20,7 +20,7 @@ args = 'BRANDING="Sulin" \
             LIBEXECDIR=/usr/lib/openrc \
             BINDIR=/usr/bin \
             SBINDIR=/sbin \
-	    INCLUDEDIR=/usr/include \
+	        INCLUDEDIR=/usr/include \
             SYSCONFDIR=/etc'
 
 
@@ -28,8 +28,11 @@ def build():
     autotools.make("%s"% args)
 
 def install():
-    autotools.rawInstall("DESTDIR=%s %s" % (get.installDIR(),args))
-
+    autotools.install("DESTDIR=%s %s" % (get.installDIR(),args))
+    shelltools.unlink("{}/sbin/rc-sstat".format(get.installDIR()))
+    shelltools.unlink("{}/etc/init.d/functions.sh".format(get.installDIR()))
+    inarytools.dosym("../../usr/lib/openrc/sh/functions.sh", "/etc/init.d/functions.sh")
+    inarytools.dosym("../usr/lib/openrc/bin/rc-sstat","/sbin/rc-sstat")
     inarytools.insinto("/etc", "support/sysvinit/inittab")
 
     inarytools.dodoc("LICENSE*", "*guide.*", "AUTHORS", "ChangeLog", "README.*")

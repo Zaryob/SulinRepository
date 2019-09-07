@@ -19,7 +19,7 @@ echo "#define _IO_IN_BACKUP 0x100" >> gl/lib/stdio-impl.h""")
     autotools.configure("""--enable-nls \
                          --with-packager="Sulin" \
                          --with-packager-version="4.6.0" \
-                         --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
+                         --with-packager-bug-reports="https://github.com/SulinOS/SulinRepository/issues" \
                          --localstatedir=/var/lib/locate \
                          --without-included-regex \
                          --disable-rpath \

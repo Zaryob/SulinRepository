@@ -1,7 +1,38 @@
 import os
 import subprocess
+import time
+import fcntl
 
-from sulin.fileutils import FileLock
+
+class FileLock:
+    def __init__(self, filename):
+        self.filename = filename
+        self.fd = None
+
+    def lock(self, shared=False, timeout=-1):
+        _type = fcntl.LOCK_EX
+        if shared:
+            _type = fcntl.LOCK_SH
+        if timeout != -1:
+            _type |= fcntl.LOCK_NB
+
+        self.fd = os.open(self.filename, os.O_WRONLY | os.O_CREAT, 0o600)
+        if self.fd == -1:
+            raise IOError("Cannot create lock file")
+
+        while True:
+            try:
+                fcntl.flock(self.fd, _type)
+                return
+            except IOError:
+                if timeout > 0:
+                    time.sleep(0.2)
+                    timeout -= 0.2
+                else:
+                    raise
+
+    def unlock(self):
+        fcntl.flock(self.fd, fcntl.LOCK_UN)
 
 # Config
 
@@ -17,30 +48,30 @@ TIMEOUT = 5.0
 
 # l10n
 
-FAIL_TIMEOUT = _({
+FAIL_TIMEOUT = {
     "en": "Request timed out. Try again later.",
     "tr": "Talep zaman aşımına uğradı. Daha sonra tekrar deneyin.",
-})
+}
 
-FAIL_VERSION = _({
+FAIL_VERSION = {
     "en": "Invalid kernel version.",
     "tr": "Geçersiz çekirdek sürümü.",
-})
+}
 
-FAIL_PROBE = _({
+FAIL_PROBE = {
     "en": "Unable to load module %s: %s",
     "tr": "%s modülü yüklenemedi: %s",
-})
+}
 
-FAIL_RMMOD = _({
+FAIL_RMMOD = {
     "en": "Unable to unload module %s: %s",
     "tr": "%s modülü kaldırılamadı: %s",
-})
+}
 
-FAIL_UPDATE = _({
+FAIL_UPDATE = {
     "en": "Unable to update modprobe.conf: %s",
     "tr": "modprobe.conf güncellenemedi: %s",
-})
+}
 
 # Utils
 
@@ -67,7 +98,7 @@ def listConfig(_file, prefix=None):
     """Parses given module configuration file and returns modules as a list."""
     lock = Lock(_file, shared=True)
     lines = []
-    for line in file(_file):
+    for line in open(_file):
         line = line.strip()
         if line and not line.startswith("#"):
             lines.append(line)
@@ -82,7 +113,7 @@ def editConfig(_file, add=[], remove=[], prefix=None):
     lock = Lock(_file, shared=False)
     newlines = []
     if os.path.exists(_file):
-        for line in file(_file):
+        for line in open(_file):
             module = line.strip()
             if prefix and prefix in module:
                 module = module.split(prefix)[1]
@@ -97,7 +128,7 @@ def editConfig(_file, add=[], remove=[], prefix=None):
     newlines.extend(add)
     if prefix:
         newlines = ["#Added through SCOM\n%s %s\n" % (prefix, x) for x in newlines if not x.startswith("#")]
-    file(_file, "w").write("\n".join(newlines))
+    open(_file, "w").write("\n".join(newlines))
     lock.release()
 
 # Boot.Modules methods
@@ -119,12 +150,12 @@ def listLoaded():
     """Returns loaded modules and their options."""
     # Get loaded modules
     modules = {}
-    for module in file("/proc/modules"):
+    for module in open("/proc/modules"):
         modname = module.split()[0]
         modules[modname] = ""
     # Get options from modprobe.conf
     lock = Lock(MODULES_CONF, shared=True)
-    for line in file(MODULES_CONF):
+    for line in open(MODULES_CONF):
         line = line.strip()
         if line.startswith("options"):
             try:
@@ -149,7 +180,7 @@ def setOptions(module, options=""):
     for _file in os.listdir(MODULES_CONF_DIR):
         _file = os.path.join(MODULES_CONF_DIR, _file)
         newlines = []
-        for line in file(_file):
+        for line in open(_file):
             line = line.strip()
             if line.startswith("options %s " % module):
                 if options:
@@ -159,12 +190,12 @@ def setOptions(module, options=""):
                 newlines.append(line)
         # Update config file
         if module_found:
-            file(_file, "w").write("\n".join(newlines))
+            open(_file, "w").write("\n".join(newlines))
             break
     # Append module config to "/etc/modules.d/other"
     if not module_found:
         config_file = os.path.join(MODULES_CONF_DIR, "other")
-        file(config_file, "a").write("options %s %s" % (module, options))
+        open(config_file, "a").write("options %s %s" % (module, options))
     # Release lock on modprobe.conf
     lock.release()
     # Update modprobe.conf

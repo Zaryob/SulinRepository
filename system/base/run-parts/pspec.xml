@@ -1,4 +1,3 @@
-
 <INARY>
     <Source>
         <Name>run-parts</Name>
@@ -8,6 +7,7 @@
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>GPLv2+</License>
+        <PartOf>system.base</PartOf>
         <Summary>run scripts or programs in a directory</Summary>
         <Description>run scripts or programs in a directory</Description>
         <Archive sha1sum="09a68238373b8683c1bd85a310108ca34b1aa05b" type="tarxz">https://mirror.fccn.pt/repos/pub/ubuntu/ubuntu/pool/main/d/debianutils/debianutils_4.8.6.tar.xz</Archive>

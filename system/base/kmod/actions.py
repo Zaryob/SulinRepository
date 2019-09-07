@@ -18,7 +18,7 @@ def build():
     autotools.make()
 
 # need git for check
-#def check():     
+#def check():
 #    autotools.make("check")
 
 def install():
@@ -26,7 +26,7 @@ def install():
 
     if get.buildTYPE() == "emul32": return
 
-    inarytools.dosym("modprobe.d.5.gz","/usr/share/man/man5/modprobe.conf.5.gz")
+    inarytools.dosym("modprobe.d.5","/usr/share/man/man5/modprobe.conf.5")
     for sym in ["modinfo","insmod","rmmod","depmod","modprobe"]:
         inarytools.dosym("../usr/bin/kmod","/sbin/%s" % sym)
     inarytools.dosym("../usr/bin/kmod","/bin/lsmod")

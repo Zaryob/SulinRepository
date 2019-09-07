@@ -1,4 +1,4 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -10,6 +10,7 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>library</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>A user and group account administration library</Summary>
         <Description>libuser implements a standardized interface for manipulating and administering user and group accounts. The library uses pluggable back-ends to interface to its data sources.</Description>
         <Archive sha1sum="e0fe60dd38f3b5777d0a4ad664725eddd18ef310" type="tarxz">https://releases.pagure.org/libuser/libuser-0.62.tar.xz</Archive>
@@ -18,6 +19,7 @@
                 <Dependency>popt-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -49,10 +51,23 @@
             <Path fileType="library">/usr/lib/python3*</Path>
         </Files>
     </Package>
-
+    <Package>
+        <Name>python-libuser</Name>
+        <BuildType>rebuild_python</BuildType>
+        <PartOf>programming.language.python</PartOf>
+        <Summary>Python2 modules of libuser</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>libuser</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
 
     <Package>
         <Name>libuser-devel</Name>
+        <IsA>header</IsA>
         <PartOf>system.devel</PartOf>
         <Summary>Development files for libuser</Summary>
         <RuntimeDependencies>

@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 
@@ -13,6 +12,7 @@
         <License>as-is</License>
         <IsA>app:console</IsA>
         <IsA>library</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>Popt command line option parser</Summary>
         <Description>The popt library exists essentially for parsing command line options with advantages such as there are no global variables, ability to parse an arbitrary array of argv-style elements, to exec external option filters, and automatic generation of help and usage messages, a standard method of option aliasing.</Description>
         <Archive sha1sum="cfe94a15a2404db85858a81ff8de27c8ff3e235e" type="targz">http://rpm5.org/files/popt/popt-1.16.tar.gz</Archive>
@@ -31,6 +31,7 @@
 
     <Package>
         <Name>popt-devel</Name>
+        <IsA>header</IsA>
         <PartOf>system.devel</PartOf>
         <Summary>Development files for popt</Summary>
         <RuntimeDependencies>
@@ -38,7 +39,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/popt.h</Path>
-            <Path fileType="man">/usr/share/man/man3</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>

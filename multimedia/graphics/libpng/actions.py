@@ -28,6 +28,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     if get.buildTYPE() == "emul32":
+        inarytools.remove("/usr/lib32/libpng.la")
         return
 
     # remove la symlink, it is not detected correctly

@@ -9,8 +9,8 @@ def doinfo(filepath, remove=False):
     os.environ["LC_ALL"] = "C"
 
     doc = xmlext.parse(filepath)
-    for item in xmlext.getNode(doc,"File"):
-        path = xmlext.getNodeText(item,"Path")
+    for item in xmlext.getAllNodes(doc, "File"):
+        path = xmlext.getNodeText(item, "Path")
         if path.startswith("usr/share/info") and path.endswith((".info", ".info.gz")):
             if remove:
                 subprocess.call(["install-info", "--delete", "/%s" % path, "/usr/share/info/dir"])

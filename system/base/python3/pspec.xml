@@ -1,12 +1,12 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>python3</Name>
         <Homepage>http://www.python.org/</Homepage>
         <Packager>
-            <Name>Sulin Community</Name>
-            <Email>admins@sulin.org</Email>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>custom</License>
         <PartOf>system.base</PartOf>
@@ -28,6 +28,7 @@
             <Dependency>readline-devel</Dependency>
         </BuildDependencies>
         <Patches>
+            <Patch>sulin_path.patch</Patch>
             <Patch level="1">dont-make-libpython-readonly.patch</Patch>
         </Patches>
     </Source>
@@ -121,6 +122,8 @@
 
     <Package>
         <Name>python3-devel</Name>
+        <IsA>header</IsA>
+        <PartOf>system.devel</PartOf>
         <RuntimeDependencies>
             <Dependency release="current">python3</Dependency>
         </RuntimeDependencies>

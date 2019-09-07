@@ -61,7 +61,11 @@ def install():
 
     # Rename conflicting manpages
     inarytools.rename("/usr/share/man/man1/passwd.1", "ssl-passwd.1")
+    inarytools.remove("/usr/share/man/man1/openssl-passwd.1")
+    inarytools.dosym("ssl-passwd.1", "/usr/share/man/man1/openssl-passwd.1")
     inarytools.rename("/usr/share/man/man1/rand.1", "ssl-rand.1")
+    inarytools.remove("/usr/share/man/man1/openssl-rand.1")
+    inarytools.dosym("ssl-passwd.1", "/usr/share/man/man1/openssl-rand.1")
     #inarytools.rename("/usr/share/man/man3/err.3", "ssl-err.3")
 
     if get.buildTYPE() == "_emul32":

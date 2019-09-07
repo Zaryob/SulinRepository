@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>baselayout</Name>
+        <Homepage>http://www.sulin.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <IsA>data</IsA>
+        <Summary>Filesystem baselayout</Summary>
+        <Description>baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
+        <Archive sha1sum="dfb7918d0182dd53c4eb3260590e1c7c0a2071f0" type="targz">baselayout-3.10.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>baselayout</Name>
+        <RuntimeDependencies>
+            <!--Dependency>python3-pypolkit</Dependency-->
+            <Dependency>python3-libuser</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="true">/bin</Path>
+            <Path fileType="executable" permanent="true">/sbin</Path>
+            <Path fileType="library" permanent="true">/lib*</Path>
+            <Path fileType="config" permanent="true">/etc</Path>
+            <Path fileType="data" permanent="true">/etc/sulin-release</Path>
+            <Path fileType="data" permanent="true">/media</Path>
+            <Path fileType="data" permanent="true">/boot</Path>
+            <Path fileType="data" permanent="true">/proc</Path>
+            <Path fileType="data" permanent="true">/home</Path>
+            <Path fileType="data" permanent="true">/mnt</Path>
+            <Path fileType="data" permanent="true">/opt</Path>
+            <Path fileType="data" permanent="true">/dev</Path>
+            <Path fileType="data" permanent="true">/run</Path>
+            <Path fileType="data" permanent="true">/sys</Path>
+            <Path fileType="data" permanent="true">/srv</Path>
+            <Path fileType="data" permanent="true">/tmp</Path>
+            <Path fileType="data" permanent="true">/usr</Path>
+            <Path fileType="data" permanent="true">/var</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/baselayout.conf</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/baselayout.conf">baselayout.conf</AdditionalFile>
+
+            <AdditionalFile owner="root" permission="0644" target="/etc/sysctl.conf">sysctl.conf</AdditionalFile>
+
+            <!-- Release file for Sulin, there's another in lsb-release package -->
+            <AdditionalFile owner="root" permission="0644" target="/etc/sulin-release">sulin-release</AdditionalFile>
+
+            <!-- Should be dropped after switching to systemd as the only user is SCOM -->
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/start-stop-daemon.8">start-stop-daemon.8</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+            <SCOM script="package.py">System.Package</SCOM>
+            <!--SCOM script="usermgr.py">User.Manager</SCOM-->
+            <SCOM script="stack.py">Network.Stack</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-04</Date>
+            <Version>3.10.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

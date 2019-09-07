@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vi</Name>
+        <Homepage>http://ex-vi.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>custom:ex</License>
+        <Summary>The original ex/vi text editor</Summary>
+        <Description>The original ex/vi text editor.</Description>
+        <Archive sha1sum="d2e0c11fc60a24fae09d0cb3df383984014a2bda" type="tarxz">https://sources.archlinux.org/other/vi/ex-070224.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>preserve_dir.patch</Patch>
+            <Patch>fix-tubesize.patch</Patch>
+            <Patch>navkeys.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>vi</Name>
+        <IsA>app:console</IsA>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+            <Package>gvim</Package>
+            <Package>vim</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="executable">/usr/bin/vi*</Path>
+            <Path fileType="executable">/usr/bin/rvi*</Path>
+            <Path fileType="executable">/usr/bin/ex</Path>
+            <Path fileType="executable">/usr/bin/xxd</Path>
+            <Path fileType="executable">/usr/bin/vedit</Path>
+            <Path fileType="executable">/usr/bin/edit</Path>
+            <Path fileType="library">/usr/lib/ex</Path>
+            <Path fileType="library">/var/lib/ex</Path>
+            <Path fileType="data">/usr/share/man/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-07</Date>
+            <Version>070224</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

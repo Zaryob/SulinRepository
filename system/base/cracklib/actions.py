@@ -14,8 +14,10 @@ def setup():
     autotools.autoreconf("-vfi")
     autotools.configure("--with-default-dict=/usr/share/cracklib/pw_dict \
                          --prefix=/usr    \
-                         --with-python=/usr/bin/python3 \
-                         --disable-static")
+                         PYTHON={} \
+                         --with-python \
+                         --disable-static".format(
+                         "/usr/bin/python2.7" if get.buildTYPE()=="rebuild_python" else "/usr/bin/python3.7"))
 
     # for unused
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
@@ -24,6 +26,13 @@ def build():
     autotools.make("all")
 
 def install():
+    if get.buildTYPE()=="rebuild_python":
+        autotools.rawInstall("DESTDIR={}/python2".format(get.installDIR()))
+        shelltools.move("{}/python2/usr/lib/python2*".format(get.installDIR()),
+         "{}/usr/lib/".format(get.installDIR()))
+        shelltools.unlinkDir("{}/python2/".format(get.installDIR()))
+        return
+
     autotools.install()
 
     # Create dictionary files

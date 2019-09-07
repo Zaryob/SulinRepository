@@ -1,4 +1,4 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -12,6 +12,7 @@
         <License>GPLv3</License>
         <IsA>app:console</IsA>
         <IsA>library</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>Internationalized Domain Names (IDN) implementation</Summary>
         <Description>GNU Libidn is an implementation of the Stringprep, Punycode and IDNA specifications defined by the IETF Internationalized Domain Names (IDN) working group, used for internationalized domain names. The C library is available under the GNU Lesser General Public License.</Description>
         <Archive sha1sum="57872fdc665dcc585e16f4ac0bb35374b1103f7e" type="targz">http://ftp.gnu.org/gnu/libidn/libidn-1.33.tar.gz</Archive>
@@ -30,6 +31,7 @@
 
     <Package>
         <Name>libidn-devel</Name>
+        <IsA>header</IsA>
         <PartOf>system.devel</PartOf>
         <Summary>Development files for libidn</Summary>
         <RuntimeDependencies>

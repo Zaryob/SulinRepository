@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
@@ -11,6 +10,7 @@
         </Packager>
         <License>as-is</License>
         <IsA>library</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>XML parsing libraries</Summary>
         <Description>This is expat, the C library for parsing XML, written by James Clark. Expat is a stream oriented XML parser. This means that you register handlers with the parser prior to starting the parse. These handlers are called when the parser discovers the associated structures in the document being parsed. A start tag is an example of the kind of structures for which you may register handlers.</Description>
         <Archive sha1sum="c8947fc3119a797b55485f2f7bdaaeb49cc9df01" type="tarbz2">mirrors://sourceforge/expat/expat-2.2.6.tar.bz2</Archive>
@@ -30,6 +30,7 @@
 
     <Package>
         <Name>expat-devel</Name>
+        <IsA>header</IsA>
         <PartOf>system.devel</PartOf>
         <Summary>Development files for expat</Summary>
         <RuntimeDependencies>
@@ -47,8 +48,6 @@
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for expat</Summary>
         <BuildType>emul32</BuildType>
-        <BuildDependencies>
-        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">expat</Dependency>
         </RuntimeDependencies>
@@ -91,6 +90,4 @@
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
-    </History>
-
 </INARY>

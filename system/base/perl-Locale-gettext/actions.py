@@ -8,7 +8,7 @@ from inary.actionsapi import perlmodules
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
-# WorkDir = "gettext-%s" % get.srcVERSION()
+WorkDir = "Locale-gettext-%s" % get.srcVERSION()
 
 def setup():
     perlmodules.configure()

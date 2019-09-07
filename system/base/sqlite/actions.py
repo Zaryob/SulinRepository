@@ -39,25 +39,12 @@ def setup():
                          --enable-json1 \
                          --enable-threadsafe")
 
-    #shelltools.cd("tea")
-    #autotools.configure(" \
-    #                     --enable-shared \
-    #                     --with-tcl='/usr/lib/' \
-    #                     --with-tclinclude='/usr/include' \
-    #                     --enable-64bit \
-    #                     --enable-threads")
-
 def build():
     autotools.make("-j1")
 
-    #shelltools.cd("tea")
-    #autotools.make("-j1")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
-    #shelltools.cd("%s/sqlite-autoconf-3110000/tea" % get.workDIR())
-    #autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     inarytools.dodoc("README*")
 

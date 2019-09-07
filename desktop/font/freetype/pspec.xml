@@ -1,12 +1,12 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>freetype</Name>
         <Homepage>http://www.freetype.org/</Homepage>
         <Packager>
-            <Name>Sulin Community</Name>
-            <Email>admins@sulin.org</Email>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>FTL</License>
         <License>GPLv2</License>
@@ -76,8 +76,8 @@
             <Date>2017-02-02</Date>
             <Version>2.9.1</Version>
             <Comment>First release</Comment>
-            <Name>Sulin Community</Name>
-            <Email>admin@sulin.org</Email>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
 </INARY>

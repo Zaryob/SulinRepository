@@ -5,10 +5,9 @@
    if [ "$verbose" = 0 ]
    then
 -    openssl rehash . > /dev/null
-+    c_rehash.sh . > /dev/null
++    c_rehash . > /dev/null
    else
 -    openssl rehash .
-+    c_rehash.sh .
++    c_rehash .
    fi
  fi
- 

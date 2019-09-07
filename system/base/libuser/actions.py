@@ -12,14 +12,15 @@ from inary.actionsapi import get
 def setup():
     shelltools.export("AUTOPOINT", "true")
 
-    autotools.configure("PYTHON=python3 \
+    autotools.configure("PYTHON={} \
                          --with-python \
                          --without-ldap \
                          --without-sasl \
                          --with-popt \
                          --disable-rpath \
                          --enable-gtk-doc-html=no \
-                         --disable-gtk-doc")
+                         --disable-gtk-doc".format(
+                         "python2" if get.buildTYPE()=="rebuild_python" else "python3"))
 
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
@@ -31,6 +32,13 @@ def build():
     autotools.make("-C po update-gmo")
 
 def install():
+    if get.buildTYPE()=="rebuild_python":
+        autotools.rawInstall("DESTDIR='%s/python2'" % get.installDIR())
+        shelltools.move("%s/python2/usr/lib/python2.7" % get.installDIR(),
+                        "%s/usr/lib/" % get.installDIR())
+        shelltools.unlinkDir("%s/python2" % get.installDIR())
+        return
+
     autotools.rawInstall("DESTDIR='%s'" % get.installDIR())
 
     inarytools.dodoc("ABOUT*", "AUTHORS", "COPYING", "NEWS", "README")

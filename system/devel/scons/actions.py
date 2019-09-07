@@ -14,6 +14,6 @@ def install():
     pythonmodules.install("--no-version-script \
                            --standalone-lib \
                            --install-scripts=/usr/bin \
-                           --install-data=/usr/share",pyVer="2")
+                           --install-data=/usr/share", pyVer="2")
 
     inarytools.dodoc("CHANGES*", "LICENSE*", "README*", "RELEASE*")

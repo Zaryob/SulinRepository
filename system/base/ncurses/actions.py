@@ -79,6 +79,8 @@ def install():
         inarytools.dolib("lib%s.so" % lib, destinationDirectory = LIB)
         inarytools.dosym("lib%sw.a" % lib, "%s/lib%s.a" % (LIB, lib))
     inarytools.dosym("libncurses++w.a", "%s/libncurses++.a" % LIB)
+
+    shelltools.copy("%s/usr/share/pkgconfig/" % get.installDIR(), "%s/%s" % (get.installDIR(), LIB))
     for lib in ["ncurses", "ncurses++", "form", "panel", "menu"]:
         inarytools.dosym("%sw.pc" % lib, "%s/pkgconfig/%s.pc" % (LIB, lib))
 

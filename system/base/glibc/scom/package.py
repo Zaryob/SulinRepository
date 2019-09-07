@@ -9,3 +9,9 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
 
     # Reload init ...
     os.popen("/sbin/init U &> /dev/null")
+    
+def postRemove():
+    pass
+
+def preRemove():
+    pass

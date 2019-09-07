@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
@@ -11,9 +10,10 @@
         </Packager>
         <License>GPLv2+</License>
         <IsA>data</IsA>
+        <PartOf>system.devel</PartOf>
         <Summary>Base config files for autofoo</Summary>
         <Description>gnuconfig contains updated config.sub and config.guess files from GNU.</Description>
-        <Archive sha1sum="abb2df13f326bf3862f3972481dfb0f3c5036ebb" 
+        <Archive sha1sum="abb2df13f326bf3862f3972481dfb0f3c5036ebb"
 type="targz">https://sourceforge.net/projects/sulinos/files/archives/config-master.tar.gz</Archive>
     </Source>
 

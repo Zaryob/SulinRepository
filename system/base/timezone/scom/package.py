@@ -34,3 +34,8 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
             except:
                 pass
     """
+
+def preRemove():
+    pass
+def postRemove():
+    pass

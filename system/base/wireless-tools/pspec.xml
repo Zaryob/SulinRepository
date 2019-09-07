@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
@@ -10,6 +9,7 @@
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>GPLv2</License>
+        <PartOf>system.base</PartOf>
         <IsA>app:console</IsA>
         <Summary>A collection of tools to configure wireless lan cards</Summary>
         <Description>The Wireless Tools (WT) is a set of tools allowing to manipulate the Wireless Extensions, a generic application programming interface allowing a driver to expose to the user space configuration and statistics specific to common Wireless LANs. They use a textual interface and are rather crude, but aim to support the full Wireless Extension.</Description>
@@ -30,6 +30,7 @@
 
     <Package>
         <Name>wireless-tools-devel</Name>
+        <IsA>header</IsA>
         <PartOf>system.devel</PartOf>
         <Summary>Development files for wireless-tools</Summary>
         <RuntimeDependencies>

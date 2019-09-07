@@ -29,3 +29,9 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     # Migrate UDEV database
     if fromVersion and int(fromVersion) < 165:
         os.system("/sbin/udevadm info --convert-db &> /dev/null")
+
+def postRemove():
+    pass
+    
+def preRemove():
+    pass

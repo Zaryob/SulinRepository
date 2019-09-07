@@ -20,3 +20,6 @@ def postRemove():
         os.system("groupdel %s" % OUR_NAME)
     except:
         pass
+
+def preRemove():
+    pass

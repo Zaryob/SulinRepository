@@ -1,0 +1,93 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tcl</Name>
+        <Homepage>http://www.tcl.tk</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Tcl programming language</Summary>
+        <Description>Tcl provides a powerful platform for creating integration applications that tie together diverse applications, protocols, devices, and frameworks.</Description>
+        <Archive sha1sum="169dd1589cad62c9fac4257c113db245da502cd0" type="targz">mirrors://sourceforge/tcl/tcl8.6.6-src.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tcl</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/lib/tcl8.6</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tcl-devel</Name>
+        <Summary>Development files for tcl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tcl</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/tclConfig.sh</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>sqlite-tcl</Name>
+        <Summary>files for sqlite-tcl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tcl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/sqlite3.13.0/libsqlite*</Path>
+            <Path fileType="data">/usr/lib/tcl8/8.6/tdbc/sqlite3-1.0.4.tm</Path>
+            <Path fileType="man">/usr/share/man/mann/tdbc_sqlite3.n</Path>
+            <Path fileType="man">/usr/share/man/mann/sqlite3.n</Path>
+        </Files>
+    </Package>
+    <Package>
+      	<Name>tcl-docs</Name>
+	      <IsA>data:doc</IsA>
+	      <Summary>Documentation for tcl package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tcl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+
+    <Package>
+      	<Name>tcl-pages</Name>
+	      <IsA>data:doc</IsA>
+	      <Summary>Man pages for tcl package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tcl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-01-26</Date>
+            <Version>8.6.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

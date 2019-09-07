@@ -11,13 +11,7 @@ from inary.actionsapi import get
 
 import os
 
-snapshot = False
-
-if snapshot:
-    verMajor, verMinor = get.srcVERSION().replace("pre", "").split("_", 1)
-    WorkDir = "gcc-4.7-%s" % verMinor
-else:
-    verMajor = get.srcVERSION()
+verMajor = get.srcVERSION()
 
 arch = get.ARCH().replace("x86_64", "x86-64")
 
@@ -118,7 +112,7 @@ def install():
     inarytools.removeDir("/usr/lib/gcc/*/*/install-tools")
 
     # This one comes with binutils
-    #inarytools.remove("/usr/lib*/libiberty.a")
+    inarytools.remove("/usr/lib*/libiberty.a")
 
     # cc symlink
     inarytools.dosym("/usr/bin/gcc" , "/usr/bin/cc")

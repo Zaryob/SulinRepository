@@ -21,3 +21,9 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     for user in os.listdir(crontabs):
         os.system("/bin/chown %s:cron %s" % (user, os.path.join(crontabs, user)))
         os.system("/bin/chmod 0600 %s" % os.path.join(crontabs, user))
+
+def postRemove():
+    pass
+    
+def preRemove():
+    pass

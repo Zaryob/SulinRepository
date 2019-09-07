@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
@@ -11,6 +10,7 @@
         </Packager>
         <License>LGPLv2.1</License>
         <IsA>library</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>The Nettle package contains the low-level cryptographic library</Summary>
         <Description>The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.</Description>
         <Archive sha1sum="bf2b4d3a41192ff6177936d7bc3bee4cebeb86c4" type="targz">ftp://ftp.gnu.org/gnu/nettle/nettle-3.3.tar.gz</Archive>
@@ -33,6 +33,8 @@
 
     <Package>
         <Name>nettle-devel</Name>
+        <IsA>header</IsA>
+        <PartOf>system.devel</PartOf>
         <Summary>Nettle için geliştirme dosyaları</Summary>
         <RuntimeDependencies>
             <Dependency release="current">nettle</Dependency>

@@ -1,4 +1,4 @@
-
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -10,6 +10,7 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>A compact getty program for virtual consoles only</Summary>
         <Description>mingetty, is a lightweight, minimalist getty for use on virtual consoles only.</Description>
         <Archive sha1sum="283acd3dc9da2c9eb71d5d7cc01d1bd178254523" type="targz">http://sourceforge.net/projects/mingetty/files/mingetty/1.08/mingetty-1.08.tar.gz</Archive>

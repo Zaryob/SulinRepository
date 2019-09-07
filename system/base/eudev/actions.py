@@ -14,17 +14,16 @@ suffix = "32" if get.buildTYPE() == "emul32" else ""
 
 def setup():
     autotools.autoreconf("--install")
-    
     autotools.configure("--prefix=/usr           \
                          --bindir=/sbin          \
                          --sbindir=/sbin         \
-                         --libdir=/usr/lib       \
+                         --libdir=/usr/{0}       \
                          --sysconfdir=/etc       \
-                         --libexecdir=/lib       \
+                         --libexecdir=/{0}       \
                          --with-rootprefix=      \
-                         --with-rootlibdir=/lib  \
-                         --enable-static        \
-                         --disable-manpages ")
+                         --with-rootlibdir=/{0}  \
+                         --enable-static         \
+                         --disable-manpages ".format("lib{}".format("32" if get.buildTYPE() == "emul32" else "")))
 
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
@@ -34,21 +33,18 @@ def build():
 def install():
     autotools.rawInstall("-j1 DESTDIR=%s%s" % (get.installDIR(), suffix))
     #autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    
+
     # emul32 stop here
     if get.buildTYPE() == "emul32":
-        shelltools.move("%s%s/lib" % (get.installDIR(), suffix), "%s/lib%s" % (get.installDIR(), suffix))
-        for f in shelltools.ls("%s/usr/lib/pkgconfig" % get.installDIR()):
-            inarytools.dosed("%s/usr/lib/pkgconfig/%s" % (get.installDIR(), f), "emul32", "usr")
-        shelltools.unlinkDir("%s%s" % (get.installDIR(), suffix))
-        shelltools.unlink("%s32/usr/lib%s/libudev.so" % (get.installDIR(), suffix))
-        inarytools.dosym("/lib%s/libudev.so.1.6.3" % suffix, "/usr/lib%s/libudev.so" % suffix)
-
+        shelltools.move("%s%s/lib32" % (get.installDIR(), suffix), "%s/lib32" % (get.installDIR()))
+        shelltools.move("%s%s/usr/lib32" % (get.installDIR(), suffix), "%s/usr/lib32" % (get.installDIR()))
+        for f in shelltools.ls("%s/usr/lib32/pkgconfig" % get.installDIR()):
+            inarytools.dosed("%s/usr/lib32/pkgconfig/%s" % (get.installDIR(), f), "emul32", "usr")
         return
-    
+
     #add link
     inarytools.dosym("/sbin/udevadm", "/bin/udevadm")
-    
+
     # Create vol_id and scsi_id symlinks in /sbin probably needed by multipath-tools
     inarytools.dosym("/lib/udev/scsi_id", "/sbin/scsi_id")
 

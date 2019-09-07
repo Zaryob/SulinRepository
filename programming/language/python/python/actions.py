@@ -59,6 +59,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "altinstall")
 
     inarytools.dosym("/usr/bin/python%s" % PythonVersion, "/usr/bin/python")
+    inarytools.dosym("/usr/bin/python%s" % PythonVersion, "/usr/bin/python2")
     inarytools.dosym("/usr/bin/python%s-config" % PythonVersion, "/usr/bin/python-config")
     inarytools.dosym("/usr/lib/python%s/pdb.py" % PythonVersion, "/usr/bin/pdb")
 

@@ -10,13 +10,13 @@ from inary.actionsapi import get
 
 
 def install():
-    inarytools.dobin("colorgcc")
-    inarytools.insinto("/etc", "colorgccrc")
+    inarytools.dobin("colorgcc.pl", "/usr/bin/colorgcc")
+    inarytools.insinto("/etc", "colorgccrc.txt")
+    inarytools.move("%s/etc/colorgccrc.txt" % get.installDIR(), "%s/etc/colorgccrc" % get.installDIR())
 
     inarytools.dodir("/usr/share/colorgcc")
-    inarytools.dosym("/usr/bin/colorgcc", "/usr/share/colorgcc/colorgcc")
+    inarytools.dosym("../../bin/colorgcc", "/usr/share/colorgcc/colorgcc")
 
     for c in ["gcc", "cc", "g++", "c++", "gfortran", "gcj", get.CC(), get.CXX()]:
-        inarytools.dosym("/usr/share/colorgcc/colorgcc", "/usr/share/colorgcc/%s" % c)
+        inarytools.dosym("colorgcc", "/usr/share/colorgcc/%s" % c)
 
-    inarytools.dodoc("COPYING", "ChangeLog", "CREDITS")

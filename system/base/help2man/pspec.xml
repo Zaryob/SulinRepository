@@ -1,5 +1,4 @@
-
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -11,6 +10,7 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
+        <PartOf>system.base</PartOf>
         <Summary>GNU utility to convert program --help output to a man page</Summary>
         <Description>Help2man is a tool which generate man page from help text of programs.</Description>
         <Archive sha1sum="f131dc48c94ce6760a6ee90bb508d9b4b857cfa9" type="tarxz">http://ftp.gnu.org/gnu/help2man/help2man-1.47.8.tar.xz</Archive>

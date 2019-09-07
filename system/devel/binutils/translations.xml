@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>binutils</Name>
+        <Summary xml:lang="tr">Assembly obje dosyalarıyla çalışmak için bir araç seti.</Summary>
+        <Description xml:lang="tr">Assebly kodları makine diline çevirmek veya onları değiştirip düzenlemek için kullanılan bağlayıcı (linker), assembler ve as, ld, nm, objdump, ar, ranlib gibi araçları içerir.</Description>
+    </Source>
+    <Package>
+        <Name>binutils-pages</Name>
+        <Summary xml:lang="tr">binutils paketi için linux manual sayfaları.</Summary>
+    </Package>
+</INARY>

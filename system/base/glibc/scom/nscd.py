@@ -4,8 +4,8 @@ from scom.service import *
 import os
 
 serviceType = "local"
-serviceDesc = _({"en": "Name Service Caching Daemon",
-                 "tr": "İsim Hizmeti Önbellek Sunucusu"})
+serviceDesc = {"en": "Name Service Caching Daemon",
+                 "tr": "İsim Hizmeti Önbellek Sunucusu"}
 serviceDefault = "on"
 
 

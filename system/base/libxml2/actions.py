@@ -7,6 +7,7 @@
 from inary.actionsapi import get
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 
 def setup():
     # fix sandbox violations when attempt to read "/missing.xml"
@@ -23,7 +24,8 @@ def setup():
     if get.buildTYPE() == "emul32":
         options += " --bindir=/emul32/bin \
                      --without-python"
-    else: options += " --with-python=/usr/bin/python3"
+    else: options += " --with-python={}".format(
+    "/usr/bin/python2" if get.buildTYPE()=="rebuild_python" else "/usr/bin/python3")
 
     autotools.configure(options)
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
@@ -35,6 +37,13 @@ def check():
     autotools.make("check")
 
 def install():
+    if get.buildTYPE()=="rebuild_python":
+        autotools.rawInstall("DESTDIR='%s/python2'" % get.installDIR())
+        shelltools.move("%s/python2/usr/lib/python2.7" % get.installDIR(),
+                        "%s/usr/lib/" % get.installDIR())
+        shelltools.unlinkDir("%s/python2" % get.installDIR())
+        return
+
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     if get.buildTYPE() == "emul32" or "i686":

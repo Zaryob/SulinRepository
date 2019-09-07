@@ -23,7 +23,6 @@ def setup():
     shelltools.export("CFLAGS", "%s -D_GNU_SOURCE -DRECYCLES_PIDS %s " % (get.CFLAGS(), cfgsettings))
 
     autotools.autoconf()
-    shelltools.system("rm configure")
     autotools.configure("--without-installed-readline \
                          --disable-profiling \
                          --without-gnu-malloc \

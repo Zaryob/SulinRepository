@@ -1,8 +1,8 @@
 from scom.service import *
 
 serviceType = "local"
-serviceDesc = _({"en": "Cron Task Scheduler",
-                 "tr": "Cron Görev Zamanlayıcı"})
+serviceDesc = {"en": "Cron Task Scheduler",
+                 "tr": "Cron Görev Zamanayici" }
 serviceDefault = "on"
 
 @synchronized
