@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>asciidoc</Name>
+        <Homepage>http://www.methods.co.nz/asciidoc/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Text document format for writing documents</Summary>
+        <Description>AsciiDoc is a text document format for writing short documents, articles, books and UNIX man pages. AsciiDoc files can be translated to HTML and DocBook markups using the asciidoc command.</Description>
+        <Archive sha1sum="82e574dd061640561fa0560644bc74df71fb7305" type="targz">mirrors://sourceforge/asciidoc/asciidoc-8.6.9.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>asciidoc</Name>
+        <RuntimeDependencies>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+            <Path fileType="data">/usr/share/asciidoc</Path>
+            <Path fileType="data">/usr/share/vim</Path>
+            <Path fileType="doc">/usr/share/doc/asciidoc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-08</Date>
+            <Version>8.6.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

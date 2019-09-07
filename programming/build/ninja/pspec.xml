@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ninja</Name>
+        <Homepage>http://martine.github.com/ninja/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Ninja is a small build system with a focus on speed.</Summary>
+        <Description>Ninja is a small build system with a focus on speed.</Description>
+        <Archive sha1sum="17219deb34dd816363e37470f77ff7231509143a" type="targz">https://github.com/ninja-build/ninja/archive/v1.8.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>re2c</Dependency>
+            <Dependency>asciidoc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ninja</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-08</Date>
+            <Version>1.8.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

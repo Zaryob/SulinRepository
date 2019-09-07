@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>re2c</Name>
+        <Homepage>https://github.com/skvadrik/re2c</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <Icon>re2c</Icon>
+        <IsA>Libry</IsA>
+        <Summary>A tool for generating C-based recognizers from regular expressions</Summary>
+        <Description>ACM Letters on Programming Languages and Systems (LOPLAS)</Description>
+        <Archive sha1sum="fb604b6b89748ad965db4eda09ccb41cd6fbaad9" type="tarxz">https://github.com/skvadrik/re2c/releases/download/1.2.1/re2c-1.2.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gcc</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>re2c</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/include/re2c/*</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/</Path>
+            <Path fileType="data">/usr/share/re2c/</Path>
+            <Path fileType="doc">/usr/share/man/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-08</Date>
+            <Version>1.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
