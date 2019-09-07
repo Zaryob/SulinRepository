@@ -164,6 +164,7 @@
         <Files>
             <Path fileType="library">/usr/lib/python2.7/lib-tk/test/README</Path>
             <Path fileType="library">/usr/lib/python2*/tkinter</Path>
+            <Path fileType="library">/usr/lib/python2.7/lib-dynload/_tkinter.so</Path>
             <Path fileType="library">/usr/lib/python2*/lib-dynload/_tkinter.cpython-27m-x86_64-linux-gnu.so</Path>
             <Path fileType="library" permanent="0">/usr/lib/python2.7/turtledemo</Path>
         </Files>
