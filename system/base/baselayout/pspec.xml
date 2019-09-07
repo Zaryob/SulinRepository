@@ -14,7 +14,7 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-        <Archive sha1sum="dfb7918d0182dd53c4eb3260590e1c7c0a2071f0" type="targz">baselayout-3.10.2.tar.gz</Archive>
+        <Archive sha1sum="da22e6283ca02fa51cda3161b303dc8ba4da517b" type="targz">baselayout-3.10.2.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -53,7 +53,6 @@
             <AdditionalFile owner="root" permission="0644" target="/etc/sulin-release">sulin-release</AdditionalFile>
 
             <!-- Should be dropped after switching to systemd as the only user is SCOM -->
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man8/start-stop-daemon.8">start-stop-daemon.8</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
