@@ -33,7 +33,6 @@
 
     <Package>
         <Name>polkit-devel</Name>
-        <PartOf>system.devel</PartOf>
         <Summary>Development headers for polkit</Summary>
         <RuntimeDependencies>
             <Dependency release="current">polkit</Dependency>

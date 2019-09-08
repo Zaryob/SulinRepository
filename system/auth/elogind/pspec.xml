@@ -28,7 +28,6 @@
     <Package>
         <Name>elogind</Name>
         <RuntimeDependencies>
-            <Dependency>dbus-x11</Dependency>
             <Dependency>pam</Dependency>
             <Dependency>acl</Dependency>
         </RuntimeDependencies>
