@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>freeglut</Name>
+        <Homepage>http://freeglut.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>The OpenGL Utility Toolkit (Freeglut)</Summary>
+        <Description>Freeglut is the OpenGL Utility Toolkit, a window system independent toolkit for writing OpenGL programs. It implements a simple windowing application programming interface (API) for OpenGL. Freeglut makes it considerably easier to learn about and explore OpenGL Programming.</Description>
+        <Archive sha1sum="fca52242f9344627a30f11487ee42002e6b0dacd" type="targz">mirrors://sourceforge/freeglut/freeglut-3.0.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>freeglut</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libXrandr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/freeglut</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>freeglut-devel</Name>
+        <Summary>Development files for freeglut</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">freeglut</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>freeglut-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for freeglut</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>mesa-32bit</Dependency>
+	    <Dependency>mesa-glu-32bit</Dependency>
+            <Dependency>libXi-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libXxf86vm-32bit</Dependency>
+            <Dependency>libXrandr-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">freeglut</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+            <Dependency>libXi-32bit</Dependency>
+            <Dependency>libXxf86vm-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libXrandr-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>3.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

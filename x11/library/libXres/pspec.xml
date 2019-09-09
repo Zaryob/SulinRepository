@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libXres</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>X.Org Xres library</Summary>
+        <Description>X-Resource is an extension that allows a client to query the X server about its usage of various resources.</Description>
+        <Archive sha1sum="45e09c6b771af5d8c448ce31de65d15bf83b7579" type="tarbz2">mirrors://xorg/individual/lib/libXres-1.0.7.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libXres</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXres-devel</Name>
+        <Summary>Development files for libXres</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libXres</Dependency>
+            <Dependency>libXext-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.0.7</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

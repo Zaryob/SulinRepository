@@ -10,7 +10,8 @@
         </Packager>
         <License>GPL</License>
         <Icon>re2c</Icon>
-        <IsA>Libry</IsA>
+        <IsA>library</IsA>
+        <PartOf>programming.library</PartOf>
         <Summary>A tool for generating C-based recognizers from regular expressions</Summary>
         <Description>ACM Letters on Programming Languages and Systems (LOPLAS)</Description>
         <Archive sha1sum="fb604b6b89748ad965db4eda09ccb41cd6fbaad9" type="tarxz">https://github.com/skvadrik/re2c/releases/download/1.2.1/re2c-1.2.1.tar.xz</Archive>

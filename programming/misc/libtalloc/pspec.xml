@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtalloc</Name>
+        <Homepage>http://talloc.samba.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3+</License>
+        <IsA>library</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Hierarchical pool based memory allocator</Summary>
+        <Description>libtalloc is a library which implements a hierarchical allocator with destructors which is the core memory allocator in samba.</Description>
+        <Archive sha1sum="d806e2e4e9b973e8ab6521d1dd20a03abae32c99" type="targz">http://www.samba.org/ftp/talloc/talloc-2.2.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libtalloc</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>attr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libtalloc-devel</Name>
+        <Summary>Development files for libtalloc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtalloc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libtalloc-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libtalloc</Summary>
+        <BuildType>emul32</BuildType>
+         <BuildDependencies>
+            <Dependency>attr-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>attr-32bit</Dependency>
+            <Dependency release="current">libtalloc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>2.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

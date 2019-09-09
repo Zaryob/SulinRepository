@@ -1,0 +1,13 @@
+--- a/Makefile    2019-09-09 16:49:18.262020123 +0000
++++ b/Makefile    2019-09-09 16:52:18.920566779 +0000
+@@ -58,10 +58,6 @@
+        [ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
+        [ -d $(DESTDIR)/usr/lib/systemd ] || mkdir -p -m 755 $(DESTDIR)/usr/lib/systemd
+ 
+-       install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
+-       ln -s ../../../$(BINDIR)/$(PROG) $(DESTDIR)/usr/lib/systemd/systemd-sysv-install
+-
+-       install -m 755 ntsysv $(DESTDIR)/$(SBINDIR)/ntsysv
+        install -m 755 alternatives $(DESTDIR)/$(SBINDIR)/alternatives
+        ln -s alternatives $(DESTDIR)/$(SBINDIR)/update-alternatives
+

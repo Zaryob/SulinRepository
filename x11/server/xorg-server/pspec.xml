@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-server</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:gui</IsA>
+        <IsA>server</IsA>
+        <PartOf>x11.server</PartOf>
+        <Summary>X.Org X Server</Summary>
+        <Description>X server is the main application that allows a graphical interface.</Description>
+        <Archive sha1sum="1a79da92122124cb782a4eebfd83fd33d5c0d7d4" type="tarbz2">mirrors://xorg/individual/xserver/xorg-server-1.20.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>font-util</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libdmx-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libpciaccess-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXaw-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXfont2-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libXres-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libXv-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>xorg-app</Dependency>
+            <Dependency>nettle-devel</Dependency>
+            <Dependency>libepoxy-devel</Dependency>
+            <Dependency>xcb-util-devel</Dependency>
+            <Dependency>xcb-util-image-devel</Dependency>
+            <Dependency>xcb-util-wm-devel</Dependency>
+            <Dependency>xcb-util-keysyms-devel</Dependency>
+            <Dependency>xcb-util-renderutil-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+            <Dependency>xtrans</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libunwind-devel</Dependency>
+            <Dependency>libXau-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>wayland-protocols-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>xorg-server-common</Name>
+        <IsA>data</IsA>
+        <Summary>Common files for X servers</Summary>
+        <Files>
+            <Path fileType="data">/etc/X11/fontpath.d</Path>
+            <Path fileType="data">/etc/dbus-1</Path>
+            <Path fileType="data">/usr/lib/xorg/protocol.txt</Path>
+            <Path fileType="data">/var/lib/xkb</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1/Xserver.1</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>xorg-server</Name>
+       <Replaces>
+            <Package>xorg-video-modesetting</Package>
+            <Package>glamor-egl</Package>
+        </Replaces>
+        <IsA>app:console</IsA>
+        <RuntimeDependencies>
+            <Dependency>libXau</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libXfont2</Dependency>
+            <Dependency>libunwind</Dependency>
+            <Dependency>libpciaccess</Dependency>
+            <Dependency>libxshmfence</Dependency>
+            <Dependency>libepoxy</Dependency>
+            <Dependency>nettle</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/X11/xorg.conf.d</Path>
+            <Path fileType="executable">/usr/bin/X</Path>
+            <Path fileType="executable">/usr/bin/Xorg</Path>
+            <Path fileType="executable">/usr/bin/cvt</Path>
+            <Path fileType="executable">/usr/bin/gtf</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="data">/usr/share/X11/DriversDB</Path>
+            <Path fileType="data">/usr/share/X11/pci</Path>
+            <Path fileType="data">/usr/share/X11/xorg.conf.d</Path>
+            <Path fileType="man">/usr/share/man/man1/Xorg.1</Path>
+            <Path fileType="man">/usr/share/man/man1/cvt.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gtf.1</Path>
+            <Path fileType="man">/usr/share/man/man4/exa.4</Path>
+            <Path fileType="man">/usr/share/man/man4/modesetting.4</Path>
+            <Path fileType="man">/usr/share/man/man4/fbdevhw.4</Path>
+            <Path fileType="man">/usr/share/man/man5/xorg.conf.5</Path>
+            <Path fileType="man">/usr/share/man/man5/xorg.conf.d.5</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/libexec/xorg-save-xkb-config.sh">xorg-save-xkb-config.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/DriversDB">DriversDB</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/xorg.conf.d/10-quirks.conf">10-quirks.conf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>xorg-server-xdmx</Name>
+        <IsA>app:console</IsA>
+        <Summary>Distributed Multihead X Server</Summary>
+        <RuntimeDependencies>
+            <Dependency relase="current">xorg-server-common</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libdmx</Dependency>
+            <Dependency>libXaw</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfont2</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libunwind</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*dmx*</Path>
+            <Path fileType="man">/usr/share/man/man1/*dmx*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xorg-server-xwayland</Name>
+        <IsA>app:console</IsA>
+        <Summary>Run X clients under wayland</Summary>
+        <RuntimeDependencies>
+            <Dependency>libXau</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency>libunwind</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXfont2</Dependency>
+            <Dependency>libepoxy</Dependency>
+            <Dependency>libxshmfence</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency relase="current">xorg-server-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/Xwayland</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>xorg-server-xephyr</Name>
+        <IsA>app:console</IsA>
+        <Summary>Nested X Server</Summary>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency relase="current">xorg-server-common</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libunwind</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfont2</Dependency>
+            <Dependency>libepoxy</Dependency>
+            <Dependency>xcb-util-wm</Dependency>
+            <Dependency>libxshmfence</Dependency>
+            <Dependency>xcb-util-image</Dependency>
+            <Dependency>xcb-util-keysyms</Dependency>
+            <Dependency>xcb-util-renderutil</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/Xephyr</Path>
+            <Path fileType="man">/usr/share/man/man1/Xephyr.1</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>xorg-server-xvfb</Name>
+        <!-- xvfb-run is GPLv2 -->
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Virtual Framebuffer X Server</Summary>
+        <RuntimeDependencies>
+            <Dependency>libXau</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency relase="current">xorg-server-common</Dependency>
+            <Dependency>libXfont2</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>libunwind</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/[Xx]vfb*</Path>
+            <Path fileType="man">/usr/share/man/man1/Xvfb.1</Path>
+        </Files>
+        <AdditionalFiles>
+            <!-- xvfb-run script from http://svn.exactcode.de/t2/trunk/package/xorg/xorg-server/xvfb-run.sh -->
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/xvfb-run">xvfb-run.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>xorg-server-xnest</Name>
+        <Summary>A nested X server that runs as an X application</Summary>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency>libXfont2</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libunwind</Dependency>
+            <Dependency>pixman</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/Xnest</Path>
+            <Path fileType="man">/usr/share/man/man1/Xnest.1</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>xorg-server-devel</Name>
+        <IsA>data</IsA>
+        <IsA>library</IsA>
+        <Summary>Headers and libraries for X server driver development</Summary>
+        <RuntimeDependencies>
+            <Dependency relase="current">xorg-server</Dependency>
+            <Dependency>libpciaccess-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>xorg-proto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/xorg</Path>
+            <Path fileType="library">/usr/lib/libxf86config.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.20.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

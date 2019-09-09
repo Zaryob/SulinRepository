@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libyaml</Name>
+        <Homepage>http://pyyaml.org/wiki/LibYAML</Homepage>
+        <Packager>
+          <Name>Suleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>YAML 1.1 parser and emitter written in C</Summary>
+        <Description>libyaml is a YAML 1.1 parser and emitter written in C.</Description>
+        <Archive sha1sum="ef3b86ba000319913e3fa2976657a1d43b353536" type="targz">http://pyyaml.org/download/libyaml/yaml-0.2.2.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>libyaml</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libyaml-devel</Name>
+        <Summary>Development headers for libyaml</Summary>
+        <Description>libyaml-devel provides development headers for libyaml.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">libyaml</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc/libyaml/html/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>0.2.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

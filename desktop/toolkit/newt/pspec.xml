@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>newt</Name>
+        <Homepage>https://fedorahosted.org/newt/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A windowing toolkit for text mode</Summary>
+        <Description>newt is a windowing toolkit for text mode, which provides many widgets and stackable windows.</Description>
+        <Archive sha1sum="b21152ad289bb0e363357ba3325a0b9c493d5ed1" type="targz">https://releases.pagure.org/newt/newt-0.52.21.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>tcl-devel</Dependency>
+            <Dependency>slang-devel</Dependency>
+            <Dependency>popt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>newt</Name>
+        <RuntimeDependencies>
+            <Dependency>tcl</Dependency>
+            <Dependency>slang</Dependency>
+            <Dependency>popt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>newt-devel</Name>
+        <Summary>Development files for newt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">newt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>0.52.21</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

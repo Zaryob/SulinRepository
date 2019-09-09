@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libXv</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>X.Org Xv library</Summary>
+        <Description>LibXv is the X Window System video extension library.</Description>
+        <Archive sha1sum="d79f9c56faedd682f420fa68bb9d7ff755b84579" type="tarbz2">mirrors://xorg/individual/lib/libXv-1.0.11.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libXv</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXv-devel</Name>
+        <Summary>Development files for libXv</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libXv</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>xorg-proto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXv-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libXv</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libXv</Dependency>
+            
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.0.11</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

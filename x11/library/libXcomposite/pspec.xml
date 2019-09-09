@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libXcomposite</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>X.Org composite library</Summary>
+        <Description>libXcomposite is the X Composite library. Compositing allows modification of the window system's base elements like window borders, window buttons and window titlebars.</Description>
+        <Archive sha1sum="75fd0b996e56e12db1d84e9b63549c5c3f2631ca" type="tarbz2">mirrors://xorg/individual/lib/libXcomposite-0.4.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libXcomposite</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXcomposite-devel</Name>
+        <Summary>Development files for libXcomposite</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libXcomposite</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXcomposite-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libXcomposite</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libX11-32bit</Dependency>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libXcomposite</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>0.4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

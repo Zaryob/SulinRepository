@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ocaml</Name>
+        <Homepage>http://www.ocaml.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>OPL</License>
+        <IsA>app:console</IsA>
+        <Summary>Fast modern type-inferring functional programming language</Summary>
+        <Description>A fast modern type-inferring functional programming language descended from the ML (Meta Language) family.</Description>
+        <!-- Caution! Updating this package to a new version, may break ocaml modules like facile. Modules need to be recompiled to resolve this. Also, errors like below are indications of this situation:
+
+        File "_none_", line 1, characters 0-1:
+        Error: Files /usr/lib/ocaml/facile/facile.cmxa and /usr/lib/ocaml/stdlib.cmxa
+               make inconsistent assumptions over implementation Printf
+        -->
+        <Archive sha1sum="1878ba4338e4fad5b057428e182fba806c545d57" type="tarxz">https://caml.inria.fr/pub/distrib/ocaml-4.04/ocaml-4.04.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>chrpath</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ocaml</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>4.04.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

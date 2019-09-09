@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xkeyboard-config</Name>
+        <Homepage>http://freedesktop.org/wiki/Software/XKeyboardConfig</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>data</IsA>
+        <PartOf>x11.misc</PartOf>
+        <Summary>X keyboard configuration database</Summary>
+        <Description>xkeyboard-config aims to provide consistent and well-structured X keyboard configuration data for X Window System implementations.</Description>
+        <Archive sha1sum="fe36dc8259571721776f885ba66060e0b5a0616c" type="tarbz2">mirrors://xorg/individual/data/xkeyboard-config/xkeyboard-config-2.20.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>xorg-proto</Dependency>
+            <Dependency>xorg-app</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">xkeyboard-config-1.4-jp-tilde.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>xkeyboard-config</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-app</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/X11/xorg.conf.d</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/share/X11/xkb</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/X11/xorg.conf.d/10-keyboard.conf">10-keyboard.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/95-xkb.rules">95-xkb.rules</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-15</Date>
+            <Version>2.20</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>alternatives</Name>
+        <Homepage>http://git.fedorahosted.org/git/?p=chkconfig.git;a=summary</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Alternative management system</Summary>
+        <Description>alternatives creates, removes, maintains and displays information about the symbolic links comprising the alternatives system. Alternatives system determines the defaults when several programs fulfilling the same or similar functions to be installed on a single system at the same time.</Description>
+        <Archive sha1sum="301f801381368a85df7f5d1c83285807fc6b40c3" type="targz">https://github.com/SulinOS/chkconfig/archive/1.11p.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>popt-devel</Dependency>
+            <Dependency>newt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>alternatives</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/var</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>1.11p</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

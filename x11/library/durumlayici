@@ -1,0 +1,10 @@
+export dizin=$(pwd)
+for i in $(find -type d ); do 
+   cd $i;
+   if [ "$(ls -A *.inary)" ]; then
+       echo  "Passed $i already compiled"
+   else
+       inary bi --package -y
+   fi
+   cd $dizin; 
+done

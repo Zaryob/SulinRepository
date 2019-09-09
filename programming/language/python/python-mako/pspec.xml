@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-mako</Name>
+        <Homepage>http://www.makotemplates.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <Summary>A python templating language</Summary>
+        <Description>python-mako is a super-fast templating language that borrows the best ideas from the existing templating languages.</Description>
+        <Archive sha1sum="2b1158ba4e086257f23aa25f82f052644f316b7c" type="targz">https://files.pythonhosted.org/packages/b0/3c/8dcd6883d009f7cae0f3157fb53e9afb05a0d3d33b3db1268ec2e6f4a56b/Mako-1.1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>python-mako</Name>
+        <RuntimeDependencies>
+            <Dependency>python-beaker</Dependency>
+            <Dependency>python-MarkupSafe</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-mako</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-beaker</Dependency>
+            <Dependency>python3-MarkupSafe</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-mako-docs</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">python3-mako</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>1.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

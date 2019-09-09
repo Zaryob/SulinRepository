@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libXxf86dga</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>X.Org Xxf86dga library</Summary>
+        <Description>LibXxf86dga is the client library for the XFree86-DGA extension.</Description>
+        <Archive sha1sum="51f2fc8d5d5fb398cf3c66735789feadb9aaeba9" type="tarbz2">mirrors://xorg/individual/lib/libXxf86dga-1.1.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libXxf86dga</Name>
+        <RuntimeDependencies>
+            <Dependency>libXext</Dependency>
+	    <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXxf86dga-devel</Name>
+        <Summary>Development files for libXxf86dga</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libXxf86dga</Dependency>
+            <Dependency>libXext-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/X11</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libXxf86dga-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libXxf86dga</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libXext-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libXxf86dga</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

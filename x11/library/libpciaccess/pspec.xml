@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libpciaccess</Name>
+        <Homepage>http://www.x.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>X.Org PCI access library</Summary>
+        <Description>libpciaccess is the Xorg library for portable PCI access routines across multiple operating systems.</Description>
+        <Archive sha1sum="99e791fe20924b9da29bf7c7ed9438739c4f2930" type="tarbz2">mirrors://xorg/individual/lib/libpciaccess-0.13.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libpciaccess</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libpciaccess-devel</Name>
+        <Summary>Development files for libpciaccess</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpciaccess</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libpciaccess-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libpciaccess</Summary>
+        <BuildType>emul32</BuildType>
+	<BuildDependencies>
+            
+        </BuildDependencies>
+        <RuntimeDependencies>
+            
+            <Dependency release="current">libpciaccess</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>0.13.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

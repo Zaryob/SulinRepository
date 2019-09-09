@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-beaker</Name>
+        <Homepage>http://beaker.groovie.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <Summary>A Session and Caching library with WSGI Middleware</Summary>
+        <Description>python-beaker is a web session and general caching library that includes WSGI middleware for use in web applications.</Description>
+        <Archive sha1sum="faac46ebe358b5ba54aca4e74af535148716bf7a" type="targz">https://github.com/bbangert/beaker/archive/1.11.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>python-beaker</Name>
+        <Summary>Beaker module bindings for Python2. A Session and Caching library with WSGI Middleware</Summary>
+        <Description>python-beaker is a web session and general caching library that includes WSGI middleware for use in web applications.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-beaker</Name>
+        <Summary>Beaker module bindings for Python3. A Session and Caching library with WSGI Middleware</Summary>
+        <Description>python-beaker is a web session and general caching library that includes WSGI middleware for use in web applications.</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-beaker-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-09</Date>
+            <Version>1.11.0</Version>
+            <Comment>First release</Comment>
+            <Name>Sulin Community</Name>
+            <Email>admin@sulin.org</Email>
+        </Update>
+    </History>
+</INARY>
