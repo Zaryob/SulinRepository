@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libsndfile</Name>
+        <Homepage>http://www.mega-nerd.com/libsndfile/</Homepage>
+        <Packager>
+          <Name>Suleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A C library for reading and writing files containing sampled sound</Summary>
+        <Description>Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.</Description>
+        <Archive sha1sum="85aa967e19f6b9bf975601d79669025e5f8bc77d" type="targz">http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.28.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>flac-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libsndfile</Name>
+        <RuntimeDependencies>
+            <Dependency>flac</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libvorbis</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/octave</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libsndfile-devel</Name>
+        <Summary>Development files for libsndfile</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libsndfile</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libsndfile-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libsndfile</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>flac-32bit</Dependency>
+            <Dependency>alsa-lib-32bit</Dependency>
+            <Dependency>libogg-32bit</Dependency>
+            <Dependency>libvorbis-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>flac-32bit</Dependency>
+            <Dependency>alsa-lib-32bit</Dependency>
+            <Dependency>libogg-32bit</Dependency>
+            <Dependency>libvorbis-32bit</Dependency>
+            <Dependency release="current">libsndfile</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>1.0.28</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
