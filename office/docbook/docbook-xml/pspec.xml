@@ -20,7 +20,6 @@
         <Archive sha1sum="b9124233b50668fb508773aa2b3ebc631d7c1620" type="zip">https://www.oasis-open.org/docbook/xml/4.5/docbook-xml-4.5.zip</Archive>
         <Archive sha1sum="49f274e67efdee771300cba4da1f3e4bc00be1ec" type="zip">http://www.docbook.org/xml/5.0/docbook-5.0.zip</Archive>
     </Source>
-
     <Package>
         <Name>docbook-xml</Name>
         <RuntimeDependencies>
@@ -39,7 +38,6 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/xml/docbook/xml-dtd-5.0/catalog.xml">5.0-catalog.xml</AdditionalFile>
         </AdditionalFiles>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2018-12-28</Date>

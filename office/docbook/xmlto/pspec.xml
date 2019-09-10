@@ -20,7 +20,6 @@
             <Dependency>docbook-xml</Dependency>
         </BuildDependencies>
     </Source>
-
     <Package>
         <Name>xmlto</Name>
         <RuntimeDependencies>
@@ -35,7 +34,6 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2018-12-28</Date>

@@ -11,6 +11,7 @@
         <License>FTL</License>
         <License>GPLv2</License>
         <IsA>library</IsA>
+        <PartOf>desktop.font</PartOf>
         <Summary>A high-quality and portable font engine</Summary>
         <Description>FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output. It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.</Description>
         <Archive sha1sum="220c82062171c513e4017c523d196933c9de4a7d" type="tarbz2">mirrors://sourceforge/freetype/freetype-2.9.1.tar.bz2</Archive>
@@ -20,7 +21,6 @@
             <Dependency>libpng-devel</Dependency>
         </BuildDependencies>
     </Source>
-
     <Package>
         <Name>freetype</Name>
         <RuntimeDependencies>
@@ -34,7 +34,6 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>freetype-devel</Name>
         <Summary>Development files for freetype</Summary>
@@ -51,7 +50,6 @@
             <Path fileType="data">/usr/share/aclocal</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>freetype-32bit</Name>
         <PartOf>emul32</PartOf>
@@ -62,7 +60,6 @@
             <Dependency>libpng-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            
             <Dependency>zlib-32bit</Dependency>
             <Dependency>libpng-32bit</Dependency>
         </RuntimeDependencies>
@@ -70,7 +67,6 @@
             <Path fileType="library">/usr/lib32</Path>
         </Files>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2017-02-02</Date>

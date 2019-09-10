@@ -1,0 +1,60 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>imlib2</Name>
+        <Homepage>http://enlightenment.org/Libraries/Imlib2</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+              <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Second version of the general image loading and rendering library</Summary>
+        <Description>Imlib 2 is the successor to Imlib. It is not just a newer version - it is a completely new library. Imlib2 can be installed alongside Imlib 1.x without any problems since they are effectively different libraries - but they Have very similar functionality.</Description>
+        <Archive sha1sum="3e97e7157380f0cfbdf4f3c950a7a00bdfa6072c" type="tarbz2">mirrors://sourceforge/enlightenment/1.5.1/imlib2-1.5.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>giflib</Dependency>
+            <Dependency>libid3tag</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>freetype</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">imlib2-1.4.5-no-my-libs.patch</Patch>
+            <Patch level="0">imlib2-giflib5.patch</Patch-->
+            <!--Patch level="0">imlib2-1.3.0-multilib.patch</Patch-->
+        </Patches>
+    </Source>
+    <Package>
+        <Name>imlib2</Name>
+        <RuntimeDependencies>
+            <Dependency>giflib</Dependency>
+            <Dependency>libid3tag</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>freetype</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/imlib2</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

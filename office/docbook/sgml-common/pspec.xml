@@ -18,7 +18,6 @@
             <Patch level="1">sgml-common-0.6.3-manpage-1.patch</Patch>
         </Patches>
     </Source>
-
     <Package>
         <Name>sgml-common</Name>
         <Files>
@@ -32,7 +31,6 @@
             <SCOM script="package.py">System.Package</SCOM>
         </Provides>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2018-12-28</Date>

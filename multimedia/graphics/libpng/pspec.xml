@@ -20,7 +20,6 @@
             <Patch level="1">libpng-multilib.patch</Patch>
         </Patches>
     </Source>
-
     <Package>
         <Name>libpng</Name>
         <RuntimeDependencies>
@@ -31,7 +30,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>libpng-devel</Name>
         <Summary>Development files for libpng</Summary>
@@ -47,7 +45,6 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>libpng-32bit</Name>
         <PartOf>emul32</PartOf>
@@ -64,7 +61,6 @@
             <Path fileType="library">/usr/lib32</Path>
         </Files>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2019-01-28</Date>

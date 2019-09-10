@@ -24,7 +24,6 @@
 <!--             <Patch level="1">docbook-xsl-mandir.patch</Patch> -->
         </Patches>
     </Source>
-
     <Package>
         <Name>docbook-xsl</Name>
         <RuntimeDependencies>
@@ -38,7 +37,6 @@
             <SCOM script="package.py">System.Package</SCOM>
         </Provides>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2018-12-28</Date>

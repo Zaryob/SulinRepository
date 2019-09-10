@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gtk-doc</Name>
+        <Homepage>http://www.gtk.org/gtk-doc</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>FDL-1.1</License>
+        <IsA>app:console</IsA>
+        <IsA>data:doc</IsA>
+        <PartOf>desktop.toolkit.gtk</PartOf>
+        <Summary>GTK+ API documentation generator</Summary>
+        <Description>Gtk-Doc is typically used to document the public API of GTK+ and GNOME libraries, but it can also be used to document application code.</Description>
+        <Archive sha1sum="c3dc579d84221c43ce2b0b5f523c46b13525416b" type="tarxz">mirrors://gnome/gtk-doc/1.29/gtk-doc-1.29.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>itstool</Dependency>
+            <Dependency>sgml-common</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>gtk-doc</Name>
+        <RuntimeDependencies>
+            <!--<Dependency>rarian</Dependency>-->
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>sgml-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/omf</Path>
+            <Path fileType="data">/var/lib</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.29</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
