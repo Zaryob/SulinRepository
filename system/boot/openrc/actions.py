@@ -33,6 +33,5 @@ def install():
     shelltools.unlink("{}/etc/init.d/functions.sh".format(get.installDIR()))
     inarytools.dosym("../../usr/lib/openrc/sh/functions.sh", "/etc/init.d/functions.sh")
     inarytools.dosym("../usr/lib/openrc/bin/rc-sstat","/sbin/rc-sstat")
-    inarytools.insinto("/etc", "support/sysvinit/inittab")
 
     inarytools.dodoc("LICENSE*", "*guide.*", "AUTHORS", "ChangeLog", "README.*")

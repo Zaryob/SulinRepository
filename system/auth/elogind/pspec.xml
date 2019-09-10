@@ -24,7 +24,6 @@
             <Dependency>acl-devel</Dependency>
         </BuildDependencies>
     </Source>
-
     <Package>
         <Name>elogind</Name>
         <RuntimeDependencies>
@@ -48,8 +47,12 @@
               <Path fileType="man">/usr/share/man</Path>
               <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-    </Package>
+        <AdditionalFiles>
+              <AdditionalFile target="/etc/init.d/elogind">elogind.conf.in</AdditionalFile>
+              <AdditionalFile target="/etc/conf.d/elogind">elogind.conf.in</AdditionalFile>
+        </AdditionalFiles>
 
+    </Package>
     <Package>
         <Name>elogind-devel</Name>
         <Summary>Development headers for elogind</Summary>
@@ -63,8 +66,6 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-
-
     <History>
         <Update release="1">
             <Date>2019-09-08</Date>
