@@ -20,10 +20,7 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.remove("/usr/bin/wnck-urgency-monitor")
-    inarytools.remove("/usr/bin/wnckprop")
-    
-    inarytools.removeDir("/usr/share/gtk-doc")
-    inarytools.removeDir("/usr/bin")
+    inarytools.rename("/usr/bin/wnckprop", "wnckprop")
+    inarytools.rename("/usr/bin/wnck-urgency-monitor", "wnck-urgency-monitor2")
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "NEWS", "MAINTAINERS")
