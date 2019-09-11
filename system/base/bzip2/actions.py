@@ -6,18 +6,27 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 libversion = get.srcVERSION()
 
 def build():
-    autotools.make('CC=%s AR=%s RANLIB=%s CFLAGS="%s -D_FILE_OFFSET_BITS=64 -fPIC"' % (get.CC(), get.AR(), get.RANLIB(), get.CFLAGS()))
-    autotools.make('CFLAGS="%s -D_FILE_OFFSET_BITS=64 -fPIC" -f Makefile-libbz2_so' % get.CFLAGS())
+    autotools.make('CC="{} {}" AR={} RANLIB={} CFLAGS="{} -D_FILE_OFFSET_BITS=64 -fPIC"'.format(get.CC(), "-m32" if get.buildTYPE()=="emul32" else "-m64",
+                                                                                                 get.AR(), get.RANLIB(), get.CFLAGS()))
+    autotools.make('CC="{} {}" CFLAGS="{} -D_FILE_OFFSET_BITS=64 -fPIC" -f Makefile-libbz2_so'.format(get.CC(), "-m32" if get.buildTYPE()=="emul32" else "-m64", get.CFLAGS()))
 
 def check():
     autotools.make("check")
 
 def install():
+    if get.buildTYPE()=="emul32":
+        autotools.rawInstall("PREFIX=%s/emul32/usr" % get.installDIR())
+        inarytools.dolib("libbz2.so.%s" % libversion, "/lib32")
+        inarytools.dosym("libbz2.so.1", "/lib32/libbz2.so")
+        inarytools.dosym("libbz2.so.%s" % libversion, "/lib32/libbz2.so.1")
+
+        return
     autotools.rawInstall("PREFIX=%s/usr" % get.installDIR())
 
     # No static libs
