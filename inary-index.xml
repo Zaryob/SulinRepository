@@ -197,7 +197,8 @@
 				<Dependency>lxde-menu-cache</Dependency>
 				<Dependency>gdk-pixbuf</Dependency>
 				<Dependency>alsa-lib</Dependency>
-				<Dependency>libwnck2</Dependency>
+				<Dependency>libwnck3</Dependency>
+				<Dependency>keybinder3</Dependency>
 				<Dependency>libfm</Dependency>
 			</RuntimeDependencies>
 			<Files>

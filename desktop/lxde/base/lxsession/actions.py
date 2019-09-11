@@ -16,5 +16,5 @@ def build():
 
 def install():
     autotools.install()
-
+    inarytools.removeDir("/etc")
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
