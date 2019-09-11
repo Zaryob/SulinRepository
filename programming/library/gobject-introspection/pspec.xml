@@ -12,6 +12,7 @@
         <License>GPLv2+</License>
         <IsA>library</IsA>
         <IsA>app:console</IsA>
+        <PartOf>programming.library</PartOf>
         <Summary>Introspection system for GObject-based libraries</Summary>
         <Description>gobject-introspection can scan C header and source files in order to generate introspection typelib files. It also provides an API to examine typelib files, useful for creating language bindings among other things.</Description>
         <Archive sha1sum="975350b2a45a6de1e9334c37d7ef779c748c217a" type="tarxz">mirrors://gnome/gobject-introspection/1.54/gobject-introspection-1.54.1.tar.xz</Archive>

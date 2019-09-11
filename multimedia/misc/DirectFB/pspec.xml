@@ -25,6 +25,7 @@
             <Dependency>webp-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
             <Dependency>libdrm-devel</Dependency>
+            <Dependency>libkms</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>libmng-devel</Dependency>
             <Dependency>lcms2-devel</Dependency>

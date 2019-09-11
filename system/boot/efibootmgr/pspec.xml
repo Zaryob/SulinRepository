@@ -1,0 +1,49 @@
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>efibootmgr</Name>
+        <Homepage>https://github.com/vathpela/efibootmgr</Homepage>
+        <Packager>
+           <Name>Suleyman Poyraz</Name>
+           <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app:console</IsA>
+        <Summary>Tool to modify UEFI Firmware Boot Manager Variables</Summary>
+        <Description>a Linux user-space application to modify the Intel Extensible Firmware Interface (EFI) Boot Manager.</Description>
+        <Archive sha1sum="8fb84c0afdff17d398d9d951513d8cc3914b349a" type="targz">https://github.com/rhboot/efibootmgr/archive/16.tar.gz</Archive>
+        <BuildDependencies>
+           <Dependency>pciutils-devel</Dependency>
+           <Dependency>zlib-devel</Dependency>
+           <Dependency>popt-devel</Dependency>
+           <Dependency>efivar-devel</Dependency>
+           <Dependency>efivar</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>efibootmgr</Name>
+        <RuntimeDependencies>
+            <Dependency>efivar</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>efibootmgr-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-14</Date>
+            <Version>16</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

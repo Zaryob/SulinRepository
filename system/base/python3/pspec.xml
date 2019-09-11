@@ -12,7 +12,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Next generation of the python high-level scripting language</Summary>
         <Description>Next generation of the python high-level scripting language</Description>
-        <Archive sha1sum="c3dc6928516bcb934cf4740461044c79c7c35494" type="tarxz">https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz</Archive>
+        <Archive sha1sum="a862c5a58626fdad02d2047a57771ede2783fcef" type="tarxz">https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>tcltk-devel</Dependency>
             <Dependency>tcl-devel</Dependency>
@@ -32,7 +32,6 @@
             <Patch level="1">dont-make-libpython-readonly.patch</Patch>
         </Patches>
     </Source>
-
     <Package>
         <Name>python3</Name>
         <RuntimeDependencies>
@@ -102,7 +101,6 @@
             <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/r*</Path>
             <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_r*</Path>
             <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/q*</Path>
-
             <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_q*</Path>
             <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_s*</Path>
             <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/s*</Path>
@@ -119,7 +117,6 @@
             <Path fileType="doc" permanent="0">/usr/share/doc</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>python3-devel</Name>
         <IsA>header</IsA>
@@ -132,7 +129,6 @@
             <Path fileType="library" permanent="0">/usr/lib/pkgconfig/*</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>python3-tk</Name>
         <IsA>library</IsA>
@@ -149,7 +145,6 @@
             <Path fileType="library" permanent="0">/usr/lib/python3.7/turtledemo</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>idle3</Name>
         <Icon>idle</Icon>
@@ -171,8 +166,14 @@
             <AdditionalFile permission="0644" target="/usr/share/applications/idle3.desktop">idle.desktop</AdditionalFile>
         </AdditionalFiles>
     </Package>
-
     <History>
+        <Update release="2">
+            <Date>2019-09-09</Date>
+            <Version>3.7.4</Version>
+            <Comment>Python3 have upgraded minor releaseç</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-18</Date>
             <Version>3.7.2</Version>

@@ -17,7 +17,6 @@
         <Patches>
         </Patches>
     </Source>
-
     <Package>
         <Name>binutils</Name>
         <RuntimeDependencies>

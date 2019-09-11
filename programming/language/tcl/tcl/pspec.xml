@@ -10,6 +10,7 @@
         </Packager>
         <License>as-is</License>
         <IsA>app:console</IsA>
+        <PartOf>programming.language.tcl</PartOf>
         <Summary>Tcl programming language</Summary>
         <Description>Tcl provides a powerful platform for creating integration applications that tie together diverse applications, protocols, devices, and frameworks.</Description>
         <Archive sha1sum="169dd1589cad62c9fac4257c113db245da502cd0" type="targz">mirrors://sourceforge/tcl/tcl8.6.6-src.tar.gz</Archive>
@@ -17,7 +18,6 @@
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
-
     <Package>
         <Name>tcl</Name>
         <RuntimeDependencies>

@@ -15,13 +15,14 @@
         <Archive sha1sum="fd901dc078d4bee0058a9e3c791e97d977017234" type="targz">https://github.com/mesonbuild/meson/archive/0.51.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3</Dependency>
+            <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
     </Source>
-
     <Package>
         <Name>meson</Name>
         <RuntimeDependencies>
             <Dependency>python3</Dependency>
+            <Dependency>python3-setuptools</Dependency>
             <Dependency>ninja</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -32,7 +33,6 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-
     <History>
         <Update release="2">None
             <Date>2019-09-10</Date>
