@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtasn1</Name>
+        <Homepage>http://www.gnutls.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>util.crypt</PartOf>
+        <Summary>ASN.1 library used in GNUTLS</Summary>
+        <Description>libtasn1 is the ASN.1 library which provides ASN.1 structures parsing capabilities for use with GNUTLS.</Description>
+        <Archive sha1sum="4ce6a70a40f50a2c29a62bbf1c0c5b6e306ca4e3" type="targz">http://ftp.gnu.org/gnu/libtasn1/libtasn1-4.14.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libtasn1</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtasn1-devel</Name>
+        <Summary>Development files for libtasn1</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtasn1</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtasn1-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libtasn1</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">libtasn1</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-11</Date>
+            <Version>4.14</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libpcre2</Name>
+        <Homepage>http://www.pcre.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Perl-compatible regular expression library 2nd version.</Summary>
+        <Description>The PCRE 2nd version (Perl Compatible Regular Expressions) library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5 .</Description>
+        <Archive sha1sum="2cc3ed45936f5684b3189c132a68952c42cf65d0" type="tarbz2">https://ftp.pcre.org/pub/pcre/pcre2-10.33.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libpcre2</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libpcre2-devel</Name>
+        <Summary>Development files for libpcre2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpcre2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/doc/libpcre2/html</Path>
+            <Path fileType="executable">/usr/bin/pcre-config</Path>
+            <Path fileType="man">/usr/share/man/man1/pcre-config.1*</Path>
+            <Path fileType="doc">/usr/share/doc/libpcre2/pcre-config.txt</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libpcre2-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libpcre2</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>readline-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency release="current">libpcre2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>10.33</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
