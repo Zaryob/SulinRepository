@@ -1,0 +1,1376 @@
+<?xml version="1.0" ?>
+<INARY>
+	<Distribution>
+		<SourceName>Sulin</SourceName>
+		<Description xml:lang="tr">Sulin 2019 LXDE Masaüstü Deposu</Description>
+		<Description xml:lang="az">Sulin 2019 LXDE Anbari</Description>
+		<Description xml:lang="en">Sulin 2019 LXDE Repository</Description>
+		<Description xml:lang="es">Sulin 2019 LXDE Repositorio</Description>
+		<Description xml:lang="nl">Sulin 2019 LXDE Opslagplaats</Description>
+		<Version>2019</Version>
+		<Type>LXDE</Type>
+		<BinaryName xml:lang="en">Sulin</BinaryName>
+	</Distribution>
+	<SpecFile>
+		<Source>
+			<Name>libexif</Name>
+			<Homepage>http://libexif.sourceforge.net/</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>LGPLv2.1</License>
+			<IsA>library</IsA>
+			<PartOf>multimedia.misc</PartOf>
+			<Summary xml:lang="en">Library for parsing, editing, and saving EXIF data</Summary>
+			<Description xml:lang="en">Most digital cameras produce EXIF files, which are JPEG files with extra tags that contain information about the image. The EXIF library allows you to parse an EXIF file and read the data from those tags.</Description>
+			<Archive sha1sum="a52219b12dbc8d33fc096468591170fda71316c0" type="tarbz2">mirrors://sourceforge/project/libexif/libexif/0.6.21/libexif-0.6.21.tar.bz2</Archive>
+			<BuildDependencies>
+				<Dependency>doxygen</Dependency>
+			</BuildDependencies>
+			<Patches>
+				<Patch>libexif-0.6.13-pkgconfig.patch</Patch>
+			</Patches>
+			<SourceURI>multimedia/misc/libexif/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>libexif</Name>
+			<Files>
+				<Path fileType="library">/usr/lib</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>libexif-devel</Name>
+			<Summary xml:lang="en">Development files for libexif</Summary>
+			<RuntimeDependencies>
+				<Dependency release="1">libexif</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="data">/usr/lib/pkgconfig</Path>
+				<Path fileType="doc">/usr/share/doc/libexif/libexif-api.html</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.6.21</Version>
+				<Comment>First release</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxde-common</Name>
+			<Homepage>http://wiki.lxde.org/en/LXDE_Common</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE Session default configuration files and nuoveXT2 iconset</Summary>
+			<Description xml:lang="en">lxde-common provides LXDE Session default configuration files and nuoveXT2 iconset.</Description>
+			<Archive sha1sum="e54d80b64e6a89ff1f89ced7a826fa4e8bf453ec" type="tarxz">https://downloads.sourceforge.net/lxde/lxde-common-0.99.2.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk2-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxde-common/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxde-common</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk2</Dependency>
+				<Dependency>gtk3</Dependency>
+				<Dependency>lxpanel</Dependency>
+				<Dependency>lxsession</Dependency>
+				<Dependency>libfm</Dependency>
+				<Dependency>pcmanfm</Dependency>
+				<Dependency>openbox</Dependency>
+				<Dependency>icon-theme-elemantary</Dependency>
+				<Dependency>polkit-gnome</Dependency>
+				<Dependency>gtk-theme-mediterranean-others</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+			</Files>
+			<AdditionalFiles>
+				<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxde-lock-screen.desktop">data/lxde-lock-screen.desktop</AdditionalFile>
+			</AdditionalFiles>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.99.2</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxmenu-data</Name>
+			<Homepage>www.lxde.org</Homepage>
+			<Packager>
+				<Name>Suleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>data</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">Menu data files for LXDE</Summary>
+			<Description xml:lang="en">lxmenu-data provides files needed for LXDE application menus.</Description>
+			<Archive sha1sum="5c3cba7d2061a490ad62c1e9c3f6120343df7712" type="tarxz">https://downloads.sourceforge.net/lxde/lxmenu-data-0.1.5.tar.xz</Archive>
+			<Patches>
+				<Patch level="1">lxmenu-data-0.1.1-menu-customization.patch</Patch>
+			</Patches>
+			<SourceURI>desktop/lxde/base/lxmenu-data/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxmenu-data</Name>
+			<Files>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share/desktop-directories</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.1.5</Version>
+				<Comment>First release.</Comment>
+				<Name>Suleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxpanel</Name>
+			<Homepage>http://wiki.lxde.org/en/LXPanel</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">Lightweight X11 desktop panel for LXDE</Summary>
+			<Description xml:lang="en">lxpanel is a lightweight X11 desktop panel for LXDE.</Description>
+			<Archive sha1sum="8069e63cd41fe2a7795683c9db8e195bc0077d7a" type="tarxz">https://downloads.sourceforge.net/lxde/lxpanel-0.10.0.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>atk-devel</Dependency>
+				<Dependency>cairo-devel</Dependency>
+				<Dependency>pango-devel</Dependency>
+				<Dependency>fontconfig</Dependency>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>alsa-lib-devel</Dependency>
+				<Dependency>lxmenu-data</Dependency>
+				<Dependency>lxde-menu-cache-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+				<Dependency>libwnck3-devel</Dependency>
+				<Dependency>keybinder3</Dependency>
+				<Dependency>libfm-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxpanel/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxpanel</Name>
+			<RuntimeDependencies>
+				<Dependency>alsa-lib</Dependency>
+				<Dependency>atk</Dependency>
+				<Dependency>cairo</Dependency>
+				<Dependency>pango</Dependency>
+				<Dependency>fontconfig</Dependency>
+				<Dependency>gtk3</Dependency>
+				<Dependency>lxmenu-data</Dependency>
+				<Dependency>lxde-menu-cache</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+				<Dependency>alsa-lib</Dependency>
+				<Dependency>libwnck2</Dependency>
+				<Dependency>libfm</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="library">/usr/lib</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+				<Path fileType="config">/etc/xdg/lxpanel</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>lxpanel-devel</Name>
+			<Summary xml:lang="en">Development headers for lxpanel</Summary>
+			<RuntimeDependencies>
+				<Dependency release="1">lxpanel</Dependency>
+				<Dependency>lxde-menu-cache-devel</Dependency>
+				<Dependency>libfm-devel</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="data">/usr/lib/pkgconfig</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.10.0</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxinput</Name>
+			<Homepage>http://lxde.org</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv3</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE keyboard and mouse configuration tool</Summary>
+			<Description xml:lang="en">lxinput is tool for LXDE keyboard and mouse configuration.</Description>
+			<Archive sha1sum="60db01f00c1ef6f060f7e58e2be0761659470c02" type="tarxz">https://downloads.sourceforge.net/lxde/lxinput-0.3.5.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk3-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxinput/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxinput</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk3</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.3.5</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>pcmanfm</Name>
+			<Homepage>http://pcmanfm.sourceforge.net</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">PCMan File Manager</Summary>
+			<Description xml:lang="en">PCMan File Manager is an extremly fast and lightweight file manager for LXDE.</Description>
+			<Icon>pcmanfm</Icon>
+			<Archive sha1sum="4de1e5cb00fbf837c137f205e7e2327e3b49cb90" type="tarxz">https://downloads.sourceforge.net/pcmanfm/pcmanfm-1.3.1.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>pango-devel</Dependency>
+				<Dependency>cairo-devel</Dependency>
+				<Dependency>libfm-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/pcmanfm/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>pcmanfm</Name>
+			<RuntimeDependencies>
+				<Dependency>atk</Dependency>
+				<Dependency>gtk2</Dependency>
+				<Dependency>pango</Dependency>
+				<Dependency>cairo</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+				<Dependency>libfm</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share/applications</Path>
+				<Path fileType="data">/usr/share/pcmanfm</Path>
+				<Path fileType="data">/usr/share/man/</Path>
+				<Path fileType="library">/usr/lib/pcmanfm</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>pcmanfm-devel</Name>
+			<Summary xml:lang="en">Development headers for pcmanfm</Summary>
+			<RuntimeDependencies>
+				<Dependency release="1">pcmanfm</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="library">/usr/lib/pkgconfig</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>1.3.1</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxdm</Name>
+			<Homepage>http://lxde.org</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<License>LGPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE Display Manager</Summary>
+			<Description xml:lang="en">LXDM is the future display manager of LXDE.</Description>
+			<Archive sha1sum="8c4f7439fa7b56a97e8b19dc62af02a88ae12b45" type="tarxz">https://downloads.sourceforge.net/lxde/lxdm-0.5.3.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>cairo-devel</Dependency>
+				<Dependency>pango-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+			</BuildDependencies>
+			<Patches>
+				<Patch>lxdm-0.5.3-pam.patch</Patch>
+				<Patch>lxdm-0.5.3-upstream-fixes.patch</Patch>
+			</Patches>
+			<SourceURI>desktop/lxde/base/lxdm/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxdm</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk3</Dependency>
+				<Dependency>cairo</Dependency>
+				<Dependency>pango</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="config">/usr/lib/sysusers.d</Path>
+				<Path fileType="config">/usr/lib/tmpfiles.d</Path>
+				<Path fileType="executable">/usr/sbin</Path>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="executable">/usr/libexec</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="data">/usr/share</Path>
+				<Path fileType="data">/etc/conf.d/xdm</Path>
+			</Files>
+			<AdditionalFiles>
+				<AdditionalFile target="/etc/lxdm/Xsession">Xsession</AdditionalFile>
+			</AdditionalFiles>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.5.3</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxpolkit</Name>
+			<Homepage>http://lxde.org</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv3</License>
+			<IsA>library</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">Simple PolicyKit authentication agent</Summary>
+			<Description xml:lang="en">LXPolKit is a simple PolicyKit authentication agent developed for LXDE.</Description>
+			<Archive sha1sum="8278cd59bc83a8104c1e2316facfbf9a1a6fe121" type="targz">https://downloads.sourceforge.net/lxde/lxpolkit-0.1.0.tar.gz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>cairo-devel</Dependency>
+				<Dependency>pango-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxpolkit/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxpolkit</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk2</Dependency>
+				<Dependency>gtk3</Dependency>
+				<Dependency>cairo</Dependency>
+				<Dependency>pango</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="data">/usr/share/lxpolkit</Path>
+				<Path fileType="executable">/usr/libexec</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.4.1</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxsession</Name>
+			<Homepage>http://wiki.lxde.org/en/LXSession</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE session manager</Summary>
+			<Description xml:lang="en">lxsession is the default X11 session manager of LXDE.</Description>
+			<Icon>lxsession</Icon>
+			<Archive sha1sum="c72f4abaadfb7417d299683dea824148ac26fc4a" type="tarxz">https://downloads.sourceforge.net/lxde/lxsession-0.5.4.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+				<Dependency>vala-devel</Dependency>
+			</BuildDependencies>
+			<Patches>
+				<Patch>lxsession-0.5.2-fix-invalid-memcpy.patch</Patch>
+				<Patch>lxsession-libunique.patch</Patch>
+				<Patch>lxsession-0.5.2-reload.patch</Patch>
+				<Patch>lxsession-0.5.2-notify-daemon-default.patch</Patch>
+			</Patches>
+			<SourceURI>desktop/lxde/base/lxsession/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxsession</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk2</Dependency>
+				<Dependency>cairo</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+				<Dependency>lxpolkit</Dependency>
+				<Dependency>vala</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="config">/etc/xdg/autostart/lxpolkit.desktop</Path>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.5.4</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxde-menu-cache</Name>
+			<Homepage>http://www.lxde.org</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>library</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">A library creating and utilizing caches to speed up freedesktop.org application menus</Summary>
+			<Description xml:lang="en">lxde-menu-cache is a library creating and utilizing caches to speed up freedesktop.org application menus.</Description>
+			<Archive sha1sum="01e6035aa1fe76d7047bdec235254aa5ce17394a" type="tarxz">mirrors://sourceforge/project/lxde/menu-cache/1.1/menu-cache-1.1.0.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>libfm-extra</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxde-menu-cache/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxde-menu-cache</Name>
+			<RuntimeDependencies>
+				<Dependency>libfm-extra</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/libexec</Path>
+				<Path fileType="library">/usr/lib</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>lxde-menu-cache-devel</Name>
+			<Summary xml:lang="en">Development headers for lxde-menu-cache</Summary>
+			<RuntimeDependencies>
+				<Dependency release="1">lxde-menu-cache</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="library">/usr/lib/pkgconfig</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>lxde-menu-cache-docs</Name>
+			<RuntimeDependencies>
+				<Dependency release="1">lxde-menu-cache</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="doc">/usr/share/gtk-doc</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>1.1.0</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxappearance</Name>
+			<Homepage>http://wiki.lxde.org/en/LXAppearance</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">A new feature-rich GTK+ theme switcher</Summary>
+			<Description xml:lang="en">LXAppearance is a new GTK+ theme switcher developed for project LXDE.</Description>
+			<Icon>lxappearance</Icon>
+			<Archive sha1sum="1c281756b240694d0262edd9d40041d5b127d552" type="tarxz">https://downloads.sourceforge.net/lxde/lxappearance-0.6.3.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxappearance/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxappearance</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk2</Dependency>
+				<Dependency>gtk3</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="data">/usr/share/applications</Path>
+				<Path fileType="data">/usr/share/lxappearance</Path>
+			</Files>
+		</Package>
+		<Package>
+			<Name>lxappearance-devel</Name>
+			<Summary xml:lang="en">Development files for lxappearance</Summary>
+			<RuntimeDependencies>
+				<Dependency release="1">lxappearance</Dependency>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>gtk3-devel</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="data">/usr/lib/pkgconfig</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.6.3</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxterminal</Name>
+			<Homepage>http://wiki.lxde.org/en/LXTerminal</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">Lightweight terminal emulator</Summary>
+			<Description xml:lang="en">Lxterminal is a Lightweight vte-based tabbed terminal emulator for LXDE.</Description>
+			<Icon>lxterminal</Icon>
+			<Archive sha1sum="896c32c065e065d62591f4484ff1dca8ac6f7ce7" type="tarxz">https://downloads.sourceforge.net/lxde/lxterminal-0.3.2.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>vte3</Dependency>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxterminal/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxterminal</Name>
+			<RuntimeDependencies>
+				<Dependency>vte3</Dependency>
+				<Dependency>gtk3</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share/pixmaps</Path>
+				<Path fileType="data">/usr/share/lxterminal</Path>
+				<Path fileType="data">/usr/share/applications</Path>
+				<Path fileType="data">/usr/share/icons</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.3.2</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxtask</Name>
+			<Homepage>http://wiki.lxde.org/en/LXTask</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE Task manager</Summary>
+			<Description xml:lang="en">Lxtask is a lightweight and desktop independent task manager.</Description>
+			<Icon>lxtask</Icon>
+			<Archive sha1sum="a146138e04952cd560cfb787b0bb9fa7dd57b0eb" type="tarxz">https://downloads.sourceforge.net/lxde/lxtask-0.1.9.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk3-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxtask/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxtask</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk3</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share/applications</Path>
+				<Path fileType="man">/usr/share/man/man1</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.1.9</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxrandr</Name>
+			<Homepage>http://wiki.lxde.org/en/LXRandR</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv3</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE GUI interface to RandR extention</Summary>
+			<Description xml:lang="en">lxrandr is a LXDE GUI interface to RandR extention.</Description>
+			<Archive sha1sum="a76b3d79ab1d5aa974a2ad25b1882685159a2e98" type="tarxz">https://downloads.sourceforge.net/lxde/lxrandr-0.3.2.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>libXrandr-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxrandr/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxrandr</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk2</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="man">/usr/share/man</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.3.2</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>lxshortcut</Name>
+			<Homepage>http://www.lxde.org</Homepage>
+			<Packager>
+				<Name>Aydan Taşdemir</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv3</License>
+			<IsA>app:gui</IsA>
+			<PartOf>desktop.lxde.base</PartOf>
+			<Summary xml:lang="en">LXDE tool to edit desktop entry files</Summary>
+			<Description xml:lang="en">lxshortcut is a LXDE tool to edit desktop entry files.</Description>
+			<Archive sha1sum="92e4510313b6c2225edc7dd49f6b4d889303ddc3" type="targz">https://downloads.sourceforge.net/lxde/lxshortcut-0.1.2.tar.gz</Archive>
+			<BuildDependencies>
+				<Dependency>gtk2-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/lxde/base/lxshortcut/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>lxshortcut</Name>
+			<RuntimeDependencies>
+				<Dependency>gtk2</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>0.1.2</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>libfm</Name>
+			<Homepage>http://pcmanfm.sourceforge.net</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>library</IsA>
+			<PartOf>desktop.library</PartOf>
+			<Summary xml:lang="en">Library for file management</Summary>
+			<Description xml:lang="en">libfm is a LXDE library for file management.</Description>
+			<Archive sha1sum="29539f50acd5c00a00362adffd532053b0688e66" type="tarxz">mirrors://sourceforge/pcmanfm/libfm-1.3.1.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>fontconfig-devel</Dependency>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>cairo-devel</Dependency>
+				<Dependency>pango-devel</Dependency>
+				<Dependency>atk-devel</Dependency>
+				<Dependency>gtk2-devel</Dependency>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>gtk-doc</Dependency>
+				<Dependency>libXtst-devel</Dependency>
+				<Dependency>gdk-pixbuf-devel</Dependency>
+				<Dependency>vala-devel</Dependency>
+				<Dependency>libexif-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/library/libfm/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>libfm</Name>
+			<RuntimeDependencies>
+				<Dependency>lxde-menu-cache</Dependency>
+				<Dependency>atk</Dependency>
+				<Dependency>cairo</Dependency>
+				<Dependency>fontconfig</Dependency>
+				<Dependency>gtk2</Dependency>
+				<Dependency>gtk3</Dependency>
+				<Dependency>atk-devel</Dependency>
+				<Dependency>pango</Dependency>
+				<Dependency>gdk-pixbuf</Dependency>
+				<Dependency>libexif</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="library">/usr/lib</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+			</Files>
+			<Conflicts>
+				<Package>lxshortcut</Package>
+			</Conflicts>
+			<Replaces>
+				<Package>lxshortcut</Package>
+			</Replaces>
+		</Package>
+		<Package>
+			<Name>libfm-devel</Name>
+			<Summary xml:lang="en">Development headers for libfm</Summary>
+			<RuntimeDependencies>
+				<Dependency release="1">libfm</Dependency>
+				<Dependency>gtk3-devel</Dependency>
+				<Dependency>gtk2-devel</Dependency>
+			</RuntimeDependencies>
+			<Files>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="library">/usr/lib/pkgconfig</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>1.3.1</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<SpecFile>
+		<Source>
+			<Name>libfm-extra</Name>
+			<Homepage>http://pcmanfm.sourceforge.net</Homepage>
+			<Packager>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Packager>
+			<License>GPLv2</License>
+			<IsA>library</IsA>
+			<PartOf>desktop.library</PartOf>
+			<Summary xml:lang="en">Extras for libfm file management</Summary>
+			<Description xml:lang="en">Extra package for libfm a LXDE library for file management.</Description>
+			<Archive sha1sum="29539f50acd5c00a00362adffd532053b0688e66" type="tarxz">mirrors://sourceforge/pcmanfm/libfm-1.3.1.tar.xz</Archive>
+			<BuildDependencies>
+				<Dependency>fontconfig-devel</Dependency>
+			</BuildDependencies>
+			<SourceURI>desktop/library/libfm-extra/pspec.xml</SourceURI>
+		</Source>
+		<Package>
+			<Name>libfm-extra</Name>
+			<Files>
+				<Path fileType="config">/etc</Path>
+				<Path fileType="executable">/usr/bin</Path>
+				<Path fileType="library">/usr/lib</Path>
+				<Path fileType="localedata">/usr/share/locale</Path>
+				<Path fileType="doc">/usr/share/doc</Path>
+				<Path fileType="data">/usr/share</Path>
+				<Path fileType="header">/usr/include</Path>
+				<Path fileType="library">/usr/lib/pkgconfig</Path>
+			</Files>
+		</Package>
+		<History>
+			<Update release="1">
+				<Date>2019-09-10</Date>
+				<Version>1.3.1</Version>
+				<Comment>First release.</Comment>
+				<Name>Süleyman Poyraz</Name>
+				<Email>zaryob.dev@gmail.com</Email>
+			</Update>
+		</History>
+	</SpecFile>
+	<Component>
+		<Name>desktop</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>other</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>desktop.lookandfeel</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>other</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>desktop.lxde</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>programming</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>desktop.lxde.addon</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>accessories</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>desktop.lxde.base</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>other.desktop</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>desktop.library</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>programming</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>multimedia</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>multimedia</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Component>
+		<Name>multimedia.misc</Name>
+		<LocalName xml:lang="en">FIXME</LocalName>
+		<Summary xml:lang="en">FIXME</Summary>
+		<Description xml:lang="en">FIXME</Description>
+		<Group>programming</Group>
+		<Maintainer>
+			<Name xml:lang="en">Süleyman Poyraz</Name>
+			<Email>zaryob.dev@gmail.com</Email>
+		</Maintainer>
+	</Component>
+	<Group>
+		<Name>accessibility</Name>
+		<LocalName xml:lang="en">Accessibility</LocalName>
+		<LocalName xml:lang="nl">Toegankelijkheid</LocalName>
+		<LocalName xml:lang="sv">Handikappstöd</LocalName>
+		<LocalName xml:lang="tr">Erişilebilirlik</LocalName>
+		<LocalName xml:lang="fr">Accessibilité</LocalName>
+		<LocalName xml:lang="es">Acesibilidad</LocalName>
+		<LocalName xml:lang="de">Eingabehilfen</LocalName>
+		<LocalName xml:lang="it">Accessibilità</LocalName>
+		<Icon>preferences-desktop-accessibility</Icon>
+	</Group>
+	<Group>
+		<Name>accessories</Name>
+		<LocalName xml:lang="en">Accessories</LocalName>
+		<LocalName xml:lang="nl">Toebehoren</LocalName>
+		<LocalName xml:lang="sv">Tillbehör</LocalName>
+		<LocalName xml:lang="tr">Donatılar</LocalName>
+		<LocalName xml:lang="fr">Accessoires</LocalName>
+		<LocalName xml:lang="es">Acesorios</LocalName>
+		<LocalName xml:lang="de">Zubehör</LocalName>
+		<LocalName xml:lang="it">Accessori</LocalName>
+		<Icon>applications-accessories</Icon>
+	</Group>
+	<Group>
+		<Name>education</Name>
+		<LocalName xml:lang="en">Education</LocalName>
+		<LocalName xml:lang="nl">Educatie</LocalName>
+		<LocalName xml:lang="sv">Utbildning</LocalName>
+		<LocalName xml:lang="tr">Eğitim</LocalName>
+		<LocalName xml:lang="fr">Éducation</LocalName>
+		<LocalName xml:lang="es">Educativos</LocalName>
+		<LocalName xml:lang="de">Lernen</LocalName>
+		<LocalName xml:lang="it">Educazione</LocalName>
+		<Icon>applications-education</Icon>
+	</Group>
+	<Group>
+		<Name>games</Name>
+		<LocalName xml:lang="en">Games</LocalName>
+		<LocalName xml:lang="nl">Spelen</LocalName>
+		<LocalName xml:lang="sv">Spel</LocalName>
+		<LocalName xml:lang="tr">Oyunlar</LocalName>
+		<LocalName xml:lang="fr">Jeux</LocalName>
+		<LocalName xml:lang="es">Juegos</LocalName>
+		<LocalName xml:lang="de">Spiele</LocalName>
+		<LocalName xml:lang="it">Giochi</LocalName>
+		<Icon>applications-games</Icon>
+	</Group>
+	<Group>
+		<Name>graphics</Name>
+		<LocalName xml:lang="en">Graphics</LocalName>
+		<LocalName xml:lang="nl">Grafisch</LocalName>
+		<LocalName xml:lang="sv">Grafik</LocalName>
+		<LocalName xml:lang="tr">Grafik</LocalName>
+		<LocalName xml:lang="fr">Graphisme</LocalName>
+		<LocalName xml:lang="es">Gráficos</LocalName>
+		<LocalName xml:lang="de">Design</LocalName>
+		<LocalName xml:lang="it">Grafica</LocalName>
+		<Icon>applications-graphics</Icon>
+	</Group>
+	<Group>
+		<Name>internet</Name>
+		<LocalName xml:lang="en">Internet</LocalName>
+		<LocalName xml:lang="nl">Internet</LocalName>
+		<LocalName xml:lang="sv">Internet</LocalName>
+		<LocalName xml:lang="tr">İnternet</LocalName>
+		<LocalName xml:lang="fr">Internet</LocalName>
+		<LocalName xml:lang="es">Internet</LocalName>
+		<LocalName xml:lang="de">Internet</LocalName>
+		<LocalName xml:lang="it">Internet</LocalName>
+		<Icon>applications-internet</Icon>
+	</Group>
+	<Group>
+		<Name>office</Name>
+		<LocalName xml:lang="en">Office</LocalName>
+		<LocalName xml:lang="nl">Kantoor</LocalName>
+		<LocalName xml:lang="sv">Kontor</LocalName>
+		<LocalName xml:lang="tr">Ofis</LocalName>
+		<LocalName xml:lang="fr">Bureautique</LocalName>
+		<LocalName xml:lang="es">Oficina</LocalName>
+		<LocalName xml:lang="de">Büro</LocalName>
+		<LocalName xml:lang="it">Ufficio</LocalName>
+		<Icon>applications-office</Icon>
+	</Group>
+	<Group>
+		<Name>other</Name>
+		<LocalName xml:lang="en">Other</LocalName>
+		<LocalName xml:lang="nl">Overige</LocalName>
+		<LocalName xml:lang="sv">Övrigt</LocalName>
+		<LocalName xml:lang="tr">Diğer</LocalName>
+		<LocalName xml:lang="fr">Autres</LocalName>
+		<LocalName xml:lang="es">Otros</LocalName>
+		<LocalName xml:lang="de">Sonstiges</LocalName>
+		<LocalName xml:lang="it">Altro</LocalName>
+		<Icon>applications-other</Icon>
+	</Group>
+	<Group>
+		<Name>programming</Name>
+		<LocalName xml:lang="en">Programming</LocalName>
+		<LocalName xml:lang="nl">Programmeren</LocalName>
+		<LocalName xml:lang="sv">Utveckling</LocalName>
+		<LocalName xml:lang="tr">Programlama</LocalName>
+		<LocalName xml:lang="fr">Programmation</LocalName>
+		<LocalName xml:lang="es">Programación</LocalName>
+		<LocalName xml:lang="de">Programmierung</LocalName>
+		<LocalName xml:lang="it">Programmazione</LocalName>
+		<Icon>applications-development</Icon>
+	</Group>
+	<Group>
+		<Name>multimedia</Name>
+		<LocalName xml:lang="en">Multimedia</LocalName>
+		<LocalName xml:lang="nl">Multimedia</LocalName>
+		<LocalName xml:lang="sv">Multimedia</LocalName>
+		<LocalName xml:lang="tr">Çoklu Ortam</LocalName>
+		<LocalName xml:lang="fr">Multimédia</LocalName>
+		<LocalName xml:lang="es">Multimedia</LocalName>
+		<LocalName xml:lang="de">Multimedia</LocalName>
+		<LocalName xml:lang="it">Multimedia</LocalName>
+		<Icon>applications-multimedia</Icon>
+	</Group>
+	<Group>
+		<Name>system</Name>
+		<LocalName xml:lang="en">System</LocalName>
+		<LocalName xml:lang="nl">Systeem</LocalName>
+		<LocalName xml:lang="sv">System</LocalName>
+		<LocalName xml:lang="tr">Sistem</LocalName>
+		<LocalName xml:lang="fr">Système</LocalName>
+		<LocalName xml:lang="es">Sistema</LocalName>
+		<LocalName xml:lang="de">System</LocalName>
+		<LocalName xml:lang="it">Sistema</LocalName>
+		<Icon>applications-system</Icon>
+	</Group>
+	<Group>
+		<Name>gnome.desktop</Name>
+		<LocalName xml:lang="en">Gnome Desktop</LocalName>
+		<LocalName xml:lang="nl">Gnome Desktop</LocalName>
+		<LocalName xml:lang="sv">Skrivbord, GNOME</LocalName>
+		<LocalName xml:lang="tr">Gnome Masaüstü</LocalName>
+		<LocalName xml:lang="fr">Bureau Gnome</LocalName>
+		<LocalName xml:lang="es">Gnome</LocalName>
+		<LocalName xml:lang="de">Gnome</LocalName>
+		<LocalName xml:lang="it">Gnome</LocalName>
+		<Icon>preferences-desktop</Icon>
+	</Group>
+	<Group>
+		<Name>kde.desktop</Name>
+		<LocalName xml:lang="en">KDE Desktop</LocalName>
+		<LocalName xml:lang="nl">KDE Desktop</LocalName>
+		<LocalName xml:lang="sv">Skrivbord, KDE</LocalName>
+		<LocalName xml:lang="tr">KDE Masaüstü</LocalName>
+		<LocalName xml:lang="fr">Bureau KDE</LocalName>
+		<LocalName xml:lang="es">KDE</LocalName>
+		<LocalName xml:lang="de">KDE</LocalName>
+		<LocalName xml:lang="it">KDE</LocalName>
+		<Icon>kde</Icon>
+	</Group>
+	<Group>
+		<Name>other.desktop</Name>
+		<LocalName xml:lang="en">Other Desktops</LocalName>
+		<LocalName xml:lang="nl">Overige Desktop</LocalName>
+		<LocalName xml:lang="sv">Skrivbord, Övrigt</LocalName>
+		<LocalName xml:lang="tr">Diğer Masaüstü Ortamları</LocalName>
+		<LocalName xml:lang="fr">Autres bureaux</LocalName>
+		<LocalName xml:lang="es">Otros escritorios</LocalName>
+		<LocalName xml:lang="de">Andere Desktopumgebungen</LocalName>
+		<LocalName xml:lang="it">Altri desktop</LocalName>
+		<Icon>preferences-desktop</Icon>
+	</Group>
+	<Group>
+		<Name>publishing</Name>
+		<LocalName xml:lang="en">Publishing</LocalName>
+		<LocalName xml:lang="nl">Publiceren</LocalName>
+		<LocalName xml:lang="sv">Publicering</LocalName>
+		<LocalName xml:lang="tr">Yayıncılık</LocalName>
+		<LocalName xml:lang="fr">Publication</LocalName>
+		<LocalName xml:lang="es">Publicación</LocalName>
+		<LocalName xml:lang="it">Pubblicazione</LocalName>
+		<Icon>accessories-dictionary</Icon>
+	</Group>
+	<Group>
+		<Name>servers</Name>
+		<LocalName xml:lang="en">Servers</LocalName>
+		<LocalName xml:lang="nl">Servers</LocalName>
+		<LocalName xml:lang="sv">Servrar</LocalName>
+		<LocalName xml:lang="tr">Sunucular</LocalName>
+		<LocalName xml:lang="fr">Serveurs</LocalName>
+		<LocalName xml:lang="es">Servidores</LocalName>
+		<LocalName xml:lang="de">Server</LocalName>
+		<LocalName xml:lang="it">Server</LocalName>
+		<Icon>network-server</Icon>
+	</Group>
+	<Group>
+		<Name>fonts</Name>
+		<LocalName xml:lang="en">Fonts</LocalName>
+		<LocalName xml:lang="nl">Lettertypen</LocalName>
+		<LocalName xml:lang="sv">Teckensnitt</LocalName>
+		<LocalName xml:lang="tr">Fontlar</LocalName>
+		<LocalName xml:lang="fr">Polices</LocalName>
+		<LocalName xml:lang="es">Fuentes</LocalName>
+		<LocalName xml:lang="de">Fonts</LocalName>
+		<LocalName xml:lang="it">Caratteri</LocalName>
+		<Icon>preferences-desktop-font</Icon>
+	</Group>
+	<Group>
+		<Name>admin.tools</Name>
+		<LocalName xml:lang="en">Admin Tools</LocalName>
+		<LocalName xml:lang="nl">Administratie</LocalName>
+		<LocalName xml:lang="sv">Administrativa verktyg</LocalName>
+		<LocalName xml:lang="tr">Yönetici Araçları</LocalName>
+		<LocalName xml:lang="fr">Outils d'administration</LocalName>
+		<LocalName xml:lang="es">Administración</LocalName>
+		<LocalName xml:lang="de">Admin Tools</LocalName>
+		<LocalName xml:lang="it">Strumenti d'amministrazione</LocalName>
+		<Icon>application-x-shellscript</Icon>
+	</Group>
+	<Group>
+		<Name>legacy</Name>
+		<LocalName xml:lang="en">Legacy</LocalName>
+		<LocalName xml:lang="nl">Legacy</LocalName>
+		<LocalName xml:lang="sv">Legat</LocalName>
+		<LocalName xml:lang="tr">Uyumluluk</LocalName>
+		<LocalName xml:lang="fr">Anciens</LocalName>
+		<LocalName xml:lang="it">Obsoleti/in disuso</LocalName>
+		<Icon>media-floppy</Icon>
+	</Group>
+	<Group>
+		<Name>localization</Name>
+		<LocalName xml:lang="en">Localization</LocalName>
+		<LocalName xml:lang="nl">Lokalisatie</LocalName>
+		<LocalName xml:lang="sv">Internationalisering</LocalName>
+		<LocalName xml:lang="tr">Yerelleştirme</LocalName>
+		<LocalName xml:lang="fr">Internationalisation</LocalName>
+		<LocalName xml:lang="es">Localización</LocalName>
+		<LocalName xml:lang="it">Localizzazione</LocalName>
+		<Icon>preferences-desktop-locale</Icon>
+	</Group>
+	<Group>
+		<Name>virtualization</Name>
+		<LocalName xml:lang="en">Virtualization</LocalName>
+		<LocalName xml:lang="nl">Virtualisatie</LocalName>
+		<LocalName xml:lang="sv">Virtualisering</LocalName>
+		<LocalName xml:lang="tr">Sanallaştırma</LocalName>
+		<LocalName xml:lang="fr">Virtualisation</LocalName>
+		<LocalName xml:lang="es">Virtualización</LocalName>
+		<LocalName xml:lang="de">Virtualisierung</LocalName>
+		<LocalName xml:lang="it">Virtualizzazione</LocalName>
+		<Icon>video-display</Icon>
+	</Group>
+	<Group>
+		<Name>power.management</Name>
+		<LocalName xml:lang="en">Power Management</LocalName>
+		<LocalName xml:lang="nl">Stroombeheer</LocalName>
+		<LocalName xml:lang="sv">Strömsparhantering</LocalName>
+		<LocalName xml:lang="tr">Güç Yönetimi</LocalName>
+		<LocalName xml:lang="fr">Gestion de l'énergie</LocalName>
+		<LocalName xml:lang="es">Gestión de energía</LocalName>
+		<LocalName xml:lang="it">Gestione energetica</LocalName>
+		<Icon>preferences-system-power-management</Icon>
+	</Group>
+	<Group>
+		<Name>security</Name>
+		<LocalName xml:lang="en">Security</LocalName>
+		<LocalName xml:lang="nl">Veiligheid</LocalName>
+		<LocalName xml:lang="sv">Säkerhet</LocalName>
+		<LocalName xml:lang="tr">Güvenlik</LocalName>
+		<LocalName xml:lang="fr">Sécurité</LocalName>
+		<LocalName xml:lang="es">Seguridad</LocalName>
+		<LocalName xml:lang="de">Sicherheit</LocalName>
+		<LocalName xml:lang="it">Sicurezza</LocalName>
+		<Icon>preferences-desktop-cryptography</Icon>
+	</Group>
+	<Group>
+		<Name>communication</Name>
+		<LocalName xml:lang="en">Communication</LocalName>
+		<LocalName xml:lang="nl">Communicatie</LocalName>
+		<LocalName xml:lang="sv">Kommunikation</LocalName>
+		<LocalName xml:lang="tr">İletişim</LocalName>
+		<LocalName xml:lang="fr">Communication</LocalName>
+		<LocalName xml:lang="es">Comunicación</LocalName>
+		<LocalName xml:lang="de">Kommunikation</LocalName>
+		<LocalName xml:lang="it">Comunicazione</LocalName>
+		<Icon>internet-telephony</Icon>
+	</Group>
+	<Group>
+		<Name>network</Name>
+		<LocalName xml:lang="en">Network</LocalName>
+		<LocalName xml:lang="nl">Netwerk</LocalName>
+		<LocalName xml:lang="sv">Nätverk</LocalName>
+		<LocalName xml:lang="tr">Ağ</LocalName>
+		<LocalName xml:lang="fr">Réseau</LocalName>
+		<LocalName xml:lang="es">Red</LocalName>
+		<LocalName xml:lang="de">Netzwerk</LocalName>
+		<LocalName xml:lang="it">Rete</LocalName>
+		<Icon>network-workgroup</Icon>
+	</Group>
+	<Group>
+		<Name>science</Name>
+		<LocalName xml:lang="en">Science</LocalName>
+		<LocalName xml:lang="nl">Wetenschap</LocalName>
+		<LocalName xml:lang="sv">Vetenskap</LocalName>
+		<LocalName xml:lang="tr">Bilim</LocalName>
+		<LocalName xml:lang="fr">Science</LocalName>
+		<LocalName xml:lang="es">Ciencia</LocalName>
+		<LocalName xml:lang="de">Wissenschaft</LocalName>
+		<LocalName xml:lang="it">Scienze</LocalName>
+		<Icon>applications-science</Icon>
+	</Group>
+	<Group>
+		<Name>documentation</Name>
+		<LocalName xml:lang="en">Documentation</LocalName>
+		<LocalName xml:lang="nl">Documentatie</LocalName>
+		<LocalName xml:lang="sv">Dokumentation</LocalName>
+		<LocalName xml:lang="tr">Belgeleme</LocalName>
+		<LocalName xml:lang="fr">Documentation</LocalName>
+		<LocalName xml:lang="es">Documentación</LocalName>
+		<LocalName xml:lang="de">Dokumentation</LocalName>
+		<LocalName xml:lang="it">Documentazione</LocalName>
+		<Icon>graphics-viewer-document</Icon>
+	</Group>
+	<Group>
+		<Name>electronics</Name>
+		<LocalName xml:lang="en">Electronics</LocalName>
+		<LocalName xml:lang="nl">Elektronica</LocalName>
+		<LocalName xml:lang="sv">Elektroniskt</LocalName>
+		<LocalName xml:lang="tr">Elektronik</LocalName>
+		<LocalName xml:lang="fr">Électronique</LocalName>
+		<LocalName xml:lang="es">Electrónica</LocalName>
+		<LocalName xml:lang="de">Elektronik</LocalName>
+		<LocalName xml:lang="it">Elettronica</LocalName>
+		<Icon>utilities-system-monitor</Icon>
+	</Group>
+	<Group>
+		<Name>unknown</Name>
+		<LocalName xml:lang="en">Unknown</LocalName>
+		<LocalName xml:lang="nl">Onbekend</LocalName>
+		<LocalName xml:lang="sv">Okända</LocalName>
+		<LocalName xml:lang="tr">Bilinmeyen</LocalName>
+		<LocalName xml:lang="fr">Inconnu</LocalName>
+		<LocalName xml:lang="es">Desconocido</LocalName>
+		<LocalName xml:lang="de">Unbekannt</LocalName>
+		<LocalName xml:lang="it">Sconosciuto</LocalName>
+		<Icon>unknown</Icon>
+	</Group>
+	<Group>
+		<Name>all</Name>
+		<LocalName xml:lang="en">All</LocalName>
+		<LocalName xml:lang="nl">Alles</LocalName>
+		<LocalName xml:lang="sv">Samtliga</LocalName>
+		<LocalName xml:lang="tr">Tümü</LocalName>
+		<LocalName xml:lang="fr">Tout</LocalName>
+		<LocalName xml:lang="es">Todos</LocalName>
+		<LocalName xml:lang="de">Alle</LocalName>
+		<LocalName xml:lang="it">Tutti</LocalName>
+		<Icon>media-optical</Icon>
+	</Group>
+</INARY>

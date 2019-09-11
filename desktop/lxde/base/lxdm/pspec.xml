@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxdm</Name>
+        <Homepage>http://lxde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.lxde.base</PartOf>
+        <Summary>LXDE Display Manager</Summary>
+        <Description>LXDM is the future display manager of LXDE.</Description>
+        <Archive sha1sum="8c4f7439fa7b56a97e8b19dc62af02a88ae12b45" type="tarxz">https://downloads.sourceforge.net/lxde/lxdm-0.5.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>lxdm-0.5.3-pam.patch</Patch>
+            <!--Patch>lxdm-0.5.3-pam_console-disable.patch</Patch-->
+            <Patch>lxdm-0.5.3-upstream-fixes.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>lxdm</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="config">/usr/lib/sysusers.d</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc/conf.d/xdm</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/lxdm/Xsession">Xsession</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.5.3</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+       </Update>
+    </History>
+</INARY>

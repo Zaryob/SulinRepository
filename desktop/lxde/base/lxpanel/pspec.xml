@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxpanel</Name>
+        <Homepage>http://wiki.lxde.org/en/LXPanel</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.lxde.base</PartOf>
+        <Summary>Lightweight X11 desktop panel for LXDE</Summary>
+        <Description>lxpanel is a lightweight X11 desktop panel for LXDE.</Description>
+        <Archive sha1sum="8069e63cd41fe2a7795683c9db8e195bc0077d7a" type="tarxz">https://downloads.sourceforge.net/lxde/lxpanel-0.10.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>lxmenu-data</Dependency>
+            <Dependency>lxde-menu-cache-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libwnck3-devel</Dependency>
+            <Dependency>keybinder3</Dependency>
+      	    <Dependency>libfm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxpanel</Name>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>lxmenu-data</Dependency>
+            <Dependency>lxde-menu-cache</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libwnck2</Dependency>
+            <Dependency>libfm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+      	    <Path fileType="config">/etc/xdg/lxpanel</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lxpanel-devel</Name>
+        <Summary>Development headers for lxpanel</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lxpanel</Dependency>
+            <Dependency>lxde-menu-cache-devel</Dependency>
+            <Dependency>libfm-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+      <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.10.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+       </Update>
+    </History>
+</INARY>

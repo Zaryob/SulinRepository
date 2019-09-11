@@ -1,0 +1,11 @@
+<INARY>
+    <SourceName>Sulin</SourceName>
+    <Version>2019</Version>
+    <Description xml:lang="tr">Sulin 2019 LXDE Masaüstü Deposu</Description>
+    <Description xml:lang="az">Sulin 2019 LXDE Anbari</Description>
+    <Description xml:lang="en">Sulin 2019 LXDE Repository</Description>
+    <Description xml:lang="es">Sulin 2019 LXDE Repositorio</Description>
+    <Description xml:lang="nl">Sulin 2019 LXDE Opslagplaats</Description>
+    <Type>LXDE</Type>
+    <BinaryName>Sulin</BinaryName>
+</INARY>

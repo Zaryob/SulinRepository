@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxtask</Name>
+        <Homepage>http://wiki.lxde.org/en/LXTask</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>lxtask</Icon>
+        <IsA>app:gui</IsA>
+      	<PartOf>desktop.lxde.base</PartOf>
+        <Summary>LXDE Task manager</Summary>
+        <Description>Lxtask is a lightweight and desktop independent task manager.</Description>
+        <Archive sha1sum="a146138e04952cd560cfb787b0bb9fa7dd57b0eb" type="tarxz">https://downloads.sourceforge.net/lxde/lxtask-0.1.9.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxtask</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+	    <Path fileType="man">/usr/share/man/man1</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.1.9</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+         </Update>
+    </History>
+</INARY>
