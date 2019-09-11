@@ -29,9 +29,6 @@
             <Dependency>libfm</Dependency>
             <Dependency>pcmanfm</Dependency>
             <Dependency>openbox</Dependency>
-            <Dependency>icon-theme-elemantary</Dependency>
-            <Dependency>polkit-gnome</Dependency>
-            <Dependency>gtk-theme-mediterranean-others</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
