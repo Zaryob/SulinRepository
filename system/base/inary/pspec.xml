@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>inary</Name>
+        <Homepage>http://github.com/SulinOS/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>INARY is the package management system of Sulin</Summary>
+        <Description>INARY is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
+        <Archive sha1sum="da6d9b7f577d4154771824d91bf61e81cf009ce6" type="targz">https://github.com/Zaryob/inary/archive/inary-1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>scom</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-pycurl</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>libunwind-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>inary</Name>
+        <RuntimeDependencies>
+            <Dependency>tar</Dependency>
+            <Dependency>file</Dependency>
+            <Dependency>scom</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>ciksemel</Dependency>
+            <Dependency>python3-psutil</Dependency>
+            <Dependency>python3-pycurl</Dependency>
+            <Dependency>libunwind</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib/sulin/inary</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/etc/inary</Path>
+            <Path fileType="data">/usr/share/mime/packages</Path>
+            <Path fileType="data">/usr/lib/tmpfiles.d/inary.conf-armv7h</Path>
+            <Path fileType="data">/usr/lib/sulin/inary-1.0-py3.7.egg-info</Path>
+            <Path fileType="data">/var/lib/inary/info</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

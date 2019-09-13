@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xterm</Name>
+        <Homepage>http://invisible-island.net/xterm</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <Icon>terminal</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>x11.terminal</PartOf>
+        <Summary>Terminal emulator for the X Window System</Summary>
+        <Description>The xterm program is a terminal emulator for the X Window System. It provides DEC VT102 and Tektronix 4014 compatible terminals for programs that can't use the window system directly.</Description>
+        <Archive sha1sum="d34f8a3331253ee4321f8a0bcdf92ce1f7cf8e54" type="targz">ftp://ftp.invisible-island.net/xterm/xterm-328.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libXaw-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>utempter-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>xorg-app</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>16colors.txt.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>xterm</Name>
+        <RuntimeDependencies>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libXaw</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>utempter</Dependency>
+            <Dependency>xorg-app</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/X11</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-12</Date>
+            <Version>328</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 *.inary
-<<<<<<< HEAD
 *.swp
-=======
->>>>>>> main
-=======
 blib
 Makefile*
 !Makefile.PL
 pm_to_blib
 MANIFEST*
 !Manifest.SKIP
-ExtUtils-Depends-*
 MYMETA.*
-.*.swp
->>>>>>> perl-toolkit

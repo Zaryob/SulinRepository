@@ -36,7 +36,6 @@
         <Name>linux</Name>
         <RuntimeDependencies>
             <Dependency>linux-firmware</Dependency>
-            <Dependency>grub2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable" permanent="true">/boot</Path>

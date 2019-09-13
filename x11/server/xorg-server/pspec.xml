@@ -96,6 +96,7 @@
             <Dependency>libepoxy</Dependency>
             <Dependency>libxkbfile</Dependency>
             <Dependency>xorg-app</Dependency>
+            <Dependency>xterm</Dependency>
             <Dependency>nettle</Dependency>
         </RuntimeDependencies>
         <Files>
