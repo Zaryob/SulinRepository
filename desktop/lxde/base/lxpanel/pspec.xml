@@ -25,8 +25,11 @@
             <Dependency>lxde-menu-cache-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libwnck3-devel</Dependency>
-            <Dependency>keybinder3</Dependency>
+            <Dependency>keybinder3-devel</Dependency>
       	    <Dependency>libfm-devel</Dependency>
+      	    <Dependency>libXtst-devel</Dependency>
+      	    <Dependency>at-spi2-atk</Dependency>
+      	    <Dependency>at-spi2-core</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -45,6 +48,7 @@
             <Dependency>alsa-lib</Dependency>
             <Dependency>libwnck3</Dependency>
             <Dependency>keybinder3</Dependency>
+            <Dependency>libXtst</Dependency>
             <Dependency>libfm</Dependency>
         </RuntimeDependencies>
         <Files>

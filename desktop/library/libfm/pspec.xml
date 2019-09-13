@@ -45,12 +45,6 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libexif</Dependency>
         </RuntimeDependencies>
-        <Replaces>
-            <Package>lxshortcut</Package>
-        </Replaces>
-        <Conflicts>
-            <Package>lxshortcut</Package>
-        </Conflicts>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
