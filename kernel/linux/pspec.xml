@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>linux</Name>
+        <Homepage>http://www.kernel.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>kernel</IsA>
+        <PartOf>kernel.linux</PartOf>
+        <Summary>The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
+        <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
+        <Archive sha1sum="5922cd5f5d3decf6e39beadc5efce073aae474a2" type="tarxz">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.2.14.tar.xz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.2.14</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>bc</Dependency>
+            <Dependency>cpio</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>diffutils</Dependency>
+            <Dependency>xmlto</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch compressionType="xz">patches/linux/patch-5.2.14.xz</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>linux</Name>
+        <RuntimeDependencies>
+            <Dependency>linux-firmware</Dependency>
+            <Dependency>grub2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable" permanent="true">/boot</Path>
+            <Path fileType="library" permanent="true">/lib/modules</Path>
+            <Path fileType="data">/etc/kernel</Path>
+            <Path fileType="config" permanent="true">/etc/mkinitcpio.d</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <Package>
+        <Name>linux-module-headers</Name>
+        <Summary>Kernel header files for external module building</Summary>
+        <Description>kernel-module-headers includes the C header files and the necessary Kbuild files for being able to build external kernel modules.</Description>
+        <Files>
+            <Path fileType="header">/usr/src/linux-headers*</Path>
+            <Path fileType="header">/tmp-headers*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>linux-headers</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Header files for the Linux kernel for use by glibc</Summary>
+        <Description>kernel-headers includes the C header files that specify the interface between the Linux kernel and userspace libraries and programs. The header files define structures and constants that are needed for building most standard programs and are also needed for rebuilding the glibc package.</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>linux-docs</Name>
+        <Summary>Documentation and scripts for the Linux kernel</Summary>
+        <Description>kernel-docs includes several documentation files and scripts for managing several debugging and other tasks.</Description>
+        <Files>
+            <Path fileType="header">/usr/src/linux-headers*/Documentation</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-12</Date>
+            <Version>5.2.14</Version>
+            <Comment>First release</Comment>
+            <Type package="kernel">security</Type>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

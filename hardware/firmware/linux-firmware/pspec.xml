@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>linux-firmware</Name>
+        <Homepage>http://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>ipw2100-fw</License>
+        <License>ipw2200-fw</License>
+        <License>freedist</License>
+        <License>GPLv2+</License>
+        <License>GPLv2</License>
+        <License>MIT</License>
+        <IsA>data</IsA>
+        <Summary>Firmware files used by the Linux kernel</Summary>
+        <Description>linux-firmware contains different firmware files required for some devices to operate correctly.</Description>
+        <Archive sha1sum="59004c56ac522ac14b61353ea456bd7adbaec15e" type="targz">https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-20190815.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>linux-firmware</Name>
+        <Files>
+            <Path fileType="data">/lib/firmware</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <History>
+         <Update release="1">
+            <Date>2019-09-11</Date>
+            <Version>20190815</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
