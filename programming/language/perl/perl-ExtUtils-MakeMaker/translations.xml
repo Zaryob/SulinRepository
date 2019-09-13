@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-ExtUtils-PkgConfig</Name>
+        <Summary xml:lang="tr">Bir modül Makefile oluşturun </Summary>
+        <Description xml:lang="tr"> Bu yardımcı program, bir Makefile.PL dosyasındaki bir uzantı modülü için Makefile yazmak üzere tasarlanmıştır. Andy Dougherty ve perl-porters tarafından sağlanan Makefile.SH modeline dayanmaktadır.</Description>
+    </Source>
+</INARY>

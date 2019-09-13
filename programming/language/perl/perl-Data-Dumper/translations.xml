@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-Data-Dumper</Name>
+        <Summary xml:lang="tr">Hem yazdırmaya hem de değerlendirmeye uygun, genişletilmiş perl veri yapıları </Summary>
+        <Description xml:lang="tr">Bir skalar listesi veya referans değişkenleri göz önüne alındığında, içeriklerini perl sözdiziminde yazar. Referanslar ayrıca nesneler olabilir. Her değişkenin içeriği tek bir Perl ifadesinde çıkar. Kendi kendine başvuru yapıları doğru şekilde işler.</Description>
+    </Source>
+</INARY>
