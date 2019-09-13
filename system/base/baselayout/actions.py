@@ -8,6 +8,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="."
 
 def install():
     for i in {"/bin", "/sbin", "/lib", "/lib32", 
@@ -19,16 +20,11 @@ def install():
               "/usr/local/lib32"}:
         inarytools.dodir(i)
 
+    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
     def chmod(path, mode):
         shelltools.chmod("%s%s" % (get.installDIR(), path), mode)
 
-    # Install everything
-    inarytools.insinto("/etc", "root/etc/*")
-    inarytools.insinto("/usr/share", "root/usr/share/*")
-    inarytools.insinto("/boot", "root/boot/*")
-    
-
-    # Adjust permissions
+# Adjust permissions
     chmod("/tmp", 0o1777)
     chmod("/var/tmp", 0o1777)
     chmod("/run/shm", 0o1777)

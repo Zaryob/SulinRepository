@@ -48,7 +48,7 @@
               <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <AdditionalFiles>
-              <AdditionalFile target="/etc/init.d/elogind">elogind.conf.in</AdditionalFile>
+              <AdditionalFile target="/etc/init.d/elogind">elogind.init</AdditionalFile>
               <AdditionalFile target="/etc/conf.d/elogind">elogind.conf.in</AdditionalFile>
         </AdditionalFiles>
 

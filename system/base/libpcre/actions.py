@@ -18,6 +18,9 @@ def setup():
                          --enable-utf \
                          --enable-unicode-properties \
                          --enable-cpp \
+                         --enable-pcregrep-libz \
+                         --enable-pcregrep-libbz2 \
+                         --enable-pcretest-libreadline \
                          --docdir=/%s/%s \
                          --disable-static" % (get.docDIR(), get.srcNAME()))
     

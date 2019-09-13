@@ -14,7 +14,7 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-        <Archive sha1sum="da22e6283ca02fa51cda3161b303dc8ba4da517b" type="targz">baselayout-3.10.2.tar.gz</Archive>
+        <Archive sha1sum="78e6713aba6792ce9d36cde5db1a0616d663a4ac" type="tarbz2">baselayout-2.12-.tar.bz2</Archive>
     </Source>
 
     <Package>
@@ -65,7 +65,7 @@
     <History>
         <Update release="1">
             <Date>2019-09-04</Date>
-            <Version>3.10.2</Version>
+            <Version>2.12</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
