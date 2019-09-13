@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libmtdev</Name>
+        <Homepage>http://bitmath.org/code/mtdev</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>hardware.misc</PartOf>
+        <Summary>Multitouch Protocol Translation Library</Summary>
+        <Description>The libmtdev is a stand-alone library which transforms all variants of kernel MT events to the slotted type B protocol.</Description>
+        <Archive sha1sum="346115a91b68652170d02d7b1c0722cf1cacf4eb" type="targz">http://bitmath.org/code/mtdev/mtdev-1.1.5.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libmtdev</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libmtdev-devel</Name>
+        <Summary>Development files of libmtdev</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libmtdev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+       <Name>libmtdev-32bit</Name>
+       <PartOf>emul32</PartOf>
+       <Summary>32-bit shared libraries for libmtdev</Summary>
+       <BuildType>emul32</BuildType>
+       <BuildDependencies>
+
+       </BuildDependencies>
+       <RuntimeDependencies>
+           <Dependency release="current">libmtdev</Dependency>
+
+       </RuntimeDependencies>
+       <Files>
+           <Path fileType="library">/usr/lib32</Path>
+       </Files>
+   </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.1.5</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

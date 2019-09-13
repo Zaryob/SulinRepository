@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-chips</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org chips video driver</Summary>
+        <Description>xorg-video-chips contains the X.Org driver for Chips and Technologies boards.</Description>
+        <Archive sha1sum="0473ffff505b8c53a2bd7c4f8304278b657ab3b9" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-chips-1.4.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-chips</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

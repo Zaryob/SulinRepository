@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>odroid-xu3-libgl</Name>
+        <Homepage>http://www.hardkernel.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>custom</License>
+        <Summary>ODROID-XU3/XU4 Mali driver</Summary>
+        <Description>ODROID-XU3/XU4 Mali driver</Description>
+        <Archive sha1sum="6e0fbac0093c96c90b5fb802dfb527fa51484155" type="binary">https://sourceforge.net/projects/limeteam/files/source-sulin/sulin.git</Archive>
+        <BuildDependencies>
+            <Dependency>mesa</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>odroid-xu3-libgl</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="include">/usr/include</Path>
+            <Path fileType="data">/etc</Path>
+	    <Path fileType="data">/usr/share</Path>
+	<AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/ld.so.conf.d/mali-xu3.conf">mali-xu3.conf</AdditionalFile>
+        </AdditionalFiles>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>20160805</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

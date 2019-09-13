@@ -14,8 +14,9 @@
         <PartOf>x11.server</PartOf>
         <Summary>X.Org X Server</Summary>
         <Description>X server is the main application that allows a graphical interface.</Description>
-        <Archive sha1sum="1a79da92122124cb782a4eebfd83fd33d5c0d7d4" type="tarbz2">mirrors://xorg/individual/xserver/xorg-server-1.20.4.tar.bz2</Archive>
+        <Archive sha1sum="fea6fd34c7f48b3c69fbecd8fb294eaa1498e69c" type="tarbz2">mirrors://xorg/individual/xserver/xorg-server-1.20.5.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>meson</Dependency>
             <Dependency>font-util</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>libdmx-devel</Dependency>
@@ -38,7 +39,7 @@
             <Dependency>libXv-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
-            <Dependency>xorg-app</Dependency>
+            <Dependency>xorg-app-devel</Dependency>
             <Dependency>nettle-devel</Dependency>
             <Dependency>libepoxy-devel</Dependency>
             <Dependency>xcb-util-devel</Dependency>
@@ -54,6 +55,7 @@
             <Dependency>libXau-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
+            <Dependency>egl-wayland</Dependency>
             <Dependency>wayland-devel</Dependency>
             <Dependency>wayland-protocols-devel</Dependency>
         </BuildDependencies>
@@ -69,6 +71,8 @@
             <Path fileType="data">/var/lib/xkb</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man/man1/Xserver.1</Path>
+            <Path fileType="man">/usr/share/man/man1/Xorg.wrap.1</Path>
+            <Path fileType="man">/usr/share/man/man5/Xwrapper.config.5</Path>
         </Files>
     </Package>
     <Package>
@@ -90,6 +94,8 @@
             <Dependency>libpciaccess</Dependency>
             <Dependency>libxshmfence</Dependency>
             <Dependency>libepoxy</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>xorg-app</Dependency>
             <Dependency>nettle</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -112,11 +118,6 @@
             <Path fileType="man">/usr/share/man/man5/xorg.conf.5</Path>
             <Path fileType="man">/usr/share/man/man5/xorg.conf.d.5</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0755" target="/usr/libexec/xorg-save-xkb-config.sh">xorg-save-xkb-config.sh</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/DriversDB">DriversDB</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/xorg.conf.d/10-quirks.conf">10-quirks.conf</AdditionalFile>
-        </AdditionalFiles>
     </Package>
     <Package>
         <Name>xorg-server-xdmx</Name>
@@ -213,10 +214,6 @@
             <Path fileType="executable">/usr/bin/[Xx]vfb*</Path>
             <Path fileType="man">/usr/share/man/man1/Xvfb.1</Path>
         </Files>
-        <AdditionalFiles>
-            <!-- xvfb-run script from http://svn.exactcode.de/t2/trunk/package/xorg/xorg-server/xvfb-run.sh -->
-            <AdditionalFile owner="root" permission="0755" target="/usr/bin/xvfb-run">xvfb-run.sh</AdditionalFile>
-        </AdditionalFiles>
     </Package>
     <Package>
         <Name>xorg-server-xnest</Name>
@@ -255,6 +252,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-12</Date>
+            <Version>1.20.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.20.4</Version>

@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libmtp</Name>
+        <Homepage>http://libmtp.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <PartOf>hardware.misc</PartOf>
+        <Summary>An implementation of Microsoft's Media Transfer Protocol (MTP)</Summary>
+        <Description>libmtp is an implementation of Microsoft's Media Transfer Protocol (MTP) in the form of a library suitable primarily for POSIX compliant operating systems.</Description>
+        <Archive sha1sum="c043053b0f219ab8968cc183f3a4477ae3337f6d" type="targz">mirrors://sourceforge/libmtp/1.1.15/libmtp-1.1.15.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>doxygen</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libmtp</Name>
+        <RuntimeDependencies>
+            <Dependency>libusb</Dependency>
+            <Dependency>libgcrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libmtp.*</Path>
+            <Path fileType="executable">/lib/udev</Path>
+            <Path fileType="data">/usr/share/hal</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libmtp-devel</Name>
+        <Summary>Development files for libmtp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libmtp</Dependency>
+            <Dependency>libusb-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.1.15</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

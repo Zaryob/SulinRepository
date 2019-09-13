@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-input-wacom</Name>
+        <Homepage>http://linuxwacom.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>Input driver for Wacom tablets and drawing devices</Summary>
+        <Description>xorg-input-wacom includes the drivers and tools for Wacom devices.</Description>
+        <Archive sha1sum="5ad9c7578cf3dfff994d6caf8764d864cc26a152" type="tarbz2">mirrors://sourceforge/linuxwacom/xf86-input-wacom/xf86-input-wacom-0.34.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-input-wacom</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>xorg-server</Dependency>
+            <Dependency>eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/lib/udev</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="data">/usr/share/X11</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/70-wacom.rules">70-wacom.rules</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>xorg-input-wacom-devel</Name>
+        <Summary>Development files for xorg-input-wacom</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xorg-input-wacom</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/isdv4-serial-debugger</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>0.34.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

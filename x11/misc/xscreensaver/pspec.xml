@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xscreensaver</Name>
+        <Homepage>http://www.jwz.org/xscreensaver/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <Icon>xscreensaver</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A collection of screensavers for the X Window System</Summary>
+        <Description>XScreenSaver is the standard screen saver collection shipped on most Linux and Unix systems running the X11 Window System.</Description>
+        <Archive sha1sum="7a0e24b224e1316f0a211446db301de1c22daaa0" type="targz">http://www.jwz.org/xscreensaver/xscreensaver-5.43.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>bc</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xscreensaver</Name>
+        <RuntimeDependencies>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>mesa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/lib/X11/app-defaults</Path>
+            <Path fileType="data">/usr/share/X11</Path>
+            <Path fileType="data">/usr/share/xscreensaver/config</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xscreensaver-demo</Name>
+        <Summary>The XScreenSaver Control Panel</Summary>
+        <RuntimeDependencies>
+            <Dependency>libglade</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency versionFrom="current">xscreensaver</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/xscreensaver-demo</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/xscreensaver/glade</Path>
+            <Path fileType="man">/usr/share/man/man1/xscreensaver-demo.1</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-12</Date>
+            <Version>5.43</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

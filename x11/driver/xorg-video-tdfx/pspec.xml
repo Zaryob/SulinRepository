@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-tdfx</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org tdfx video driver</Summary>
+        <Description>xorg-video-tdfx contains the X.Org driver for Voodoo cards.</Description>
+        <Archive sha1sum="536e3136b85e44deab36be3bf24983453ac0422a" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-tdfx-1.4.7.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-tdfx</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.4.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>eglexternalplatform</Name>
+        <Homepage>https://github.com/NVIDIA/egl-wayland</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>header</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>EGL platform.</Summary>
+        <Description>EGLStream-based Wayland external platform.</Description>
+        <Archive sha1sum="79c61d30dda818d611f6852e283821e4184c9e56" type="targz">https://github.com/NVIDIA/eglexternalplatform/archive/1.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>eglexternalplatform</Name>
+        <IsA>header</IsA>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-12</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

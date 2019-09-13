@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-input-libinput</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>Generic input driver for the X.Org server based on libinput</Summary>
+        <Description>Generic input driver for the X.Org server based on libinput</Description>
+        <Archive sha1sum="ca348b6ad4d0830b5876a2f4a09e1d0e7c36678d" type="tarbz2">mirrors://xorg/individual/driver/xf86-input-libinput-0.24.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>util-macros</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-input-libinput</Name>
+        <RuntimeDependencies>
+            <Dependency>libinput</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/X11/xorg.conf.d</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xorg-input-libinput-devel</Name>
+        <Summary>Development files for xorg-input-libinput</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">xorg-input-libinput</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>0.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

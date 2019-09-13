@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libgudev</Name>
+        <Homepage>https://wiki.gnome.org/Projects/libgudev</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPL2</License>
+        <Icon>eudev</Icon>
+        <IsA>library</IsA>
+        <Summary>GObject bindings for Udev (Eudev)</Summary>
+        <Description>GObject bindings for Udev (Eudev)</Description>
+        <Archive sha1sum="fa8591ea85b65da58f418ce2fb30a146541a7ca2" type="tarxz">https://download.gnome.org/sources/libgudev/233/libgudev-233.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgudev</Name>
+        <RuntimeDependencies>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgudev-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for libgudev</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libgudev</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/gudev-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>233</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

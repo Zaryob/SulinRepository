@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-neomagic</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org neomagic video driver</Summary>
+        <Description>xorg-video-neomagic contains the X.Org driver for NeoMagic cards.</Description>
+        <Archive sha1sum="63762e9144926c0071f86a5a3c2bc88c02db5a4b" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-neomagic-1.2.9.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-neomagic</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.2.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

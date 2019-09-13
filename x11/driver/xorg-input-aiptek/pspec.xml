@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!-- ATTENTION: This source cannot compiled successfully because of various problem caused by source. Just wait patches-->
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-input-aiptek</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org aiptek input driver</Summary>
+        <Description>xorg-input-aiptek contains the X.Org driver for Aiptek HyperPen USB-based tablet devices.</Description>
+        <Archive sha1sum="55ea7d12d3e24fd72eacc966a59262864dce7769" type="tarbz2">mirrors://xorg/individual/driver/xf86-input-aiptek-1.4.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-input-aiptek</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

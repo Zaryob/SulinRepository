@@ -23,17 +23,14 @@ def setup():
         print ("\nConfiguring %s..." % package)
         print ("-" * (len(package) + 15))
         shelltools.cd(package)
-
-        if package.startswith(("xcursorgen", "xsm")) or \
-                not shelltools.isFile("configure"):
-            autotools.autoreconf("-vif")
-        elif package.startswith("luit"):
+        if package.startswith("luit"):
             inarytools.dosed("configure.ac", "(-D_XOPEN_SOURCE)=500", "\\1=600")
             autotools.autoreconf("-vif")
 
-        autotools.configure("--disable-dependency-tracking \
-                             --disable-devel-docs \
-                             --with-cpp=/usr/bin/mcpp")
+        autotools.autoreconf("-vif")
+
+        autotools.configure()
+
         shelltools.cd("../")
 
 def build():
@@ -43,6 +40,8 @@ def build():
 
         shelltools.cd(package)
         if package.startswith("xfwp"): inarytools.dosed("io.c", "^(#include <unistd.h>)", r"#define __USE_XOPEN\n\1")
+        print ("\nBuilding %s..." % package)
+        print ("-" * (len(package) + 15))
         autotools.make()
         shelltools.cd("../")
 

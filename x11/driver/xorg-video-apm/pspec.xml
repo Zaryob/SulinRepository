@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-apm</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org apm video driver</Summary>
+        <Description>xorg-video-apm contains the X.Org driver for Alliance Promotion cards.</Description>
+        <Archive sha1sum="a4cdb587f94c0fd28bea92b2469ea1e55d6d6589" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-apm-1.2.5.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+            <Dependency>xorg-proto</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">git-fix.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-apm</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.2.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

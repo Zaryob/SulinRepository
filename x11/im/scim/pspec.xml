@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>scim</Name>
+        <Homepage>http://www.scim-im.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <PartOf>x11.im</PartOf>
+        <Summary>Smart Common Input Method - framework for Input Methods</Summary>
+        <Description>Smart Common Input Method (SCIM) is a framework for Input Methods. It is a modular and flexible approach for authoring and using Input Methods for X11 platform.</Description>
+        <Archive sha1sum="6fee79db6888738d8719ee72944d5ff5c96a06df" type="targz">https://github.com/scim-im/scim/archive/1.4.18.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>scim-core</Name>
+        <Summary>Core of SCIM for users</Summary>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>scim-libs</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>scim-libs</Name>
+        <Summary>Libraries of SCIM</Summary>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>libtool-ltdl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libscim-*</Path>
+            <Path fileType="library">/usr/lib/scim-1.0/*/Config</Path>
+            <Path fileType="library">/usr/lib/scim-1.0/*/IMEngine</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>scim-devel</Name>
+        <Summary>Includes and pkgconfig for scim development</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">scim-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>scim-immodule-gtk3</Name>
+        <Summary>IM Module for GTK3 applications</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/gtk-3.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>scim-immodule-gtk2</Name>
+        <Summary>IM Module for GTK2 applications</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/gtk-2.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>1.4.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

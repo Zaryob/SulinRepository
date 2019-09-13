@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libinput</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/libinput/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>X11</License>
+        <IsA>app:console</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>library that handles input devices for display servers and other applications that need to directly deal with input devices.</Summary>
+        <Description>It provides device detection, device handling, input device event processing and abstraction so minimize the amount of custom input code the user of libinput need to provide the common set of functionality that users expect.</Description>
+        <Archive sha1sum="116438b914342a0b45dcea1804aab751c9d335df" type="tarxz">https://www.freedesktop.org/software/libinput/libinput-1.14.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libevdev</Dependency>
+            <Dependency>libmtdev-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libinput</Name>
+        <RuntimeDependencies>
+            <Dependency>libevdev</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>libmtdev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/man/man1</Path>
+            <Path fileType="data">/usr/share/libinput</Path>
+            <Path fileType="config">/usr/share/zsh</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

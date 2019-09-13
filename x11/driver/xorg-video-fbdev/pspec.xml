@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-fbdev</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org fbdev video driver</Summary>
+        <Description>xorg-video-fbdev contains the X.Org driver for Linux framebuffer device.</Description>
+        <Archive sha1sum="237ea14a55ca4012d6ce18fbfdc697d48d5838a2" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-fbdev-0.4.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch level="1">git-fixes.diff</Patch> -->
+            <!-- causes problem with version 0.4.3 -->
+            <!--Patch level="1">BGNoneRoot.patch</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-fbdev</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>0.4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

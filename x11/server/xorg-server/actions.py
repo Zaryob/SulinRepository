@@ -13,7 +13,6 @@ def setup():
     autotools.autoreconf("-fi")
 
     autotools.configure("--enable-install-libxf86config \
-                         --disable-systemd-logind \
                          --enable-aiglx \
                          --enable-glx-tls \
                          --enable-composite \
@@ -24,7 +23,6 @@ def setup():
                          --enable-glamor \
                          --enable-xwayland \
                          --enable-config-udev \
-                         --disable-config-hal \
                          --enable-xfree86-utils \
                          --enable-xorg \
                          --enable-dmx \
@@ -36,13 +34,12 @@ def setup():
                          --enable-kdrive-kbd \
                          --enable-kdrive-mouse \
                          --enable-xephyr \
-                         --disable-xfake \
-                         --disable-xfbdev \
-                         --disable-devel-docs \
+                         --enable-xfake \
+                         --enable-xfbdev \
+                         --enable-devel-docs \
                          --disable-static \
                          --without-doxygen \
                          --with-pic \
-                         --without-dtrace \
                          --with-int10=x86emu \
                          --with-os-name=\"Sulin\" \
                          --with-os-vendor=\"Sulin Community\" \

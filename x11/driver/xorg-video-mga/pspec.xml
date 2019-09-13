@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-mga</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org mga video driver</Summary>
+        <Description>xorg-video-mga contains the X.Org driver for Matrox cards.</Description>
+        <Archive sha1sum="a21605f79694ac2b57fe1abaf049732ac60ac90b" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-mga-1.6.5.tar.bz2</Archive>
+        <Patches>
+<!--             <Patch level="1">mga-1.4.5-no-hal-advertising.patch</Patch> -->
+<!--             <Patch level="1">mga-1.4.12-bigendian.patch</Patch> -->
+<!--             <Patch level="1">mga-1.6.2-shadowfb.patch</Patch> -->
+        </Patches>
+        <BuildDependencies>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-mga</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.6.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libva</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/vaapi</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>Video Acceleration (VA) API for Linux</Summary>
+        <Description>libva is a library providing the VA API video acceleration API.</Description>
+        <Archive sha1sum="18e46f3d5a0e971eb0ec9fe14bc021e69eb13fb8" type="tarbz2">https://www.freedesktop.org/software/vaapi/releases/libva/libva-1.7.3.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libva</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>wayland-client</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libva-devel</Name>
+        <Summary>Development files for libva</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libva</Dependency>
+            <Dependency>wayland-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libva-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libva</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libdrm-32bit</Dependency>
+            <Dependency>wayland-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXfixes-32bit</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libva</Dependency>
+            <Dependency>libdrm-32bit</Dependency>
+            <Dependency>wayland-32bit</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXfixes-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1.7.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+      </Update>
+    </History>
+</INARY>

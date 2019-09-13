@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!-- ATTENTION: This source cannot compiled successfully because of various problem caused by source. Just wait patches-->
+<!DOCTYPE  INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-geode</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <!--ExcludeArch>x86_64</ExcludeArch-->
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org geode video driver</Summary>
+        <Description>xorg-video-geode contains the X.Org driver for AMD Geode video cards.</Description>
+        <Archive sha1sum="aaa8bc5be88f22b802c01cad813c259f02a46945" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-geode-2.11.19.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-geode</Name>
+        <RuntimeDependencies>
+            <Dependency>xorg-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xorg</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>2.11.19</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
