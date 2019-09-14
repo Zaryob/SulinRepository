@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>libatomic_ops</Name>
