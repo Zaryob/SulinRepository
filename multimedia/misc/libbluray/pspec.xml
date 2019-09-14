@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libbluray</Name>
+        <Homepage>http://www.videolan.org/developers/libbluray.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.misc</PartOf>
+        <Summary>Library to access Blu-Ray disks for video playback</Summary>
+        <Description>Libbluray package is aiming to provide a full portable free open source bluray library, which can be plugged into popular media players to allow full bluray navigation and playback on Linux. It will eventually be compatible with all current titles, and will be easily portable and embeddable in standard players such as mplayer and vlc.</Description>
+        <Archive sha1sum="3885c0d0bd0f04a3a372ceec3a01a44a7624f272" type="tarbz2">http://ftp.videolan.org/pub/videolan/libbluray/1.1.2/libbluray-1.1.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libtool</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libbluray</Name>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libbluray-devel</Name>
+        <Summary>Development files for libbluray</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libbluray</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libbluray-docs</Name>
+        <Summary>document files for libbluray</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libbluray</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>1.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

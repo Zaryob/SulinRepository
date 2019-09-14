@@ -139,6 +139,7 @@
             <Dependency>libXinerama-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

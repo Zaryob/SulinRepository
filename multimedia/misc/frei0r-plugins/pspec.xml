@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>frei0r-plugins</Name>
+        <Homepage>http://www.piksel.org/frei0r</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.misc</PartOf>
+        <Summary>A plugin API for video sources and filters</Summary>
+        <Description>frei0r-plugins is a minimalistic plugin API for video sources and filters. The behaviour of the effects can be controlled from the host by simple parameters. The intent is to solve the recurring reimplementation or adaptation issue of standard effects.</Description>
+        <Archive sha1sum="e76c4608aff637822bbde8bf0b2a8ce0440b0141" type="targz">https://files.dyne.org/frei0r/frei0r-plugins-1.6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>frei0r-plugins</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>frei0r-plugins-devel</Name>
+        <Summary>Development files for frei0r-plugins</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">frei0r-plugins</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>1.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

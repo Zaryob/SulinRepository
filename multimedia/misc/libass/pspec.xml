@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libass</Name>
+        <Homepage>https://github.com/libass/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.misc</PartOf>
+        <Summary>Subtitle rendering library</Summary>
+        <Description>libass is a portable subtitle rendering library for the ASS/SSA.</Description>
+        <Archive sha1sum="e7335c043445e6febaa6330fc38828b00c526cac" type="tarxz">https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fridibi-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libass</Name>
+        <RuntimeDependencies>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fridibi</Dependency>
+            <Dependency>harfbuzz</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/libass</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libass-devel</Name>
+        <Summary>Development files for libass</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libass</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fribidi-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.14.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

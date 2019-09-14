@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>celt</Name>
+        <Homepage>http://www.celt-codec.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.sound</PartOf>
+        <Summary>An audio codec for use in low-delay speech and audio communication</Summary>
+        <Description>CELT (Constrained Energy Lapped Transform) is an ultra-low delay audio codec designed for realtime transmission of high quality speech and audio. This is meant to close the gap between traditional speech codecs (such as Speex) and traditional audio codecs (such as Vorbis).</Description>
+        <Archive sha1sum="7730b96a6615183505e5ff23cd9b4fea83540e15" type="targz">https://ftp.osuosl.org/pub/xiph/releases/celt/celt-0.11.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libogg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>celt</Name>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <RuntimeDependencies>
+            <Dependency>libogg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>celt-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development files for celt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">celt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.11.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

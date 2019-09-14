@@ -6,7 +6,7 @@
         <Homepage>http://sourceforge.net/projects/giflib</Homepage>
         <Packager>
             <Name>Suleyman Poyraz</Name>
-              <Email>zaryob.dev@gmail.com</Email>
+            <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>MIT</License>
         <IsA>library</IsA>
