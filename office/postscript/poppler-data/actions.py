@@ -8,14 +8,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
-def setup():
-    autotools.configure("--disable-static \
-                         --enable-shared")
-
-def build():
-    autotools.make()
-
 def install():
-    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
+    autotools.rawInstall("DESTDIR=%s datadir=/usr/share/" % get.installDIR())
 
-    inarytools.dodoc("README", "NEWS", "COPYING", "ChangeLog", "RELEASE-NOTES")
+    inarytools.dodoc("COPYING*", "README")

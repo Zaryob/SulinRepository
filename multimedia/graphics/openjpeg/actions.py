@@ -17,15 +17,18 @@ def build():
 
 def install():
     if get.buildTYPE() == "emul32":
-        inarytools.insinto("/usr/lib32", "libopenjpeg/.libs/libopenjpeg.so*")
-        inarytools.insinto("/usr/lib32/pkgconfig", "libopenjpeg1.pc")
-        inarytools.dosed("%s//usr/lib32/pkgconfig/libopenjpeg1.pc" % get.installDIR(),
+        inarytools.insinto("/usr/lib32", "bin/libopenjp2*")
+        inarytools.insinto("/usr/lib32/pkgconfig", "libopenjp2.pc")
+        inarytools.dosed("%s/usr/lib32/pkgconfig/libopenjp2.pc" % get.installDIR(),
                         get.emul32prefixDIR(),
                         get.defaultprefixDIR())
+        inarytools.dosed("%s/usr/lib32/pkgconfig/libopenjp2.pc" % get.installDIR(),
+                        "/lib",
+                        "/lib32")
         return
 
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.dosym("openjpeg-1.5/openjpeg.h", "/usr/include/openjpeg.h")
+    inarytools.dosym("openjpeg-2.3/openjpeg.h", "/usr/include/openjpeg.h")
 
     inarytools.dodoc("README*")

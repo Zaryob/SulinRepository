@@ -26,7 +26,7 @@
         <RuntimeDependencies>
             <Dependency>libpng</Dependency>
             <Dependency>tiff</Dependency>
-	    <Dependency>lcms2</Dependency>
+	          <Dependency>lcms2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -36,6 +36,21 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>openjpeg-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libpng-32bit</Dependency>
+            <Dependency>tiff-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libpng-32bit</Dependency>
+            <Dependency>tiff-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
         </Files>
     </Package>
 

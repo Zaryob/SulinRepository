@@ -13,13 +13,13 @@ from inary.actionsapi import get
 def setup():
     shelltools.makedirs("inary-build")
     shelltools.cd("inary-build")
-    cmaketools.configure("    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_INSTALL_LIBDIR=lib{} \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DJAS_ENABLE_OPENGL=ON \
-    -DJAS_ENABLE_LIBJPEG=ON \
-    -DJAS_ENABLE_AUTOMATIC_DEPENDENCIES=OFF \
-    -DCMAKE_SKIP_RPATH=ON".format("32" if get.buildTYPE() == "emul32" else ""), sourceDir="..")
+    cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
+                          -DCMAKE_INSTALL_LIBDIR=lib{} \
+                          -DCMAKE_BUILD_TYPE=Release \
+                          -DJAS_ENABLE_OPENGL=ON \
+                          -DJAS_ENABLE_LIBJPEG=ON \
+                          -DJAS_ENABLE_AUTOMATIC_DEPENDENCIES=OFF \
+                          -DCMAKE_SKIP_RPATH=ON".format("32" if get.buildTYPE() == "emul32" else ""), sourceDir="..")
 
 def build():
     shelltools.cd("inary-build")

@@ -30,7 +30,24 @@
             <Path fileType="library">/usr/lib/libssh*</Path>
         </Files>
     </Package>
-
+    <Package>
+        <Name>libssh2-32bit</Name>
+        <IsA>header</IsA>
+        <BuildType>emul32</BuildType>
+        <PartOf>emul32</PartOf>
+        <Summary>32bit libraries for libssh2</Summary>
+        <BuildDependencies>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libssh*</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>libssh2-devel</Name>
         <IsA>header</IsA>
@@ -42,6 +59,7 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
     <Package>
