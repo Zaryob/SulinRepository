@@ -1,0 +1,92 @@
+<INARY>
+    <Components>
+        <Component>
+            <Name>desktop</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>other</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lookandfeel</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>other</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>accessories</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>other.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce4.admin</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>other.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.library</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>multimedia.misc</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+    </Components>
+</INARY>
