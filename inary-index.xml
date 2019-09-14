@@ -92,9 +92,6 @@
 				<Dependency>libfm</Dependency>
 				<Dependency>pcmanfm</Dependency>
 				<Dependency>openbox</Dependency>
-				<Dependency>icon-theme-elemantary</Dependency>
-				<Dependency>polkit-gnome</Dependency>
-				<Dependency>gtk-theme-mediterranean-others</Dependency>
 			</RuntimeDependencies>
 			<Files>
 				<Path fileType="config">/etc</Path>
@@ -179,8 +176,11 @@
 				<Dependency>lxde-menu-cache-devel</Dependency>
 				<Dependency>gdk-pixbuf-devel</Dependency>
 				<Dependency>libwnck3-devel</Dependency>
-				<Dependency>keybinder3</Dependency>
+				<Dependency>keybinder3-devel</Dependency>
 				<Dependency>libfm-devel</Dependency>
+				<Dependency>libXtst-devel</Dependency>
+				<Dependency>at-spi2-atk</Dependency>
+				<Dependency>at-spi2-core</Dependency>
 			</BuildDependencies>
 			<SourceURI>desktop/lxde/base/lxpanel/pspec.xml</SourceURI>
 		</Source>
@@ -199,6 +199,7 @@
 				<Dependency>alsa-lib</Dependency>
 				<Dependency>libwnck3</Dependency>
 				<Dependency>keybinder3</Dependency>
+				<Dependency>libXtst</Dependency>
 				<Dependency>libfm</Dependency>
 			</RuntimeDependencies>
 			<Files>
@@ -767,48 +768,6 @@
 	</SpecFile>
 	<SpecFile>
 		<Source>
-			<Name>lxshortcut</Name>
-			<Homepage>http://www.lxde.org</Homepage>
-			<Packager>
-				<Name>Aydan Taşdemir</Name>
-				<Email>zaryob.dev@gmail.com</Email>
-			</Packager>
-			<License>GPLv3</License>
-			<IsA>app:gui</IsA>
-			<PartOf>desktop.lxde.base</PartOf>
-			<Summary xml:lang="en">LXDE tool to edit desktop entry files</Summary>
-			<Description xml:lang="en">lxshortcut is a LXDE tool to edit desktop entry files.</Description>
-			<Archive sha1sum="92e4510313b6c2225edc7dd49f6b4d889303ddc3" type="targz">https://downloads.sourceforge.net/lxde/lxshortcut-0.1.2.tar.gz</Archive>
-			<BuildDependencies>
-				<Dependency>gtk2-devel</Dependency>
-			</BuildDependencies>
-			<SourceURI>desktop/lxde/base/lxshortcut/pspec.xml</SourceURI>
-		</Source>
-		<Package>
-			<Name>lxshortcut</Name>
-			<RuntimeDependencies>
-				<Dependency>gtk2</Dependency>
-				<Dependency>gdk-pixbuf</Dependency>
-			</RuntimeDependencies>
-			<Files>
-				<Path fileType="executable">/usr/bin</Path>
-				<Path fileType="localedata">/usr/share/locale</Path>
-				<Path fileType="doc">/usr/share/doc</Path>
-				<Path fileType="data">/usr/share</Path>
-			</Files>
-		</Package>
-		<History>
-			<Update release="1">
-				<Date>2019-09-10</Date>
-				<Version>0.1.2</Version>
-				<Comment>First release.</Comment>
-				<Name>Süleyman Poyraz</Name>
-				<Email>zaryob.dev@gmail.com</Email>
-			</Update>
-		</History>
-	</SpecFile>
-	<SpecFile>
-		<Source>
 			<Name>libfm</Name>
 			<Homepage>http://pcmanfm.sourceforge.net</Homepage>
 			<Packager>
@@ -859,12 +818,6 @@
 				<Path fileType="doc">/usr/share/doc</Path>
 				<Path fileType="data">/usr/share</Path>
 			</Files>
-			<Conflicts>
-				<Package>lxshortcut</Package>
-			</Conflicts>
-			<Replaces>
-				<Package>lxshortcut</Package>
-			</Replaces>
 		</Package>
 		<Package>
 			<Name>libfm-devel</Name>
