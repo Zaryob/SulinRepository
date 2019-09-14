@@ -13,7 +13,7 @@ def setup():
     inarytools.dosed("configure.ac", '(AS_AC_EXPAND\(EXPANDED_LOCALSTATEDIR, )"\$localstatedir"\)', r'\1 "")')
     for f in ["bus/Makefile.am", "bus/Makefile.in"]:
         inarytools.dosed(f, "\$\(localstatedir\)(\/run\/dbus)", "\\1")
-    options = "\
+    options = "PYTHON=/usr/bin/python3 \
                --disable-selinux \
                --disable-static \
                --disable-tests \

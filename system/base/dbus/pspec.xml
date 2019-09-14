@@ -57,6 +57,10 @@
     <Package>
         <Name>dbus-x11</Name>
         <PartOf>x11.util</PartOf>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>libX11</Dependency>
             <Dependency>dbus</Dependency>
@@ -80,6 +84,9 @@
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="library">/usr/lib/dbus-1.0/include</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/include/dbus-1.0/dbus/dbus-arch-deps.h">dbus-arch-deps.h</AdditionalFile>
+        </AdditionalFiles>
     </Package>
     <Package>
         <Name>dbus-32bit</Name>
@@ -122,6 +129,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-14</Date>
+            <Version>1.12.12</Version>
+            <Comment>Added dbus-arch-deps.h into devel package.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-22</Date>
             <Version>1.12.12</Version>
