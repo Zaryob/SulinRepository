@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>The GNU Privacy Guard, a PGP replacement</Summary>
         <Description>GnuPG allows to encrypt and sign your data and communication, features a versatile key managment system as well as access modules for all kinds of public key directories.</Description>
-        <Archive sha1sum="b698012cc2d77c2652afd168a15e679d1394fa89" type="tarbz2">https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.17.tar.bz2</Archive>
+        <Archive sha1sum="12c1cee8871c03f0315fc8f27876364b75c95b12" type="tarbz2">https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.17.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>openldap-client</Dependency>
             <Dependency>pinentry</Dependency>

@@ -40,7 +40,7 @@
             <Dependency>nspr</Dependency>
             <Dependency>openssl</Dependency>
             <Dependency>cyrus-sasl</Dependency>
-            <Dependency>mariadb-client</Dependency>
+            <Dependency>mariadb-bin-client</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/openldap/ldap.conf*</Path>

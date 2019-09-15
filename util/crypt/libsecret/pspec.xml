@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libsecret</Name>
+        <Homepage>http://www.gnupg.org/aegypten/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>The libsecret package contains a GObject based library for accessing the Secret Service API.</Summary>
+        <Description>The libsecret package contains a GObject based library for accessing the Secret Service API.</Description>
+        <Archive sha1sum="d0c0f20d7dcf81e1a82c9335489389136c346434" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/libsecret/0.19/libsecret-0.19.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libsecret</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>valgrind</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libsecret-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency version="current">libsecret</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libsecret-devel</Name>
+        <Files>
+            <Path fileType="data">/usr/share/gir-1.0/Secret-1.gir</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="header">/usr/include/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency version="current">libsecret</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>0.19.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

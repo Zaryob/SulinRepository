@@ -28,12 +28,6 @@ def check():
 def install():
     autotools.rawInstall('DESTDIR=%s libexecdir="/usr/libexec"' % get.installDIR())
 
-    # Compat symlinks
-    inarytools.dosym("gpg2", "/usr/bin/gpg")
-    inarytools.dosym("gpgv2", "/usr/bin/gpgv")
-    inarytools.dosym("gpg2.1", "/usr/share/man/man1/gpg.1")
-    inarytools.dosym("gpgv2.1", "/usr/share/man/man1/gpgv.1")
-
     # Lets make doc
     inarytools.dohtml("doc/*")
     inarytools.dohtml("doc/gnupg.html/*")
