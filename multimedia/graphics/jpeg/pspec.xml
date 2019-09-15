@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>jpeg</Name>
+        <Homepage>http://www.ijg.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>Library to load, handle and manipulate images in the JPEG format</Summary>
+        <Description>jpeg is the library to load, handle and manipulate images in the JPEG format. It is used by many programs that operates on JPEG files.</Description>
+        <Archive sha1sum="15dd867617a88abd07573e06a86ace9bdb998ac2" type="targz">http://www.ijg.org/files/jpegsrc.v9b.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>jpeg</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>jpeg-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">jpeg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>jpeg-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for jpeg</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">jpeg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>9b</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

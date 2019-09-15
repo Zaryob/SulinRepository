@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtirpc</Name>
+        <Homepage>http://sourceforge.net/projects/libtirpc</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Transport Independent RPC library</Summary>
+        <Description>libtirpc contains a port of Sun's transport-independent RPC library to Linux. The library is intended as a replacement for the RPC code in the GNU C library, providing among others support for RPC (and in turn, NFS) over IPv6.</Description>
+        <Archive sha1sum="d85717035cb9bd6c45557a1eb1351d3af9a69ff7" type="tarbz2">https://downloads.sourceforge.net/libtirpc/libtirpc-1.1.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>e2fsprogs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libtirpc</Name>
+        <RuntimeDependencies>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib/*.so.*</Path>
+            <Path fileType="man">/usr/share/man/man5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>libtirpc-devel</Name>
+        <Summary>Development files for libtirpc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtirpc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/tirpc/netconfig.h</Path>
+            <Path fileType="header">/usr/include/tirpc/rpc</Path>
+            <Path fileType="header">/usr/include/tirpc/rpcsvc</Path>
+            <Path fileType="library">/usr/lib/*.so</Path>
+            <Path fileType="library">/usr/lib32/*.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtirpc-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libtirpc</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libtirpc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/*.so.*</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>1.1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

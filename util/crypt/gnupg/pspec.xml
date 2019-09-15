@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnupg</Name>
+        <Homepage>http://www.gnupg.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>app:console</IsA>
+        <Summary>The GNU Privacy Guard, a PGP replacement</Summary>
+        <Description>GnuPG allows to encrypt and sign your data and communication, features a versatile key managment system as well as access modules for all kinds of public key directories.</Description>
+        <Archive sha1sum="b698012cc2d77c2652afd168a15e679d1394fa89" type="tarbz2">https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.17.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>pinentry</Dependency>
+            <Dependency>npth-devel</Dependency>
+            <Dependency>libassuan-devel</Dependency>
+            <Dependency>libksba-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>texinfo</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libusb-compat-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        <!--<Patch level="1">protect-tool-env.patch</Patch>-->
+            <!--<Patch level="1">gnupg-1.9.3-use-ImageMagick-for-photo.patch</Patch>
+         <Patch level="1">gnupg-2.0.14-tests-s2kcount.patch</Patch>-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gnupg</Name>
+        <Replaces>
+            <Package>dirmngr</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>dirmngr</Package>
+        </Conflicts>
+        <RuntimeDependencies>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>npth</Dependency>
+            <Dependency>libassuan</Dependency>
+            <Dependency>pinentry</Dependency>
+            <Dependency>libksba</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libusb</Dependency>
+            <!-- For scdaemon -->
+            <Dependency>libusb-compat</Dependency>
+         </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/doc/html</Path>
+            <Path fileType="data">/usr/share/gnupg</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>gnupg-docs</Name>
+        <Summary>Documentation files for GnuPG</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnupg</Dependency>
+         </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/gnupg/html</Path>
+            <Path fileType="doc">/usr/share/gnupg/help.*</Path>
+            <Path fileType="doc">/usr/share/doc/gnupg/faq.html</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-01-25</Date>
+            <Version>2.1.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
