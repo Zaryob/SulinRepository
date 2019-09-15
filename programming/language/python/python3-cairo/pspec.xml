@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python3-cairo</Name>
+        <Homepage>http://cairographics.org/pycairo</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Python wrapper for cairo graphics library</Summary>
+        <Description>Pycairo is set of Python bindings for the cairo graphics library.</Description>
+        <Archive sha1sum="a8bbc00b500be85b2d2a2613b1f1103f30c2143d" type="targz">https://files.pythonhosted.org/packages/48/20/5e83af98eb897935bf7dc39455e892ba866feebb9b7c3b392982866f9958/pycairo-1.18.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>libtool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-cairo</Name>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-cairo-devel</Name>
+        <Summary>Development files for python3-cairo</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">python3-cairo</Dependency>
+            <Dependency>cairo-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>1.18.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

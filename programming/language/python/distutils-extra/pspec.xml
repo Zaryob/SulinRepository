@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>distutils-extra</Name>
+        <Homepage>https://launchpad.net/python-distutils-extra</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Enables you to easily integrate gettext support, themed icons and scrollkeeper based documentation into Python's distutils</Summary>
+        <Description>Enables you to easily integrate gettext support, themed icons and scrollkeeper based documentation into Python's distutils</Description>
+        <Archive type="targz" sha1sum="4de1f52a76593875e94c49e957b21102d3d567fd">https://launchpad.net/python-distutils-extra/trunk/2.39/+download/python-distutils-extra-2.39.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>python-distutils-extra</Name>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-distutils-extra</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-distutils-doc</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>2.39</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

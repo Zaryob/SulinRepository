@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-numpy</Name>
+        <Homepage>http://numeric.scipy.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>The fundamental package needed for scientific computing with Python</Summary>
+        <Description>Numpy contains a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, and useful linear algebra, Fourier transform, and random number capabilities.</Description>
+        <Archive sha1sum="78a5392d9a9d111e1cc5b148b9ec044422d89e0a" type="targz">https://github.com/numpy/numpy/releases/download/v1.16.5/numpy-1.16.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgfortran</Dependency>
+            <Dependency>lapack-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-numpy</Name>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python-nose</Dependency>
+            <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>blas</Dependency>
+            <Dependency>lapack</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/</Path>
+            <Path fileType="library">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>1.16.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

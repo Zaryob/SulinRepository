@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>utempter</Name>
+        <Homepage>http://www.redhat.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>Application that allows non-privileged applications to write utmp (login) info</Summary>
+        <Description>Utempter is a utility that allows non-privileged applications such as terminal emulators to modify the utmp database without having to setuid root.</Description>
+        <Archive sha1sum="1964279755290c4b576f2db0ed518e2b45a9ca53" type="tarbz2">ftp://ftp.altlinux.org/pub/people/ldv/utempter/libutempter-1.1.6.tar.bz2</Archive>
+        <Patches>
+            <Patch level="1">libutempter-pierelro.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>utempter</Name>
+        <Files>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>utempter-devel</Name>
+        <Summary>Development files for utempter</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">utempter</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>1.1.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

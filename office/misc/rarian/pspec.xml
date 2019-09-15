@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rarian</Name>
+        <Homepage>http://rarian.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>Documentation metadata library and scrollkeeper wrapper</Summary>
+        <Description>Rarian is a documentation metadata library based on the freedesktop.org specification and contains well-designed scrollkeeper wrapper.</Description>
+        <Archive sha1sum="9b3f1bad1cdbb0de51d6f74431b20eb3647edc5a" type="tarbz2">mirrors://gnome/rarian/0.8/rarian-0.8.1.tar.bz2</Archive>
+        <Patches>
+            <Patch>user-segfault.patch</Patch>
+            <Patch>01_info_shortnames.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>rarian</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/librarian</Path>
+            <Path fileType="data">/usr/share/xml</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd">scrollkeeper-omf.dtd</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>0.8.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
