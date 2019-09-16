@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-HTML-Parser</Name>
+        <Homepage>http://search.cpan.org/dist/HTML-Parser/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>HTML Parser</Summary>
+        <Description>The HTML-Parser distribution is a collection of modules that parse and extract information from HTML documents.</Description>
+        <Archive sha1sum="0d8491510f4e56588678ef0fd2b6ddee5d134137" type="targz">http://www.cpan.org/authors/id/G/GA/GAAS/HTML-Parser-3.72.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Test-Pod</Dependency>
+            <Dependency>perl-HTML-Tagset</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-HTML-Parser</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-HTML-Tagset</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/perl-HTML-Parser</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>3.72</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

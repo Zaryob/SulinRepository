@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-File-Listing</Name>
+        <Homepage>http://search.cpan.org/~gaas/File-Listing-6.04/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv2</License>
+        <PartOf>programming.language.perl</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>File::Listing - parse directory listing</Summary>
+        <Description>This module exports a single function called parse_dir(), which can be used to parse directory listings.</Description>
+        <Archive sha1sum="02a41fe1b91f3f198712965360192f31d6d8d74e" type="targz">https://cpan.metacpan.org/authors/id/G/GA/GAAS/File-Listing-6.04.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-HTTP-Date</Dependency>
+        </BuildDependencies>
+
+    </Source>
+    <Package>
+        <Name>perl-File-Listing</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-HTTP-Date</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>6.04</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-IO-Socket-SSL</Name>
+        <Homepage>http://search.cpan.org/dist/IO-Socket-SSL/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>Nearly transparent SSL encapsulation for IO::Socket::INET</Summary>
+        <Description>IO::Socket::SSL is a class implementing an object oriented interface to SSL sockets. The class is a descendent of IO::Socket::INET.</Description>
+        <Archive sha1sum="4eacd69b81f7edae24135a53411cf87429584289" type="targz">http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.066.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl-Net-SSLeay</Dependency>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-IO-Socket-SSL</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-Net-SSLeay</Dependency>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/perl-IO-Socket-SSL</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>2.066</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Net-SMTP-SSL</Name>
+        <Homepage>http://search.cpan.org/dist/Net-SMTP-SSL/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>SSL Support for Net::SMTP</Summary>
+        <Description>perl-NET-SMTP-SSL implements the same API as Net::SMTP but uses IO::Socket::SSL for its network operations.</Description>
+        <Archive sha1sum="2c84497109b0f92a8e3532f966421cc5a92c018b" type="targz">http://www.cpan.org/authors/id/R/RJ/RJBS/Net-SMTP-SSL-1.04.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-IO-Socket-SSL</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Net-SMTP-SSL</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-IO-Socket-SSL</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>1.04</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

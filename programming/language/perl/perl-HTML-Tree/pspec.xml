@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-HTML-Tree</Name>
+        <Homepage>http://search.cpan.org/dist/HTML-Tree/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>A Perl module that build and scan parse-trees of HTML</Summary>
+        <Description>Build and scan parse-trees of HTML. It allows to represent,create and extract information from HTML syntax trees.</Description>
+        <Archive sha1sum="2de118d967ce1616f039a1e77822cdb0b7155cb1" type="targz">https://cpan.metacpan.org/authors/id/K/KE/KENTNL/HTML-Tree-5.07.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-HTML-Tagset</Dependency>
+            <Dependency>perl-HTML-Parser</Dependency>
+            <Dependency>perl-Test-Exception</Dependency>
+            <Dependency>perl-Test-Pod-Coverage</Dependency>
+            <Dependency>perl-Module-Build</Dependency>
+            <Dependency>perl-Test-Fatal</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-HTML-Tree</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-HTML-Tagset</Dependency>
+            <Dependency>perl-HTML-Parser</Dependency>
+            <Dependency>perl-Test-Exception</Dependency>
+            <Dependency>perl-Test-Pod-Coverage</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>5.07</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

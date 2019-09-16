@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-JSON</Name>
+        <Homepage>http://search.cpan.org/dist/JSON/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>JSON (JavaScript Object Notation) encoder/decoder</Summary>
+        <Description>This module converts between JSON (JavaScript Object Notation) and Perl data structure into each other. For JSON, see http://www.crockford.com/JSON/.</Description>
+        <Archive sha1sum="73cc3ebd4a6081865cb54163ebb5deaae036be75" type="targz">https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.02.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-JSON-XS</Dependency>
+            <Dependency>perl-Test-Pod</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-JSON</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-JSON-XS</Dependency>
+            <Dependency>perl-Test-Pod</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>4.02</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

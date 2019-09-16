@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-HTML-FormatText-WithLinks</Name>
+        <Homepage>http://search.cpan.org/dist/HTML-FormatText-WithLinks</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>PerlArtistic GPL</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>HTML to text conversion with links as footnotes.</Summary>
+        <Description>HTML::FormatText::WithLinks takes HTML and turns it into plain text but prints all the links in the HTML as footnotes.</Description>
+        <Archive sha1sum="f1830637ab723f14b502c1205c8af5241d6c7bb6" type="targz">http://search.cpan.org/CPAN/authors/id/S/ST/STRUAN/HTML-FormatText-WithLinks-0.15.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-URI</Dependency>
+            <Dependency>perl-Module-Build</Dependency>
+            <Dependency>perl-HTML-Tree</Dependency>
+            <Dependency>perl-HTML-Format</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-HTML-FormatText-WithLinks</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-URI</Dependency>
+            <Dependency>perl-Module-Build</Dependency>
+            <Dependency>perl-HTML-Tree</Dependency>
+            <Dependency>perl-HTML-Format</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>0.15</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
