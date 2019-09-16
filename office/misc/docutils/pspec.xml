@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>docutils</Name>
+        <Homepage>http://docutils.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>public-domain</License>
+        <IsA>library</IsA>
+        <Summary>A library for processing plaintext documentation</Summary>
+        <Description>A library for processing plaintext documentation into useful formats, such as HTML, XML, and LaTeX.</Description>
+        <Archive sha1sum="4cfc536e047cb9b1e06f5bd230f391276e1161bb" type="targz">https://files.pythonhosted.org/packages/93/22/953e071b589b0b1fee420ab06a0d15e5aa0c7470eb9966d60393ce58ad61/docutils-0.15.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>docutils</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>0.15.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

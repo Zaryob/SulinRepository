@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bzr</Name>
+        <Homepage>http://bazaar-vcs.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A distributed version control system</Summary>
+        <Description>Bazaar (bzr) is a open source version control system which is faster, flexy and scalable.</Description>
+        <Archive sha1sum="7e2776e3aaf8fb48828026d3fc2a3047465eea5e" type="targz">http://launchpad.net/bzr/2.5/2.5.1/+download/bzr-2.5.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-pycrypto</Dependency>
+            <Dependency>python-paramiko</Dependency>
+            <Dependency>docutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>bzr</Name>
+        <RuntimeDependencies>
+            <Dependency>python-pycrypto</Dependency>
+            <Dependency>python-paramiko</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/bash_completion.d</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc/bzr/COPYING.txt</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>bzr-docs</Name>
+        <Summary>Documentation files for bzr</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bzr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/bzr</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>2.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

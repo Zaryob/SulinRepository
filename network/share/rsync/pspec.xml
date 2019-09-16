@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rsync</Name>
+        <Homepage>http://rsync.samba.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <IsA>app:console</IsA>
+        <Summary>File transfer program to keep local copies in sync with remote files</Summary>
+        <Description>rsync is a tool to keep local copies of remote files in sync (i.e. make sure local files are exact copies of remote files).</Description>
+        <Archive sha1sum="82e7829c0b3cefbd33c233005341e2073c425629" type="targz">https://www.samba.org/ftp/rsync/src/rsync-3.1.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>attr-devel</Dependency>
+            <Dependency>popt-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rsync</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+            <Dependency>attr</Dependency>
+            <Dependency>popt</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="config">/etc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/rsyncd.conf">rsyncd.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/rsyncd">rsyncd.conf.d</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/rsyncd">rsyncd.init.d</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>3.1.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

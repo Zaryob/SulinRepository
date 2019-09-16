@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>openssh</Name>
+        <Homepage>http://www.openssh.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <IsA>service</IsA>
+        <PartOf>server</PartOf>
+        <Summary>Port of OpenBSD's free SSH release</Summary>
+        <Description>OpenSSH is a FREE version of the SSH connectivity tools that technical users of the Internet rely on. Users of telnet, rlogin, and ftp may not realize that their password is transmitted across the Internet unencrypted, but it is. OpenSSH encrypts all traffic (including passwords) to effectively eliminate eavesdropping, connection hijacking, and other attacks.</Description>
+        <Archive sha1sum="756dbb99193f9541c9206a667eaa27b0fa184a4f" type="targz">https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.0p1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libedit-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>e2fsprogs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>openssh</Name>
+        <RuntimeDependencies>
+            <Dependency>libedit</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>pam</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/openssh</Path>
+            <Path fileType="data">/var/empty</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/sshd">sshd-r1.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/confd.d/sshd">sshd-r1.confd</AdditionalFile>
+           <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/sshd">sshd.pam</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>8.0_p1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

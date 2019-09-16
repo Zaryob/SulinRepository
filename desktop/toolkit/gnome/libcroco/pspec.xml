@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libcroco</Name>
+        <Homepage>http://www.freespiders.org/projects/libcroco/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Generic Cascading Style Sheet (CSS) parsing and manipulation toolkit</Summary>
+        <Description>libcroco is an effort to build a generic Cascading Style Sheet (CSS) parsing and manipulation toolkit that can be used by GNOME applications in need of CSS support.</Description>
+        <Archive sha1sum="cd54520c6c3c42e53685dc706e28721742aa3fff" type="tarxz">mirrors://gnome/libcroco/0.6/libcroco-0.6.13.tar.xz</Archive>
+        <Patches>
+            <Patch level="1">multilib.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libcroco</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libcroco-devel</Name>
+        <Summary>Development files for libcroco</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libcroco</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/croco-*-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>0.6.13</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
