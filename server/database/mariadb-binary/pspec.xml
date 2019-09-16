@@ -19,6 +19,9 @@
 
     <Package>
         <Name>mariadb-bin-lib</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <IsA>app:console</IsA>
         <IsA>library</IsA>
         <Summary>The shared libraries required for MariaDB clients</Summary>
@@ -66,6 +69,9 @@
 
     <Package>
         <Name>mariadb-bin-client</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <IsA>app:console</IsA>
         <Summary>MariaDB client programs</Summary>
         <RuntimeDependencies>
@@ -136,6 +142,9 @@
 
     <Package>
         <Name>mariadb-bin-server</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <IsA>service</IsA>
         <Summary>The MariaDB server and related files</Summary>
         <RuntimeDependencies>
@@ -224,6 +233,9 @@
 
     <Package>
         <Name>mariadb-bin-man-pages</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <IsA>data</IsA>
         <Summary>Man pages for MariaDB server and client</Summary>
         <Replaces>

@@ -15,7 +15,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>The GNU Compiler Collection, includes C, C++, Objective-C and Fortran compilers</Summary>
         <Description>The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, as well as libraries for these languages</Description>
-        <Archive sha1sum="19926bdb6c4b58891015929853d41aeff019d400" 
+        <Archive sha1sum="19926bdb6c4b58891015929853d41aeff019d400"
 type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>binutils</Dependency>
@@ -45,6 +45,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libquadmath</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <PartOf>system.base</PartOf>
         <Summary>The GNU Fortran Compiler Quadmath Runtime Library</Summary>
         <Files>
@@ -61,6 +64,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libgcc</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <PartOf>system.base</PartOf>
         <Summary>Contains a shared library of support routines used by GCC's runtime, and thus by every program on the system</Summary>
         <Files>
@@ -84,6 +90,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libgomp</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Contains GCC shared support library which is needed for OpenMP 2.5 support</Summary>
         <Files>
             <Path fileType="library">/usr/lib/libgomp.so*</Path>
@@ -101,6 +110,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
         <RuntimeDependencies>
             <Dependency>libquadmath</Dependency>
         </RuntimeDependencies>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <IsA>library</IsA>
         <Summary>Contains GCC shared support library for gfortran</Summary>
         <Files>
@@ -116,6 +128,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
 
     <Package>
         <Name>libgccgo</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>libgomp</Dependency>
@@ -140,6 +155,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libobjc</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Contains GCC shared support library for objc</Summary>
         <Files>
             <Path fileType="library">/usr/lib/libobjc.so*</Path>
@@ -152,6 +170,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>gcc-l10n</Name>
         <PartOf>system.locale</PartOf>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Contains available GCC localization files, includes also turkish translations</Summary>
         <RuntimeDependencies>
             <Dependency>gcc</Dependency>
@@ -163,6 +184,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
 
     <Package>
         <Name>gcc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>gmp</Dependency>
             <Dependency>isl</Dependency>

@@ -2,6 +2,7 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 NoStrip = "/"
+IgnoreAutodep = True
 
 def install():
     shelltools.system("./install.sh --destdir={0}/ --prefix={0}/usr \

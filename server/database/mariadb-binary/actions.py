@@ -10,6 +10,7 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import cmaketools
 
 WorkDir= "mariadb-10.4.8-linux-glibc_214-x86_64"
+NoStrip = "/"
 
 def install():
     inarytools.insinto("/usr/include" , "include/*")

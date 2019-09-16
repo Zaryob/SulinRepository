@@ -18,6 +18,9 @@
 
     <Package>
         <Name>rustc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>glibc</Dependency>
@@ -78,10 +81,23 @@
             <Path fileType="doc">/usr/share/doc/rust/LICENSE-APACHE</Path>
             <Path fileType="doc">/usr/share/doc/rust/LICENSE-MIT</Path>
             <Path fileType="doc">/usr/share/doc/rust/README.md</Path>
+            <Path fileType="data">/usr/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu</Path>
+            <Path fileType="data">/usr/lib/rustlib/rust-installer-version</Path>
+            <Path fileType="data">/usr/lib/rustlib/uninstall.sh</Path>
+            <Path fileType="data">/usr/lib/rustlib/components</Path>
+            <Path fileType="data">/usr/lib/rustlib/manifest-rustc</Path>
+            <Path fileType="data">/usr/lib/rustlib/install.log</Path>
+            <Path fileType="data">/usr/lib/rustlib/etc/debugger_pretty_printers_common.py</Path>
+            <Path fileType="data">/usr/lib/rustlib/etc/lldb_rust_formatters.py</Path>
+            <Path fileType="data">/usr/lib/rustlib/etc/gdb_rust_pretty_printing.py</Path>
+            <Path fileType="data">/usr/lib/rustlib/etc/gdb_load_rust_pretty_printers.py</Path>
         </Files>
     </Package>
     <Package>
         <Name>rust-cargo</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
@@ -90,6 +106,7 @@
         <Files>
           <Path fileType="executable">/usr/bin/cargo</Path>
           <Path fileType="executable">/etc/bash_completion.d/cargo</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-cargo</Path>
           <Path fileType="doc">/usr/share/doc/cargo/</Path>
           <Path fileType="man">/usr/share/man/man1/cargo*</Path>
           <Path fileType="data">/usr/share/zsh/site-functions/_cargo</Path>
@@ -97,6 +114,9 @@
     </Package>
     <Package>
         <Name>rust-miri</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
@@ -106,11 +126,15 @@
         <Files>
           <Path fileType="executable">/usr/bin/cargo-miri</Path>
           <Path fileType="executable">/usr/bin/miri</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-miri-preview</Path>
           <Path fileType="doc">/usr/share/doc/miri/</Path>
         </Files>
     </Package>
     <Package>
         <Name>rust-fmt</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rust-cargo</Dependency>
@@ -121,10 +145,14 @@
           <Path fileType="executable">/usr/bin/cargo-fmt</Path>
           <Path fileType="executable">/usr/bin/rustfmt</Path>
           <Path fileType="doc">/usr/share/doc/rustfmt/</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-rustfmt-preview</Path>
         </Files>
     </Package>
     <Package>
         <Name>rust-clippy</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
@@ -133,12 +161,16 @@
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/bin/cargo-clippy</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-clippy-preview</Path>
           <Path fileType="executable">/usr/bin/clippy-driver</Path>
           <Path fileType="doc">/usr/share/doc/clippy/</Path>
         </Files>
     </Package>
     <Package>
         <Name>rust-llvmtools</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
@@ -148,10 +180,14 @@
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-*</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-llvm-tools-preview</Path>
         </Files>
     </Package>
     <Package>
         <Name>rust-rls</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
@@ -160,17 +196,35 @@
         <Files>
           <Path fileType="doc">/usr/share/doc/rls/</Path>
           <Path fileType="executable">/usr/bin/rls</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-rls-preview</Path>
         </Files>
     </Package>
     <Package>
         <Name>rust-docs</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Files>
           <Path fileType="doc">/usr/share/doc/rust/html/</Path>
+          <Path fileType="data">/usr/lib/rustlib/manifest-rust-docs</Path>
+          <Path fileType="doc">/usr/share/doc/rust/</Path>
+          <Path fileType="doc">/usr/share/doc/html/</Path>
+          <Path fileType="doc">/usr/share/doc/README.md.old</Path>
+          <Path fileType="doc">/usr/share/doc/README.md</Path>
+          <Path fileType="doc">/usr/share/doc/COPYRIGHT</Path>
+          <Path fileType="doc">/usr/share/doc/LICENSE-THIRD-PARTY</Path>
+          <Path fileType="doc">/usr/share/doc/LICENSE-APACHE.old</Path>
+          <Path fileType="doc">/usr/share/doc/LICENSE-APACHE</Path>
+          <Path fileType="doc">/usr/share/doc/LICENSE-MIT</Path>
+          <Path fileType="doc">/usr/share/doc/LICENSE-MIT.old</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>rust-std</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>glibc</Dependency>
@@ -301,6 +355,9 @@
     </Package>
     <Package>
         <Name>rust-analysis</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
@@ -327,8 +384,10 @@
             <Path fileType="library">/usr/lib/rustlib/x86_64-unknown-linux-gnu/analysis/librustc_tsan-*.json</Path>
             <Path fileType="library">/usr/lib/rustlib/x86_64-unknown-linux-gnu/analysis/libstd-*.json</Path>
             <Path fileType="library">/usr/lib/rustlib/x86_64-unknown-linux-gnu/analysis/libunwind-*.json</Path>
+            <Path fileType="data">/usr/lib/rustlib/manifest-rust-analysis-x86_64-unknown-linux-gnu</Path>
           </Files>
     </Package>
+
     <History>
         <Update release="1">
             <Date>2019-09-16</Date>
