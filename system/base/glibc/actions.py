@@ -11,7 +11,6 @@ from inary.actionsapi import get
 
 import os
 
-WorkDir = "glibc-2.28"
 
 arch = "x86-64" if get.ARCH() == "x86_64" and not get.buildTYPE() == "emul32" else "i686"
 defaultflags = "-O3 -g -fasynchronous-unwind-tables -mtune=generic -march=%s" % arch
