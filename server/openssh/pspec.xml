@@ -48,7 +48,7 @@
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/sshd">sshd-r1.initd</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/confd.d/sshd">sshd-r1.confd</AdditionalFile>
-           <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/sshd">sshd.pam</AdditionalFile>
+           <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/sshd">sshd.pam</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="service.py">System.Service</SCOM>

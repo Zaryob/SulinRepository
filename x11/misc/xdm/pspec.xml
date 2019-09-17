@@ -69,12 +69,12 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
         <AdditionalFiles>
-          <AdditionalFile owner="root" permission="0644" target="/etc/init.d/xdm">xdm.init.d</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/xdm">xdm.conf.d</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/xdm">xdm.pam.d</AdditionalFile>
+          <AdditionalFile owner="root" permission="0755" target="/etc/init.d/xdm">xdm.init.d</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/xdm">xdm.conf.d</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/xdm">xdm.pam.d</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/start-dm">start-dm.sh</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/xorg-safe-fbdev.conf">xorg-safe-fbdev.conf</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/X11/xorg-safe-vesa.conf">xorg-safe-vesa.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/X11/xorg-safe-fbdev.conf">xorg-safe-fbdev.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/X11/xorg-safe-vesa.conf">xorg-safe-vesa.conf</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

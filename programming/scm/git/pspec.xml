@@ -86,7 +86,7 @@
         </Files>
         <AdditionalFiles>
           <AdditionalFile owner="root" permission="0755" target="/etc/init.d/git-daemon">git-daemon-r1.initd</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/git-daemon">git-daemon.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/git-daemon">git-daemon.confd</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="service.py">System.Service</SCOM>

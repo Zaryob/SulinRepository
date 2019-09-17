@@ -51,10 +51,10 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile target="/etc/conf.d/saslauthd" permission="0644" owner="root">saslauthd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/pam.d/saslauthd" permission="0644" owner="root">saslauthd.pam</AdditionalFile>
+            <AdditionalFile target="/etc/conf.d/saslauthd" permission="0755" owner="root">saslauthd.confd</AdditionalFile>
+            <AdditionalFile target="/etc/pam.d/saslauthd" permission="0755" owner="root">saslauthd.pam</AdditionalFile>
             <AdditionalFile target="/etc/init.d/saslauthd" permission="0755" owner="root">saslauthd2.rc7</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/cyrus-sasl.conf">tmpfiles.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/lib/tmpfiles.d/cyrus-sasl.conf">tmpfiles.conf</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="service.py">System.Service</SCOM>
