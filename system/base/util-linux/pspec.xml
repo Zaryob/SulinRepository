@@ -14,7 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Various useful Linux utilities</Summary>
         <Description>The util-linux package contains a large variety of low-level system utilities that are necessary for a Linux system to function.</Description>
-        <Archive sha1sum="a2c01c4817723f2f1d803e377f26cd025b166400" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.33/util-linux-2.33.tar.xz</Archive>
+        <Archive sha1sum="c48e79873bc2acc9d6de238daff88d4c31e8d4c6" type="tarxz">https://www.kernel.org/pub/linux/utils/util-linux/v2.34/util-linux-2.34.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>eudev-devel</Dependency>
@@ -162,6 +162,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>2.34</Version>
+            <Comment>Updated version to 2.34</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-22</Date>
             <Version>2.31.1</Version>

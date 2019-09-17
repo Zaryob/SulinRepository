@@ -24,6 +24,13 @@
             <Path fileType="info">/usr/share/info</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>libunistring-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
 
     <Package>
         <Name>libunistring-devel</Name>

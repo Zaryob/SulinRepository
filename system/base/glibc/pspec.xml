@@ -14,7 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU libc6 (also called glibc2) C library</Summary>
         <Description>The Glibc package contains the main C library. This library provides the basic routines for allocating memory, searching directories, opening and closing files, reading and writing files, string handling, pattern matching, arithmetic, and so on.</Description>
-        <Archive sha1sum="ccb5dc9e51a9884df8488f86982439d47b283b2a" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.28.tar.xz</Archive>
+        <Archive sha1sum="40d81ded4fc12ea134dae8513f65acedd89991da" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.30.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>kernel-headers</Dependency>
             <Dependency>gettext</Dependency>
@@ -1982,6 +1982,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>2.30</Version>
+            <Comment>Updated gcc major version to 2.30</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-23</Date>
             <Version>2.28</Version>

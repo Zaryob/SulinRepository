@@ -31,15 +31,15 @@
             <Path fileType="executable">/usr/bin</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile target="/etc/conf.d/busybox-klogd">klogd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/conf.d/busybox-ntpd">ntpd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/conf.d/busybox-syslogd">syslogd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/conf.d/busybox-watchdog">watchdog.confd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-klogd">klogd.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/mdev">mdev.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-ntpd">ntpd.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-syslogd">syslogd.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-watchdog">watchdog.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-klogd">klogd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-ntpd">ntpd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-syslogd">syslogd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-watchdog">watchdog.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-klogd">klogd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mdev">mdev.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-ntpd">ntpd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-syslogd">syslogd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-watchdog">watchdog.initd</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

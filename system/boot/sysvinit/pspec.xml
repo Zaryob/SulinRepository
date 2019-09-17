@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Programs which control basic system processes</Summary>
         <Description>sysvinit package contains a group of utilities that control the very basic functions of your system. sysvinit contains the init program, the first program started by the Linux kernel when the system boots.</Description>
-        <Archive sha1sum="fa706acd2a60f13d4364c0952bf4325d491c6ad2" type="tarxz">http://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.93.tar.xz</Archive>
+        <Archive sha1sum="9b8975493cfa17cd9c8bb574b5df0847912466a4" type="tarxz">http://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.95.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -47,6 +47,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>2.95</Version>
+            <Comment>Updated version to 2.95</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-22</Date>
             <Version>2.93</Version>
