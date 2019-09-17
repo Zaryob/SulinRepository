@@ -14,9 +14,9 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU libc6 (also called glibc2) C library</Summary>
         <Description>The Glibc package contains the main C library. This library provides the basic routines for allocating memory, searching directories, opening and closing files, reading and writing files, string handling, pattern matching, arithmetic, and so on.</Description>
-        <Archive sha1sum="40d81ded4fc12ea134dae8513f65acedd89991da" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.30.tar.xz</Archive>
+        <Archive sha1sum="4df7e4dbb92b5ced729d972b32e3b8683db4a689" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.30.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>kernel-headers</Dependency>
+            <Dependency>linux-headers</Dependency>
             <Dependency>gettext</Dependency>
             <Dependency>texinfo</Dependency>
             <Dependency>binutils</Dependency>
@@ -138,6 +138,23 @@
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="library">/usr/lib32/*.a</Path>
         </Files>
+    </Package>
+
+    <Package>
+        <Name>glibc-doc-32bit</Name>
+        <PartOf>system.doc</PartOf>
+        <!-- Do not write dep. any package-->
+        <Summary>32-bit doc for glibc</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/usr/lib32/glibc32.txt</Path>
+         </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib32/glibc32.txt">glibc32.txt</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <Package>
@@ -1998,3 +2015,4 @@
         </Update>
     </History>
 </INARY>
+

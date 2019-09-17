@@ -142,12 +142,13 @@
              <Path fileType="library">/usr/lib/libgo.a*</Path>
              <Path fileType="library">/usr/lib/libgolibbegin.a</Path>
              <Path fileType="library">/usr/lib/libgobegin.a</Path>
-             <Path fileType="library">/usr/lib/go/8.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/lib/go/9.2.0/x86_64-pc-linux-gnu/</Path>
              <Path fileType="library">/usr/lib32/libgo.so*</Path>
              <Path fileType="library">/usr/lib32/libgo.a*</Path>
              <Path fileType="library">/usr/lib32/libgolibbegin.a</Path>
              <Path fileType="library">/usr/lib32/libgobegin.a</Path>
-             <Path fileType="library">/usr/lib32/go/8.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/lib32/go/9.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/bin/gccgo</Path>
         </Files>
     </Package>
 
@@ -246,3 +247,4 @@
         </Update>
     </History>
 </INARY>
+
