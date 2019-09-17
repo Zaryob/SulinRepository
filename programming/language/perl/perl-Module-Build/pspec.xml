@@ -35,6 +35,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>0.4229</Version>
+            <Comment>Package is rebuilded because of perl upgrade and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-16</Date>
             <Version>0.4229</Version>

@@ -15,7 +15,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A ut ility for getting files from remote servers</Summary>
         <Description>curl is a command line tool for transferring data with URL syntax, supporting various protocols.</Description>
-        <Archive sha1sum="062a9f50723970cdbf9864781efedeef71e9d68e" type="tarbz2">http://curl.haxx.se/download/curl-7.62.0.tar.bz2</Archive>
+        <Archive sha1sum="c2a57bf4976743770e0ca6f312d34f15237ef209" type="tarbz2">http://curl.haxx.se/download/curl-7.66.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>glibc-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -104,6 +104,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>7.66.0</Version>
+            <Comment>Version bump to 7.66.0</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-10</Date>
             <Version>7.62.0</Version>

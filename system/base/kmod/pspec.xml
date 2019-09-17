@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Linux kernel module management utilities</Summary>
         <Description>Linux kernel module management utilities</Description>
-        <Archive sha1sum="761ee76bc31f5db10d470dad607a5f9d68acef68" type="tarxz">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-25.tar.xz</Archive>
+        <Archive sha1sum="275916e64eb5a94276680bc356c5c6a8d484cc98" type="tarxz">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-26.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>chrpath</Dependency>
             <Dependency>xz-devel</Dependency>
@@ -120,6 +120,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>26</Version>
+            <Comment>Version bump to 26</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-22</Date>
             <Version>25</Version>

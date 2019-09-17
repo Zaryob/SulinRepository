@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU utilities to find findutilss</Summary>
         <Description>The GNU Find Utilities are the basic directory searching utilities of the GNU operating system. These programs are typically used in conjunction with other programs to provide modular and powerful directory search and findutils locating capabilities to other commands.</Description>
-        <Archive sha1sum="f18e8aaee3f3d4173a1f598001003be8706d28b0" type="targz">http://ftp.gnu.org/pub/gnu/findutils/findutils-4.6.0.tar.gz</Archive>
+        <Archive sha1sum="dacb76b814439529e4128b253f1a2cb62f2f7221" type="targz">http://ftp.gnu.org/pub/gnu/findutils/findutils-4.7.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>texinfo</Dependency>
@@ -61,6 +61,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>4.7.0</Version>
+            <Comment>Version bump to 4.7.0</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-23</Date>
             <Version>4.6.0</Version>

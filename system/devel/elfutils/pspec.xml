@@ -14,7 +14,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Libraries/utilities to handle ELF objects</Summary>
         <Description>elfutils contains libraries and utilities to handle ELF objects and is a replacement for libelf.</Description>
-        <Archive sha1sum="361f835640ecffddc6d4543fb044eb53f673026f" type="tarbz2">ftp://sourceware.org/pub/elfutils/0.175/elfutils-0.175.tar.bz2</Archive>
+        <Archive sha1sum="922161f84baaae845382338098071544b98ca92d" type="tarbz2">ftp://sourceware.org/pub/elfutils/0.177/elfutils-0.177.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>bzip2</Dependency>
             <Dependency>xz-devel</Dependency>
@@ -67,6 +67,13 @@
           </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>0.177</Version>
+            <Comment>Version bump to 0.177</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-19</Date>
             <Version>0.175</Version>
