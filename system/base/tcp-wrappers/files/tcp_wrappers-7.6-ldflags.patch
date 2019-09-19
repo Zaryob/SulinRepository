@@ -1,6 +1,13 @@
---- tcp_wrappers_7.6/Makefile.ldflags	2004-03-05 14:47:36.438315648 +0100
-+++ tcp_wrappers_7.6/Makefile	2004-03-05 14:50:01.438272304 +0100
-@@ -732,26 +732,26 @@
+diff -up tcp_wrappers_7.6-ipv6.4/Makefile.cflags tcp_wrappers_7.6-ipv6.4/Makefile
+--- tcp_wrappers_7.6-ipv6.4/Makefile.cflags	2018-03-08 09:59:29.854718081 +0100
++++ tcp_wrappers_7.6-ipv6.4/Makefile	2018-03-08 09:59:49.282840150 +0100
+@@ -741,31 +741,31 @@ $(LIB):	$(LIB_OBJ)
+ 
+ $(SHLIB): $(LIB_OBJ)
+ 	gcc -shared -fPIC -Wl,-soname -Wl,$(SHLIB).$(MAJOR) \
+-		-o $(SHLIB).$(MAJOR).$(MINOR).$(REL) $^ $(LIBS)
++		-o $(SHLIB).$(MAJOR).$(MINOR).$(REL) $^ $(LDFLAGS) $(LIBS)
+ 	ln -s $(SHLIB).$(MAJOR).$(MINOR).$(REL) $(SHLIB).$(MAJOR)
  	ln -s $(SHLIB).$(MAJOR).$(MINOR).$(REL) $(SHLIB)
  
  tcpd:	tcpd.o $(LIB)
