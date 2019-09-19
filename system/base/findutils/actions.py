@@ -11,14 +11,10 @@ from inary.actionsapi import get
 
 def setup():
     shelltools.export("CFLAGS", "%s -D_GNU_SOURCE" % get.CFLAGS())
-    shelltools.system("""sed -i 's/test-lock..EXEEXT.//' tests/Makefile.in  &&
-sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' gl/lib/*.c &&
-sed -i '/unistd/a #include <sys/sysmacros.h>' gl/lib/mountlist.c &&
-echo "#define _IO_IN_BACKUP 0x100" >> gl/lib/stdio-impl.h""")
 
     autotools.configure("""--enable-nls \
                          --with-packager="Sulin" \
-                         --with-packager-version="4.6.0" \
+                         --with-packager-version="4.7.0" \
                          --with-packager-bug-reports="https://github.com/SulinOS/SulinRepository/issues" \
                          --localstatedir=/var/lib/locate \
                          --without-included-regex \

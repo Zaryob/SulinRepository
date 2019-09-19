@@ -14,10 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Common CA certificates</Summary>
         <Description>Common CA certificates</Description>
-        <Archive sha1sum="edf0ec04b02fcbc90cc65906ff83fb042894a3b7" type="tarxz">http://ftp.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20180409.tar.xz</Archive>
-        <Patches>
-            <Patch>no-openssl-rehash.patch</Patch>
-        </Patches>
+        <Archive sha1sum="47d4584eae85fc905e4994766eb3930a8a84e2e1" type="tarxz">http://ftp.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20190110.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -45,7 +42,7 @@
     <History>
         <Update release="2">
             <Date>2019-09-17</Date>
-            <Version>20180409</Version>
+            <Version>20190110</Version>
             <Comment>Package is rebuilded and released up.</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

@@ -17,10 +17,7 @@ def setup():
     shelltools.export("SUID_LDFLAGS", "-pie -Wl,-z,relro -Wl,-z,now")
     shelltools.export("AUTOPOINT", "/bin/true")
 
-    options = "\
-               --disable-rpath \
-               --disable-silent-rules \
-               --disable-use-tty-group \
+    options = " \
                --disable-su  \
                --disable-last \
                --disable-mesg \
@@ -58,11 +55,13 @@ def setup():
                      --enable-raw \
                      --enable-write \
                      --enable-tunelp \
+                     --enable-libmount \
+                     --enable-pylibmount \
                      --enable-runuser \
                      --without-audit \
                      --with-udev \
-                     --without-utempter \
                      --with-python=3 \
+                     --without-utempter \
                    "
 
     autotools.autoreconf("-fi")

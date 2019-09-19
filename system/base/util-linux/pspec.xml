@@ -125,6 +125,7 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <Dependency>ncurses-32bit</Dependency>
+            <Dependency>pam-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
         </RuntimeDependencies>

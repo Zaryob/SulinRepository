@@ -18,7 +18,7 @@
             <Dependency>chrpath</Dependency>
             <Dependency>xz-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
-            <Dependency>kernel-module-headers</Dependency>
+            <Dependency>linux-module-headers</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -16,14 +16,8 @@
         <Archive sha1sum="bf7badf7e248e0ecf465d33c2f5aeec774209227" type="targz">https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz</Archive>
         <Patches>
           <Patch>bzip2-1.0.4-makefile-CFLAGS.patch</Patch>
-          <Patch>bzip2-1.0.6-saneso.patch</Patch>
           <Patch>bzip2-1.0.6-progress.patch</Patch>
           <Patch>bzip2-1.0.3-no-test.patch</Patch>
-          <Patch>bzip2-1.0.4-POSIX-shell.patch</Patch>
-          <Patch>bzip2-1.0.6-mingw.patch</Patch>
-          <Patch>bzip2-1.0.6-out-of-tree-build.patch</Patch>
-          <Patch>bzip2-1.0.6-CVE-2016-3189.patch</Patch>
-          <Patch>bzip2-1.0.6-ubsan-error.patch</Patch>
         </Patches>
     </Source>
 

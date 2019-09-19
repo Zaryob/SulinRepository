@@ -24,4 +24,4 @@ def check():
 
 def install():
     perlmodules.install()
-
+    inarytools.removeDir("/usr/share/man/man3")

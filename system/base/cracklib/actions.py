@@ -17,7 +17,7 @@ def setup():
                          PYTHON={} \
                          --with-python \
                          --disable-static".format(
-                         "/usr/bin/python2.7" if get.buildTYPE()=="rebuild_python" else "/usr/bin/python3.7"))
+                         "python2" if get.buildTYPE()=="rebuild_python" else "python3"))
 
     # for unused
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")

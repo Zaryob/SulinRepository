@@ -11,10 +11,14 @@ from inary.actionsapi import get
 
 
 def setup():
+    shelltools.system("  sed -i '/init\.d/s|^|#|' misc/Makefile.in")
+    autotools.autoreconf("-vif")
     autotools.rawConfigure("--enable-elf-shlibs \
+                            --with-root-prefix="" \
                             --enable-nls \
                             --disable-e2initrd-helper \
                             --disable-libblkid \
+                            --enable-elf-shlibs \
                             --disable-libuuid \
                             --disable-fsck \
                             --disable-uuidd \
@@ -22,7 +26,7 @@ def setup():
                             --without-included-gettext")
 
 def build():
-    autotools.make()
+    autotools.make("all")
 
 def check():
     #In chroot env. /dev should be mounted to pass all tests, that's all :)

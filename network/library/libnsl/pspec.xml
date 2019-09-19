@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libnsl</Name>
+        <Homepage>https://github.com/thkukuk/libnsl</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Public client interface library for NIS(YP) and NIS+.</Summary>
+        <Description>The libnsl package contains the public client interface for NIS(YP) and NIS+</Description>
+        <Archive sha1sum="f141c7cf0ff96d96e369dda36af8ed19af0fc3ca" type="targz">https://github.com/thkukuk/libnsl/archive/v1.2.0/libnsl-1.2.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libtirpc-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libnsl</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib/*.so.*</Path>
+            <Path fileType="man">/usr/share/man/man5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>libnsl-devel</Name>
+        <Summary>Development files for libnsl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libnsl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/*.so</Path>
+            <Path fileType="library">/usr/lib32/*.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libnsl-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libnsl</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>libtirpc-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libnsl</Dependency>
+            <Dependency>libtirpc-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/*.so.*</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-19</Date>
+            <Version>1.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

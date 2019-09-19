@@ -11,14 +11,14 @@ from inary.actionsapi import get
 
 def setup():
     inarytools.flags.add("-fPIC -D_GNU_SOURCE")
-    
+
     autotools.autoreconf("-fi")
-    autotools.configure("--libdir=/usr/lib \
+    autotools.configure("--libdir=/usr/lib{} \
                          --enable-nls \
                          --disable-audit \
                          --enable-securedir=/lib/security \
-                         --enable-isadir=/lib/security")
-    
+                         --enable-isadir=/lib/security".format("32" if get.buildTYPE()=="emul32" else ""))
+
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
@@ -36,8 +36,11 @@ def check():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
+    if get.buildTYPE()=="emul32":
+        return
+        
     inarytools.removeDir("/usr/share/doc/Linux-PAM/")
 
     inarytools.doman("doc/man/*.[0-9]")
     inarytools.dodoc("CHANGELOG", "Copyright", "README")
+

@@ -13,9 +13,10 @@
         <PartOf>system.base</PartOf>
         <Summary>TCP Wrappers</Summary>
         <Description>With this package you can monitor and filter incoming requests for the SYSTAT, FINGER, FTP, TELNET, RLOGIN, RSH, EXEC, TFTP, TALK, and other network services. It supports both 4.3BSD-style sockets and System V.4-style TLI.</Description>
-        <Archive sha1sum="61689ec85b80f4ca0560aef3473eccd9e9e80481" type="targz">http://ftp.porcupine.org/pub/security/tcp_wrappers_7.6.tar.gz</Archive>
+        <Archive sha1sum="8a5cef5aa15d6de1f227f17cb914d9de86644db0" type="targz">https://github.com/SulinOS/tcp_wrappers/archive/7.6-ipv6.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>sed</Dependency>
+            <Dependency>libnsl</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">tcpw7.2-config.patch</Patch>
@@ -39,13 +40,13 @@
             <Patch level="1">tcp_wrappers-7.6-196326.patch</Patch>
             <Patch level="1">tcp_wrappers_7.6-249430.patch</Patch>
             <Patch level="1">tcp_wrappers-7.6-inetdconf.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-bug698464.patch
+            <Patch level="1">tcp_wrappers-7.6-bug698464.patch</Patch>
             <Patch level="1">tcp_wrappers-7.6-xgets.patch</Patch>
             <Patch level="1">tcp_wrappers-7.6-initgroups.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-warnings.patch</Patch>
+            <!--Patch level="1">tcp_wrappers-7.6-warnings.patch</Patch-->
             <Patch level="1">tcp_wrappers-7.6-uchart_fix.patch</Patch>
             <Patch level="1">tcp_wrappers-7.6-altformat.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-aclexec.patch</Patch>
+            <!--Patch level="1">tcp_wrappers-7.6-aclexec.patch</Patch-->
         </Patches>
     </Source>
 

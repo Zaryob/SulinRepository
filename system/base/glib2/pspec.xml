@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A library of handy utility functions</Summary>
         <Description>glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
-        <Archive sha1sum="8b18a92f81a8d033abfb43a628bae3bbaf71800c" type="tarxz">mirrors://gnome/glib/2.50/glib-2.56.2.tar.xz</Archive>
+        <Archive sha1sum="edcb6d6d023c0c678954a73906c45816203a9117" type="tarxz">mirrors://gnome/glib/2.62/glib-2.62.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libpcre-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -47,6 +47,7 @@
             <Path fileType="data">/usr/share/systemtap</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
             <Path fileType="data">/usr/share/gettext</Path>
+            <Path fileType="data">/usr/share/gdb</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/profile.d/glib2.sh">glib2.sh</AdditionalFile>
@@ -130,6 +131,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-19</Date>
+            <Version>2.62.0</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">None
             <Date>2019-09-07</Date>
             <Version>2.56.2</Version>

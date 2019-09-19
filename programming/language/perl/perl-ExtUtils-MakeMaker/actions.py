@@ -25,3 +25,4 @@ def check():
 def install():
     perlmodules.install()
     inarytools.removeDir("/usr/bin")
+    inarytools.removeDir("/usr/share/man/*")

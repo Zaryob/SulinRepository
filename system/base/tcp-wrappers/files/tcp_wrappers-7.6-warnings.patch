@@ -81,7 +81,6 @@ diff -up tcp_wrappers_7.6-ipv6.4/hosts_access.c.warnings tcp_wrappers_7.6-ipv6.4
  #include <setjmp.h>
  #include <string.h>
 +#include <stdlib.h>
-+#include <rpcsvc/ypclnt.h>
 +#include <netdb.h>
  
  extern char *fgets();
@@ -90,8 +89,6 @@ diff -up tcp_wrappers_7.6-ipv6.4/hosts_access.c.warnings tcp_wrappers_7.6-ipv6.4
  
  extern jmp_buf tcpd_buf;
  
-+int match_pattern_ylo(const char *, const char *);
-+
  /* Delimiters for lists of daemons or clients. */
  
  static char sep[] = ", \t\r\n";
