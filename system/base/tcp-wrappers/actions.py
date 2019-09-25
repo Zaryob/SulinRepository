@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
@@ -10,7 +10,7 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import libtools
 from inary.actionsapi import get
 
-WorkDir = "tcp_wrappers-7.6p"
+WorkDir = "tcp_wrappers_%s" % get.srcVERSION()
 
 def setup():
     shelltools.chmod("Makefile", 0o755)
@@ -22,11 +22,12 @@ def build():
     REL = "6"
 
     shelltools.export("SULIN_CFLAGS", "%s" % get.CFLAGS())
-    args = 'REAL_DAEMON_DIR=%s \
-            SULIN_OPT="-fPIC -DPIC -D_REENTRANT -DHAVE_STRERROR -DHAVE_WEAKSYMS -DACLEXEC -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len" \
-            MAJOR=0 MINOR=%s REL=%s linux ' % ( get.sbinDIR(), MINOR, REL )
 
-    #autotools.make("%s config-check" % args)
+    args = 'REAL_DAEMON_DIR=%s \
+            SULIN_OPT="-fPIC -DPIC -D_REENTRANT -DHAVE_STRERROR -DHAVE_WEAKSYMS -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len" \
+            MAJOR=0 MINOR=%s REL=%s' % ( get.sbinDIR(), MINOR, REL )
+
+    autotools.make("%s config-check" % args)
     autotools.make('%s LDFLAGS="-pie %s" linux' % (args, get.LDFLAGS()))
 
 def install():
@@ -35,11 +36,11 @@ def install():
 
     inarytools.insinto("/usr/include", "tcpd.h")
 
-    inarytools.dolib("libwrap.a")
+    inarytools.dolib_a("libwrap.a")
 
     # FIXME: this seems not necessary anymore
     # inarytools.domove("libwrap.so", "libwrap.so.0.%s" % get.srcVERSION())
-    inarytools.dolib("libwrap.so.0.%s" % get.srcVERSION(), "/lib")
+    inarytools.dolib_so("libwrap.so.0.%s" % get.srcVERSION(), "/lib")
 
     inarytools.dosym("/lib/libwrap.so.0.%s" % get.srcVERSION(), "/lib/libwrap.so.0")
     inarytools.dosym("/lib/libwrap.so.0", "/lib/libwrap.so")
