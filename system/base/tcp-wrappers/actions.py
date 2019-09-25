@@ -10,7 +10,7 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import libtools
 from inary.actionsapi import get
 
-WorkDir = "tcp_wrappers-7.6-ipv6.4"
+WorkDir = "tcp_wrappers-7.6p"
 
 def setup():
     shelltools.chmod("Makefile", 0o755)
@@ -22,12 +22,11 @@ def build():
     REL = "6"
 
     shelltools.export("SULIN_CFLAGS", "%s" % get.CFLAGS())
-
     args = 'REAL_DAEMON_DIR=%s \
-            SULIN_OPT="-fPIC -DPIC -D_REENTRANT -DHAVE_STRERROR -DHAVE_WEAKSYMS -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len" \
-            MAJOR=0 MINOR=%s REL=%s' % ( get.sbinDIR(), MINOR, REL )
+            SULIN_OPT="-fPIC -DPIC -D_REENTRANT -DHAVE_STRERROR -DHAVE_WEAKSYMS -DACLEXEC -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len" \
+            MAJOR=0 MINOR=%s REL=%s linux ' % ( get.sbinDIR(), MINOR, REL )
 
-    autotools.make("%s config-check" % args)
+    #autotools.make("%s config-check" % args)
     autotools.make('%s LDFLAGS="-pie %s" linux' % (args, get.LDFLAGS()))
 
 def install():

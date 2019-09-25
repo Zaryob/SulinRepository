@@ -13,41 +13,10 @@
         <PartOf>system.base</PartOf>
         <Summary>TCP Wrappers</Summary>
         <Description>With this package you can monitor and filter incoming requests for the SYSTAT, FINGER, FTP, TELNET, RLOGIN, RSH, EXEC, TFTP, TALK, and other network services. It supports both 4.3BSD-style sockets and System V.4-style TLI.</Description>
-        <Archive sha1sum="8a5cef5aa15d6de1f227f17cb914d9de86644db0" type="targz">https://github.com/SulinOS/tcp_wrappers/archive/7.6-ipv6.4.tar.gz</Archive>
+        <Archive sha1sum="ba5a02b0f2b95b889b3191c3b4cf88ff6ab85a83" type="targz">https://codeload.github.com/SulinOS/tcp_wrappers/tar.gz/7.6p</Archive>
         <BuildDependencies>
             <Dependency>sed</Dependency>
-            <Dependency>libnsl</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">tcpw7.2-config.patch</Patch>
-            <Patch level="1">tcpw7.2-setenv.patch</Patch>
-            <Patch level="1">tcpw7.6-netgroup.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-bug11881.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-bug17795.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-bug17847.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-fixgethostbyname.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-docu.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-man.patch</Patch>
-            <Patch level="1">tcp_wrappers.usagi-ipv6.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-shared.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-sig.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-ldflags.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-fix_sig-bug141110.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-162412.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-220015.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-siglongjmp.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-sigchld.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-196326.patch</Patch>
-            <Patch level="1">tcp_wrappers_7.6-249430.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-inetdconf.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-bug698464.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-xgets.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-initgroups.patch</Patch>
-            <!--Patch level="1">tcp_wrappers-7.6-warnings.patch</Patch-->
-            <Patch level="1">tcp_wrappers-7.6-uchart_fix.patch</Patch>
-            <Patch level="1">tcp_wrappers-7.6-altformat.patch</Patch>
-            <!--Patch level="1">tcp_wrappers-7.6-aclexec.patch</Patch-->
-        </Patches>
     </Source>
 
     <Package>
