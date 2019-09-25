@@ -13,7 +13,7 @@
         <PartOf>programming.language.tcl</PartOf>
         <Summary>An X11 toolkit implemented with the Tcl scripting language</Summary>
         <Description>Tk is an X Windows widget set designed to work closely with the tcl scripting language. It allows you to write simple programs with full featured GUIs in only a little more time then it takes to write a text based interface.</Description>
-        <Archive sha1sum="34d546496c05014349cf5edad6696c125ad4f9ea" type="targz">mirrors://sourceforge/tcl/tk8.6.6-src.tar.gz</Archive>
+        <Archive sha1sum="473019c00461fb55724d1923ed6330d01d9483b8" type="targz">mirrors://sourceforge/tcl/tk8.6.9.1-src.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>tcl-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
@@ -64,6 +64,13 @@
     </Package>
 
     <History>
+        <Update release="2">None
+            <Date>2019-09-25</Date>
+            <Version>8.6.9.1</Version>
+            <Comment>Upgraded tcltk to 8.6.9.1</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2017-01-31</Date>
             <Version>8.6.6</Version>
