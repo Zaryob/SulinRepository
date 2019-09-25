@@ -23,8 +23,9 @@ def install():
     if get.buildTYPE()=="emul32":
         autotools.rawInstall("PREFIX=%s/emul32/usr" % get.installDIR())
         inarytools.dolib("libbz2.so.%s" % libversion, "/lib32")
-        inarytools.dosym("libbz2.so.1", "/lib32/libbz2.so")
+        inarytools.dosym("libbz2.so.%s" % libversion, "/lib32/libbz2.so")
         inarytools.dosym("libbz2.so.%s" % libversion, "/lib32/libbz2.so.1")
+        inarytools.dosym("libbz2.so.%s" % libversion, "/lib32/libbz2.so.1.0")
 
         return
     autotools.rawInstall("PREFIX=%s/usr" % get.installDIR())
@@ -47,9 +48,9 @@ def install():
     inarytools.dosym("bzmore", "/bin/bzless")
 
     inarytools.dolib("libbz2.so.%s" % libversion, "/lib")
-
-    inarytools.dosym("libbz2.so.1", "/lib/libbz2.so")
+    inarytools.dosym("libbz2.so.%s" % libversion, "/lib/libbz2.so")
     inarytools.dosym("libbz2.so.%s" % libversion, "/lib/libbz2.so.1")
+    inarytools.dosym("libbz2.so.%s" % libversion, "/lib/libbz2.so.1.0")
 
     inarytools.dohtml("manual.html")
     inarytools.dodoc("README", "CHANGES", "bzip2.txt")

@@ -36,11 +36,11 @@ def install():
 
     inarytools.insinto("/usr/include", "tcpd.h")
 
-    inarytools.dolib_a("libwrap.a")
+    inarytools.dolib("libwrap.a")
 
     # FIXME: this seems not necessary anymore
     # inarytools.domove("libwrap.so", "libwrap.so.0.%s" % get.srcVERSION())
-    inarytools.dolib_so("libwrap.so.0.%s" % get.srcVERSION(), "/lib")
+    inarytools.dolib("libwrap.so.0.%s" % get.srcVERSION(), "/lib")
 
     inarytools.dosym("/lib/libwrap.so.0.%s" % get.srcVERSION(), "/lib/libwrap.so.0")
     inarytools.dosym("/lib/libwrap.so.0", "/lib/libwrap.so")
