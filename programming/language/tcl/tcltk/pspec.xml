@@ -21,11 +21,6 @@
             <!--<Dependency>libXScrnSaver-devel</Dependency>-->
             <Dependency>fontconfig-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">tk-8.6.1-conf.patch</Patch>
-            <Patch level="1">tk-8.6.1-fix-xft.patch</Patch>
-            <Patch level="1">tk-8.6.1-make.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -66,7 +61,7 @@
     <History>
         <Update release="2">None
             <Date>2019-09-25</Date>
-            <Version>8.6.9.1</Version>
+            <Version>8.6.9</Version>
             <Comment>Upgraded tcltk to 8.6.9.1</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

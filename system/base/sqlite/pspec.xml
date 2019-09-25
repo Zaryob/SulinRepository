@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>An SQL Database Engine in a C Library</Summary>
         <Description>SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine. Supports databases up to 2 terabytes in size.</Description>
-        <Archive sha1sum="a0eba79e5d1627946aead47e100a8a6f9f6fafff" type="targz">https://www.sqlite.org/2019/sqlite-amalgamation-3290000.zip</Archive>
+        <Archive sha1sum="e8862aa46fb70e25c8006a1fe519067a1fa9e618" type="zip">https://www.sqlite.org/2019/sqlite-src-3290000.zip</Archive>
         <Archive sha1sum="b0f697c557b415cb1d67acb61b40fbad0b012cad" type="zip">https://sqlite.org/2019/sqlite-doc-3290000.zip</Archive>
         <BuildDependencies>
             <Dependency>readline-devel</Dependency>
@@ -53,6 +53,9 @@
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for sqlite</Summary>
         <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>readline-32bit</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">sqlite</Dependency>
         </RuntimeDependencies>
@@ -73,7 +76,7 @@
     </Package>
 
     <History>
-      <Update release="2">
+      <Update release="3">
           <Date>2019-09-25</Date>
           <Version>3.29.0</Version>
           <Comment>SQLite new version have been upgraded.</Comment>

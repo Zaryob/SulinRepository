@@ -13,6 +13,8 @@ from inary.actionsapi import get
     # but cannot be seen with sqlite query. However, it can be seen by opening the file with a text editor.
     # SQLITE_SECURE_DELETE overwrites written data with zeros.
 def setup():
+    if get.buildTYPE()=="emul32":
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
     inarytools.cflags.add("-DSQLITE_SECURE_DELETE=1",
                          "-DSQLITE_ENABLE_UNLOCK_NOTIFY=1",
                          "-DSQLITE_ENABLE_COLUMN_METADATA=1",
@@ -37,9 +39,11 @@ def setup():
                          --enable-fts5 \
                          --enable-rtree \
                          --enable-json1 \
-                         --enable-threadsafe")
+                         --enable-threadsafe {}".format("--disable-tcl" if get.buildTYPE()=="emul32" else ""))
 
 def build():
+    if get.buildTYPE()=="emul32":
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
     autotools.make("-j1")
 
 
@@ -48,10 +52,10 @@ def install():
 
     inarytools.dodoc("README*")
 
-    shelltools.cd("%s/sqlite-doc-3260000" % get.workDIR())
+    shelltools.cd("%s/sqlite-doc-3290000" % get.workDIR())
     shelltools.system("pwd")
 
-    inarytools.insinto("/usr/share/doc/sqlite", "../sqlite-doc-3260000/*")
+    inarytools.insinto("/usr/share/doc/sqlite", "../sqlite-doc-3290000/*")
 
     shelltools.system("find %s -type f -perm 755 -exec ls -lha {} \;" % get.installDIR())
     shelltools.system("find %s -type f -perm 755 -exec chmod 644 {} \;" % get.installDIR())

@@ -14,7 +14,7 @@
         <PartOf>programming.misc</PartOf>
         <Summary>Peer-reviewed portable C++ source libraries</Summary>
         <Description>Boost provides free portable peer-reviewed C++ libraries. The emphasis is on portable libraries which work well with the C++ Standard Library.</Description>
-        <Archive sha1sum="9f1dd4fa364a3e3156a77dc17aa562ef06404ff6" type="tarbz2">mirrors://sourceforge/boost/boost_1_63_0.tar.bz2</Archive>
+        <Archive sha1sum="9bd3d7c6e9e142d0ae4d73d0d7654bd09ad7d7c0" type="zip">https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.zip</Archive>
         <BuildDependencies>
             <Dependency>bzip2</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -62,21 +62,29 @@
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/libboost_python.so*</Path>
+            <Path fileType="library">/usr/lib/libboost_python27.so*</Path>
         </Files>
     </Package>
     <Package>
         <Name>boost-python3</Name>
+        <BuildType>rebuild_python</BuildType>
         <Summary>Headers and library documentation for boosta C++ library which enables seamless interoperability between C++ and the Python3</Summary>
         <RuntimeDependencies>
             <Dependency release="current">boost</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/libboost_python3.so*</Path>
+            <Path fileType="library">/usr/lib/libboost_python37.so*</Path>
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-25</Date>
+            <Version>1.71.0</Version>
+            <Comment>Upgraded version to 1.71.0 </Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.63.0</Version>

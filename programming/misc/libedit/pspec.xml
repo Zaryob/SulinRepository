@@ -42,6 +42,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-25</Date>
+            <Version>3.1_20190324</Version>
+            <Comment>Upgraded to lastest.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>3.1_20160903</Version>
