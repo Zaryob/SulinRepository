@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>unicode-ucd</Name>
+        <Homepage>http://www.unicode.org/ucd</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <Summary>Unicode Character Database</Summary>
+        <Description>The Unicode Character Database (UCD) consists of a number of data files listing Unicode character properties and related data. It also includes data files containing test data for conformance to several important Unicode algorithms.</Description>
+        <Archive sha1sum="756d212bc54d9280924dbe0c7209941576d379a5" type="zip">https://www.unicode.org/Public/zipped/12.1.0/UCD.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>unicode-ucd</Name>
+        <Files>
+            <Path fileType="data">/usr/share/unicode/ucd</Path>
+            <Path fileType="data">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/doc/unicode-ucd/copyright.html">copyright.html</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>12.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

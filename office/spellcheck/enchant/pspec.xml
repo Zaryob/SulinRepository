@@ -1,0 +1,95 @@
+<? xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>enchant</Name>
+        <Homepage>http://www.abisource.com/enchant/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Spellchecker wrapping library</Summary>
+        <Description>enchant is a library that wraps other spell checking backends.</Description>
+        <Archive sha1sum="946509c4ab0c5e6e6ef952ca94a14738bc7e3156" type="targz">https://github.com/AbiWord/enchant/releases/download/v2.2.7/enchant-2.2.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>aspell</Dependency>
+            <Dependency>hunspell</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>enchant</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/enchant</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>enchant-aspell</Name>
+        <Summary>aspell backend for Enchant</Summary>
+        <RuntimeDependencies>
+            <Dependency>enchant</Dependency>
+            <Dependency>aspell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/enchant-2/enchant_aspell*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>enchant-zemberek</Name>
+        <Summary>zemberek backend for Enchant</Summary>
+        <RuntimeDependencies>
+            <Dependency>enchant</Dependency>
+            <Dependency>zemberek-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/enchant-2/enchant_zemberek*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>enchant-hunspell</Name>
+        <Summary>hunspell backend for Enchant</Summary>
+        <RuntimeDependencies>
+            <Dependency>enchant</Dependency>
+            <Dependency>hunspell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/enchant-2/enchant_hunspell*</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>enchant-devel</Name>
+        <Summary>Development files for enchant</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">enchant</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-26</Date>
+            <Version>2.2.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -5,8 +5,8 @@
         <Name>glib2</Name>
         <Homepage>http://www.gtk.org/</Homepage>
         <Packager>
-            <Name>Sulin Community</Name>
-            <Email>admins@sulin.org</Email>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>LGPLv2.1</License>
         <IsA>library</IsA>
@@ -23,7 +23,7 @@
             <Dependency>docbook-xml</Dependency>
         </BuildDependencies>
         <Patches>
-            <Patch level="1">revert-warn-glib-compile-schemas.patch</Patch>
+            <Patch level="1">skip-warnings.patch</Patch>
         </Patches>
     </Source>
 
@@ -138,7 +138,7 @@
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-        <Update release="1">None
+        <Update release="1">
             <Date>2019-09-07</Date>
             <Version>2.56.2</Version>
             <Comment>First release</Comment>

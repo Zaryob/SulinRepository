@@ -8,14 +8,14 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+def setup():
+    autotools.configure("--disable-lynx \
+                         --disable-static")
 
 def build():
     autotools.make()
 
 def install():
-    autotools.install("DESTDIR={}".format(get.installDIR()))
-    inarytools.dohtml("doc/")
-    inarytools.domove("/usr/local/share/*","/usr/share/")
-    inarytools.domove("/usr/local/*","/usr")
-    inarytools.removeDir("/usr/local/")
-    inarytools.removeDir("/usr/share/share")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+    inarytools.dodoc("README", "LICENSE")

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dejavu-fonts</Name>
+        <Homepage>http://www.dejavu-fonts.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>data:font</IsA>
+        <Summary>DejaVu fonts</Summary>
+        <Description>Contains DejaVu fonts that are based on Bitstream fonts, with improvements.</Description>
+        <Archive sha1sum="e707f64cf2e4881a12572b8c09eec4aec08946f7" type="tarbz2">mirrors://sourceforge/dejavu/2.37/dejavu-fonts-2.37.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>fontforge</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>perl-Font-TTF</Dependency>
+            <Dependency>perl-IO-String</Dependency>
+            <Dependency>unicode-ucd</Dependency>
+            <Dependency>giflib</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>dejavu-fonts</Name>
+        <Files>
+            <Path fileType="config">/etc/fonts</Path>
+            <Path fileType="data">/etc/X11/fontpath.d/dejavu</Path>
+            <Path fileType="data">/usr/share/fonts</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-26</Date>
+            <Version>2.37</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

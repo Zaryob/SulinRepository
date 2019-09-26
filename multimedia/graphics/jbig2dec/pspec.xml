@@ -1,8 +1,8 @@
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>jbigkit</Name>
-        <Homepage>http://www.cl.cam.ac.uk/~mgk25/jbigkit/</Homepage>
+        <Name>jbig2dec</Name>
+        <Homepage>https://github.com/ArtifexSoftware/ghostpdl-downloads</Homepage>
         <Packager>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
@@ -10,24 +10,35 @@
         <License>GPLv2</License>
         <IsA>library</IsA>
         <IsA>app:console</IsA>
-        <Summary>A portable library of compression and decompression functions</Summary>
-        <Description>JBIG-KIT implements a highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents.</Description>
-        <Archive sha1sum="4864646df004e8331d19f2fa103ed731fdb6c099" type="targz">http://www.cl.cam.ac.uk/~mgk25/download/jbigkit-2.1.tar.gz</Archive>
+        <Summary>Decoder implementation of the JBIG2 image compression format</Summary>
+        <Description>Decoder implementation of the JBIG2 image compression format.</Description>
+        <Archive sha1sum="38c62210d92102952b18400b15eb4e727a755bfd" type="targz">https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs927/jbig2dec-0.16.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libpng-devel</Dependency>
+        </BuildDependencies>
     </Source>
     <Package>
-        <Name>jbigkit</Name>
+        <Name>jbig2dec</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>jbig2dec-devel</Name>
+        <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
     <Package>
-    <Name>jbigkit-32bit</Name>
+        <Name>jbig2dec-32bit</Name>
         <PartOf>emul32</PartOf>
-        <Summary>32-bit shared libraries for jbigkit.</Summary>
+        <Summary>32-bit shared libraries for jbig2dec.</Summary>
         <BuildType>emul32</BuildType>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
@@ -36,7 +47,7 @@
     <History>
         <Update release="1">
             <Date>2019-04-12</Date>
-            <Version>2.1</Version>
+            <Version>0.16</Version>
             <Comment>First release</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

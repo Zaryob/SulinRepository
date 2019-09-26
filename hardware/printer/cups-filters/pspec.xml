@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cups-filters</Name>
+        <Homepage>http://www.openprinting.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>GPLv3</License>
+        <License>GPLv2+</License>
+        <License>GPLv3+</License>
+        <License>LGPLv2+</License>
+        <License>MIT</License>
+        <IsA>data</IsA>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>OpenPrinting CUPS filters and backends</Summary>
+        <Description>Contains backends, filters, and other software that was once part of the core CUPS distribution but is no longer maintained by Apple Inc. In addition it contains additional filters developed independently of Apple, especially filters for the PDF-centric printing workflow introduced by OpenPrinting.</Description>
+        <Archive sha1sum="5edd6c5973b2ea34b862bdc66c194ba0d77f8b8a" type="targz">http://www.openprinting.org/download/cups-filters/cups-filters-1-20190926.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>mupdf-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>dejavu-fonts</Dependency>
+            <Dependency>poppler-utils</Dependency>
+            <Dependency>poppler-cpp-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>avahi-devel</Dependency>
+            <Dependency>avahi-glib-devel</Dependency>
+            <Dependency>qpdf-devel</Dependency>
+            <Dependency>ghostscript-devel</Dependency>
+            <Dependency>poppler-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cups-filters</Name>
+        <RuntimeDependencies>
+            <Dependency>cups</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>mupdf</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>qpdf</Dependency>
+            <Dependency>ghostscript</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+            <Dependency>avahi-glib</Dependency>
+            <Dependency>avahi-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/ppd</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/cups</Path>
+            <Path fileType="config">/etc/cups/cups-browsed.conf</Path>
+            <Path fileType="config">/etc/fonts/conf.d/99pdftoopvp.conf</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cups-filters-devel</Name>
+        <Summary>Cups-filters için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cups-filters</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

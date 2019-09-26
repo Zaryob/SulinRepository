@@ -1,0 +1,66 @@
+<? xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>hunspell</Name>
+        <Homepage>http://hunspell.github.io/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MPL-1.1</License>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>An improved spell checker</Summary>
+        <Description>hunspell spell checker is an improved replacement for myspell in Openoffice.org. It is also used in Firefox and Thunderbird as spell checker.</Description>
+        <Archive sha1sum="e9099d3c261cc388e067e7f9a86acd97c8417b0e" type="targz">https://github.com/hunspell/hunspell/files/2573619/hunspell-1.7.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>hunspell</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+	    <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="man">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/bin/ispellaff2myspell" permission="0755" owner="root">ispellaff2myspell</AdditionalFile>
+            <AdditionalFile target="/usr/bin/wordlist2hunspell" permission="0755" owner="root">wordlist2hunspell</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>hunspell-devel</Name>
+        <Summary>Development files for hunspell</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">hunspell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-26</Date>
+            <Version>1.7.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
