@@ -25,6 +25,10 @@
         <Patches>
             <Patch level="1">skip-warnings.patch</Patch>
         </Patches>
+            
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="multilib.patch">multilib.patch</AdditionalFile>
+        </AdditionalFiles>
     </Source>
 
     <Package>

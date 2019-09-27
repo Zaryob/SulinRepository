@@ -11,7 +11,10 @@ from inary.actionsapi import get
 
 
 def setup():
+    if get.buildTYPE=="emul32":
+        shelltools.system("patch -p1 < multilib.patch")
     mesontools.meson_configure()
+
 
 def build():
     mesontools.ninja_build()
