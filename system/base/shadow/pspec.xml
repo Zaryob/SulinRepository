@@ -39,28 +39,6 @@
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0600" target="/etc/securetty">securetty</AdditionalFile>
-            <AdditionalFile owner="root" permission="0600" target="/etc/default/useradd">default/useradd</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/login">pam.d/login</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/other">pam.d/other</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/passwd">pam.d/passwd</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/shadow">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/chage">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/chsh">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/chfn">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/chpasswd">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/newusers">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/useradd">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/userdel">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/usermod">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/groupadd">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/groupdel">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/groupmod">pam.d/shadow</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/su">pam.d/su</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/system-auth">pam.d/system-auth</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/login.defs">login.defs</AdditionalFile>
-        </AdditionalFiles>
     </Package>
 
         <Package>
