@@ -23,6 +23,12 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
+        <Replaces>
+             <Package>libjpeg-turbo</Package>
+        </Replaces>
+        <Conflicts>
+             <Package>libjpeg-turbo</Package>
+        </Conflicts>
     </Package>
 
     <Package>
@@ -33,6 +39,12 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
         </Files>
+        <Replaces>
+             <Package>libjpeg-turbo-devel</Package>
+        </Replaces>
+        <Conflicts>
+             <Package>libjpeg-turbo-devel</Package>
+        </Conflicts>
     </Package>
 
     <Package>
@@ -46,9 +58,22 @@
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
+        <Replaces>
+             <Package>libjpeg-turbo-32bit</Package>
+        </Replaces>
+        <Conflicts>
+             <Package>libjpeg-turbo-32bit</Package>
+        </Conflicts>
     </Package>
 
     <History>
+      <Update release="2">
+          <Date>2019-09-28</Date>
+          <Version>9b</Version>
+          <Comment>Rebuilded because of conflicts</Comment>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
         <Update release="1">
             <Date>2019-09-15</Date>
             <Version>9b</Version>
