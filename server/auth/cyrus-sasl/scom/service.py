@@ -3,8 +3,8 @@
 from scom.service import *
 
 serviceType = "server"
-serviceDesc = _({"en": "Cyrus-SASL Daemon",
-                 "tr": "Cyrus-SASL Servisi"})
+serviceDesc = {"en": "Cyrus-SASL Daemon",
+                 "tr": "Cyrus-SASL Servisi"}
 serviceConf = "saslauthd"
 
 SOCKETDIR = "/run/saslauthd"
