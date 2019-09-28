@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libpcap</Name>
+        <Homepage>http://www.tcpdump.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A system-independent library for user-level network packet capture</Summary>
+        <Description>libpcap (Packet CAPture) provides a portable framework for low-level network monitoring. Applications include network statistics collection, security monitoring, network debugging, etc.</Description>
+        <Archive sha1sum="c565f591c9a921fb5938cc16407c321c1ca8b9e8" type="targz">http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>bluez-libs-devel</Dependency>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">libpcap-1.7.4-enable_bluetooth-1.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libpcap</Name>
+        <RuntimeDependencies>
+            <Dependency>bluez</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>libusb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libpcap-devel</Name>
+        <Summary>Development files for libpcap</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libpcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/pcap-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-27</Date>
+            <Version>1.9.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>wpa_supplicant</Name>
+        <Homepage>http://hostap.epitest.fi/wpa_supplicant/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>BSD</License>
+        <IsA>service</IsA>
+        <Summary>IEEE 802.1X/WPA supplicant for secure wireless transfers</Summary>
+        <Description>wpa_supplicant is a WPA supplicant with support for WPA and WPA2.</Description>
+        <Archive sha1sum="b784c0e5e56889c81d027757a4623659bf15f9a8" type="targz">https://w1.fi/releases/wpa_supplicant-2.9.tar.gz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="wpa_supplicant/.config">wpa_supplicant.config</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wpa_supplicant</Name>
+        <RuntimeDependencies>
+            <Dependency>libnl</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/etc/dbus-1</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/dbus-1/system-services</Path>
+            <Path fileType="data">/run</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0600" target="/etc/wpa_supplicant.conf">wpa_supplicant.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/wpa_supplicant">wpa_supplicant.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/wpa_supplicant">wpa_supplicant.logrotate</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/python2.7/site-packages/wpa_supplicant.py">wpa_supplicant.py</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>2.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
