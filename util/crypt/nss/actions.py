@@ -42,7 +42,7 @@ def install():
         inarytools.insinto("/usr/bin","dist/Linux*/bin/%s" % binary, sym=False)
 
     for lib in ["*.a","*.chk","*.so"]:
-        inarytools.insinto("/usr/lib/nss","dist/Linux*/lib/%s" % lib, sym=False)
+        inarytools.insinto("/usr/lib","dist/Linux*/lib/%s" % lib, sym=False)
 
     # Headers
     for header in ["dist/private/nss/*.h","dist/public/nss/*.h"]:
@@ -56,7 +56,7 @@ def install():
 
     # create empty NSS database
     inarytools.dodir("/etc/pki/nssdb")
-    shelltools.export("LD_LIBRARY_PATH", "%s/usr/lib/nss" % get.installDIR())
+    shelltools.export("LD_LIBRARY_PATH", "%s/usr/lib/" % get.installDIR())
     shelltools.system("%s/usr/bin/modutil -force -dbdir \"sql:%s/etc/pki/nssdb\" -create" % (get.installDIR(), get.installDIR()))
     shelltools.chmod("%s/etc/pki/nssdb/*" % get.installDIR(), 0o644)
     shelltools.system('sed -i "s|%s||" %s/etc/pki/nssdb/*' % (get.installDIR(), get.installDIR()))
