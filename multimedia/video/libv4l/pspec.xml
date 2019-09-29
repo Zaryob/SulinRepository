@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libv4l</Name>
+        <Homepage>http://freecode.com/projects/libv4l</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>V4L wrapper for V4L2</Summary>
+        <Description>A library to access V4L2 API with V4L1 alike calls.</Description>
+        <Archive sha1sum="3c3c9d4c9924f0153974ebcf8554331e04914050" type="tarbz2">https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.18.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>eudev-32bit</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libv4l</Name>
+        <RuntimeDependencies>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/lib/udev/rules.d</Path>
+            <Path fileType="config">/lib/udev/rc_keymaps</Path>
+            <Path fileType="library">/usr/lib/lib*</Path>
+            <Path fileType="library">/usr/lib/v4l*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>v4l-utils</Name>
+        <Summary>Utilities for libv4l</Summary>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency release="current">libv4l</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>libv4l-devel</Name>
+        <Summary>Development files for libv4l</Summary>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency release="current">libv4l</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libv4l-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libv4l</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+            <Dependency>mesa-glu-32bit</Dependency>
+            <Dependency>alsa-lib-32bit</Dependency>
+            <Dependency>eudev-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency release="current">libv4l</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/lib*</Path>
+            <Path fileType="library">/usr/lib32/v4l*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>1.18.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

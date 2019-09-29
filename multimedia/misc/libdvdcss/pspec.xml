@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libdvdcss</Name>
+        <Homepage>http://www.videolan.org/libdvdcss/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A portable abstraction library for DVD decryption</Summary>
+        <Description>libdvdcss is a simple and library portable abstraction library designed for accessing DVDs like a block device without having to bother about the decryption. A DVD player can be built around the libdvdcss API using no more than 4 or 5 library calls.</Description>
+        <Archive sha1sum="b2c65461ff483401bff4348adb934fd596a8bb9d" type="tarbz2">https://download.videolan.org/pub/libdvdcss/1.4.2/libdvdcss-1.4.2.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>libdvdcss</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdvdcss-devel</Name>
+        <Summary>Development files for libdvdcss</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libdvdcss</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/dvdcss</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>1.4.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

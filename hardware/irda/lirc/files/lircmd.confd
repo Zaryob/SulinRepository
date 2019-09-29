@@ -1,0 +1,3 @@
+# Options to pass to the lircmd process
+
+LIRCMD_OPTS=""

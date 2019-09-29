@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>schroedinger</Name>
+        <Homepage>http://www.diracvideo.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Dirac codec library</Summary>
+        <Description>C-based libraries and GStreamer plugins for the Dirac video codec.</Description>
+        <Archive sha1sum="c01ee0bed6c1bd7608763927f719f94ebc6aaa41" type="targz">https://launchpad.net/schroedinger/trunk/1.0.11/+download/schroedinger-1.0.11.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>orc-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>ltmain_as-needed.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>schroedinger</Name>
+        <RuntimeDependencies>
+            <Dependency>orc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>schroedinger-devel</Name>
+        <Summary>Development files for schroedinger</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">schroedinger</Dependency>
+            <Dependency>orc-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>1.0.11</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

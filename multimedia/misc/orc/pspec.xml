@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>orc</Name>
+        <Homepage>http://code.entropywave.com/projects/orc/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <License>BSD-2</License>
+        <IsA>app:console</IsA>
+        <Summary>The Oil Runtime Compiler</Summary>
+        <Description>Optimized Inner Loop Runtime Compiler</Description>
+        <Archive sha1sum="b5a778b285e3d7fa75bcba32a0a7804207f7e2cf" type="tarxz">https://gstreamer.freedesktop.org/src/orc/orc-0.4.30.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>valgrind</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>orc</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>orc-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for orc</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">orc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>orc-devel</Name>
+        <Summary>orc için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">orc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+             <Path fileType="header">/usr/include/</Path>
+             <Path fileType="data">/usr/lib/pkgconfig</Path>
+             <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>0.4.30</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

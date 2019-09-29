@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libcaca</Name>
+        <Homepage>http://caca.zoy.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>WTFPL-2</License>
+        <License>LGPLv2.1</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A library that creates colored ASCII-art graphics</Summary>
+        <Description>libcaca is a graphics library that outputs text instead of pixels, so that it can work on older video cards or text terminals</Description>
+        <Archive sha1sum="ed138f3717648692113145b99a80511178548010" type="targz">http://caca.zoy.org/files/libcaca/libcaca-0.99.beta19.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>imlib2</Dependency>
+            <Dependency>slang</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libX11</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libcaca</Name>
+        <RuntimeDependencies>
+            <Dependency>imlib2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>slang</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	    <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-03</Date>
+            <Version>0.99_beta19</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

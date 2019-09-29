@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gst-plugins-base</Name>
+        <Homepage>http://gstreamer.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Basepack of plugins for gstreamer</Summary>
+        <Description>GStreamer base plugins are a well-groomed and well-maintained collection of GStreamer plugins and elements, spanning the range of possible types of elements one would want to write for GStreamer. It also contains helper libraries and base classes useful for writing elements. A wide range of video and audio decoders, encoders, and filters are included.</Description>
+        <Archive sha1sum="e906442fd99376ce2384a634637ede9fd8515fc3" type="tarxz">https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>cdparanoia</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXv-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libopus-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>libtheora-devel</Dependency>
+            <Dependency>libvisual-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gst-plugins-base</Name>
+        <RuntimeDependencies>
+            <Dependency>orc</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libopus</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>libvisual</Dependency>
+            <Dependency>libtheora</Dependency>
+            <Dependency>cdparanoia</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/gst-plugins-base/1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gst-plugins-base-devel</Name>
+        <Summary>Development files for gst-plugins-base</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gst-plugins-base</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+      <Update release="1">
+          <Date>2019-09-27</Date>
+          <Version>1.16.1</Version>
+          <Comment>First release</Comment>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
+    </History>
+</INARY>

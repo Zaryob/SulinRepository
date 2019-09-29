@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mjpegtools</Name>
+        <Homepage>http://mjpeg.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:gui</IsA>
+        <Summary>Tools for MJPEG video</Summary>
+        <Description>mjpegtools is a complete suite of tools for you to capture, edit, process, filter and play your media as you wish. You can digitize your VHS collection, create DVDs, and do advanced video filtering on already-digitized videos.</Description>
+        <Archive sha1sum="b9effa86280e23d67369e842e5cb645948583097" type="targz">mirrors://sourceforge/mjpeg/mjpegtools-2.1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libdv-devel</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>sdl-gfx-devel</Dependency>
+            <Dependency>libXxf86dga-devel</Dependency>
+            <Dependency>libquicktime-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mjpegtools</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libdv</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-gfx</Dependency>
+            <Dependency>libXxf86dga</Dependency>
+            <Dependency>libquicktime</Dependency>
+            <Dependency>jpeg</Dependency>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mjpegtools-devel</Name>
+        <Summary>Development files for mjpegtools</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mjpegtools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>2.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

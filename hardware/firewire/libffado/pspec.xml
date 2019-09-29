@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libffado</Name>
+        <Homepage>http://www.ffado.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>GPLv3</License>
+        <Summary>Free firewire audio drivers</Summary>
+        <Description>libffado tries to provide open-source drivers for all FireWire based pro-audio devices.</Description>
+        <Archive sha1sum="ae67b519358492afe705cdac4f70dd88d748271a" type="targz">http://www.ffado.org/files/libffado-2.4.2.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>libxmlpp-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>dbus-c++-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libconfig-devel</Dependency>
+            <Dependency>libraw1394-devel</Dependency>
+            <Dependency>libiec61883-devel</Dependency>
+            <Dependency>scons</Dependency>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libffado</Name>
+        <IsA>library</IsA>
+        <RuntimeDependencies>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>dbus-c++</Dependency>
+            <Dependency>libxmlpp</Dependency>
+            <Dependency>libconfig</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>libraw1394</Dependency>
+            <Dependency>libiec61883</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/share/libffado</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libffado-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development files for libffado</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libffado</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ffado-mixer</Name>
+        <Icon>ffado-mixer</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>hardware.sound</PartOf>
+        <Summary>Graphical User Interface for FFADO</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libffado</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/ffado-mixer*</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.4.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

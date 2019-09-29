@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>wavpack</Name>
+        <Homepage>http://www.wavpack.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>WavPack audio compression tools</Summary>
+        <Description>WavPack is a completely open audio compression format providing lossless, high-quality lossy, and a unique hybrid compression mode.</Description>
+        <Archive sha1sum="7a8c9228d8e0f48828cf0a8f31aabcc8ae1f1c3b" type="targz">https://github.com/dbry/WavPack/archive/5.1.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>wavpack</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wavpack-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">wavpack</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-03</Date>
+            <Version>5.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

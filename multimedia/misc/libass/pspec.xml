@@ -42,7 +42,7 @@
             <Dependency release="current">libass</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>fribidi-devel</Dependency>
+            <Dependency>fridibi-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
         </RuntimeDependencies>
         <Files>

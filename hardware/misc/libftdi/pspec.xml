@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libftdi</Name>
+        <Homepage>http://www.intra2net.com/en/developer/libftdi/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>A library for accessing to FTDI USB chips</Summary>
+        <Description>libftdi allows access to eeprom and bitbang modes of FT232/245/2232 USB serial interface chips.</Description>
+        <Archive sha1sum="5b14cebab8168e12dd6c2b5325a29ad93ed40f3d" type="tarbz2">https://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>libusb-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>swig</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="0">openwrt-useSWIG.patch</Patch>
+            <Patch level="0">fix-udev-group_and_usb_name.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libftdi</Name>
+        <RuntimeDependencies>
+            <Dependency>libusb</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python-libftdi</Name>
+        <RuntimeDependencies>
+            <Dependency>libusb</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency release="current">libftdi</Dependency>
+        </RuntimeDependencies>
+        <Summary>Python bindings for libftdi</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libftdi-devel</Name>
+        <Summary>Development files for libftdi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libftdi</Dependency>
+            <Dependency>libusb-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/libftdi-config</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="doc">/usr/share/doc/libftdi/examples</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
