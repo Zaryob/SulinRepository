@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xfconf</Name>
+        <Homepage>http://www.xfce.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Xfce multi channel setting library</Summary>
+        <Description>Xfconf is a hirerchical (tree-like) configuration system for the Xfce graphical desktop environment.</Description>
+        <Archive sha1sum="edfa24dd862bc39d6002f40f6b9b3974c59fa250" type="tarbz2">http://archive.xfce.org/xfce/4.14/src/xfconf-4.14.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xfce4-dev-tools</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            <Dependency>perl-Glib</Dependency>
+            <Dependency>gtk-doc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfconf</Name>
+        <RuntimeDependencies>
+            <Dependency>libxfce4util</Dependency>
+            <Dependency>perl-Glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xfconf-devel</Name>
+        <IsA>library</IsA>
+        <IsA>data:doc</IsA>
+        <Summary>Xfconf development files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xfconf</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>4.14.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
