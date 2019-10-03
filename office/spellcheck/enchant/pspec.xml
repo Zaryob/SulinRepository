@@ -1,4 +1,4 @@
-<? xml version="1.0"?>
+<?xml version="1.0"?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
@@ -70,7 +70,7 @@
             <Path fileType="library">/usr/lib/enchant-2/enchant_hunspell*</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>enchant-devel</Name>
         <Summary>Development files for enchant</Summary>
