@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>webkit2gtk</Name>
+        <Homepage>http://webkitgtk.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <License>LGPLv2.1</License>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>An opensource web browser engine for GTK+ applications</Summary>
+        <Description>The GTK+ port of WebKit is intended to provide a browser component primarily for users of the portable GTK+ UI toolkit on platforms like Linux.</Description>
+        <Archive sha1sum="e0c6f707bdf9edf3d444117736cb3c040eca78e7" type="tarxz">http://www.webkitgtk.org/releases/webkitgtk-2.26.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>hyphen-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>woff-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>geoclue-devel</Dependency>
+            <Dependency>enchant-devel</Dependency>
+            <Dependency>gperf</Dependency>
+            <Dependency>which</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gst-plugins-bad-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>webkit2gtk</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>webp</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>woff</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>enchant</Dependency>
+            <Dependency>geoclue</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gst-plugins-bad</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/webkit2gtk-4.0</Path>
+            <Path fileType="library">/usr/lib/libwebkit2gtk*</Path>
+            <Path fileType="library">/usr/lib/libjavascriptcoregtk*</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>webkit2gtk-devel</Name>
+        <IsA>library</IsA>
+        <IsA>data:doc</IsA>
+        <Summary>Development files for GTK+ port of WebKit</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency release="current">webkit2gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-03</Date>
+            <Version>2.26.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
