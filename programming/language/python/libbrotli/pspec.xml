@@ -18,13 +18,33 @@
             <Dependency>cmake</Dependency>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
          </BuildDependencies>
     </Source>
 
-
+    <Package>
+        <Name>libbrotli</Name>
+        <Files>
+          <Path fileType="library">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libbrotli-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>libbrotli</Dependency>
+        </RuntimeDependencies>
+        <Summary>Development files for libbrotli</Summary>
+        <Files>
+            <Path fileType="library">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>python-libbrotli</Name>
         <RuntimeDependencies>
+            <Dependency>libbrotli</Dependency>
             <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -35,6 +55,7 @@
     <Package>
         <Name>python3-libbrotli</Name>
         <RuntimeDependencies>
+            <Dependency>libbrotli</Dependency>
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -51,6 +72,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-10-03</Date>
+            <Version>1.0.7</Version>
+            <Comment>Fixed dependencies and added brotli libraries.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-17</Date>
             <Version>1.0.7</Version>

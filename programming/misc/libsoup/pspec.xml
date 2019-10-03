@@ -20,7 +20,8 @@
             <Dependency>libxml2-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>python-libbrotli</Dependency>
-            <Dependency>python3-libbrotli</Dependency>
+            <Dependency>python3-libbrotli</Dependency>s
+            <Dependency>libbrotli-devel</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>gettext-devel</Dependency>
@@ -34,6 +35,7 @@
     <Package>
         <Name>libsoup</Name>
         <RuntimeDependencies>
+             <Dependency>libbrotli</Dependency>
              <Dependency>libpsl</Dependency>
              <Dependency>glib2</Dependency>
              <Dependency>libxml2</Dependency>
@@ -81,6 +83,8 @@
         <Summary>Development files for libsoup</Summary>
         <RuntimeDependencies>
             <Dependency>glib2-devel</Dependency>
+            <Dependency>libbrotli-devel</Dependency>
+            <Dependency>libpsl-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency release="current">libsoup</Dependency>
