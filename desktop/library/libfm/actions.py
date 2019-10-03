@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# Licensed under the GNU General Public License, version 3.
+# See the file http://www.gnu.org/licenses/gpl.txt
+
+from inary.actionsapi import autotools
+from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
+from inary.actionsapi import get
+
+def setup():
+    shelltools.makedirs("build-gtk2")
+    shelltools.makedirs("build-gtk3")
+    autotools.autoreconf("-fi")
+
+    shelltools.cd("build-gtk2")
+    shelltools.system("../configure \
+                         --prefix=/usr \
+                         --sysconfdir=/etc \
+                         --enable-debug \
+                         --enable-udisks \
+                         --enable-demo \
+                         --with-gtk=2")
+
+    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+    shelltools.cd("..")
+    shelltools.cd("build-gtk3")
+    shelltools.system("../configure \
+                         --prefix=/usr \
+                         --sysconfdir=/etc \
+                         --enable-debug \
+                         --enable-udisks \
+                         --enable-demo \
+                         --with-gtk=3")
+
+    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+
+def build():
+    shelltools.cd("build-gtk2")
+    autotools.make()
+    shelltools.cd("..")
+    shelltools.cd("build-gtk3")
+    autotools.make()
+
+def install():
+    shelltools.cd("build-gtk2")
+    autotools.install()
+    shelltools.cd("..")
+    shelltools.cd("build-gtk3")
+    autotools.install()
+    shelltools.unlink("{}/usr/include/libfm-1.0/fm-extra.h".format(get.installDIR()))
+    shelltools.unlink("{}/usr/include/libfm-1.0/fm-version.h".format(get.installDIR()))
+    shelltools.unlink("{}/usr/lib/libfm-extra*".format(get.installDIR()))
+    shelltools.unlink("{}/usr/lib/pkgconfig/libfm-extra.pc".format(get.installDIR()))
+    shelltools.unlink("{}/usr/include/libfm-1.0/fm-xml-file.h".format(get.installDIR()))
+    shelltools.cd("..")
+    inarytools.dodoc("AUTHORS", "COPYING", "TODO")
