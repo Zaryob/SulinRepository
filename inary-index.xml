@@ -424,6 +424,57 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>ilmbase</Name>
+            <Homepage>http://www.openexr.com</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>science.misc</PartOf>
+            <Summary xml:lang="en">Several utility libraries from ILM (Industrial  Light &amp; Magic) used by OpenEXR</Summary>
+            <Description xml:lang="en">IlmBase are a set of utility libraries released by ILM, and used in their OpenEXR implementation. Included in this package you can find; libHalf (a class named Half for manipulating &quot;half&quot; values (16-bit floating point format) as if they were a built-in C++ data type), libIlmThread (a thread abstraction library on top of pthreads), libImath (a math library with support for matrices, 2d and 3d transformations, solvers for linear/quadratic/cubic equations and more), libIex (an exception handling library).</Description>
+            <Archive type="targz" sha1sum="1cddb28b14b60025b1e1604d5616540ed038cb16">https://github.com/openexr/openexr/releases/download/v2.3.0/ilmbase-2.3.0.tar.gz</Archive>
+            <Patches>
+                <Patch level="1">ilmbase-2.0.1-no_undefined.patch</Patch>
+                <Patch level="1">ilmbase-1.0.3-pkgconfig.patch</Patch>
+            </Patches>
+            <SourceURI>science/misc/ilmbase/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ilmbase</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>ilmbase-devel</Name>
+            <Summary xml:lang="en">Development files for ilmbase</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">ilmbase</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>2.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libnsl</Name>
             <Homepage>https://github.com/thkukuk/libnsl</Homepage>
             <Packager>
@@ -1295,7 +1346,7 @@
             <BuildDependencies>
                 <Dependency>gconf-devel</Dependency>
                 <Dependency>libXmu-devel</Dependency>
-                <Dependency>webkit-gtk2-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
                 <Dependency>spidermonkey-devel</Dependency>
                 <Dependency>cmake</Dependency>
                 <Dependency>intltool</Dependency>
@@ -1331,10 +1382,10 @@
             </Files>
         </Package>
         <Package>
-            <Name>libproxy-webkit-gtk2</Name>
+            <Name>libproxy-webkitgtk</Name>
             <RuntimeDependencies>
                 <Dependency>libproxy</Dependency>
-                <Dependency>webkit-gtk2</Dependency>
+                <Dependency>webkit2gtk</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/libproxy/*/modules/pacrunner_webkit*</Path>
@@ -1557,6 +1608,58 @@
             <Update release="1">
                 <Date>2019-09-29</Date>
                 <Version>0.8</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libcddb</Name>
+            <Homepage>http://libcddb.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>network.misc</PartOf>
+            <Summary xml:lang="en">A library for accessing a CDDB server</Summary>
+            <Description xml:lang="en">Libcddb is a library that implements the different protocols (CDDBP, HTTP, SMTP) to access data on a CDDB server (e.g http://freedb.org/).</Description>
+            <Archive type="tarbz2" sha1sum="2a7855918689692ff5ca3316d078a859d51959ce">mirrors://sourceforge/libcddb/libcddb-1.3.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libcdio-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/misc/libcddb/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libcddb</Name>
+            <RuntimeDependencies>
+                <Dependency>libcdio</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libcddb-devel</Name>
+            <Summary xml:lang="en">Development files for libcddb</Summary>
+            <RuntimeDependencies>
+                <Dependency>libcdio-devel</Dependency>
+                <Dependency release="1">libcddb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>1.3.2</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -2128,6 +2231,7 @@
         <Package>
             <Name>enchant</Name>
             <RuntimeDependencies>
+                <Dependency>aspell</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>libgcc</Dependency>
             </RuntimeDependencies>
@@ -2702,6 +2806,72 @@
             <Update release="1">
                 <Date>2019-09-15</Date>
                 <Version>0.8.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>djvu</Name>
+            <Homepage>http://djvu.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <IsA>library</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">DjVu viewers, encoders and utilities</Summary>
+            <Description xml:lang="en">DjVu is a web-centric format and software platform to distribute documents and images.</Description>
+            <Archive type="targz" sha1sum="99c4f2c621c063bf8c8a1626030539fe5a8675f9">mirrors://sourceforge/djvu/djvulibre-3.5.27.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>xdg-utils</Dependency>
+                <Dependency>libXt-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">no-pthread.diff</Patch>
+                <Patch level="1">djvulibre-3.5.22-cdefs.patch</Patch>
+            </Patches>
+            <SourceURI>office/misc/djvu/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>djvu</Name>
+            <RuntimeDependencies>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>tiff</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/djvu</Path>
+                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="data">/opt/netscape</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>djvu-devel</Name>
+            <Summary xml:lang="en">Development files for djvu</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">djvu</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>3.5.27</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -4701,7 +4871,7 @@
             <Name>cairo-devel</Name>
             <Summary xml:lang="en">Development files for cairo</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">cairo</Dependency>
+                <Dependency release="3">cairo</Dependency>
                 <Dependency>mesa-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
@@ -4738,7 +4908,7 @@
                 <Dependency>libXrender-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="2">cairo</Dependency>
+                <Dependency release="3">cairo</Dependency>
                 <Dependency>mesa-32bit</Dependency>
                 <Dependency>zlib-32bit</Dependency>
                 <Dependency>glib2-32bit</Dependency>
@@ -4757,6 +4927,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-10-10</Date>
+                <Version>1.16.0</Version>
+                <Comment>Fixed not founded library &quot;./cairo/libcairo-trace.so: libbfd-2.31.1.so =&gt; not found.&quot;</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-19</Date>
                 <Version>1.16.0</Version>
@@ -5921,7 +6098,7 @@
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">An opensource web browser engine for GTK+ applications</Summary>
             <Description xml:lang="en">The GTK+ port of WebKit is intended to provide a browser component primarily for users of the portable GTK+ UI toolkit on platforms like Linux.</Description>
-            <Archive type="tarxz" sha1sum="e0c6f707bdf9edf3d444117736cb3c040eca78e7">http://www.webkitgtk.org/releases/webkitgtk-2.26.0.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="bd0432281c0463147ec06587c25f226a67acbb2d">http://www.webkitgtk.org/releases/webkitgtk-2.26.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>cairo-devel</Dependency>
@@ -5941,6 +6118,8 @@
                 <Dependency>webp-devel</Dependency>
                 <Dependency>woff-devel</Dependency>
                 <Dependency>icu4c-devel</Dependency>
+                <Dependency>orc-devel</Dependency>
+                <Dependency>mjpegtools-devel</Dependency>
                 <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>libsoup-devel</Dependency>
                 <Dependency>libxml2-devel</Dependency>
@@ -5964,7 +6143,10 @@
                 <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>gstreamer-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>gst-libav</Dependency>
                 <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
                 <Dependency>gst-plugins-bad-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/webkit2gtk/pspec.xml</SourceURI>
@@ -6001,8 +6183,13 @@
                 <Dependency>libXdamage</Dependency>
                 <Dependency>libXcomposite</Dependency>
                 <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>orc</Dependency>
+                <Dependency>mjpegtools</Dependency>
                 <Dependency>gstreamer</Dependency>
+                <Dependency>gst-libav</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
                 <Dependency>gst-plugins-bad</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -6037,8 +6224,8 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2019-10-03</Date>
-                <Version>2.26.0</Version>
+                <Date>2019-10-10</Date>
+                <Version>2.26.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -6389,6 +6576,313 @@
                 <Date>2019-09-10</Date>
                 <Version>1.3.1</Version>
                 <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>deadbeef</Name>
+            <Homepage>http://deadbeef.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.lxde.addon</PartOf>
+            <Summary xml:lang="en">Audio player for GNU/Linux systems with X11</Summary>
+            <Description xml:lang="en">DeaDBeeF (as in 0xDEADBEEF) is an audio player for GNU/Linux systems with X11 (though now it also runs in plain console without X, in FreeBSD, and in OpenSolaris).</Description>
+            <Icon>deadbeef</Icon>
+            <Archive type="targz" sha1sum="2f76a69a67d59c8eb486481d6420698d95acf59d">https://github.com/DeaDBeeF-Player/deadbeef/archive/1.8.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>jansson-devel</Dependency>
+                <Dependency>faad2-devel</Dependency>
+                <Dependency>ffmpeg-devel</Dependency>
+                <Dependency>flac-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libcddb-devel</Dependency>
+                <Dependency>libcdio-devel</Dependency>
+                <Dependency>mpg123-devel</Dependency>
+                <Dependency>cdparanoia-devel</Dependency>
+                <Dependency>libmad-devel</Dependency>
+                <Dependency>libmms-devel</Dependency>
+                <Dependency>libogg-devel</Dependency>
+                <Dependency>libsamplerate-devel</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>wavpack-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/lxde/addon/deadbeef/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>deadbeef</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>faad2</Dependency>
+                <Dependency>jansson</Dependency>
+                <Dependency>ffmpeg</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libcddb</Dependency>
+                <Dependency>libcdio</Dependency>
+                <Dependency>libmad</Dependency>
+                <Dependency>mpg123</Dependency>
+                <Dependency>cdparanoia</Dependency>
+                <Dependency>libmms</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>libsamplerate</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>imlib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/deadbeef</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/deadbeef</Path>
+                <Path fileType="doc">/usr/share/doc/deadbeef</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/*/apps</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>deadbeef-devel</Name>
+            <Summary xml:lang="en">Development headers for deadbeef</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">deadbeef</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>1.8.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gpicview</Name>
+            <Homepage>http://wiki.lxde.org/en/GPicView</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.lxde.addon</PartOf>
+            <Summary xml:lang="en">A Simple and Fast Image Viewer for X</Summary>
+            <Description xml:lang="en">GPicView is a simple and fast image viewer for X.</Description>
+            <Icon>gpicview</Icon>
+            <Archive type="targz" sha1sum="423143c850390db9784ad9812b9f929c18dd51ea">mirrors://sourceforge/lxde/gpicview-0.2.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/lxde/addon/gpicview/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gpicview</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>cairo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gpicview</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.2.4</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtknetcat</Name>
+            <Homepage>http://wiki.lxde.org/en/GtkNetCat</Homepage>
+            <Packager>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.lxde.addon</PartOf>
+            <Summary xml:lang="en">A Graphic User Interface for netcat</Summary>
+            <Description xml:lang="en">GtkNetCat is a Graphic User Interface for netcat. Netcat provides system functions as a computer networking utility for reading from and writing to network connections on either TCP or UDP.</Description>
+            <Archive type="targz" sha1sum="d624a4e51cda63e75792cc4ba5eb2c17024b5c7f">mirrors://sourceforge/lxde/gtknetcat-0.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">gtknetcat-tr.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/lxde/addon/gtknetcat/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtknetcat</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>netcat</Dependency>
+                <Dependency>python-gtk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>leafpad</Name>
+            <Homepage>http://tarot.freeshell.org/leafpad</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.lxde.addon</PartOf>
+            <Summary xml:lang="en">Simple GTK+ Text Editor</Summary>
+            <Description xml:lang="en">leafpad is a lightweight and simple text editor adapted by LXDE.</Description>
+            <Archive type="targz" sha1sum="73876d02f808fb8bf5ef316d01afb9a478a4ff38">http://savannah.nongnu.org/download/leafpad/leafpad-0.8.18.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="0">leafpad-0.8.16-fix-str-fmt.patch</Patch>
+                <Patch level="0">leafpad-0.8.17-fix-desktop.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/lxde/addon/leafpad/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>leafpad</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.8.18.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>lxlauncher</Name>
+            <Homepage>http://wiki.lxde.org/en/LXLauncher</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.lxde.base</PartOf>
+            <Summary xml:lang="en">An open source clone of the Asus launcher for EeePC</Summary>
+            <Description xml:lang="en">lxlauncher is an open source clone of the Asus launcher for EeePC.</Description>
+            <Archive type="tarxz" sha1sum="a0a1e13e0d4f2d03502eddb7d71e77e66b444f92">mirrors://sourceforge/project/lxde/LXLauncher%20%28for%20Asus%20EeePC%29/LXLauncher%200.2.x/lxlauncher-0.2.5.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>lxde-menu-cache-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/lxde/addon/lxlauncher/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lxlauncher</Name>
+            <RuntimeDependencies>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>lxde-menu-cache</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.2.5</Version>
+                <Comment>First relase.</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
@@ -8510,6 +9004,124 @@ thunar-volman is installed and configured properly, and you plug in your digical
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gtk-style-xfce</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.lookandfeel</PartOf>
+            <Summary xml:lang="en">GTK+ Xfce theme engine</Summary>
+            <Description xml:lang="en">Gtk2-engines-xfce is a GTK+ engine for Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="39418dd5747f45834d9ec11fd628566f20294172">http://archive.xfce.org/src/xfce/gtk-xfce-engine/3.0/gtk-xfce-engine-3.0.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/lookandfeel/gtk-style-xfce/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtk-style-xfce</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>3.0.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>icon-theme-xfce4</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.xfce.lookandfeel</PartOf>
+            <Summary xml:lang="en">Xfce icon theme</Summary>
+            <Description xml:lang="en">Icon theme Rodent for the Xfce Desktop Environment.</Description>
+            <Archive type="tarbz2" sha1sum="0c0d0c45cd4a7f609310db8e9d17c1c4a131a6e7">http://archive.xfce.org/src/art/xfce4-icon-theme/4.4/xfce4-icon-theme-4.4.3.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/lookandfeel/icon-theme-xfce4/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>icon-theme-xfce4</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>4.4.3</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfwm4-themes</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.xfce.lookandfeel</PartOf>
+            <Summary xml:lang="en">Xfce window manager themes</Summary>
+            <Description xml:lang="en">Xfce4-themes is a set of additional themes for the Xfwm window manager.</Description>
+            <Archive type="tarbz2" sha1sum="6608cd2e615e0e058f25ccf2868f903b35b2115f">http://archive.xfce.org/src/art/xfwm4-themes/4.10/xfwm4-themes-4.10.0.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/lookandfeel/xfwm4-themes/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfwm4-themes</Name>
+            <RuntimeDependencies>
+                <Dependency>xfwm4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>4.10.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>jpeg</Name>
             <Homepage>http://www.ijg.org/</Homepage>
             <Packager>
@@ -9007,7 +9619,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <PartOf>multimedia.graphics</PartOf>
             <Summary xml:lang="en">MMX, SSE, and SSE2 SIMD accelerated JPEG library</Summary>
             <Description xml:lang="en">libjpeg-turbo is a derivative of libjpeg for x86 and x86-64 processors which uses SIMD instructions (MMX, SSE2, etc.) to accelerate baseline JPEG compression and decompression. libjpeg-turbo is generally 2-4x as fast as the unmodified version of libjpeg v6b, all else being equal.</Description>
-            <Archive type="targz" sha1sum="1cff52d50b81755d0bdcf9055eb22157f39a1695">http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="539363a444f92421c098a1a3e7cebfda48d4cfb3">http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.3.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>nasm</Dependency>
             </BuildDependencies>
@@ -9046,7 +9658,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="2">libjpeg-turbo</Dependency>
+                <Dependency release="3">libjpeg-turbo</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32</Path>
@@ -9059,6 +9671,13 @@ thunar-volman is installed and configured properly, and you plug in your digical
             </Replaces>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-10-10</Date>
+                <Version>2.0.3</Version>
+                <Comment>Version bumped to 2.0.3</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-28</Date>
                 <Version>2.0.2</Version>
@@ -9187,6 +9806,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
         <Package>
             <Name>librsvg-devel</Name>
             <RuntimeDependencies>
+                <Dependency release="1">librsvg</Dependency>
                 <Dependency>libcroco-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libxml2-devel</Dependency>
@@ -9483,7 +10103,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
                 <Dependency>sdl-gfx-devel</Dependency>
                 <Dependency>libXxf86dga-devel</Dependency>
                 <Dependency>libquicktime-devel</Dependency>
-                <Dependency>jpeg-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>libpng-devel</Dependency>
             </BuildDependencies>
             <SourceURI>multimedia/graphics/mjpegtools/pspec.xml</SourceURI>
@@ -9497,7 +10117,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
                 <Dependency>sdl-gfx</Dependency>
                 <Dependency>libXxf86dga</Dependency>
                 <Dependency>libquicktime</Dependency>
-                <Dependency>jpeg</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
                 <Dependency>libpng</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -9576,6 +10196,238 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <Update release="1">
                 <Date>2019-10-03</Date>
                 <Version>0.99_beta19</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>graphviz</Name>
+            <Homepage>http://www.graphviz.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>CPL-1.0</License>
+            <IsA>app:console</IsA>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">Open source graph drawing software</Summary>
+            <Description xml:lang="en">Graphviz is open source graph visualization software which has web and interactive graphical interfaces, and auxiliary tools and libraries. Graphviz has many useful features for diagrams, such as options for colors, fonts, tabular node layouts, line styles, and custom shapes.</Description>
+            <Archive type="targz" sha1sum="8a44d19bcdb50df1bd8e649de472ebf868468888">https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gd-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libXaw-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>freeglut-devel</Dependency>
+                <Dependency>ghostscript-devel</Dependency>
+                <Dependency>libtool</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/graphics/graphviz/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>graphviz</Name>
+            <RuntimeDependencies>
+                <Dependency>gd</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXaw</Dependency>
+                <Dependency>libXmu</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>ghostscript</Dependency>
+                <Dependency>libtool-ltdl</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/graphviz</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
+        </Package>
+        <Package>
+            <Name>graphviz-docs</Name>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/graphviz/html</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>graphviz-devel</Name>
+            <Summary xml:lang="en">Development files for graphviz</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">graphviz</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>2.40.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>imagemagick</Name>
+            <Homepage>http://www.imagemagick.org/</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">A collection of tools and libraries for many image file formats</Summary>
+            <Description xml:lang="en">ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. You can use ImageMagick to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</Description>
+            <Archive type="zip" sha1sum="82a29b9a18c8d804bccefc1600652861568d915d">https://www.imagemagick.org/download/releases/ImageMagick-7.0.8-68.zip</Archive>
+            <BuildDependencies>
+                <Dependency>ghostscript-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>graphviz-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>openexr-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libwmf</Dependency>
+                <Dependency>liblqr-devel</Dependency>
+                <Dependency>jasper-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>fftw3-devel</Dependency>
+                <Dependency>djvu-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="0">perlmagick.rpath.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/graphics/imagemagick/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>imagemagick</Name>
+            <RuntimeDependencies>
+                <Dependency>tiff</Dependency>
+                <Dependency>djvu</Dependency>
+                <Dependency>fftw3</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libwmf</Dependency>
+                <Dependency>liblqr</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>ghostscript</Dependency>
+                <Dependency>openexr</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>webp</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc/ImageMagick-7/</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/ImageMagick-*</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+                <Path fileType="man">/usr/share/man/man1/*-config*</Path>
+                <Path fileType="executable">/usr/bin/*-config</Path>
+                <Path fileType="doc">/usr/share/doc/imagemagick/html</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>7.0.8</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libwmf</Name>
+            <Homepage>http://wvware.sourceforge.net/libwmf.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">Library for reading and converting WMF files</Summary>
+            <Description xml:lang="en">A library for reading and converting Windows MetaFile vector graphics (WMF).</Description>
+            <Archive type="targz" sha1sum="822ab3bd0f5e8f39ad732f2774a8e9f18fc91e89">mirrors://sourceforge/wvware/libwmf-0.2.8.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>gettext</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">libwmf-0.2.8.4-CVE-2015-0848+CVE-2015-4588.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-CVE-2015-4695.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-build.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-gdk-pixbuf.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-intoverflow.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-libpng-1.5.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-pngfix.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-use-freetype2-pkg-config.patch</Patch>
+                <Patch level="1">libwmf-0.2.8.4-use-system-fonts.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/graphics/libwmf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libwmf</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/libwmf</Path>
+                <Path fileType="executable">/usr/bin/libwmf-config</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.2.8.4</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -10637,6 +11489,211 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <Update release="1">
                 <Date>2019-09-10</Date>
                 <Version>0.6.21</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gd</Name>
+            <Homepage>http://www.libgd.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.misc</PartOf>
+            <Summary xml:lang="en">A fast library for creating graphic images</Summary>
+            <Description xml:lang="en">The gd graphics library allows your code to quickly draw images complete with lines, arcs, text, multiple colors, cut and paste from other images, and flood fills, and to write out the result as a PNG or JPEG file. This is particularly useful in Web applications, where PNG and JPEG are two of the formats accepted for inline images by most browsers. Note that gd is not a paint program.</Description>
+            <Archive type="tarxz" sha1sum="67779817d7aecb94594c43ace949af350ca1df7f">https://github.com/libgd/libgd/releases/download/gd-2.2.4/libgd-2.2.4.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>libvpx-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">gd-2.1.0-multilib.patch</Patch>
+                <Patch level="1">gd-2.2.3-tests.patch</Patch>
+                <Patch level="1">gd-2.2.4-upstream.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/misc/gd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gd</Name>
+            <RuntimeDependencies>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>libvpx</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libpng</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/gd</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gd-devel</Name>
+            <Summary xml:lang="en">Development files for gd</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gd</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="executable">/usr/bin/gdlib-config</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gd-docs</Name>
+            <Summary xml:lang="en">Documents for gd</Summary>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/gd/html</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>2.2.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>liblqr</Name>
+            <Homepage>http://liblqr.wikidot.com</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <License>LGPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.misc</PartOf>
+            <Summary xml:lang="en">An easy to use C/C++ seam carving library</Summary>
+            <Description xml:lang="en">liblqr is a free, open source implementation of a seam carving algorithm which aims at resizing pictures non uniformly while preserving their features.</Description>
+            <Archive type="tarbz2" sha1sum="69639f7dc56a084f59a3198f3a8d72e4a73ff927">http://liblqr.wdfiles.com/local--files/en:download-page/liblqr-1-0.4.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/misc/liblqr/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>liblqr</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>liblqr-devel</Name>
+            <Summary xml:lang="en">Development files for liblqr</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">liblqr</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.4.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>openexr</Name>
+            <Homepage>http://www.openexr.com</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>multimedia.misc</PartOf>
+            <Summary xml:lang="en">A high dynamic-range (HDR) image file format library</Summary>
+            <Description xml:lang="en">OpenEXR is a high dynamic-range (HDR) image file format  for use in computer imaging applications. OpenEXR&apos;s features include: Higher dynamic range and color precision than existing 8- and 10-bit image file formats; support for 16-bit floating-point, 32-bit floating-point, and 32-bit integer pixels; multiple lossless image compression algorithms; extensibility.</Description>
+            <Archive type="targz" sha1sum="67c4f9c2b4ab7c5922671536f93827ecb966969f">https://github.com/openexr/openexr/releases/download/v2.3.0/openexr-2.3.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>ilmbase-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>mesa-glu-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/misc/openexr/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>openexr</Name>
+            <RuntimeDependencies>
+                <Dependency>ilmbase</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>openexr-libs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>openexr-libs</Name>
+            <Summary xml:lang="en">OpenEXR runtime libraries</Summary>
+            <RuntimeDependencies>
+                <Dependency>ilmbase</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/lib*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>openexr-docs</Name>
+            <Summary xml:lang="en">OpenEXR example files</Summary>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/openexr/examples</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>openexr-devel</Name>
+            <Summary xml:lang="en">Development files for openexr</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">openexr</Dependency>
+                <Dependency>mesa-glu-devel</Dependency>
+                <Dependency>ilmbase-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>2.3.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -11981,6 +13038,51 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <Update release="1">
                 <Date>2019-09-14</Date>
                 <Version>2.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libmms</Name>
+            <Homepage>http://sourceforge.net/projects/libmms</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.stream</PartOf>
+            <Summary xml:lang="en">A common library for accessing MMS media streaming protocol</Summary>
+            <Description xml:lang="en">libmms is a library for accessing Microsoft Media Server (MMS) media streaming protocol.</Description>
+            <Archive type="targz" sha1sum="b03ef84a9eedc68fdf2866265b667b75e1a33bee">mirrors://sourceforge/libmms/libmms-0.6.4.tar.gz</Archive>
+            <SourceURI>multimedia/stream/libmms/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libmms</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libmms-devel</Name>
+            <Summary xml:lang="en">Development files for libmms</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libmms</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>0.6.4</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -21649,6 +22751,45 @@ thunar-volman is installed and configured properly, and you plug in your digical
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>ctags</Name>
+            <Homepage>http://ctags.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="en">Exuberant Ctags generates an index (or tag) file of objects found in source and header files</Summary>
+            <Description xml:lang="en">Exuberant Ctags generates an index (or tag) file of objects found in source and header files that allows these items to be quickly and easily located by a text editor or other utility. Currently supports 33 programming languages.</Description>
+            <Archive type="targz" sha1sum="482da1ecd182ab39bbdc09f2f02c9fba8cd20030">mirrors://sourceforge/ctags/ctags-5.8.tar.gz</Archive>
+            <Patches>
+                <Patch level="1">ctags-5.7-segment-fault.patch</Patch>
+                <Patch>ctags-5.8-f95-pointers.patch</Patch>
+                <Patch>ctags-5.8-python-vars-starting-with-def.patch</Patch>
+            </Patches>
+            <SourceURI>programming/misc/ctags/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ctags</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>5.8</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>valgrind</Name>
             <Homepage>http://www.valgrind.org</Homepage>
             <Packager>
@@ -22062,15 +23203,15 @@ thunar-volman is installed and configured properly, and you plug in your digical
     <SpecFile>
         <Source>
             <Name>vi</Name>
-            <Homepage>http://ex-vi.sourceforge.net/</Homepage>
+            <Homepage>https://github.com/vim</Homepage>
             <Packager>
                 <Name>Suleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Packager>
             <License>custom:ex</License>
             <PartOf>editor.vi</PartOf>
-            <Summary xml:lang="en">The original ex/vi text editor</Summary>
-            <Description xml:lang="en">The original ex/vi text editor.</Description>
+            <Summary xml:lang="en">Basic vi editor from VIM source.</Summary>
+            <Description xml:lang="en">Basic vi editor from VIM source. This comes from same source with ViM package, but it contains only ncurses based vim.</Description>
             <Archive type="targz" sha1sum="8819f67ac6b9cd47cd39c87a53a2ab00de63029a">https://github.com/vim/vim/archive/v8.1.1846/vim-8.1.1846.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>ncurses-devel</Dependency>
@@ -22094,10 +23235,12 @@ thunar-volman is installed and configured properly, and you plug in your digical
                 <Path fileType="library">/var/lib/ex</Path>
                 <Path fileType="data">/usr/share/man/</Path>
                 <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="config">/etc/vimrc</Path>
             </Files>
             <Conflicts>
                 <Package>gvim</Package>
                 <Package>vim</Package>
+                <Package>ex</Package>
             </Conflicts>
             <AdditionalFiles>
                 <AdditionalFile target="/etc/vimrc">vimrc</AdditionalFile>
@@ -22122,7 +23265,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>vi</Name>
+            <Name>ex</Name>
             <Homepage>http://ex-vi.sourceforge.net/</Homepage>
             <Packager>
                 <Name>Suleyman Poyraz</Name>
@@ -22130,16 +23273,21 @@ thunar-volman is installed and configured properly, and you plug in your digical
             </Packager>
             <License>custom:ex</License>
             <PartOf>editor.vi</PartOf>
-            <Summary xml:lang="en">Vi improved text editor</Summary>
-            <Description xml:lang="en">Improved version of original ex/vi text editor.</Description>
-            <Archive type="targz" sha1sum="8819f67ac6b9cd47cd39c87a53a2ab00de63029a">https://github.com/vim/vim/archive/v8.1.1846/vim-8.1.1846.tar.gz</Archive>
+            <Summary xml:lang="en">The original EXtended text editor</Summary>
+            <Description xml:lang="en">ex, short for EXtended, is a line editor for Unix systems originally written by Bill Joy in 1976, beginning with an earlier program written by Charles Haley.</Description>
+            <Archive type="tarxz" sha1sum="d2e0c11fc60a24fae09d0cb3df383984014a2bda">https://sources.archlinux.org/other/vi/ex-070224.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>ncurses-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>editors/vi/vim/pspec.xml</SourceURI>
+            <Patches>
+                <Patch>preserve_dir.patch</Patch>
+                <Patch>fix-tubesize.patch</Patch>
+                <Patch>navkeys.patch</Patch>
+            </Patches>
+            <SourceURI>editors/vi/ex/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>vi</Name>
+            <Name>ex</Name>
             <IsA>app:console</IsA>
             <RuntimeDependencies>
                 <Dependency>ncurses</Dependency>
@@ -22159,17 +23307,247 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <Conflicts>
                 <Package>gvim</Package>
                 <Package>vim</Package>
+                <Package>vi</Package>
             </Conflicts>
-            <AdditionalFiles>
-                <AdditionalFile target="/etc/vimrc">vimrc</AdditionalFile>
-            </AdditionalFiles>
         </Package>
         <History>
             <Update release="1">
                 <Date>2019-09-07</Date>
-                <Version>8.1.1846</Version>
-                <Comment>First release.</Comment>
+                <Version>070224</Version>
+                <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>vim</Name>
+            <Homepage>http://www.vim.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <PartOf>editor.vi</PartOf>
+            <Summary xml:lang="en">Vi IMproved, an advanced text editor</Summary>
+            <Description xml:lang="en">Vim, which stands for Vi IMproved, is an open-source, multiplatform text editor extended from vi. It was first released by Bram Moolenaar in 1991. Since then, numerous features have been added to Vim, many of which are helpful in editing program source code.</Description>
+            <Archive type="targz" sha1sum="8819f67ac6b9cd47cd39c87a53a2ab00de63029a">https://github.com/vim/vim/archive/v8.1.1846/vim-8.1.1846.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gpm</Dependency>
+                <Dependency>ctags</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>acl-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>ruby-devel</Dependency>
+                <Dependency>ncurses-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">sulin/grub_conf.patch</Patch>
+                <Patch level="1">sulin/xorg_conf.patch</Patch>
+                <Patch level="1">vim-7.3-interix-link.patch</Patch>
+            </Patches>
+            <SourceURI>editors/vi/vim/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>vim</Name>
+            <IsA>app:console</IsA>
+            <RuntimeDependencies>
+                <Dependency>gpm</Dependency>
+                <Dependency>ctags</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency>acl</Dependency>
+                <Dependency>ruby</Dependency>
+                <Dependency>ncurses</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/vi*</Path>
+                <Path fileType="executable">/usr/bin/rvi*</Path>
+                <Path fileType="executable">/usr/bin/ex</Path>
+                <Path fileType="executable">/usr/bin/xxd</Path>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="data">/usr/share/vim</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="config">/etc/vim</Path>
+            </Files>
+            <Conflicts>
+                <Package>vi</Package>
+                <Package>ex</Package>
+            </Conflicts>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/vim/vimrc" permission="0644" owner="root">vimrc</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/plugin/actions.vim" permission="0644" owner="root">sulin/actions.vim</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/plugin/pspec.vim" permission="0644" owner="root">sulin/pspec.vim</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/plugin/translations.vim" permission="0644" owner="root">sulin/translations.vim</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/plugin/taglist.vim" permission="0644" owner="root">plugins/taglist.vim</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/plugin/kde-devel-vim.vim" permission="0644" owner="root">plugins/kde-devel-vim.vim</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/plugin/newpythonfile.vim" permission="0644" owner="root">plugins/newpythonfile.vim</AdditionalFile>
+                <AdditionalFile target="/usr/share/vim/vimfiles/colors/redstring.vim" permission="0644" owner="root">plugins/redstring.vim</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>gvim</Name>
+            <IsA>app:gui</IsA>
+            <Icon>gvim</Icon>
+            <BuildType>gui</BuildType>
+            <RuntimeDependencies>
+                <Dependency>acl</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gpm</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>vim</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/ggvi*</Path>
+                <Path fileType="executable">/usr/bin/gvi*</Path>
+                <Path fileType="executable">/usr/bin/egvi*</Path>
+                <Path fileType="executable">/usr/bin/rggvi*</Path>
+                <Path fileType="executable">/usr/bin/rgvi*</Path>
+                <Path fileType="executable">/usr/bin/gvimtutor</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+            </Files>
+            <Conflicts>
+                <Package>vi</Package>
+                <Package>ex</Package>
+            </Conflicts>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/bin/gvimtutor" permission="0755" owner="root">gvimtutor</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/gvim.xpm" permission="0644" owner="root">gvim.xpm</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/gvim.desktop" permission="0644" owner="root">gvim.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>8.1.1846</Version>
+                <Comment>Changed ex and vim.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>emacs</Name>
+            <Homepage>http://www.gnu.org/software/emacs</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3+</License>
+            <IsA>app:gui</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>editor.emacs</PartOf>
+            <Summary xml:lang="en">An extensible console-mode editor</Summary>
+            <Description xml:lang="en">Emacs is the extensible, customizable, self-documenting real-time console-mode editor. It has many features to increase productivity when programming.</Description>
+            <Icon>emacs</Icon>
+            <Archive type="tarxz" sha1sum="2960e1dddef401b18abd779cb159306984157eef">https://ftp.gnu.org/gnu/emacs/emacs-26.3.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>acl-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>gpm</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libXft-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>gnutls-devel</Dependency>
+                <Dependency>imagemagick</Dependency>
+            </BuildDependencies>
+            <SourceURI>editors/emacs/emacs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>emacs</Name>
+            <RuntimeDependencies>
+                <Dependency>acl</Dependency>
+                <Dependency>gpm</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libXft</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>libXpm</Dependency>
+                <Dependency>gnutls</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>imagemagick</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share/emacs</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+                <Path fileType="data">/var/games/emacs</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="executable">/usr/libexec/emacs</Path>
+            </Files>
+            <Provides>
+                <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/emacs/25.4/site-lisp/site-start.el" permission="0644" owner="root">site-start.el</AdditionalFile>
+                <AdditionalFile target="/usr/share/emacs/25.4/etc/schema/inary-spec.rnc" permission="0644" owner="root">inary-spec.rnc</AdditionalFile>
+                <AdditionalFile target="/etc/emacs/site-lisp/80-nxml-mode.el" permission="0644" owner="root">80-nxml-mode.el</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/emacs.desktop" permission="0644" owner="root">emacs.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>26.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -37540,7 +38918,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Filesystem baselayout</Summary>
             <Description xml:lang="en">baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-            <Archive type="tarbz2" sha1sum="78e6713aba6792ce9d36cde5db1a0616d663a4ac">baselayout-2.12-.tar.bz2</Archive>
+            <Archive type="targz" sha1sum="44b342017e59f65d2a65fd7a82f3ca3875fc40e2">https://github.com/Zaryob/baselayout/archive/baselayout-2.13.tar.gz</Archive>
             <SourceURI>system/base/baselayout/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -37581,6 +38959,13 @@ thunar-volman is installed and configured properly, and you plug in your digical
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-10-10</Date>
+                <Version>2.13</Version>
+                <Comment>Fixed etc files and baselayout script.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-04</Date>
                 <Version>2.12</Version>
@@ -37869,7 +39254,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">INARY is the package management system of Sulin</Summary>
             <Description xml:lang="en">INARY is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-            <Archive type="targz" sha1sum="da6d9b7f577d4154771824d91bf61e81cf009ce6">https://github.com/Zaryob/inary/archive/inary-1.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4694a6bc83b9ad4a04b146e716aed767bc40c919">https://github.com/Zaryob/inary/archive/inary-1.2_alpha.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>scom</Dependency>
                 <Dependency>python3</Dependency>
@@ -37910,6 +39295,13 @@ thunar-volman is installed and configured properly, and you plug in your digical
             </Provides>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-10-10</Date>
+                <Version>1.2a</Version>
+                <Comment>INARY package manager have been upgraded new pre release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-13</Date>
                 <Version>1.1</Version>

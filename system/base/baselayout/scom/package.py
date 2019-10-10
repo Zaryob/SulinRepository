@@ -5,8 +5,6 @@ import grp
 import pwd
 import shutil
 
-import libuser
-
 ### Helper methods
 
 def hav(method, *args):
@@ -32,18 +30,11 @@ def deleteUser(user):
         pass
 
 def setGroupId(group_name, gid):
-    ctx = libuser.admin()
-    group = ctx.lookupGroupByName(group_name)
-    if group:
-        group.set(libuser.GIDNUMBER, [gid])
-        ctx.modifyGroup(group)
+    os.system("groupmod -g {} {}".format(gid, group_name))
+
 
 def setUserId(user_name, uid):
-    ctx = libuser.admin()
-    user = ctx.lookupUserByName(user_name)
-    if user:
-        user.set(libuser.UIDNUMBER, [uid])
-        ctx.modifyUser(user)
+    os.system("groupmod -u {} {}".format(uid, user_name))
 
 def migrateUsers():
     # build user -> group map for migration (hopefully we'll drop this in 2012)
@@ -93,7 +84,7 @@ def zemberek_hack():
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     # We don't want to overwrite an existing file during upgrade
-    specialFiles = ["passwd", "inittab.scom", "shadow", "group", "fstab", "hosts", "ld.so.conf", "resolv.conf"]
+    specialFiles = ["passwd", "locale.conf", "inittab.openrc", "shadow", "group", "fstab", "hosts", "ld.so.conf", "resolv.conf"]
 
     for specialFile in specialFiles:
         if not os.path.exists("/etc/%s" % specialFile):
@@ -318,7 +309,7 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     # Fix permissions of /var/lock folder
     os.chown("/var/lock", 0, 54)
     os.chmod("/var/lock", 0o775)
-    
+
 def postRemove():
     pass
 

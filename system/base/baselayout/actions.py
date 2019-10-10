@@ -8,13 +8,13 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
-WorkDir="."
+WorkDir="baselayout-baselayout-2.13"
 
 def install():
-    for i in {"/bin", "/sbin", "/lib", "/lib32", 
+    for i in {"/bin", "/sbin", "/lib", "/lib32",
               "/etc", "/media", "/boot", "/mnt", "/opt",
               "/tmp", "/var/tmp", "/var/lock", "/usr", "/usr/bin",
-              "/usr/lib", "/usr/lib32", "/usr/share", 
+              "/usr/lib", "/usr/lib32", "/usr/share",
               "/run", "/run/shm",
               "/usr/local", "/usr/local/bin", "/usr/local/lib",
               "/usr/local/lib32"}:

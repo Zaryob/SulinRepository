@@ -12,9 +12,7 @@ def build():
     pythonmodules.compile(pyVer='3')
 
 def install():
-    pythonmodules.install("--install-lib=/usr/lib/sulin",pyVer='3')
-    inarytools.dodir("/usr/bin/")
-    shelltools.system("install inary-cli {}/usr/bin/inary-cli".format(get.installDIR()))
+    pythonmodules.install("--install-lib=/usr/lib/sulin", pyVer='3')
 
     inarytools.dosym("inary-cli", "/usr/bin/inary")
 
