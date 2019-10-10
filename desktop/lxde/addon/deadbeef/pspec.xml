@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>deadbeef</Name>
+        <Homepage>http://deadbeef.sourceforge.net</Homepage>
+        <Packager>
+           <Name>Süleyman Poyraz</Name>
+           <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <Icon>deadbeef</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Audio player for GNU/Linux systems with X11</Summary>
+        <Description>DeaDBeeF (as in 0xDEADBEEF) is an audio player for GNU/Linux systems with X11 (though now it also runs in plain console without X, in FreeBSD, and in OpenSolaris).</Description>
+        <Archive sha1sum="2f76a69a67d59c8eb486481d6420698d95acf59d" type="targz">https://github.com/DeaDBeeF-Player/deadbeef/archive/1.8.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>jansson-devel</Dependency>
+            <Dependency>faad2-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>flac-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libcddb-devel</Dependency>
+            <Dependency>libcdio-devel</Dependency>
+            <Dependency>mpg123-devel</Dependency>
+            <Dependency>cdparanoia-devel</Dependency>
+            <Dependency>libmad-devel</Dependency>
+            <Dependency>libmms-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libsamplerate-devel</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>wavpack-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>deadbeef</Name>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>faad2</Dependency>
+            <Dependency>jansson</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>flac</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libcddb</Dependency>
+            <Dependency>libcdio</Dependency>
+            <Dependency>libmad</Dependency>
+            <Dependency>mpg123</Dependency>
+            <Dependency>cdparanoia</Dependency>
+            <Dependency>libmms</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>libsamplerate</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pulseaudio</Dependency>
+            <Dependency>wavpack</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>imlib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/deadbeef</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/deadbeef</Path>
+            <Path fileType="doc">/usr/share/doc/deadbeef</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/*/apps</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+         </Files>
+    </Package>
+
+    <Package>
+        <Name>deadbeef-devel</Name>
+        <Summary>Development headers for deadbeef</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">deadbeef</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-10</Date>
+            <Version>1.8.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
