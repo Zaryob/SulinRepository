@@ -61,6 +61,7 @@
     <Package>
       <Name>librsvg-devel</Name>
       <RuntimeDependencies>
+          <Dependency release="current">librsvg</Dependency>
           <Dependency>libcroco-devel</Dependency>
           <Dependency>gtk3-devel</Dependency>
           <Dependency>libxml2-devel</Dependency>

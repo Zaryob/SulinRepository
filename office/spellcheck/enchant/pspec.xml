@@ -23,6 +23,7 @@
     <Package>
         <Name>enchant</Name>
         <RuntimeDependencies>
+            <Dependency>aspell</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
