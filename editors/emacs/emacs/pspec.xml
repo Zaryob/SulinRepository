@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>emacs</Name>
+        <Homepage>http://www.gnu.org/software/emacs</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <Icon>emacs</Icon>
+        <IsA>app:gui</IsA>
+        <IsA>app:console</IsA>
+        <Summary>An extensible console-mode editor</Summary>
+        <Description>Emacs is the extensible, customizable, self-documenting real-time console-mode editor. It has many features to increase productivity when programming.</Description>
+        <Archive sha1sum="2960e1dddef401b18abd779cb159306984157eef" type="tarxz">https://ftp.gnu.org/gnu/emacs/emacs-26.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>gpm</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>imagemagick</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>emacs</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+            <Dependency>gpm</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>imagemagick</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/emacs</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/var/games/emacs</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="executable">/usr/libexec/emacs</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/emacs/25.4/site-lisp/site-start.el">site-start.el</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/emacs/25.4/etc/schema/inary-spec.rnc">inary-spec.rnc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/emacs/site-lisp/80-nxml-mode.el">80-nxml-mode.el</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/emacs.desktop">emacs.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-10</Date>
+            <Version>26.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
