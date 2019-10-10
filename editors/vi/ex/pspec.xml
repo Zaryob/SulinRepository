@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>vi</Name>
-        <Homepage>https://github.com/vim</Homepage>
+        <Name>ex</Name>
+        <Homepage>http://ex-vi.sourceforge.net/</Homepage>
         <Packager>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>custom:ex</License>
-        <Summary>Basic vi editor from VIM source.</Summary>
-        <Description>Basic vi editor from VIM source. This comes from same source with ViM package, but it contains only ncurses based vim.</Description>
-        <Archive sha1sum="8819f67ac6b9cd47cd39c87a53a2ab00de63029a" type="targz">https://github.com/vim/vim/archive/v8.1.1846/vim-8.1.1846.tar.gz</Archive>
+        <Summary>The original EXtended text editor</Summary>
+        <Description>ex, short for EXtended, is a line editor for Unix systems originally written by Bill Joy in 1976, beginning with an earlier program written by Charles Haley.</Description>
+        <Archive sha1sum="d2e0c11fc60a24fae09d0cb3df383984014a2bda" type="tarxz">https://sources.archlinux.org/other/vi/ex-070224.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>preserve_dir.patch</Patch>
+            <Patch>fix-tubesize.patch</Patch>
+            <Patch>navkeys.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
-        <Name>vi</Name>
+        <Name>ex</Name>
         <IsA>app:console</IsA>
         <RuntimeDependencies>
             <Dependency>ncurses</Dependency>
@@ -26,7 +31,7 @@
         <Conflicts>
             <Package>gvim</Package>
             <Package>vim</Package>
-            <Package>ex</Package>
+            <Package>vi</Package>
         </Conflicts>
         <Files>
             <Path fileType="executable">/usr/bin/vi*</Path>
@@ -39,21 +44,10 @@
             <Path fileType="library">/var/lib/ex</Path>
             <Path fileType="data">/usr/share/man/</Path>
             <Path fileType="doc">/usr/share/doc/</Path>
-            <Path fileType="config">/etc/vimrc</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile target="/etc/vimrc">vimrc</AdditionalFile>
-        </AdditionalFiles>
     </Package>
 
     <History>
-        <Update release="2">
-            <Date>2019-09-07</Date>
-            <Version>8.1.1846</Version>
-            <Comment>Changed ex and vim.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
             <Date>2019-09-07</Date>
             <Version>070224</Version>
