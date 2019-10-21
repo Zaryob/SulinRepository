@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cvsps</Name>
+        <Homepage>http://www.cobite.com/cvsps/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Patchset tool for CVS</Summary>
+        <Description>CVSps is a program for generating 'patchset' information from a CVS repository.</Description>
+        <Archive sha1sum="29d814f9083e3c51bba1b1fadf6c94ed9c2caa1e" type="targz">http://www.catb.org/~esr/cvsps/cvsps-3.13.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>cvsps</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-11</Date>
+            <Version>3.13</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

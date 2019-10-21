@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>sdl-image</Name>
+        <Homepage>http://www.libsdl.org/projects/SDL_image/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>SDL image file loading library</Summary>
+        <Description>SDL_image is an image file loader for SDL.</Description>
+        <Archive sha1sum="d45c5c236bdf5c1593315525bb8c600ce748aad7" type="zip">http://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.5.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sdl-image</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl2</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sdl-image-devel</Name>
+        <Summary>Development files for sdl-image</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">sdl-image</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sdl-image-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for sdl-image</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libsdl2-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>tiff-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">sdl-image</Dependency>
+            <Dependency>libsdl2-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>tiff-32bit</Dependency>
+	    <Dependency>zlib-32bit</Dependency>
+
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-11</Date>
+            <Version>2.0.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

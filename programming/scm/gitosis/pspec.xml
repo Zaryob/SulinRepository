@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gitosis</Name>
+        <Homepage>http://eagain.net/gitweb/?p=gitosis.git</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Git repository hosting application</Summary>
+        <Description>Gitosis aims to make hosting git repos easier and safer. It manages multpile repositories under one user account, using SSH keys to identify users. End users do no need shell accounts on the server, they will talk to one shared account that will not let them run arbitrary commands.</Description>
+        <Archive sha1sum="a68bd027a5deaa9b407826f82ba9b3667db67b68" type="targz">https://github.com/tv42/gitosis/archive/release/0.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gitosis</Name>
+        <RuntimeDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>git</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-11</Date>
+            <Version>0.3</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

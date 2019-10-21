@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bk-client</Name>
+        <Homepage>http://www.bitkeeper.com</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>BitKeeper SCM client</Summary>
+        <Description>Command line tool to clone BitKeeper repositories</Description>
+        <Archive sha1sum="8522d2ceaaebd15ab82098f7890b820970e462d3" type="binary">https://github.com/bitkeeper-scm/bitkeeper/releases/download/bk-7.3.2/bk-7.3.2-x86_64-glibc27-linux.bin</Archive>
+    </Source>
+
+    <Package>
+        <Name>bk-client</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <Files>
+            <Path fileType="data">/opt/bitkeeper</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-10</Date>
+            <Version>7.3.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
