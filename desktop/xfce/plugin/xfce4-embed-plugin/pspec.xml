@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xfce4-embed-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-embed-plugin</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.xfce.addon</PartOf>
+        <Summary>Embedding Arbitrary Application plugin for Xfce4</Summary>
+        <Description>A plug-in for embedding arbitrary application windows into the Xfce panel.</Description>
+        <Archive sha1sum="9beeecfff2b55e2e64a3ac9ff296490abfe1187a" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-embed-plugin/1.6/xfce4-embed-plugin-1.6.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xfce4-panel-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfce4-embed-plugin</Name>
+        <RuntimeDependencies>
+            <Dependency>xfce4-panel</Dependency>
+             <Dependency>gtk3</Dependency>
+             <Dependency>cairo</Dependency>
+             <Dependency>gdk-pixbuf</Dependency>
+             <Dependency>libxfcegui4</Dependency>
+             <Dependency>libxfce4util</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/xfce4/panel/plugins/libembed.so</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/xfce4</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>1.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

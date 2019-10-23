@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xfce4-notes-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.xfce.plugin</PartOf>
+        <Summary>Notes plugin provides you a quick way you had do with Post-It's</Summary>
+        <Description>The notes plugin provides you a quick way to paste text, to write down a list of things, to leave a note to your friend, or whatever you had do with Post-It's.</Description>
+        <Archive sha1sum="37d1a497ea26e796336feb4b0a247b7c4c7a66cd" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.8/xfce4-notes-plugin-1.8.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libunique1-devel</Dependency>
+            <Dependency>xfce4-panel-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfce4-notes-plugin</Name>
+        <RuntimeDependencies>
+            <Dependency>xfce4-panel</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libunique1</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>xfconf</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxfcegui4</Dependency>
+            <Dependency>libxfce4util</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>1.8.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
