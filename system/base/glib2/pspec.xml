@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A library of handy utility functions</Summary>
         <Description>glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
-        <Archive sha1sum="edcb6d6d023c0c678954a73906c45816203a9117" type="tarxz">mirrors://gnome/glib/2.62/glib-2.62.0.tar.xz</Archive>
+        <Archive sha1sum="b2a4e6eea3132b4c8393c2f570711131ed960b73" type="tarxz">mirrors://gnome/glib/2.62/glib-2.62.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libpcre-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -25,7 +25,7 @@
         <Patches>
             <Patch level="1">skip-warnings.patch</Patch>
         </Patches>
-            
+
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="multilib.patch">multilib.patch</AdditionalFile>
         </AdditionalFiles>
@@ -135,6 +135,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-10-24</Date>
+            <Version>2.62.2</Version>
+            <Comment>Package is rebuilded and version upgraded to "2.62.2".</Comment>
+            <Name>Süleyman Poyra</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-19</Date>
             <Version>2.62.0</Version>

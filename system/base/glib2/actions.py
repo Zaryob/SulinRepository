@@ -11,12 +11,22 @@ from inary.actionsapi import get
 
 
 def setup():
-    if get.buildTYPE=="emul32":
+    if get.buildTYPE()=="emul32":
+        shelltools.system("patch -Np1 -i multilib.patch")
+        shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
         shelltools.system("patch -p1 < multilib.patch")
     mesontools.meson_configure()
 
 
 def build():
+    if get.buildTYPE()=="emul32":
+        shelltools.system("patch -Np1 -i multilib.patch")
+        shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+
     mesontools.ninja_build()
 
 def install():

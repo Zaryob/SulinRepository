@@ -1,41 +1,30 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# Copyright 2010 TUBITAK/BILGEM
+# Licensed under the GNU General Public License, version 2.
+# See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
+from inary.actionsapi import mesontools
 from inary.actionsapi import get
-from inary.actionsapi import autotools
+from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
 
 def setup():
-    options = "\
-                 --disable-static \
-                 --disable-silent-rules \
-                 --with-libjasper \
-                 --with-x11 \
-                 --with-included-loaders=png \
-              "
-
-    options += "\
-                 --bindir=/_emul32/bin \
-                 --disable-introspection \
-               " if get.buildTYPE() == "emul32" else \
-               "\
-                 --enable-introspection \
-               "
-    autotools.configure(options)
-
-    inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
+    mesontools.meson_configure("-Denable-gtk-doc=false ")
 
 def build():
-    autotools.make()
+    mesontools.ninja_build()
+
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    if get.buildTYPE() == "emul32":
-        inarytools.domove("/_emul32/bin/gdk-pixbuf-query-loaders", "/usr/bin", "gdk-pixbuf-query-loaders-32")
-        inarytools.removeDir("/_emul32")
+    if get.buildTYPE()=="emul32":
+        shelltools.system('DESTDIR="{}/emul32" ninja install -C inaryPackageBuild'.format(get.installDIR()))
+        inarytools.domove("/emul32/bin/gdk-pixbuf-query-loaders", "/usr/bin", "gdk-pixbuf-query-loaders-32")
+        inarytools.removeDir("/emul32")
         return
-    inarytools.dosym("/usr/bin/gdk-pixbuf-query-loaders", "/usr/bin/gdk-pixbuf-query-loaders-64")
-    inarytools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
+    else:
+        mesontools.ninja_install()
+        inarytools.dosym("/usr/bin/gdk-pixbuf-query-loaders", "/usr/bin/gdk-pixbuf-query-loaders-64")
+
+    inarytools.dodoc("CONTRIBUTING.md", "COPYING", "NEWS", "README.md")

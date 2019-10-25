@@ -13,13 +13,14 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>GDK pixbuf library</Summary>
         <Description>gdk-pixbuf is a library that provides image loading and scaling support for gtk+ applications</Description>
-        <Archive sha1sum="d511ec0244b74bd3591eda7ccefcf79123f17d9d" type="tarxz">mirrors://gnome/gdk-pixbuf/2.36/gdk-pixbuf-2.36.4.tar.xz</Archive>
+        <Archive sha1sum="9396bd89c4647d8db2d02ef93c20c17dbce359d8" type="tarxz">mirrors://gnome/gdk-pixbuf/2.40/gdk-pixbuf-2.40.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>shared-mime-info</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>jasper-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
@@ -33,6 +34,7 @@
             <Dependency>libX11</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>jasper</Dependency>
+            <Dependency>shared-mime-info</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>>
         <Files>
@@ -58,6 +60,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/gdk-pixbuf-csource</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/libexec/installed-tests</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="library">/usr/lib32/pkgconfig</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
@@ -70,7 +73,7 @@
             <Path fileType="data">/usr/share/gtk-doc</Path>
         </Files>
     </Package>
-    <Package>
+    <!--Package>
         <Name>gdk-pixbuf-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for gdk-pixbuf</Summary>
@@ -100,8 +103,15 @@
         <Provides>
             <SCOM script="pakhandler-32.py">System.PackageHandler</SCOM>
         </Provides>
-    </Package>
+    </Package-->
     <History>
+        <Update release="2">
+            <Date>2019-10-24</Date>
+            <Version>2.40.0</Version>
+            <Comment>Upgraded to 2.40.0 </Comment>
+            <Name>Süleyman Poyra</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.36.4</Version>
