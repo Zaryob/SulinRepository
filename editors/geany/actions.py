@@ -7,6 +7,7 @@ from inary.actionsapi import get
 
 
 def setup():
+	inarytools.dosed("scripts/gen-api-gtkdoc.py", "python", "python3")
 	autotools.configure("PYTHON=python3 \
 	                     --prefix=/usr \
                          --enable-gtk3 \
