@@ -1,8 +1,8 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>lua</Name>
+        <Name>lua51</Name>
         <Homepage>http://www.lua.org</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
@@ -11,41 +11,42 @@
         <License>LGPLv2</License>
         <IsA>library</IsA>
         <Summary>A light-weight programming language</Summary>
-        <Description>lua is a powerful light-weight programming language designed for extending applications.</Description>
-        <Archive sha1sum="112eb10ff04d1b4c9898e121d6bdf54a81482447" type="targz">http://www.lua.org/ftp/lua-5.3.5.tar.gz</Archive>
-        <AdditionalFiles>
-            <AdditionalFile target="lua.pc">lua.pc</AdditionalFile>
-        </AdditionalFiles>
+        <Description>lua51 is a powerful light-weight programming language designed for extending applications.</Description>
+        <Archive sha1sum="b3882111ad02ecc6b972f8c1241647905cb2e3fc" type="targz">http://www.lua.org/ftp/lua-5.1.5.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>readline-devel</Dependency>
         </BuildDependencies>
         <Patches>
-            <Patch level="1">liblua.so.patch</Patch>
+            <Patch level="1">lua-arch.patch</Patch>
         </Patches>
     </Source>
 
     <Package>
-        <Name>lua</Name>
+        <Name>lua51</Name>
         <RuntimeDependencies>
             <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/sbin/lsmod</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/lua5.1</Path>
+            <Path fileType="data">/luac5.1.1/luac.1</Path>
+            <Path fileType="data">/lua5.1.1/lua.1</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/lua.png">lua.png</AdditionalFile>
+            <AdditionalFile target="/usr/lib/pkgconfig/lua5.1.pc" permission="644">lua-5.1pc</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <Package>
-        <Name>lua-devel</Name>
-        <Summary>Development files for lua</Summary>
+        <Name>lua51-devel</Name>
+        <Summary>Development files for lua51</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">lua</Dependency>
+            <Dependency release="current">lua51</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -56,7 +57,7 @@
     <History>
         <Update release="1">
             <Date>2019-09-18</Date>
-            <Version>5.3.4</Version>
+            <Version>5.1.5</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

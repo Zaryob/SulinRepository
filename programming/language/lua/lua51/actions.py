@@ -10,15 +10,12 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def build():
-    shelltools.system("sed -r -e '/^LUA_(SO|A|T)=/ s/lua/lua5.1/' -e '/^LUAC_T=/ s/luac/luac5.1/' \
-    -i src/Makefile")
-    inarytools.dosed("src/Makefile", "^CFLAGS.*$", "CFLAGS=%s -DLUA_USE_LINUX" % get.CFLAGS())
-    inarytools.dosed("src/Makefile", "^MYLDFLAGS.*$", "MYLDFLAGS=%s" % get.LDFLAGS())
-    autotools.make("linux")
+    shelltools.system("sed -r -e '/^LUA_(SO|A|T)=/ s/lua/lua5.1/' -e '/^LUAC_T=/ s/luac/luac5.1/' -i src/Makefile")
+    autotools.make("MYCFLAGS=\"{}\" MYLDFLAGS=\"{}\" linux".format(get.CFLAGS(), get.LDFLAGS()))
 
 def install():
     options = "TO_BIN=\"lua5.1 luac5.1\" \
-               TO_LIB=\"liblua5.1.a\" \
+               TO_LIB=\"liblua5.1.a liblua5.1.so liblua5.1.so.5.1 liblua5.1.so.5.1.5\" \
                INSTALL_DATA=\"cp -d\" \
                INSTALL_TOP=\"%s/usr\"  \
                INSTALL_INC=\"%s/usr/include/lua5.1\" \
@@ -27,7 +24,7 @@ def install():
 
     inarytools.removeDir("/usr/share/lua")
     inarytools.removeDir("/usr/lib/lua")
-    
+
     inarytools.dosym("/usr/lib/liblua5.1.so", "/usr/lib/liblua.so.5.1")
 
     docs = [ "*.html", "*.png", "*.css", "*.gif" ]
