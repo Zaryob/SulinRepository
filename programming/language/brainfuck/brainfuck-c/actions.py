@@ -12,9 +12,9 @@ from inary.actionsapi import get
 
 
 def build():
-    autotools.make("")
+    autotools.make()
 
 
 def install():
-    shelltools.makedirs(get.installDIR()+"/usr/bin/")
+    shelltools.makedirs("{}/usr/bin/".format(get.installDIR()))
     autotools.rawInstall("PREFIX=%s/usr/" % get.installDIR())

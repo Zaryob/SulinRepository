@@ -12,8 +12,7 @@
         <IsA>library</IsA>
         <Summary>Brainfuck Interpreter</Summary>
         <Description>Simple C based brainfuck interpreter.</Description>
-        <Archive sha1sum="b8bc2b98fbcc9c04494be8ce01f06fdba7688a9c" 
-type="targz">https://github.com/SulinOS/brainfuck-c/archive/1.0.tar.gz</Archive>
+        <Archive sha1sum="b8bc2b98fbcc9c04494be8ce01f06fdba7688a9c" type="targz">https://github.com/SulinOS/brainfuck-c/archive/1.0.tar.gz</Archive>
     </Source>
 
     <Package>

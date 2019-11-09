@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>brainfuck-c</Name>
+        <Summary xml:lang="tr">Brainfuck programlama dili tercümanı.</Summary>
+        <Description xml:lang="tr">Basit brainfuck programlama dili tercümanı.</Description>
+    </Source>
+</INARY>
