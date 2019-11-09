@@ -1,0 +1,60 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tcl</Name>
+        <Homepage>http://www.tcl.tk</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Tcl programming language</Summary>
+        <Description>Tcl provides a powerful platform for creating integration applications that tie together diverse applications, protocols, devices, and frameworks.</Description>
+        <Archive sha1sum="8fcb7a6b77913eb87303b52d9885b8fc4a0b00cf" type="targz">https://github.com/SulinOS/tcl/archive/8.6.9.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tcl</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/lib/tcl8.6</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tcl-devel</Name>
+        <Summary>Development files for tcl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tcl</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/tclConfig.sh</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>8.6.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

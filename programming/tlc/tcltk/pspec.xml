@@ -1,0 +1,69 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tcltk</Name>
+        <Homepage>http://www.tcl.tk</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>An X11 toolkit implemented with the Tcl scripting language</Summary>
+        <Description>Tk is an X Windows widget set designed to work closely with the tcl scripting language. It allows you to write simple programs with full featured GUIs in only a little more time then it takes to write a text based interface.</Description>
+        <Archive sha1sum="450c3bc235db3e36b14983d333d851ca82915b32" type="targz">https://github.com/SulinOS/tcl-tk/archive/8.6.9.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>tcl-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+            <!--<Dependency>libXScrnSaver-devel</Dependency>-->
+            <Dependency>fontconfig-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tcltk</Name>
+        <RuntimeDependencies>
+            <Dependency>tcl</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXft</Dependency>
+            <!--<Dependency>libXScrnSaver</Dependency>-->
+            <Dependency>fontconfig</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/lib/tk8.5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tcltk-devel</Name>
+        <Summary>Development files for tcltk</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tcltk</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>tcl-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/*.a</Path>
+            <Path fileType="data">/usr/lib/tkConfig.sh</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>8.6.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
