@@ -3,8 +3,8 @@ from scom.service import *
 
 serviceType = "server"
 
-serviceDesc = _({"en": "vsFTP Server",
-                 "tr": "vsFTP Sunucusu"})
+serviceDesc = {"en": "vsFTP Server",
+               "tr": "vsFTP Sunucusu"}
 
 @synchronized
 def start():

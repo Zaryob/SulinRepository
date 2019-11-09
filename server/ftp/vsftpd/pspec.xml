@@ -1,26 +1,26 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>vsftpd</Name>
         <Homepage>http://vsftpd.beasts.org/</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Riza KESKIN</Name>
+            <Email>parduscix@gmail.com</Email>
         </Packager>
         <License>GPLv2</License>
         <IsA>service</IsA>
         <Summary>Very Secure FTP Daemon written with speed, size and security in mind</Summary>
         <Description>Vsftpd is a ftp server, mostly focuses on security.</Description>
         <Archive sha1sum="d5f5a180dbecd0fbcdc92bf0ba2fc001c962b55a" type="targz">https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz</Archive>
-     <BuildDependencies>
+        <BuildDependencies>
             <Dependency>libnsl-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>vsftpd</Name>
- 	<RuntimeDependencies>
+        <RuntimeDependencies>
             <Dependency>libnsl</Dependency>
             <Dependency>libcap</Dependency>
             <Dependency>openssl</Dependency>
@@ -36,6 +36,10 @@
             <Path fileType="data">/var/log/vsftpd</Path>
         </Files>
         <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/xinetd.d/vsftpd">vsftpd.xinetd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/initd.d/vsftpd">vsftpd.init</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/logrotate.d/vsftpd">vsftpd.logrotate</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/vsftpd">vsftpd.confd</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/ftp">ftp-pamd</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/vsftpd/vsftpd.conf">vsftpd.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/vsftpd/ftpusers">ftpusers</AdditionalFile>
