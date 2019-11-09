@@ -87,4 +87,5 @@ def install():
     inarytools.dodir(NGINX_HOME + "/fastcgi")
     inarytools.dodir(NGINX_HOME + "/proxy")
 
-    inarytools.dodoc("README", "LICENSE") 
+    inarytools.dodoc("README", "LICENSE")
+    inarytools.remove("/etc/nginx/mime.types")
