@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cython</Name>
+        <Homepage>http://www.cython.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>C extensions for the Python Programming language</Summary>
+        <Description>Cython is a language that makes writing C extensions for the Python2 and Python3 languages as easy as Python's itself.</Description>
+        <Archive sha1sum="f86f2dddde3cc7499cb47d48c0ab98026493d5a8" type="targz">https://files.pythonhosted.org/packages/9c/9b/706dac7338c2860cd063a28cdbf5e9670995eaea408abbf2e88ba070d90d/Cython-0.29.14.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cython</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/cygdb</Path>
+            <Path fileType="executable">/usr/bin/cython</Path>
+            <Path fileType="executable">/usr/bin/cythonize</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>cython3</Name>
+        <BuildType>rebuild_python</BuildType>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/cygdb3</Path>
+            <Path fileType="executable">/usr/bin/cython3</Path>
+            <Path fileType="executable">/usr/bin/cythonize3</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>cython-docs</Name>
+        <Summary>API documentation of cython</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.29.14</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>python-lxml</Name>
@@ -22,24 +22,30 @@
             <Dependency>cython3</Dependency>
             <Dependency>libxslt-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <!--<Patch level="1">python-lxml-2.2.6-fix-2to3.patch</Patch>-->
-        </Patches>
     </Source>
 
     <Package>
-        <Name>python-lxml</Name>
+        <Name>python3-lxml</Name>
         <RuntimeDependencies>
             <Dependency>libxslt</Dependency>
-            <Dependency>libxml2</Dependency>
+            <Dependency>python3-libxml2</Dependency>
             <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-lxml</Name>
+        <RuntimeDependencies>
+            <Dependency>python-libxml2</Dependency>
+            <Dependency>libxslt</Dependency>
             <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>python-lxml-docs</Name>
         <Summary>API documentation of python-lxml</Summary>
