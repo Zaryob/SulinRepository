@@ -1,0 +1,65 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnuplot</Name>
+        <Homepage>http://www.gnuplot.info/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>gnuplot</License>
+        <IsA>app:console</IsA>
+        <Summary>Portable command-line driven interactive data and function plotting utility</Summary>
+        <Description>Gnuplot is a protable command-line driven interactive data and function plotting utility. It supports many types of plots in either 2D and 3D. It can draw using lines, points, boxes, contours, vector fields, surfaces, and various associated text. It also supports various specialized plot types.</Description>
+        <Archive sha1sum="fcd54ed0b1e5d7dda8151602b7198f0040462c70" type="targz">https://master.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.7/gnuplot-5.2.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>lua</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gtk3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnuplot</Name>
+        <RuntimeDependencies>
+            <Dependency>lua</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/gnuplot</Path>
+            <Path fileType="data">/usr/share/texmf-dist</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/texmf/tex/latex/gnuplot</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>gnuplot-doc</Name>
+        <Summary>Documentations for Gnuplot</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019.11.9</Date>
+            <Version>5.2.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
