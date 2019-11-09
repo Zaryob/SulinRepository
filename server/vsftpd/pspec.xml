@@ -1,0 +1,58 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vsftpd</Name>
+        <Homepage>http://vsftpd.beasts.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <Summary>Very Secure FTP Daemon written with speed, size and security in mind</Summary>
+        <Description>Vsftpd is a ftp server, mostly focuses on security.</Description>
+        <Archive sha1sum="d5f5a180dbecd0fbcdc92bf0ba2fc001c962b55a" type="targz">https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz</Archive>
+     <BuildDependencies>
+            <Dependency>libnsl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vsftpd</Name>
+ 	<RuntimeDependencies>
+            <Dependency>libnsl</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>pam</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/home/ftp</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/vsftpd/empty</Path>
+            <Path fileType="data">/var/log/vsftpd</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/ftp">ftp-pamd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/vsftpd/vsftpd.conf">vsftpd.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/vsftpd/ftpusers">ftpusers</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.0.3</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Riza KESKIN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
