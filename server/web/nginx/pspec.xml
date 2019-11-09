@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>nginx</Name>
+        <Homepage>http://www.nginx.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>service</IsA>
+        <Summary>Robust, small and high performance http and reverse proxy server</Summary>
+        <Description>Nginx is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server. Written by Igor Sysoev in 2005, Nginx now hosts between 1% and 4% of all domains worldwide. Nginx is known for its stability, rich feature set, simple configuration, and low resource consumption.</Description>
+        <Archive sha1sum="de64fa35ad34c355e398c235ed3a536bb0f6589d" type="targz">http://nginx.org/download/nginx-1.17.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gd-devel</Dependency>
+            <Dependency>geoip-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>nginx</Name>
+        <RuntimeDependencies>
+            <Dependency>gd</Dependency>
+            <Dependency>geoip</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/nginx</Path>
+            <Path fileType="config">/etc/logrotate.d</Path>
+            <Path fileType="config">/etc/init.d</Path>
+            <Path fileType="config">/etc/conf.d</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/var/www/nginx</Path>
+            <Path fileType="data">/var/log/nginx</Path>
+            <Path fileType="data">/run</Path>
+            <Path fileType="data">/var/lib/nginx/client_body</Path>
+            <Path fileType="data">/var/lib/nginx/fastcgi</Path>
+            <Path fileType="data">/var/lib/nginx/proxy</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/nginx/nginx.conf">conf/nginx.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/nginx/ssl.conf">conf/ssl.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/nginx/conf.d/00_default_vhost.conf">conf/00_default_vhost.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/logrotate.d/nginx">nginx.logrotate</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/nginx">nginx.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/nginx">nginx.confd</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-9</Date>
+            <Version>1.17.6</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Riza KESKIN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
