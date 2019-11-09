@@ -1,0 +1,64 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>c-ares</Name>
+        <Homepage>http://daniel.haxx.se/projects/c-ares/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>A C library that performs DNS requests and name resolves asynchronously</Summary>
+        <Description>c-ares is a C library that performs DNS requests and name resolves asynchronously. c-ares is a fork of the library named 'ares', written by Greg Hudson at MIT.</Description>
+        <Archive sha1sum="5b4989208c936d6445d4d73487634fe0b07e8ea7" type="targz">http://c-ares.haxx.se/download/c-ares-1.14.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>c-ares</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/c-ares/NEWS</Path>
+            <Path fileType="doc">/usr/share/doc/c-ares/CHANGES</Path>
+            <Path fileType="doc">/usr/share/doc/c-ares/README*</Path>
+            <Path fileType="doc">/usr/share/doc/c-ares/RELEASE-NOTES</Path>
+            <Path fileType="doc">/usr/share/doc/c-ares/TODO</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>c-ares-devel</Name>
+        <Summary>Development files for c-ares</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">c-ares</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>c-ares-docs</Name>
+        <Summary>Documentation files for c-ares</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">c-ares</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/c-ares/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.14.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
