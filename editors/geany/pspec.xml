@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>geany</Name>
+        <Homepage>http://www.geany.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>GTK+ based fast and lightweight IDE</Summary>
+        <Description>GTK+ based fast and lightweight IDE</Description>
+        <Archive sha1sum="896c15d87a177b63342c1463f4ed6a56aa09c6d5" type="targz">https://download.geany.org/geany-1.36.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>python3-lxml</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>geany</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/geany</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib/geany</Path>
+            <Path fileType="library">/usr/lib/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>geany-devel</Name>
+        <Summary>geany için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">geany</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="include">/usr/include/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-09</Date>
+            <Version>1.36</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Riza KESKIN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
