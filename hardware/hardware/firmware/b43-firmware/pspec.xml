@@ -1,0 +1,38 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>b43-firmware</Name>
+        <Homepage>http://www.linuxwireless.org/en/users/Drivers/b43</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>freedist</License>
+        <IsA>data</IsA>
+        <Summary>Firmware for Broadcom B43 wireless network chips</Summary>
+        <Description>Firmware for Broadcom wireless network chips</Description>
+        <Archive sha1sum="b1f61d283bd7d05ade313da522cb0d0ad4033652" type="binary">http://mirror2.openwrt.org/sources/wl_apsta-3.130.20.0.o</Archive>
+        <Archive sha1sum="237d29a7701429054f5c82c000ef2d9aa6f2c3db" type="tarbz2">http://www.lwfinger.com/b43-firmware/broadcom-wl-6.30.163.46.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>b43-fwcutter</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>b43-firmware</Name>
+        <Files>
+            <Path fileType="data">/lib/firmware</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>6.30.163.46</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
