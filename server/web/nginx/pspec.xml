@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>nginx</Name>
@@ -12,8 +12,7 @@
         <IsA>service</IsA>
         <Summary>Robust, small and high performance http and reverse proxy server</Summary>
         <Description>Nginx is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server. Written by Igor Sysoev in 2005, Nginx now hosts between 1% and 4% of all domains worldwide. Nginx is known for its stability, rich feature set, simple configuration, and low resource consumption.</Description>
-        <Archive sha1sum="de64fa35ad34c355e398c235ed3a536bb0f6589d" 
-type="targz">http://nginx.org/download/nginx-1.17.5.tar.gz</Archive>
+        <Archive sha1sum="de64fa35ad34c355e398c235ed3a536bb0f6589d" type="targz">http://nginx.org/download/nginx-1.17.5.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gd-devel</Dependency>
             <Dependency>geoip-devel</Dependency>
@@ -39,6 +38,8 @@ type="targz">http://nginx.org/download/nginx-1.17.5.tar.gz</Archive>
         <Files>
             <Path fileType="config">/etc/nginx</Path>
             <Path fileType="config">/etc/logrotate.d</Path>
+            <Path fileType="config">/etc/init.d</Path>
+            <Path fileType="config">/etc/conf.d</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/var/www/nginx</Path>
             <Path fileType="data">/var/log/nginx</Path>
@@ -54,7 +55,9 @@ type="targz">http://nginx.org/download/nginx-1.17.5.tar.gz</Archive>
             <AdditionalFile owner="root" permission="0644" target="/etc/nginx/nginx.conf">conf/nginx.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/nginx/ssl.conf">conf/ssl.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/nginx/conf.d/00_default_vhost.conf">conf/00_default_vhost.conf</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/nginx">nginx.logrotate</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/logrotate.d/nginx">nginx.logrotate</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/nginx">nginx.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/nginx">nginx.confd</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="package.py">System.Package</SCOM>

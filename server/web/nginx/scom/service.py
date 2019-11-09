@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 serviceType = "server"
-serviceDesc = _({"en": "Nginx Web Server",
-                 "tr": "Nginx Web Sunucusu"})
+serviceDesc = {"en": "Nginx Web Server",
+               "tr": "Nginx Web Sunucusu"}
 
 from scom.service import *
 
