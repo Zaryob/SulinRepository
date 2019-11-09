@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>geany</Name>
@@ -16,7 +16,7 @@
         <BuildDependencies>
             <Dependency>intltool</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>python-lxml</Dependency>
+            <Dependency>python3-lxml</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -61,7 +61,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.9</Date>
+            <Date>2019-11-09</Date>
             <Version>1.36</Version>
             <Comment>First release</Comment>
             <Name>Ali Riza KESKIN</Name>

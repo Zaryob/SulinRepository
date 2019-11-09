@@ -7,9 +7,10 @@ from inary.actionsapi import get
 
 
 def setup():
-	autotools.configure("--prefix=/usr \
-                --enable-gtk3 \
-                --enable-gtkdoc-header")
+	autotools.configure("PYTHON=python3 \
+	                     --prefix=/usr \
+                         --enable-gtk3 \
+						 --enable-gtkdoc-header")
 	inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
@@ -20,4 +21,3 @@ def install():
 	                'COPYING', 'HACKING', 'INSTALL', 'NEWS', 'README',
 	                'README.I18N', 'README.Packagers', 'THANKS', 'TODO')
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
