@@ -1,0 +1,44 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-File-Next</Name>
+        <Homepage>https://metacpan.org/release/File-Next</Homepage>
+        <Packager>
+            <Name>Ali Riza KESKIN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv2</License>
+        <PartOf>programming.language.perl</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>File::Next</Summary>
+        <Description>Buraları bilmiyorum araştırmak lazım :D</Description>
+        <Archive sha1sum="b02322398e601c905a1fe458c712519345f56639" type="targz">https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/File-Next-1.18.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+
+    </Source>
+    <Package>
+        <Name>perl-File-Next</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019.11.10</Date>
+            <Version>1.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
