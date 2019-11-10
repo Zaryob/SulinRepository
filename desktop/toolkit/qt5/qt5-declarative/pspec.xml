@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-declarative</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Classes for QML and JavaScript languages</Summary>
+        <Description>Classes for QML and JavaScript languages</Description>
+        <License>LGPLv2.1-linking-exception</License>
+        <Archive sha1sum="bd3f19aca9f9dc84fe8566a69867f0a7dee97111" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtdeclarative-everywhere-src-5.13.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <!--Dependency>qt5-xmlpatterns-devel</Dependency-->
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-declarative</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>qt5-xmlpatterns</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="data">/usr/share/licenses</Path>
+            <Path fileType="executable">/usr/lib/qt5/bin</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+        </Files>
+
+    </Package>
+
+    <Package>
+        <Name>qt5-declarative-devel</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/qt5</Path>            
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency release="current">qt5-declarative</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-declarative-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qt5</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
