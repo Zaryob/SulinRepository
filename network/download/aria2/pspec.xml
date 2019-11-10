@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>aria2</Name>
@@ -14,13 +14,13 @@
         <Description>aria2 is a download utility with resuming and segmented downloading. Supported protocols are HTTP, HTTPS, FTP and BitTorrent. It also supports Metalink version 3.0.</Description>
         <Archive sha1sum="1e4f8dba13e6eb5860b90c567a9c03d2c4be8f18" type="tarxz">https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz</Archive>
         <BuildDependencies>
-	    <Dependency>gmp-devel</Dependency>
-	    <Dependency>zlib-devel</Dependency>
-	    <Dependency>c-ares-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>c-ares-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
-	    <Dependency>nettle-devel</Dependency>
+            <Dependency>nettle-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
-	    <Dependency>libxml2-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -28,12 +28,12 @@
         <Name>aria2</Name>
         <RuntimeDependencies>
             <Dependency>gmp</Dependency>
-	    <Dependency>zlib</Dependency>
-	    <Dependency>c-ares</Dependency>
-	    <Dependency>gnutls</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>c-ares</Dependency>
+            <Dependency>gnutls</Dependency>
             <Dependency>nettle</Dependency>
             <Dependency>sqlite</Dependency>
-	    <Dependency>libxml2</Dependency>
+            <Dependency>libxml2</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -46,7 +46,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019-09-18</Date>
+            <Date>2019-11-11</Date>
             <Version>1.21.0</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
