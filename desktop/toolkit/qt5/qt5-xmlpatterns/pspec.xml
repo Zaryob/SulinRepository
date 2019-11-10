@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-xmlpatterns</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
+        <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
+        <License>LGPLv2.1-linking-exception</License>
+        <Archive sha1sum="9471e7306109e746bbdd60fe54ed7d872ad3466f" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtxmlpatterns-everywhere-src-5.13.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-xmlpatterns</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share/licenses</Path>
+            <Path fileType="executable">/usr/lib/qt5/bin/</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-xmlpatterns-devel</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/qt5</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-xmlpatterns</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-xmlpatterns-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qt5</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

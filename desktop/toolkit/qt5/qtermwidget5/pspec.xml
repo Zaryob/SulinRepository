@@ -1,0 +1,49 @@
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qtermwidget5</Name>
+        <Homepage>https://github.com/qterminal/qtermwidget</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>Terminal widget for Qt5</Summary>
+        <Description>A simple terminal widget for using with Qt5 based applications</Description>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="96ad7f2250aaac0ca84a10e47c3e0644d1d84a72" type="targz">https://github.com/lxde/qtermwidget/archive/0.7.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>qtermwidget5</Name>
+        <Summary>Development files for qtermwidget5</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/consoleq</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-09</Date>
+            <Version>0.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

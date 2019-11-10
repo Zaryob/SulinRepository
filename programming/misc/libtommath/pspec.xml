@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtommath</Name>
+        <Homepage>http://math.libtomcrypt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>public-domain</License>
+        <IsA>library</IsA>
+        <Summary>Highly optimized and portable routines for integer based number theoretic applications</Summary>
+        <Description>libtommath provides highly optimized and portable routines for integer based number theoretic applications.</Description>
+        <Archive sha1sum="f0a9bcf805b6eb2ba3606bcb70989517eef58635" type="tarxz">https://github.com/libtom/libtommath/releases/download/v1.2.0/ltm-1.2.0.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libtommath</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/libtommath/changes.txt</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtommath-devel</Name>
+        <Summary>Development headers for libtommath</Summary>
+        <Description>libtommath-devel provides development headers for libtommath.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">libtommath</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtommath-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation files for libtommath</Summary>
+        <Description>libtommath-docs provides documentation files for libtommath.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">libtommath</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-25</Date>
+            <Version>0.42.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

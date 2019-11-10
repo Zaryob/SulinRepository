@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>portaudio</Name>
+        <Homepage>http://www.portaudio.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>Portable audio library</Summary>
+        <Description>PortAudio is a free, cross platform, open-source, audio I/O library.</Description>
+        <Archive type="targz" sha1sum="56c596bba820d90df7d057d8f6a0ec6bf9ab82e8">http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>jack-audio-connection-kit-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!-- Add a patch from Fedora to make non mmap alsa (and thus pulseaudio) work -->
+<!--             <Patch level="1">portaudio-non-mmap-alsa.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>portaudio</Name>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>portaudio-devel</Name>
+        <Summary>Development files for portaudio</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">portaudio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/doc/portaudio/html</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-11</Date>
+            <Version>190600.20161030</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
