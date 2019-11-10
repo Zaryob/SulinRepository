@@ -35,7 +35,7 @@ def install():
     inarytools.remove("/usr/share/info/ssip.info")
 
     # Set executable bit
-    shelltools.chmod("%s/usr/lib/python3.6/site-packages/speechd/_test.py" % get.installDIR(), 0o755)
+    #shelltools.chmod("%s/usr/lib/python3.6/site-packages/speechd/_test.py" % get.installDIR(), 0o755)
 
     # Create log directory, it should be world unreadable
     inarytools.dodir("/var/log/speech-dispatcher")
