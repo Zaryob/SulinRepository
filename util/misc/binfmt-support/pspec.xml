@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>binfmt-support</Name>
@@ -35,7 +35,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019.1.10</Date>
+            <Date>2019-11-10</Date>
             <Version>2.2.0</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
