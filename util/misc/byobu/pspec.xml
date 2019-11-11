@@ -1,0 +1,47 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>byobu</Name>
+        <Homepage>https://launchpad.net/byobu</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>An elegant enhancement of GNU Screen</Summary>
+        <Description>byobu includes a set of profiles for the GNU Screen window manager which are quite useful on machines running without a graphical desktop environment.</Description>
+        <Archive sha1sum="f1c7c0a0d3aff07d005434034ef4e15a27a2316a" type="targz">https://launchpad.net/byobu/trunk/5.129/+download/byobu_5.129.orig.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>byobu</Name>
+        <RuntimeDependencies>
+            <Dependency>screen</Dependency>
+            <Dependency>newt</Dependency>
+            <Dependency>tmux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/byobu</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/byobu</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="doc">/usr/share/doc/byobu</Path>
+            <Path fileType="data">/usr/share/byobu</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019.11.10</Date>
+            <Version>5.129</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

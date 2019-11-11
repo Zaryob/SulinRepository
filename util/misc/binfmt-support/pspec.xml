@@ -1,0 +1,45 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>binfmt-support</Name>
+        <Homepage>http://packages.debian.org/en/sid/binfmt-support</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>app</IsA>
+        <Summary>Register interpreters for various binary formats</Summary>
+        <Description>Register interpreters for various binary formats</Description>
+        <Archive sha1sum="664b60d219701b9e1ed4feb7176c76bc7349b546" type="targz">http://ftp.de.debian.org/debian/pool/main/b/binfmt-support/binfmt-support_2.2.0.orig.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>binfmt-support</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/var</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019.1.10</Date>
+            <Version>2.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
