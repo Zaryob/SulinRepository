@@ -1,0 +1,59 @@
+<INARY>
+    <Source>
+        <Name>polkit-qt</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A library that allows developers to access PolicyKit API with a nice Qt-style API</Summary>
+        <Description>A library that allows developers to access PolicyKit API with a nice Qt-style API</Description>
+        <Archive sha1sum="a4bf39a6b0844db0da6cfab3faa35f8cd91f42a5" type="tarxz">https://download.kde.org/stable/polkit-qt-1/polkit-qt-1-0.113.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>polkit-qt</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>polkit-qt-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">polkit-qt</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/polkit-qt5-1</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-11</Date>
+            <Version>0.113</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
