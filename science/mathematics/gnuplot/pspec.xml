@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>gnuplot</Name>
@@ -14,10 +14,14 @@
         <Description>Gnuplot is a protable command-line driven interactive data and function plotting utility. It supports many types of plots in either 2D and 3D. It can draw using lines, points, boxes, contours, vector fields, surfaces, and various associated text. It also supports various specialized plot types.</Description>
         <Archive sha1sum="fcd54ed0b1e5d7dda8151602b7198f0040462c70" type="targz">https://master.dl.sourceforge.net/project/gnuplot/gnuplot/5.2.7/gnuplot-5.2.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>lua</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>gtk3</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-assistant</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>lua-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,6 +29,8 @@
         <Name>gnuplot</Name>
         <RuntimeDependencies>
             <Dependency>lua</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>qt5-base</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gtk3</Dependency>
@@ -55,7 +61,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.9</Date>
+            <Date>2019-11-11</Date>
             <Version>5.2.7</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>

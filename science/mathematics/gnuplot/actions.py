@@ -14,7 +14,8 @@ def setup():
     autotools.configure("--with-gihdir=/usr/share/gnuplot \
                          --with-readline=gnu \
                          --with-X11 \
-                         --with-gtk3 \
+                         --with-qt=5 \
+                         --with-gtk=3 \
                          --with-wx-single-threaded ")
 
 def build():
