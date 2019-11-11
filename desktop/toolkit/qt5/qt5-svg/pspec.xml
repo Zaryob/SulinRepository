@@ -1,0 +1,68 @@
+<INARY>
+    <Source>
+        <Name>qt5-svg</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1-linking-exception</License>
+        <Summary>Classes for displaying the contents of SVG files</Summary>
+        <Description>Classes for displaying the contents of SVG files</Description>
+        <Archive sha1sum="00a30ea9025df7e6ec27cfc44315be6c4392ced1" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtsvg-everywhere-src-5.13.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>qt5-svg</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share/licenses/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-svg-devel</Name>
+        <Summary>Development files for qt5-svg</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency release="current">qt5-svg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/qt5/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-svg-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qt5</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-10</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
