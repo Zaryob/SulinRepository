@@ -14,13 +14,13 @@
         <Archive sha1sum="3e97e7157380f0cfbdf4f3c950a7a00bdfa6072c" type="tarbz2">mirrors://sourceforge/enlightenment/1.5.1/imlib2-1.5.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>giflib</Dependency>
-            <Dependency>libid3tag</Dependency>
-            <Dependency>libXext</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libid3tag-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>tiff</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>freetype</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <!--Patch level="1">imlib2-1.4.5-no-my-libs.patch</Patch>
