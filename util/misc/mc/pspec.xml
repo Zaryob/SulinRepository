@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>mc</Name>
@@ -52,7 +52,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.10</Date>
+            <Date>2019-11-10</Date>
             <Version>4.8.23</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>

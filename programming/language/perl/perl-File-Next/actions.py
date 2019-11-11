@@ -19,4 +19,3 @@ def check():
 
 def install():
     perlmodules.install()
-
