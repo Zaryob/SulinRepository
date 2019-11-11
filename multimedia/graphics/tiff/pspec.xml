@@ -1,12 +1,11 @@
-
-<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>tiff</Name>
         <Homepage>http://www.remotesensing.org/libtiff/</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Suleyman Poyraz</Name>
+              <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>as-is</License>
         <IsA>library</IsA>
@@ -18,9 +17,8 @@
             <Dependency>jbigkit</Dependency>
         </BuildDependencies>
     </Source>
-
     <Package>
-        <Name>tiff</Name>
+	      <Name>tiff</Name>
         <RuntimeDependencies>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>jbigkit</Dependency>
@@ -31,7 +29,21 @@
            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
-
+    <Package>
+        <Name>tiff-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>jbigkit-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>jbigkit-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>tiff-docs</Name>
         <Summary>Documentation for tiff</Summary>
@@ -43,14 +55,13 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
-
     <History>
         <Update release="1">
-            <Date>2019.11.10</Date>
+            <Date>2019-04-12</Date>
             <Version>4.0.10</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Suleyman Poyraz</Name>
+              <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
 </INARY>

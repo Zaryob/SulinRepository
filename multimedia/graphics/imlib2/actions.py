@@ -24,9 +24,15 @@ else:
 def setup():
     autotools.autoreconf("-fi")
     autotools.configure("--disable-static \
-                                      --prefix=/usr \
-                                      --sysconfdir=/etc/imlib2 \
-                                      --x-libraries=/usr/lib")
+                         --with-x \
+                         --with-jpeg \
+                         --with-png \
+                         --with-tiff \
+                         --with-gif \
+                         --with-zlib \
+                         --with-bzip2 \
+                         %s \
+                         --enable-visibility-hiding" % optimizationtype)
      
 def build():
     autotools.make()

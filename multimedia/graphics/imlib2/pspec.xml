@@ -1,30 +1,33 @@
-
-<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>imlib2</Name>
         <Homepage>http://enlightenment.org/Libraries/Imlib2</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Suleyman Poyraz</Name>
+              <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>BSD</License>
         <IsA>library</IsA>
         <Summary>Second version of the general image loading and rendering library</Summary>
         <Description>Imlib 2 is the successor to Imlib. It is not just a newer version - it is a completely new library. Imlib2 can be installed alongside Imlib 1.x without any problems since they are effectively different libraries - but they Have very similar functionality.</Description>
-        <Archive sha1sum="657241250c50d6000271f3eeef199d463e512b0c" type="targz">https://master.dl.sourceforge.net/project/enlightenment/imlib2-src/1.5.1/imlib2-1.5.1.tar.gz</Archive>
+        <Archive sha1sum="3e97e7157380f0cfbdf4f3c950a7a00bdfa6072c" type="tarbz2">mirrors://sourceforge/enlightenment/1.5.1/imlib2-1.5.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>giflib</Dependency>
             <Dependency>libid3tag</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
             <Dependency>tiff</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>freetype</Dependency>
         </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">imlib2-1.4.5-no-my-libs.patch</Patch>
+            <Patch level="0">imlib2-giflib5.patch</Patch-->
+            <!--Patch level="0">imlib2-1.3.0-multilib.patch</Patch-->
+        </Patches>
     </Source>
-
     <Package>
         <Name>imlib2</Name>
         <RuntimeDependencies>
@@ -45,14 +48,12 @@
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
-
-
     <History>
         <Update release="1">
-            <Date>2019.11.10</Date>
+            <Date>2019-04-12</Date>
             <Version>1.5.1</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
