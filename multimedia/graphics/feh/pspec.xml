@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>feh</Name>
+        <Homepage>http://feh.finalrewind.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Mit</License>
+        <IsA>app:gui</IsA>
+        <Summary>Lightweight imageviewer using imlib2</Summary>
+        <Description>feh is an X11 image viewer aimed mostly at console users.  Unlike most other viewers, it does not have a fancy GUI, but simply displays images. It is controlled via commandline arguments and configurable key/mouse actions</Description>
+        <Archive sha1sum="3292fc7a45ff6c54927ab867d5d743869cbbf3ad" type="tarbz2">https://feh.finalrewind.org/feh-3.2.1.tar.bz2</Archive>
+    <BuildDependencies>
+      <Dependency>libpng-devel</Dependency>
+      <Dependency>curl-devel</Dependency>
+      <Dependency>libX11-devel</Dependency>
+      <Dependency>libXt-devel</Dependency>
+      <Dependency>libXinerama-devel</Dependency>
+      <Dependency>imlib2</Dependency>
+    </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>feh</Name>
+    <RuntimeDependencies>
+        <Dependency>libXinerama</Dependency>
+        <Dependency>imlib2</Dependency>
+        <Dependency>libXt</Dependency>
+    </RuntimeDependencies>
+    <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="application">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/feh</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+    </Files>
+    </Package>
+
+    <History>
+    <Update release="1">
+            <Date>2019-11-10</Date>
+            <Version>3.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+      </Update>
+    </History>
+</INARY>

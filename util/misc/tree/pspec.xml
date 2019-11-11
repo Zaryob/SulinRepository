@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tree</Name>
+        <Homepage>http://mama.indstate.edu/users/ice/tree/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Recursive directory listing tool</Summary>
+        <Description>Tree lists directories recursively, and produces an indented listing of files.</Description>
+        <Archive sha1sum="06934bf1f6a92af4eaec6bc61e568cec5e068ba1" type="targz">ftp://mama.indstate.edu/linux/tree/tree-1.8.0.tgz</Archive>
+    </Source>
+
+    <Package>
+        <Name>tree</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/bash-completion/tree">tree.bashcomp</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-10</Date>
+            <Version>1.8.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
