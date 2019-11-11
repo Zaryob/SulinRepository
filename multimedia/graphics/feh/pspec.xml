@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
 <INARY>
@@ -23,7 +22,7 @@
       <Dependency>imlib2</Dependency>
     </BuildDependencies>
     </Source>
-      
+
     <Package>
         <Name>feh</Name>
     <RuntimeDependencies>
@@ -40,10 +39,10 @@
             <Path fileType="data">/usr/share/icons</Path>
     </Files>
     </Package>
-    
+
     <History>
     <Update release="1">
-            <Date>2019.11.10</Date>
+            <Date>2019-11-10</Date>
             <Version>3.2.1</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
