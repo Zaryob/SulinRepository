@@ -1,0 +1,48 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>p7zip</Name>
+        <Homepage>http://p7zip.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>Port of 7-Zip archiver for *nix</Summary>
+        <Description>p7zip is a port of 7-Zip archiver for Unix. Supports packing-unpacking 7z, ZIP, GZIP, BZIP2 and TAR archives and unpacking RAR, CAB, ISO, ARJ, LZH, CHM, Z, CPIO, RPM, DEB and NSIS arhives.</Description>
+        <Archive sha1sum="e8819907132811aa1afe5ef296181d3a15cc8f22" type="tarbz2">https://netcologne.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>yasm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>p7zip</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/p7zip</Path>
+            <Path fileType="library">/usr/lib/p7zip/Codecs</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/7z">7z</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/7za">7za</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>16.02</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

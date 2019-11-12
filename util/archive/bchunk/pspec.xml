@@ -1,0 +1,36 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bchunk</Name>
+        <Homepage>http://he.fi/bchunk/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Converts bin/cue CD-images to iso+wav/cdr</Summary>
+        <Description>binchunker converts .bin/.cue CD images to .iso/.cdr format.</Description>
+        <Archive sha1sum="5d241a7923a53f8bcd3075d26801958a7e934ee5" type="targz">http://he.fi/bchunk/bchunk-1.2.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>bchunk</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019.11.11</Date>
+            <Version>1.2.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

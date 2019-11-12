@@ -1,0 +1,35 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>unrar</Name>
+        <Homepage>http://www.rarsoft.com/rar_add.htm</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>unRAR</License>
+        <IsA>app:console</IsA>
+        <Summary>RAR decompressor</Summary>
+        <Description>unrar is a program to decompress RAR archives.</Description>
+        <Archive sha1sum="56096808b6be7f6feb494d40ebc7c0c61fc3ea8c" type="targz">http://www.rarlab.com/rar/unrarsrc-5.7.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>unrar</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019.11.11</Date>
+            <Version>5.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
