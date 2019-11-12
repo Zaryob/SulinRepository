@@ -9,22 +9,23 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
-libdir = "lib"
 
 def setup():
+    shelltootls
     shelltools.system("sed -i 's/cp -p/cp/' build/make/Makefile ")
     shelltools.makedirs("libvpx-build")
     shelltools.cd("libvpx-build")
     shelltools.system("../configure --prefix=/usr \
-                       --libdir=/usr/%s "% libdir)
+                       --enable-shared  \
+                       --disable-static ")
 
 
 def build():
     shelltools.cd("libvpx-build")
-    shelltools.system("make -j1 V=s")
+    shelltools.system("make -j1 LDFLAGS=\"{} -fPIC\"".format(get.LDFLAGS()))
 
 def install():
     shelltools.cd("libvpx-build")
-    autotools.rawInstall("DIST_DIR=%s/usr" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s/" % get.installDIR())
     shelltools.cd("..")
     inarytools.dodoc("AUTHORS", "CHANGELOG", "LICENSE", "PATENTS")

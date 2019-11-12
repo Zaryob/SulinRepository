@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-quickcontrols2</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Next generation user interface controls based on Qt Quick</Summary>
+        <Description>Next generation user interface controls based on Qt Quick</Description>
+        <License>LGPLv2.1-linking-exception</License>
+        <Archive sha1sum="f12b842112846218b237c4cfb1e206e8ca31e1ee" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtquickcontrols2-everywhere-src-5.13.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>qt5-quickcontrols</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-quickcontrols2</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share/licenses/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-quickcontrols2-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-quickcontrols2</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-quickcontrols2-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qt5</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

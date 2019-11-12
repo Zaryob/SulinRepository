@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>bash-completion</Name>
+        <Homepage>http://bash-completion.alioth.debian.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Programmable completion for bash</Summary>
+        <Description>A relatively new feature in bash is programmable completion. Since now, users have been able to complete commands, variables and filenames; now it is also possible to complete parameters.</Description>
+        <Archive sha1sum="4af05f84d685240d332b87b21b0c00912f1c613b" type="tarxz">https://github.com/scop/bash-completion/releases/download/2.9/bash-completion-2.9.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>bash-completion</Name>
+        <Files>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>    
+            <Path fileType="data">/var</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/bash_completion.d/sulin">sulin</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-10</Date>
+            <Version>2.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

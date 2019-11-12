@@ -13,8 +13,8 @@ def setup():
     autotools.configure('LIBS="-lcrypt"\
                          --enable-shadowgrp \
                          --without-selinux \
-                         --without-audit \
-                         --without-libcrack \
+                         --with-audit \
+                         --with-libcrack \
                          --with-libpam \
                          --with-sha-crypt \
                          --enable-nls \
