@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-common</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.toolkit.gnome</PartOf>
+        <Summary>Common files for development of GNOME packages</Summary>
+        <Description>gnome-common package contains aclocal macros, makefile headers and documents tools in order to build GNOME sources.</Description>
+        <Archive sha1sum="332e514961374a54dc065b86032eaeb03d6d3cee" type="tarxz">mirrors://gnome/gnome-common/3.18/gnome-common-3.18.0.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>gnome-common</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/gnome-common</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>3.18.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

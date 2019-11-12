@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>opencore-amr</Name>
+        <Homepage>http://opencore-amr.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>library</IsA>
+        <Summary>AMR speech codec implementation</Summary>
+        <Description>Opencore AMR is an implementation of Adaptive Multi Rate Narrowband and Wideband speech codec.</Description>
+        <Archive sha1sum="905cce84963a241dc058fb42357259952ce2e4ab" type="targz">mirrors://sourceforge/opencore-amr/opencore-amr/opencore-amr-0.1.4.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>opencore-amr</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/opencore-amr</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>opencore-amr-devel</Name>
+        <Summary>Development files for opencore-amr</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">opencore-amr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

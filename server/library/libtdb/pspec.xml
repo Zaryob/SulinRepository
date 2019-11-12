@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtdb</Name>
+        <Homepage>http://tdb.samba.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Trivial database library</Summary>
+        <Description>libtdb contains C library and Python bindings to access to a trivial database. TDB is very much like GDBM and BSDDB except that it allows multiple simultaneous writers and uses locking internally to keep writers from trampling on each other.</Description>
+        <Archive sha1sum="9a6e51cde16a2400b76448c4e7de2f87656477a2" type="targz">https://www.samba.org/ftp/tdb/tdb-1.4.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxslt</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>libbsd-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libtdb</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtdb-devel</Name>
+        <Summary>Development files for libtdb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtdb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>1.4.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pygobject3</Name>
+        <Homepage>http://www.pygtk.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Glib bindings for Python</Summary>
+        <Description>pygobject is GLib's GObject library bindings for Python.</Description>
+        <Archive sha1sum="637c131fb54ff0633a92d7f4a8a66612398642ff" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.34/pygobject-3.34.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-cairo-devel</Dependency>
+            <Dependency>python3-cairo-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pygobject3</Name>
+        <Summary>python2 için pygobject3</Summary>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>python-cairo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="library">/usr/lib/libpyglib-gi-2.0-python2.7.so*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-pygobject3</Name>
+        <BuildType>rebuild_python</BuildType>
+        <Summary>python3 için pygobject3</Summary>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>python3-cairo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="library">/usr/lib/libpyglib-gi-2.0-python3.7.so*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pygobject3-devel</Name>
+        <Summary>pygobject development files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">python3-pygobject3</Dependency>
+            <Dependency release="current">python-pygobject3</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pygobject3-docs</Name>
+        <Files>
+            <Path fileType="data">/usr/share/pygobject</Path>
+            <Path fileType="library">/usr/share/doc</Path>
+            <Path fileType="library">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>3.34.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

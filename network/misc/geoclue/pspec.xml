@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>geoclue</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/GeoClue</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <PartOf>network.misc</PartOf>
+        <IsA>library</IsA>
+        <Summary>The Geoinformation Service.</Summary>
+        <Description>Geoclue is a modular geoinformation service built on top of the D-Bus messaging system.</Description>
+        <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>avahi-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>avahi-glib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>NetworkManager-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="4e1c56268859f518677fba0dd6241dd8c4f482e5" type="targz">https://gitlab.freedesktop.org/geoclue/geoclue/-/archive/2.5.3/geoclue-2.5.3.tar.gz</Archive>
+        <Patches/>
+    </Source>
+
+    <Package>
+        <Name>geoclue</Name>
+        <RuntimeDependencies>
+            <!--Dependency>gpsd</Dependency-->
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>avahi</Dependency>
+            <Dependency>avahi-glib</Dependency>
+            <Dependency>libnotify</Dependency>
+            <!--Dependency>libsoup</Dependency-->
+            <Dependency>NetworkManager</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="data">/usr/false</Path>
+            <Path fileType="executable">/usr/libexec/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>geoclue-devel</Name>
+        <Summary>geoclue için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">geoclue</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/libgeoclue-2.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-27</Date>
+            <Version>2.5.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>gcc</Name>
@@ -15,8 +15,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>The GNU Compiler Collection, includes C, C++, Objective-C and Fortran compilers</Summary>
         <Description>The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, as well as libraries for these languages</Description>
-        <Archive sha1sum="19926bdb6c4b58891015929853d41aeff019d400" 
-type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
+        <Archive sha1sum="306d27c3465fa36862c206738d06d65fff5c3645" type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-9.2.0/gcc-9.2.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>binutils</Dependency>
             <Dependency>bison</Dependency>
@@ -45,6 +44,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libquadmath</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <PartOf>system.base</PartOf>
         <Summary>The GNU Fortran Compiler Quadmath Runtime Library</Summary>
         <Files>
@@ -61,6 +63,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libgcc</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <PartOf>system.base</PartOf>
         <Summary>Contains a shared library of support routines used by GCC's runtime, and thus by every program on the system</Summary>
         <Files>
@@ -84,6 +89,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>libgomp</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Contains GCC shared support library which is needed for OpenMP 2.5 support</Summary>
         <Files>
             <Path fileType="library">/usr/lib/libgomp.so*</Path>
@@ -101,6 +109,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
         <RuntimeDependencies>
             <Dependency>libquadmath</Dependency>
         </RuntimeDependencies>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <IsA>library</IsA>
         <Summary>Contains GCC shared support library for gfortran</Summary>
         <Files>
@@ -116,6 +127,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
 
     <Package>
         <Name>libgccgo</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>libgomp</Dependency>
@@ -128,18 +142,25 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
              <Path fileType="library">/usr/lib/libgo.a*</Path>
              <Path fileType="library">/usr/lib/libgolibbegin.a</Path>
              <Path fileType="library">/usr/lib/libgobegin.a</Path>
-             <Path fileType="library">/usr/lib/go/8.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/lib/go/9.2.0/x86_64-pc-linux-gnu/</Path>
              <Path fileType="library">/usr/lib32/libgo.so*</Path>
              <Path fileType="library">/usr/lib32/libgo.a*</Path>
              <Path fileType="library">/usr/lib32/libgolibbegin.a</Path>
              <Path fileType="library">/usr/lib32/libgobegin.a</Path>
-             <Path fileType="library">/usr/lib32/go/8.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/lib32/go/9.2.0/x86_64-pc-linux-gnu/</Path>
+             <Path fileType="library">/usr/bin/gccgo</Path>
+             <Path fileType="library">/usr/bin/go</Path>
+             <Path fileType="library">/usr/bin/gofmt</Path>
+             <Path fileType="library">/usr/bin/x86_64-pc-linux-gnu-gccgo</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>libobjc</Name>
         <IsA>library</IsA>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Contains GCC shared support library for objc</Summary>
         <Files>
             <Path fileType="library">/usr/lib/libobjc.so*</Path>
@@ -152,6 +173,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     <Package>
         <Name>gcc-l10n</Name>
         <PartOf>system.locale</PartOf>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Contains available GCC localization files, includes also turkish translations</Summary>
         <RuntimeDependencies>
             <Dependency>gcc</Dependency>
@@ -163,6 +187,9 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
 
     <Package>
         <Name>gcc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>gmp</Dependency>
             <Dependency>isl</Dependency>
@@ -207,6 +234,13 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>9.2.0</Version>
+            <Comment>Updated gcc major version to 9.2.0</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-19</Date>
             <Version>8.2.0</Version>
@@ -216,3 +250,4 @@ type="tarxz">http://ftp.gnu.org/gnu/gcc/gcc-8.2.0/gcc-8.2.0.tar.xz</Archive>
         </Update>
     </History>
 </INARY>
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>libnotify</Name>
@@ -13,7 +13,7 @@
         <PartOf>programming.library</PartOf>
         <Summary>Desktop notification library</Summary>
         <Description>libnotify sends desktop notifications to a notification daemon.</Description>
-        <Archive sha1sum="4cdf482737df504ac37f5489940b5c7ea5e18d57" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/libnotify/0.7/libnotify-0.7.7.tar.xz</Archive>
+        <Archive sha1sum="18915d9a5ee8e0a00c3fd990d649251e3d2deac9" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/libnotify/0.7/libnotify-0.7.8.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
@@ -52,8 +52,8 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-04-16</Date>
-            <Version>0.7.7</Version>
+            <Date>2019-09-14</Date>
+            <Version>0.7.8</Version>
             <Comment>First release</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

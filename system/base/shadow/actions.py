@@ -10,15 +10,16 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--enable-shadowgrp \
+    autotools.configure('LIBS="-lcrypt"\
+                         --enable-shadowgrp \
                          --without-selinux \
-                         --without-audit \
-                         --without-libcrack \
+                         --with-audit \
+                         --with-libcrack \
                          --with-libpam \
                          --with-sha-crypt \
                          --enable-nls \
                          --with-group-name-max-length=32 \
-                         --disable-shared")
+                         --disable-shared')
 def build():
     # Rebuild gmo catalogs
     autotools.make("-C po update-gmo")

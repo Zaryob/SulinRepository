@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>l-smash</Name>
+        <Homepage>https://github.com/l-smash/l-smash</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>app:console</IsA>
+        <Summary>MP4 muxer and other tools.</Summary>
+        <Description>Loyal to Spec of MPEG4, and Ad-hock Simple Hackwork library.</Description>
+        <Archive sha1sum="6718cda31f00d7744a71ae02cdcd863c6c7a0c9d" type="targz">https://github.com/l-smash/l-smash/archive/v2.14.5.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>l-smash</Name>
+        <Summary>MP4 muxer and other tools.</Summary>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>l-smash-devel</Name>
+        <Summary>Development files for l-smash.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">l-smash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>2.14.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

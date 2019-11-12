@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>baselayout</Name>
@@ -14,7 +14,7 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-        <Archive sha1sum="78e6713aba6792ce9d36cde5db1a0616d663a4ac" type="tarbz2">baselayout-2.12-.tar.bz2</Archive>
+        <Archive sha1sum="44b342017e59f65d2a65fd7a82f3ca3875fc40e2" type="targz">https://github.com/Zaryob/baselayout/archive/baselayout-2.13.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -63,6 +63,13 @@
     </Package>
 
     <History>
+      <Update release="2">
+          <Date>2019-10-10</Date>
+          <Version>2.13</Version>
+          <Comment>Fixed etc files and baselayout script.</Comment>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
         <Update release="1">
             <Date>2019-09-04</Date>
             <Version>2.12</Version>

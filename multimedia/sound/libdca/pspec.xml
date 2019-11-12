@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libdca</Name>
+        <Homepage>http://developers.videolan.org/libdca.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Library for decoding DTS Coherent Acoustics streams</Summary>
+        <Description>libdts is a free library for decoding DTS Coherent Acoustics streams.</Description>
+        <Archive sha1sum="d292ddb7b4d60c90274f9f0398fa61df0df9442c" type="tarbz2">https://download.videolan.org/pub/videolan/libdca/0.0.6/libdca-0.0.6.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>libdca</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdca-devel</Name>
+        <Summary>Development files for libdca</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libdca</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>0.0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

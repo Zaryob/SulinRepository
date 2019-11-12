@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>woff</Name>
+        <Homepage>https://github.com/google/woff2</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <Summary>Web Open Font Format 2 reference implementation</Summary>
+        <Description>The implementor for WOFF2 formatted files. The structure of WOFF2 files is similar to that of SFNT and WOFF 1.0 font files, in that there is a header followed by a table directory, followed by the data for those tables.</Description>
+        <Archive sha1sum="bab4838b248026c968e171a5467b5176caf4e2e5" type="targz">https://github.com/google/woff2/archive/v1.0.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>woff</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>woff-devel</Name>
+        <Summary>Development files for woff</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">woff</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

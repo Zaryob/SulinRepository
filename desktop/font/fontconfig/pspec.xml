@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>fontconfig</Name>
@@ -68,10 +68,12 @@
         <BuildDependencies>
             <Dependency>expat-32bit</Dependency>
             <Dependency>freetype-32bit</Dependency>
+            <Dependency>libutil-linux-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">fontconfig</Dependency>
             <Dependency>expat-32bit</Dependency>
+            <Dependency>libutil-linux-32bit</Dependency>
             <Dependency>freetype-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -79,6 +81,13 @@
         </Files>
     </Package>
     <History>
+      <Update release="2">
+          <Date>2019-09-16</Date>
+          <Version>2.13.0</Version>
+          <Comment>Added libutil-linux-32bit dependency to fontconfig-32bit package.</Comment>
+          <Name>Suleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.13.0</Version>

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libmodplug</Name>
+        <Homepage>http://modplug-xmms.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Library for playing MOD-like music files</Summary>
+        <Description>libmodplug is a library based on the mod rendering code from ModPlug, a popular windows mod player written by Olivier Lapicque.</Description>
+        <Archive sha1sum="9d18572f85fdd95091befa972ee5d94139dcefde" type="targz">http://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">libmodplug-0.8.4-timidity-patches.patch</Patch>
+        </Patches>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libmodplug</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+   </Package>
+
+    <Package>
+        <Name>libmodplug-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libmodplug</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+   </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.8.9.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

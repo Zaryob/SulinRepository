@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libspiro</Name>
+        <Homepage>http://fontforge.github.io</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Library to simplify the drawing of beautiful curves</Summary>
+        <Description>libspiro is a library that will take an array of spiro control points and convert them into a series of bezier splines which can then be used in the myriad of ways the world has come to use beziers.</Description>
+        <Archive sha1sum="853de0d70ac18c31ddeacca22a935612b262aea9" type="targz">https://github.com/fontforge/libspiro/releases/download/20190731/libspiro-20190731.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libspiro</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libspiro-devel</Name>
+        <Summary>Development files for libspiro</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libspiro</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>20190731</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

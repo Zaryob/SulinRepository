@@ -9,7 +9,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
 def setup():
-    shelltools.unlinkDir("%s/tcl8.6.6/pkgs/sqlite3.13.0" % get.workDIR())
+    shelltools.unlinkDir("%s/tcl8.6.9/pkgs/sqlite3.25.3" % get.workDIR())
     shelltools.cd("unix")
 
     autotools.autoreconf("-fi")

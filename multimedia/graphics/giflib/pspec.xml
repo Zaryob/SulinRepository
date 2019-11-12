@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>giflib</Name>
         <Homepage>http://sourceforge.net/projects/giflib</Homepage>
         <Packager>
             <Name>Suleyman Poyraz</Name>
-              <Email>zaryob.dev@gmail.com</Email>
+            <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>MIT</License>
         <IsA>library</IsA>

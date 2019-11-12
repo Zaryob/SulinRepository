@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>poppler-data</Name>
+        <Homepage>http://poppler.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>BSD</License>
+        <IsA>data</IsA>
+        <Summary>Poppler encoding files</Summary>
+        <Description>poppler-data consists of encoding files for poppler. When installed, the encoding files enables poppler to correctly render CJK and Cyrillic properly.</Description>
+        <Archive sha1sum="f8c7c7f0654ddfba19229be5c1fac9be1fcfdcb1" type="targz">http://poppler.freedesktop.org/poppler-data-0.4.8.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>poppler-data</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/poppler</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.4.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

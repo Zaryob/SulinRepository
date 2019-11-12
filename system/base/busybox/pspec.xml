@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>busybox</Name>
@@ -31,19 +31,26 @@
             <Path fileType="executable">/usr/bin</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile target="/etc/conf.d/busybox-klogd">klogd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/conf.d/busybox-ntpd">ntpd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/conf.d/busybox-syslogd">syslogd.confd</AdditionalFile>
-            <AdditionalFile target="/etc/conf.d/busybox-watchdog">watchdog.confd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-klogd">klogd.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/mdev">mdev.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-ntpd">ntpd.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-syslogd">syslogd.initd</AdditionalFile>
-            <AdditionalFile target="/etc/init.d/busybox-watchdog">watchdog.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-klogd">klogd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-ntpd">ntpd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-syslogd">syslogd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/busybox-watchdog">watchdog.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-klogd">klogd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mdev">mdev.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-ntpd">ntpd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-syslogd">syslogd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/busybox-watchdog">watchdog.initd</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-19</Date>
+            <Version>1.29.3</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-22</Date>
             <Version>1.29.3</Version>

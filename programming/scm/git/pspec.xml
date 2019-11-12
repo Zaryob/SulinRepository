@@ -1,0 +1,220 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>git</Name>
+        <Homepage>http://git-scm.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>Fast Version Control System</Summary>
+        <Description>Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.</Description>
+        <Archive sha1sum="fc627f8cb994c60ae6c4580ca514af2a18c464d7" type="tarxz">https://www.kernel.org/pub/software/scm/git/git-2.23.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>tcltk-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>xmlto</Dependency>
+            <Dependency>asciidoc</Dependency>
+            <Dependency>perl-Error</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>util-linux</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>git</Name>
+        <IsA>app:console</IsA>
+        <RuntimeDependencies>
+            <Dependency>perl-String-ShellQuote</Dependency>
+            <Dependency>perl-Net-SMTP-SSL</Dependency>
+            <Dependency>perl-Authen-SASL</Dependency>
+            <Dependency>perl-libwww</Dependency>
+            <Dependency>libpcre2</Dependency>
+            <Dependency version="current">perl-Git</Dependency>
+            <Dependency>openssh</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>rsync</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>curl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec/git-core</Path>
+            <Path fileType="data">/etc/bash_completion.d</Path>
+            <Path fileType="data">/usr/share/git-core</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>git-toolkit</Name>
+        <IsA>app:console</IsA>
+        <Summary>Git toolkit.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">git</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/git</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>git-daemon</Name>
+        <IsA>service</IsA>
+        <Summary>GIT protocol daemon</Summary>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libpcre2</Dependency>
+            <Dependency version="current">git</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/conf.d/git-daemon</Path>
+            <Path fileType="config">/etc/init.d/git-daemon</Path>
+            <Path fileType="executable">/usr/libexec/git-core/git-daemon</Path>
+            <Path fileType="man">/usr/share/man/man1/*daemon*.1*</Path>
+            <Path fileType="data">/pub/scm</Path>
+        </Files>
+        <AdditionalFiles>
+          <AdditionalFile owner="root" permission="0755" target="/etc/init.d/git-daemon">git-daemon-r1.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/git-daemon">git-daemon.confd</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>perl-Git</Name>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>Perl interface to GIT</Summary>
+        <RuntimeDependencies>
+            <Dependency>perl-Error</Dependency>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/perl5</Path>
+            <Path fileType="library">/usr/share/perl5/</Path>
+            <Path fileType="man">/usr/share/man/man3/Git.3pm</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>emacs-Git</Name>
+        <IsA>data</IsA>
+        <PartOf>editor.emacs</PartOf>
+        <Summary>Git support for emacs</Summary>
+        <RuntimeDependencies>
+            <Dependency>emacs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/emacs/site-lisp/git*</Path>
+            <Path fileType="doc">/usr/share/doc/emacs-git</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>git-svn</Name>
+        <IsA>app:console</IsA>
+        <Summary>Git tools for importing Subversion repositories</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">git</Dependency>
+            <Dependency>subversion</Dependency>
+            <Dependency>perl-Term-ReadKey</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/libexec/git-core/*svn*</Path>
+            <Path fileType="man">/usr/share/man/man1/*svn*.1*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>git-cvs</Name>
+        <IsA>app:console</IsA>
+        <Summary>Git tools for importing CVS repositories</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">git</Dependency>
+            <Dependency>cvs</Dependency>
+            <Dependency>cvsps</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/libexec/git-core/*cvs*</Path>
+            <Path fileType="executable">/usr/bin/git-cvsserver</Path>
+            <Path fileType="man">/usr/share/man/man1/*cvs*.1*</Path>
+            <Path fileType="man">/usr/share/man/man7/*cvs*.7*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gitk</Name>
+        <IsA>app:gui</IsA>
+        <Summary>Git revision tree visualiser</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">git</Dependency>
+            <Dependency>tcltk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/gitk</Path>
+            <Path fileType="localedata">/usr/share/gitk</Path>
+            <Path fileType="man">/usr/share/man/man1/*gitk*.1*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>git-gui</Name>
+        <IsA>app:gui</IsA>
+        <Summary>Git GUI tool</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">git</Dependency>
+            <Dependency version="current">gitk</Dependency>
+            <Dependency>tcltk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/libexec/git-core/git-gui*</Path>
+            <Path fileType="executable">/usr/libexec/git-core/git-citool</Path>
+            <Path fileType="data">/usr/share/git-gui</Path>
+            <Path fileType="man">/usr/share/man/man1/git-gui.1*</Path>
+            <Path fileType="man">/usr/share/man/man1/git-citool.1*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gitweb</Name>
+        <IsA>app:web</IsA>
+        <PartOf>server.web</PartOf>
+        <Summary>Simple web interface to GIT repositories</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">git</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/var/www/localhost</Path>
+            <Path fileType="config">/etc/conf.d/gitweb</Path>
+            <Path fileType="config">/etc/init.d/gitweb</Path>
+            <Path fileType="config">/etc/apache2/conf.d</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/gitweb">gitweb.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/apache2/conf.d/git.conf">git.conf.httpd</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>2.23.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

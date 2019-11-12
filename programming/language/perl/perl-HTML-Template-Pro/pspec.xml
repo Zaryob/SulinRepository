@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-HTML-Template-Pro</Name>
+        <Homepage>http://search.cpan.org/dist/HTML-Template-Pro</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>Perl/XS module to use HTML Templates from CGI scripts</Summary>
+        <Description>A fast and lightweight C/Perl+XS HTML Template engine implementation.</Description>
+        <Archive sha1sum="493a942db702ab99be4bb075defd7452c1f407c5" type="targz">http://search.cpan.org/CPAN/authors/id/V/VI/VIY/HTML-Template-Pro-0.9510.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>perl-JSON</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-HTML-Template-Pro</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>perl-JSON</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>0.9510</Version>
+            <Comment>Package is rebuilded because of perl upgrade and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>0.9510</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

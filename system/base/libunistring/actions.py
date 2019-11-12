@@ -4,6 +4,7 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
+from inary.actionsapi import get
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 
@@ -18,7 +19,12 @@ def check():
     autotools.make("check")
 
 def install():
+    if get.buildTYPE()=="emul32":
+        autotools.rawInstall("PREFIX=%s/emul32/usr" % get.installDIR())
+        inarytools.dosym("libunistring.so.2.1.0", "/usr/lib32/libunistring.so.0")
+        return
+        
     autotools.install()
-    
+
     inarytools.dosym("libunistring.so.2.1.0", "/usr/lib/libunistring.so.0")
     inarytools.dodoc("AUTHORS", "BUGS", "ChangeLog", "COPYING", "COPYING.LIB", "HACKING", "NEWS", "README",  "THANKS")

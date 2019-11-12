@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>aalib</Name>
+        <Homepage>http://aa-project.sourceforge.net/aalib/</Homepage>
+        <Packager>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>An ASCII-graphics Library</Summary>
+        <Description>Aalib is an ASCII-graphics library generating ASCII character outputs.</Description>
+        <Archive sha1sum="a11c16b258bf9b64b135858afabc7f3a45222a4a" type="targz">https://liquidtelecom.dl.sourceforge.net/project/aa-project/aa-lib/1.4rc4/aalib-1.4rc4.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">m4.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>aalib</Name>
+        <RuntimeDependencies>
+            <Dependency>gpm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>1.4_rc4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

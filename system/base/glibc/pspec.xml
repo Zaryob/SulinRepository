@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>glibc</Name>
@@ -14,9 +14,9 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU libc6 (also called glibc2) C library</Summary>
         <Description>The Glibc package contains the main C library. This library provides the basic routines for allocating memory, searching directories, opening and closing files, reading and writing files, string handling, pattern matching, arithmetic, and so on.</Description>
-        <Archive sha1sum="ccb5dc9e51a9884df8488f86982439d47b283b2a" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.28.tar.xz</Archive>
+        <Archive sha1sum="4df7e4dbb92b5ced729d972b32e3b8683db4a689" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.30.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>kernel-headers</Dependency>
+            <Dependency>linux-headers</Dependency>
             <Dependency>gettext</Dependency>
             <Dependency>texinfo</Dependency>
             <Dependency>binutils</Dependency>
@@ -138,6 +138,23 @@
             <Path fileType="library">/usr/lib/*.a</Path>
             <Path fileType="library">/usr/lib32/*.a</Path>
         </Files>
+    </Package>
+
+    <Package>
+        <Name>glibc-doc-32bit</Name>
+        <PartOf>system.doc</PartOf>
+        <!-- Do not write dep. any package-->
+        <Summary>32-bit doc for glibc</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/usr/lib32/glibc32.txt</Path>
+         </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib32/glibc32.txt">glibc32.txt</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <Package>
@@ -1982,6 +1999,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>2.30</Version>
+            <Comment>Updated gcc major version to 2.30</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-23</Date>
             <Version>2.28</Version>
@@ -1991,3 +2015,4 @@
         </Update>
     </History>
 </INARY>
+

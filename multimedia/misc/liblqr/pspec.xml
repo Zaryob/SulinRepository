@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>liblqr</Name>
+        <Homepage>http://liblqr.wikidot.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <Summary>An easy to use C/C++ seam carving library</Summary>
+        <Description>liblqr is a free, open source implementation of a seam carving algorithm which aims at resizing pictures non uniformly while preserving their features.</Description>
+        <Archive sha1sum="69639f7dc56a084f59a3198f3a8d72e4a73ff927" type="tarbz2">http://liblqr.wdfiles.com/local--files/en:download-page/liblqr-1-0.4.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>liblqr</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>liblqr-devel</Name>
+        <Summary>Development files for liblqr</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">liblqr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-10</Date>
+            <Version>0.4.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

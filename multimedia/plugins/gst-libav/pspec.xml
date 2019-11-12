@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gst-libav</Name>
+        <Homepage>http://gstreamer.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Gstreamer plugin for the libav codec</Summary>
+        <Description>Gstreamer plugin for the libav codec.</Description>
+        <Archive sha1sum="8bda277b709edb4b74ce04616f4f2d81865b89b0" type="tarxz">https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>yasm-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gst-libav</Name>
+        <RuntimeDependencies>
+            <Dependency>bzip2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+    </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+      <Update release="1">
+          <Date>2019-09-27</Date>
+          <Version>1.16.1</Version>
+          <Comment>First release</Comment>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
+    </History>
+</INARY>

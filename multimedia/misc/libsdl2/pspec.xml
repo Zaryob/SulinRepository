@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libsdl2</Name>
+        <Homepage>http://www.libsdl.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <PartOf>multimedia.misc</PartOf>
+        <Summary>Simple Direct Media Layer version 2.</Summary>
+        <Description>2nd version of libsdl is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.</Description>
+        <Archive sha1sum="fb31312ea1d4b45db839796ae2336dfe3d5884e5" type="targz">http://www.libsdl.org/release/SDL2-2.0.10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>DirectFB-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libusb-compat-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libsdl2-docs</Name>
+        <Summary>libsdl2 reference documents</Summary>
+        <RuntimeDependencies>
+            <Dependency>libsdl2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libsdl2</Name>
+        <RuntimeDependencies>
+            <Dependency>DirectFB</Dependency>
+            <Dependency>aalib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libsdl2-devel</Name>
+        <Summary>Development files for libsdl2</Summary>
+        <BuildDependencies>
+            <Dependency>dbus-32bit</Dependency>
+            <Dependency>libunwind-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libsdl2</Dependency>
+            <Dependency>DirectFB-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libusb-compat-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/libSDLmain.a</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libsdl2-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libsdl2</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">libsdl2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>2.0.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

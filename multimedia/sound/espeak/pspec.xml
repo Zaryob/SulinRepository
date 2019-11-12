@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>espeak</Name>
+        <Homepage>http://espeak.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Software speech synthesizer (text-to-speech)</Summary>
+        <Description>espeak produces good quality English speech. It uses a different synthesis method from other open source TTS engines and sounds quite different.</Description>
+        <Archive sha1sum="b22c0361885d05e61d98ecedca0a4926ea2fb2ad" type="zip">https://netcologne.dl.sourceforge.net/project/espeak/espeak/espeak-1.48/espeak-1.48.04-source.zip</Archive>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="compile-voices">compile-voices.sh</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>coreutils</Dependency>
+            <Dependency>portaudio-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>espeak-1.23-makefile_nostaticlibs.patch</Patch>
+            <Patch>espeak-1.48-gcc-6-fix.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>espeak</Name>
+        <RuntimeDependencies>
+            <Dependency>portaudio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/espeak-data</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/espeak.1">espeak.1</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>espeak-devel</Name>
+        <Summary>Development headers for espeak</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">espeak</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-11</Date>
+            <Version>1.48.04</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

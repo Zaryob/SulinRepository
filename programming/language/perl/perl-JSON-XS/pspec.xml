@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-JSON-XS</Name>
+        <Homepage>http://search.cpan.org/dist/JSON-XS/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>JSON serialising/deserialising, done correctly and fast</Summary>
+        <Description>This module converts Perl data structures to JSON and vice versa. Its primary goal is to be correct and its secondary goal is to be *fast*. To reach the latter goal it was written in C.</Description>
+        <Archive sha1sum="bba1939f8f402a110c80e19e068ffb3f980e23df" type="targz">https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/JSON-XS-4.02.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Canary-Stability</Dependency>
+            <Dependency>perl-common-sense</Dependency>
+            <Dependency>perl-Types-Serialiser</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-JSON-XS</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Canary-Stability</Dependency>
+            <Dependency>perl-common-sense</Dependency>
+            <Dependency>perl-Types-Serialiser</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>4.02</Version>
+            <Comment>Package is rebuilded because of perl upgrade and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>4.02</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

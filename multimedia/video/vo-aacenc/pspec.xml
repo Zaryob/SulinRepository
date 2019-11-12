@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vo-aacenc</Name>
+        <Homepage>http://sourceforge.net/projects/opencore-amr/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>app:cli</IsA>
+        <Summary>VisualOn AAC encoder library</Summary>
+        <Description>VisualOn AAC encoder library</Description>
+        <Archive sha1sum="6f8eea8e13f369e3568d9cb33d78e0ac28b7eaee" type="targz">mirrors://sourceforge/project/opencore-amr/vo-aacenc/vo-aacenc-0.1.3.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libvo-aacenc</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libvo-aacenc-devel</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">libvo-aacenc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/vo-aacenc.pc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-03</Date>
+            <Version>0.1.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

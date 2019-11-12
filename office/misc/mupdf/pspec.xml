@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mupdf</Name>
+        <Homepage>https://mupdf.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>AGPL3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Lightweight PDF and XPS viewer</Summary>
+        <Description>MuPDF is a lightweight open source software framework for viewing and converting PDF, XPS, and E-book documents.</Description>
+        <Archive sha1sum="ccbef63c3d43d6a866b7978db5674dc4b1719f0f" type="targz">https://mupdf.com/downloads/archive/mupdf-1.16.1-source.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>jbig2dec-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>freeglut-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>openjpeg</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mupdf</Name>
+        <RuntimeDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libXrandr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libmupdf-third.a</Path>
+            <Path fileType="library">/usr/lib/libmupdf.a</Path>
+            <Path fileType="doc">/usr/share/doc/mupdf/*</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mupdf-devel</Name>
+        <Summary>Development files for mupdf</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mupdf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/mupdf</Path>
+            <Path fileType="header">/usr/include/mupdf/fitz</Path>
+            <Path fileType="header">/usr/include/mupdf/pdf</Path>
+        </Files>
+    </Package>
+
+
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.16.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </INARY>

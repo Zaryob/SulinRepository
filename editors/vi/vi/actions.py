@@ -9,23 +9,10 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 
-WorkDir = "ex-{}".format(get.srcVERSION())
-
+def setup():
+    autotools.configure()
 def build():
-    autotools.make('PREFIX=/usr \
-                   LIBEXECDIR=/usr/lib/ex \
-                   PRESERVEDIR=/var/lib/ex \
-                   TERMLIB=ncurses \
-                   FEATURES="-DCHDIR \
-                   -DFASTTAG \
-                   -DUCVISUAL \
-                   -DMB \
-                   -DBIT8"')
+    autotools.make()
 
 def install():
-    autotools.rawInstall("PREFIX=/usr \
-                          LIBEXECDIR=/usr/lib/ex \
-                          PRESERVEDIR=/var/lib/ex \
-                          INSTALL=/usr/bin/install \
-                          DESTDIR=%s" % get.installDIR())
-    inarytools.dodoc("LICENSE")
+    autotools.install()

@@ -4,13 +4,13 @@ import os
 
 serviceType = "local"
 serviceDefault = "conditional"
-serviceDesc = _({"en": "Dhcp client",
-                            "tr": "Dhcp istemcisi"})
+serviceDesc = {"en": "Dhcp client",
+                            "tr": "Dhcp istemcisi"}
 
-MSG_BACKEND_WARNING = _({
+MSG_BACKEND_WARNING = {
                         "en" : "dhcp is not enabled by default. You can change this from /etc/dhcpcd.conf.",
                         "tr" : "dhcp öntanımlı olarak etkin değil. /etc/dhcpcd.conf dosyasından bu ayarı değiştirebilirsiniz."
-                        })
+                        }
 
 pidfile="/var/run/dhcpcd.pid"
 USETHIS=eval(config.get("DEFAULT", "True"))

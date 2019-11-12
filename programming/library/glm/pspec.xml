@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>glm</Name>
+        <Homepage>http://glm.g-truc.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>C++ mathematics library</Summary>
+        <Description>C++ mathematics library for 3D software based on the OpenGL Shading Language (GLSL) specification</Description>
+        <Archive sha1sum="b65c8e87c47877e932bc6d46d18d015f5d24da49" type="zip">https://github.com/g-truc/glm/releases/download/0.9.9.6/glm-0.9.9.6.zip</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>glm</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>glm-doc</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-10-21</Date>
+            <Version>0.9.9.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

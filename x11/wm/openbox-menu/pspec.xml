@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>openbox-menu</Name>
+        <Homepage>https://bitbucket.org/fabriceT/openbox-menu</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+	      <PartOf>x11.wm</PartOf>
+        <Summary>Openbox-menu is a pipemenu for Openbox window manager.</Summary>
+        <Description>Openbox-menu is a pipemenu for Openbox window manager. It provides a dynamic menu listing installed applications. Most of the work is done by the LXDE library menu-cache.</Description>
+        <Archive sha1sum="2c391c7741d7e1eea080eaf6f38d46db90ce1a5f" type="tarbz2">https://bitbucket.org/fabriceT/openbox-menu/downloads/openbox-menu-0.7.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>lxde-menu-cache-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>openbox-menu</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>lxde-menu-cache-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin/</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.7.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

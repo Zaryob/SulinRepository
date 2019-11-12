@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libuninamelist</Name>
+        <Homepage>http://fontforge.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A Library of Unicode names and annotation data</Summary>
+        <Description>A library with a large (sparse) array mapping each unicode code point to the annotation data for it provided in http://www.unicode.org/Public/UNIDATA/NamesList.txt</Description>
+        <Archive sha1sum="7844cd47088f215d351f269b7c4475024be0f504" type="targz">https://github.com/fontforge/libuninameslist/releases/download/20190701/libuninameslist-dist-20190701.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-wheel</Dependency>
+            <Dependency>python3-pip</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-wheel</Dependency>
+            <Dependency>python-pip</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>libtool-ltdl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libuninamelist</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>libtool-ltdl</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libspiro</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/libuninamelist</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libuninamelist-devel</Name>
+        <BuildType>rebuild_python</BuildType>
+        <Summary>Development files for libuninamelist</Summary>
+        <RuntimeDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency release="current">libuninamelist</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>20190701</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

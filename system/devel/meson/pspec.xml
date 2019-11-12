@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>meson</Name>
@@ -34,14 +34,14 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">None
+        <Update release="2">
             <Date>2019-09-10</Date>
             <Version>0.51.2</Version>
             <Comment>Have been updated to compile libwnck3 to 0.51.2</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-        <Update release="1">None
+        <Update release="1">
             <Date>2019-09-08</Date>
             <Version>0.49.2</Version>
             <Comment>First release</Comment>

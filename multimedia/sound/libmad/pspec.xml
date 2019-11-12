@@ -1,4 +1,4 @@
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>libmad</Name>
@@ -41,7 +41,7 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-04-12</Date>
+            <Date>2019-09-14</Date>
             <Version>0.15.1b</Version>
             <Comment>First release</Comment>
             <Name>Suleyman Poyraz</Name>

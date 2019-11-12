@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libvisual</Name>
+        <Homepage>http://libvisual.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Abstraction library for audio visualisation plugins</Summary>
+        <Description>libvisual is an abstraction library that comes between applications and audio visualisation plugins.</Description>
+        <Archive sha1sum="54beb3d3b7ce0dbec8e82015f732803b97d51c30" type="tarbz2">mirrors://sourceforge/libvisual/libvisual-0.4.0.tar.bz2</Archive>
+        <Patches>
+            <Patch level="1">disable_altivec.patch</Patch>
+            <Patch level="1">libvisual-0.4.0-inlinedefineconflict.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libvisual</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libvisual-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libvisual</Summary>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">libvisual</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>libvisual-devel</Name>
+        <Summary>Development files for libvisual</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libvisual</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>0.4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

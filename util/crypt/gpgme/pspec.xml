@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gpgme</Name>
+        <Homepage>http://www.gnupg.org/gpgme.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>GnuPG Made Easy is a library for making GnuPG easier to use</Summary>
+        <Description>GPGME is a library designed to make access to GnuPG easier for applications. It provides a high-Level Crypto application programming interface (API) for encryption, decryption, signing, signature verification and key management.</Description>
+        <Archive sha1sum="f87f34e695e8d74ccc7c8f42864d50630afebb0e" type="tarbz2">https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.13.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gnupg</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libassuan-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>swig</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gpgme</Name>
+        <RuntimeDependencies>
+            <Dependency>gnupg</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libassuan</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/common-lisp</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gpgme-devel</Name>
+        <Summary>Development files for gpgme</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gpgme</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libassuan-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-17</Date>
+            <Version>1.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

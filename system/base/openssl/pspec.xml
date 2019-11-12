@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>openssl</Name>
@@ -14,7 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Toolkit for SSL v2/v3 and TLS v1</Summary>
         <Description>OpenSSL is a cryptography toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) network protocols and related cryptography standards required by them.</Description>
-        <Archive sha1sum="8fae27b4f34445a5500c9dc50ae66b4d6472ce29" type="targz">https://www.openssl.org/source/openssl-1.1.1a.tar.gz</Archive>
+        <Archive sha1sum="056057782325134b76d1931c48f2c7e6595d7ef4" type="targz">https://www.openssl.org/source/openssl-1.1.1d.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>xorg-util</Dependency>
@@ -95,6 +95,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>1.1.1d</Version>
+            <Comment>Version bump to 1.1.1d</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-24</Date>
             <Version>1.1.1a</Version>

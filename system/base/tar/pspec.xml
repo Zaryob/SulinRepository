@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>tar</Name>
@@ -13,8 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A GNU file archiving program</Summary>
         <Description>The GNU tar program saves many files together in one archive and can restore individual files (or all of the files) from that archive.</Description>
-        <Archive sha1sum="ad53ec4fa815177ab8dbcaa27a42557295142f94"
-type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.31.tar.xz</Archive>
+        <Archive sha1sum="162e00af4702565119c05465e8b6f21c75092794" type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.32.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="doc/tar.1">tar.1</AdditionalFile>
         </AdditionalFiles>
@@ -63,6 +62,13 @@ type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.31.tar.xz</Archive>
             </Files>
         </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>1.32</Version>
+            <Comment>Version bump to 1.32</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-19</Date>
             <Version>1.31</Version>

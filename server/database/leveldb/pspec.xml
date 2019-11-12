@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>leveldb</Name>
+        <Homepage>https://code.google.com/p/leveldb</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>A fast and lightweight key/value database library</Summary>
+        <Description>LevelDB is a fast key-value storage library written at Google that provides an ordered mapping from string keys to string values.</Description>
+        <BuildDependencies>
+            <Dependency>gperftools-devel</Dependency>
+            <Dependency>snappy-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="8d310af5cfb53dc836bfb412ff4b3c8aea578627" type="targz">https://github.com/google/leveldb/archive/1.22.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>leveldb</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>snappy</Dependency>
+            <Dependency>gperftools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>leveldb-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">leveldb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-25</Date>
+            <Version>1.22</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

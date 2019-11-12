@@ -1,11 +1,11 @@
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>jbigkit</Name>
         <Homepage>http://www.cl.cam.ac.uk/~mgk25/jbigkit/</Homepage>
         <Packager>
             <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>  
+            <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>GPLv2</License>
         <IsA>library</IsA>
@@ -25,7 +25,7 @@
         </Files>
     </Package>
     <Package>
-	<Name>jbigkit-32bit</Name>
+    <Name>jbigkit-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for jbigkit.</Summary>
         <BuildType>emul32</BuildType>

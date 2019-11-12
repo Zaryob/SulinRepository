@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>unixODBC</Name>
+        <Homepage>http://www.unixodbc.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>ODBC Interface for Linux</Summary>
+        <Description>The unixODBC Project goals are to develop and promote unixODBC to be the definitive standard for ODBC on non MS Windows platforms.</Description>
+        <Archive sha1sum="a066c4f3fcb19befbaf5a5801b830ec41b7318df" type="targz">ftp://ftp.unixodbc.org/pub/unixODBC/unixODBC-2.3.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libtool-ltdl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>unixODBC</Name>
+        <RuntimeDependencies>
+            <Dependency>libtool-ltdl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/unixODBC/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/unixODBC/README</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>unixODBC-devel</Name>
+        <Summary>Development files for unixODBC</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">unixODBC</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/odbc_config</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>unixODBC-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation for unixODBC</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/unixODBC</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-12</Date>
+            <Version>2.3.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

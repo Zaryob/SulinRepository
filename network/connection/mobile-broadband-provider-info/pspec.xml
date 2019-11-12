@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mobile-broadband-provider-info</Name>
+        <Homepage>http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>public-domain</License>
+        <IsA>data</IsA>
+        <Summary>Service provider specific settings of mobile broadband providers in different countries</Summary>
+        <Description>The mobile-broadband-provider-info package contains listings of mobile broadband (3G) providers and associated network and plan information.</Description>
+        <Archive sha1sum="100f311d48b3bbdd7bf751c563d54cbe05f21025" type="targz">https://github.com/GNOME/mobile-broadband-provider-info/archive/20190618.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>mobile-broadband-provider-info</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>20190618</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

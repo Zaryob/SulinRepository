@@ -13,6 +13,9 @@ def build():
     autotools.make()
 
 def install():
-    autotools.install()
+    autotools.install("DESTDIR={}".format(get.installDIR()))
     inarytools.dohtml("doc/")
-
+    inarytools.domove("/usr/local/share/*","/usr/share/")
+    inarytools.domove("/usr/local/*","/usr")
+    inarytools.removeDir("/usr/local/")
+    inarytools.removeDir("/usr/share/share")

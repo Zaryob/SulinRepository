@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>libjpeg-turbo</Name>
@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>MMX, SSE, and SSE2 SIMD accelerated JPEG library</Summary>
         <Description>libjpeg-turbo is a derivative of libjpeg for x86 and x86-64 processors which uses SIMD instructions (MMX, SSE2, etc.) to accelerate baseline JPEG compression and decompression. libjpeg-turbo is generally 2-4x as fast as the unmodified version of libjpeg v6b, all else being equal.</Description>
-        <Archive sha1sum="1cff52d50b81755d0bdcf9055eb22157f39a1695" type="targz">http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.2.tar.gz</Archive>
+        <Archive sha1sum="539363a444f92421c098a1a3e7cebfda48d4cfb3" type="targz">http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>nasm</Dependency>
         </BuildDependencies>
@@ -26,12 +26,24 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
+        <Replaces>
+             <Package>jpeg</Package>
+        </Replaces>
+        <Conflicts>
+             <Package>jpeg</Package>
+        </Conflicts>
     </Package>
     <Package>
         <Name>libjpeg-turbo-devel</Name>
         <Files>
             <Path fileType="data">/usr/include/</Path>
         </Files>
+        <Replaces>
+             <Package>jpeg-devel</Package>
+        </Replaces>
+        <Conflicts>
+             <Package>jpeg-devel</Package>
+        </Conflicts>
     </Package>
     <Package>
         <Name>libjpeg-turbo-32bit</Name>
@@ -41,15 +53,32 @@
         <RuntimeDependencies>
             <Dependency release="current">libjpeg-turbo</Dependency>
         </RuntimeDependencies>
-        <Replaces>
-            <Package>jpeg-32bit</Package>
-        </Replaces>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
+        <Replaces>
+             <Package>jpeg-32bit</Package>
+        </Replaces>
+        <Conflicts>
+             <Package>jpeg-32bit</Package>
+        </Conflicts>
     </Package>
     <History>
-	<Update release="1">
+        <Update release="3">
+            <Date>2019-10-10</Date>
+            <Version>2.0.3</Version>
+            <Comment>Version bumped to 2.0.3</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-09-28</Date>
+            <Version>2.0.2</Version>
+            <Comment>Rebuilded because of conflicts</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+	      <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.0.2</Version>
             <Comment>First release</Comment>

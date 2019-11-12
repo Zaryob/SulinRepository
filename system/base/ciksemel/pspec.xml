@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ciksemel</Name>
+        <Homepage>http://github.com/SulinOS/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Ciksemel is iksemel based xml library.</Summary>
+        <Description>.</Description>
+        <Archive sha1sum="2b01de612361346de16a5eace92df746cd0fc72a" type="targz">https://github.com/Zaryob/iksemel/archive/ciksemel-1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>ciksemel</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/sulin/ciksemel*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2019-09-17</Date>
+            <Version>1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-09-13</Date>
+            <Version>1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

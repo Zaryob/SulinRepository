@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ruby-cairo</Name>
+        <Homepage>https://github.com/rcairo/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LLGPL-2.1</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.ruby</PartOf>
+        <Summary>Cairo bindings for Ruby</Summary>
+        <Description>Cairo bindings for Ruby</Description>
+        <Archive sha1sum="3e3e8a970ef702a94b78364cf6a50b6acb1405ae" type="targz">https://github.com/rcairo/rcairo/archive/v1.16.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ruby-cairo</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>1.16.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

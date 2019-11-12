@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-multimedia</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Classes for audio, video, radio and camera functionality</Summary>
+        <Description>Classes for audio, video, radio and camera functionality</Description>
+        <License>LGPLv2.1-linking-exception</License>
+        <Archive sha1sum="ec3abeb74a90e535c9e01baf4dd10b2870c5b3f7" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtmultimedia-everywhere-src-5.13.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>openal-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>gst-plugins-bad-devel</Dependency><!-- camera support -->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-multimedia</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share/licenses</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>openal</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gst-plugins-bad</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-multimedia-devel</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/qt5</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-multimedia</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-multimedia-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qt5</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

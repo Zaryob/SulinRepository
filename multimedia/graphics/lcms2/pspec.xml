@@ -1,4 +1,5 @@
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>lcms2</Name>
@@ -33,12 +34,27 @@
         </Files>
     </Package>
     <Package>
-	<Name>lcms2-devel</Name>
+        <Name>lcms2-devel</Name>
         <RuntimeDependencies>
             <Dependency>lcms2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>lcms2-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>tiff-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>tiff-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/lib32</Path>
         </Files>
     </Package>
     <History>

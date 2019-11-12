@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gst-plugins-good</Name>
+        <Homepage>http://gstreamer.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A set of good-quality plugins for GStreamer</Summary>
+        <Description>gst-plugins-good contains a set of mature plugins and elements for GStreamer.</Description>
+        <Archive sha1sum="2b88a2d36bc53bed1b06c359ed676ec8b8675d5c" type="tarxz">https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.16.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>flac-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>libdv-devel</Dependency>
+            <Dependency>speex-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libvpx</Dependency>
+            <Dependency>libvpx-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libv4l-devel</Dependency>
+            <Dependency>wavpack-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libcaca</Dependency>
+            <Dependency>libshout-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libavc1394-devel</Dependency>
+            <Dependency>libraw1394-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libiec61883-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>jack-audio-connection-kit-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gst-plugins-good</Name>
+        <RuntimeDependencies>
+            <Dependency>orc</Dependency>
+            <Dependency>flac</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libdv</Dependency>
+            <Dependency>speex</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libv4l</Dependency>
+            <Dependency>libvpx</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libcaca</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>wavpack</Dependency>
+            <Dependency>libshout</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libavc1394</Dependency>
+            <Dependency>libraw1394</Dependency>
+            <Dependency>libiec61883</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/gstreamer-1.0/presets</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+      <Update release="1">
+          <Date>2019-10-03</Date>
+          <Version>1.16.1</Version>
+          <Comment>First release</Comment>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
+    </History>
+</INARY>

@@ -1,0 +1,56 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>jbig2dec</Name>
+        <Homepage>https://github.com/ArtifexSoftware/ghostpdl-downloads</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Decoder implementation of the JBIG2 image compression format</Summary>
+        <Description>Decoder implementation of the JBIG2 image compression format.</Description>
+        <Archive sha1sum="38c62210d92102952b18400b15eb4e727a755bfd" type="targz">https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs927/jbig2dec-0.16.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libpng-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>jbig2dec</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>jbig2dec-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>jbig2dec-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for jbig2dec.</Summary>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>0.16</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

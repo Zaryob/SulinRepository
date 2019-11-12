@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libshout</Name>
+        <Homepage>http://www.icecast.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>A library for communicating with and sending data to an icecast server</Summary>
+        <Description>Libshout is a library for communicating with and sending data to an icecast server.  It handles the socket connection, the timing of the data, and prevents bad data from getting to the icecast server.</Description>
+        <Archive sha1sum="cca5606f38e84a4c46223796b06cf7483abaa32f" type="targz">http://downloads.us.xiph.org/releases/libshout/libshout-2.4.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libtheora-devel</Dependency>
+            <Dependency>speex-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">pthread_flag.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libshout</Name>
+        <RuntimeDependencies>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>libogg</Dependency>
+            <Dependency>libtheora</Dependency>
+            <Dependency>speex</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libshout-devel</Name>
+        <Summary>Development files for libshout</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libshout</Dependency>
+            <Dependency>libtheora-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>speex-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="doc">/usr/share/doc/*.c</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-03</Date>
+            <Version>2.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

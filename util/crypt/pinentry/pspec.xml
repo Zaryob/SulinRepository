@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pinentry</Name>
+        <Homepage>http://www.gnupg.org/aegypten/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol</Summary>
+        <Description>Pinentry is a collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol as described by the aegypten project.</Description>
+        <Archive sha1sum="693bdf9f48dfb3e040d92f50b1bb464e268b9fb0" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-1.1.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>libassuan-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pinentry</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libassuan</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>ncurses</Dependency>
+        </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/pinentry">pinentry-wrapper</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <!--Package>
+        <Name>pinentry-qt</Name>
+        <Summary>pinentry for Qt4 toolkit</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>pinentry</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/pinentry-qt*</Path>
+        </Files>
+    </Package-->
+
+    <Package>
+        <Name>pinentry-gtk</Name>
+        <Summary>pinentry for GTK toolkit</Summary>
+        <RuntimeDependencies>
+            <Dependency>pinentry</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>libassuan</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/pinentry-gtk*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>1.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

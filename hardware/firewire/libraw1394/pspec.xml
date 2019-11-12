@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libraw1394</Name>
+        <Homepage>http://www.linux1394.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A library that provides direct access to the IEEE 1394 bus</Summary>
+        <Description>libraw1394 library provides direct access to the IEEE-1394 bus through the Linux 1394 subsystem's raw1394 user interface. Support for both the classic ieee1394 and new firewire linux driver stacks is included.</Description>
+        <Archive sha1sum="6e41b2ba9b28b810b18a88045ab8761d467bdf53" type="tarxz">https://www.kernel.org/pub/linux/libs/ieee1394/libraw1394-2.1.2.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libraw1394</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libraw1394-devel</Name>
+        <Summary>Development files for libraw1394</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libraw1394</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>2.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

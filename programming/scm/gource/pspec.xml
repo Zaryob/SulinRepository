@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gource</Name>
+        <Homepage>http://gource.googlecode.com/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>A software version control visualization tool</Summary>
+        <Description>Gource is a software version control visualization tool. Software projects are displayed by Gource as an animated tree with the root directory of the project at its centre. Directories appear as branches with files as leaves. Developers can be seen working on the tree at the times they contributed to the project.</Description>
+        <Archive sha1sum="39719a1ea72131b3bea03752a98a32647c29e70b" type="targz">https://github.com/acaudwell/Gource/releases/download/gource-0.49/gource-0.49.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glew-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>sdl-image-devel</Dependency>
+            <Dependency>glm</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gource</Name>
+        <RuntimeDependencies>
+            <Dependency>glew</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>libsdl2</Dependency>
+            <Dependency>mesa-glu</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/gource</Path>
+            <Path fileType="data">/usr/share/gource</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-11</Date>
+            <Version>0.49</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

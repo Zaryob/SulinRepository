@@ -4,48 +4,37 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from inary.actionsapi import autotools
+from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
-from inary.actionsapi import get
 from inary.actionsapi import shelltools
+from inary.actionsapi import get
 
 
 def setup():
-    options = "--with-pcre=system \
-               --disable-fam \
-               --enable-libelf \
-               --enable-gtk-doc=no \
-               --enable-libmount \
-               --disable-static \
-               --enable-shared \
-               --disable-man \
-               --enable-systemtap"
-
-
-    if get.buildTYPE() == "_emul32":
-        options += " --libdir=/usr/lib32 \
-                     --bindir=/_emul32/bin \
-                     --sbindir=/_emul32/sbin \
-                     --disable-dtrace"
-        shelltools.export("CC", "%s -m32" % get.CC())
-        shelltools.export("CXX", "%s -m32" % get.CXX())
+    if get.buildTYPE()=="emul32":
+        shelltools.system("patch -Np1 -i multilib.patch")
+        shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
         shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+        shelltools.system("patch -p1 < multilib.patch")
+    mesontools.meson_configure()
 
-    #autotools.autoreconf("-vif")
-    autotools.configure(options)
-
-    inarytools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
-    autotools.make("-j1")
+    if get.buildTYPE()=="emul32":
+        shelltools.system("patch -Np1 -i multilib.patch")
+        shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+
+    mesontools.ninja_build()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
-    if get.buildTYPE() == "_emul32":
-        inarytools.domove("/_emul32/bin/gio-querymodules", "/usr/bin/32/")
-        inarytools.removeDir("/_emul32")
-
-    inarytools.removeDir("/usr/share/gdb")
-
-    inarytools.dodoc("AUTHORS", "ChangeLog", "README", "NEWS")
+    if get.buildTYPE()=="emul32":
+        shelltools.system('DESTDIR="{}/emul32" ninja install -C inaryPackageBuild'.format(get.installDIR()))
+        inarytools.domove("/emul32/usr/lib32", "/usr/lib32")
+        inarytools.domove("/emul32/usr/bin/*", "/usr/bin/32")
+        inarytools.removeDir("/emul32")
+        return
+    else:
+        mesontools.ninja_install()

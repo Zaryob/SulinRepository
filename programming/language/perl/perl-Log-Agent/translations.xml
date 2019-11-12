@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-Log-Agent</Name>
+        <Summary xml:lang="tr">Günlüğe kaydetme aracısı.</Summary>
+        <Description xml:lang="tr">Log::Agent modülü, günlük olarak kayıt yapmak ve takip etmek için soyut bir katman sağlar ve bu işlemleri fiziksel olarak gerçekleştirmek için kullanılan gerçek yöntemden bağımsızdır. İstekleri toplayan ve işlemeyi bir alt katmana atayan bir aracı (dolayısıyla adı) görevi görür: günlük sürücüsü. </Description>
+    </Source>
+</INARY>

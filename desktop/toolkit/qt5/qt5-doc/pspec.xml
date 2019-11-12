@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-doc</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Icon>assistant5</Icon>
+        <Summary>A cross-platform application and UI framework (Documentation)</Summary>
+        <Description>A cross-platform application and UI framework (Documentation)</Description>
+        <License>LGPLv2.1-linking-exception</License>
+        <Archive sha1sum="1da62675933b52497e543c6607d5937cccc635eb" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtdoc-everywhere-src-5.13.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>qt5-assistant</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-doc</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-script</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>qt5-xmlpatterns</Dependency>
+            <Dependency>qt5-assistant</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/licenses</Path>
+            <Path fileType="doc">/usr/share/doc/qt5</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

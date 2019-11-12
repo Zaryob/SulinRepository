@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pv</Name>
+        <Homepage>http://www.ivarch.com/programs/pv.shtml</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic-2</License>
+        <IsA>app:console</IsA>
+        <Summary>Terminal-based tool for monitoring the progress of data through a pipeline</Summary>
+        <Description>pv - Pipe Viewer - is a terminal-based tool for monitoring the progress of data through a pipeline. It can be inserted into any normal pipeline between two processes to give a visual indication of how quickly data is passing through, how long it has taken, how near to completion it is, and an estimate of how long it will be until completion.</Description>
+        <Archive sha1sum="45db5a3230583eeeeacf17e21eeac0f8056f9507" type="targz">http://www.ivarch.com/programs/sources/pv-1.6.6.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>pv</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-10</Date>
+            <Version>1.6.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

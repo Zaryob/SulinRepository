@@ -1,4 +1,5 @@
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>llvm</Name>
@@ -177,6 +178,7 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <Dependency>zlib-32bit</Dependency>
+            <Dependency>libxml2-32bit</Dependency>
             <Dependency>libffi-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
@@ -193,6 +195,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-25</Date>
+            <Version>7.0.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>7.0.1</Version>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>findutils</Name>
@@ -13,16 +13,11 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU utilities to find findutilss</Summary>
         <Description>The GNU Find Utilities are the basic directory searching utilities of the GNU operating system. These programs are typically used in conjunction with other programs to provide modular and powerful directory search and findutils locating capabilities to other commands.</Description>
-        <Archive sha1sum="f18e8aaee3f3d4173a1f598001003be8706d28b0" type="targz">http://ftp.gnu.org/pub/gnu/findutils/findutils-4.6.0.tar.gz</Archive>
+        <Archive sha1sum="bd2fae4add80334173e03272aeed5635d4a0fa03" type="tarxz">http://ftp.gnu.org/gnu/findutils/findutils-4.7.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>texinfo</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">findutils-4.6.0-glibc228.patch</Patch>
-            <Patch level="1">findutils-4.6.0-gnulib-mb.patch</Patch>
-            <Patch level="1">findutils-4.6.0-gnulib-S_MAGIC_NFS.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -61,6 +56,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-17</Date>
+            <Version>4.7.0</Version>
+            <Comment>Version bump to 4.7.0</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-23</Date>
             <Version>4.6.0</Version>

@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lirc</Name>
+        <Homepage>http://www.lirc.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>service</IsA>
+        <Summary>Linux Infrared Remote Control system</Summary>
+        <Description>lirc is a package that allows you to decode and send infra-red signals of many (but not all) commonly used remote controls.</Description>
+        <Archive sha1sum="9d6f6d18ac566a96ef4ca1d6909a4e8bc517d48a" type="tarbz2">https://sourceforge.net/projects/lirc/files/LIRC/0.10.1/lirc-0.10.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libftdi-devel</Dependency>
+            <Dependency>libusb-compat-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+        </Source>
+
+    <Package>
+        <Name>lirc</Name>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libftdi</Dependency>
+            <Dependency>libusb-compat</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libusb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="man">/usr/share/man/man5</Path>
+            <Path fileType="man">/usr/share/man/man8</Path>
+            <Path fileType="data">/usr/share/lirc</Path>
+            <Path fileType="data">/run</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/lircmd">lircmd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/lircmd">lircmd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/lircd">lircd.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/lircd">lircd.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/irexec">irexec.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/irexec">irexec.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/lirc.conf">lirc.tmpfiles</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate/lirc">lirc.logrotate</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>lirc-devel</Name>
+        <Summary>Development files for lirc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lirc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>0.10.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ruby-gnome2</Name>
+        <Homepage>http://ruby-gnome2.sourceforge.jp/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LLGPL-2.1</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.ruby</PartOf>
+        <Summary>GNOME 2 bindings for Ruby</Summary>
+        <Description>Ruby-gtk2 is a set of bindings for the GNOME-2.x libraries to use from Ruby.</Description>
+        <Archive sha1sum="fbf5bf4f07faee0af24603223de003ba1a3d7b82" type="targz">https://github.com/ruby-gnome/ruby-gnome/archive/3.4.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>ruby-cairo</Dependency>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>ruby-native-package-installer</Dependency>
+            <Dependency>ruby-pkg-config</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>vte3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ruby-gtk2</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>ruby</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gtk2/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gtk2.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/gtk2.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ruby-gtk3</Name>
+        <RuntimeDependencies>
+          <Dependency>atk</Dependency>
+          <Dependency>ruby</Dependency>
+          <Dependency>gtk3</Dependency>
+          <Dependency>pango</Dependency>
+          <Dependency>gdk-pixbuf</Dependency>
+          <Dependency>cairo</Dependency>
+          <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gtk3/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gtk3.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/gtk3.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ruby-gnome2</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gnome2/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/mkmf-gnome.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/mkmf-gnome2.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gnome2-raketask.rb</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ruby-glib2</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+          <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/glib2.rb</Path>
+          <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/glib-mkenums.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/glib2/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/glib2.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ruby-gio2</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>gio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gio2.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gi.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gio2/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/gio2.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ruby-pango</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/pango/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/pango.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/pango.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ruby-gobject-introspection</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gobject-introspection/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/cairo-gobject.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gobject-introspection.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/gobject_introspection.so</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/cairo_gobject.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>ruby-gstreamer</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+            <Dependency>gstreamer</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gst/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gstreamer/</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/gstreamer.so</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gst.rb</Path>
+            <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gstreamer.rb</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ruby-gnome-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>ruby-cairo</Dependency>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>ruby-native-package-installer</Dependency>
+            <Dependency>ruby-pkg-config</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>vte3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="header">/usr/lib/ruby/site_ruby/2.4.0/x86_64-linux/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>3.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

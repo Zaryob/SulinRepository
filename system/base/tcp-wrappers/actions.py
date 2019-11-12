@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
@@ -21,10 +21,10 @@ def build():
     MINOR = "7"
     REL = "6"
 
-    shelltools.export("PARDUS_CFLAGS", "%s" % get.CFLAGS())
+    shelltools.export("SULIN_CFLAGS", "%s" % get.CFLAGS())
 
     args = 'REAL_DAEMON_DIR=%s \
-            PARDUS_OPT="-fPIC -DPIC -D_REENTRANT -DHAVE_STRERROR -DHAVE_WEAKSYMS -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len" \
+            SULIN_OPT="-fPIC -DPIC -D_REENTRANT -DHAVE_STRERROR -DHAVE_WEAKSYMS -DINET6=1 -Dss_family=__ss_family -Dss_len=__ss_len" \
             MAJOR=0 MINOR=%s REL=%s' % ( get.sbinDIR(), MINOR, REL )
 
     autotools.make("%s config-check" % args)

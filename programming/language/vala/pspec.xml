@@ -1,4 +1,4 @@
-<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>vala</Name>
@@ -64,6 +64,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-27</Date>
+            <Version>0.44.2</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-16</Date>
             <Version>0.44.2</Version>

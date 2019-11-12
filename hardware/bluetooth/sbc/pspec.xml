@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>sbc</Name>
+        <Homepage>http://www.bluez.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Bluetooth Subband Codec (SBC) library</Summary>
+        <Description>An audio codec to connect bluetooth high quality audio devices like headphones or loudspeakers.</Description>
+        <Archive sha1sum="845c29637177a2a2caa47c0478c777b2b9bd9641" type="targz">http://www.kernel.org/pub/linux/bluetooth/sbc-1.4.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>sbc</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/sbc/*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sbc-devel</Name>
+        <Summary>Development files for sbc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">sbc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
