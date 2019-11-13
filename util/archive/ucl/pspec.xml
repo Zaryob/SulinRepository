@@ -1,0 +1,45 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ucl</Name>
+        <Homepage>http://www.oberhumer.com/opensource/ucl/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>library</IsA>
+        <Summary>Portable lossless data compression library written in ANSI C.</Summary>
+        <Description>UCL implements a number of compression algorithms that achieve an excellent compression ratio while allowing *very* fast decompression. Decompression requires no additional memory.</Description>
+        <Archive sha1sum="5847003d136fbbca1334dd5de10554c76c755f7c" type="targz">http://www.oberhumer.com/opensource/ucl/download/ucl-1.03.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>ucl</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>ucl-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">ucl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.03</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

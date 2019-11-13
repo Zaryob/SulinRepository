@@ -1,0 +1,43 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pbzip2</Name>
+        <Homepage>http://compression.ca/pbzip2/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Parallel implementation of the bzip2</Summary>
+        <Description>PBZIP2 is a parallel implementation of the bzip2 block-sorting file compressor that uses pthreads and achieves near-linear speedup on SMP machines.</Description>
+        <Archive sha1sum="f61e65a7616a3492815d18689c202d0685fe167d" type="targz">https://launchpad.net/pbzip2/1.1/1.1.13/+download/pbzip2-1.1.13.tar.gz</Archive>
+        <!--<Patches>
+	  <Patch>pbzip2-1.1.2-makefile.patch</Patch> 
+        </Patches>-->
+    </Source>
+
+    <Package>
+        <Name>pbzip2</Name>
+        <RuntimeDependencies>
+            <Dependency>bzip2</Dependency>
+	    <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.1.13</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
