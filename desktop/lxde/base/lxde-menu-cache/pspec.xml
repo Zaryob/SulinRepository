@@ -13,7 +13,7 @@
         <PartOf>desktop.lxde.base</PartOf>
         <Summary>A library creating and utilizing caches to speed up freedesktop.org application menus</Summary>
         <Description>lxde-menu-cache is a library creating and utilizing caches to speed up freedesktop.org application menus.</Description>
-        <Archive sha1sum="01e6035aa1fe76d7047bdec235254aa5ce17394a" type="tarxz">mirrors://sourceforge/project/lxde/menu-cache/1.1/menu-cache-1.1.0.tar.xz</Archive>
+        <Archive sha1sum="01e6035aa1fe76d7047bdec235254aa5ce17394a" type="tarxz">mirrors://sourceforge//lxde/menu-cache/1.1/menu-cache-1.1.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libfm-extra</Dependency>
         </BuildDependencies>

@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Library for parsing, editing, and saving EXIF data</Summary>
         <Description>Most digital cameras produce EXIF files, which are JPEG files with extra tags that contain information about the image. The EXIF library allows you to parse an EXIF file and read the data from those tags.</Description>
-        <Archive sha1sum="a52219b12dbc8d33fc096468591170fda71316c0" type="tarbz2">mirrors://sourceforge/project/libexif/libexif/0.6.21/libexif-0.6.21.tar.bz2</Archive>
+        <Archive sha1sum="a52219b12dbc8d33fc096468591170fda71316c0" type="tarbz2">mirrors://sourceforge//libexif/libexif/0.6.21/libexif-0.6.21.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>doxygen</Dependency>
         </BuildDependencies>

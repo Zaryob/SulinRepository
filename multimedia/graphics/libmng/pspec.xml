@@ -11,7 +11,7 @@
         <IsA>library</IsA>
         <Summary>Multiple Image Networkgraphics lib (animated png's)</Summary>
         <Description>Libmng -The reference library for reading, displaying, writing and examining Multiple-Image Network Graphics. MNG is the animation extension to the popular PNG image-format.</Description>
-        <Archive sha1sum="d58376acb1753c54926f8e5922923b5826f885d6" type="targz">mirrors://sourceforge/project/libmng/libmng-devel/2.0.3/libmng-2.0.3.tar.gz</Archive>
+        <Archive sha1sum="d58376acb1753c54926f8e5922923b5826f885d6" type="targz">mirrors://sourceforge//libmng/libmng-devel/2.0.3/libmng-2.0.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>lcms2</Dependency>
