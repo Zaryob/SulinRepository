@@ -1,0 +1,37 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>figlet</Name>
+        <Homepage>http://www.figlet.org</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Packager>
+        <License>BSD-3</License>
+        <IsA>app:console</IsA>
+        <Summary>An ASCII art program</Summary>
+        <Description>FIGlet is a program for making large letters out of ordinary text.</Description>
+        <Archive sha1sum="af372a17762ab1c9fa070151157a3b8e134e8f09" type="targz">https://github.com/cmatsuoka/figlet/archive/2.2.5.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>figlet</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/figlet</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+   </Package>
+
+   <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.2.5</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

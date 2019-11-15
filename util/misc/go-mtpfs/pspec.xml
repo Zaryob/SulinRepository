@@ -1,0 +1,38 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>go-mtpfs</Name>
+        <Homepage>https://github.com/hanwen/go-mtpfs</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Go-mtpfs is a simple FUSE filesystem for mounting Android devices as a MTP device.</Summary>
+        <Description>Go-mtpfs is a simple FUSE filesystem for mounting Android devices as a MTP device.</Description>
+        <Archive sha1sum="a7dbc1704232087a5aa8ea04aaeeebce120c983b" type="zip">https://github.com/hanwen/go-mtpfs/archive/master.zip</Archive>
+    </Source>
+    <BuildDependencies>
+        <Dependency>libusbx-devel</Dependency>
+        <Dependency>golang</Dependency>
+    </BuildDependencies>
+    <Package>
+        <Name>go-mtpfs</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-15</Date>
+            <Version>20191115</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

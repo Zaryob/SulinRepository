@@ -1,0 +1,52 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>fslint</Name>
+        <Homepage>http://www.pixelbeat.org/fslint/</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>fslint</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A utility to find and clean various forms of lint on a filesystem</Summary>
+        <Description>Fslint is a utility to find and clean various forms of lint on a filesystem. i.e. unwanted or problematic cruft in your files or file names. For example, one form of lint it finds is duplicate files. It has both GUI and command line modes.</Description>
+        <Archive sha1sum="6a7b2eda059f3a44cdc35ec6bd698da622f6bd03" type="tarxz">http://www.pixelbeat.org/fslint/fslint-2.46.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>python-gtk2-devel</Dependency>
+            <Dependency versionFrom="2.18.9">gtk2</Dependency>
+            <Dependency>libglade</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>fslint</Name>
+        <RuntimeDependencies>
+            <Dependency>python-gtk2</Dependency>
+            <Dependency versionFrom="2.18.9">gtk2</Dependency>
+            <Dependency>libglade</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc/fslint</Path>
+            <Path fileType="data">/usr/share/fslint</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-15</Date>
+            <Version>2.46</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
