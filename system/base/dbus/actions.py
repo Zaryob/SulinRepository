@@ -4,6 +4,7 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
+import os
 from inary.actionsapi import get
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
@@ -59,6 +60,7 @@ def install():
     inarytools.dodir("/run/dbus")
     inarytools.dodir("/var/lib/dbus")
     inarytools.dodir("/usr/share/dbus-1/services")
-
+    os.system("/bin/chown root:dbus {}/usr/libexec/dbus-daemon-launch-helper".format(get.installDIR()))
+    os.system("/bin/chmod -v 4750 {}/usr/libexec/dbus-daemon-launch-helper".format(get.installDIR()))
     inarytools.dodoc("AUTHORS", "ChangeLog", "NEWS*", "README*", "doc/TODO", "doc/*.txt")
     inarytools.dohtml("doc/")
