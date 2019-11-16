@@ -8,13 +8,9 @@ from inary.actionsapi import get
 from inary.actionsapi import mesontools
 from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
-from inary.actionsapi import cmaketools
 
 def setup():
-    inarytools.dosed("CMakeLists.txt", 'NOT BUILD_SHARED_LIBS', 'TRUE')
-    shelltools.makedirs("inaryPackageBuild")
-    shelltools.cd("inaryPackageBuild")
-    cmaketools.configure("-G Ninja", sourceDir="..")
+    mesontools.cmake_configure()
 
 def build():
     mesontools.ninja_build()
