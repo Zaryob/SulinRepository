@@ -13,10 +13,10 @@
         <PartOf>kernel.linux</PartOf>
         <Summary>The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="5922cd5f5d3decf6e39beadc5efce073aae474a2" type="tarxz">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.2.14.tar.xz</Archive>
+        <Archive sha1sum="e34c3da2dae6895513c52915d772fadb891e5e94" type="tarxz">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.3.8.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
-            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.2.14</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.3.8</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>
@@ -81,6 +81,14 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-11-15</Date>
+            <Version>5.3.8</Version>
+            <Comment>Kernel version to 5.3.8</Comment>
+            <Type package="kernel">security</Type>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-12</Date>
             <Version>5.2.14</Version>
