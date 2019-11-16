@@ -845,6 +845,65 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>librsync</Name>
+            <Homepage>http://librsync.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>network.share</PartOf>
+            <Summary xml:lang="en">librsync implements the rolling-checksum algorithm of remote file synchronization that was popularized by the rsync utility and is used in rproxy</Summary>
+            <Summary xml:lang="tr">Uzaktaki dosyaların senkronize edilmesi için gerekli olan algoritmayı sağlayan kitaplığı</Summary>
+            <Description xml:lang="en">librsync implements the rolling-checksum algorithm of remote file synchronization that was popularized by the rsync utility and is used in rproxy. This algorithm transfers the differences between 2 files without needing both files on the same system.</Description>
+            <Description xml:lang="tr">Uzaktaki dosyaların senkronize edilmesi için gerekli olan algoritmayı sağlayan kitaplığı. Bu algoritma iki dosya arasındaki farkları, iki dosyanın aynı sistemde olmasına ihtiyaç duymadan transfer eder.</Description>
+            <Description xml:lang="fr">librsync implémente l&apos;algorithme de la somme de contrôle tournante (rolling-checksum) pour la synchronisation rendue populaire par l&apos;utilitaire rsync et utilisée par rproxy. Cet algorithme transfert les différences entre 2 fichiers sans nécessiter la présence des fichiers sur le même système.</Description>
+            <Description xml:lang="es">librsync implementa el cómputo del rolling-checksum de la sincronización de archivos remotos, que fue popularizado por la herramienta rsync y se usa en rproxy. El algoritmo transfiere la diferencia de los 2 archivos sin la necesidad de tener ambos archivos en el mismo sistema.</Description>
+            <Archive type="targz" sha1sum="879f1d5266213c361e29f9fabf7b5eed5aebb4da">https://github.com/librsync/librsync/archive/v2.2.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>popt-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/share/librsync/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>librsync</Name>
+            <RuntimeDependencies>
+                <Dependency>popt</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc/librsync</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>librsync-devel</Name>
+            <Summary xml:lang="en">Development files for librsync</Summary>
+            <Summary xml:lang="tr">librsync için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">librsync</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/librsync.so</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>2.2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>NetworkManager</Name>
             <Homepage>http://projects.gnome.org/NetworkManager</Homepage>
             <Packager>
@@ -1726,6 +1785,63 @@
             <Update release="1">
                 <Date>2019-11-11</Date>
                 <Version>1.14.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>protobuf</Name>
+            <Homepage>http://code.google.com/p/protobuf</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>library</IsA>
+            <PartOf>network.misc</PartOf>
+            <Summary xml:lang="en">Google&apos;s data interchange format</Summary>
+            <Summary xml:lang="tr">Google&apos;ın veri alış veriş biçimi</Summary>
+            <Description xml:lang="en">Protocol Buffers are a way of encoding structured data in an efficient yet extensible format. Google uses Protocol Buffers for almost all of its internal RPC protocols and file formats.</Description>
+            <Description xml:lang="tr">Protokol Arabellekleri(protobuf) yapılandırılmış veriyi kodlamak için verimli bir biçimdir. Google kendi içindeki bütün RPC protokolleri ve dosya biçimleri için Protokol Arabelleklerini kullanmaktadır.</Description>
+            <Archive type="targz" sha1sum="db72018ec38e53202a4cd726ab4f17f8c85ad527">https://github.com/protocolbuffers/protobuf/releases/download/v3.10.1/protobuf-all-3.10.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/misc/protobuf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>protobuf</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/libproto*</Path>
+                <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/vim</Path>
+                <Path fileType="data">/usr/share/emacs</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>protobuf-devel</Name>
+            <Summary xml:lang="en">Development files for protobuf</Summary>
+            <Summary xml:lang="tr">protobuf için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">protobuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/google/protobuf</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.10.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -7662,6 +7778,1495 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>polkit-qt</Name>
+            <Homepage>http://www.kde.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPL2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">A library that allows developers to access PolicyKit API with a nice Qt-style API</Summary>
+            <Description xml:lang="en">A library that allows developers to access PolicyKit API with a nice Qt-style API</Description>
+            <Archive type="tarxz" sha1sum="a4bf39a6b0844db0da6cfab3faa35f8cd91f42a5">https://download.kde.org/stable/polkit-qt-1/polkit-qt-1-0.113.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>polkit-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>cmake</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/polkit-qt/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>polkit-qt</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>polkit-qt-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">polkit-qt</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>polkit-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/polkit-qt5-1</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>0.113</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-connectivity</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Provides access to Bluetooth hardware</Summary>
+            <Description xml:lang="en">Provides access to Bluetooth hardware</Description>
+            <Archive type="tarxz" sha1sum="84ab1ee3dc9184cf0d84db455fe42244def55300">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtconnectivity-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>bluez-libs-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-connectivity/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-connectivity</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>bluez-libs</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="executable">/usr/lib/qt5/bin/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-connectivity-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-connectivity</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-connectivity-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-datavis3d</Name>
+            <Homepage>http://qt-project.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPL3</License>
+            <PartOf>desktop</PartOf>
+            <Summary xml:lang="en">Provides a set of easy to use chart components</Summary>
+            <Description xml:lang="en">Qt Data Visualization module</Description>
+            <Archive type="tarxz" sha1sum="27d67856eedf361014516bab892de2e21c416c38">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtdatavis3d-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-datavis3d/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-datavis3d</Name>
+            <Summary xml:lang="en">Qt Data Visualization module</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-datavis3d-devel</Name>
+            <Summary xml:lang="en">Development files for qt5-datavis3d</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency release="1">qt5-datavis3d</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/qt5</Path>
+                <Path fileType="config">/usr/lib/cmake</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-doc</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">A cross-platform application and UI framework (Documentation)</Summary>
+            <Description xml:lang="en">A cross-platform application and UI framework (Documentation)</Description>
+            <Icon>assistant5</Icon>
+            <Archive type="tarxz" sha1sum="1da62675933b52497e543c6607d5937cccc635eb">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtdoc-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>qt5-assistant</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-doc/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-doc</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-script</Dependency>
+                <Dependency>qt5-svg</Dependency>
+                <Dependency>qt5-xmlpatterns</Dependency>
+                <Dependency>qt5-assistant</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/licenses</Path>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-gamepad</Name>
+            <Homepage>http://qt-project.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>custom</License>
+            <License>FDL</License>
+            <License>GPL3</License>
+            <License>LGPL3</License>
+            <PartOf>desktop</PartOf>
+            <Summary xml:lang="en">A JavaScript 3D rendering API for Qt Quick</Summary>
+            <Description xml:lang="en">Adds support for getting events from gamepad devices</Description>
+            <Archive type="tarxz" sha1sum="5eeac54d0ff74e0de6073eca4fa4885e34702746">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtgamepad-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-gamepad/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-gamepad</Name>
+            <Summary xml:lang="en">Adds support for getting events from gamepad devices</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-gamepad-devel</Name>
+            <Summary xml:lang="en">Development files for qt5-gamepad</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency release="1">qt5-gamepad</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/qt5</Path>
+                <Path fileType="config">/usr/lib/cmake</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-graphicaleffects</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Graphical effects for use with Qt Quick 2</Summary>
+            <Description xml:lang="en">Graphical effects for use with Qt Quick 2</Description>
+            <Archive type="tarxz" sha1sum="531b688a5275b6d34ccbecefa82705d359166d50">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtgraphicaleffects-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-graphicaleffects/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-graphicaleffects</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-graphicaleffects-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-imageformats</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Summary>
+            <Description xml:lang="en">Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Description>
+            <Archive type="tarxz" sha1sum="23e77f6cd7ed9289c1fbf2fc0a736213d011ee85">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtimageformats-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>jasper-devel</Dependency>
+                <Dependency>libmng-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-imageformats/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-imageformats</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libmng</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>jasper</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-imageformats-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-multimedia</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Classes for audio, video, radio and camera functionality</Summary>
+            <Description xml:lang="en">Classes for audio, video, radio and camera functionality</Description>
+            <Archive type="tarxz" sha1sum="ec3abeb74a90e535c9e01baf4dd10b2870c5b3f7">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtmultimedia-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>openal-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>gst-plugins-bad-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-multimedia/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-multimedia</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>openal</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-multimedia-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-multimedia</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-multimedia-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-quickcontrols</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Summary>
+            <Description xml:lang="en">Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Description>
+            <Archive type="tarxz" sha1sum="ce413ef9e402c5a079add7ee7fdbf74a698bb856">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtquickcontrols-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>mesa-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-quickcontrols/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-quickcontrols</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-quickcontrols-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-quickcontrols2</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Next generation user interface controls based on Qt Quick</Summary>
+            <Description xml:lang="en">Next generation user interface controls based on Qt Quick</Description>
+            <Archive type="tarxz" sha1sum="f12b842112846218b237c4cfb1e206e8ca31e1ee">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtquickcontrols2-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-xmlpatterns-devel</Dependency>
+                <Dependency>qt5-quickcontrols</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-quickcontrols2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-quickcontrols2</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-quickcontrols2-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-quickcontrols2</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-quickcontrols2-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-script</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Summary>
+            <Description xml:lang="en">Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Description>
+            <Archive type="tarxz" sha1sum="963e0a3cd27e697d6b0d6dabd98f1caf5fd46b09">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtscript-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>libgcc</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-script/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-script</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="library">/usr/share/licenses</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-script-devel</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency release="1">qt5-script</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-script-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-scxml</Name>
+            <Homepage>http://qt-project.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>custom</License>
+            <License>FDL</License>
+            <License>GPL3</License>
+            <License>LGPL3</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Provides a set of easy to use chart components</Summary>
+            <Description xml:lang="en">Provides a set of easy to use chart components</Description>
+            <Archive type="tarxz" sha1sum="7b25276a9e6a76f4f4fa26f477b13c686f432ef8">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtscxml-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-scxml/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-scxml</Name>
+            <Summary xml:lang="en">Provides a set of easy to use chart components</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-scxml-devel</Name>
+            <Summary xml:lang="en">Development files for qt5-scxml</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency release="1">qt5-scxml</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/qt5</Path>
+                <Path fileType="config">/usr/lib/cmake</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-10</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-serialbus</Name>
+            <Homepage>http://qt-project.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>custom</License>
+            <License>FDL</License>
+            <License>GPL3</License>
+            <License>LGPL3</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Qt module for general purpose serial bus access</Summary>
+            <Description xml:lang="en">Qt module for general purpose serial bus access</Description>
+            <Archive type="tarxz" sha1sum="ab4c2c1389ae730090117c44c0e3f4e111761fe2">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtserialbus-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-serialport-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-serialbus/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-serialbus</Name>
+            <Summary xml:lang="en">Qt module for general purpose serial bus access</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-serialport</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-serialbus-devel</Name>
+            <Summary xml:lang="en">Development files for qt5-serialbus</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency release="1">qt5-serialbus</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/qt5</Path>
+                <Path fileType="config">/usr/lib/cmake</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-serialport</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Provides access to hardware and virtual serial ports</Summary>
+            <Description xml:lang="en">Provides access to hardware and virtual serial ports</Description>
+            <Archive type="tarxz" sha1sum="98e34c386bb1fb8640f8447cd11512a35f4be43a">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtserialport-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>eudev-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-serialport/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-serialport</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-serialport-devel</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency release="1">qt5-serialport</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-serialport-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-speech</Name>
+            <Homepage>http://qt-project.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>custom</License>
+            <License>FDL</License>
+            <License>GPL3</License>
+            <License>LGPL3</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Qt module to make text to speech and speech recognition easy</Summary>
+            <Description xml:lang="en">Qt module to make text to speech and speech recognition easy</Description>
+            <Archive type="targz" sha1sum="b4959cb0a85f4c6f31ba720f55e5e05fb0043896">https://github.com/groni/Sources/raw/master/qt5-speech-5.5.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>flite-devel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>speech-dispatcher-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-speech/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-speech</Name>
+            <Summary xml:lang="en">Qt module to make text to speech and speech recognition easy</Summary>
+            <RuntimeDependencies>
+                <Dependency>flite</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>speech-dispatcher</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-speech-devel</Name>
+            <Summary xml:lang="en">Development headers for qt5-speech</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-speech</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/usr/lib/cmake</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-svg</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Classes for displaying the contents of SVG files</Summary>
+            <Description xml:lang="en">Classes for displaying the contents of SVG files</Description>
+            <Archive type="tarxz" sha1sum="00a30ea9025df7e6ec27cfc44315be6c4392ced1">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtsvg-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-svg/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-svg</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-svg-devel</Name>
+            <Summary xml:lang="en">Development files for qt5-svg</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency release="1">qt5-svg</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/qt5/</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-svg-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-10</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-virtualkeyboard</Name>
+            <Homepage>http://qt-project.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPL3</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Qt module for general purpose serial bus access</Summary>
+            <Description xml:lang="en">Virtual keyboard framework</Description>
+            <Archive type="tarxz" sha1sum="5ab7573ce066d818109d02f46262b6ebcf4b0e88">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtvirtualkeyboard-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-svg-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-virtualkeyboard/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-virtualkeyboard</Name>
+            <Summary xml:lang="en">Virtual keyboard framework</Summary>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>qt5-svg</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/qt5</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-virtualkeyboard-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-virtualkeyboard</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-wayland</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Provides APIs for Wayland</Summary>
+            <Description xml:lang="en">Provides APIs for Wayland</Description>
+            <Archive type="tarxz" sha1sum="63576833b5f253971dc06c51b27ba5bb01a327bf">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtwayland-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>xorg-server-xwayland</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-cursor</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-wayland/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-wayland</Name>
+            <RuntimeDependencies>
+                <Dependency>mesa</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-cursor</Dependency>
+                <Dependency>wayland-server</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+                <Path fileType="executable">/usr/lib/qt5/bin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-wayland-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-wayland</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="headers">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-webchannel</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Summary>
+            <Description xml:lang="en">Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
+            <Archive type="tarxz" sha1sum="1fa0e4d8e4ac69b176c66c88085597eada7c7484">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtwebchannel-everywhere-src-5.13.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-webchannel/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-webchannel</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/licenses</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-webchannel-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-webchannel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-webchannel-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.13.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-webengine</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Provides support for web applications using the Chromium browser project</Summary>
+            <Description xml:lang="en">Provides support for web applications using the Chromium browser project</Description>
+            <Archive type="tarxz" sha1sum="490436314065f2f93510b3f00ecd9f162fa5cd67">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtwebengine-everywhere-src-5.13.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-xmlpatterns-devel</Dependency>
+                <Dependency>qt5-location-devel</Dependency>
+                <Dependency>qt5-sensors-devel</Dependency>
+                <Dependency>qt5-webchannel-devel</Dependency>
+                <Dependency>bison</Dependency>
+                <Dependency>re2c</Dependency>
+                <Dependency>ninja</Dependency>
+                <Dependency>gperf</Dependency>
+                <Dependency>snappy-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>json-c-devel</Dependency>
+                <Dependency>protobuf-devel</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libopus-devel</Dependency>
+                <Dependency>libevent-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXScrnSaver-devel</Dependency>
+                <Dependency>libcap-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>pciutils-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>nss-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>libvpx-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>x264-devel</Dependency>
+                <Dependency>minizip-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>ffmpeg-devel</Dependency>
+                <Dependency>git</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">chrome.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/toolkit/qt5/qt5-webengine/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-webengine</Name>
+            <RuntimeDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>snappy</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>libopus</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libvpx</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libevent</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>qt5-location</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>qt5-webchannel</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>minizip</Dependency>
+                <Dependency>protobuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/lib/qt5/bin/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/libQt5WebEngine*</Path>
+                <Path fileType="library">/usr/lib/libQt5WebEngineWidgets*</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="data">/usr/share/qt5</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/qt5/translations</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-webengine-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-webengine</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-location-devel</Dependency>
+                <Dependency>qt5-webchannel-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="library">/usr/lib/cmake</Path>
+                <Path fileType="headers">/usr/include/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-10</Date>
+                <Version>5.13.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qt5-webkit</Name>
+            <Homepage>http://qt.digia.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1-linking-exception</License>
+            <PartOf>desktop.toolkit.qt5</PartOf>
+            <Summary xml:lang="en">Classes for a WebKit2 based implementation and a new QML API</Summary>
+            <Description xml:lang="en">Classes for a WebKit2 based implementation and a new QML API</Description>
+            <Archive type="tarxz" sha1sum="dd17b3884ccc20c9fce0f151738f923ec8cd147b">https://github.com/qtwebkit/qtwebkit/releases/download/qtwebkit-5.212.0-alpha3/qtwebkit-5.212.0-alpha3.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-sensors-devel</Dependency>
+                <Dependency>qt5-location-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>qt5-webchannel-devel</Dependency>
+                <Dependency>qt5-designer-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-qdbusviewer</Dependency>
+                <Dependency>qt5-multimedia-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>qt5-doc</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+                <Dependency>leveldb-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>ruby-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>perl-Digest-MD5</Dependency>
+                <Dependency>perl-Text-ParseWords</Dependency>
+                <Dependency>gperf</Dependency>
+                <Dependency>bison</Dependency>
+                <Dependency>flex</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/qt5/qt5-webkit/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qt5-webkit</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>icu4c</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>qt5-sensors</Dependency>
+                <Dependency>qt5-webchannel</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>qt5-location</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/qt5/plugins/webkit</Path>
+                <Path fileType="library">/usr/lib/qt5/</Path>
+                <Path fileType="executable">/usr/lib/qt5/bin/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-webkit-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">qt5-webkit</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>qt5-sensors-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/qt5/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>qt5-webkit-docs</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>5.212.1a</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libuninamelist</Name>
             <Homepage>http://fontforge.sourceforge.net/</Homepage>
             <Packager>
@@ -7860,6 +9465,68 @@
                 <Date>2019-09-10</Date>
                 <Version>1.3.1</Version>
                 <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>dconf</Name>
+            <Homepage>http://live.gnome.org/dconf</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">Simple low-level configuration system</Summary>
+            <Summary xml:lang="tr">Düşük seviyeli yapılandırma sistemi</Summary>
+            <Description xml:lang="en">dconf is a low-level configuration system. Its main purpose is to provide a backend to GSettings on platforms that don&apos;t already have configuration storage systems.</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Archive type="tarxz" sha1sum="91e15b0cb24b2b9a502e48ec4252bb604232e6fe">http://ftp.gnome.org/pub/gnome/sources/dconf/0.34/dconf-0.34.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>bash-completion</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>docbook-xsl</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/dconf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dconf</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>vala</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>dconf-devel</Name>
+            <Summary xml:lang="en">Development files for dconf</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">dconf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-10</Date>
+                <Version>0.34.2</Version>
+                <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
@@ -12404,6 +14071,74 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>fluxbox</Name>
+            <Homepage>http://www.fluxbox.org</Homepage>
+            <Packager>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.fluxbox.base</PartOf>
+            <Summary xml:lang="en">An X11 window manager featuring tabs and an iconbar</Summary>
+            <Summary xml:lang="tr">Hafif bir X pencere yöneticisi</Summary>
+            <Description xml:lang="en">Fluxbox is a windowmanager for X that was based on the Blackbox 0.61.1 code. It is very light on resources and easy to handle but yet full of features to make an easy, and extremely fast, desktop experience.</Description>
+            <Description xml:lang="tr">Fluxbox, Blackbox 0.61.1 kodu temel alınarak geliştirilmiş bir X pencere yöneticisidir. Çok az kaynak tükettiği ve kolayca idare edildiği için çok hızlı bir masaüstü tecribesi sunar.</Description>
+            <Archive type="targz" sha1sum="47919f0345832de41ca7192ff168abd145af819f">https://master.dl.sourceforge.net/project/fluxbox/fluxbox/1.3.7/fluxbox-1.3.7.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>fridibi-devel</Dependency>
+                <Dependency>imlib2</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libXft-devel</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/fluxbox/base/fluxbox/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>fluxbox</Name>
+            <RuntimeDependencies>
+                <Dependency>imlib2</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXft</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXpm</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>fridibi</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>perl-Linux-Desktopfiles</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/fluxbox</Path>
+                <Path fileType="data">/usr/share/xsessions</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/xsessions/fluxbox.desktop" permission="0644" owner="root">fluxbox.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>1.3.7</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>jpeg</Name>
             <Homepage>http://www.ijg.org/</Homepage>
             <Packager>
@@ -12662,13 +14397,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Archive type="tarbz2" sha1sum="3e97e7157380f0cfbdf4f3c950a7a00bdfa6072c">mirrors://sourceforge/enlightenment/1.5.1/imlib2-1.5.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>giflib</Dependency>
-                <Dependency>libid3tag</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libid3tag-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>tiff</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libpng</Dependency>
-                <Dependency>freetype</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
             </BuildDependencies>
             <SourceURI>multimedia/graphics/imlib2/pspec.xml</SourceURI>
         </Source>
@@ -16872,6 +18607,61 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>flite</Name>
+            <Homepage>http://www.speech.cs.cmu.edu/flite/index.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Flite: a small run-time speech synthesis engine</Summary>
+            <Summary xml:lang="tr">Küçük ve hızlı bir konuşma sentezleyici</Summary>
+            <Description xml:lang="en">Flite (festival-lite) is a small, fast run-time speech synthesis engine developed at CMU and primarily designed for small embedded machines and/or large servers. Flite is designed as an alternative synthesis engine to Festival for voices built using the FestVox suite of voice building tools.</Description>
+            <Description xml:lang="tr">Flite (festival-lite), CMU tarafından geliştirilmiş küçük ve hızlı bir konuşma sentezleyicisidir. Flite, Festival&apos;e alternatif sentezleyici olarak, öncelikle küçük gömülü sistemler ve/veya büyük sunucular için tasarlanmıştır.</Description>
+            <Archive type="tarbz2" sha1sum="aeb4d33de079004c0eb9f9e0fe5bba1e0def75f4">http://www.festvox.org/flite/packed/flite-2.0/flite-2.0.0-release.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>chrpath</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/flite/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>flite</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>flite-devel</Name>
+            <Summary xml:lang="en">Development headers for flite</Summary>
+            <Summary xml:lang="tr">flite için geliştirme başlıkları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">flite</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>rtmpdump</Name>
             <Homepage>http://rtmpdump.mplayerhq.hu/</Homepage>
             <Packager>
@@ -17686,7 +19476,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libvpx-devel</Name>
             <Summary xml:lang="en">libvpx header files</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libvpx</Dependency>
+                <Dependency release="2">libvpx</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -17694,6 +19484,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-11</Date>
+                <Version>1.8.1</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>1.8.1</Version>
@@ -23642,6 +25439,176 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Digest-MD5</Name>
+            <Homepage>http://www.cpan.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl interface to the MD5 Algorithm</Summary>
+            <Description xml:lang="en">Perl interface to the MD5 Algorithm</Description>
+            <Archive type="targz" sha1sum="59dc31b43c84d5e18ba60f25f513929c2f05ad51">http://www.cpan.org/authors/id/G/GA/GAAS/Digest-MD5-2.55.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Digest-MD5/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Digest-MD5</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>2.55</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Text-ParseWords</Name>
+            <Homepage>http://search.cpan.org/~chorny/Text-ParseWords-3.29/ParseWords.pm</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Text::ParseWords - parse text into an array of tokens or array of arrays</Summary>
+            <Description xml:lang="en">This module has two interfaces, one through color() and colored() and the other through constants. It also offers the utility functions uncolor(), colorstrip(), and colorvalid(), which have to be explicitly imported to be used</Description>
+            <Archive type="targz" sha1sum="63882e5e7d0cd6201abbd4c3055e2f3e764b011d">http://search.cpan.org/CPAN/authors/id/C/CH/CHORNY/Text-ParseWords-3.30.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Text-ParseWords/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Text-ParseWords</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>3.30</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Data-Dump</Name>
+            <Homepage>http://search.cpan.org/dist/Data-Dump</Homepage>
+            <Packager>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl Module for pretty printing of data structures</Summary>
+            <Summary xml:lang="tr">Perl veri yapılarının hoş bir şekilde bastırılması</Summary>
+            <Description xml:lang="en">perl-Data-Dump is a perl module which provides a few functions that traverse their argument and produces a string as its result.</Description>
+            <Description xml:lang="tr">perl-Data-Dump argümanları takip edip sonucunu bir karakter dizisi olarak bastıran fonksiyonlar sağlayan bir Perl modülüdür.</Description>
+            <Archive type="targz" sha1sum="3f5c0d4a15c8dd6befbcdceb41fe15b9aef1b741">http://www.cpan.org/modules/by-module/Data/Data-Dump-1.23.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Data-Dump/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Data-Dump</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>1.23</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Linux-Desktopfiles</Name>
+            <Homepage>https://metacpan.org/module/Linux::DesktopFiles</Homepage>
+            <Packager>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl module to get and parse the linux desktop files</Summary>
+            <Summary xml:lang="tr">Masaüstü dosyalarını almak ve ayrıştırmak için Perl modülü</Summary>
+            <Description xml:lang="en">perl-Linux-Desktopfiles Perl module to get and parse the linux desktop files</Description>
+            <Description xml:lang="tr">perl-Linux-Desktopfiles masaüstü dosyalarını almak ve ayrıştırmak için Perl modülüdür</Description>
+            <Archive type="targz" sha1sum="b94e75b6d85986a72aa167be36c209a41b701950">https://cpan.metacpan.org/authors/id/T/TR/TRIZEN/Linux-DesktopFiles-0.25.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Linux-Desktopfiles/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Linux-Desktopfiles</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+                <Dependency>perl-Data-Dump</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-11</Date>
+                <Version>0.25</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Ünal</Name>
+                <Email>parduscix@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -46775,6 +48742,1312 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Update release="1">
                 <Date>2019-11-11</Date>
                 <Version>1.5</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>atool</Name>
+            <Homepage>http://www.nongnu.org/atool</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A script for managing file archives</Summary>
+            <Summary xml:lang="tr">Arşiv dosyaları yönetmek için betikler</Summary>
+            <Description xml:lang="en">atool is a script for managing file archives of various types (tar, tar+gzip, zip etc).</Description>
+            <Description xml:lang="tr">atool; tar, tar+gzip, zip gibi arşiv dosyalarını kolayca yönetebilmeniz için hazırlanmış betiklerden oluşur.</Description>
+            <Archive type="targz" sha1sum="40865bdc533f95fcaffdf8002889eb2ac67224a9">http://savannah.nongnu.org/download/atool/atool-0.39.0.tar.gz</Archive>
+            <SourceURI>util/archive/atool/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>atool</Name>
+            <BuildDependencies>
+                <Dependency>file</Dependency>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.39.0</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>bchunk</Name>
+            <Homepage>http://he.fi/bchunk/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Converts bin/cue CD-images to iso+wav/cdr</Summary>
+            <Description xml:lang="en">binchunker converts .bin/.cue CD images to .iso/.cdr format.</Description>
+            <Description xml:lang="tr">bin/cue CD dosya türlerini iso+wav/cdr türlerine çevirir</Description>
+            <Archive type="targz" sha1sum="5d241a7923a53f8bcd3075d26801958a7e934ee5">http://he.fi/bchunk/bchunk-1.2.2.tar.gz</Archive>
+            <SourceURI>util/archive/bchunk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>bchunk</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.2.2</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>cabextract</Name>
+            <Homepage>http://www.cabextract.org.uk/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A program to extract from Microsoft Cabinet files</Summary>
+            <Summary xml:lang="tr">Microsoft Cabinet dosyalarını açan bir program</Summary>
+            <Description xml:lang="en">cabextract is a program to extract files from Microsoft Cabinet files.</Description>
+            <Description xml:lang="tr">cabextract Microsoft Cabinet (.cab) dosyalarından dosya çıkarmaya yarayan bir programdır.</Description>
+            <Archive type="targz" sha1sum="a939b03822cf5a8fcc1677077915416f42a12784">http://www.cabextract.org.uk/cabextract-1.9.1.tar.gz</Archive>
+            <SourceURI>util/archive/cabextract/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cabextract</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.9.1</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>dropbox-client</Name>
+            <Homepage>http://www.dropbox.com</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>as-is</License>
+            <License>MIT</License>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>app:gui</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A Dropbox client</Summary>
+            <Description xml:lang="en">Dropbox is a Web-based file hosting service which uses cloud computing to enable users to store and share files and folders with others across the Internet using file synchronization.</Description>
+            <Icon>dropbox</Icon>
+            <Archive type="targz" sha1sum="9d175917c3ea9226a2455a67c0b38f1e41d33bb2" target="i686">https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86-84.4.170.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a3f81a9868fe3ba0684a4988f767a505496fc105" target="x86_64">https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-84.4.170.tar.gz</Archive>
+            <SourceURI>util/archive/dropbox-client/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dropbox-client</Name>
+            <RuntimeDependencies>
+                <Dependency>mesa</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libXmu</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>librsync</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>freetype</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="executable">/opt/dropbox</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/doc/dropbox/POLICIES" permission="0644" owner="root">POLICIES</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/dropbox.png" permission="0644" owner="root">dropbox.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/dropbox.desktop" permission="0644" owner="root">dropbox.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>84.4.170</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libtar</Name>
+            <Homepage>http://www.feep.net/libtar/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>library</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">tar file manipulation API</Summary>
+            <Summary xml:lang="tr">tar dosyalarını işlemek için bir API</Summary>
+            <Description xml:lang="en">libtar is a C library for manipulating POSIX tar files. It handles adding and extracting files to/from a tar archive.</Description>
+            <Description xml:lang="tr">libtar, POSIX tar dosyalarını işlemek için yazılmış bir C kütüphanesidir.</Description>
+            <Archive type="targz" sha1sum="89901d5dbf720b59df7a5f0b34ff90bff9bbb806">http://pkgbuild.com/~giovanni/libtar/libtar-1.2.20.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/libtar/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libtar</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libtar-devel</Name>
+            <Summary xml:lang="en">Development files for libtar</Summary>
+            <Summary xml:lang="tr">libtar için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libtar</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.2.20</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libzip</Name>
+            <Homepage>http://www.nih.at/libzip/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A C library for reading, creating, and modifying zip archives</Summary>
+            <Summary xml:lang="tr">Zip arşivleri yaratmak, okumak ve değiştirmek için C kitaplığı</Summary>
+            <Description xml:lang="en">libzip is a C library for reading, creating and modifying zip archives. Files can be added from data buffers, files or compressed data copied directly from other zip archives.</Description>
+            <Description xml:lang="tr">libzip, zip arşivleri yaratma, okumak ve değiştirmek için kullanılabilecek bir C kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="1389d3836bbec27623a549a8e9162b9b2dac115d">https://nih.at/libzip/libzip-1.5.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/libzip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libzip</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libzip-devel</Name>
+            <Summary xml:lang="en">Development files for libzip</Summary>
+            <Summary xml:lang="tr">libzip için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency release="1">libzip</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.5.2</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>lrzip</Name>
+            <Homepage>http://ck.kolivas.org/apps/lrzip/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A (de)compressor optimised for large files</Summary>
+            <Summary xml:lang="tr">Büyük dosyalar için paketleme uygulaması</Summary>
+            <Description xml:lang="en">This is a compression program optimised for large files. The larger the file and the more memory you have, the better the compression advantage this program will provide, especially for files larger than 100MB.</Description>
+            <Description xml:lang="tr">Büyük dosyalarda diğer uygulamalara göre daha yüksek sıkıştırma oranları sağlayan bir uygulamadır. Dosyalar ne kadar büyük olursa (ve bilgisayarın hafızası ne kadar çoksa) o kadar yüksek sıkıştırma oranları elde edilir. Özellikle sıkıştırılacak dosyalar 100MB üstü olduğunda çok avantajlıdır.</Description>
+            <Archive type="tarbz2" sha1sum="49143bf5433270133ac9adff429e5d6c248e9019">http://ck.kolivas.org/apps/lrzip/lrzip-0.631.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>lzo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/lrzip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lrzip</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>lzo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/liblrzip.so*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>lrzip-devel</Name>
+            <Summary xml:lang="en">Development files for lrzip</Summary>
+            <RuntimeDependencies>
+                <Dependency version="0.631">lrzip</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="headers">/usr/include/Lrzip.h</Path>
+                <Path fileType="data">/usr/lib/pkgconfig/lrzip.pc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.631</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>lxsplit</Name>
+            <Homepage>http://lxsplit.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Hjsplit compatible file splitter/joiner</Summary>
+            <Summary xml:lang="tr">Hjsplit uyumlu dosya bölücü/birleştirici</Summary>
+            <Description xml:lang="en">Lxsplit is a hjsplit compatible command-line file splitter/joiner.</Description>
+            <Description xml:lang="tr">Lxsplit, hjsplit uyumlu bir komut satırı dosya bölücü/birleştiricidir.</Description>
+            <Archive type="targz" sha1sum="4e906cb95fcc756ff8c5d58c103e2659493052e0">https://master.dl.sourceforge.net/project/lxsplit/lxsplit/0.2.4/lxsplit-0.2.4.tar.gz</Archive>
+            <SourceURI>util/archive/lxsplit/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lxsplit</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/lxsplit</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.2.4</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>lzip</Name>
+            <Homepage>http://www.nongnu.org/lzip/lzip.html</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Lzip is a lossless data (de)compressor</Summary>
+            <Summary xml:lang="tr">Veri kayıpsız bir veri sıkıştırma, geri açma aracı</Summary>
+            <Description xml:lang="en">Lzip is a lossless data compressor with a user interface similar to the one of gzip or bzip2. Lzip is about as fast as gzip, compresses most files more than bzip2, and is better than both from a data recovery perspective.</Description>
+            <Description xml:lang="tr">Lzip, gzip ve bzip2 benzeri veri kayıpsız sıkıştırma yapabilen bir araçtır. Lzip gzip kadar hızlı, bzip2&apos;den daha iyi şıkıştırm oranına sahip ve görece her iki uygulamadan daha iyi bir sıkıştırma aracıdır.</Description>
+            <Archive type="targz" sha1sum="08bea2f275d639bfe85fe30887d269b96eac34e1">http://mirror.rackdc.com/savannah/lzip/lzip-1.21.tar.gz</Archive>
+            <SourceURI>util/archive/lzip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lzip</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.21</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>lzop</Name>
+            <Homepage>http://www.lzop.org</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A file compresor</Summary>
+            <Summary xml:lang="tr">Bir dosya sıkıştırıcısı</Summary>
+            <Description xml:lang="en">lzop is a file compressor which is very similar to gzip.</Description>
+            <Description xml:lang="tr">lzop gzip&apos;e çok benzeyen bir dosya sıkıştırıcısıdır.</Description>
+            <Archive type="targz" sha1sum="3540761ce8fc6dc42c326a9fcb1471e190a4db62">http://www.lzop.org/download/lzop-1.04.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>lzo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/lzop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lzop</Name>
+            <RuntimeDependencies>
+                <Dependency>lzo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.04</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>makeself</Name>
+            <Homepage>http://megastep.org/makeself/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A self-extracting archive generator.</Summary>
+            <Summary xml:lang="tr">Kendiliğinden açılan arşiv (SFX) üreteci.</Summary>
+            <Description xml:lang="en">makeself is a small script to generate self-extracting archives are being used many applications, for example Nvidia driver archives.</Description>
+            <Description xml:lang="tr">makeelf, kendiliğinden açılan arşiv dosyaların (.run) oluşturmak için kullanılan küçük bir komut satırı betiğidir.</Description>
+            <Archive type="targz" sha1sum="ec5e29053ccd769528b8521f325ccaa50357de5c">https://github.com/megastep/makeself/archive/release-2.4.0.tar.gz</Archive>
+            <SourceURI>util/archive/makeself/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>makeself</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/man</Path>
+                <Path fileType="executable">/usr/share/makeself</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>2.4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>p7zip</Name>
+            <Homepage>http://p7zip.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Port of 7-Zip archiver for *nix</Summary>
+            <Summary xml:lang="tr">7-zip arşivleme programı</Summary>
+            <Description xml:lang="en">p7zip is a port of 7-Zip archiver for Unix. Supports packing-unpacking 7z, ZIP, GZIP, BZIP2 and TAR archives and unpacking RAR, CAB, ISO, ARJ, LZH, CHM, Z, CPIO, RPM, DEB and NSIS arhives.</Description>
+            <Description xml:lang="tr">7-zip arşivleme programı. 7z, ZIP, GZIP, BZIP2 ve TAR arşivleri oluşturabilir ve açabilir; RAR, CAB, ISO, ARJ, LZH, CHM, Z, CPIO, RPM, DEB ve NSIS arşivlerini ise açabilir.</Description>
+            <Archive type="tarbz2" sha1sum="e8819907132811aa1afe5ef296181d3a15cc8f22">https://netcologne.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>yasm-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/p7zip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>p7zip</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/p7zip</Path>
+                <Path fileType="library">/usr/lib/p7zip/Codecs</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/bin/7z" permission="0755" owner="root">7z</AdditionalFile>
+                <AdditionalFile target="/usr/bin/7za" permission="0755" owner="root">7za</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>16.02</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>par2cmdline</Name>
+            <Homepage>https://github.com/Parchive/par2cmdline</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Command line implementation of the PAR v2.0 specification</Summary>
+            <Summary xml:lang="tr">Bir PAR 2.0 uyumlu veri doğrulama ve onarma aracı.</Summary>
+            <Summary xml:lang="fr">Utilitaire en ligne de commande pour les fichiers PAR 2.0</Summary>
+            <Summary xml:lang="nl">Console commando voor de PAR 2.0 implementatie</Summary>
+            <Description xml:lang="en">par2cmdline is a program for creating and using PAR2 files to detect damage in data files and repair them if necessary. It can be used with any kind of file.</Description>
+            <Description xml:lang="tr">par2cmdline zarar gören dosyaları bulan, gerektiğinde onarmak için PAR2 dosyaları yaratan ve kullanan bir komut satırı aracıdır. Her türlü dosya ile kullanılabilir.</Description>
+            <Archive type="targz" sha1sum="acee4a0b597b2085a5892dd5dfe3bbfb21afbd8d">https://github.com/Parchive/par2cmdline/archive/v0.8.0.tar.gz</Archive>
+            <SourceURI>util/archive/par2cmdline/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>par2cmdline</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.8.0</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pbzip2</Name>
+            <Homepage>http://compression.ca/pbzip2/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Parallel implementation of the bzip2</Summary>
+            <Summary xml:lang="tr">bzip2&apos;nin çoklu işlemci kullanabilen hali</Summary>
+            <Description xml:lang="en">PBZIP2 is a parallel implementation of the bzip2 block-sorting file compressor that uses pthreads and achieves near-linear speedup on SMP machines.</Description>
+            <Description xml:lang="tr">pbizp2 çoklu işlemcili bilgisayarlarda neredeyse işlemci sayısına yakın bir hız artışı sağlayan bir bzip2 gerçekleştirimidir.</Description>
+            <Archive type="targz" sha1sum="f61e65a7616a3492815d18689c202d0685fe167d">https://launchpad.net/pbzip2/1.1/1.1.13/+download/pbzip2-1.1.13.tar.gz</Archive>
+            <SourceURI>util/archive/pbzip2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pbzip2</Name>
+            <RuntimeDependencies>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.1.13</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>quazip</Name>
+            <Homepage>http://quazip.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A C++/Qt ZIP library</Summary>
+            <Description xml:lang="en">A Qt/C++ wrapper for Gilles Vollant&apos;s ZIP/UNZIP C package (minizip). Provides access to ZIP archives from Qt programs using QIODevice API.</Description>
+            <Archive type="zip" sha1sum="22a87858eaf99200f51303e272664f55f4ad6245">https://master.dl.sourceforge.net/project/quazip/quazip/0.7.3/quazip-0.7.3.zip</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>cmake</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/quazip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>quazip</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/cmake/Modules/FindQuaZip5.cmake</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>quazip-devel</Name>
+            <Summary xml:lang="en">Development files for quazip</Summary>
+            <Summary xml:lang="tr">quazip paketi için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">quazip</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.7.3</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>rar</Name>
+            <Homepage>http://www.rarlab.com</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>RAR</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">RAR compressor</Summary>
+            <Summary xml:lang="tr">RAR sıkıştırıcı</Summary>
+            <Description xml:lang="en">rar is an compressor supporting multiple volume archives and damage protection. It can also create SFX-archives. This program is shareware and you must register it after 40 days of use.</Description>
+            <Description xml:lang="tr">rar, çoklu arşivleri ve hasar korumayı destekleyen bir sıkıştırıcıdır. rar aynı zamanda SFX arşivleri de yaratabilir. Bu uygulama ücretli olup 40 günlük kullanımdan sonra kayıt olunması gerekmektedir.</Description>
+            <Archive type="targz" sha1sum="703adaf50e14d45c2090469d874969b8249dd05a" target="i686">http://www.rarlab.com/rar/rarlinux-5.7.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4c4c6242b954c40060e80e3412de72d06949c1de" target="x86_64">http://www.rarlab.com/rar/rarlinux-x64-5.7.1.tar.gz</Archive>
+            <SourceURI>util/archive/rar/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>rar</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/opt/rar/bin</Path>
+                <Path fileType="data">/opt/rar/lib</Path>
+                <Path fileType="data">/opt/rar/etc</Path>
+                <Path fileType="doc">/usr/share/doc/rar</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>5.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>rpm2targz</Name>
+            <Homepage>http://www.slackware.com/config/packages.php</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">RPM to .tar.gz converter</Summary>
+            <Summary xml:lang="tr">.rpm dosyalarını .tar.gz dosyalarına dönüştürme uygulaması</Summary>
+            <Description xml:lang="en">Convert an RPM (RedHat Package Manager) file to a .tar.gz archive. In case you ever run across the need to obtain something that is only in RPM format, this program may come in handy.</Description>
+            <Description xml:lang="tr">Red Hat, SUSE gibi dağıtımların kullandığı RPM (RedHat Package Manager) paketlerini .tar.gz paketlerine dönüştürür. Sadece RPM sürümü olan bir dosya bulduğunuzda ve içeriğine ulaşmanız gerektiğinde kullanışlı olabilir.</Description>
+            <Archive type="tarxz" sha1sum="d6be32fc2b8fcd04c017f9ec1e014d4795b55e31">http://mirror.yandex.ru/gentoo-distfiles/distfiles/rpm2targz-9.0.0.5g.tar.xz</Archive>
+            <SourceURI>util/archive/rpm2targz/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>rpm2targz</Name>
+            <RuntimeDependencies>
+                <Dependency>xz</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>9.0.0.5g</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>rzip</Name>
+            <Homepage>http://rzip.samba.org/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A compression program with a longer redundancy distance</Summary>
+            <Summary xml:lang="tr">Tekrar mesafe aralığı yüksek bir sıkıştırma/açma uygulaması</Summary>
+            <Description xml:lang="en">rzip is a compression program taking advantage of long-distance redundancies in files. Having a longer redundancy distance allows higher compression ratios.</Description>
+            <Description xml:lang="tr">Diğer sıkıştırma/açma uygulamalarına göre dosyalardaki tekrarlar arasındaki mesafe toleransı daha yüksek bir sıkıştırma/açma uygulaması. Tekrarlar arasındaki mesafenin daha fazla olmasından faydalandığı için diğer uygulamalara göre daha yüksek bir sıkıştırma oranı sağlar.</Description>
+            <Archive type="targz" sha1sum="efeafc7a5bdd7daa0cea8d797ff21aa28bdfc8d9">http://rzip.samba.org/ftp/rzip/rzip-2.1.tar.gz</Archive>
+            <SourceURI>util/archive/rzip/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>rzip</Name>
+            <RuntimeDependencies>
+                <Dependency>bzip2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>sharutils</Name>
+            <Homepage>http://www.gnu.org/software/sharutils/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Tools to deal with shar archives</Summary>
+            <Summary xml:lang="tr">shar arşivlerini işlemeye yarayan araçlar</Summary>
+            <Description xml:lang="en">GNU shar makes so-called shell archives out of many files, preparing them for transmission by electronic mail services. A shell archive is a collection of files that can be unpacked by /bin/sh. A wide range of features provide extensive flexibility in manufacturing shars and in specifying shar smartness. For example, shar may compress files, uuencode binary files, split long files and construct multi-part mailings, ensure correct unsharing order, and provide simplistic checksums.</Description>
+            <Description xml:lang="tr">GNU Shar, e-posta ile göndermek gibi uygulamalar için dosyalardan kabuk arşivleri yaratır. Bu arşivler /bin/sh tarafından açılabilir. İkili dosyaları uuencode formatına çevirebilme, dosyaları sıkıştırabilme, büyük dosyaları parçalara ayırabilme ve bunlardan parçalı e-postalar hazırlayabilme, dosyaların doğru şekilde geri açıldığına dair kontroller gerçekleştirebilme, kullanımı basit dosya kontrol toplamları hazırlama gibi yetenekleri bulunur.</Description>
+            <Archive type="tarxz" sha1sum="250377131bcf7a081f066ed0f9c51a0b7e0b0c04">ftp://ftp.gnu.org/gnu/sharutils/sharutils-4.15.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gettext-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/sharutils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sharutils</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>texinfo</Dependency>
+                <Dependency>gettext</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/sharutils</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>4.15.2</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ucl</Name>
+            <Homepage>http://www.oberhumer.com/opensource/ucl/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>library</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">Portable lossless data compression library written in ANSI C.</Summary>
+            <Summary xml:lang="tr">ANSI C ile yazılmış bir kayıpsız veri sıkıştırma kitaplığı.</Summary>
+            <Description xml:lang="en">UCL implements a number of compression algorithms that achieve an excellent compression ratio while allowing *very* fast decompression. Decompression requires no additional memory.</Description>
+            <Description xml:lang="tr">UCL kitaplığı sıkıştırılmış veriyi çok hızlı çözerken, yüksek oranda veri sıkıştırması da yapabilen birçok sıkıştırma algoritması içerir. Sıkıştırılmış veriyi açmak ek bellek alanı gerektirmemektedir.</Description>
+            <Archive type="targz" sha1sum="5847003d136fbbca1334dd5de10554c76c755f7c">http://www.oberhumer.com/opensource/ucl/download/ucl-1.03.tar.gz</Archive>
+            <SourceURI>util/archive/ucl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ucl</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>ucl-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">ucl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.03</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>unalz</Name>
+            <Homepage>https://kippler.com/win/unalz/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">alzip decompressor</Summary>
+            <Summary xml:lang="tr">alzip açma uygulaması</Summary>
+            <Description xml:lang="en">unalz is a decompressor for compressed alzip files.</Description>
+            <Description xml:lang="tr">unalz alzip biçiminde sıkıştırılmış dosyaları açmak için kullanılan bir uygulamadır.</Description>
+            <Archive type="targz" sha1sum="98a64f799892f7adfffd4635bd19826fe8f18b26">https://launchpad.net/debian/+archive/primary/+sourcefiles/unalz/0.65-7/unalz_0.65.orig.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">unalz-0.65-zlib-get_crc_table-return-type-can-vary.patch</Patch>
+            </Patches>
+            <SourceURI>util/archive/unalz/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>unalz</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.65</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>unarj</Name>
+            <Homepage>http://ibiblio.org/pub/Linux/utils/compress/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">ARJ unarchiever</Summary>
+            <Summary xml:lang="tr">ARJ açma uygulaması</Summary>
+            <Description xml:lang="en">Extracts files from the once-very-popular ARJ archives.</Description>
+            <Description xml:lang="tr">ARJ biçiminde arşivlenmiş dosyaları açar.</Description>
+            <Archive type="targz" sha1sum="abd35d894444fea1a0bdc7472ed2346f0f8c6ba4">http://www.ibiblio.org/pub/Linux/utils/compress/unarj-2.63a.tar.gz</Archive>
+            <Patches>
+                <Patch level="1">unarj-2.65-CAN-2004-0947.patch</Patch>
+            </Patches>
+            <SourceURI>util/archive/unarj/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>unarj</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>2.63a</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>unrar</Name>
+            <Homepage>http://www.rarsoft.com/rar_add.htm</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>unRAR</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">RAR decompressor</Summary>
+            <Summary xml:lang="tr">RAR açma uygulaması</Summary>
+            <Description xml:lang="en">unrar is a program to decompress RAR archives.</Description>
+            <Description xml:lang="tr">Unrar, RAR biçimli sıkıştırılmış dosyaları açar.</Description>
+            <Archive type="targz" sha1sum="56096808b6be7f6feb494d40ebc7c0c61fc3ea8c">http://www.rarlab.com/rar/unrarsrc-5.7.1.tar.gz</Archive>
+            <SourceURI>util/archive/unrar/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>unrar</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>5.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>unshield</Name>
+            <Homepage>https://github.com/twogood/unshield</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">InstallShield Cabinet extractor</Summary>
+            <Summary xml:lang="tr">InstallShield Cabinet açma uygulaması</Summary>
+            <Description xml:lang="en">Unshield is a program to extract files from InstallShield Cabinet files.</Description>
+            <Description xml:lang="tr">unshield, InstallShield Cabinet dosyalarından dosya çıkarabilen bir uygulamadır.</Description>
+            <Archive type="targz" sha1sum="256717c84396e8675399bd87decf360713ef2cb5">https://github.com/twogood/unshield/archive/1.4.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/unshield/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>unshield</Name>
+            <RuntimeDependencies>
+                <Dependency>openssl</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>unshield-devel</Name>
+            <Summary xml:lang="en">Development files for unshield</Summary>
+            <Summary xml:lang="tr">unshield için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">unshield</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.4.3</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xarchiver</Name>
+            <Homepage>http://xarchiver.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">A lightweight GTK+2 archiving/compression tool</Summary>
+            <Summary xml:lang="tr">GTK+2 tabanlı hafif ve sade bir arşiv yöneticisi</Summary>
+            <Description xml:lang="en">Xarchiver is a GTK+2 only frontend to 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm and deb (open and extract only). Xarchiver allows you to create, add, extract and delete files in the above formats. 7z, zip, rar, arj password protected archives are supported.</Description>
+            <Description xml:lang="tr">Xarchiver, 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm ve deb için GTK+2 tabanlı bir uygulamadır. Bu formatlarda arşivleme, ekleme, çıkarma ve silme işlemlerini yapabilir. Ayrıca parola korumalı 7z, zip, rar ve arj dosyalarını da destekler.</Description>
+            <Icon>xarchiver</Icon>
+            <Archive type="targz" sha1sum="db763b3eaf926ebfc78ba0f647902d0d3764a813">https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xarchiver/1:0.5.4.14-1/xarchiver_0.5.4.14.orig.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/xarchiver/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xarchiver</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>p7zip</Dependency>
+                <Dependency>unarj</Dependency>
+                <Dependency>unrar</Dependency>
+                <Dependency>xdg-utils</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/man</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.5.4.14</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xorriso</Name>
+            <Homepage>http://www.gnu.org/software/xorriso/</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">ISO 9660 image manipulation tool</Summary>
+            <Summary xml:lang="tr">ISO 9660 imaj manipülasyon aracı</Summary>
+            <Description xml:lang="en">xorriso is a program which maps file objects from POSIX compliant filesystems into Rock Ridge enhanced ISO 9660 filesystems and allows session-wise manipulation of such filesystems. It can load the management information of existing ISO images and it writes the session results to optical media or to filesystem objects. Vice versa xorriso is able to restore file objects from ISO 9660 filesystems.</Description>
+            <Description xml:lang="tr">xorriso, POSIX uyumlu dosya sistemlerini Rock Ridge tarafından geliştirilmişs ISO 9660 dosya sistemlerine haritalar ve oturum boyunca bu tür dosya sistemlerinin manipüle edilmesine/değiştirilmesine izin verir. xorriso ISO 9660 dosya sistemlerinden dosya nesnelerini geri yükleyebilir eski haline getirebilir.</Description>
+            <Icon>xorriso</Icon>
+            <Archive type="targz" sha1sum="98bab86082614a1a0f9601db5c9da14e5ad2d440">http://www.gnu.org/software/xorriso/xorriso-1.5.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>acl-devel</Dependency>
+                <Dependency>attr-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libedit-devel</Dependency>
+                <Dependency>readline-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/xorriso/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xorriso</Name>
+            <RuntimeDependencies>
+                <Dependency>acl</Dependency>
+                <Dependency>attr</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libedit</Dependency>
+                <Dependency>readline</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.5.2</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>zziplib</Name>
+            <Homepage>http://zziplib.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <License>MPL-1.1</License>
+            <License>ZLIB</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">libZ-based ZIP-access Library</Summary>
+            <Summary xml:lang="tr">libZ tabanlı ZIP erişim kitaplığı</Summary>
+            <Description xml:lang="en">zziplib provides read access to zipped files in a zip-archive, using compression based solely on free algorithms provided by zlib.</Description>
+            <Description xml:lang="tr">zziplib zip arşivindeki sıkıştırılmış dosyalara, zlib tarafından sunulan özgür algoritmalarla erişim sağlayan bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="1644c03fbc95f33decaaa04b5fb1e83d6bea2dfc">https://github.com/gdraheim/zziplib/archive/v0.13.69.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/archive/zziplib/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>zziplib</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>zziplib-devel</Name>
+            <Summary xml:lang="en">Development files for zziplib</Summary>
+            <Summary xml:lang="tr">zziplib için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">zziplib</Dependency>
+                <Dependency>libsdl-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>zziplib-docs</Name>
+            <Summary xml:lang="en">Documentation for zziplib</Summary>
+            <Summary xml:lang="tr">zziplib için belgelendirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">zziplib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>0.13.69</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>bash-completion</Name>
+            <Homepage>http://bash-completion.alioth.debian.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.shell</PartOf>
+            <Summary xml:lang="en">Programmable completion for bash</Summary>
+            <Summary xml:lang="tr">Bash kabuğu için otomatik tamamlama</Summary>
+            <Description xml:lang="en">A relatively new feature in bash is programmable completion. Since now, users have been able to complete commands, variables and filenames; now it is also possible to complete parameters.</Description>
+            <Description xml:lang="tr">Kabukta çeşitli uygulamalar için otomatik tamamlama özelliği eklenebilmesine olanak sağlayan bir programdır.</Description>
+            <Archive type="tarxz" sha1sum="4af05f84d685240d332b87b21b0c00912f1c613b">https://github.com/scop/bash-completion/releases/download/2.9/bash-completion-2.9.tar.xz</Archive>
+            <SourceURI>util/shell/bash-completion/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>bash-completion</Name>
+            <Files>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/var</Path>
+            </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/bash_completion.d/sulin" permission="0644" owner="root">sulin</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-10</Date>
+                <Version>2.9</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
