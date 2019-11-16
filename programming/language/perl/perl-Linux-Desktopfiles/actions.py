@@ -19,5 +19,5 @@ def check():
 
 def install():
     perlmodules.install()
-    
+
     inarytools.dodoc("Changes", "MANIFEST")

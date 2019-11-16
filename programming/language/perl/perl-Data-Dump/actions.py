@@ -23,4 +23,3 @@ def install():
     perlmodules.install()
 
     inarytools.dodoc("Changes", "README")
-

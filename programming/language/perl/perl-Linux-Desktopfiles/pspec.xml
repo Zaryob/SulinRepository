@@ -1,12 +1,12 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>perl-Linux-Desktopfiles</Name>
         <Homepage>https://metacpan.org/module/Linux::DesktopFiles</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Ünal</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Packager>
         <License>GPLv3</License>
         <IsA>library</IsA>
@@ -35,11 +35,11 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.11</Date>
+            <Date>2019-11-11</Date>
             <Version>0.25</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Ünal</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Update>
     </History>
 </INARY>

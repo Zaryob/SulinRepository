@@ -9,7 +9,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-   #autotools.autoreconf("-fiv")
+    autotools.autoreconf("-fiv")
     autotools.configure("--enable-imlib2 \
                          --enable-xinerama \
                          --enable-xft \

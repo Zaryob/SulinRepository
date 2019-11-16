@@ -1,12 +1,12 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>fluxbox</Name>
         <Homepage>http://www.fluxbox.org</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Ünal</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Packager>
         <License>MIT</License>
         <IsA>app:gui</IsA>
@@ -19,6 +19,7 @@
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
+            <Dependency>libXinerama</Dependency>
             <Dependency>libXinerama-devel</Dependency>
             <Dependency>libXpm-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
@@ -57,11 +58,11 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.11</Date>
+            <Date>2019-11-11</Date>
             <Version>1.3.7</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Ünal</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Update>
     </History>
 </INARY>
