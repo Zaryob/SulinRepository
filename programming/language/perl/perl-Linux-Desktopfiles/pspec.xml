@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Linux-Desktopfiles</Name>
+        <Homepage>https://metacpan.org/module/Linux::DesktopFiles</Homepage>
+        <Packager>
+            <Name>Ali Rıza Ünal</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Perl module to get and parse the linux desktop files</Summary>
+        <Description>perl-Linux-Desktopfiles Perl module to get and parse the linux desktop files</Description>
+        <Archive sha1sum="b94e75b6d85986a72aa167be36c209a41b701950" type="targz">https://cpan.metacpan.org/authors/id/T/TR/TRIZEN/Linux-DesktopFiles-0.25.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Module-Build</Dependency>
+        </BuildDependencies>
+     </Source>
+
+    <Package>
+        <Name>perl-Linux-Desktopfiles</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Module-Build</Dependency>
+            <Dependency>perl-Data-Dump</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-11</Date>
+            <Version>0.25</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Ünal</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
