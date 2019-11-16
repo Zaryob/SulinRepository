@@ -1,12 +1,12 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>xarchiver</Name>
         <Homepage>http://xarchiver.sourceforge.net/</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Packager>
         <License>GPLv2+</License>
         <Icon>xarchiver</Icon>
@@ -49,11 +49,11 @@
 
     <History>
         <Update release="1">
-            <Date>2019-09-18</Date>
+            <Date>2019-11-19</Date>
             <Version>0.5.4.14</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Update>
     </History>
 </INARY>

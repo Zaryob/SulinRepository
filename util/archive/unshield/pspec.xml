@@ -1,12 +1,12 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>unshield</Name>
         <Homepage>https://github.com/twogood/unshield</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Packager>
         <License>MIT</License>
         <IsA>app:console</IsA>
@@ -48,11 +48,11 @@
 
     <History>
         <Update release="1">
-            <Date>2019-09-18</Date>
+            <Date>2019-11-19</Date>
             <Version>1.4.3</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Update>
     </History>
 </INARY>

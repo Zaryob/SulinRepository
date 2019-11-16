@@ -1,11 +1,11 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>lzip</Name>
         <Homepage>http://www.nongnu.org/lzip/lzip.html</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
+            <Name>Ali Rıza Keskin</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>GPLv2</License>
@@ -30,10 +30,10 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.11</Date>
+            <Date>2019-11-19</Date>
             <Version>1.21</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Name>Ali Rıza Keskin</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

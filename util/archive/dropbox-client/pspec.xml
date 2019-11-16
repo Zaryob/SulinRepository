@@ -1,23 +1,23 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>dropbox-client</Name>
         <Homepage>http://www.dropbox.com</Homepage>
         <Packager>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Packager>
         <License>as-is</License>
         <License>MIT</License>
         <License>GPLv2</License>
-        <License>LGPLv2.1</License>        
+        <License>LGPLv2.1</License>
         <Icon>dropbox</Icon>
         <IsA>app:gui</IsA>
         <Summary>A Dropbox client</Summary>
         <Description>Dropbox is a Web-based file hosting service which uses cloud computing to enable users to store and share files and folders with others across the Internet using file synchronization.</Description>
         <Archive sha1sum="9d175917c3ea9226a2455a67c0b38f1e41d33bb2" type="targz" target="i686">https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86-84.4.170.tar.gz</Archive>
-        <Archive sha1sum="a3f81a9868fe3ba0684a4988f767a505496fc105" type="targz" target="x86_64">https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-84.4.170.tar.gz</Archive>        
+        <Archive sha1sum="a3f81a9868fe3ba0684a4988f767a505496fc105" type="targz" target="x86_64">https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-84.4.170.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -62,11 +62,11 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.11</Date>
+            <Date>2019-11-19</Date>
             <Version>84.4.170</Version>
             <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Update>
     </History>
 </INARY>
