@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>atool</Name>
+        <Homepage>http://www.nongnu.org/atool</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A script for managing file archives</Summary>
+        <Description>atool is a script for managing file archives of various types (tar, tar+gzip, zip etc).</Description>
+        <Archive sha1sum="40865bdc533f95fcaffdf8002889eb2ac67224a9" type="targz">http://savannah.nongnu.org/download/atool/atool-0.39.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>atool</Name>
+            <BuildDependencies>
+	    <Dependency>file</Dependency>
+	    <Dependency>perl</Dependency>
+        </BuildDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>0.39.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

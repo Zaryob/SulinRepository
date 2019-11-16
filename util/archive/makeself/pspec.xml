@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>makeself</Name>
+        <Homepage>http://megastep.org/makeself/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <PartOf>util.archive</PartOf>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A self-extracting archive generator.</Summary>
+        <Description>makeself is a small script to generate self-extracting archives are being used many applications, for example Nvidia driver archives.</Description>
+        <Archive sha1sum="ec5e29053ccd769528b8521f325ccaa50357de5c" type="targz">https://github.com/megastep/makeself/archive/release-2.4.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>makeself</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+            <Path fileType="executable">/usr/share/makeself</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>2.4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

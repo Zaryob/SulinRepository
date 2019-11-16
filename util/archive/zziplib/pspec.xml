@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>zziplib</Name>
+        <Homepage>http://zziplib.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <License>MPL-1.1</License>
+        <License>ZLIB</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>libZ-based ZIP-access Library</Summary>
+        <Description>zziplib provides read access to zipped files in a zip-archive, using compression based solely on free algorithms provided by zlib.</Description>
+        <Archive sha1sum="1644c03fbc95f33decaaa04b5fb1e83d6bea2dfc" type="targz">https://github.com/gdraheim/zziplib/archive/v0.13.69.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl-devel</Dependency>
+	    <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>zziplib</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+	    <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>zziplib-devel</Name>
+        <Summary>Development files for zziplib</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">zziplib</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>zziplib-docs</Name>
+        <Summary>Documentation for zziplib</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">zziplib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>0.13.69</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

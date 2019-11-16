@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>par2cmdline</Name>
+        <Homepage>https://github.com/Parchive/par2cmdline</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>util.archive</PartOf>
+        <Summary>Command line implementation of the PAR v2.0 specification</Summary>
+        <Description>par2cmdline is a program for creating and using PAR2 files to detect damage in data files and repair them if necessary. It can be used with any kind of file.</Description>
+        <Archive sha1sum="acee4a0b597b2085a5892dd5dfe3bbfb21afbd8d" type="targz">https://github.com/Parchive/par2cmdline/archive/v0.8.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>par2cmdline</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>0.8.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
