@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>parted</Name>
+        <Homepage>http://www.gnu.org/software/parted</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>app:console</IsA>
+        <Summary>Create, destroy, resize, check, copy partitions and file systems</Summary>
+        <Description>The GNU Parted program allows you to create, destroy, resize, move, and copy hard disk partitions. Parted can be used for creating space for new operating systems, reorganizing disk usage, and copying data to new hard disks.</Description>
+        <Archive sha1sum="e639500f9587cf6fa9b0dbc08e5e760244614595" type="tarxz">https://ftp.gnu.org/gnu/parted/parted-3.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>device-mapper-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>parted</Name>
+        <RuntimeDependencies>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>device-mapper</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>util-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>parted-devel</Name>
+        <Summary>Development files for parted</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">parted</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-18</Date>
+            <Version>3.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

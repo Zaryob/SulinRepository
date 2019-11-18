@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dosfstools</Name>
+        <Homepage>http://www.daniel-baumann.ch/software/dosfstools/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>Tools to create and check DOS and VFAT filesystems</Summary>
+        <Description>The dosfstools package includes the DOS and VFAT filesystem utilities like mkdosfs, mkfs.msdos, mkfs.vfat, dosfsck, dosfslabel. You can create and check MS-DOS FAT filesystems on hard drives or on floppies</Description>
+        <Archive type="tarxz" sha1sum="9e91fb0a4bb4b734aea6baefefd3ad86ab657018">https://github.com/dosfstools/dosfstools/releases/download/v4.0/dosfstools-4.0.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>dosfstools</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
