@@ -789,6 +789,69 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>serf</Name>
+            <Homepage>https://code.google.com/p/serf/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apachev2</License>
+            <IsA>library</IsA>
+            <PartOf>network.library</PartOf>
+            <Summary xml:lang="en">High-performance asynchronous HTTP client library.</Summary>
+            <Description xml:lang="en">The serf library is a high performance C-based HTTP client library built upon the Apache Portable Runtime (APR) library.</Description>
+            <Archive type="tarbz2" sha1sum="26015c63e3bbb108c1689bf2090e4c26351db674">https://archive.apache.org/dist/serf/serf-1.3.9.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>db-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>apr-devel</Dependency>
+                <Dependency>apr-util-devel</Dependency>
+                <Dependency>scons</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/library/serf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>serf</Name>
+            <RuntimeDependencies>
+                <Dependency>db</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>apr</Dependency>
+                <Dependency>apr-util</Dependency>
+                <Dependency>openldap-client</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>serf-devel</Name>
+            <Summary xml:lang="en">Development files for serf</Summary>
+            <Summary xml:lang="tr">serf için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">serf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.3.9</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>rsync</Name>
             <Homepage>http://rsync.samba.org/</Homepage>
             <Packager>
@@ -2217,6 +2280,51 @@
             <Update release="1">
                 <Date>2019-09-27</Date>
                 <Version>0.7</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>netcat</Name>
+            <Homepage>http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/nc/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <PartOf>network.analyzer</PartOf>
+            <Summary xml:lang="en">A tool designed to read and write data across connections using TCP/IP, OpenBSD version</Summary>
+            <Summary xml:lang="tr">TCP/IP protokolünü kullanan, ağ bağlantıları üzerinden veri okuma ve yazmaya yarayan bir yardımcı uygulama</Summary>
+            <Description xml:lang="en">A simple Unix utility which reads and writes data across network connections using TCP or UDP protocol. It is designed to be a reliable &quot;back-end&quot; tool that can be used directly or easily driven by other programs and scripts.</Description>
+            <Description xml:lang="tr">Ağ bağlantıları arasında TCP ve UDP kullanarak veri okuyup yazabilen basit bir Unix aracıdır. OpenBSD sürümü kullanılmaktadır.</Description>
+            <Archive type="targz" sha1sum="aab1080b6f8e85eae1b1a0c2d0cb7d8e6807d78b">https://github.com/SulinOS/netcat-openbsd/archive/1.203p.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libbsd-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/analyzer/netcat/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>netcat</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.203</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -4165,10 +4273,18 @@
             <Summary xml:lang="en">Web Open Font Format 2 reference implementation</Summary>
             <Description xml:lang="en">The implementor for WOFF2 formatted files. The structure of WOFF2 files is similar to that of SFNT and WOFF 1.0 font files, in that there is a header followed by a table directory, followed by the data for those tables.</Description>
             <Archive type="targz" sha1sum="bab4838b248026c968e171a5467b5176caf4e2e5">https://github.com/google/woff2/archive/v1.0.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>ninja</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>libbrotli-devel</Dependency>
+            </BuildDependencies>
             <SourceURI>desktop/font/woff/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>woff</Name>
+            <RuntimeDependencies>
+                <Dependency>libbrotli</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="executable">/usr/bin</Path>
@@ -4178,7 +4294,7 @@
             <Name>woff-devel</Name>
             <Summary xml:lang="en">Development files for woff</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">woff</Dependency>
+                <Dependency release="2">woff</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -4186,6 +4302,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-19</Date>
+                <Version>1.0.2</Version>
+                <Comment>Build dependencies fixed and action script changed.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>1.0.2</Version>
@@ -5978,7 +6101,6 @@
                 <Dependency>glib2-32bit</Dependency>
                 <Dependency>cairo-32bit</Dependency>
                 <Dependency>pango-32bit</Dependency>
-                <Dependency>librest-32bit</Dependency>
                 <Dependency>json-glib-32bit</Dependency>
                 <Dependency>libXi-32bit</Dependency>
                 <Dependency>libX11-32bit</Dependency>
@@ -9534,6 +9656,63 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>polkit-gnome</Name>
+            <Homepage>http://hal.freedesktop.org/docs/polkit</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>app:gui</IsA>
+            <IsA>library</IsA>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">Authentication agent for polkit</Summary>
+            <Summary xml:lang="tr">polkit için kimlik denetim yardımcısı</Summary>
+            <Description xml:lang="en">polkit-gnome package provides an authentication agent for polkit that integrates well with the GNOME desktop environment.</Description>
+            <Description xml:lang="tr">polkit-gnome paketi GNOME masaüstü ortamı ile bütünleşmiş bir kimlik denetim yardımcısı sağlar.</Description>
+            <Archive type="tarxz" sha1sum="948bad76395834a1b45b65bd191d46145f5c0b9f">http://ftp.gnome.org/pub/GNOME/sources/polkit-gnome/0.105/polkit-gnome-0.105.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>at-spi2-core-devel</Dependency>
+                <Dependency>polkit-devel</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/polkit-gnome/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>polkit-gnome</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop" permission="0644" owner="root">polkit-gnome-authentication-agent-1.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>0.105</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>deadbeef</Name>
             <Homepage>http://deadbeef.sourceforge.net</Homepage>
             <Packager>
@@ -9695,7 +9874,7 @@
             <Name>gtknetcat</Name>
             <Homepage>http://wiki.lxde.org/en/GtkNetCat</Homepage>
             <Packager>
-                <Name>Ayhan Yalçınsoy</Name>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Packager>
             <License>GPLv3</License>
@@ -9717,7 +9896,7 @@
             <RuntimeDependencies>
                 <Dependency>gtk2</Dependency>
                 <Dependency>netcat</Dependency>
-                <Dependency>python-gtk</Dependency>
+                <Dependency>python-gtk2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -12137,7 +12316,6 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <Name>gigolo</Name>
             <RuntimeDependencies>
                 <Dependency>gtk2</Dependency>
-                <Dependency>gvfs</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -20819,7 +20997,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>programming.language.python</PartOf>
             <RuntimeDependencies>
                 <Dependency>curl</Dependency>
-                <Dependency>python2</Dependency>
+                <Dependency>python</Dependency>
                 <Dependency>openssl</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -20831,7 +21009,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
                 <Dependency>curl</Dependency>
-                <Dependency>python2</Dependency>
+                <Dependency>python</Dependency>
                 <Dependency>openssl</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -25614,6 +25792,54 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-Term-ReadKey</Name>
+            <Homepage>http://search.cpan.org/~jstowe/TermReadKey</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Term::ReadKey - A perl module for simple terminal control</Summary>
+            <Description xml:lang="en">This module, ReadKey, provides ioctl control for terminals and Win32
+consoles so the input modes can be changed (thus allowing reads of a single
+character at a time), and also provides non-blocking reads of stdin, as well
+as several other terminal related features, including retrieval/modification
+of the screen size, and retrieval/modification of the control characters.
+Installation requires MakeMaker 3.5 or higher (MakeMaker 3.7 is included
+with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).</Description>
+            <Archive type="targz" sha1sum="e869c13a485e6c56561c34351fd62352bdac793c">mirrors://cpan/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Term-ReadKey/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Term-ReadKey</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>2.38</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>ruby</Name>
             <Homepage>http://www.ruby-lang.org/en/</Homepage>
             <Packager>
@@ -25796,7 +26022,6 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>ruby-gio2</Name>
             <RuntimeDependencies>
                 <Dependency>ruby</Dependency>
-                <Dependency>gio</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/ruby/site_ruby/2.4.0/gio2.rb</Path>
@@ -25870,7 +26095,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
         </Package>
         <History>
             <Update release="1">
-                <Date>2019-10-23</Date>
+                <Date>2019-11-19</Date>
                 <Version>3.4.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
@@ -26826,6 +27051,337 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>java7-openjdk</Name>
+            <Homepage>http://icedtea.classpath.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>programming.language.java</PartOf>
+            <Summary xml:lang="en">Open Java Development Kit</Summary>
+            <Description xml:lang="en">OpenJDK (Open Java Development Kit) is a free and open source implementation of the Java Platform, Standard Edition (Java SE).</Description>
+            <Archive type="tarxz" sha1sum="101aa2bba8ab77c30a80259342c6412515dd158c">http://icedtea.wildebeest.org/download/source/icedtea-3.14.0.tar.xz</Archive>
+            <AdditionalFiles>
+                <AdditionalFile target="patches/giflib_5.1.diff">giflib_5.1.diff</AdditionalFile>
+                <AdditionalFile target="patches/fontconfig-paths.diff">fontconfig-paths.diff</AdditionalFile>
+                <AdditionalFile target="patches/openjdk7_nonreparenting-wm.diff">openjdk7_nonreparenting-wm.diff</AdditionalFile>
+            </AdditionalFiles>
+            <BuildDependencies>
+                <Dependency>wget</Dependency>
+                <Dependency>nss-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>attr-devel</Dependency>
+                <Dependency>xorg-proto</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>cups-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>jdk7-openjdk</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>openjpeg</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>chrpath</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/java/java7-openjdk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>jre7-openjdk-headless</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - Minimal Java runtime - needed for executing non GUI Java programs</Summary>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>openjpeg</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/orbd</Path>
+                <Path fileType="executable">/usr/bin/rmid</Path>
+                <Path fileType="executable">/usr/bin/java</Path>
+                <Path fileType="data">/etc/env.d/20java_jre.csh</Path>
+                <Path fileType="data">/etc/env.d/20java_jre</Path>
+                <Path fileType="config">/etc/java-7-openjdk/</Path>
+                <Path fileType="executable">/usr/bin/pack200</Path>
+                <Path fileType="executable">/usr/bin/keytool</Path>
+                <Path fileType="executable">/usr/bin/tnameserv</Path>
+                <Path fileType="executable">/usr/bin/unpack200</Path>
+                <Path fileType="man">/usr/share/man/man1/rmid.1</Path>
+                <Path fileType="man">/usr/share/man/man1/orbd.1</Path>
+                <Path fileType="man">/usr/share/man/man1/java.1</Path>
+                <Path fileType="executable">/usr/bin/servertool</Path>
+                <Path fileType="executable">/usr/bin/rmiregistry</Path>
+                <Path fileType="doc">/usr/share/doc/java7-openjdk/</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/rmid.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/java.1</Path>
+                <Path fileType="man">/usr/share/man/man1/pack200.1</Path>
+                <Path fileType="man">/usr/share/man/man1/keytool.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/orbd.1</Path>
+                <Path fileType="man">/usr/share/man/man1/tnameserv.1</Path>
+                <Path fileType="man">/usr/share/man/man1/unpack200.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/pack200.1</Path>
+                <Path fileType="man">/usr/share/man/man1/servertool.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/keytool.1</Path>
+                <Path fileType="man">/usr/share/man/man1/rmiregistry.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/tnameserv.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/unpack200.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/servertool.1</Path>
+                <Path fileType="doc">/usr/share/doc/jre7-openjdk-headless</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/rmiregistry.1</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/java</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/orbd</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/rmid</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/keytool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/pack200</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/orbd</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/java</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/rmid</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/tnameserv</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/unpack200</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/servertool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/policytool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/rmiregistry</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/keytool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/pack200</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/*/jli/libjli.so</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/tnameserv</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/unpack200</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/servertool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/rmiregistry</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/amd64/libjawt.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/amd64/xawt/libmawt.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/amd64/headless/libmawt.so</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/env.d/20java_jre" permission="0644" owner="root">20java_jre</AdditionalFile>
+                <AdditionalFile target="/etc/env.d/20java_jre.csh" permission="0644" owner="root">20java_jre.csh</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>jre7-openjdk</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - Full Java runtime environment - needed for executing Java GUI and Webstart programs</Summary>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>openjpeg</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/openjdk</Path>
+                <Path fileType="executable">/usr/bin/policytool</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/</Path>
+                <Path fileType="man">/usr/share/man/man1/policytool.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/policytool.1</Path>
+                <Path fileType="data">/usr/share/applications/policytool.desktop</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-7-openjdk/jre/bin/policytool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/*/libjsoundalsa.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/*/libpulse-java.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/*/libsplashscreen.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/amd64/libjsoundalsa.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/amd64/libpulse-java.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/jre/lib/amd64/libsplashscreen.so</Path>
+            </Files>
+            <Conflicts>
+                <Package>sun-jre</Package>
+            </Conflicts>
+            <Replaces>
+                <Package>sun-jre</Package>
+            </Replaces>
+        </Package>
+        <Package>
+            <Name>jdk7-openjdk</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - SDK</Summary>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>jre7-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc/env.d/21java_jdk.csh</Path>
+                <Path fileType="data">/etc/env.d/21java_jdk</Path>
+                <Path fileType="man">/usr/share/man/man1/</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/</Path>
+                <Path fileType="executable">/usr/bin/jar</Path>
+                <Path fileType="executable">/usr/bin/xjc</Path>
+                <Path fileType="executable">/usr/bin/apt</Path>
+                <Path fileType="executable">/usr/bin/jdeps</Path>
+                <Path fileType="executable">/usr/bin/jjs</Path>
+                <Path fileType="executable">/usr/bin/clhsdb</Path>
+                <Path fileType="executable">/usr/bin/hsdb</Path>
+                <Path fileType="executable">/usr/bin/jdb</Path>
+                <Path fileType="executable">/usr/bin/jps</Path>
+                <Path fileType="executable">/usr/bin/jmap</Path>
+                <Path fileType="executable">/usr/bin/idlj</Path>
+                <Path fileType="executable">/usr/bin/jcmd</Path>
+                <Path fileType="executable">/usr/bin/jhat</Path>
+                <Path fileType="executable">/usr/bin/rmic</Path>
+                <Path fileType="executable">/usr/bin/javac</Path>
+                <Path fileType="executable">/usr/bin/javah</Path>
+                <Path fileType="executable">/usr/bin/javap</Path>
+                <Path fileType="executable">/usr/bin/jinfo</Path>
+                <Path fileType="executable">/usr/bin/wsgen</Path>
+                <Path fileType="executable">/usr/bin/jstat</Path>
+                <Path fileType="executable">/usr/bin/jstack</Path>
+                <Path fileType="executable">/usr/bin/jstatd</Path>
+                <Path fileType="executable">/usr/bin/javadoc</Path>
+                <Path fileType="executable">/usr/bin/extcheck</Path>
+                <Path fileType="executable">/usr/bin/jconsole</Path>
+                <Path fileType="executable">/usr/bin/wsimport</Path>
+                <Path fileType="executable">/usr/bin/jarsigner</Path>
+                <Path fileType="executable">/usr/bin/jsadebugd</Path>
+                <Path fileType="executable">/usr/bin/schemagen</Path>
+                <Path fileType="executable">/usr/bin/serialver</Path>
+                <Path fileType="executable">/usr/bin/jrunscript</Path>
+                <Path fileType="executable">/usr/bin/appletviewer</Path>
+                <Path fileType="executable">/usr/bin/native2ascii</Path>
+                <Path fileType="data">/usr/share/applications/jconsole.desktop</Path>
+                <Path fileType="header">/usr/lib/jvm/java-7-openjdk/include</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/apt</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jdb</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jps</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jjs</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jdeps</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/hsdb</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/clhsdb</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/xjc</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/rmic</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/rmid</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/idlj</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/orbd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/java</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jhat</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jmap</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jcmd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/javac</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/javah</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/javap</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jinfo</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jstat</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/wsgen</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jstatd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jstack</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/pack200</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/javadoc</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/keytool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/wsimport</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/extcheck</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jconsole</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/tnameserv</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/unpack200</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/schemagen</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/serialver</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jarsigner</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jsadebugd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/jrunscript</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/policytool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/servertool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/rmiregistry</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/java-rmi.cgi</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/native2ascii</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/bin/appletviewer</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/jexec</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/ct.sym</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/dt.jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/ir.idl</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/orb.idl</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/tools.jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/sa-jdi.jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-7-openjdk/lib/jconsole.jar</Path>
+            </Files>
+            <Conflicts>
+                <Package>sun-jdk</Package>
+            </Conflicts>
+            <Replaces>
+                <Package>sun-jdk</Package>
+            </Replaces>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/env.d/21java_jdk.csh" permission="0644" owner="root">21java_jdk.csh</AdditionalFile>
+                <AdditionalFile target="/etc/env.d/21java_jdk" permission="0644" owner="root">21java_jdk</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>openjdk7-src</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - sources</Summary>
+            <RuntimeDependencies>
+                <Dependency>jdk7-openjdk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/jvm/java-7-openjdk/src.zip</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>openjdk7-doc</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - documentation</Summary>
+            <RuntimeDependencies>
+                <Dependency>jdk7-openjdk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/openjdk7-doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>7u_121.2.6.19</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>slang</Name>
             <Homepage>http://www.jedsoft.org/slang/</Homepage>
             <Packager>
@@ -27050,7 +27606,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libbsd-devel</Name>
             <Summary xml:lang="en">Development files for libbsd</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libbsd</Dependency>
+                <Dependency release="2">libbsd</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -27059,6 +27615,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-17</Date>
+                <Version>0.9.1</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>0.9.1</Version>
@@ -27407,6 +27970,61 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>zstd</Name>
+            <Homepage>http://www.zstd.net/</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3+</License>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Zstandard - Fast real-time compression algorithm</Summary>
+            <Description xml:lang="en">Zstandard, or zstd as short version, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios. It&apos;s backed by a very fast entropy stage, provided by Huff0 and FSE library.</Description>
+            <Archive type="targz" sha1sum="355e79185fa1ea5b325d63cfcb6ead6e6e4aa9c4">https://github.com/facebook/zstd/releases/download/v1.4.4/zstd-1.4.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>lz4-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/zstd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>zstd</Name>
+            <RuntimeDependencies>
+                <Dependency>lz4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/zstd</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>zstd-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">zstd</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-17</Date>
+                <Version>1.4.4</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gyp</Name>
             <Homepage>https://gyp.gsrc.io/</Homepage>
             <Packager>
@@ -27684,6 +28302,58 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Update release="1">
                 <Date>2019-09-08</Date>
                 <Version>1.8.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ant</Name>
+            <Homepage>http://ant.apache.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>app:console</IsA>
+            <PartOf>programming.build</PartOf>
+            <Summary xml:lang="en">Java-based build tool</Summary>
+            <Summary xml:lang="tr">Java tabanlı inşa aracı</Summary>
+            <Description xml:lang="en">Apache Ant is a Java-based build tool. In theory, it is kind of like Make, but without Make&apos;s wrinkles.</Description>
+            <Description xml:lang="tr">Apache ant Java tabanlı bir inşa aracıdır. Teorik olarak make&apos;e benzemektedir ancak make&apos;in kırışıksız halidir</Description>
+            <Description xml:lang="es">Apache Ant es una herramienta de compilación (build) basado en Java. Teróricamente se puede comparar con Make, pero sin las vueltas que tiene aquel.</Description>
+            <Archive type="tarbz2" sha1sum="24ceef44b43cd2726c865d0de5168a84a1cb30c7">http://archive.apache.org/dist/ant/source/apache-ant-1.10.7-src.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>jdk7-openjdk</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/build/ant/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ant</Name>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="data">/usr/share/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/ant/ant.conf" permission="0644" owner="root">ant.conf</AdditionalFile>
+                <AdditionalFile target="/etc/profile.d/ant.sh" permission="0644" owner="root">ant.sh</AdditionalFile>
+                <AdditionalFile target="/etc/profile.d/ant.csh" permission="0644" owner="root">ant.csh</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>ant-docs</Name>
+            <Summary xml:lang="en">Documentation package for ant build system</Summary>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.10.7</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -29533,6 +30203,143 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>apr</Name>
+            <Homepage>http://apr.apache.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>library</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="en">Apache portable runtime library</Summary>
+            <Summary xml:lang="tr">Apache portatif çalışma ortamı kitaplığı (eski sürüm)</Summary>
+            <Summary xml:lang="pl">Apache Portable Runtime – przenośna biblioteka uruchomieniowa</Summary>
+            <Description xml:lang="en">The mission of the Apache portable runtime (APR) is to provide a free library of C data structures and routines.</Description>
+            <Description xml:lang="tr">Apache portatif çalışma ortamı kitaplığı (APR), C data yapıları için özgür kitaplığı sağlar. Bu sürüm 0 ile başlar.</Description>
+            <Description xml:lang="fr">L&apos;Apache Portable Runtime (APR) a pour mission de fournir une librairie libre C de structures de donnés et de routines. Le numéro de version majeur commence par un 0.</Description>
+            <Description xml:lang="pl">APR to Przenośna Biblioteka Fazy Wykonywania Apache, zaprojektowana jako biblioteka wspomagająca, która udostępnia przewidywalny i spójny interfejs do podstawowych, specyficznych dla platformy implementacji.</Description>
+            <Archive type="targz" sha1sum="caac4a92d51b211b0c1374217e4fc64ca8142288">mirrors://apache/apr/apr-1.7.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libutil-linux-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/misc/apr/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>apr</Name>
+            <RuntimeDependencies>
+                <Dependency>libutil-linux</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+                <Path fileType="data">/usr/lib/apr-1/build</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>apr-devel</Name>
+            <Summary xml:lang="en">Development files for apr</Summary>
+            <Summary xml:lang="tr">Development files for apr</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">apr</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.7.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>apr-util</Name>
+            <Homepage>http://apr.apache.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>library</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="en">Apache portable runtime utils</Summary>
+            <Summary xml:lang="tr">Apache çalışma ortamı araçları (eski sürüm)</Summary>
+            <Description xml:lang="en">Apache portable runtime utils (APR-Util) contains additional utility interfaces for APR; including support for XML, database interfaces, URI parsing and more.</Description>
+            <Description xml:lang="tr">Apache portatif çalışma ortamı araçları (APR-Util) ek arabirimleri içerir; XML, LDAP, veritabanı, URI ve diğer arabirimler. Bu sürüm 0 ile başlar.</Description>
+            <Description xml:lang="fr">L&apos;Apache Portable Runtime Utils (APR-Utils) contient des interfaces utilitaires supplémentaires pour APR fournissant un support pour, XML, LDAP,des interfaces pour les bases de données, d&apos;analyse d&apos;URI, et plus encore. La numéro de version majeur commence par un 1.</Description>
+            <Description xml:lang="pl">Narzędzie APR to biblioteka narzędziowa zaimplementowana na bazie apr, oferująca dostęp do bazy danych, przetwarzanie XML oraz inne przydatne funkcje.</Description>
+            <Archive type="targz" sha1sum="5bae4ff8f1dad3d7091036d59c1c0b2e76903bf4">mirrors://apache/apr/apr-util-1.6.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>db-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>unixODBC-devel</Dependency>
+                <Dependency>apr-devel</Dependency>
+                <Dependency>mariadb-bin-lib</Dependency>
+                <Dependency>postgresql-lib</Dependency>
+                <Dependency>cyrus-sasl-devel</Dependency>
+                <Dependency>openldap-client</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/misc/apr-util/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>apr-util</Name>
+            <RuntimeDependencies>
+                <Dependency>db</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>apr</Dependency>
+                <Dependency>unixODBC</Dependency>
+                <Dependency>mariadb-bin-lib</Dependency>
+                <Dependency>postgresql-lib</Dependency>
+                <Dependency>cyrus-sasl</Dependency>
+                <Dependency>openldap-client</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>apr-util-devel</Name>
+            <Summary xml:lang="en">Development files for apr-util</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">apr-util</Dependency>
+                <Dependency>apr-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.6.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>valgrind</Name>
             <Homepage>http://www.valgrind.org</Homepage>
             <Packager>
@@ -30160,6 +30967,132 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Version>5.7</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>subversion</Name>
+            <Homepage>http://subversion.apache.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Subversion</License>
+            <IsA>app:console</IsA>
+            <IsA>service</IsA>
+            <PartOf>programming.scm</PartOf>
+            <Summary xml:lang="en">A compelling replacement for CVS</Summary>
+            <Summary xml:lang="tr">Bir sürüm kontrol sistemi</Summary>
+            <Description xml:lang="en">SVN is a version controlling system to store files and control their change history in a repository.</Description>
+            <Description xml:lang="tr">Daha gelişmiş özellikleri olan ve önceki CVS yerine kullanılan, bir sürüm yönetim sistemidir.</Description>
+            <Description xml:lang="fr">SVN est un gestionnaire de configuration permettant de stocker des fichiers et de contrôler leur historique de changement dans un dépôt.</Description>
+            <Archive type="tarbz2" sha1sum="de406057b0a2201d4dddcd296020a2bbdc2c3833">http://archive.apache.org/dist/subversion/subversion-1.9.12.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>apache</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>ruby-devel</Dependency>
+                <Dependency>serf-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>jdk7-openjdk</Dependency>
+                <Dependency>apr-util-devel</Dependency>
+                <Dependency>cyrus-sasl-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>swig</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">subversion-swig-perl-install_vendor.patch</Patch>
+                <Patch>subversion.rpath.fix.patch</Patch>
+                <Patch level="1">dont_compile_pyc.patch</Patch>
+            </Patches>
+            <SourceURI>programming/scm/subversion/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>subversion</Name>
+            <RuntimeDependencies>
+                <Dependency>file</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>apr</Dependency>
+                <Dependency>serf</Dependency>
+                <Dependency>apr-util</Dependency>
+                <Dependency>cyrus-sasl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/conf.d</Path>
+                <Path fileType="data">/etc/subversion</Path>
+                <Path fileType="data">/etc/bash_completion.d</Path>
+                <Path fileType="data">/usr/share/build</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/var/svn</Path>
+            </Files>
+            <Provides>
+                <SCOM script="service.py">System.Service</SCOM>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/conf.d/svnserve" permission="0644" owner="root">svnserve.confd</AdditionalFile>
+                <AdditionalFile target="/etc/subversion/config" permission="0644" owner="root">subversion.config</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>subversion-devel</Name>
+            <Summary xml:lang="en">Development files for subversion</Summary>
+            <Summary xml:lang="tr">Subversion için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>apr-devel</Dependency>
+                <Dependency>serf-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>apr-util-devel</Dependency>
+                <Dependency release="1">subversion</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>mod_dav_svn</Name>
+            <PartOf>server.web</PartOf>
+            <RuntimeDependencies>
+                <Dependency>apr</Dependency>
+                <Dependency>apache</Dependency>
+                <Dependency>apr-util</Dependency>
+                <Dependency>subversion</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/apache2</Path>
+                <Path fileType="executable">/usr/libexec/mod_dav_svn.so</Path>
+                <Path fileType="executable">/usr/libexec/mod_authz_svn.so</Path>
+                <Path fileType="config">/etc/apache2/modules.d</Path>
+                <Path fileType="data">/var/www/localhost/htdocs</Path>
+            </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/apache2/modules.d/47_mod_dav_svn.conf" permission="0644" owner="root">47_mod_dav_svn.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>1.9.12</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -30809,6 +31742,824 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Version>2.02.173</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>btrfs-progs</Name>
+            <Homepage>http://btrfs.wiki.kernel.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Userspace utilities for btrfs</Summary>
+            <Summary xml:lang="tr">btrfs dosya sistemi araçları</Summary>
+            <Description xml:lang="en">btrfs-progs package provides all the userspace programs needed to create, check, modify and correct any inconsistencies in the btrfs filesystem.</Description>
+            <Description xml:lang="tr">btrfs-progs, btrfs dosya sistemleri yaratmak, denetlemek; bu dosya sistemlerindeki hataları düzeltmek ve çeşitli değişiklikler yapmak için gereken araçları içerir.</Description>
+            <Archive type="tarxz" sha1sum="26dc7c7617f7810d9ab9cba5e9d414c6e44c8321">https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v5.3.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>xmlto</Dependency>
+                <Dependency>asciidoc</Dependency>
+                <Dependency>lzo-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>e2fsprogs-devel</Dependency>
+                <Dependency>zstd-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/btrfs-progs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>btrfs-progs</Name>
+            <RuntimeDependencies>
+                <Dependency>lzo</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>zstd</Dependency>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>e2fsprogs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/lib/udev/rules.d/64-btrfs-dm.rules</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>btrfs-progs-devel</Name>
+            <Summary xml:lang="en">Development files for btrfs-progs</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">btrfs-progs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-17</Date>
+                <Version>5.3.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>udisks</Name>
+            <Homepage>http://udisks.freedesktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Disk Management Service</Summary>
+            <Summary xml:lang="tr">Disk Yönetim Hizmeti</Summary>
+            <Description xml:lang="en">udisks provides a daemon, API and command line tools for managing disk devices attached to the system.</Description>
+            <Description xml:lang="tr">udisks, sisteme bağlı disk aygıtlarını yönetmek için programlama kitaplığı ve komut satırı araçları sunar.</Description>
+            <Archive type="tarbz2" sha1sum="d904eaeeb6af1ad7c4246d7fa879f80849f6c0f2">https://github.com/storaged-project/udisks/releases/download/udisks-2.8.4/udisks-2.8.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>lvm2</Dependency>
+                <Dependency>parted</Dependency>
+                <Dependency>sg3_utils</Dependency>
+                <Dependency>libatasmart</Dependency>
+                <Dependency>libblockdev-devel</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>docbook-xsl</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/udisks/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>udisks</Name>
+            <RuntimeDependencies>
+                <Dependency>parted</Dependency>
+                <Dependency>mtools</Dependency>
+                <Dependency>xfsprogs</Dependency>
+                <Dependency>btrfs-progs</Dependency>
+                <Dependency>ntfs-3g</Dependency>
+                <Dependency>dosfstools</Dependency>
+                <Dependency>libblockdev</Dependency>
+                <Dependency>libatasmart</Dependency>
+                <Dependency>libgudev</Dependency>
+                <Dependency>sg3_utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="executable">/usr/sbin/umount.udisks2</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/gir-1.0/UDisks-2.0.gir</Path>
+                <Path fileType="data">/usr/share/bash-completion/completions/udisksctl</Path>
+                <Path fileType="data">/usr/share/polkit-1/</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="library">/lib/udev</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/var/lib/</Path>
+                <Path fileType="data">/run/udisks</Path>
+                <Path fileType="data">/etc/profile.d</Path>
+                <Path fileType="data">/etc/dbus-1</Path>
+                <Path fileType="data">/etc/udisks2</Path>
+                <Path fileType="data">/etc/avahi/services</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+                <Path fileType="data">/usr/share/dbus-1/interfaces/*.xml</Path>
+                <Path fileType="data">/usr/share/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>udisks-doc</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">udisks</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>2.8.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>sg3_utils</Name>
+            <Homepage>http://sg.danny.cz/sg/sg3_utils.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Utilities for devices that use SCSI command sets</Summary>
+            <Summary xml:lang="tr">SCSI komut setini kullanan aygıtlar için araçlar</Summary>
+            <Description xml:lang="en">sg3_utils is a collection of Linux utilities for devices that use the SCSI command set. Includes utilities to copy data based on dd syntax and semantics, check INQUIRY data and VPD pages, check mode and log pages, spin up/down disks, do self tests and various other functions.</Description>
+            <Description xml:lang="tr">sg3_utils SCSI komut setini kullanan aygıtlar için çeşitli araçlar sunar.</Description>
+            <Archive type="targz" sha1sum="961eaf240aa4fa3b0112bb58660753555d436344">https://github.com/hreinecke/sg3_utils/archive/v1.44.tar.gz</Archive>
+            <SourceURI>hardware/disk/sg3_utils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sg3_utils</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/bin/rescan-scsi-bus.sh" permission="0755" owner="root">rescan-scsi-bus.sh</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>sg3_utils-devel</Name>
+            <Summary xml:lang="en">Development files for sg3_utils</Summary>
+            <Summary xml:lang="tr">sg3_utils için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">sg3_utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>1.44</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mtools</Name>
+            <Homepage>http://mtools.linux.lu/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Utilities to access MS-DOS disks without mounting them</Summary>
+            <Summary xml:lang="tr">MS-DOS (Windows) disketlerinize -mount ile bağlamadan- erişim araçları</Summary>
+            <Description xml:lang="en">Mtools are utilities to access MS-DOS disks without mounting them.</Description>
+            <Description xml:lang="tr">Mtools diskinizdeki MS-DOS (Windows) bölümlerine -mount komutu ile bağlamadan- erişebilmek için gereken araç setidir.</Description>
+            <Archive type="targz" sha1sum="d703db71a409837a37db10a09ef63a35183f7565">mirrors://gnu/mtools/mtools-4.0.18.tar.gz</Archive>
+            <SourceURI>hardware/disk/mtools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mtools</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>4.0.18</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfsprogs</Name>
+            <Homepage>http://oss.sgi.com/projects/xfs/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">XFS filesystem utilities</Summary>
+            <Summary xml:lang="tr">XFS dosya sistemi araçları</Summary>
+            <Description xml:lang="en">xfsprogs contains a number of administrative utilities to work with and manage XFS filesystems.</Description>
+            <Description xml:lang="tr">xfsprogs XFS dosya sistemini kullanmak ve yönetmek için bir dizi araç içerir.</Description>
+            <Archive type="tarxz" sha1sum="c4555b2641ca76785079296080fb306a3d559424">https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-5.2.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>readline-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/xfsprogs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfsprogs</Name>
+            <RuntimeDependencies>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>readline</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>xfsprogs-devel</Name>
+            <Summary xml:lang="en">Development headers for xfsprogs</Summary>
+            <RuntimeDependencies>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency release="1">xfsprogs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>5.2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ntfs-3g</Name>
+            <Homepage>http://www.tuxera.com/community/ntfs-3g-download</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Userspace driver for NTFS read/write support</Summary>
+            <Summary xml:lang="tr">NTFS dosya sistemlerine okuma/yazma erişimi için bir sürücü</Summary>
+            <Description xml:lang="en">ntfs-3g allows regular users read/write access to NTFS filesystems.</Description>
+            <Description xml:lang="tr">ntfs-3g kullanıcıların NTFS biçimli disk bölümlerine hem okuma hem yazma erişimi yapabilmesine imkan veren bir sürücüdür.</Description>
+            <Archive type="targz" sha1sum="160a836274c38d92e5c3a55256f404c8dd8f3cc1">https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2017.3.23.tgz</Archive>
+            <BuildDependencies>
+                <Dependency>fuse-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/ntfs-3g/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ntfs-3g</Name>
+            <RuntimeDependencies>
+                <Dependency>fuse</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/hal/fdi</Path>
+                <Path fileType="doc">/usr/share/doc/ntfs-3g</Path>
+                <Path fileType="man">/usr/share/man/man8/mount*</Path>
+                <Path fileType="man">/usr/share/man/man8/ntfs-3g*</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>ntfsprogs</Name>
+            <Summary xml:lang="en">Userspace tools for NTFS filesystems</Summary>
+            <Summary xml:lang="tr">NTFS dosya sistemi için kullanıcı araçları</Summary>
+            <Description xml:lang="en">Userspace tools for NTFS filesystems. The goals of the Linux-NTFS project are to develop reliable and full-featured access to NTFS by the Linux kernel driver and to provide a wide collection of NTFS utilities.</Description>
+            <Description xml:lang="tr">NTFS dosya sistemi için kullanıcı araçları içerir. Bu araçların amacı Linux çekirdeğine NTFS dosya sistemlerine güvenilir ve tam erişim sağlayacak NTFS araçlarını sağlamaktır.</Description>
+            <PartOf>hardware.disk</PartOf>
+            <RuntimeDependencies>
+                <Dependency version="2017.3.23">ntfs-3g</Dependency>
+                <Dependency>fuse</Dependency>
+                <Dependency>libutil-linux</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/sbin/mkfs.ntfs</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="doc">/usr/share/doc/ntfsprogs</Path>
+                <Path fileType="man">/usr/share/man/man8</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>2017.3.23</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>dosfstools</Name>
+            <Homepage>http://www.daniel-baumann.ch/software/dosfstools/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Tools to create and check DOS and VFAT filesystems</Summary>
+            <Summary xml:lang="tr">DOS dosya sistemi oluşturmaya ve kontrol etmeye yarayan komutlar</Summary>
+            <Description xml:lang="en">The dosfstools package includes the DOS and VFAT filesystem utilities like mkdosfs, mkfs.msdos, mkfs.vfat, dosfsck, dosfslabel. You can create and check MS-DOS FAT filesystems on hard drives or on floppies</Description>
+            <Description xml:lang="tr">Dosfstools paketi, mkdosfs, mkfs.msdos, mkfs.vfat, dosfsck, dosfslabel gibi, DOS ve VFAT dosyasistemleri yaratmaya ve kontrol etmeye yarayan araçları içerir.</Description>
+            <Archive type="tarxz" sha1sum="9e91fb0a4bb4b734aea6baefefd3ad86ab657018">https://github.com/dosfstools/dosfstools/releases/download/v4.0/dosfstools-4.0.tar.xz</Archive>
+            <SourceURI>hardware/disk/dosfstools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dosfstools</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libatasmart</Name>
+            <Homepage>http://git.0pointer.de/?p=libatasmart.git</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">ATA S.M.A.R.T. Disk Health Monitoring Library</Summary>
+            <Summary xml:lang="tr">ATA S.M.A.R.T. disk sağlığı izleme kitaplığı</Summary>
+            <Description xml:lang="en">A small and lightweight parser library for ATA S.M.A.R.T. hard disk health monitoring.</Description>
+            <Description xml:lang="tr">libatasmart, ATA S.M.A.R.T. üzerinden disk sağlığını izlemek için kullanılan ufak ve hafif bir kitaplıktır.</Description>
+            <Archive type="tarxz" sha1sum="0d0745b6bd2e5b9461d15966b5daac6c98302de8">http://0pointer.de/public/libatasmart-0.19.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>eudev-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">libatasmart-uninitialized-var.patch</Patch>
+            </Patches>
+            <SourceURI>hardware/disk/libatasmart/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libatasmart</Name>
+            <RuntimeDependencies>
+                <Dependency>eudev</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/sbin/skdump</Path>
+                <Path fileType="executable">/usr/sbin/sktest</Path>
+                <Path fileType="library">/usr/lib/libatasmart.so*</Path>
+                <Path fileType="data">/usr/share/doc/libatasmart/README</Path>
+                <Path fileType="data">/usr/share/doc/libatasmart/LGPL</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libatasmart-devel</Name>
+            <Summary xml:lang="en">Development files for libatasmart</Summary>
+            <Summary xml:lang="tr">libatasmart için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libatasmart</Dependency>
+                <Dependency>eudev-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>0.19</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>parted</Name>
+            <Homepage>http://www.gnu.org/software/parted</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3+</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Create, destroy, resize, check, copy partitions and file systems</Summary>
+            <Summary xml:lang="tr">GNU Parted disk bölümlerini oluşturmaya, silmeye, boyutlandırmaya, taşımaya ve kopyalamaya yarayan bir yazılımdır.</Summary>
+            <Summary xml:lang="fr">Crée, supprime, modifie les dimensions, vérifie et copie partitions et systèmes de fichiers.</Summary>
+            <Description xml:lang="en">The GNU Parted program allows you to create, destroy, resize, move, and copy hard disk partitions. Parted can be used for creating space for new operating systems, reorganizing disk usage, and copying data to new hard disks.</Description>
+            <Archive type="tarxz" sha1sum="e639500f9587cf6fa9b0dbc08e5e760244614595">https://ftp.gnu.org/gnu/parted/parted-3.3.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>device-mapper-devel</Dependency>
+                <Dependency>readline-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/parted/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>parted</Name>
+            <RuntimeDependencies>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>device-mapper</Dependency>
+                <Dependency>readline</Dependency>
+                <Dependency>util-linux</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="data">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>parted-devel</Name>
+            <Summary xml:lang="en">Development files for parted</Summary>
+            <Summary xml:lang="tr">parted için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">parted</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>3.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libblockdev</Name>
+            <Homepage>https://github.com/storaged-project/libblockdev</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv3</License>
+            <IsA>app</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">A library for manipulating block devices</Summary>
+            <Description xml:lang="en">libblockdev is a C library supporting GObject Introspection for manipulation of block devices. It has a plugin-based architecture where each technology (like LVM, Btrfs, MD RAID, Swap,...) is implemented in a separate plugin, possibly with multiple implementations (e.g. using LVM CLI or the new LVM DBus API).</Description>
+            <Archive type="targz" sha1sum="718a4f86e7c2e4689dc093a89500fb5390194647">https://github.com/storaged-project/libblockdev/releases/download/2.23-1/libblockdev-2.23.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>nss-devel</Dependency>
+                <Dependency>mdadm</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>parted-devel</Dependency>
+                <Dependency>libyaml-devel</Dependency>
+                <Dependency>libkmod-devel</Dependency>
+                <Dependency>volume_key-devel</Dependency>
+                <Dependency>libbytesize-devel</Dependency>
+                <Dependency>libcryptsetup-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>device-mapper-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/libblockdev/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libblockdev</Name>
+            <RuntimeDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>parted</Dependency>
+                <Dependency>libyaml</Dependency>
+                <Dependency>libkmod</Dependency>
+                <Dependency>volume_key</Dependency>
+                <Dependency>libbytesize</Dependency>
+                <Dependency>libcryptsetup</Dependency>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>device-mapper</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin/lvm-cache-stats</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libblockdev-devel</Name>
+            <Summary xml:lang="en">Development files for libblockdev</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libblockdev</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>2.23</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mdadm</Name>
+            <Homepage>http://www.kernel.org/pub/linux/utils/raid/mdadm</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Utility to control Linux MD devices (software RAID arrays)</Summary>
+            <Summary xml:lang="tr">MD aygıtlarını (Yazılımsal RAID) denetleme aracı</Summary>
+            <Description xml:lang="en">mdadm is used to create, manage, and monitor Linux MD (software RAID) devices.</Description>
+            <Description xml:lang="tr">mdadm Linux MD (yazılımsal RAID) aygıtları yaratmak, yönetmek ve izlemek için kullanılan bir araçtır.</Description>
+            <Archive type="tarxz" sha1sum="4bbbd02674ac67dc9773f41aace7677aa5374c1c">https://www.kernel.org/pub/linux/utils/raid/mdadm/mdadm-4.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>linux-module-headers</Dependency>
+                <Dependency>dietlibc</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>0001-Assemble-keep-MD_DISK_FAILFAST-and-MD_DISK_WRITEMOST.patch</Patch>
+                <Patch>0002-Document-PART-POLICY-lines.patch</Patch>
+                <Patch>0003-policy-support-devices-with-multiple-paths.patch</Patch>
+                <Patch>0004-mdcheck-add-systemd-unit-files-to-run-mdcheck.patch</Patch>
+                <Patch>0005-Monitor-add-system-timer-to-run-oneshot-periodically.patch</Patch>
+                <Patch>0006-imsm-update-metadata-correctly-while-raid10-double-d.patch</Patch>
+                <Patch>0007-Assemble-mask-FAILFAST-and-WRITEMOSTLY-flags-when-fi.patch</Patch>
+                <Patch>0008-Grow-avoid-overflow-in-compute_backup_blocks.patch</Patch>
+                <Patch>0009-Grow-report-correct-new-chunk-size.patch</Patch>
+                <Patch>0010-policy.c-prevent-NULL-pointer-referencing.patch</Patch>
+                <Patch>0011-policy.c-Fix-for-compiler-error.patch</Patch>
+                <Patch>readlink-path.patch</Patch>
+                <Patch>sysmacros.patch</Patch>
+            </Patches>
+            <SourceURI>hardware/disk/mdadm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mdadm</Name>
+            <Files>
+                <Path fileType="executable">/sbin/mdadm</Path>
+                <Path fileType="executable">/sbin/mdmon</Path>
+                <Path fileType="data">/lib/udev/rules.d</Path>
+                <Path fileType="data">/usr/lib/tmpfiles.d</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="config">/etc</Path>
+            </Files>
+            <Provides>
+                <SCOM script="service.py">System.Service</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/lib/tmpfiles.d/mdadm.conf" permission="0644" owner="root">mdadm.tmpfiles.conf</AdditionalFile>
+                <AdditionalFile target="/etc/cron.weekly/raid-check" permission="0755" owner="root">scripts/raid-check</AdditionalFile>
+                <AdditionalFile target="/etc/conf.d/mdadm" permission="0644" owner="root">mdadm.confd</AdditionalFile>
+                <AdditionalFile target="/lib/udev/rules.d/65-md-incremental.rules" permission="0644" owner="root">mdadm.rules</AdditionalFile>
+                <AdditionalFile target="/etc/conf.d/mdadm" permission="0755" owner="root">mdadm.confd</AdditionalFile>
+                <AdditionalFile target="/etc/init.d/mdadm" permission="0755" owner="root">mdadm.initd</AdditionalFile>
+                <AdditionalFile target="/etc/conf.d/mdraid" permission="0755" owner="root">mdraid.confd</AdditionalFile>
+                <AdditionalFile target="/etc/init.d/mdraid" permission="0755" owner="root">mdraid.initd</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>4.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>volume_key</Name>
+            <Homepage>https://pagure.io/volume_key</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">A library for manipulating storage volume encryption keys and storing them separately from volumes to handle forgotten passphrases</Summary>
+            <Description xml:lang="en">Depolama birimi şifreleme anahtarlarını değiştirmek ve unutulan parolaları işlemek için bunları ayrı birimlerden saklamak için bir kütüphane</Description>
+            <Archive type="tarxz" sha1sum="c983123b3b7f36819d26c7421a290657a02534b7">https://releases.pagure.org/volume_key/volume_key-0.3.12.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>swig</Dependency>
+                <Dependency>nss-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gpgme-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>libassuan</Dependency>
+                <Dependency>libgpg-error</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>libcryptsetup-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/volume_key/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>volume_key</Name>
+            <RuntimeDependencies>
+                <Dependency>nspr</Dependency>
+                <Dependency>nss</Dependency>
+                <Dependency>gettext</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>gpgme</Dependency>
+                <Dependency>python</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>libassuan</Dependency>
+                <Dependency>libgpg-error</Dependency>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>libcryptsetup</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>volume_key-devel</Name>
+            <Summary xml:lang="en">Development files for volume_key</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">volume_key</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>0.3.12</Version>
+                <Comment>First Release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libbytesize</Name>
+            <Homepage>https://github.com/storaged-project/libbytesize</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv3</License>
+            <IsA>app</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">A tiny library providing a C &quot;class&quot; for working with arbitrary big sizes in bytes</Summary>
+            <Description xml:lang="en">The goal of this project is to provide a tiny library that would facilitate the common operations with sizes in bytes. Many projects need to work with sizes in bytes (be it sizes of storage space, memory,...) and all of them need to deal with the same issues like:</Description>
+            <Archive type="targz" sha1sum="ef29982499abeeeeffc71cfa500eea15ab64ceb5">https://github.com/storaged-project/libbytesize/releases/download/1.4/libbytesize-1.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>mpfr-devel</Dependency>
+                <Dependency>gmp-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/libbytesize/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libbytesize</Name>
+            <RuntimeDependencies>
+                <Dependency>libpcre</Dependency>
+                <Dependency>mpfr</Dependency>
+                <Dependency>gmp</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libbytesize-devel</Name>
+            <Summary xml:lang="en">Development files for libbytesize</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libbytesize</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-18</Date>
+                <Version>1.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -31616,6 +33367,9 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">32-bit shared libraries for alsa-lib</Summary>
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
+            <RuntimeDependencies>
+                <Dependency release="1">alsa-lib</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32</Path>
             </Files>
@@ -32436,10 +34190,10 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>kernel.linux</PartOf>
             <Summary xml:lang="en">The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
             <Description xml:lang="en">kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-            <Archive type="tarxz" sha1sum="5922cd5f5d3decf6e39beadc5efce073aae474a2">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.2.14.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="e34c3da2dae6895513c52915d772fadb891e5e94">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.3.8.tar.xz</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="generate-module-list" permission="0755">scripts/generate-module-list</AdditionalFile>
-                <AdditionalFile target=".config" permission="0755">configs/kernel-x86_64-config-5.2.14</AdditionalFile>
+                <AdditionalFile target=".config" permission="0755">configs/kernel-x86_64-config-5.3.8</AdditionalFile>
             </AdditionalFiles>
             <BuildDependencies>
                 <Dependency>bc</Dependency>
@@ -32497,6 +34251,14 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Type package="kernel">security</Type>
+                <Date>2019-11-15</Date>
+                <Version>5.3.8</Version>
+                <Comment>Kernel version to 5.3.8</Comment>
+                <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Type package="kernel">security</Type>
                 <Date>2019-09-12</Date>
@@ -32961,7 +34723,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Man pages for cryptsetup package.</Summary>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">cyrptsetup</Dependency>
+                <Dependency release="1">cryptsetup</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
@@ -32997,6 +34759,9 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Python2 backend for cryptsetup</Summary>
             <PartOf>programming.language.python</PartOf>
             <BuildType>rebuild_python</BuildType>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
             <RuntimeDependencies>
                 <Dependency>python</Dependency>
                 <Dependency version="1.7.3">libcryptsetup</Dependency>
@@ -33874,11 +35639,16 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>gnuconfig</Dependency>
                 <Dependency>patch</Dependency>
                 <Dependency>gc-devel</Dependency>
+                <Dependency>guile-devel</Dependency>
             </BuildDependencies>
             <SourceURI>system/devel/make/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>make</Name>
+            <RuntimeDependencies>
+                <Dependency>gc</Dependency>
+                <Dependency>guile</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -33889,6 +35659,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-17</Date>
+                <Version>4.2.1</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyra</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>4.2.1</Version>
@@ -42134,7 +43911,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>header</IsA>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">dbus</Dependency>
+                <Dependency release="4">dbus</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -42166,7 +43943,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">dbus</Dependency>
+                <Dependency release="4">dbus</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -42178,13 +43955,20 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">dbus</Dependency>
+                <Dependency release="4">dbus</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4" type="security">
+                <Date>2019-11-16</Date>
+                <Version>1.12.12</Version>
+                <Comment>Error `org.freedesktop.DBus.Error.Spawn.PermissionsInvalid: The permission of the setuid helper is not correct` fixed.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-09-19</Date>
                 <Version>1.12.12</Version>
@@ -43132,7 +44916,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Linux kernel module management utilities</Summary>
             <Description xml:lang="en">Linux kernel module management utilities</Description>
-            <Archive type="tarxz" sha1sum="275916e64eb5a94276680bc356c5c6a8d484cc98">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-26.tar.xz</Archive>
+            <Archive type="targz" sha1sum="be9998b99a8bd73412fbf4d4b8f09d1c84a0493b">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-26.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>chrpath</Dependency>
                 <Dependency>xz-devel</Dependency>
@@ -43157,10 +44941,6 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Path fileType="data">/usr/share/bash-completion/completions/kmod</Path>
             </Files>
             <AdditionalFiles>
-                <AdditionalFile target="/etc/modprobe.d/blacklist.conf" permission="0644" owner="root">blacklist/blacklist.conf</AdditionalFile>
-                <AdditionalFile target="/etc/modprobe.d/blacklist-firewire.conf" permission="0644" owner="root">blacklist/blacklist-firewire.conf</AdditionalFile>
-                <AdditionalFile target="/etc/modprobe.d/blacklist-framebuffer.conf" permission="0644" owner="root">blacklist/blacklist-framebuffer.conf</AdditionalFile>
-                <AdditionalFile target="/etc/modprobe.d/blacklist-watchdog.conf" permission="0644" owner="root">blacklist/blacklist-watchdog.conf</AdditionalFile>
                 <AdditionalFile target="/etc/modprobe.d/modprobe.conf" permission="0644" owner="root">modprobe.conf</AdditionalFile>
                 <AdditionalFile target="/etc/depmod.d/depmod.conf" permission="0644" owner="root">depmod.conf</AdditionalFile>
                 <AdditionalFile target="/usr/lib/depmod.d/search.conf" permission="0644" owner="root">depmod-search.conf</AdditionalFile>
@@ -43172,7 +44952,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">kmod</Dependency>
+                <Dependency release="3">kmod</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man</Path>
@@ -43184,7 +44964,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">kmod</Dependency>
+                <Dependency release="3">kmod</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -43235,6 +45015,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-11-18</Date>
+                <Version>26</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-17</Date>
                 <Version>26</Version>
@@ -45530,7 +47317,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>header</IsA>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">libutil-linux</Dependency>
+                <Dependency release="3">libutil-linux</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include/</Path>
@@ -45564,7 +47351,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">util-linux</Dependency>
+                <Dependency release="3">util-linux</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -45576,13 +47363,20 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">util-linux</Dependency>
+                <Dependency release="3">util-linux</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-11-17</Date>
+                <Version>2.34</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-17</Date>
                 <Version>2.34</Version>
@@ -46330,7 +48124,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">A library of handy utility functions</Summary>
             <Description xml:lang="en">glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
-            <Archive type="tarxz" sha1sum="b2a4e6eea3132b4c8393c2f570711131ed960b73">mirrors://gnome/glib/2.62/glib-2.62.2.tar.xz</Archive>
+            <Archive type="targz" sha1sum="4d7963c2bbd9e5dac3e134e84b9d757a2270cca5">https://gitlab.gnome.org/GNOME/glib/-/archive/2.63.1/glib-2.63.1.tar.gz</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="multilib.patch" permission="0755">multilib.patch</AdditionalFile>
             </AdditionalFiles>
@@ -46382,7 +48176,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Development files for glib2</Summary>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">glib2</Dependency>
+                <Dependency release="4">glib2</Dependency>
                 <Dependency>libpcre-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -46424,7 +48218,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>dbus-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="3">glib2</Dependency>
+                <Dependency release="4">glib2</Dependency>
                 <Dependency>libpcre-32bit</Dependency>
                 <Dependency>zlib-32bit</Dependency>
                 <Dependency>libffi-32bit</Dependency>
@@ -46447,11 +48241,18 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-19</Date>
+                <Version>2.63.1</Version>
+                <Comment>Package is rebuilded and version upgraded to &quot;2.63.1&quot;.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-10-24</Date>
                 <Version>2.62.2</Version>
                 <Comment>Package is rebuilded and version upgraded to &quot;2.62.2&quot;.</Comment>
-                <Name>Süleyman Poyra</Name>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
             <Update release="2">
@@ -46483,7 +48284,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">INARY is the package management system of Sulin</Summary>
             <Description xml:lang="en">INARY is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-            <Archive type="targz" sha1sum="4694a6bc83b9ad4a04b146e716aed767bc40c919">https://github.com/Zaryob/inary/archive/inary-1.2_alpha.tar.gz</Archive>
+            <Archive type="targz" sha1sum="0d8ac0a49116d540120a470be4916451a16a227d">https://github.com/Zaryob/inary/archive/inary-1.2_beta.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>scom</Dependency>
                 <Dependency>python3</Dependency>
@@ -46524,6 +48325,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Provides>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-11-17</Date>
+                <Version>1.2b</Version>
+                <Comment>INARY package manager have been upgraded new beta release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-10-10</Date>
                 <Version>1.2a</Version>
@@ -46747,6 +48555,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Provides>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-17</Date>
+                <Version>1.3</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>1.3</Version>
@@ -46800,7 +48615,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Documentation for openrc package.</Summary>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">openrc</Dependency>
+                <Dependency release="2">openrc</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -46811,13 +48626,20 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Man pages for openrc package.</Summary>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">openrc</Dependency>
+                <Dependency release="2">openrc</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-17</Date>
+                <Version>0.24.2</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>0.24.2</Version>
@@ -50013,6 +51835,55 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>lz4</Name>
+            <Homepage>https://github.com/lz4/lz4</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.archive</PartOf>
+            <Summary xml:lang="en">LZ4 - Extremely fast compression</Summary>
+            <Description xml:lang="en">LZ4 is lossless compression algorithm, providing compression speed &gt; 500 MB/s per core, scalable with multi-cores CPU. It features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems.</Description>
+            <Archive type="targz" sha1sum="4dc36f29d7b4e5b45b114be2674068200714abb3">https://github.com/lz4/lz4/archive/v1.9.2.tar.gz</Archive>
+            <SourceURI>util/archive/lz4/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lz4</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>lz4-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">lz4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.9.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>bash-completion</Name>
             <Homepage>http://bash-completion.alioth.debian.org/</Homepage>
             <Packager>
@@ -53022,7 +54893,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libdrm-intel</Name>
             <Summary xml:lang="en">Userspace interface to kernel DRM services for intel</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
                 <Dependency>libpciaccess</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -53033,7 +54904,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libdrm-nouveau</Name>
             <Summary xml:lang="en">Userspace interface to kernel DRM services for nouveau</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/libdrm_nouveau.*</Path>
@@ -53043,7 +54914,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libdrm-radeon</Name>
             <Summary xml:lang="en">Userspace interface to kernel DRM services for radeon</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/libdrm_radeon.*</Path>
@@ -53053,7 +54924,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libdrm-amd</Name>
             <Summary xml:lang="en">Userspace interface to kernel DRM services for amdgpu</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/libdrm_amdgpu.*</Path>
@@ -53064,12 +54935,12 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libdrm-devel</Name>
             <Summary xml:lang="en">Development files for libdrm</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
-                <Dependency release="1">libdrm-intel</Dependency>
-                <Dependency release="1">libdrm-nouveau</Dependency>
-                <Dependency release="1">libdrm-radeon</Dependency>
-                <Dependency release="1">libdrm-amd</Dependency>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
+                <Dependency release="2">libdrm-intel</Dependency>
+                <Dependency release="2">libdrm-nouveau</Dependency>
+                <Dependency release="2">libdrm-radeon</Dependency>
+                <Dependency release="2">libdrm-amd</Dependency>
+                <Dependency release="2">libdrm</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -53086,7 +54957,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency versionFrom="0.13.4">libpciaccess-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
                 <Dependency versionFrom="0.13.4">libpciaccess-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -53099,8 +54970,8 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm-intel</Dependency>
-                <Dependency release="1">libdrm-32bit</Dependency>
+                <Dependency release="2">libdrm-intel</Dependency>
+                <Dependency release="2">libdrm-32bit</Dependency>
                 <Dependency>libpciaccess-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -53113,8 +54984,8 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm-nouveau</Dependency>
-                <Dependency release="1">libdrm-32bit</Dependency>
+                <Dependency release="2">libdrm-nouveau</Dependency>
+                <Dependency release="2">libdrm-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32/libdrm_nouveau.*</Path>
@@ -53126,8 +54997,8 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm-radeon</Dependency>
-                <Dependency release="1">libdrm-32bit</Dependency>
+                <Dependency release="2">libdrm-radeon</Dependency>
+                <Dependency release="2">libdrm-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32/libdrm_radeon.*</Path>
@@ -53139,8 +55010,8 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm-amd</Dependency>
-                <Dependency release="1">libdrm-32bit</Dependency>
+                <Dependency release="2">libdrm-amd</Dependency>
+                <Dependency release="2">libdrm-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32/libdrm_amdgpu.*</Path>
@@ -53150,7 +55021,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>libkms</Name>
             <Summary xml:lang="en">Userspace library for kernel mode setting</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libdrm</Dependency>
+                <Dependency release="2">libdrm</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/libkms.*</Path>
@@ -53162,14 +55033,21 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">libkms</Dependency>
-                <Dependency release="1">libdrm-32bit</Dependency>
+                <Dependency release="2">libkms</Dependency>
+                <Dependency release="2">libdrm-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32/libkms.*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-17</Date>
+                <Version>2.4.97</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>2.4.97</Version>
@@ -55138,7 +57016,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>x11.misc</PartOf>
             <Summary xml:lang="en">X Window System session initializer</Summary>
             <Description xml:lang="en">xinit initializes X Window System server and runs the first client application.</Description>
-            <Archive type="tarbz2" sha1sum="de3469080d73ced1f7d7a1803e813bc6ea352072">mirrors://xorg/individual/app/xinit-1.3.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="d874a2eecf2c30291e327851b151fdab8183260c">mirrors://xorg/individual/app/xinit-1.4.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>util-macros</Dependency>
                 <Dependency>xorg-proto</Dependency>
@@ -55185,6 +57063,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-18</Date>
+                <Version>1.4.1</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>1.3.4</Version>
@@ -58174,14 +60059,10 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>x11.driver</PartOf>
             <Summary xml:lang="en">X.Org v4l video driver</Summary>
             <Description xml:lang="en">v4l is an Xorg driver for video4linux cards. It provides a Xvideo extension port for video overlay.</Description>
-            <Archive type="tarbz2" sha1sum="7f2212c529a5bcc34f67858a9d0167a0d4848aaa">mirrors://xorg/individual/driver/xf86-video-v4l-0.2.0.tar.bz2</Archive>
+            <Archive type="targz" sha1sum="84327aa273b742fecf6d1586d18149ece3f0a982">https://gitlab.freedesktop.org/xorg/driver/xf86-video-v4l/-/archive/xf86-video-v4l-0.3.0/xf86-video-v4l-xf86-video-v4l-0.3.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>xorg-server-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">xorg-x11-drv-v4l-support_v4l2_only_drivers.patch</Patch>
-                <Patch level="1">xf86-video-v4l-0.2.0-build-fix.patch</Patch>
-            </Patches>
             <SourceURI>x11/driver/xorg-video-v4l/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -58196,6 +60077,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-17</Date>
+                <Version>0.3.0</Version>
+                <Comment>Package version is bumped to new upstream version.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-13</Date>
                 <Version>0.2.0</Version>
@@ -58513,6 +60401,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>libdmx-devel</Dependency>
                 <Dependency>libdrm-devel</Dependency>
+                <Dependency>libbsd-devel</Dependency>
                 <Dependency>libgcrypt-devel</Dependency>
                 <Dependency>libpciaccess-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
@@ -58584,6 +60473,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>libxshmfence</Dependency>
                 <Dependency>libepoxy</Dependency>
                 <Dependency>libxkbfile</Dependency>
+                <Dependency>libbsd</Dependency>
                 <Dependency>xorg-app</Dependency>
                 <Dependency>xterm</Dependency>
                 <Dependency>nettle</Dependency>
@@ -60346,6 +62236,101 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Comment>First release</Comment>
                 <Name>Ali Riza KESKIN</Name>
                 <Email>parduscix@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>apache</Name>
+            <Homepage>http://httpd.apache.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>service</IsA>
+            <PartOf>server.web</PartOf>
+            <Summary xml:lang="en">Apache web server</Summary>
+            <Summary xml:lang="tr">Apache web sunucusu</Summary>
+            <Summary xml:lang="de">Apache Webserver</Summary>
+            <Description xml:lang="en">Apache HTTP Server is a free software/open source web server for Unix-like systems, Microsoft Windows, Novell NetWare and other operating systems. Apache is notable for playing a key role in the initial growth of the World Wide Web, and continues to be the most popular web server in use, serving as the de facto reference platform against which other web servers are designed and judged.</Description>
+            <Description xml:lang="tr">Dünyanın en çok tercih edilen web sunucu olan Apache artık diğer genelağ sunucularının standartlarını belirlemek için takip ettiği hızlı, güçlü, esnek ve yüksek özelleştirilebilirliğe sahip bir genelağ sunucusudur.</Description>
+            <Archive type="tarbz2" sha1sum="b46a02237f03384fa50ddbde9be62092dc23e684">http://archive.apache.org/dist/httpd/httpd-2.4.41.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>apr-devel</Dependency>
+                <Dependency>nss-devel</Dependency>
+                <Dependency>lua-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>db-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>apr-util-devel</Dependency>
+                <Dependency>cyrus-sasl-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>server/web/apache/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>apache</Name>
+            <RuntimeDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>apr</Dependency>
+                <Dependency>lua</Dependency>
+                <Dependency>apr-util</Dependency>
+                <Dependency>cyrus-sasl</Dependency>
+                <Dependency>openldap-client</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>db</Dependency>
+                <Dependency>expat</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/var/log/apache2</Path>
+                <Path fileType="config">/var/www</Path>
+                <Path fileType="data">/run/apache2</Path>
+                <Path fileType="data">/var/cache</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/lib/systemd/system</Path>
+            </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+                <SCOM script="service.py">System.Service</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/lib/systemd/system/apache.service" permission="0644" owner="root">apache.service</AdditionalFile>
+                <AdditionalFile target="/etc/conf.d/apache2" permission="0644" owner="root">apache2.confd</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/httpd.conf" permission="0644" owner="root">httpd.conf</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/vhosts.d/00_default_vhost.conf" permission="0644" owner="root">00_default_vhost.conf</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/modules.d/00_apache_manual.conf" permission="0644" owner="root">00_apache_manual.conf</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/modules.d/40_mod_ssl.conf" permission="0644" owner="root">40_mod_ssl.conf</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/modules.d/41_mod_ssl.default-vhost.conf" permission="0644" owner="root">41_mod_ssl.default-vhost.conf</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/modules.d/45_mod_dav.conf" permission="0644" owner="root">45_mod_dav.conf</AdditionalFile>
+                <AdditionalFile target="/etc/apache2/modules.d/46_mod_ldap.conf" permission="0644" owner="root">46_mod_ldap.conf</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/apache.css" permission="0755" owner="root">webroot/apache.css</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/apache_pb.gif" permission="0755" owner="root">webroot/apache_pb.gif</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/index.html" permission="0755" owner="root">webroot/index.html</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/index-tr.html" permission="0755" owner="root">webroot/index-tr.html</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/index-ptbr.html" permission="0755" owner="root">webroot/index-ptbr.html</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/index-es.html" permission="0755" owner="root">webroot/index-es.html</AdditionalFile>
+                <AdditionalFile target="/var/www/localhost/htdocs/index-de.html" permission="0755" owner="root">webroot/index-de.html</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.4.41</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>

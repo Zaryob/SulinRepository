@@ -27,12 +27,12 @@ def setup():
                --disable-newgrp \
                --disable-nologin \
                --disable-runuser \
-               --disable-sulogin \
+               --enable-sulogin \
                --disable-utmpdump \
                --disable-chfn-chsh \
-               --disable-mountpoint \
-               --disable-makeinstall-chown \
-               --disable-socket-activation \
+               --enable-mountpoint \
+               --enable-makeinstall-chown \
+               --enable-socket-activation \
               "
 
     if get.buildTYPE() == "emul32":
@@ -58,13 +58,13 @@ def setup():
                      --enable-libmount \
                      --enable-pylibmount \
                      --enable-runuser \
-                     --without-audit \
+                     --with-audit \
                      --with-udev \
                      --with-python=3 \
                      --without-utempter \
                    "
 
-    autotools.autoreconf("-fi")
+#    autotools.autoreconf("-fi")
     autotools.configure(options)
     inarytools.dosed("libtool", "( -shared )", r" -Wl,--as-needed\1")
 

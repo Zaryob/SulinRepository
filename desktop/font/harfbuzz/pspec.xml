@@ -13,7 +13,7 @@
         <PartOf>desktop.font</PartOf>
         <Summary>OpenType text shaping engine.</Summary>
         <Description>The Harfbuzz package contains an OpenType text shaping engine.</Description>
-        <Archive sha1sum="81d3f0cf5d560d7eee2eb0a8fb5a1640b1b9dac9" type="tarxz">https://github.com/harfbuzz/harfbuzz/releases/download/2.6.2/harfbuzz-2.6.2.tar.xz</Archive>
+        <Archive sha1sum="abaeb9bca4f79edaff708dc124a81f9d34499acd" type="tarxz">https://github.com/harfbuzz/harfbuzz/releases/download/2.6.4/harfbuzz-2.6.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -77,6 +77,13 @@
         </Files>
     </Package-->
     <History>
+        <Update release="3">
+            <Date>2019-11-19</Date>
+            <Version>2.6.4</Version>
+            <Comment>Version 2.6.4 compiled succesfully.</Comment>
+            <Name>Süleyman Poyra</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-10-25</Date>
             <Version>2.6.2</Version>

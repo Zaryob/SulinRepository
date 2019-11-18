@@ -10,8 +10,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    if get.buildTYPE()=="emul32":
-        shelltools.export("CC", "{} -m32 -std=c11".format(get.CC()))
+    shelltools.export("CC", "{} -std=c11".format(get.CC()))
     inarytools.flags.add("-flto -ffat-lto-objects")
     autotools.autoreconf("-vfi")
     autotools.configure("--disable-static \
@@ -32,9 +31,8 @@ def setup():
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
 def build():
-    if get.buildTYPE()=="emul32":
-        shelltools.export("CC", "{} -m32 -std=c11".format(get.CC()))
-        
+    shelltools.export("CC", "{} -std=c11".format(get.CC())) # glib2 based sources are just compiling with c11 standart
+
     autotools.make()
 
 def install():

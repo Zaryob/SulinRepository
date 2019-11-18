@@ -42,7 +42,7 @@
         </Files>
     </Package>
     <Package>
-	<Name>jasper-32bit</Name>
+      	<Name>jasper-32bit</Name>
         <PartOf>emul32</PartOf>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
@@ -68,7 +68,7 @@
             <Version>2.0.16</Version>
             <Comment>First release</Comment>
             <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>  
+            <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
 </INARY>

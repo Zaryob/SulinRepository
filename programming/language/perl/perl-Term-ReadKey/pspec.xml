@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Term-ReadKey</Name>
+        <Homepage>http://search.cpan.org/~jstowe/TermReadKey</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Term::ReadKey - A perl module for simple terminal control</Summary>
+        <Description>This module, ReadKey, provides ioctl control for terminals and Win32
+consoles so the input modes can be changed (thus allowing reads of a single
+character at a time), and also provides non-blocking reads of stdin, as well
+as several other terminal related features, including retrieval/modification
+of the screen size, and retrieval/modification of the control characters.
+Installation requires MakeMaker 3.5 or higher (MakeMaker 3.7 is included
+with perl 5.001, so now is a good time to upgrade if you haven't already.).</Description>
+        <Archive sha1sum="e869c13a485e6c56561c34351fd62352bdac793c" type="targz">mirrors://cpan/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Term-ReadKey</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>2.38</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

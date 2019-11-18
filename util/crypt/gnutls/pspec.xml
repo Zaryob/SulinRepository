@@ -71,7 +71,7 @@
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/libgnutls-extra-config">libgnutls-config</AdditionalFile>
         </AdditionalFiles-->
     </Package>
-
+    <!--needs rebuild-->
     <Package>
         <Name>gnutls-32bit</Name>
         <PartOf>emul32</PartOf>

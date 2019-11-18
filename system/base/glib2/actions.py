@@ -11,18 +11,18 @@ from inary.actionsapi import get
 
 
 def setup():
+    options=""
     if get.buildTYPE()=="emul32":
-        shelltools.system("patch -Np1 -i multilib.patch")
         shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
         shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
         shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
         shelltools.system("patch -p1 < multilib.patch")
-    mesontools.meson_configure()
+        options+="-Dtests=false"
+    mesontools.meson_configure(options)
 
 
 def build():
     if get.buildTYPE()=="emul32":
-        shelltools.system("patch -Np1 -i multilib.patch")
         shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
         shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
         shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
