@@ -11,7 +11,7 @@ from inary.actionsapi import get
 
 def setup():
     autotools.configure("--disable-static \
-                         --disable-dependency-tracking \
+                         --enable-dependency-tracking \
                          --disable-ldap \
                          --disable-ldaps \
                          --with-ssl \
