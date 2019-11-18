@@ -10,6 +10,7 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
+    autotools.autoreconf("-vif")
     autotools.configure("--sysconfdir=/etc \
                          --with-zlib \
                          --with-xz")

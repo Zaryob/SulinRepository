@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Linux kernel module management utilities</Summary>
         <Description>Linux kernel module management utilities</Description>
-        <Archive sha1sum="275916e64eb5a94276680bc356c5c6a8d484cc98" type="tarxz">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-26.tar.xz</Archive>
+        <Archive sha1sum="be9998b99a8bd73412fbf4d4b8f09d1c84a0493b" type="targz">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-26.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>chrpath</Dependency>
             <Dependency>xz-devel</Dependency>
@@ -38,10 +38,10 @@
             <Path fileType="data">/usr/share/bash-completion/completions/kmod</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist.conf">blacklist/blacklist.conf</AdditionalFile>
+            <!--AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist.conf">blacklist/blacklist.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-firewire.conf">blacklist/blacklist-firewire.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-framebuffer.conf">blacklist/blacklist-framebuffer.conf</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-watchdog.conf">blacklist/blacklist-watchdog.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-watchdog.conf">blacklist/blacklist-watchdog.conf</AdditionalFile-->
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/modprobe.conf">modprobe.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/depmod.d/depmod.conf">depmod.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/depmod.d/search.conf">depmod-search.conf</AdditionalFile>
@@ -120,6 +120,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-11-18</Date>
+            <Version>26</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>26</Version>
@@ -136,3 +143,4 @@
         </Update>
     </History>
 </INARY>
+
