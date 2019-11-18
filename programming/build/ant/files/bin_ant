@@ -1,0 +1,6 @@
+#!/bin/sh
+
+. /etc/ant/ant.conf
+
+export LOCALCLASSPATH=${OPT_JAR_LIST}
+/usr/share/ant/bin/ant "$@"
