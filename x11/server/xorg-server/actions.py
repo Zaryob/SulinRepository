@@ -10,7 +10,7 @@ from inary.actionsapi import get
 
 def setup():
 #    shelltools.chmod("hw/vnc/symlink-vnc.sh")
-    autotools.autoreconf("-fi")
+#    autotools.autoreconf("-fi")
 
     autotools.configure("--enable-install-libxf86config \
                          --enable-aiglx \
@@ -42,7 +42,7 @@ def setup():
                          --with-pic \
                          --with-int10=x86emu \
                          --with-os-name=\"Sulin\" \
-                         --with-os-vendor=\"Sulin Community\" \
+                         --with-os-vendor=\"2019\" \
                          --with-builderstring=\"Package: %s\" \
                          --with-fontrootdir=/usr/share/fonts \
                          --with-default-font-path=catalogue:/etc/X11/fontpath.d,built-ins \
