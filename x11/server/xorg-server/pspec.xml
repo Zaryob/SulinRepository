@@ -21,6 +21,7 @@
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>libdmx-devel</Dependency>
             <Dependency>libdrm-devel</Dependency>
+            <Dependency>libbsd-devel</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
             <Dependency>libpciaccess-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
@@ -95,6 +96,7 @@
             <Dependency>libxshmfence</Dependency>
             <Dependency>libepoxy</Dependency>
             <Dependency>libxkbfile</Dependency>
+            <Dependency>libbsd</Dependency>
             <Dependency>xorg-app</Dependency>
             <Dependency>xterm</Dependency>
             <Dependency>nettle</Dependency>

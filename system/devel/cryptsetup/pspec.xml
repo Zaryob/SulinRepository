@@ -71,7 +71,7 @@
       	<PartOf>system.doc</PartOf>
       	<Summary>Man pages for cryptsetup package.</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">cyrptsetup</Dependency>
+            <Dependency release="current">cryptsetup</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="man">/usr/share/man/</Path>
@@ -108,6 +108,9 @@
         <BuildType>rebuild_python</BuildType>
         <PartOf>programming.language.python</PartOf>
         <Summary>Python2 backend for cryptsetup</Summary>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
             <Dependency version="current">libcryptsetup</Dependency>

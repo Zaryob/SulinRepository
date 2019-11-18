@@ -43,11 +43,9 @@
        <Summary>32-bit shared libraries for libmtdev</Summary>
        <BuildType>emul32</BuildType>
        <BuildDependencies>
-
        </BuildDependencies>
        <RuntimeDependencies>
            <Dependency release="current">libmtdev</Dependency>
-
        </RuntimeDependencies>
        <Files>
            <Path fileType="library">/usr/lib32</Path>

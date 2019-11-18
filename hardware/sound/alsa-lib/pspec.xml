@@ -55,12 +55,9 @@
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for alsa-lib</Summary>
         <BuildType>emul32</BuildType>
-        <BuildDependencies>
-            
-        </BuildDependencies>
         <RuntimeDependencies>
-            
-        </RuntimeDependencies>
+             <Dependency release="current">alsa-lib</Dependency>
+         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
