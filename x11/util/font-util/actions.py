@@ -8,7 +8,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--with-mapdir=/usr/share/fonts/util")
+    autotools.configure("--with-mapdir=/usr/share/fonts/util \
+                         --with-fontrootdir=/usr/share/fonts")
 
 def build():
     autotools.make()
@@ -16,4 +17,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.dodoc("ChangeLog", "COPYING", "README")
+    inarytools.dodoc("ChangeLog", "COPYING", "README.md")
