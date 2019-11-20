@@ -42,6 +42,7 @@
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-firewire.conf">blacklist/blacklist-firewire.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-framebuffer.conf">blacklist/blacklist-framebuffer.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/blacklist-watchdog.conf">blacklist/blacklist-watchdog.conf</AdditionalFile-->
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/kmod">kmod-static-nodes-r1</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/modprobe.d/modprobe.conf">modprobe.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/depmod.d/depmod.conf">depmod.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/depmod.d/search.conf">depmod-search.conf</AdditionalFile>
@@ -120,6 +121,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-11-19</Date>
+            <Version>26</Version>
+            <Comment>kmod init script added.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2019-11-18</Date>
             <Version>26</Version>
@@ -143,4 +151,3 @@
         </Update>
     </History>
 </INARY>
-
