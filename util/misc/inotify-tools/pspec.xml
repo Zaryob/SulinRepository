@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>inotify-tools</Name>
@@ -31,7 +31,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019-09-18</Date>
+            <Date>2019-11-21</Date>
             <Version>3.13</Version>
             <Comment>First release</Comment>
             <Name>Ali Rıza KESKİN</Name>

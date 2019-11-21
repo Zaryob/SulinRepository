@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>ctags</Name>

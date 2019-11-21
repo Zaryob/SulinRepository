@@ -1,5 +1,5 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>fslint</Name>
@@ -16,7 +16,7 @@
         <Archive sha1sum="6a7b2eda059f3a44cdc35ec6bd698da622f6bd03" type="tarxz">http://www.pixelbeat.org/fslint/fslint-2.46.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>python-gtk2-devel</Dependency>
-            <Dependency versionFrom="2.18.9">gtk2</Dependency>
+            <Dependency>gtk2</Dependency>
             <Dependency>libglade</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,7 +25,7 @@
         <Name>fslint</Name>
         <RuntimeDependencies>
             <Dependency>python-gtk2</Dependency>
-            <Dependency versionFrom="2.18.9">gtk2</Dependency>
+            <Dependency>gtk2</Dependency>
             <Dependency>libglade</Dependency>
         </RuntimeDependencies>
         <Files>
