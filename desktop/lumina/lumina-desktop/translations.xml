@@ -1,0 +1,51 @@
+<INARY>
+    <Source>
+        <Name>lumina-desktop</Name>
+        <Summary xml:lang="tr">UNIX benzeri sistemlerde kullanım için tasarlanmış sistem arayüzlü hafif bir Masaüstü ortamıdır.</Summary>
+        <Description xml:lang="tr">UNIX benzeri sistemlerde kullanım için tasarlanmış sistem arayüzlü hafif bir Masaüstü ortamıdır..</Description>
+    </Source>
+    <Package>
+        <Name>lumina-archiver</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için arşiv yöneticisi.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-open</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için uygulama açıcı.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-config</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için özelleştirme aracı.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-fm</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için dosya yöneticisi.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-screenshot</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için ekran alıntısı aracı.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-search</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için uygulama-dosya arayıcısı.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-info</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için bilgi merkezi.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-xconfig</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için xconfig aracı.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-fileinfo</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için dosya detayı uygulaması.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-textedit</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için basit metn editörü.</Summary>
+    </Package>
+    <Package>
+        <Name>lumina-calculator</Name>
+        <Summary xml:lang="tr">Lumina desktop ortamı için hesap makinesi.</Summary>
+    </Package>
+</INARY>
