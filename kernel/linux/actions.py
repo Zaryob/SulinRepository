@@ -29,7 +29,7 @@ def install():
     kerneltools.install()
 
     # add objtool for external module building and enabled VALIDATION_STACK option
-    inarytools.insinto("/usr/src/linux-headers-%s/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
+    inarytools.insinto("/usr/src/linux-headers-%s-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 
     # Install kernel headers needed for out-of-tree module compilation
     kerneltools.installHeaders()
