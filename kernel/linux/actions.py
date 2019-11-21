@@ -9,12 +9,14 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
+import time
 
 NoStrip = ["/lib", "/boot"]
 
 shelltools.export("KBUILD_BUILD_USER", "sulin")
 shelltools.export("KBUILD_BUILD_HOST", "uludag")
 shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
+shelltools.export("KBUILD_BUILD_TIMESTAMP", time.asctime())
 
 def setup():
     kerneltools.configure()
@@ -27,7 +29,7 @@ def install():
     kerneltools.install()
 
     # add objtool for external module building and enabled VALIDATION_STACK option
-    inarytools.insinto("/usr/src/linux-headers-%s/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
+    inarytools.insinto("/usr/src/linux-headers-%s-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 
     # Install kernel headers needed for out-of-tree module compilation
     kerneltools.installHeaders()
