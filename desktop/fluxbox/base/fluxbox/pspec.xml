@@ -53,6 +53,7 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/xsessions/fluxbox.desktop">fluxbox.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/fbmenugen">fbmenugen</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
