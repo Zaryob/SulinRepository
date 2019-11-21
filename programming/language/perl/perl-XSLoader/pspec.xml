@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-XSLoader</Name>
+        <Homepage>http://search.cpan.org/dist/XSLoader</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>Dynamically load C libraries into Perl code</Summary>
+        <Description>This module defines a standard simplified interface to the dynamic linking mechanisms available on many platforms. Its primary purpose is to implement cheap automatic dynamic loading of Perl modules.</Description>
+        <Archive sha1sum="177b018f11088dbe10d87cf19ef7a39b960c79c6" type="targz">https://cpan.metacpan.org/authors/id/S/SA/SAPER/XSLoader-0.24.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Test-Simple</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-XSLoader</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-GSSAPI</Dependency>
+            <Dependency>perl-Digest-HMAC</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/perl-XSLoader</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-20</Date>
+            <Version>0.24</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

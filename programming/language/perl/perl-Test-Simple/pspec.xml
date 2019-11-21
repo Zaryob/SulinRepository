@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Test-Simple</Name>
+        <Homepage>https://metacpan.org/pod/Test::Simple</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic-2</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>Yet another framework for writing test scripts</Summary>
+        <Description>Yet another framework for writing test scripts</Description>
+        <Archive sha1sum="586a1582c25bab80c8bd0dbe90bbef2f38a80cc6" type="targz">https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302169.tar.gz</Archive>
+        <BuildDependencies>
+          <Dependency>perl</Dependency>
+          <Dependency>perl-File-Spec</Dependency>
+          <Dependency>perl-File-Temp</Dependency>
+          <Dependency>perl-Scalar-Util</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Test-Simple</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-File-Spec</Dependency>
+            <Dependency>perl-File-Temp</Dependency>
+            <Dependency>perl-Scalar-Util</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-20</Date>
+            <Version>0.14</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Glib-Gobject-Introspection</Name>
+        <Homepage>https://metacpan.org/pod/Cairo-Gobject</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Dynamically create Perl language bindings.</Summary>
+        <Description>Dynamically create Perl language bindings.</Description>
+        <Archive sha1sum="c59ee0afc9ab2e182c909fc0498c4f17692b3241" type="targz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-Object-Introspection-0.047.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Glib</Dependency>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Glib-Gobject-Introspection</Name>
+        <RuntimeDependencies>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/perli11ndoc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-20</Date>
+            <Version>0.047</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

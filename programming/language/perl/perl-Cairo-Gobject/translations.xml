@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-Cairo-Gobject</Name>
+        <Summary xml:lang="tr">Cairo-Gobject, Cairo kütüphanesini Glib tipi sisteme entegre etmek için bir Perl arayüzüdür.</Summary>
+        <Description xml:lang="tr">Cairo::GObject, Cairo türlerini (Cairo::Context, Cairo::Surface, vb.) Glib'in tip sistemlerine kaydeder, böylece normalde sinyal ve özelliklerde bu tipler kullanılabilirler.</Description>
+    </Source>
+</INARY>

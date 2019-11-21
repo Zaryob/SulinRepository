@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Carp</Name>
+        <Homepage>https://metacpan.org/pod/Cairo</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Alternative warn and die for modules</Summary>
+        <Description>The Carp routines are useful in your own modules because they act like die() or warn(), but with a message which is more likely to be useful to a user of your module. In the case of cluck() and confess(), that context is a summary of every call in the call-stack; longmess() returns the contents of the error message.</Description>
+          <Archive sha1sum="309973bc0c27f7a186a307c0f243cac36101d229" type="targz">https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Carp-1.50.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>perl-Carp</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-20</Date>
+            <Version>1.1.07</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

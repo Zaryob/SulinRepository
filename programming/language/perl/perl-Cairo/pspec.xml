@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Cairo</Name>
+        <Homepage>https://metacpan.org/pod/Cairo</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Perl interface to the cairo 2d vector graphics library</Summary>
+        <Description>Cairo provides Perl bindings for the vector graphics library cairo. It supports multiple output targets, including PNG, PDF and SVG. Cairo produces identical output on all those targets.</Description>
+        <Archive sha1sum="d9aeb9e471e4ab366b4b3b6aac9c37172983d054" type="targz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Cairo-1.107.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Cairo</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-20</Date>
+            <Version>1.1.07</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
