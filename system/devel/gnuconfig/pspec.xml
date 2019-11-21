@@ -13,8 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Base config files for autofoo</Summary>
         <Description>gnuconfig contains updated config.sub and config.guess files from GNU.</Description>
-        <Archive sha1sum="abb2df13f326bf3862f3972481dfb0f3c5036ebb"
-type="targz">https://sourceforge.net/projects/sulinos/files/archives/config-master.tar.gz</Archive>
+        <Archive sha1sum="2d6ebc1e7ddbb692bc560e4a7f26c34c6811fc7f" type="targz">https://github.com/SulinOS/gnuconfig/archive/20141105.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -36,6 +35,13 @@ type="targz">https://sourceforge.net/projects/sulinos/files/archives/config-mast
           </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-11-21</Date>
+            <Version>20141105</Version>
+            <Comment>Rebuilded and changed its archive uri.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>20141105</Version>

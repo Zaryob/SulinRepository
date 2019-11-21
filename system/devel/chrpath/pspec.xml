@@ -13,8 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Change the dynamic library load path (rpath) of binaries</Summary>
         <Description>chrpath allows you to modify the dynamic library load path (rpath and runpath) of compiled programs and libraries.</Description>
-        <Archive sha1sum="356d89881419ef1f554021b9c92c416bb495656e"
-type="targz">https://sourceforge.net/projects/sulinos/files/archives//chrpath-master.tar.gz</Archive>
+        <Archive sha1sum="174bb38c899229f4c928734b20e730f61191795a" type="targz">http://cdn-fastly.deb.debian.org/debian/pool/main/c/chrpath/chrpath_0.16.orig.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +47,13 @@ type="targz">https://sourceforge.net/projects/sulinos/files/archives//chrpath-ma
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-11-21</Date>
+            <Version>0.16</Version>
+            <Comment>Archive uri aupdated.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>0.16</Version>

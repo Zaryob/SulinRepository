@@ -15,7 +15,7 @@
         <IsA>app:console</IsA>
         <Summary>ALTLinux hyphenation library</Summary>
         <Description>hyphen,library for high quality hyphenation and justification.</Description>
-        <Archive sha1sum="8e1f1c5eaffbe0a71d7d05b0b158dca48ee9c824" type="zip">https://codeload.github.com/hunspell/hyphen/zip/master</Archive>
+        <Archive sha1sum="0c12a015b95199f7ef265e01ba9f952010ba4ffe" type="targz">https://github.com/SulinOS/hyphen/archive/2.8.6.tar.gz</Archive>
       	<BuildDependencies>
             <Dependency>hunspell-devel</Dependency>
       	</BuildDependencies>
@@ -47,6 +47,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-11-21</Date>
+            <Version>2.8.6</Version>
+            <Comment>Fixed archive now.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-03</Date>
             <Version>2.8.6</Version>
