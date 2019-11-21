@@ -23,7 +23,5 @@ def install():
         inarytools.domove("/usr/bin/%s" % exe, "/bin")
         inarytools.dosym("/bin/%s" % exe, "/usr/bin/%s" % exe)
 
-    inarytools.remove("/usr/share/kbd/keymaps/i386/qwerty/trf.map.gz")
-
     inarytools.dohtml("docs/doc/*.html")
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")

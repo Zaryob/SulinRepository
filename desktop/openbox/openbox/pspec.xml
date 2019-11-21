@@ -49,7 +49,7 @@
             <Dependency>imlib2</Dependency>
             <Dependency>libXext</Dependency>
             <Dependency>libxml2</Dependency>
-            <!--<Dependency>librsvg</Dependency>-->
+            <Dependency>graphite2</Dependency>
             <Dependency>libXrandr</Dependency>
             <Dependency>libXcursor</Dependency>
             <Dependency>libXinerama</Dependency>
