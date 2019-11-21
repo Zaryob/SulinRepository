@@ -1,0 +1,7 @@
+<INARY>
+    <Source>
+        <Name>distorm</Name>
+        <Summary xml:lang="tr">AMD64 ve X86-64 için disassembler.</Summary>
+        <Description xml:lang="tr">diStorm3 bir komutu alıp durağan bir benim olak döndürmektense binary yapısı olarak döndürebilen bir decompose/disassembly programıdır.</Description>
+    </Source>
+</INARY>

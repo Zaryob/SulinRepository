@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pep8</Name>
+        <Homepage>https://pypi.python.org/pypi/pep8</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Python style guide checker</Summary>
+        <Description>pep8 is a tool to check your Python code against some of the style conventions in PEP 8.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="65d3cbf90fd347d6416920ae9ebb3a0a7a919c71" type="targz">https://files.pythonhosted.org/packages/01/a0/64ba19519db49e4094d82599412a9660dee8c26a7addbbb1bf17927ceefe/pep8-1.7.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-pep8</Name>
+        <Files>
+          <Path fileType="executable">/usr/bin/pep8-2.7</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-pep8</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/pep8</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-pep8-docs</Name>
+        <Files>
+          <Path fileType="library">/usr/share/doc</Path>
+            <Path fileType="library">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>1.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
