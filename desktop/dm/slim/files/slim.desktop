@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/usr/bin/slim
+Type=Application
+X-Sulin-XCursorTheme=Jimmac
+
+Name=SLiM
+GenericName=Login Manager
+GenericName[tr]=Giriş Yöneticisi

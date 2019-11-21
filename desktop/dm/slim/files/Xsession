@@ -1,0 +1,160 @@
+#!/bin/sh
+#
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/files/Xsession,v 1.1 2010/09/20 15:22:38 darkside Exp $
+#
+# SLiM Xsession script
+#
+# This script is a wrapper that handles selection of a session from
+# /etc/X11/Sessions/ as necessary.  It doesn't handle actual session setup.
+#
+# The script takes a session name as the first argument. If no argument is
+# given, or if the argument does not match an available session script:
+#  - Run ~/.xsession and if that's not available,
+#  - Run the appropriate Xclients startup (see the code below)
+#
+# (Note that other arguments could also follow, but only the command one is
+# right now relevant and supported)
+#
+# The output is redirected to /var/log/slim.log.
+#
+# By default this is run in a login shell, see /etc/slim.conf for details.
+
+command="$@"
+
+# this will go into the slim.log along with all other echo's
+# good for debugging where things went wrong
+echo "$0: Beginning session setup..."
+
+# Read /etc/xprofile and .xprofile for X specific setup
+test -f /etc/xprofile && . /etc/xprofile
+test -f "$HOME/.xprofile" && . "$HOME/.xprofile"
+
+# userresources and sysresources and all these other vars are
+# unneeded here as by default the session script we're handing
+# off to will take care of it.
+
+# wrap possible arguments to determine whether to treat special or not
+if [ "x$command" = "xcustom" ] || [ "x$command" = "xCustom" ] || \
+  [ "x$command" = "xdefault" ] || [ "x$command" = "xDefault" ]; then
+    command="Xsession"
+fi
+if [ "x$command" = "x" ]; then
+    # no default specified, check if Xsession will complete
+    # and if not then assign XSESSION to command
+    if [ -x "$HOME/.xsession" ] || [ -x "$HOME/.Xclients" ] || \
+      [ -x /etc/X11/xinit/Xclients ] || [ -x /etc/X11/Xclients ]; then
+        command="Xsession"
+    else
+        command=$XSESSION
+    fi
+fi
+
+# ripped directly from /etc/X11/chooser.sh
+
+defaultDesktopSession=`sed -e '/^SESSION/!d' -e 's/\(.*\)=\(.*\)/\2/' /etc/default/desktop`
+
+sessionscript=""
+for x in /usr/share/xsessions/* ; do
+	if [ "$defaultDesktopSession" == `basename $x .desktop` ]; then
+		sessionscript=`sed -e '/^Exec/!d' -e 's/\(.*\)=\(.*\)/\2/' $x`
+    	break
+    fi
+done
+
+if [ -n "$sessionscript" ]; then
+
+    if [ -f ${sessionscript} ]; then
+        if [ -x ${sessionscript} ]; then
+            exec "${sessionscript}"
+        else
+            exec /bin/sh "${sessionscript}"
+        fi
+    fi
+
+    echo "Unable to execute session script ${sessionscript}"
+    exit 1
+
+fi
+
+# Launch a default session
+# This was mostly ripped from GDM's Xsession script
+
+
+echo "Could not find appropriate session script, exec'ing xterm"
+
+userresources="$HOME/.Xresources"
+usermodmap="$HOME/.Xmodmap"
+userxkbmap="$HOME/.Xkbmap"
+
+sysresources=/etc/X11/Xresources
+sysmodmap=/etc/X11/Xmodmap
+sysxkbmap=/etc/X11/Xkbmap
+
+rh6sysresources=/etc/X11/xinit/Xresources
+rh6sysmodmap=/etc/X11/xinit/Xmodmap
+
+# merge in defaults
+if [ -f "$rh6sysresources" ]; then
+    xrdb -merge "$rh6sysresources"
+fi
+
+if [ -f "$sysresources" ]; then
+    xrdb -merge "$sysresources"
+fi
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
+
+# merge in keymaps
+if [ -f "$sysxkbmap" ]; then
+    setxkbmap `cat "$sysxkbmap"`
+    XKB_IN_USE=yes
+fi
+
+if [ -f "$userxkbmap" ]; then
+    setxkbmap `cat "$userxkbmap"`
+    XKB_IN_USE=yes
+fi
+
+#
+# Eeek, this seems like too much magic here
+#
+if [ -z "$XKB_IN_USE" -a ! -L /etc/X11/X ]; then
+    if grep '^exec.*/Xsun' /etc/X11/X > /dev/null 2>&1 && [ -f /etc/X11/XF86Config ]; then
+       xkbsymbols=`sed -n -e 's/^[     ]*XkbSymbols[   ]*"\(.*\)".*$/\1/p' /etc/X11/XF86Config`
+       if [ -n "$xkbsymbols" ]; then
+           setxkbmap -symbols "$xkbsymbols"
+           XKB_IN_USE=yes
+       fi
+    fi
+fi
+
+# xkb and xmodmap don't play nice together
+if [ -z "$XKB_IN_USE" ]; then
+    if [ -f "$rh6sysmodmap" ]; then
+       xmodmap "$rh6sysmodmap"
+    fi
+
+    if [ -f "$sysmodmap" ]; then
+       xmodmap "$sysmodmap"
+    fi
+
+    if [ -f "$usermodmap" ]; then
+       xmodmap "$usermodmap"
+    fi
+fi
+
+unset XKB_IN_USE
+
+# run all system xinitrc shell scripts.
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for i in /etc/X11/xinit/xinitrc.d/* ; do
+        if [ -x "$i" ]; then
+	    . "$i"
+        fi
+    done
+fi
+
+exec xterm -geometry 80x24+0+0
+

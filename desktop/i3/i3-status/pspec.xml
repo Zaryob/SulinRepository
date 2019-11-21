@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>i3-status</Name>
+        <Homepage>http://i3.zekjur.net/i3status/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <Summary>An improved dynamic tiling window manager</Summary>
+        <Description>An improved dynamic tiling window manager</Description>
+        <Archive sha1sum="b09fd2f322046daaca22f60cf6bfc7dbebea1b11" type="tarbz2">https://i3wm.org/i3status/i3status-2.13.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xmlto</Dependency>
+            <Dependency>asciidoc</Dependency>
+            <Dependency>yajl-devel</Dependency>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libconfuse-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>i3-status</Name>
+        <RuntimeDependencies>
+            <Dependency>yajl</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libconfuse</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>i3-wm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	    <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>2.13</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
