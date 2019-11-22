@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kwidgetsaddons</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>KDE5 desktop widgets</Summary>
+        <Description>KdeWidgetsAddons is a framework contains addon widgets and shared libraries for applications using Qt5-Widgets.</Description>
+        <Archive sha1sum="97337bce5054cf1fe8270dc46b612f497f1d9e10" type="tarxz">mirrors://kde/stable/frameworks/5.64/kwidgetsaddons-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kwidgetsaddons</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kwidgetsaddons-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kwidgetsaddons</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency release="current">kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

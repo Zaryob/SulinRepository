@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>prison</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>A barcode API to produce QRCode barcodes and DataMatrix barcode</Summary>
+        <Description>A barcode API to produce QRCode barcodes and DataMatrix barcode.</Description>
+        <Archive sha1sum="ef3898183d004cc944ad03c5fe67b02e43356f33" type="tarxz">mirrors://kde/stable/frameworks/5.64/prison-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libdmtx-devel</Dependency>
+            <Dependency>qrencode-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>prison</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libdmtx</Dependency>
+            <Dependency>qrencode</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/qlogging-categories5/prison.categories</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>prison-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for libepoxy</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">prison</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+        </Files>
+        <Replace>
+            <Package>prison-qt5</Package>
+        </Replace>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kded</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>KDE5 daemon</Summary>
+        <Description>Kded runs in the background and performs a number of small tasks.</Description>
+        <Archive sha1sum="42659ca4864f0b09182f039e55f346f682cf178b" type="tarxz">mirrors://kde/stable/frameworks/5.64/kded-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kinit-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcrash-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>kservice-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kded</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kservice</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>kded-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kded</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcrash-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>kservice-devel</Dependency>
+            <Dependency release="current">kded</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

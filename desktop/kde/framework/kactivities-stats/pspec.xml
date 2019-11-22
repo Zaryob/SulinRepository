@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kactivities-stats</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>Library for KDE's Plasma Activities support</Summary>
+        <Description>Kactivities provides an API for using and interacting with the Plasma Activities Manager.</Description>
+        <Archive sha1sum="4e2cb18041a45ca229baca9cfddf240060d96907" type="tarxz">mirrors://kde/stable/frameworks/5.64/kactivities-stats-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>qt5-sql-postgresql</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>qt5-sql-odbc</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kactivities-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+        <!--Patches>
+           <Patch level="1">build-source.patch</Patch>
+        </Patches-->
+    </Source>
+
+    <Package>
+        <Name>kactivities-stats</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kactivities</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kactivities-stats-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kactivities-stats</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kactivities-devel</Dependency>
+            <Dependency release="current">kactivities-stats</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

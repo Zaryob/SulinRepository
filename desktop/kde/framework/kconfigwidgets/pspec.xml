@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kconfigwidgets</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>Kconfig widgets</Summary>
+        <Description>KConfigWidgets provides easy-to-use classes to create configuration dialogs, as well as a set of widgets which uses KConfig to store their settings.</Description>
+        <Archive sha1sum="a8f7c0a9454cfe3e81e1b56c59492284b97568f6" type="tarxz">mirrors://kde/stable/frameworks/5.64/kconfigwidgets-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kauth-devel</Dependency>
+            <Dependency>kcodecs-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kguiaddons-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kconfigwidgets</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kauth</Dependency>
+            <Dependency>kcodecs</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kguiaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kconfigwidgets-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kconfigwidgets</Summary>
+        <RuntimeDependencies>
+             <Dependency release="current">kconfigwidgets</Dependency>
+	     <Dependency>qt5-base-devel</Dependency>
+             <Dependency>kauth-devel</Dependency>
+             <Dependency>kcodecs-devel</Dependency>
+             <Dependency>kconfig-devel</Dependency>
+             <Dependency>kcoreaddons-devel</Dependency>
+             <Dependency>kguiaddons-devel</Dependency>
+             <Dependency>ki18n-devel</Dependency>
+             <Dependency>kwidgetsaddons-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

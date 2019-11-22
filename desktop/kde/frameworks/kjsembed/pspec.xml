@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kjsembed</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>JavaScript support for HTML rendering engine on KDE5</Summary>
+        <Description>The KJSEmbed library is an easy-to-use wrapper around the KDE ECMAScript interpreter (kjs) that makes it easy to add scriptability to an application.</Description>
+        <Archive sha1sum="f71fbece16b2dbcd5d101ea73bb69723b8d70901" type="tarxz">mirrors://kde/stable/frameworks/5.64/portingAids/kjsembed-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kjs-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+         </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kjsembed</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kjs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kjsembed-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kjsembed</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency >ki18n-devel</Dependency>
+            <Dependency>kjs-devel</Dependency>
+            <Dependency release="current">kjsembed</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

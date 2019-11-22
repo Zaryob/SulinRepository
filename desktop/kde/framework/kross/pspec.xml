@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kross</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>KDE5 application scripting helper</Summary>
+        <Description>Kross is a scripting bridge to embed scripting functionality into an application. It supports QtScript as a scripting interpreter backend.</Description>
+        <Archive sha1sum="21f595643c59cd8c59f40893760563916156dc97" type="tarxz">mirrors://kde/stable/frameworks/5.64/portingAids/kross-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>ktextwidgets-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>sonnet-devel</Dependency>
+            <Dependency>kauth-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kcompletion-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kross</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-script</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kxmlgui</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kross-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kross</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kross</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kcompletion-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

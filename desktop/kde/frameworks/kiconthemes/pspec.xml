@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kiconthemes</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>KDE5 icon utilities</Summary>
+        <Description>This library contains classes to improve the handling of icons in applications using the KDE Frameworks.</Description>
+        <Archive sha1sum="850866c50e68f0fe6411426e35a59205a3b7f17c" type="tarxz">mirrors://kde/stable/frameworks/5.64/kiconthemes-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kauth-devel</Dependency>
+            <Dependency>karchive-devel</Dependency>
+            <Dependency>kcodecs-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kitemviews-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kiconthemes</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kitemviews</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>karchive</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kiconthemes-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kiconthemes</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kiconthemes</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>karchive-devel</Dependency>
+            <Dependency>kitemviews-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
