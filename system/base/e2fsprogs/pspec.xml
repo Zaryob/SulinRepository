@@ -14,17 +14,17 @@
         <PartOf>system.base</PartOf>
         <Summary>Standard ext2/3/4 filesystem utilities</Summary>
         <Description>e2fsprogs provides the filesystem utilities for use with the ext2 filesystem. It also supports the ext3/4 filesystem with journaling support.</Description>
-        <Archive sha1sum="41f018af4858ddde281d74817f3dc9551af5bb6a" type="targz">https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.45.3/e2fsprogs-1.45.3.tar.gz</Archive>
+        <Archive sha1sum="8a1a71724f425331256953bf5ba4d5da89361c76" type="targz">https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.45.4/e2fsprogs-1.45.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libutil-linux-devel</Dependency>
             <Dependency>gettext</Dependency>
             <Dependency>util-linux</Dependency>
         </BuildDependencies>
-        <Patches>
+        <!--Patches>
             <Patch level="1">e2fsprogs-1.41.8-makefile.patch</Patch>
             <Patch level="1">e2fsprogs-1.40-fbsd.patch</Patch>
             <Patch level="1">e2fsprogs-1.42.13-fix-build-cflags.patch</Patch>
-        </Patches>
+        </Patches-->
     </Source>
 
     <Package>
@@ -90,8 +90,8 @@
     <History>
         <Update release="2">
             <Date>2019-09-17</Date>
-            <Version>1.45.3</Version>
-            <Comment>E2fsprogs upgraded to 1.45.3 release.</Comment>
+            <Version>1.45.4</Version>
+            <Comment>E2fsprogs upgraded to 1.45.4 release.</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

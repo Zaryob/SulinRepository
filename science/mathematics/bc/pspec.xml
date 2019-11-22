@@ -29,6 +29,7 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="info">/usr/share/info</Path>
         </Files>
     </Package>

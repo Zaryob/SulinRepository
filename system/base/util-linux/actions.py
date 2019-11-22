@@ -27,7 +27,7 @@ def setup():
                --disable-newgrp \
                --disable-nologin \
                --disable-runuser \
-               --enable-sulogin \
+               --disable-sulogin \
                --disable-utmpdump \
                --disable-chfn-chsh \
                --enable-mountpoint \

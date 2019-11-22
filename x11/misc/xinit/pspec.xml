@@ -20,9 +20,7 @@
             <Dependency>libX11-devel</Dependency>
         </BuildDependencies>
         <Patches>
-            <!--Patch level="1">xinit-1.0.2-client-session.patch</Patch-->
             <Patch>06_move_serverauthfile_into_tmp.diff</Patch>
-            <Patch>fs25361.patch</Patch>
         </Patches>
     </Source>
     <Package>
