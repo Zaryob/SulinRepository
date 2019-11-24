@@ -1,0 +1,68 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qca2</Name>
+        <Homepage>http://delta.affinix.com/download/qca/2.0/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Cryptographic Architecture for QT</Summary>
+        <Description>QCA aims to provide a straightforward and cross-platform crypto API, using Qt datatypes and conventions. QCA separates the API from the implementation, using plugins known as Providers. QCA2 has been re-written for QT.</Description>
+        <Archive sha1sum="28cd90f9392e5ae2d64ea8c208bf56dca79cfcb8" type="targz">https://github.com/KDE/qca/archive/v2.2.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qca2-apidocs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/qca2-apidocs</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qca2</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/qt/5/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/qca</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qca2-devel</Name>
+        <Summary>Development files for qca2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qca2</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/qt5</Path>
+            <Path fileType="data">/usr/mkspecs</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>2.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
