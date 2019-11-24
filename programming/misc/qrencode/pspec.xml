@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qrencode</Name>
+        <Homepage>http://fukuchi.org/works/qrencode/index.en.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>A C library for encoding data in a QR code symbol</Summary>
+        <Description>qrencode is a C library for encoding data in a QR Code symbol, a kind of 2D symbology that can be scanned by handy terminals such as a mobile phone with CCD. The capacity of QR Code is up to 7000 digits or 4000 characters, and is highly robust.</Description>
+        <Archive sha1sum="404505af5c6a3cfc9b5f97db8be288c734fce05e" type="targz">https://fukuchi.org/works/qrencode/qrencode-4.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>m4</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qrencode</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/bin/qrencode</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qrencode-devel</Name>
+        <Summary>Development files for qrencode</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qrencode</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>4.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

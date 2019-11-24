@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lmdb</Name>
+        <Homepage>http://symas.com/mdb/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>OpenLDAP</License>
+        <License>custom</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Symas Lightning Memory-Mapped Database</Summary>
+        <Description>An ultra-fast, ultra-compact key-value embedded data store.</Description>
+        <Archive sha1sum="76f4bc1827474403a78e5f8eb225233d67144286" type="targz">https://github.com/LMDB/lmdb/archive/LMDB_0.9.24.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>lmdb</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lmdb-devel</Name>
+        <Summary>Development files for lmdb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lmdb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>0.9.24</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
