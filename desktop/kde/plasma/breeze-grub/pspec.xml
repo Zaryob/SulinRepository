@@ -1,0 +1,39 @@
+
+<INARY>
+    <Source>
+        <Name>breeze-grub</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Breeze theme for GRUB.</Summary>
+        <Description>Breeze theme for GRUB.</Description>
+        <Archive sha1sum="844955a387890a2079040ff8b037c003ac3a4df7" type="tarxz">mirrors://kde/stable/plasma/5.17.3/breeze-grub-5.17.3.tar.xz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>breeze-grub</Name>
+        <Summary>Breeze theme for GRUB.</Summary>
+        <RuntimeDependencies>
+            <Dependency>grub2</Dependency>
+            <Dependency>noto-fonts</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/boot/grub2/themes</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>5.17.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
