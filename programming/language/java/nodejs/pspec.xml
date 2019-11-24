@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>nodejs</Name>
+        <Homepage>https://nodejs.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine</Summary>
+        <Description>Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. The Node.js package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</Description>
+        <Archive sha1sum="4f1bc82594d4825b79f6b93df02b5d4798b57193" type="tarxz">https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-x64.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>nodejs</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+	        <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>12.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
