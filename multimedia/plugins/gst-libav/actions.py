@@ -9,7 +9,8 @@ from inary.actionsapi import inarytools
 
 
 def setup():
-    autotools.configure("--with-package-name='Sulin gst-libav package' \
+    autotools.configure("PYTHON=python3 \
+                         --with-package-name='Sulin gst-libav package' \
                          --with-package-origin='http://www.github.com/SulinOS/' \
                          --enable-ffmpeg")
 
