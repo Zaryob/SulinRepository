@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Password Checking Library</Summary>
         <Description>CrackLib tests passwords to determine whether they match certain security-oriented characteristics, with the purpose of stopping users from choosing passwords that are easy to guess.</Description>
+        <!-- @@@blfs postlfs cracklib -->
         <Archive sha1sum="9199e7b8830717565a844430653f5a90a04fcd65" type="targz">https://sourceforge.net/projects/sulinos/files/archives/cracklib-2.9.6.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>

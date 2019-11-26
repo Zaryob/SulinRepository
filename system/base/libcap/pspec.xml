@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>POSIX 1003.1e capabilities library</Summary>
         <Description>libcap is a library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.</Description>
+        <!-- @@@kernel linux libs security linux-privs libcap2 -->
         <Archive sha1sum="f2419ebf19b7bf682d346f28c2faf4635450c6fd" type="tarxz">https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.27.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>attr-devel</Dependency>

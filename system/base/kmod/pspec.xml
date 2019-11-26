@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Linux kernel module management utilities</Summary>
         <Description>Linux kernel module management utilities</Description>
+        <!-- @@@debian kmod-->
         <Archive sha1sum="be9998b99a8bd73412fbf4d4b8f09d1c84a0493b" type="targz">https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-26.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>chrpath</Dependency>

@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>XML parsing libraries</Summary>
         <Description>This is expat, the C library for parsing XML, written by James Clark. Expat is a stream oriented XML parser. This means that you register handlers with the parser prior to starting the parse. These handlers are called when the parser discovers the associated structures in the document being parsed. A start tag is an example of the kind of structures for which you may register handlers.</Description>
+        <!-- @@@debian expat-->
         <Archive sha1sum="90a361e4c97f8c469479ffadc0de0b121a911fb5" type="tarxz">https://prdownloads.sourceforge.net/expat/expat-2.2.9.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gnuconfig</Dependency>

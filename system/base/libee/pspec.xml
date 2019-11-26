@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>An Event Expression Library inspired by CEE</Summary>
         <Description>Libee - An Event Expression Library inspired by CEE</Description>
+        <!-- @@@debian libee -->
         <Archive sha1sum="06bcd1be5c60e60a1e8d9a5844b3e9edc76b14e3" type="targz">http://deb.debian.org/debian/pool/main/libe/libee/libee_0.4.1.orig.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libestr-devel</Dependency>
