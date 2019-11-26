@@ -1,40 +1,30 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# Licensed under the GNU General Public License, version 2.
+# See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
+from inary.actionsapi import mesontools
 from inary.actionsapi import get
-from inary.actionsapi import autotools
-from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+from inary.actionsapi import inarytools
 
+if get.buildTYPE()=="emul32":
+    shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
 
 def setup():
-    if get.buildTYPE()=="emul32":
-        inarytools.dosed("pango/modules.c", "(pango\.modules)", r"\1-32")
-    
-    # autotools.autoreconf("-fiv")
-    
-    autotools.configure("--disable-static \
-                         --sysconfdir=/etc \
-                         --disable-gtk-doc \
-                         --%sable-introspection" % ("dis" if get.buildTYPE()=="emul32" else "en"))
-
-    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+    mesontools.meson_configure("-Denable-gtk-doc=false ")
 
 def build():
-    autotools.make()
+    mesontools.ninja_build()
+
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    
     if get.buildTYPE()=="emul32":
-        #shelltools.move("pango/.libs/pango-querymodules", "pango/.libs/pango-querymodules-32")
-        #inarytools.dobin("pango/.libs/pango-querymodules-32")
+        shelltools.system('DESTDIR="{}/emul32" ninja install -C inaryPackageBuild'.format(get.installDIR()))
+        inarytools.domove("/emul32/usr/lib32", "/usr/")
+        inarytools.removeDir("/emul32")
         return
 
-    inarytools.dodir("/etc/pango")
-    shelltools.touch(get.installDIR() +"/etc/pango/pango.modules")
-
-    inarytools.dodoc("AUTHORS", "ChangeLog*", "COPYING", "README", "NEWS")
+    else:
+        mesontools.ninja_install()

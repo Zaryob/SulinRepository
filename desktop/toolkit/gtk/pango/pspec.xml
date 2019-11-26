@@ -14,10 +14,11 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>Text rendering and layout library</Summary>
         <Description>Pango is a library for laying out and rendering of text, with an emphasis on internationalization. Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the context of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.</Description>
-        <Archive sha1sum="18db616204416936ef969e1c387b7a2f4e8b039b" type="tarxz">mirrors://gnome/pango/1.40/pango-1.40.3.tar.xz</Archive>
+        <Archive sha1sum="b98fad9587ced07d92f34327e49c6c644de4aa33" type="tarbz2">https://gitlab.gnome.org/GNOME/pango/-/archive/1.44.7/pango-1.44.7.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
+            <Dependency>fridibi-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -36,6 +37,7 @@
             <Dependency>libX11</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>fridibi</Dependency>
             <Dependency>libXft</Dependency>
             <Dependency>harfbuzz</Dependency>
             <!--<Dependency>graphite2</Dependency>-->
@@ -59,8 +61,12 @@
     <Package>
         <Name>pango-devel</Name>
         <Summary>Development files for pango</Summary>
+        <BuildDependencies>
+            <Dependency>fridibi-32bit</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">pango</Dependency>
+            <Dependency>fridibi-32bit</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -116,6 +122,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-11-26</Date>
+            <Version>1.44.7</Version>
+            <Comment>Upgraded for gtk3 3.24.12</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.40.3</Version>

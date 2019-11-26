@@ -1,59 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# Licensed under the GNU General Public License, version 2.
+# See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
+from inary.actionsapi import mesontools
 from inary.actionsapi import get
-from inary.actionsapi import autotools
-from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+from inary.actionsapi import inarytools
+
+if get.buildTYPE()=="emul32":
+    shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
 
 
 def setup():
-    options = "--prefix=/usr             \
-               --sysconfdir=/etc         \
-               --enable-x11-backend \
-               --enable-broadway-backend \
-               --disable-wayland-backend \
-              "
-
-    shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer",""))
-
-    if get.buildTYPE() == "emul32":
-        options += " --libdir=/usr/lib32 \
-                     --bindir=/usr/bin32 \
-                     --sbindir=/usr/sbin32 \
-                     --enable-colord=no \
-                   "
-
-        shelltools.export("CC", "%s -m32" % get.CC())
-        shelltools.export("CXX", "%s -m32" % get.CC())
-        shelltools.export("CFLAGS", "%s -m32" % get.CFLAGS().replace("-fomit-frame-pointer",""))
-        shelltools.export("CXXFLAGS", "%s -m32" % get.CFLAGS())
-        shelltools.export("LDFLAGS", "%s -m32" % get.LDFLAGS())
-        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
-
-        inarytools.dosed("configure.ac", "cups-config", "cups-config-32bit")
-
-    autotools.autoreconf("-fiv")
-    autotools.configure(options)
-
-    inarytools.dosed("libtool", "( -shared )", r" -Wl,-O1,--as-needed\1")
+    mesontools.meson_configure("-D broadway_backend=true  -Dcolord=yes -Denable-gtk-doc=false ")
 
 def build():
-    autotools.make()
+    mesontools.ninja_build()
+
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
-    # remove empty dir
-    inarytools.removeDir("/usr/share/man")
-    inarytools.dodoc("AUTHORS", "README*", "HACKING", "ChangeLog*", "NEWS*")
-
-    if get.buildTYPE() == "emul32":
-        for binaries in ["gtk-query-immodules-3.0"]:
-            inarytools.domove("/usr/bin/%s" % binaries, "/usr/bin/", "%s-32bit" % binaries)
-        inarytools.removeDir("/usr/bin32")
-    else:
+    mesontools.ninja_install()
+    if get.buildTYPE() != "emul32":
         inarytools.rename("/usr/bin/gtk-update-icon-cache", "gtk3-update-icon-cache")
+
+        for binaries in ["gtk-query-immodules-3.0", "gtk-builder-tool",
+                         "gtk-encode-symbolic-svg",
+                         "gtk-launch", "gtk-query-settings",
+                         "gtk-update-icon-cache"]:
+            inarytools.dobin("inaryPackageBuild/gtk/%s" % binaries)
+        inarytools.dobin("inaryPackageBuild/gdk/broadway/broadwayd")
+        inarytools.dobin("inaryPackageBuild/demos/icon-browser/gtk3-icon-browser")
+        inarytools.dobin("inaryPackageBuild/demos/gtk-demo/gtk3-demo-application")
+        inarytools.dobin("inaryPackageBuild/demos/widget-factory/gtk3-widget-factory")
+    else:
+        inarytools.dobin("inaryPackageBuild/gtk/gtk-query-immodules-3.0", "/usr/bin/gtk-query-immodules-3.0-32bit")
