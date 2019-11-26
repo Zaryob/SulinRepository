@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A high-quality data compressor</Summary>
         <Description>bzip2 is high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.</Description>
+        <!-- @@@sourceware bzip2 -->
         <Archive sha1sum="bf7badf7e248e0ecf465d33c2f5aeec774209227" type="targz">https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz</Archive>
         <Patches>
           <Patch>bzip2-1.0.4-makefile-CFLAGS.patch</Patch>
