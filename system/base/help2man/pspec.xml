@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU utility to convert program --help output to a man page</Summary>
         <Description>Help2man is a tool which generate man page from help text of programs.</Description>
+        <!-- @@@gnu helpman2 -->
         <Archive sha1sum="f131dc48c94ce6760a6ee90bb508d9b4b857cfa9" type="tarxz">http://ftp.gnu.org/gnu/help2man/help2man-1.47.8.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>perl-Locale-gettext</Dependency>

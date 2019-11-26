@@ -15,6 +15,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A document formatting system</Summary>
         <Description>groff is a document formatting system. Groff takes standard text and formatting commands as input and produces formatted output.</Description>
+        <!-- @@@gnu groff -->
         <Archive sha1sum="2ce4ab107e3fab1414fef2c5b5312f562a4e4d35" type="targz">http://ftp.gnu.org/gnu/groff/groff-1.22.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>texinfo</Dependency>

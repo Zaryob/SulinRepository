@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU libraries and utilities for producing multi-lingual messages</Summary>
         <Description>The GNU gettext package provides a set of tools and documentation for producing multi-lingual messages in programs. Tools include a set of conventions about how programs should be written to support message catalogs, a directory and file naming organization for the message catalogs, a runtime library which supports the retrieval of translated messages, and stand-alone programs for handling the translatable and the already translated strings. Gettext provides an easy to use library and tools for creating, using, and modifying natural language catalogs and is a powerful and simple method for internationalizing programs.</Description>
+        <!-- @@@gnu gettext -->
         <Archive sha1sum="2aa01db95b064d7f5d1a46de34a2cc6a57eadf36" type="targz">http://ftp.gnu.org/pub/gnu/gettext/gettext-0.20.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>

@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU utilities to find findutilss</Summary>
         <Description>The GNU Find Utilities are the basic directory searching utilities of the GNU operating system. These programs are typically used in conjunction with other programs to provide modular and powerful directory search and findutils locating capabilities to other commands.</Description>
+        <!-- @@@gnu findutils -->
         <Archive sha1sum="bd2fae4add80334173e03272aeed5635d4a0fa03" type="tarxz">http://ftp.gnu.org/gnu/findutils/findutils-4.7.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>

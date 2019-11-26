@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Tools to make diffs and compare files</Summary>
         <Description>You can use the diff command to show differences between two files, or each corresponding file in two directories. diff outputs differences between files line by line in any of several formats, selectable by command line options.</Description>
+        <!-- @@@gnu diffutils -->
         <Archive sha1sum="ad4e0a05ee2e7f5529db6cb84474f45e086e609b" type="tarxz">http://ftp.gnu.org/gnu/diffutils/diffutils-3.7.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>patch</Dependency>

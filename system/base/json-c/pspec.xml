@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A JSON implementation in C</Summary>
         <Description>json-c implements a reference counting object model that allows you to easily construct JSON objects in C, output them as JSON formatted strings and parse JSON formatted strings back into the C representation of JSON objects.</Description>
+        <!-- @@@github json-c json-c -->
         <Archive sha1sum="d4c667ab94e7051b1e78aa727f0d937caba971e9" type="targz">https://github.com/json-c/json-c/archive/json-c-0.13.1-20180305.tar.gz</Archive>
     </Source>
 
