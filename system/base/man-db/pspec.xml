@@ -15,6 +15,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Application to read Linux man pages</Summary>
         <Description>Man package consists of programs which is used to read most of the documentation available in linux system. For example, you can write "man nameoftheprogram" into the konsole or "man:nameoftheprogram" into the konqueror to get a detailed usage information for many programs.</Description>
+        <!-- @@@savannah man-db -->
         <Archive sha1sum="dd0ca174d0effdfc203579ba4fde5a11469d0e0c" type="tarxz">http://download.savannah.gnu.org/releases/man-db/man-db-2.8.7.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>less</Dependency>

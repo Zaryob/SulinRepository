@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Enhanced seccomp library</Summary>
         <Description>High level interface to the Linux Kernel's seccomp filter.</Description>
+        <!-- @@@github seccomp libseccomp -->
         <Archive sha1sum="9a1b5aa318c31f6b2801b53e923ca1ecc15b10c5" type="targz">https://github.com/seccomp/libseccomp/archive/v2.4.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>glibc-devel</Dependency>

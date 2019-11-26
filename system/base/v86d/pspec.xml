@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Userspace helper for uvesafb</Summary>
         <Description>v86d is a userspace helper that runs x86 code in an emulated environment. It is used by the kernel framebuffer driver uvesafb.</Description>
+        <!-- @@@github mjanusz v86d -->
         <Archive sha1sum="1088c58e0aba6aaf92a877528d8529eb4af5bef2" type="targz">https://github.com/mjanusz/v86d/archive/v86d-0.1.10.tar.gz</Archive>
         <Patches>
         </Patches>

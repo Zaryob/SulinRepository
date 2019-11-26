@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>pipeline manipulation library</Summary>
         <Description>libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way.</Description>
+        <!-- @savannah libpipeline -->
         <Archive sha1sum="1c885e4d5551933c905e751048abb119593c53f4" type="targz">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.0.tar.gz</Archive>
     </Source>
 

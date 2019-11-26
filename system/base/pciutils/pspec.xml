@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Various utilities dealing with the PCI bus</Summary>
         <Description>The PCI Utilities are a collection of programs for inspecting and manipulating configuration of PCI devices.</Description>
+        <!-- @@@github pciutils pciutils -->
         <Archive sha1sum="0d75516406916cbde1e19040c05751bba2ec7833" type="tarxz">https://ftp.osuosl.org/pub/blfs/conglomeration/pciutils/pciutils-3.6.2.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="pci.ids">pci.ids</AdditionalFile>

@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>The Nettle package contains the low-level cryptographic library</Summary>
         <Description>The Nettle package contains the low-level cryptographic library that is designed to fit easily in many contexts.</Description>
+        <!-- @@@gnu nettle -->
         <Archive sha1sum="56a81ed4a8d35489d8bddd99d5262fe3958a52b4" type="targz">ftp://ftp.gnu.org/gnu/nettle/nettle-3.4.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gmp-devel</Dependency>

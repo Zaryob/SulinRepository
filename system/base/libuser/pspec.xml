@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A user and group account administration library</Summary>
         <Description>libuser implements a standardized interface for manipulating and administering user and group accounts. The library uses pluggable back-ends to interface to its data sources.</Description>
+        <!-- @@@pagure libuser -->
         <Archive sha1sum="e0fe60dd38f3b5777d0a4ad664725eddd18ef310" type="tarxz">https://releases.pagure.org/libuser/libuser-0.62.tar.xz</Archive>
         <BuildDependencies>
                 <Dependency>pam-devel</Dependency>

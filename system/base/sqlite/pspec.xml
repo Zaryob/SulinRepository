@@ -13,7 +13,9 @@
         <PartOf>system.base</PartOf>
         <Summary>An SQL Database Engine in a C Library</Summary>
         <Description>SQLite is a small C library that implements a self-contained, embeddable, zero-configuration SQL database engine. Supports databases up to 2 terabytes in size.</Description>
+        <!-- @@@blfs server sqlite -->
         <Archive sha1sum="e8862aa46fb70e25c8006a1fe519067a1fa9e618" type="zip">https://www.sqlite.org/2019/sqlite-src-3290000.zip</Archive>
+        <!-- @@@blfs server sqlite doc -->
         <Archive sha1sum="b0f697c557b415cb1d67acb61b40fbad0b012cad" type="zip">https://sqlite.org/2019/sqlite-doc-3290000.zip</Archive>
         <BuildDependencies>
             <Dependency>readline-devel</Dependency>

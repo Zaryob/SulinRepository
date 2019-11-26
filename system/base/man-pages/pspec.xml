@@ -13,7 +13,9 @@
         <PartOf>system.base</PartOf>
         <Summary>The Man-pages package contains over 2200 man pages.</Summary>
         <Description>Describe C programming language functions important device files and significant configuration files.</Description>
+        <!-- @@@kernel linux docs man-pages-->
         <Archive sha1sum="a70b23f86f37ad946e6e7ceb921abe2001792b84" type="tarxz">https://www.kernel.org/pub/linux/docs/man-pages/man-pages-5.02.tar.xz</Archive>
+        <!-- @@@kernel linux docs man-pages man-pages-posix -->
         <Archive sha1sum="b9c65a46e2061a1b2d4ee7bcc3e46603517b1f42" target="man-pages-5.02" type="tarxz">http://www.kernel.org/pub/linux/docs/man-pages/man-pages-posix/man-pages-posix-2003-a.tar.xz</Archive>
     </Source>
 

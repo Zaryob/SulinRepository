@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Library for some string essentials</Summary>
         <Description>libestr - some essentials for string handling (and a bit more)</Description>
+       <!-- @@@github rsyslog libestr -->
         <Archive sha1sum="3acdf7dae0c3e0fa3dabf43267a1fb5f625c0606" type="targz">http://libestr.adiscon.com/files/download/libestr-0.1.11.tar.gz</Archive>
     </Source>
 

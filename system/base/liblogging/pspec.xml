@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Easy to use, portable, open source library for system logging</Summary>
         <Description>Liblogging offers an enhanced replacement for the syslog() call, but retains its ease of use.</Description>
+        <!-- @@@github rsyslog liblogging -->
         <Archive sha1sum="f07012fc8bd74e0c7bdcacaa772828639d1a9657" type="targz">http://download.rsyslog.com/liblogging/liblogging-1.0.6.tar.gz</Archive>
     </Source>
 

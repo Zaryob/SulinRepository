@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Perl-compatible regular expression library</Summary>
         <Description>The PCRE (Perl Compatible Regular Expressions) library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.</Description>
+        <!-- @@@blfs general pcre -->
         <Archive sha1sum="0d4585ee6426ab0db9c0c8f1c8c6da968170174d" type="tarbz2">https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>readline-devel</Dependency>

@@ -10,6 +10,7 @@
         <PartOf>system.base</PartOf>
         <Summary>run scripts or programs in a directory</Summary>
         <Description>run scripts or programs in a directory</Description>
+        <!-- @@@debian debianutils -->
         <Archive sha1sum="67a3934bdfb4a2b83f300713b819258236e4bd05" type="tarxz">http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_4.9.tar.xz</Archive>
     </Source>
 

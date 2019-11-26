@@ -15,6 +15,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Timezone data files and tools</Summary>
         <Description>timezone includes timezone data files and tools to use them. Package contents are synchronized with glibc tree.</Description>
+        <!-- @@@debian tzdata -->
         <Archive sha1sum="9ab1932256674075fb74ff84792582b5ac12c476" type="targz">http://www.iana.org/time-zones/repository/releases/tzdata2018e.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>perl</Dependency>

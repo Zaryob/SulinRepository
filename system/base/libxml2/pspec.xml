@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Version 2 of the library to manipulate XML files</Summary>
         <Description>Libxml2 is the XML C parser and toolkit developed for the Gnome project (but usable outside of the Gnome platform).</Description>
+        <!-- @@@github GNOME libxml2 -->
         <Archive sha1sum="16730247d995dd4f3636298075f13301456f7d45" type="targz">ftp://xmlsoft.org/libxml2/libxml2-2.9.9-rc2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>

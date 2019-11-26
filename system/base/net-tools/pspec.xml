@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Standard Linux networking tools</Summary>
         <Description>net-tools is a collection of programs that form the base set of the networking tools for the Linux operating system. It includes arp, hostname, ifconfig, ipmaddr, iptunnel, mii-tool, nameif, netstat, plipconfig, rarp, route and slattach.</Description>
+        <!-- @@@debian net-tools -->
         <Archive sha1sum="944fb70641505d5d1139dba3aeb81ba124574b83" type="tarbz2">https://sourceforge.net/projects/net-tools/files/net-tools-1.60.tar.bz2</Archive>
         <Patches>
             <Patch compressionType="bz2" level="1">01_all_net-tools-1.60-2.6-compilefix.patch.bz2</Patch>
