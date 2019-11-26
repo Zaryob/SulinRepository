@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>udisks</Name>
+        <Homepage>http://udisks.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Disk Management Service</Summary>
+        <Description>udisks provides a daemon, API and command line tools for managing disk devices attached to the system.</Description>
+        <Archive sha1sum="d904eaeeb6af1ad7c4246d7fa879f80849f6c0f2" type="tarbz2">https://github.com/storaged-project/udisks/releases/download/udisks-2.8.4/udisks-2.8.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>lvm2</Dependency>
+            <Dependency>parted</Dependency>
+            <Dependency>sg3_utils</Dependency>
+            <Dependency>libatasmart</Dependency>
+            <Dependency>libblockdev-devel</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>udisks</Name>
+        <RuntimeDependencies>
+            <Dependency>parted</Dependency>
+            <Dependency>mtools</Dependency>
+            <Dependency>xfsprogs</Dependency>
+            <Dependency>btrfs-progs</Dependency>
+            <Dependency>ntfs-3g</Dependency>
+            <Dependency>dosfstools</Dependency>
+            <Dependency>libblockdev</Dependency>
+            <Dependency>libatasmart</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>sg3_utils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="executable">/usr/sbin/umount.udisks2</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gir-1.0/UDisks-2.0.gir</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/udisksctl</Path>
+            <Path fileType="data">/usr/share/polkit-1/</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/lib/udev</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/var/lib/</Path>
+            <Path fileType="data">/run/udisks</Path>
+            <Path fileType="data">/etc/profile.d</Path>
+            <Path fileType="data">/etc/dbus-1</Path>
+            <Path fileType="data">/etc/udisks2</Path>
+            <Path fileType="data">/etc/avahi/services</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/*.xml</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>udisks-doc</Name>
+        <RuntimeDependencies>
+             <Dependency release="current">udisks</Dependency>
+        </RuntimeDependencies>
+        <Files>
+          <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+
+
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-18</Date>
+            <Version>2.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

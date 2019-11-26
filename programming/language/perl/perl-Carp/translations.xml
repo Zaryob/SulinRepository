@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-Carp</Name>
+        <Summary xml:lang="tr">Alternatif uyarı ve çıkış modülü </Summary>
+        <Description xml:lang="tr">Carp rutinleri kendi modüllerinizde kullanışlıdır çünkü die () veya warn () gibi davranırlar, ancak modülünüzün bir kullanıcısı için daha faydalı olması muhtemel bir mesajla. cluck() ve confess() durumunda, bu bağlam çağrı yığınındaki her çağrının bir özetidir; longmess() hata mesajının içeriğini döndürür. </Description>
+    </Source>
+</INARY>

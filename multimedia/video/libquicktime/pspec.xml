@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A library based on quicktime4linux with extensions</Summary>
         <Description>Libquicktime is based on the great quicktime4linux library with several enhancements. All 3rd-party libraries were removed from the sourcetree. Instead, the systemwide installed libraries are detected by the configure script. All original codecs were moved into dynamically loadable modules, and new codecs are in development.</Description>
-        <Archive sha1sum="7008b2dc27b9b40965bd2df42d39ff4cb8b6305e" type="targz">mirrors://sourceforge//libquicktime/libquicktime/1.2.4/libquicktime-1.2.4.tar.gz</Archive>
+        <Archive sha1sum="7008b2dc27b9b40965bd2df42d39ff4cb8b6305e" type="targz">mirrors://sourceforge/libquicktime/libquicktime/1.2.4/libquicktime-1.2.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>mesa-devel</Dependency>
             <Dependency>lame-devel</Dependency>

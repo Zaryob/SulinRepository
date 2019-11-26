@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>i3-wm</Name>
+        <Homepage>http://i3wm.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <Summary>An improved dynamic tiling window manager</Summary>
+        <Description>An improved dynamic tiling window manager</Description>
+        <Archive sha1sum="1834ce349a2aea2fbb0d44d9ed820fa9e1a394ab" type="tarbz2">https://i3wm.org/downloads/i3-4.17.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>yajl-devel</Dependency>
+            <Dependency>libev</Dependency>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>xcb-util-devel</Dependency>
+            <Dependency>libconfuse-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>xcb-util-xrm-devel</Dependency>
+            <Dependency>xcb-util-wm-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>xcb-util-cursor-devel</Dependency>
+            <Dependency>xcb-util-renderutil-devel</Dependency>
+            <Dependency>xcb-util-keysyms-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>i3-wm</Name>
+        <RuntimeDependencies>
+            <Dependency>yajl</Dependency>
+            <Dependency>libev</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libconfuse</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>xcb-util-wm</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>xcb-util-xrm</Dependency>
+            <Dependency>xcb-util-cursor</Dependency>
+            <Dependency>xcb-util-keysyms</Dependency>
+            <Dependency>xcb-util-renderutil</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.17.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

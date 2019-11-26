@@ -39,7 +39,7 @@
         <PartOf>programming.language.python</PartOf>
         <RuntimeDependencies>
             <Dependency>curl</Dependency>
-            <Dependency>python2</Dependency>
+            <Dependency>python</Dependency>
             <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -51,7 +51,7 @@
         <PartOf>system.doc</PartOf>
         <RuntimeDependencies>
             <Dependency>curl</Dependency>
-            <Dependency>python2</Dependency>
+            <Dependency>python</Dependency>
             <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>

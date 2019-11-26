@@ -1,0 +1,20 @@
+Subject: simplify mdmonitor.service
+From: Michael Tokarev <mjt@tls.msk.ru>
+Date: Fri, 14 Nov 2014 19:18:05 +0300
+Bug-Debian: http://bugs.debian.org/764647
+Forwarded: no
+
+There isn't much for customization for mdadm --monitor.
+it'll just do what it's supposed to do, so just run it.
+
+--- a/systemd/mdmonitor.service
++++ b/systemd/mdmonitor.service
+@@ -10,7 +10,4 @@
+ DefaultDependencies=no
+ 
+ [Service]
+-Environment=  MDADM_MONITOR_ARGS=--scan
+-EnvironmentFile=-/run/sysconfig/mdadm
+-ExecStartPre=-/usr/lib/mdadm/mdadm_env.sh
+-ExecStart=BINDIR/mdadm --monitor $MDADM_MONITOR_ARGS
++ExecStart=BINDIR/mdadm --monitor --scan

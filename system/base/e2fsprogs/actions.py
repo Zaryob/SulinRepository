@@ -11,14 +11,15 @@ from inary.actionsapi import get
 
 
 def setup():
-    shelltools.system("  sed -i '/init\.d/s|^|#|' misc/Makefile.in")
-    autotools.autoreconf("-vif")
-    autotools.rawConfigure("--enable-elf-shlibs \
+#    autotools.autoreconf("-vif")
+    autotools.rawConfigure("--prefix=/usr \
+                            --sbindir=/usr/bin \
+                            --libdir=/usr/lib \
+                            --enable-elf-shlibs \
                             --with-root-prefix="" \
                             --enable-nls \
                             --disable-e2initrd-helper \
                             --disable-libblkid \
-                            --enable-elf-shlibs \
                             --disable-libuuid \
                             --disable-fsck \
                             --disable-uuidd \
@@ -34,7 +35,7 @@ def check():
 
 def install():
     autotools.rawInstall("install install-libs LDCONFIG=/bin/true \
-                          DESTDIR=%s root_sbindir=/sbin root_libdir=/lib" % get.installDIR())
+                          DESTDIR=%s root_sbindir=/usr/bin root_libdir=/lib" % get.installDIR())
 
-
+    inarytools.remove("/usr/share/man/man8/logsave.8")
     inarytools.dodoc("README", "RELEASE-NOTES")

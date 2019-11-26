@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dkms</Name>
+        <Homepage>https://github.com/dell/dkms</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Dynamic Kernel Module Support</Summary>
+        <Description>Dynamic Kernel Module Support supplies that dynamically add and remove new modules from source code.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="d4c4e2d160d6119f8757d6a4a4c364f0f770cc43" type="targz">https://github.com/dell/dkms/archive/v2.8.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>dkms</Name>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/lib/dkms</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/dkms</Path>
+            <Path fileType="data">/etc/kernel</Path>
+            <Path fileType="config">/etc/dkms</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/var/lib/dkms</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-29</Date>
+            <Version>2.8.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

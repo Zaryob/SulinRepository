@@ -24,8 +24,9 @@
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
+    <!--Needs rebuild-->
     <Package>
-    <Name>jbigkit-32bit</Name>
+        <Name>jbigkit-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for jbigkit.</Summary>
         <BuildType>emul32</BuildType>

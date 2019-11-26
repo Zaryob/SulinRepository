@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rar</Name>
+        <Homepage>http://www.rarlab.com</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>RAR</License>
+        <IsA>app:console</IsA>
+        <Summary>RAR compressor</Summary>
+        <Description>rar is an compressor supporting multiple volume archives and damage protection. It can also create SFX-archives. This program is shareware and you must register it after 40 days of use.</Description>
+        <Archive sha1sum="703adaf50e14d45c2090469d874969b8249dd05a" type="targz" target="i686">http://www.rarlab.com/rar/rarlinux-5.7.1.tar.gz</Archive>
+        <Archive sha1sum="4c4c6242b954c40060e80e3412de72d06949c1de" type="targz" target="x86_64">http://www.rarlab.com/rar/rarlinux-x64-5.7.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>rar</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/opt/rar/bin</Path>
+            <Path fileType="data">/opt/rar/lib</Path>
+            <Path fileType="data">/opt/rar/etc</Path>
+            <Path fileType="doc">/usr/share/doc/rar</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>5.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

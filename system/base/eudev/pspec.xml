@@ -53,6 +53,12 @@
             <Path fileType="data">/lib/udev/rules.d</Path>
         </Files>
         <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev">init.d/udev</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev-settle">init.d/udev-settle</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev-trigger">init.d/udev-trigger</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/udev">conf.d/udev</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/udev-settle">conf.d/udev-settle</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/udev-trigger">conf.d/udev-trigger</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/udev.conf">tmpfiles.conf</AdditionalFile>
         </AdditionalFiles>
         <Provides>
@@ -114,6 +120,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-11-19</Date>
+            <Version>3.2.8</Version>
+            <Comment>eudev init scripts added.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>3.2.8</Version>

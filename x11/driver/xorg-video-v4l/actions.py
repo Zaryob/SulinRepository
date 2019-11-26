@@ -8,6 +8,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 
 def setup():
+    autotools.autogen()
     #autotools.autoreconf("-vif")
     autotools.configure("--disable-static")
 

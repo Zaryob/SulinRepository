@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>subversion</Name>
+        <Homepage>http://subversion.apache.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Subversion</License>
+        <IsA>app:console</IsA>
+        <IsA>service</IsA>
+        <Summary>A compelling replacement for CVS</Summary>
+        <Description>SVN is a version controlling system to store files and control their change history in a repository.</Description>
+        <Archive sha1sum="de406057b0a2201d4dddcd296020a2bbdc2c3833" type="tarbz2">http://archive.apache.org/dist/subversion/subversion-1.9.12.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>apache</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>serf-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>jdk7-openjdk</Dependency>
+            <Dependency>apr-util-devel</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+	    <Dependency>openssl-devel</Dependency>
+            <Dependency>swig</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">subversion.perl.LD_RUN_PATH.patch</Patch>
+            <Patch level="1">subversion-1.8.0-kwallet.patch</Patch>
+            <Patch level="1">subversion-1.8.0-pie.patch</Patch>
+            <Patch level="1">subversion-1.8.0-rpath.patch</Patch-->
+            <Patch level="1">subversion-swig-perl-install_vendor.patch</Patch>
+            <Patch>subversion.rpath.fix.patch</Patch>
+            <Patch level="1">dont_compile_pyc.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>subversion</Name>
+        <RuntimeDependencies>
+            <Dependency>file</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>apr</Dependency>
+            <Dependency>serf</Dependency>
+            <Dependency>apr-util</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <!--Dependency>libgnome-keyring</Dependency-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/conf.d</Path>
+            <Path fileType="data">/etc/subversion</Path>
+            <Path fileType="data">/etc/bash_completion.d</Path>
+            <Path fileType="data">/usr/share/build</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/var/svn</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/svnserve">svnserve.confd</AdditionalFile>
+
+            <!-- http://websvn.kde.org/trunk/KDE/kdesdk/scripts/ -->
+            <!--AdditionalFile owner="root" permission="0755" target="/usr/bin/svnlastchange">svnlastchange</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/svnrevertlast">svnrevertlast</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/svnlastlog">svnlastlog</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/svnclean">svn-clean</AdditionalFile-->
+            <!-- system-wide configuration file for auto mimetype setting -->
+            <AdditionalFile owner="root" permission="0644" target="/etc/subversion/config">subversion.config</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>subversion-devel</Name>
+        <Summary>Development files for subversion</Summary>
+        <RuntimeDependencies>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>apr-devel</Dependency>
+            <Dependency>serf-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>apr-util-devel</Dependency>
+            <Dependency release="current">subversion</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mod_dav_svn</Name>
+        <PartOf>server.web</PartOf>
+        <RuntimeDependencies>
+            <Dependency>apr</Dependency>
+            <Dependency>apache</Dependency>
+            <Dependency>apr-util</Dependency>
+            <Dependency>subversion</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/apache2</Path>
+            <Path fileType="executable">/usr/libexec/mod_dav_svn.so</Path>
+            <Path fileType="executable">/usr/libexec/mod_authz_svn.so</Path>
+            <Path fileType="config">/etc/apache2/modules.d</Path>
+            <Path fileType="data">/var/www/localhost/htdocs</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/apache2/modules.d/47_mod_dav_svn.conf">47_mod_dav_svn.conf</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-18</Date>
+            <Version>1.9.12</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

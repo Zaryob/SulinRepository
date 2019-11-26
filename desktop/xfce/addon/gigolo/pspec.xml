@@ -24,7 +24,6 @@
         <Name>gigolo</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>gvfs</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

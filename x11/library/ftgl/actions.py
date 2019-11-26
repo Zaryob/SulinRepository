@@ -13,9 +13,9 @@ def setup():
     autotools.configure("--enable-shared \
                          --disable-static\
                          --with-x")
-    
+
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
-    
+
 def build():
     autotools.make()
 
@@ -23,4 +23,3 @@ def install():
     autotools.install()
 
     inarytools.dodoc("AUTHORS", "BUGS", "ChangeLog", "NEWS", "README", "TODO")
-

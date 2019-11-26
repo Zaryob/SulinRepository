@@ -8,7 +8,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
-WorkDir="hyphen-master"
+
 def setup():
     autotools.autoreconf("-vif")
     autotools.configure()

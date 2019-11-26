@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>go</Name>
+        <Homepage>http://golang.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Compiler and tools for the Go programming language from Google</Summary>
+        <Description>Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</Description>
+        <Archive sha1sum="91b91f8ad5eafedfa0bca7b389829b7325cf0f17" type="targz">https://github.com/golang/go/archive/go1.13.4.tar.gz</Archive>
+        <Archive sha1sum="ed23e5951771f03d71dffdbd222617dd451fa511" type="tarbz2" target="go-go1.7.5">https://dev.gentoo.org/~williamh/dist/go-linux-amd64-bootstrap-1.8.tbz</Archive>
+        <BuildDependencies>
+            <Dependency>git</Dependency>
+            <Dependency>gawk</Dependency>
+            <Dependency>libgccgo</Dependency>
+        </BuildDependencies>
+        <!--BuildDependencies>
+            <Dependency>gawk</Dependency>
+            <Dependency>mercurial</Dependency>
+            <Dependency>git</Dependency>
+        </BuildDependencies-->
+    </Source>
+    <Package>
+        <Name>golang</Name>
+        <RuntimeDependencies>
+            <Dependency>libgccgo</Dependency>
+            <Dependency>git</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="config">/etc</Path>
+        </Files>
+        <AdditionalFiles>
+             <AdditionalFile owner="root" permission="0644" target="/etc/profile.d/go.sh">go.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>1.13.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

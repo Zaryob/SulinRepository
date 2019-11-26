@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-Cairo</Name>
+        <Summary xml:lang="tr">Cairo 2d vektör grafik kütüphanesine Perl arayüzü</Summary>
+        <Description xml:lang="tr">perl-Cairo, vektör grafik kütüphanesi cairo için Perl bağları sağlar. PNG, PDF ve SVG dahil olmak üzere birden fazla çıktı hedefini destekler. perl-Cairo bütün bu hedefler üzerinde aynı çıktılar üretir.</Description>
+    </Source>
+</INARY>

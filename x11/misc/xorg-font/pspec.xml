@@ -12,7 +12,7 @@
         <IsA>data:font</IsA>
         <Summary>X.Org font files</Summary>
         <Description>xorg-font contains base X.Org fonts.</Description>
-        <Archive sha1sum="24ace2470403f85a0d393769204029bd8247992a" type="tarbz2">mirrors://xorg/individual/font/encodings-1.0.4.tar.bz2</Archive>
+        <Archive sha1sum="7ffec76dba1cfd5040c5b43ccfae930c83ddf92e" type="tarbz2">mirrors://xorg/individual/font/encodings-1.0.5.tar.bz2</Archive>
         <Archive sha1sum="6a2ec569336b5646682a14eee3c7790274beffd1" type="tarbz2">mirrors://xorg/individual/font/font-adobe-75dpi-1.0.3.tar.bz2</Archive>
         <Archive sha1sum="53311cbd604f18bd9570727105a4222473d363e3" type="tarbz2">mirrors://xorg/individual/font/font-adobe-100dpi-1.0.3.tar.bz2</Archive>
         <Archive sha1sum="50e837322a09f1a7c40fb78fc6aad1a157284507" type="tarbz2">mirrors://xorg/individual/font/font-adobe-utopia-75dpi-1.0.4.tar.bz2</Archive>
@@ -29,6 +29,7 @@
         <Archive sha1sum="975e9f7872483394ebd87610f8bbc924d99bea34" type="tarbz2">mirrors://xorg/individual/font/font-bitstream-75dpi-1.0.3.tar.bz2</Archive>
         <Archive sha1sum="138376f8683c09b9068c7c124842a7af9f0fcc2e" type="tarbz2">mirrors://xorg/individual/font/font-bitstream-100dpi-1.0.3.tar.bz2</Archive>
         <Archive sha1sum="7633551be3525c501278e81259b22ad9a893de4d" type="tarbz2">mirrors://xorg/individual/font/font-bitstream-type1-1.0.3.tar.bz2</Archive>
+        <Archive sha1sum="e299d2bd2a84c98be5202435c8355e73e0282970" type="tarbz2">mirrors://xorg/individual/font/font-bitstream-speedo-1.0.2.tar.bz2</Archive>
         <Archive sha1sum="e5af8c2e8fb23955808a08bd38728ab3ad284d61" type="tarbz2">mirrors://xorg/individual/font/font-cronyx-cyrillic-1.0.3.tar.bz2</Archive>
         <Archive sha1sum="1649271129bbeff3aeee70a9da87a8e5e59162c1" type="tarbz2">mirrors://xorg/individual/font/font-cursor-misc-1.0.3.tar.bz2</Archive>
         <Archive sha1sum="0c7b24e08e6d42eb006d79ae7ab4bbf446d59f7a" type="tarbz2">mirrors://xorg/individual/font/font-daewoo-misc-1.0.3.tar.bz2</Archive>
@@ -65,20 +66,9 @@
             <Path fileType="config">/etc/fonts/conf.avail/42-luxi-mono.conf</Path>
             <Path fileType="config">/etc/fonts/conf.d/42-luxi-mono.conf</Path>
         </Files>
-    </Package>
-
-    <Package>
-        <Name>xorg-font-extra</Name>
-        <Summary>X.Org additional font files</Summary>
-        <RuntimeDependencies>
-            <Dependency>xorg-app</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="config">/etc/X11/fontpath.d/75dpi:unscaled</Path>
-            <Path fileType="config">/etc/X11/fontpath.d/100dpi:unscaled</Path>
-            <Path fileType="data">/usr/share/fonts/75dpi</Path>
-            <Path fileType="data">/usr/share/fonts/100dpi</Path>
-        </Files>
+        <Provides>
+            <SCOM script='package.py'>System.Package</SCOM>
+        </Provides>
     </Package>
 
     <History>

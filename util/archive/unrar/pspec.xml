@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>unrar</Name>
+        <Homepage>http://www.rarsoft.com/rar_add.htm</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>unRAR</License>
+        <IsA>app:console</IsA>
+        <Summary>RAR decompressor</Summary>
+        <Description>unrar is a program to decompress RAR archives.</Description>
+        <Archive sha1sum="56096808b6be7f6feb494d40ebc7c0c61fc3ea8c" type="targz">http://www.rarlab.com/rar/unrarsrc-5.7.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>unrar</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>5.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

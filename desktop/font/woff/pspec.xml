@@ -12,6 +12,11 @@
         <Summary>Web Open Font Format 2 reference implementation</Summary>
         <Description>The implementor for WOFF2 formatted files. The structure of WOFF2 files is similar to that of SFNT and WOFF 1.0 font files, in that there is a header followed by a table directory, followed by the data for those tables.</Description>
         <Archive sha1sum="bab4838b248026c968e171a5467b5176caf4e2e5" type="targz">https://github.com/google/woff2/archive/v1.0.2.tar.gz</Archive>
+        <BuildDependencies>
+          <Dependency>ninja</Dependency>
+          <Dependency>cmake</Dependency>
+          <Dependency>libbrotli-devel</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
@@ -20,6 +25,9 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
+        <RuntimeDependencies>
+            <Dependency>libbrotli</Dependency>
+        </RuntimeDependencies>
     </Package>
     <Package>
         <Name>woff-devel</Name>
@@ -33,6 +41,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-11-19</Date>
+            <Version>1.0.2</Version>
+            <Comment>Build dependencies fixed and action script changed.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>1.0.2</Version>

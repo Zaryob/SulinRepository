@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cabextract</Name>
+        <Homepage>http://www.cabextract.org.uk/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A program to extract from Microsoft Cabinet files</Summary>
+        <Description>cabextract is a program to extract files from Microsoft Cabinet files.</Description>
+        <Archive sha1sum="a939b03822cf5a8fcc1677077915416f42a12784" type="targz">http://www.cabextract.org.uk/cabextract-1.9.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>cabextract</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>1.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

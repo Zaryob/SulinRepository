@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>MPEG-4 audio codecs</Summary>
         <Description>Free MPEG-4 audio codecs by AudioCoding.com.</Description>
-        <Archive sha1sum="35ed1059f34bd411c80e9a8745eddf16c112be69" type="targz">https://datapacket.dl.sourceforge.net/project/faac/faac-src/faac-1.29/faac-1.29.9.2.tar.gz</Archive>
+        <Archive sha1sum="35ed1059f34bd411c80e9a8745eddf16c112be69" type="targz">https://netcologne.dl.sourceforge.net/project/faac/faac-src/faac-1.29/faac-1.29.9.2.tar.gz</Archive>
     </Source>
     <Package>
         <Name>faac</Name>

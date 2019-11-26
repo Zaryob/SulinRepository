@@ -9,26 +9,36 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
 def setup():
-    options = "--with-glib=yes \
-               --with-freetype=yes \
-               --with-cairo=yes \
-               --with-icu=yes \
-               --with-gobject=yes \
-               --with-graphite2=yes"
+    autotools.autoreconf("-ivf")    
 
     if get.buildTYPE() == "emul32":
-        options += "--with-glib=yes \
+        shelltools.export("CC", "{} -std=c11".format(get.CC()))
+        options = "--with-glib=yes \
                     --with-graphite2=no \
                     --with-cairo=yes \
                     --with-icu=yes"
+
+    else: 
+        options = "--with-glib=yes \
+                   --with-freetype=yes \
+                   --with-cairo=yes \
+                   --with-icu=yes \
+                   --with-gobject=yes \
+                   --with-graphite2=yes"
+
+                    
     autotools.configure(options)
 
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
-    
+
 def build():
+    if get.buildTYPE() == "emul32":
+        shelltools.export("CC", "{} -std=c11".format(get.CC()))
+    
     autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    
+
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")
+

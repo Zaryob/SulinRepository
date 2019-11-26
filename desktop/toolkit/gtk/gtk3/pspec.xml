@@ -182,7 +182,7 @@
             <Dependency>glib2-32bit</Dependency>
             <Dependency>cairo-32bit</Dependency>
             <Dependency>pango-32bit</Dependency>
-            <Dependency>librest-32bit</Dependency>
+            <!--Dependency>librest-32bit</Dependency-->
             <Dependency>json-glib-32bit</Dependency>
             <Dependency>libXi-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>

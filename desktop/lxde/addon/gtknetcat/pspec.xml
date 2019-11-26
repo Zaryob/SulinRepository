@@ -5,7 +5,7 @@
         <Name>gtknetcat</Name>
         <Homepage>http://wiki.lxde.org/en/GtkNetCat</Homepage>
         <Packager>
-            <Name>Ayhan Yalçınsoy</Name>
+            <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>GPLv3</License>
@@ -26,7 +26,7 @@
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
             <Dependency>netcat</Dependency>
-            <Dependency>python-gtk</Dependency>
+            <Dependency>python-gtk2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

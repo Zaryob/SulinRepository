@@ -1,0 +1,8 @@
+
+<INARY>
+    <Source>
+        <Name>makeself</Name>
+        <Summary xml:lang="tr">Kendiliğinden açılan arşiv (SFX) üreteci.</Summary>
+        <Description xml:lang="tr">makeelf, kendiliğinden açılan arşiv dosyaların (.run) oluşturmak için kullanılan küçük bir komut satırı betiğidir.</Description>
+    </Source>
+</INARY>

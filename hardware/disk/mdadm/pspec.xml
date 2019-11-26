@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mdadm</Name>
+        <Homepage>http://www.kernel.org/pub/linux/utils/raid/mdadm</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Utility to control Linux MD devices (software RAID arrays)</Summary>
+        <Description>mdadm is used to create, manage, and monitor Linux MD (software RAID) devices.</Description>
+        <Archive sha1sum="4bbbd02674ac67dc9773f41aace7677aa5374c1c" type="tarxz">https://www.kernel.org/pub/linux/utils/raid/mdadm/mdadm-4.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>linux-module-headers</Dependency>
+            <Dependency>dietlibc</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>0001-Assemble-keep-MD_DISK_FAILFAST-and-MD_DISK_WRITEMOST.patch</Patch>
+            <Patch>0002-Document-PART-POLICY-lines.patch</Patch>
+            <Patch>0003-policy-support-devices-with-multiple-paths.patch</Patch>
+            <Patch>0004-mdcheck-add-systemd-unit-files-to-run-mdcheck.patch</Patch>
+            <Patch>0005-Monitor-add-system-timer-to-run-oneshot-periodically.patch</Patch>
+            <Patch>0006-imsm-update-metadata-correctly-while-raid10-double-d.patch</Patch>
+            <Patch>0007-Assemble-mask-FAILFAST-and-WRITEMOSTLY-flags-when-fi.patch</Patch>
+            <Patch>0008-Grow-avoid-overflow-in-compute_backup_blocks.patch</Patch>
+            <Patch>0009-Grow-report-correct-new-chunk-size.patch</Patch>
+            <Patch>0010-policy.c-prevent-NULL-pointer-referencing.patch</Patch>
+            <Patch>0011-policy.c-Fix-for-compiler-error.patch</Patch>
+            <Patch>readlink-path.patch</Patch>
+            <Patch>sysmacros.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>mdadm</Name>
+        <Files>
+            <Path fileType="executable">/sbin/mdadm</Path>
+            <Path fileType="executable">/sbin/mdmon</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/lib/tmpfiles.d</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="config">/etc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/mdadm.conf">mdadm.tmpfiles.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/cron.weekly/raid-check">scripts/raid-check</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/mdadm">mdadm.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/65-md-incremental.rules">mdadm.rules</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/mdadm">mdadm.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mdadm">mdadm.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/mdraid">mdraid.confd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mdraid">mdraid.initd</AdditionalFile>
+
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="service.py">System.Service</SCOM>
+        </Provides>
+    </Package>
+
+    <!--Package>
+        <Name>mdadm-static</Name>
+        <PartOf>system.base</PartOf>
+        <Files>
+            <Path fileType="executable">/sbin/mdadm.static</Path>
+            <Path fileType="executable">/sbin/mdassemble.static</Path>
+        </Files>
+    </Package-->
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

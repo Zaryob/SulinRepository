@@ -1,0 +1,36 @@
+From 757e55435997e355ee9b03e5d913b5496a3c39a8 Mon Sep 17 00:00:00 2001
+From: Mariusz Tkaczyk <mariusz.tkaczyk@intel.com>
+Date: Tue, 11 Dec 2018 15:04:07 +0100
+Subject: [PATCH 11/11] policy.c: Fix for compiler error
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+After cd72f9d(policy: support devices with multiple paths.) compilation
+on old compilers fails because "‘p’ may be used uninitialized
+in this function".
+
+Initialize it with NULL to prevent this.
+
+Signed-off-by: Mariusz Tkaczyk <mariusz.tkaczyk@intel.com>
+Signed-off-by: Jes Sorensen <jsorensen@fb.com>
+---
+ policy.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/policy.c b/policy.c
+index e3a0671f..3c53bd35 100644
+--- a/policy.c
++++ b/policy.c
+@@ -268,7 +268,7 @@ static int pol_match(struct rule *rule, char **paths, char *type, char **part)
+ 
+ 	for (; rule; rule = rule->next) {
+ 		if (rule->name == rule_path) {
+-			char *p;
++			char *p = NULL;
+ 			int i;
+ 			if (pathok == 0)
+ 				pathok = -1;
+-- 
+2.19.1
+

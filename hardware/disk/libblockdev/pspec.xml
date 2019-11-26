@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libblockdev</Name>
+        <Homepage>https://github.com/storaged-project/libblockdev</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3</License>
+        <IsA>app</IsA>
+        <Summary>A library for manipulating block devices</Summary>
+        <Description>libblockdev is a C library supporting GObject Introspection for manipulation of block devices. It has a plugin-based architecture where each technology (like LVM, Btrfs, MD RAID, Swap,...) is implemented in a separate plugin, possibly with multiple implementations (e.g. using LVM CLI or the new LVM DBus API).</Description>
+        <Archive sha1sum="718a4f86e7c2e4689dc093a89500fb5390194647" type="targz">https://github.com/storaged-project/libblockdev/releases/download/2.23-1/libblockdev-2.23.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>mdadm</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>parted-devel</Dependency>
+            <Dependency>libyaml-devel</Dependency>
+            <Dependency>libkmod-devel</Dependency>
+            <Dependency>volume_key-devel</Dependency>
+            <Dependency>libbytesize-devel</Dependency>
+            <Dependency>libcryptsetup-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>device-mapper-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libblockdev</Name>
+        <RuntimeDependencies>
+            <Dependency>nss</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>parted</Dependency>
+            <Dependency>libyaml</Dependency>
+            <Dependency>libkmod</Dependency>
+            <Dependency>volume_key</Dependency>
+            <Dependency>libbytesize</Dependency>
+            <Dependency>libcryptsetup</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>device-mapper</Dependency>
+        </RuntimeDependencies>
+        <Files>
+          <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin/lvm-cache-stats</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libblockdev-devel</Name>
+        <Summary>Development files for libblockdev</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libblockdev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-18</Date>
+            <Version>2.23</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

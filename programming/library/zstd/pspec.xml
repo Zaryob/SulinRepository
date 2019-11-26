@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>zstd</Name>
+        <Homepage>http://www.zstd.net/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Zstandard - Fast real-time compression algorithm</Summary>
+        <Description>Zstandard, or zstd as short version, is a fast lossless compression algorithm, targeting real-time compression scenarios at zlib-level and better compression ratios. It's backed by a very fast entropy stage, provided by Huff0 and FSE library.</Description>
+        <Archive sha1sum="355e79185fa1ea5b325d63cfcb6ead6e6e4aa9c4" type="targz">https://github.com/facebook/zstd/releases/download/v1.4.4/zstd-1.4.4.tar.gz</Archive>
+        <BuildDependencies>
+          <Dependency>zlib-devel</Dependency>
+          <Dependency>xz-devel</Dependency>
+          <Dependency>lz4-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>zstd</Name>
+        <RuntimeDependencies>
+            <Dependency>lz4</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/zstd</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>zstd-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">zstd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-17</Date>
+            <Version>1.4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

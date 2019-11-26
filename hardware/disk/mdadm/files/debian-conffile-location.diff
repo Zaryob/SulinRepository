@@ -1,0 +1,112 @@
+From: martin f. krafft <madduck@debian.org>
+Subject: Set /etc/mdadm/mdadm.conf as primary config file location
+
+On Debian, the configuration file resides primarily in /etc/mdadm/mdadm.conf,
+/etc/mdadm.conf is only used as a backup.
+
+This is a Debian-specific patch.
+
+Forwarded: not-needed
+Reviewed-by: martin f. krafft <madduck@debian.org>
+
+---
+ Makefile     |    4 ++--
+ ReadMe.c     |    2 +-
+ mdadm.8.in   |   14 ++++++--------
+ mdadm.conf.5 |    2 +-
+ mdassemble.8 |    2 +-
+ 5 files changed, 11 insertions(+), 13 deletions(-)
+
+Index: mdadm-4.1/Makefile
+===================================================================
+--- mdadm-4.1.orig/Makefile
++++ mdadm-4.1/Makefile
+@@ -72,8 +72,8 @@ CPPFLAGS += -DBINDIR=\"$(BINDIR)\"
+ PKG_CONFIG ?= pkg-config
+ 
+ SYSCONFDIR = /etc
+-CONFFILE = $(SYSCONFDIR)/mdadm.conf
+-CONFFILE2 = $(SYSCONFDIR)/mdadm/mdadm.conf
++CONFFILE = $(SYSCONFDIR)/mdadm/mdadm.conf
++CONFFILE2 = $(SYSCONFDIR)/mdadm.conf
+ MAILCMD =/usr/sbin/sendmail -t
+ CONFFILEFLAGS = -DCONFFILE=\"$(CONFFILE)\" -DCONFFILE2=\"$(CONFFILE2)\"
+ # Both MAP_DIR and MDMON_DIR should be somewhere that persists across the
+Index: mdadm-4.1/ReadMe.c
+===================================================================
+--- mdadm-4.1.orig/ReadMe.c
++++ mdadm-4.1/ReadMe.c
+@@ -609,7 +609,7 @@ char Help_incr[] =
+ ;
+ 
+ char Help_config[] =
+-"The /etc/mdadm.conf config file:\n\n"
++"The /etc/mdadm/mdadm.conf config file:\n\n"
+ " The config file contains, apart from blank lines and comment lines that\n"
+ " start with a hash(#), array lines, device lines, and various\n"
+ " configuration lines.\n"
+Index: mdadm-4.1/mdadm.8.in
+===================================================================
+--- mdadm-4.1.orig/mdadm.8.in
++++ mdadm-4.1/mdadm.8.in
+@@ -267,13 +267,13 @@ the exact meaning of this option in diff
+ .TP
+ .BR \-c ", " \-\-config=
+ Specify the config file or directory.  Default is to use
+-.B /etc/mdadm.conf
++.B /etc/mdadm/mdadm.conf
+ and
+-.BR /etc/mdadm.conf.d ,
++.BR /etc/mdadm/mdadm.conf.d ,
+ or if those are missing then
+-.B /etc/mdadm/mdadm.conf
++.B /etc/mdadm.conf
+ and
+-.BR /etc/mdadm/mdadm.conf.d .
++.BR /etc/mdadm.conf.d .
+ If the config file given is
+ .B "partitions"
+ then nothing will be read, but
+@@ -1952,9 +1952,9 @@ The config file is only used if explicit
+ or requested with (a possibly implicit)
+ .BR \-\-scan .
+ In the later case,
+-.B /etc/mdadm.conf
+-or
+ .B /etc/mdadm/mdadm.conf
++or
++.B /etc/mdadm.conf
+ is used.
+ 
+ If
+@@ -3264,7 +3264,7 @@ uses this to find arrays when
+ is given in Misc mode, and to monitor array reconstruction
+ on Monitor mode.
+ 
+-.SS /etc/mdadm.conf
++.SS /etc/mdadm/mdadm.conf (or /etc/mdadm.conf)
+ 
+ The config file lists which devices may be scanned to see if
+ they contain MD super block, and gives identifying information
+@@ -3272,7 +3272,7 @@ they contain MD super block, and gives i
+ .BR mdadm.conf (5)
+ for more details.
+ 
+-.SS /etc/mdadm.conf.d
++.SS /etc/mdadm/mdadm.conf.d (or /etc/mdadm.conf.d)
+ 
+ A directory containing configuration files which are read in lexical
+ order.
+Index: mdadm-4.1/mdadm.conf.5
+===================================================================
+--- mdadm-4.1.orig/mdadm.conf.5
++++ mdadm-4.1/mdadm.conf.5
+@@ -8,7 +8,7 @@
+ .SH NAME
+ mdadm.conf \- configuration for management of Software RAID with mdadm
+ .SH SYNOPSIS
+-/etc/mdadm.conf
++/etc/mdadm/mdadm.conf
+ .SH DESCRIPTION
+ .PP
+ .I mdadm

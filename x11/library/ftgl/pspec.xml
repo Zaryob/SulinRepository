@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>Font rendering library for OpenGL</Summary>
         <Description>FTGL is a free, open source library to enable developers to use arbitrary fonts in their OpenGL (www.opengl.org) applications. FTGL uses the Freetype (www.freetype.org) font library to open and 'decode' the fonts.</Description>
-        <Archive sha1sum="03815348ac22ef46675ee71c1f7740f48e43b299" type="zip">https://github.com/frankheckenbach/ftgl/archive/master.zip</Archive>
+        <Archive sha1sum="2b2cd9dd1d7b66f9da716423d8ce823588c64962" type="targz">https://github.com/frankheckenbach/ftgl/archive/v2.4.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>freeglut-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
@@ -46,6 +46,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-11-21</Date>
+            <Version>2.4.0</Version>
+            <Comment>Archive uri changed.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.4.0</Version>

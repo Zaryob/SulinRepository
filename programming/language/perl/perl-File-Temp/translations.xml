@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-File-Spec</Name>
+        <Summary xml:lang="tr">Dosya adlarında taşınabilir işlemleri gerçekleştirme</Summary>
+        <Description xml:lang="tr">Bu modül, dosya dizinlerinde yaygın olarak yapılan işlemleri (genellikle "dosya adları" olarak adlandırılır, ancak bir dosyanın içeriğiyle veya Perl'in dosya tanıtıcılarıyla karıştırılmamalıdır), birkaç dizin ve dosya adını bir araya getirmek gibi tasarlanmıştır. tek bir yol veya bir yolun köklü olup olmadığını belirleme. Doğrudan MakeMaker 5.17'den alınan kod, Andreas König, Andy Dougherty, Charles Bailey, Ilya Zakharevich, Paul Schinder ve diğerleri tarafından yazılan kodlara dayanmaktadır.</Description>
+    </Source>
+</INARY>

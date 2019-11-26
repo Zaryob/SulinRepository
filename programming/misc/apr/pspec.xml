@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>apr</Name>
+        <Homepage>http://apr.apache.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>library</IsA>
+        <Summary>Apache portable runtime library</Summary>
+        <Description>The mission of the Apache portable runtime (APR) is to provide a free library of C data structures and routines.</Description>
+        <Archive sha1sum="caac4a92d51b211b0c1374217e4fc64ca8142288" type="targz">mirrors://apache/apr/apr-1.7.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libutil-linux-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>apr</Name>
+        <RuntimeDependencies>
+            <Dependency>libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/lib/apr-1/build</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>apr-devel</Name>
+        <Summary>Development files for apr</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">apr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.7.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

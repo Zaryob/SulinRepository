@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>apr-util</Name>
+        <Homepage>http://apr.apache.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>library</IsA>
+        <Summary>Apache portable runtime utils</Summary>
+        <Description>Apache portable runtime utils (APR-Util) contains additional utility interfaces for APR; including support for XML, database interfaces, URI parsing and more.</Description>
+        <Archive sha1sum="5bae4ff8f1dad3d7091036d59c1c0b2e76903bf4" type="targz">mirrors://apache/apr/apr-util-1.6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>db-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>apr-devel</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>openldap-client</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>apr-util</Name>
+        <RuntimeDependencies>
+            <Dependency>db</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>apr</Dependency>
+            <Dependency>unixODBC</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>openldap-client</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>apr-util-devel</Name>
+        <Summary>Development files for apr-util</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">apr-util</Dependency>
+            <Dependency>apr-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

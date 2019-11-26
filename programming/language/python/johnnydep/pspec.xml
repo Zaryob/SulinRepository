@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>johnnydep</Name>
+        <Homepage>https://github.com/wimglenn/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>A dependency tracker for Python.</Summary>
+        <Description>A dependency tracker for Python.</Description>
+        <License>MIT</License>
+        <Archive sha1sum="37c072fd187d34dfccfe9f3c02138b015ca5360b" type="targz">https://github.com/wimglenn/johnnydep/archive/v1.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python3-johnnydep</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-pip</Dependency>
+            <Dependency>python3-oyaml</Dependency>
+            <Dependency>python3-PyYAML</Dependency>
+            <Dependency>python3-pytoml</Dependency>
+            <Dependency>python3-anytree</Dependency>
+            <Dependency>python3-pkginfo</Dependency>
+            <Dependency>python3-colorama</Dependency>
+            <Dependency>python3-pyparsing</Dependency>
+            <Dependency>python3-packaging</Dependency>
+            <Dependency>python3-cachetools</Dependency>
+            <Dependency>python3-structlog</Dependency>
+            <Dependency>python3-tabulate</Dependency>
+            <Dependency>python3-wheel</Dependency>
+            <Dependency>python3-wimpy</Dependency>
+            <Dependency>python3-six</Dependency>
+        </RuntimeDependencies>
+        <BuildDependencies>
+            <Dependency>python3</Dependency>
+        </BuildDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/johnnydep</Path>
+            <Path fileType="executable">/usr/bin/pipper</Path>
+            <Path fileType="data">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python-johnnydep</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/johnnydep-2.7</Path>
+            <Path fileType="executable">/usr/bin/pipper-2.7</Path>
+            <Path fileType="data">/usr/lib/python2*</Path>
+        </Files>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+          <Dependency>python-setuptools</Dependency>
+          <Dependency>python</Dependency>
+          <Dependency>python-pip</Dependency>
+          <Dependency>python-oyaml</Dependency>
+          <Dependency>python-PyYAML</Dependency>
+          <Dependency>python-pytoml</Dependency>
+          <Dependency>python-anytree</Dependency>
+          <Dependency>python-pkginfo</Dependency>
+          <Dependency>python-colorama</Dependency>
+          <Dependency>python-pyparsing</Dependency>
+          <Dependency>python-packaging</Dependency>
+          <Dependency>python-cachetools</Dependency>
+          <Dependency>python-structlog</Dependency>
+          <Dependency>python-tabulate</Dependency>
+          <Dependency>python-wheel</Dependency>
+          <Dependency>python-wimpy</Dependency>
+          <Dependency>python-six</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>python-johnnydep-docs</Name>
+        <Files>
+            <Path fileType="library">/usr/share/doc</Path>
+            <Path fileType="library">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

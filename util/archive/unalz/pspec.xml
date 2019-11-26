@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>unalz</Name>
+        <Homepage>https://kippler.com/win/unalz/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>alzip decompressor</Summary>
+        <Description>unalz is a decompressor for compressed alzip files.</Description>
+        <Archive sha1sum="98a64f799892f7adfffd4635bd19826fe8f18b26" type="targz">https://launchpad.net/debian/+archive/primary/+sourcefiles/unalz/0.65-7/unalz_0.65.orig.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">unalz-0.65-zlib-get_crc_table-return-type-can-vary.patch</Patch>
+        </Patches>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>unalz</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-19</Date>
+            <Version>0.65</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

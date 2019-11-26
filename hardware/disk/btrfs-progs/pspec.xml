@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>btrfs-progs</Name>
+        <Homepage>http://btrfs.wiki.kernel.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Userspace utilities for btrfs</Summary>
+        <Description>btrfs-progs package provides all the userspace programs needed to create, check, modify and correct any inconsistencies in the btrfs filesystem.</Description>
+        <Archive sha1sum="26dc7c7617f7810d9ab9cba5e9d414c6e44c8321" type="tarxz">https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v5.3.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>xmlto</Dependency>
+            <Dependency>asciidoc</Dependency>
+            <Dependency>lzo-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>zstd-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>btrfs-progs</Name>
+        <RuntimeDependencies>
+            <Dependency>lzo</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>zstd</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>e2fsprogs</Dependency>
+         </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/lib/udev/rules.d/64-btrfs-dm.rules</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>btrfs-progs-devel</Name>
+        <Summary>Development files for btrfs-progs</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">btrfs-progs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-17</Date>
+            <Version>5.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

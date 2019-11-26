@@ -50,6 +50,7 @@
         </Files>
     </Package>
 
+    <!-- Needs rebuild-->
     <Package>
         <Name>p11-kit-32bit</Name>
         <PartOf>emul32</PartOf>
