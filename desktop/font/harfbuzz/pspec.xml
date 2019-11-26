@@ -55,7 +55,7 @@
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
-    <!--Package>
+    <Package>
         <Name>harfbuzz-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for harfbuzz</Summary>
@@ -75,8 +75,15 @@
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
-    </Package-->
+    </Package>
     <History>
+        <Update release="4">
+            <Date>2019-11-26</Date>
+            <Version>2.6.4</Version>
+            <Comment>Package is rebuilded with 32bit source and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2019-11-19</Date>
             <Version>2.6.4</Version>
