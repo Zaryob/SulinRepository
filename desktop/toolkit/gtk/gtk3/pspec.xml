@@ -118,7 +118,6 @@
             <Dependency release="current">gtk3</Dependency>
             <Dependency>atk-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency>wayland-protocols-32bit</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXi-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
