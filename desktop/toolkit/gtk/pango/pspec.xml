@@ -40,7 +40,6 @@
             <Dependency>fridibi</Dependency>
             <Dependency>libXft</Dependency>
             <Dependency>harfbuzz</Dependency>
-            <!--<Dependency>graphite2</Dependency>-->
             <Dependency>fontconfig</Dependency>
             <Dependency>libXrender</Dependency>
         </RuntimeDependencies>
@@ -54,9 +53,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-        </Provides>
     </Package>
     <Package>
         <Name>pango-devel</Name>
