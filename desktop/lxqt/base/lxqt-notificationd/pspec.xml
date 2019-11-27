@@ -1,0 +1,41 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxqt-notificationd</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>app</IsA>
+        <Summary>LXQt notification daemon and library.</Summary>
+        <Description>Notification daemon</Description>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="89564fb423d399a2044cc5324140269aac3a1c1a" type="tarxz">https://downloads.lxqt.org/downloads/lxqt-notificationd/0.14.1/lxqt-notificationd-0.14.1.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>lxqt-notificationd</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+	    <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -3,37 +3,39 @@
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>lxqt-build-tools</Name>
+        <Name>lximage-qt</Name>
         <Homepage>http://www.lxqt.org</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <License>GPL2</License>
-        <Icon>lxqt</Icon>
+        <PartOf>desktop.lxqt.base</PartOf>
         <IsA>app:gui</IsA>
-        <Summary>Various packaging tools and scripts for LXQt applications.</Summary>
-        <Description>Various packaging tools and scripts for LXQt applications</Description>
-        <Archive sha1sum="15837b6a805400b4bbd066fe2f70ff4c234ce4e0" type="tarxz">https://downloads.lxqt.org/downloads/lxqt-build-tools/0.6.0/lxqt-build-tools-0.6.0.tar.xz</Archive>
+        <Summary>Image viewer and screenshot tool.</Summary>
+        <Description>Image viewer and screenshot tool.</Description>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>pcmanfm-qt</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="508564dff8b5597209965ff367e290e6729f556f" type="tarxz">https://downloads.lxqt.org/downloads/lximage-qt/0.14.1/lximage-qt-0.14.1.tar.xz</Archive>
     </Source>
     <Package>
-        <Name>lxqt-build-tools</Name>
+        <Name>lximage-qt</Name>
         <Files>
-            <Path fileType="executable">/usr/bin/lxqt-transupdate</Path>
-            <Path fileType="library">/usr/share/cmake</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
         </Files>
+        <RuntimeDependency>
+          <Dependency>pcmanfm-qt</Dependency>
+          <Dependency>libXfixes</Dependency>
+        </RuntimeDependency>
     </Package>
-
     <History>
         <Update release="1">
             <Date>2019-11-28</Date>
-            <Version>0.6.0</Version>
+            <Version>0.14.1</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

@@ -1,0 +1,61 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>liblxqt</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>library</IsA>
+        <Summary>Common base library for LXQt components.</Summary>
+        <Description>Core utility library for all LXDE-Qt components</Description>
+        <Archive sha1sum="7f6f777bae5fb09cd7b4de9de9ac94c18c3348af" type="tarxz">https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>libdbusmenu-qt-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>liblxqt</Name>
+        <RuntimeDependencies>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libqtxdg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/lxqt-backlight_backend</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>liblxqt-devel</Name>
+        <Summary>Development headers for liblxqt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">liblxqt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
