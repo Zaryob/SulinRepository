@@ -27,9 +27,11 @@ def install():
 
         for binaries in ["gtk-query-immodules-3.0", "gtk-builder-tool",
                          "gtk-encode-symbolic-svg",
-                         "gtk-launch", "gtk-query-settings",
-                         "gtk-update-icon-cache"]:
+                         "gtk-launch", "gtk-query-settings"]:
             inarytools.dobin("inaryPackageBuild/gtk/%s" % binaries)
+
+        inarytools.dobin("inaryPackageBuild/gtk/gtk-update-icon-cache", "/usr/bin/gtk3-update-icon-cache")
+
         inarytools.dobin("inaryPackageBuild/gdk/broadway/broadwayd")
         inarytools.dobin("inaryPackageBuild/demos/icon-browser/gtk3-icon-browser")
         inarytools.dobin("inaryPackageBuild/demos/gtk-demo/gtk3-demo-application")
