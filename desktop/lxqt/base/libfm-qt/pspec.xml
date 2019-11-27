@@ -1,0 +1,62 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libfm-qt</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>library</IsA>
+        <Summary>Core library of PCManFM file manager</Summary>
+        <Description>libfm is a Core library of PCManFM file manager</Description>
+        <Archive sha1sum="7aa6f6d3642dab532c7222a3d3a4c05699498689" type="tarxz">https://downloads.lxqt.org/downloads/libfm-qt/0.14.1/libfm-qt-0.14.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libfm-devel</Dependency>
+            <Dependency>lxde-menu-cache-devel</Dependency>
+      	    <Dependency>libexif-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libfm-qt</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="sysdir">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libfm</Dependency>
+            <Dependency>lxde-menu-cache</Dependency>
+            <Dependency>libexif</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libfm-qt-devel</Name>
+        <Summary>Development headers for libfm-qt</Summary>
+        <RuntimeDependencies>
+            <Dependency>libfm-devel</Dependency>
+            <Dependency>libfm-qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

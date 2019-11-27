@@ -1,0 +1,44 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lximage-qt</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Image viewer and screenshot tool.</Summary>
+        <Description>Image viewer and screenshot tool.</Description>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>pcmanfm-qt</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="508564dff8b5597209965ff367e290e6729f556f" type="tarxz">https://downloads.lxqt.org/downloads/lximage-qt/0.14.1/lximage-qt-0.14.1.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>lximage-qt</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <RuntimeDependency>
+          <Dependency>pcmanfm-qt</Dependency>
+          <Dependency>libXfixes</Dependency>
+        </RuntimeDependency>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
