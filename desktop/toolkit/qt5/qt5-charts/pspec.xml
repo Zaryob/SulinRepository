@@ -15,7 +15,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="eff6fcfe383cdea57d4a04caf0779960376bb1f3" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtcharts-everywhere-src-5.13.1.tar.xz</Archive>
+        <Archive sha1sum="c2473ebac12f67ada1b27e53086aa747666d5e54" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtcharts-everywhere-src-5.13.2.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-charts</Name>
@@ -47,6 +47,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-11-27</Date>
+            <Version>5.13.2</Version>
+            <Comment>QT version upgraded to version 5.13.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>5.13.1</Version>
