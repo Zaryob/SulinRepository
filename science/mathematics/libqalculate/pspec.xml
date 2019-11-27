@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+  <Source>
+        <Name>libqalculate</Name>
+        <Homepage>http://qalculate.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Multi-purpose calculator library</Summary>
+        <Description>libqalculate underpins the Qalculate! multi-purpose desktop calculator for GNU/Linux.</Description>
+        <Archive sha1sum="521303fa5124da1f82d4ef7050e124f94289424c" type="targz">https://github.com/Qalculate/libqalculate/releases/download/v3.5.0/libqalculate-3.5.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cln-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libqalculate</Name>
+        <RuntimeDependencies>
+            <Dependency>cln</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/qalculate</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libqalculate-devel</Name>
+        <Summary>Development files for libqalculate</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libqalculate</Dependency>
+            <Dependency>cln-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>3.5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

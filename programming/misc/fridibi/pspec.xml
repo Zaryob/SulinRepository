@@ -53,7 +53,7 @@
         <BuildType>emul32</BuildType>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
-	    <Dependency release="current">fridibi</Dependency>
+            <Dependency release="current">fridibi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>

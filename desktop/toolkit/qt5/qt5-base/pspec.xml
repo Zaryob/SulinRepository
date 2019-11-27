@@ -14,7 +14,7 @@
         <License>LGPL3</License>
         <License>FDL</License>
         <License>custom</License>
-        <Archive sha1sum="238b552da6a7fcf40de3eb9b39609b33783bd582" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.1/submodules/qtbase-everywhere-src-5.13.1.tar.xz</Archive>
+        <Archive sha1sum="3e073387a08599641a154de758f729d47db8986f" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtbase-everywhere-src-5.13.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
             <Dependency>cups-devel</Dependency>
@@ -71,9 +71,6 @@
             <Dependency>gst-plugins-base-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">qt5-base-keyboard.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -190,7 +187,7 @@
             <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlodbc.so</Path>
         </Files>
     </Package>
-    <!--Package>
+    <Package>
         <Name>qt5-base-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for qt5</Summary>
@@ -250,9 +247,30 @@
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
-    </Package-->
+    </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-11-27</Date>
+            <Version>5.13.2</Version>
+            <Comment>QT version upgraded to version 5.13.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2019-11-26</Date>
+            <Version>5.13.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-11-23</Date>
+            <Version>5.13.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-25</Date>
             <Version>5.13.1</Version>

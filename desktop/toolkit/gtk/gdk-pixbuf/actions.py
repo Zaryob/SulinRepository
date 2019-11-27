@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright 2010 TUBITAK/BILGEM
 # Licensed under the GNU General Public License, version 2.
 # See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
@@ -20,7 +19,8 @@ def build():
 def install():
     if get.buildTYPE()=="emul32":
         shelltools.system('DESTDIR="{}/emul32" ninja install -C inaryPackageBuild'.format(get.installDIR()))
-        inarytools.domove("/emul32/bin/gdk-pixbuf-query-loaders", "/usr/bin", "gdk-pixbuf-query-loaders-32")
+        inarytools.domove("/emul32/usr/bin/gdk-pixbuf-query-loaders", "/usr/bin", "gdk-pixbuf-query-loaders-32")
+        inarytools.domove("/emul32/usr/lib32", "/usr/")
         inarytools.removeDir("/emul32")
         return
     else:

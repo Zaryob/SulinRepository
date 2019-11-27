@@ -11,6 +11,7 @@ from inary.actionsapi import get
 
 
 def setup():
+    shelltools.export("CFLAGS", "{} -DG_DISABLE_CAST_CHECKS".format(get.CFLAGS()))
     options=""
     if get.buildTYPE()=="emul32":
         shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
@@ -32,9 +33,10 @@ def build():
 def install():
     if get.buildTYPE()=="emul32":
         shelltools.system('DESTDIR="{}/emul32" ninja install -C inaryPackageBuild'.format(get.installDIR()))
-        inarytools.domove("/emul32/usr/lib32", "/usr/lib32")
+        inarytools.domove("/emul32/usr/lib32", "/usr/")
         inarytools.domove("/emul32/usr/bin/*", "/usr/bin/32")
         inarytools.removeDir("/emul32")
         return
     else:
         mesontools.ninja_install()
+

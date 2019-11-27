@@ -11,8 +11,6 @@ from inary.actionsapi import get
 
 
 def setup():
-    shelltools.system("sed -i 's|link_whole|link_with|' common/meson.build && \
-sed -i 's/module/& | grep -v mangle_path/' gsettings/abicheck.sh")
     mesontools.meson_configure()
 
 def build():

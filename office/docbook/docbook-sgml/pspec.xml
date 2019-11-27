@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>docbook-sgml</Name>
+        <Homepage>http://www.docbook.org/sgml/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>X11</License>
+        <IsA>data</IsA>
+        <Summary>Docbook SGML DTD 4.5</Summary>
+        <Description>Contains Docbook SGML DTD version 4.5.</Description>
+        <Archive sha1sum="5efeb22936ea30cdaf88053337de7966dfda02bd" type="zip">http://www.docbook.org/sgml/4.5/docbook-4.5.zip</Archive>
+        <Patches>
+            <Patch>catalog.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>docbook-sgml</Name>
+        <RuntimeDependencies>
+            <Dependency>sgml-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/docbook-sgml</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

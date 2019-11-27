@@ -1,0 +1,69 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>exiv2</Name>
+        <Homepage>http://www.exiv2.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Another library for parsing, editing, and saving EXIF data</Summary>
+        <Description>exiv2 is a C++ library and a command line utility to access image metadata. Exiv2 is available as free software and with a commercial license, and is used in a growing number of projects.</Description>
+        <Archive sha1sum="1a72065c95e721b1c21df4f2ee64d8338c6acf94" type="targz">https://www.exiv2.org/builds/exiv2-0.27.2-Source.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>exiv2</Name>
+        <RuntimeDependencies>
+            <Dependency>exiv2-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>exiv2-libs</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>exiv2-devel</Name>
+        <Summary>Development files for exiv2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">exiv2-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>0.27</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

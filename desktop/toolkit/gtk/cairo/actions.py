@@ -10,9 +10,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    shelltools.export("CC", "{} -std=c11".format(get.CC()))
-    inarytools.flags.add("-flto -ffat-lto-objects")
-    autotools.autoreconf("-vfi")
+    shelltools.system("sed -i 's/have_png/use_png/g' configure.ac")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
     autotools.configure("--disable-static \
                          --enable-xlib \
                          --disable-drm \
@@ -26,17 +25,11 @@ def setup():
                          --enable-gobject \
                          --disable-gtk-doc")
 
-    inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
-    inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
-    inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
-
 def build():
-    shelltools.export("CC", "{} -std=c11".format(get.CC())) # glib2 based sources are just compiling with c11 standart
-
     autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.removeDir("/usr/share/gtk-doc")
+    #inarytools.removeDir("/usr/share/gtk-doc")
     inarytools.dodoc("AUTHORS", "README", "ChangeLog", "NEWS", "COPYING", "COPYING-LGPL-2.1", "COPYING-MPL-1.1")
