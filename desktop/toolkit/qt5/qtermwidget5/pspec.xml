@@ -16,8 +16,9 @@
             <Dependency>cmake</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
+            <Dependency>lxqt-build-tools</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="96ad7f2250aaac0ca84a10e47c3e0644d1d84a72" type="targz">https://github.com/lxde/qtermwidget/archive/0.7.1.tar.gz</Archive>
+        <Archive sha1sum="07d99b8f4a673fa1f965716f0db89a4ba9e3f9b5" type="tarxz">https://github.com/lxqt/qtermwidget/releases/download/0.14.1/qtermwidget-0.14.1.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qtermwidget5</Name>
@@ -38,6 +39,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>Rebuilded for lxqt desktop enviroment.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-09</Date>
             <Version>0.7.1</Version>
