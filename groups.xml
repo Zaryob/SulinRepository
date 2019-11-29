@@ -142,7 +142,7 @@
       <LocalName xml:lang="es">Gnome</LocalName>
       <LocalName xml:lang="de">Gnome</LocalName>
       <LocalName xml:lang="it">Gnome</LocalName>
-      <Icon>preferences-desktop</Icon> <!-- FIXME: Gnome Desktop Icon -->
+      <Icon>preferences-desktop</Icon>
     </Group>
     <Group>
       <Name>kde.desktop</Name>
