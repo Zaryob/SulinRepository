@@ -1,0 +1,69 @@
+<INARY>
+    <Source>
+        <Name>signon</Name>
+        <Homepage>https://code.google.com/p/accounts-sso</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Summary>A framework for centrally storing authentication credentials</Summary>
+        <Description>Single Sign-On is a framework for centrally storing authentication credentials and handling authentication on behalf of applications as requested by applicationsIt consists of
+        a secure storage of login credentials (for example usernames and passwords), plugins for different authentication systems and a client library for applications to communicate with this system.</Description>
+        <Archive sha1sum="9c81aaaa70c27e0eef95eeaf3df5db5f5de792ea" type="tarbz2">https://gitlab.com/accounts-sso/signond/-/archive/VERSION_8.60/signond-VERSION_8.60.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>signon</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>doxygen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>signon-devel</Name>
+        <Summary>Development files for signon</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">signon</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>signon-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Help files and API documents for signon</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">signon</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-30</Date>
+            <Version>8.60</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
