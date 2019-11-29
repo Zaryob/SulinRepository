@@ -1,0 +1,44 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>eigen</Name>
+        <Homepage>http://eigen.tuxfamily.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2-with-exceptions</License>
+        <License>MPL</License>
+        <IsA>library</IsA>
+        <Summary>Lightweight C++ template library for linear algebra</Summary>
+        <Description>eigen3 is a lightweight C++ template library for vector and matrix math, a.k.a. linear algebra.</Description>
+        <Archive sha1sum="a06faa6f358d5d1ca0da7cddb95da39e436dc9e8" type="tarbz2">https://bitbucket.org/eigen/eigen/get/3.3.7.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>freeglut-devel</Dependency>
+            <Dependency>fftw3-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>mpfr-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>eigen</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-29</Date>
+            <Version>3.3.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
