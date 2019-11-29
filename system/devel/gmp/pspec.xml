@@ -44,8 +44,6 @@
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for gmp</Summary>
         <BuildType>emul32</BuildType>
-        <BuildDependencies>
-        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency release="current">gmp</Dependency>
