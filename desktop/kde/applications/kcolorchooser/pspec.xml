@@ -1,0 +1,57 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kcolorchooser</Name>
+        <Homepage>http://www.kde.org/applications/graphics/kcolorchooser</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>kcolorchooser</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.graphics</PartOf>
+        <Summary>A simple color chooser application</Summary>
+        <Description>KColorChooser is a simple color chooser application.</Description>
+        <Archive sha1sum="818a7f20f91d20c0c40ebcabf99435f92a41ecd0" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/kcolorchooser-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kcolorchooser</Name>
+        <RuntimeDependencies>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

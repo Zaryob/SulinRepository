@@ -1,0 +1,94 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>plasma-integration</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>KDE5 Plasma artwork</Summary>
+        <Description>Artwork, styles and assets for the Breeze visual style for the Plasma Desktop</Description>
+        <Archive sha1sum="b68333c56ee45a371863c6fbb8e53f99c473d41c" type="tarxz">mirrors://kde/stable/plasma/5.17.3/plasma-integration-5.17.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>breeze-style</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>kcompletion-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kwayland-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>qt5-quickcontrols2-devel</Dependency>
+            <Dependency>kguiaddons-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>            
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kjobwidgets-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>plasma-integration</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kwayland</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kguiaddons</Dependency>
+            <Dependency>qt5-quickcontrols2</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kjobwidgets</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>breeze-style</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/kconf_update</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path> 
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>5.17.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

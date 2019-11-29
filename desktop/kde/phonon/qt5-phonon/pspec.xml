@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-phonon</Name>
+        <Homepage>http://phonon.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Cross platform multimedia API for KDE4 using QT5</Summary>
+        <Description>Phonon was created as a solution to several problems with multimedia commonly faced by Unix desktops, especially KDE 3's outdated multimedia framework aRts. Phonon itself is not a multimedia framework, but interfaces with existing frameworks such as GStreamer or Xine via backends.</Description>
+        <Archive sha1sum="a6ce97a1a228140a596c4dc1b7d430199fa69388" type="tarxz">https://download.kde.org/stable/phonon/4.11.1/phonon-4.11.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-phonon</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-designer</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libphonon*</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/phonon4qt5</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-phonon-devel</Name>
+        <Summary>Development files for phonon-qt5</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-phonon</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>4.11.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

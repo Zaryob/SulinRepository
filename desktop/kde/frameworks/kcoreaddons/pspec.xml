@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kcoreaddons</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>desktop.kde.frameworks</PartOf>
+        <Summary>Utilities for core application functionality and accessing the OS</Summary>
+        <Description>KCoreAddons provides classes built on top of QtCore to perform various tasks such as manipulating mime types, autosaving files, creating backup files, generating random sequences, performing text manipulations such as macro replacement, accessing user information and many more.</Description>
+        <Archive sha1sum="1008a735f1de2ce7513b334a112c049417933805" type="tarxz">mirrors://kde/stable/frameworks/5.64/kcoreaddons-5.64.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kcoreaddons</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kcoreaddons-devel</Name>
+        <PartOf>desktop.kde.devel</PartOf>
+        <Summary>Development files for kcoreaddons</Summary>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency release="current">kcoreaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+<!--         <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides> -->
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>5.64.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

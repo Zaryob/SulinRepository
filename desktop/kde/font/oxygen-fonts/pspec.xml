@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>oxygen-fonts</Name>
+        <Homepage>https://projects.kde.org/projects/playground/artwork/oxygen-fonts</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>OFL</License>
+        <IsA>data:font</IsA>
+        <Summary>Oxygen font family</Summary>
+        <Description>Oxygen font family is a desktop / GUI font family for integrated use with KDE.</Description>
+        <Archive sha1sum="d7928c746f3167e929b7c61e1e7137fde89fdc9d" type="tarxz">https://cgit.kde.org/oxygen-fonts.git/snapshot/oxygen-fonts-5.4.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>fontforge</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>oxygen-fonts</Name>
+        <Files>
+            <Path fileType="data">/usr/share/fonts</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-24</Date>
+            <Version>5.4.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

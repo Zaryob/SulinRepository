@@ -1,0 +1,48 @@
+
+<INARY>
+    <Source>
+        <Name>signon-kwallet-extension</Name>
+        <Homepage>http://kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app</IsA>
+        <PartOf>desktop.kde.network</PartOf>
+        <Summary>KWallet signon extension</Summary>
+        <Description>KWallet signon extension</Description>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kwallet-devel</Dependency>
+            <Dependency>signon-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="tarxz" sha1sum="9e92e31988a4a8070a06559fff65a9748dc87332">mirrors://kde/stable/applications/19.08.3/src/signon-kwallet-extension-19.08.3.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>signon-kwallet-extension</Name>
+        <Summary>KWallet signon extension</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>signon</Dependency>
+            <Dependency>kwallet</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/signon</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

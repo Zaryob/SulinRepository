@@ -1,0 +1,60 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libkexiv2</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.kde.graphics</PartOf>
+        <Summary>An Exiv2 wrapper library</Summary>
+        <Description>libkexiv2 is a wrapper around Exiv2 library to manipulate pictures metadata as EXIF/IPTC and XMP.</Description>
+        <Archive sha1sum="b93562ab85c93a75c5afb6d9b585bd22c2e91398" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/libkexiv2-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>exiv2-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libkexiv2</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>exiv2-libs</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libkexiv2-devel</Name>
+        <Summary>Development files for libkexiv2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libkexiv2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,81 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kompare</Name>
+        <Homepage>http://www.kde.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.sdk</PartOf>
+        <Summary>File difference viewer</Summary>
+        <Description>Diff/Patch Frontend. </Description>
+        <Archive sha1sum="35b829ae3826efc2599553ec91ae1656d8ceefe9" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/kompare-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libkomparediff2-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kcodecs-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kjobwidgets-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>ktexteditor-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kompare</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libkomparediff2</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kcodecs</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kjobwidgets</Dependency>
+            <Dependency>ktexteditor</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>kdesdk</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>kdesdk</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

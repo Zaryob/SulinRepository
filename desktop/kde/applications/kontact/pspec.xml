@@ -1,0 +1,94 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kontact</Name>
+        <Homepage>https://community.kde.org/KDE_PIM</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <Summary>KDE Personal Information Manager</Summary>
+        <Description>Kontact is the integrated Personal Information Manager of KDE, but can be used with other systems as well.
+It supports email, address books, calendars, tasks, news feeds and much more.</Description>
+<Archive sha1sum="890ff3653ba74e5c58be3b5364d723301189e117" type="tarxz">http://download.kde.org/stable/applications/19.08.3/src/kontact-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kontactinterface-devel</Dependency>
+            <Dependency>mailcommon-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-webengine-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>kcmutils-devel</Dependency>
+            <Dependency>kpimtextedit-devel</Dependency>
+            <Dependency>akonadi-devel</Dependency>
+            <Dependency>kitemmodels-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>akonadi-mime-devel</Dependency>
+            <Dependency>messagelib-devel</Dependency>
+            <Dependency>kmime-devel</Dependency>
+            <Dependency>pimcommon-devel</Dependency>
+            <Dependency>kcontacts-devel</Dependency>
+            <Dependency>akonadi-contacts-devel</Dependency>
+            <Dependency>kimap-devel</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>kidentitymanagement-devel</Dependency>
+            <Dependency>libkleo-devel</Dependency>
+            <Dependency>gpgme-devel</Dependency>
+            <Dependency>grantlee-devel</Dependency>
+            <Dependency>grantleetheme-devel</Dependency>
+            <Dependency>kdepim-apps-libs-devel</Dependency>
+            <Dependency>libkdepim-devel</Dependency>
+        </BuildDependencies>        
+    </Source>
+    
+    <Package>
+        <Name>kontact</Name>
+        <Summary>KDE Personal Information Manager</Summary>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kcmutils</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libkdepim</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>grantleetheme</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>qt5-webengine</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kdepim-apps-libs</Dependency>
+            <Dependency>kontactinterface</Dependency>            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
