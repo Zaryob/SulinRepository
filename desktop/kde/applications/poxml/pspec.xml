@@ -1,0 +1,56 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>poxml</Name>
+        <Homepage>http://www.kde.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.sdk</PartOf>
+        <Summary>Tools for translating DocBook XML files with Gettex</Summary>
+        <Description>This is a collection of tools that facilitate translating DocBook XML files using Gettext message files (PO files).</Description>
+        <Archive sha1sum="4b870b2882cdd99c17e9f58b846e717b3b1943e7" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/poxml-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>poxml</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>kdesdk</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>kdesdk</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+        </Files>
+    </Package>  
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

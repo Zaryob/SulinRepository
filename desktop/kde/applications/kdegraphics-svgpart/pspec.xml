@@ -1,0 +1,58 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kdegraphics-svgpart</Name>
+        <Homepage>https://www.kde.org/applications/graphics/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>FDL</License>
+        <License>GPL</License>
+        <License>LGPL</License>
+        <Summary>A KPart for viewing SVGs</Summary>
+        <Description>A KPart for viewing SVGs</Description>
+        <Archive type="tarxz" sha1sum="68d09d8c345c04d3185f113114932b9dfbbddf52">mirrors://kde/stable/applications/19.08.3/src/svgpart-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kparts-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kdegraphics-svgpart</Name>
+        <Summary>A KPart for viewing SVGs</Summary>
+        <RuntimeDependencies>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

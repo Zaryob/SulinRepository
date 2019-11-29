@@ -1,0 +1,84 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kpmcore</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Library for managing partitions.</Summary>
+        <Description>Library for managing partitions.</Description>
+        <Archive sha1sum="f7a88d35ab1b07bc84fe5868b38cc9e99a86ec37" type="tarxz">mirrors://kde/stable/kpmcore/3.0.2/src/kpmcore-3.0.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libatasmart-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>parted-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>kservice-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kjobwidgets-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kpmcore</Name>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>parted</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>libatasmart</Dependency>
+            <Dependency>libutil-linux</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kpmcore-devel</Name>
+        <Summary>Development files for kpmcore</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kpmcore</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

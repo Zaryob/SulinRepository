@@ -1,0 +1,73 @@
+
+<INARY>
+    <Source>
+        <Name>khangman</Name>
+        <Homepage>http://edu.kde.org/applications/all/khangman</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>khangman</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.edu</PartOf>
+        <Summary>KHangMan is a game for kids based on the well-known hangman game</Summary>
+        <Description>KHangMan is a game based on the well-known hangman game. It is aimed at children aged six and over. The game has several categories of words to play with, for example: Animals (animals words) and three difficulty categories: Easy, Medium and Hard. </Description>
+        <Archive sha1sum="62dcc2754c4e9b65143ffdca700d4f18b8021556" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/khangman-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kdeclarative-devel</Dependency>
+            <Dependency>knewstuff-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kcrash-devel</Dependency>
+            <Dependency>kcompletion-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>libkeduvocdocument-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>khangman</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kdeclarative</Dependency>
+            <Dependency>knewstuff</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>libkeduvocdocument</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

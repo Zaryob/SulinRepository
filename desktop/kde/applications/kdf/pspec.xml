@@ -1,0 +1,66 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kdf</Name>
+        <Homepage>http://kde.org/applications/system/kdiskfree/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>FDL</License>
+        <License>GPL</License>
+        <License>LGPL</License>
+        <Summary>View Disk Usage</Summary>
+        <Description>KDiskFree displays the available file devices (hard drive partitions, floppy and CD drives, etc.) along with information on their capacity, free space, type and mount point. It also allows you to mount and unmount drives and view them in a file manager.</Description>
+        <Archive type="tarxz" sha1sum="36dd8aa4e5666a1711861a31923896a34d3bbd29">http://download.kde.org/stable/applications/19.08.3/src/kdf-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>kcmutils-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </BuildDependencies>        
+    </Source>
+    <Package>
+        <Name>kdf</Name>
+        <Summary>View Disk Usage</Summary>
+        <RuntimeDependencies>
+            <Dependency>kcmutils</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,98 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>parley</Name>
+        <Homepage>http://edu.kde.org/applications/all/parley</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>parley</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.edu</PartOf>
+        <Summary>Parley is a program to help you memorize things.</Summary>
+        <Description>Parley is a program to help you memorize things. Parley supports many language specific features but can be used for other learning tasks just as well. It uses the spaced repetition learning method, also known as flash cards. Creating new vocabulary collections with Parley is easy, but of course it is even better if you can use some of our premade files. Have a look at the KDE-Files.org page or use the "Download New Collections" feature directly in Parley.</Description>
+        <Archive sha1sum="d3348375e7b50426a12abc39301b3cb15750ae44" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/parley-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-multimedia-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libkeduvocdocument-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcrash-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>knewstuff-devel</Dependency>
+            <Dependency>kross-devel</Dependency>
+            <Dependency>kcmutils-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>sonnet-devel</Dependency>
+            <Dependency>kservice-devel</Dependency>
+            <Dependency>ktextwidgets-devel</Dependency>
+            <Dependency>kcompletion-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>khtml-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>parley</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>qt5-multimedia</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libkeduvocdocument</Dependency>
+            <Dependency>kdoctools</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>knewstuff</Dependency>
+            <Dependency>kross</Dependency>
+            <Dependency>kcmutils</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>sonnet</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ktextwidgets</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="config">/etc/xdg</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
