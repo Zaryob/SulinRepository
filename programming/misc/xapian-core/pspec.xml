@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xapian-core</Name>
+        <Homepage>http://www.oligarchy.co.uk/xapian</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Probabilistic Information Retrieval library</Summary>
+        <Description>Xapian is an Open Source Probabilistic Information Retrieval Library. It offers a highly adaptable toolkit that allows developers to easily add advanced indexing and search facilities to applications.</Description>
+        <Archive sha1sum="17527a8bfa8254d3755b4b482157c245f33ea53d" type="tarxz">https://oligarchy.co.uk/xapian/1.4.14/xapian-core-1.4.14.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+      	    <Dependency>libutil-linux-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xapian-core</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xapian-core-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development headers for xapian-core</Summary>
+        <Description>xapian-core-devel provides development headers for xapian-core.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">xapian-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/xapian-config*</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/cmake/xapian</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xapian-core-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation files for xapian-core</Summary>
+        <Description>xapian-core-docs provides documentation files for xapian-core.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">xapian-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/xapian-core/*html</Path>
+            <Path fileType="doc">/usr/share/doc/xapian-core/apidoc.pdf</Path>
+            <Path fileType="doc">/usr/share/doc/xapian-core/apidoc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-30</Date>
+            <Version>1.4.14</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
