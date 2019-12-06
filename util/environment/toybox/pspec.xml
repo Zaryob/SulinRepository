@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <IsA>app:console</IsA>
         <PartOf>system.base</PartOf>
-        <Summary>Busybox alternative</Summary>
+        <Summary>Busybox alternative command environment</Summary>
         <Description>toybox is a single binary which includes versions of a large number of system commands, including a shell.</Description>
         <BuildDependencies>
             <Dependency>pam</Dependency>

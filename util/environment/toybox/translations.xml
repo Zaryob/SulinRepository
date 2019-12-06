@@ -1,8 +1,7 @@
-
 <INARY>
     <Source>
         <Name>toybox</Name>
-        <Summary xml:lang="tr">Busybox alternatifi</Summary>
+        <Summary xml:lang="tr">Busybox alternatifi komut ortamı</Summary>
         <Description xml:lang="tr">toybox, kabuk da dahil olmak üzere çeşitli sistem komutlarını içeren tek bir çalıştırılabilir dosyadır.</Description>
     </Source>
 </INARY>
