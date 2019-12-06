@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
@@ -10,7 +10,9 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def build():
+    pythonmodules.compile()
     pythonmodules.compile(pyVer="3")
 
 def install():
+    pythonmodules.install()
     pythonmodules.install(pyVer="3")
