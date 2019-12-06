@@ -12,6 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Ciksemel is iksemel based xml library.</Summary>
         <Description>.</Description>
+        <!-- @@@github Zaryob iksemel -->
         <Archive sha1sum="2b01de612361346de16a5eace92df746cd0fc72a" type="targz">https://github.com/Zaryob/iksemel/archive/ciksemel-1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>

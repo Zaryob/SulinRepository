@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>An alternate POSIX capabilities library</Summary>
         <Description>libcap-ng is a library that makes using POSIX capabilities easier.</Description>
+        <!-- @@@github stevegrubb libcap-ng -->
         <Archive sha1sum="f29f1eefdfbbd93501d9c7a54ac340d4ca660634" type="targz">http://people.redhat.com/sgrubb/libcap-ng/libcap-ng-0.7.9.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>swig</Dependency> <!-- For python bindings-->

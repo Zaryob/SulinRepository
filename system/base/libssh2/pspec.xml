@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A library implementing the SSH2 protocol</Summary>
         <Description>libssh2 is a library implementing the SSH2 protocol as defined by Internet Drafts: SECSH-TRANS, SECSH-USERAUTH, SECSH-CONNECTION, SECSH-ARCH, SECSH-FILEXFER, SECSH-DHGEX, SECSH-NUMBERS, and SECSH-PUBLICKEY.</Description>
+         <!-- @@@github libssh2 libssh2 -->
         <Archive sha1sum="baf2d1fb338eee531ba9b6b121c64235e089e0f5" type="targz">https://www.libssh2.org/download/libssh2-1.8.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>openssl-devel</Dependency>

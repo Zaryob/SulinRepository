@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Various utilities dealing with the PCMCIA bus</Summary>
         <Description>pcmciautils contains the initialization tools necessary to allow the PCMCIA subsystem to behave as every other hotpluggable bus system.</Description>
+        <!-- @@@debian pcmciautils -->
         <Archive sha1sum="a0d55fed0bab64b618b1e3a8639733316084cb51" type="targz">http://http.us.debian.org/debian/pool/main/p/pcmciautils/pcmciautils_018.orig.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>sysfsutils-devel</Dependency>

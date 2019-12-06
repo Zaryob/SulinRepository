@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU libc6 (also called glibc2) C library</Summary>
         <Description>The Glibc package contains the main C library. This library provides the basic routines for allocating memory, searching directories, opening and closing files, reading and writing files, string handling, pattern matching, arithmetic, and so on.</Description>
+        <!-- @@@gnu glibc -->
         <Archive sha1sum="4df7e4dbb92b5ced729d972b32e3b8683db4a689" type="tarxz">http://ftp.gnu.org/gnu/libc/glibc-2.30.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>linux-headers</Dependency>

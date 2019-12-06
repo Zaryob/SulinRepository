@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Enhanced system logging and kernel message trapping daemons</Summary>
         <Description>rsyslog is an enhanced multi-threaded syslogd supporting, among others, MySQL, syslog/tcp, RFC 3195, permitted sender lists, filtering on any message part, and fine grain output format control. It is quite compatible with stock sysklogd and can be used as a drop-in replacement.</Description>
+        <!-- @@@github rsysog rsyslog -->
         <Archive sha1sum="d3e949feccc29e432e0586cbcd7b9fd25aaf1a24" type="targz">http://www.rsyslog.com/files/download/rsyslog/rsyslog-8.40.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>

@@ -11,6 +11,7 @@
         <IsA>service</IsA>
         <Summary>Manages system configuration</Summary>
         <Description>Sulin programs are packaged with small scripts which configures them to entegrate with system and each other. Scom is the tool which manages and executes these scripts.</Description>
+        <!-- @@@github SulinOS scom -->
         <Archive sha1sum="1c469e6fcbd033e63db266e497f4bb5c361721a0" type="zip">https://github.com/SulinOS/scom/archive/scom-3.0.3.zip</Archive>
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>

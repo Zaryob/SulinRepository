@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Google Performance Tools</Summary>
         <Description>Perf Tools is a collection of a high-performance multi-threaded malloc() implementation, plus some pretty nifty performance analysis tools.</Description>
+        <!-- @@@github gperftools gperftools -->
         <Archive sha1sum="89e3e1df674bc4ba1a9e97246b58a26a4e92d0a3" type="targz">https://github.com/gperftools/gperftools/releases/download/gperftools-2.7/gperftools-2.7.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libunwind-devel</Dependency>

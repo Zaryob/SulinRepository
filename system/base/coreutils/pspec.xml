@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A set of basic GNU tools commonly used in shell scripts</Summary>
         <Description>Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)</Description>
+        <!-- @@@gnu attr -->
         <Archive sha1sum="c62b5034a5b65daca33c50a60df87ebc44159faf" type="tarxz">http://ftp.gnu.org/gnu/coreutils/coreutils-8.31.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>

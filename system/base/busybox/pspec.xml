@@ -17,6 +17,7 @@
             <Dependency>pam</Dependency>
             <Dependency>linux-headers</Dependency>
         </BuildDependencies>
+        <!-- @@@blfs final-system busybox -->
         <Archive sha1sum="c855f6fa3144654345ef4cae9b80ab68449fd090" type="tarbz2">http://busybox.net/downloads/busybox-1.29.3.tar.bz2</Archive>
         <AdditionalFiles>
             <AdditionalFile target=".config">config</AdditionalFile>

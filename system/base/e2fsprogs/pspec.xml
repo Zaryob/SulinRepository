@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Standard ext2/3/4 filesystem utilities</Summary>
         <Description>e2fsprogs provides the filesystem utilities for use with the ext2 filesystem. It also supports the ext3/4 filesystem with journaling support.</Description>
+        <!-- @@@debian e2fsprogs -->
         <Archive sha1sum="8a1a71724f425331256953bf5ba4d5da89361c76" type="targz">https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.45.4/e2fsprogs-1.45.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libutil-linux-devel</Dependency>

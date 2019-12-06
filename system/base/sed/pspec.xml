@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>GNU Stream Editor</Summary>
         <Description>Sed is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).</Description>
+        <!-- @@@gnu sed -->
         <Archive sha1sum="dbc842f6fdf538f366d97e7c4b4f241eaefd14a5" type="tarxz">mirrors://gnu/sed/sed-4.7.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>

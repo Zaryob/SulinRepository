@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Larry Wall's Practical Extraction and Reporting Language</Summary>
         <Description>Perl is a high-level programming language with roots in C, sed, awk and shell scripting. Perl is good at handling processes and files, and is especially good at handling text. Perl's hallmarks are practicality and efficiency. While it is used to do a lot of different things, Perl's most common applications are system administration utilities and web programming. A large proportion of the CGI scripts on the web are written in Perl. You need the perl package installed on your system so that your system can handle Perl scripts.</Description>
+        <!-- @@@github Perl perl5 -->
         <Archive sha1sum="cc8d1e08ffe4624c197a44d02855632725d39f8e" type="tarxz">https://www.cpan.org/src/5.0/perl-5.30.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>db-devel</Dependency>

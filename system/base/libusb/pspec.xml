@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Userspace access to USB devices</Summary>
         <Description>Project's main aim is to create a library for use by user level applications to access USB devices regardless of OS.</Description>
+        <!-- @@@github libusb libusb -->
         <Archive sha1sum="10116aa265aac4273a0c894faa089370262ec0dc" type="tarbz2">https://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.22/libusb-1.0.22.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>eudev-devel</Dependency>

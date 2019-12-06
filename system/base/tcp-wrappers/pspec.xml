@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>TCP Wrappers</Summary>
         <Description>With this package you can monitor and filter incoming requests for the SYSTAT, FINGER, FTP, TELNET, RLOGIN, RSH, EXEC, TFTP, TALK, and other network services. It supports both 4.3BSD-style sockets and System V.4-style TLI.</Description>
+        <!-- @@@debian libwrap0 -->
         <Archive sha1sum="61689ec85b80f4ca0560aef3473eccd9e9e80481" type="targz">http://ftp.porcupine.org/pub/security/tcp_wrappers_7.6.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>sed</Dependency>

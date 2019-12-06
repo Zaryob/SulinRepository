@@ -12,6 +12,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Next generation of the python high-level scripting language</Summary>
         <Description>Next generation of the python high-level scripting language</Description>
+        <!-- @@@blfs general python3 -->
         <Archive sha1sum="a862c5a58626fdad02d2047a57771ede2783fcef" type="tarxz">https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>tcltk-devel</Dependency>

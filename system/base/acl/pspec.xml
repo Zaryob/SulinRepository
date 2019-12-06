@@ -15,6 +15,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Access control list utilities.</Summary>
         <Description>The Acl package contains utilities to administer Access Control Lists, which are used to define more fine-grained discretionary access rights for files and directories.</Description>
+        <!-- @@@ savannah acl -->
         <Archive sha1sum="6c9e46602adece1c2dae91ed065899d7f810bf01" type="targz">http://download.savannah.gnu.org/releases/acl/acl-2.2.53.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>

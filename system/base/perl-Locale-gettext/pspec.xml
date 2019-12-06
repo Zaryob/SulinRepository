@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A Perl module for accessing the GNU locale utilities</Summary>
         <Description>The gettext module permits access from Perl to the gettext() family of functions for retrieving message strings from databases constructed to internationalize software.</Description>
+        <!-- @@@cpan Locale::gettext -->
         <Archive sha1sum="a23d0b35269c8db49418fa8585a8dbbed6b8fefa" type="targz">http://search.cpan.org/CPAN/authors/id/P/PV/PVANDRY/gettext-1.07.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>perl</Dependency>

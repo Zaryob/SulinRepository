@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Library for error values used by GnuPG components</Summary>
         <Description>libgpg-error is a library that defines common error values for all GnuPG components.</Description>
+        <!-- @@@blfs general libgpg-error -->
         <Archive sha1sum="a428758999ff573e62d06892e3d2c0b0f335787c" type="tarbz2">https://ftp.osuosl.org/pub/blfs/conglomeration/libgpg-error/libgpg-error-1.27.tar.bz2</Archive>
     </Source>
 

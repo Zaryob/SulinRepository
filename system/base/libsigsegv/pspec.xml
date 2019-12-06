@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A library for handling page faults in user mode</Summary>
         <Description>This is a library for handling page faults in user mode. A page fault occurs when a program tries to access to a region of memory that is currently not available.</Description>
+        <!-- @@@gnu libsigsegv -->
         <Archive sha1sum="b75a647a9ebda70e7a3b33583efdd550e0eac094" type="targz">mirrors://gnu/libsigsegv/libsigsegv-2.10.tar.gz</Archive>
     </Source>
     <Package>

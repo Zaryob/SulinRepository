@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>toybox</Name>
+        <Homepage>http://landley.net/toybox</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKIN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>system.base</PartOf>
+        <Summary>Busybox alternative command environment</Summary>
+        <Description>toybox is a single binary which includes versions of a large number of system commands, including a shell.</Description>
+        <BuildDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>linux-headers</Dependency>
+        </BuildDependencies>
+        <!-- @@@github landley toybox -->
+        <Archive sha1sum="0477740759f5132397fdfdbf8aea88e811869173" type="targz">https://github.com/landley/toybox/archive/0.8.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>toybox</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-5</Date>
+            <Version>0.8.2</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKIN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

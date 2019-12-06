@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Keyboard and console utilities</Summary>
         <Description>The kbd package contains keytable files and keyboard utilities compatible with kernel version 1.1.54 and later.</Description>
+        <!-- @@@ kernel linux utils kbd -->
         <Archive sha1sum="0180f70c7d34452a04d106e0b8cfadebe0e1b2a8" type="tarxz">https://www.kernel.org/pub/linux/utils/kbd/kbd-2.2.0.tar.xz</Archive>
         <Archive sha1sum="17db7aaba451796278758e7c6e443b4659af17b9" type="tarbz2" target="kbd-2.0.4">https://github.com/SulinOS/kbd-font/raw/20191121/archives/kbd-latarcyrheb-32.tar.bz2</Archive>
         <Archive sha1sum="17625849ecf4dedf755aefa06d78406b92c31743" type="tarbz2" target="kbd-2.0.4">https://github.com/SulinOS/kbd-font/raw/20191121/archives/kbd-latarcyrheb-16-fixed.tar.bz2</Archive>

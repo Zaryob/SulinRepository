@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Bourne-Again shell</Summary>
 	<Description>A widely-used command interpreter; it performs many types of expansions and substitutions on a givecommand line before executing it, thus making this interpreter a powerful tool.</Description>
+        <!-- @@@gnu attr -->
         <Archive sha1sum="d116b469b9e6ea5264a74661d3a4c797da7f997b" type="targz">mirrors://gnu/bash/bash-5.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>

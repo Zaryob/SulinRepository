@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Name Service Switch module</Summary>
         <Description>Name Service Switch module for Multicast DNS.</Description>
+        <!-- @@@github lathiat ns-mdns -->
         <Archive sha1sum="d35ad895195fff50545c4c74e6e2bb59bcae2906" type="targz">https://github.com/lathiat/nss-mdns/releases/download/v0.14.1/nss-mdns-0.14.1.tar.gz</Archive>
     </Source>
 

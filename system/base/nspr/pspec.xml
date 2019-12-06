@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Netscape Portable Runtime</Summary>
         <Description>Netscape Portable Runtime (NSPR) provides a platform-neutral API for system level and libc like functions. The API is used in the Mozilla client, many of Netscape/AOL/iPlanet's and other software offerings.</Description>
+        <!-- @@@blfs general nspr-->
         <Archive sha1sum="ef1e2ca3205fd1658a69ada2e0436266ca3065b5" type="targz">https://ftp.mozilla.org/pub/nspr/releases/v4.20/src/nspr-4.20.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="nspr/config/nspr.pc.in">nspr.pc.in</AdditionalFile>

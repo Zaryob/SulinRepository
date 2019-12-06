@@ -14,6 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A set of tools for manipulatig extended attributes on filesystem objects.</Summary>
 	<Description>The attr package contains utilities to administer the extended attributes on filesystem objects.</Description>
+        <!-- @@@savannah attr -->
         <Archive sha1sum="d7c88cb5db51c5e255a511b0a15e832fcdda5b4f" type="targz">http://download.savannah.nongnu.org/releases/attr/attr-2.4.48.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>

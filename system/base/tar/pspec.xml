@@ -13,6 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>A GNU file archiving program</Summary>
         <Description>The GNU tar program saves many files together in one archive and can restore individual files (or all of the files) from that archive.</Description>
+        <!-- @@@gnu tar-->
         <Archive sha1sum="162e00af4702565119c05465e8b6f21c75092794" type="tarxz">http://mirrors.kernel.org/gnu/tar/tar-1.32.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile target="doc/tar.1">tar.1</AdditionalFile>
