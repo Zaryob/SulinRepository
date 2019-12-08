@@ -17,7 +17,7 @@ def setup():
                          --enable-nls \
                          --enable-audit \
                          --enable-securedir=/lib{0}/security \
-                         --enable-isadir=/lib{0}/security".format("32" if get.buildTYPE()=="emul32" else ""))
+                         --enable-isadir='.'".format("32" if get.buildTYPE()=="emul32" else ""))
 
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 

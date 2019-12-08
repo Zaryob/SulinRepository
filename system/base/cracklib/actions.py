@@ -17,7 +17,7 @@ def setup():
                          PYTHON={} \
                          --with-python \
                          --disable-static".format(
-                         "python2" if get.buildTYPE()=="rebuild_python" else "python3"))
+                         "python2" if get.buildTYPE()=="rebuild_python" else "python3.7"))
 
     # for unused
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
@@ -35,8 +35,17 @@ def install():
 
     autotools.install()
 
+    shelltools.system("install -v -m644 -D ../cracklib-words-2.9.7.gz \
+                         {}/usr/share/dict/cracklib-words.gz".format(get.installDIR()))
+
+    shelltools.system("gunzip -v {}/usr/share/dict/cracklib-words.gz".format(get.installDIR()))
+    shelltools.system("ln -v -sf cracklib-words {}/usr/share/dict/words".format(get.installDIR()))
+    shelltools.system("echo $(hostname) >>      {}/usr/share/dict/cracklib-extra-words".format(get.installDIR()))
+    shelltools.system("install -v -m755 -d      {}/lib/cracklib".format(get.installDIR()))
+
     # Create dictionary files
-    #shelltools.system("cat /usr/share/cracklib/cracklib-small|%s/usr/sbin/cracklib-packer %s/usr/share/cracklib/pw_dict" % (get.installDIR(),get.installDIR()))
+    shelltools.system("create-cracklib-dict     {0}/usr/share/dict/cracklib-words \
+                        {0}/usr/share/cracklib/pw_dict".format(get.installDIR()))
 
     inarytools.domo("po/tr.po","tr","cracklib.mo")
     inarytools.dodoc("ChangeLog", "README*", "NEWS", "COPYING.LIB", "AUTHORS")
