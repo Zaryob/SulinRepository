@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-gstreamer</Name>
+        <Homepage>http://www.kde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:library</IsA>
+        <Summary>Qt5 bindings for GStreamer</Summary>
+        <Description>QtGStreamer is a set of libraries providing C++ bindings for GStreamer with a Qt-style API, plus some helper classes and elements for integrating GStreamer better in Qt applications.The goal of this module is to allow easy use of GStreamer for applications targetting MeeGo Mobile or the KDE desktop.</Description>
+        <Archive sha1sum="b8ed23dbd307dcc39688e0451293d214b3ad41d9" type="targz">https://gitlab.com/sulinos/resources/qt-gstreamer/-/archive/lastest-1.2.0/qt-gstreamer-lastest-1.2.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-quickcontrols2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-gstreamer</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>qt5-gstreamer-devel</Name>
+        <Summary>Development files for qt5-gstreamer</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-gstreamer</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>1.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
