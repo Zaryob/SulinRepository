@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libraw</Name>
+        <Homepage>http://www.libraw.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <License>CDDL</License>
+        <IsA>library</IsA>
+        <Summary>Raw image decoder</Summary>
+        <Description>LibRaw is a library for reading RAW files obtained from digital photo cameras (CRW/CR2, NEF, RAF, DNG, and others).</Description>
+        <Archive sha1sum="c151995b6f17a0ccef7fbc1dcb982f0ccb04d934" type="targz">https://www.libraw.org/data/LibRaw-0.19.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>jasper-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+         </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libraw</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>jasper</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>0.19.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
