@@ -1,0 +1,12 @@
+<INARY>
+    <Source>
+        <Name>gssdp</Name>
+        <Summary xml:lang="tr">Şeffaf bir şekilde SSDP yapmak için GObject tabanlı bir API</Summary>
+        <Description xml:lang="tr">GSSDP, SSDP üzerinden kaynak keşfi ve duyurusunu yerine getirir.</Description>
+    </Source>
+
+    <Package>
+        <Name>gssdp-devel</Name>
+        <Summary xml:lang="tr">gssdp için geliştirme dosyaları</Summary>
+    </Package>
+</INARY>

@@ -1,0 +1,66 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gupnp-igd</Name>
+        <Homepage>http://www.gupnp.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A library to handle UPnP IGD port mapping</Summary>
+        <Description>GUPnP-IGD is a plugin to handle Internet Gateway Device port mappings for UPnP connections.</Description>
+        <Archive sha1sum="8650df82fff054bc703a0a8662d117761c3b5aea" type="tarxz">mirrors://gnome/gupnp-igd/0.2/gupnp-igd-0.2.5.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gupnp-devel</Dependency>
+            <Dependency>gssdp-devel</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gupnp-igd</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>gupnp</Dependency>
+            <Dependency>gssdp</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gupnp-igd</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GUPnPIgd-1.0.gir</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gupnp-igd-devel</Name>
+        <Summary>Development files for gupnp-igd</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gupnp-igd</Dependency>
+            <Dependency>gupnp-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>0.2.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
