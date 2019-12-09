@@ -1,0 +1,63 @@
+<INARY>
+    <Source>
+        <Name>kproperty</Name>
+        <Homepage>http://www.kexi-project.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>A property editing framework with editor widget similar to what is known from Qt Designer</Summary>
+        <Description>A property editing framework with editor widget similar to what is known from Qt Designer</Description>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kguiaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="tarxz" sha1sum="33ccacfcd56da345d5eb827ed8c170667a25bf28">https://download.kde.org/stable/kproperty/src/kproperty-3.2.0.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>kproperty</Name>
+        <Summary>A property editing framework with editor widget similar to what is known from Qt Designer</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kguiaddons</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libKProperty*</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kproperty-devel</Name>
+        <Summary>Developments files for kproperty.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">kproperty</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/cmake</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>3.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
