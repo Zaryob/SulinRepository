@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Basepack of plugins for gstreamer</Summary>
         <Description>GStreamer base plugins are a well-groomed and well-maintained collection of GStreamer plugins and elements, spanning the range of possible types of elements one would want to write for GStreamer. It also contains helper libraries and base classes useful for writing elements. A wide range of video and audio decoders, encoders, and filters are included.</Description>
-        <Archive sha1sum="e906442fd99376ce2384a634637ede9fd8515fc3" type="tarxz">https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.1.tar.xz</Archive>
+        <Archive sha1sum="7c650c99cd02f8ebc66d7b980a6b33663c71a89d" type="tarxz">https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.16.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>orc-devel</Dependency>
             <Dependency>cdparanoia</Dependency>
@@ -27,7 +27,7 @@
             <Dependency>libtheora-devel</Dependency>
             <Dependency>libvisual-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
+            <Dependency version="1.16.2">gstreamer-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -50,7 +50,7 @@
             <Dependency>libvisual</Dependency>
             <Dependency>libtheora</Dependency>
             <Dependency>cdparanoia</Dependency>
-            <Dependency>gstreamer</Dependency>
+            <Dependency version="1.16.2">gstreamer</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -70,7 +70,7 @@
         <Summary>Development files for gst-plugins-base</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gst-plugins-base</Dependency>
-            <Dependency>gstreamer-devel</Dependency>
+            <Dependency version="1.16.2">gstreamer-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -81,6 +81,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-09</Date>
+            <Version>1.16.2</Version>
+            <Comment>Version to 1.16.2 bumped</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
       <Update release="1">
           <Date>2019-09-27</Date>
           <Version>1.16.1</Version>

@@ -12,11 +12,11 @@
         <IsA>library</IsA>
         <Summary>Gstreamer plugin for the libav codec</Summary>
         <Description>Gstreamer plugin for the libav codec.</Description>
-        <Archive sha1sum="8bda277b709edb4b74ce04616f4f2d81865b89b0" type="tarxz">https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.1.tar.xz</Archive>
+        <Archive sha1sum="87e6214cbea594f67854c41d844c2930e97a7e9d" type="tarxz">https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>orc-devel</Dependency>
             <Dependency>yasm-devel</Dependency>
-            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency version="1.16.2">gst-plugins-base-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,8 +25,8 @@
         <RuntimeDependencies>
             <Dependency>bzip2</Dependency>
             <Dependency>glib2</Dependency>
-            <Dependency>gstreamer</Dependency>
-            <Dependency>gst-plugins-base</Dependency>
+            <Dependency version="1.16.2">gstreamer</Dependency>
+            <Dependency version="1.16.2">gst-plugins-base</Dependency>
     </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -36,6 +36,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-12-09</Date>
+            <Version>1.16.2</Version>
+            <Comment>Version to 1.16.2 bumped</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-25</Date>
             <Version>1.16.1</Version>
