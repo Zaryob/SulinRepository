@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>linux-libre</Name>
+        <Homepage>http://www.kernel.org</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>kernel</IsA>
+        <PartOf>kernel.linux</PartOf>
+        <Summary>The Linux libre kernel (the core of the Linux operating system) for Sulin</Summary>
+        <Description>kernel contains the Linux kernel, the core of any Linux operating system. ddtionally libre kernel is a cleant up version of original kernel. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
+        <Archive sha1sum="e34c3da2dae6895513c52915d772fadb891e5e94" type="tarxz">https://gitlab.com/sulinos/linux/libre/-/archive/v5.4-libre/libre-v5.4-libre.tar.gz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.4.2-gnu</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>bc</Dependency>
+            <Dependency>cpio</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>diffutils</Dependency>
+            <Dependency>xmlto</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libre</Name>
+        <Files>
+            <Path fileType="executable" permanent="true">/boot</Path>
+            <Path fileType="library" permanent="true">/lib/modules</Path>
+            <Path fileType="data">/etc/kernel</Path>
+            <Path fileType="config" permanent="true">/etc/mkinitcpio.d</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <Package>
+        <Name>libre-module-headers</Name>
+        <Summary>Kernel header files for external module building</Summary>
+        <Description>kernel-module-headers includes the C header files and the necessary Kbuild files for being able to build external kernel modules.</Description>
+        <Files>
+            <Path fileType="header">/usr/src/linux-headers*</Path>
+            <Path fileType="header">/tmp-headers*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libre-docs</Name>
+        <Summary>Documentation and scripts for the Linux kernel</Summary>
+        <Description>kernel-docs includes several documentation files and scripts for managing several debugging and other tasks.</Description>
+        <Files>
+            <Path fileType="header">/usr/src/linux-headers*/Documentation</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-08</Date>
+            <Version>5.4.0</Version>
+            <Comment>First release of libre kernel.</Comment>
+            <Type package="kernel">security</Type>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
