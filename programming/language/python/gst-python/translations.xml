@@ -1,0 +1,8 @@
+
+<INARY>
+    <Source>
+        <Name>gst-python3</Name>
+        <Summary xml:lang="tr">GStreamer Python bağlayıcıları</Summary>
+        <Description xml:lang="tr">gst-python3 GStreamer için Python arabirimidir.</Description>
+    </Source>
+</INARY>

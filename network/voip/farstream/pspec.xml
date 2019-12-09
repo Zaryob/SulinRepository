@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>farstream</Name>
+        <Homepage>http://www.freedesktop.org/wiki/Software/Farstream</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Farstream (formerly Farsight) - Audio/Video Communications Framework</Summary>
+        <Description>Farstream (formerly Farsight) - Audio/Video Communications Framework</Description>
+        <Archive sha1sum="e6d9388aaf44e06b7cb4e0297a8e4c53fe16be63" type="targz">https://freedesktop.org/software/farstream/releases/farstream/farstream-0.2.8.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libnice-devel</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>farstream</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libnice</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/farstream-0.2</Path>
+            <Path fileType="library">/usr/lib/gstreamer-0.1</Path>
+            <Path fileType="library">/usr/lib/libfarstream-0.2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/farstream</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>farstream-devel</Name>
+        <Summary>Development files for farstream</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">farstream</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.2.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

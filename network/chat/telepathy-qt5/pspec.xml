@@ -1,0 +1,75 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>telepathy-qt5</Name>
+        <Homepage>http://telepathy.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Qt based classes for Telepathy communication framework</Summary>
+        <Description>The Telepathy project is about building a unified framework for many different kinds of real-time communications. telepathy-qt contains Qt-based base and proxy classes for use in connection managers and clients.</Description>
+        <Archive sha1sum="f0dc68fdc05d0d43ae21481c1a875e7bfe919b9b" type="targz">http://telepathy.freedesktop.org/releases/telepathy-qt/telepathy-qt-0.9.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>qt5-doc</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>farstream-devel</Dependency>
+            <Dependency>telepathy-farstream-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">gstreamer-1.6.patch</Patch-->
+            <!--Patch level="1">glibc-2.20.patch</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>telepathy-qt5</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>telepathy-farstream</Dependency>
+            <Dependency>doxygen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>telepathy-qt5-devel</Name>
+        <Summary>Development files for telepathy-qt5</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">telepathy-qt5</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>telepathy-farstream-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.9.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

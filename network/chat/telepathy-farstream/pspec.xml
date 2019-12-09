@@ -1,0 +1,83 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>telepathy-farstream</Name>
+        <Homepage>http://telepathy.freedesktop.org/wiki</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Telepathy client to handle media streaming channels</Summary>
+        <Description>Telepathy-farstream is a Telepathy client that uses Farsight and Gstreamer to handle media streaming channels. It's used as a background process by other Telepathy clients, rather than presenting any user interface of its own.</Description>
+        <Archive sha1sum="27d4fb3e31eb7404b5f2ba72f73194fc1d2b704f" type="targz">http://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-0.6.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>farstream-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>telepathy-farstream</Name>
+        <IsA>library</IsA>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>farstream</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>telepathy-farstream-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Help files and API documents of telepathy-farstream library</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">telepathy-farstream</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>telepathy-farstream-devel</Name>
+        <Summary>Development files for telepathy-farstream</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">telepathy-farstream</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>farstream-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

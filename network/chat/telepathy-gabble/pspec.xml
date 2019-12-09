@@ -1,0 +1,66 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>telepathy-gabble</Name>
+        <Homepage>http://telepathy.freedesktop.org/wiki</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A Jabber/XMPP connection manager for Telepathy</Summary>
+        <Description>telepathy-gabble is a Jabber/XMPP connection manager, that handles single and multi-user chats and voice calls.</Description>
+        <Archive sha1sum="3277fc95ec6e4a9a5b07f5fe5b9de3283cb0c86d" type="targz">http://telepathy.freedesktop.org/releases/telepathy-gabble/telepathy-gabble-0.18.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libnice-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libnice-devel</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>telepathy-gabble</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libnice</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>  
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.18.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

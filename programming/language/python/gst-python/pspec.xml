@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gst-python3</Name>
+        <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>GStreamer Python3 bindings</Summary>
+        <Description>gst-python3 is a Python frontend to GStreamer.</Description>
+        <Archive sha1sum="839fd35bd924a768c05288ce45a057a29c1e736c" type="tarxz">https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.16.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>pygobject3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gst-python3</Name>
+        <BuildType>rebuild_python</BuildType>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0/libgstpython.cpython-37m-x86_64-linux-gnu.so</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gst-python</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>python-pygobject3</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+          <Path fileType="library">/usr/lib/gstreamer-1.0/libgstpython.so</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>1.16.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
