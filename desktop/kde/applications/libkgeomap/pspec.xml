@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libkgeomap</Name>
+        <Homepage>https://www.kde.org/applications/graphics/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>FDL-1.1</License>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.kde.graphics</PartOf>
+        <Summary>A wrapper around world map components for browsing and arranging photos on a map.</Summary>
+        <Description>A wrapper around world map components for browsing and arranging photos on a map.</Description>
+        <Archive type="tarxz" sha1sum="1127421250680a4bf3cad5aadaae0be5f8a54879">mirrors://kde/stable/applications/19.08.3/src/libkgeomap-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>ktextwidgets-devel</Dependency>
+            <Dependency>marble-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libkgeomap</Name>
+        <Summary>A wrapper around world map components for browsing and arranging photos on a map.</Summary>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>marble</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/libkgeomap</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libkgeomap-devel</Name>
+        <Summary>Developments files for libkgeomap.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libkgeomap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
