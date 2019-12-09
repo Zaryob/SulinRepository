@@ -1,0 +1,85 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lash</Name>
+        <Homepage>http://savannah.nongnu.org/projects/lash</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <Icon>lash</Icon>
+        <IsA>library</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>LASH Audio Session Handler</Summary>
+        <Description>LASH is a session management system for JACK and ALSA audio applications on GNU/Linux. It allows you to save and restore audio sessions consisting of multiple interconneced applications, restoring program state (i.e. loaded patches) and the connections between them.</Description>
+        <Archive sha1sum="b683424683c41c082ebcf58ed38cd2f34f9ed5e5" type="tarbz2">http://download.savannah.gnu.org/releases/lash/lash-0.6.0~rc2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libtirpc-devel</Dependency>
+            <Dependency>jack-audio-connection-kit-devel</Dependency>
+            <Dependency>dmapi-devel</Dependency>
+            <Dependency>texi2html</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="0">makefile.patch</Patch>
+            <Patch level="0">docs-Makefile.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>lash</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>dmapi</Dependency>
+            <Dependency>libtirpc</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lash-devel</Name>
+        <Summary>Development files for lash</Summary>
+        <RuntimeDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency release="current">lash</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>0.6.0_rc2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

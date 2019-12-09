@@ -53,7 +53,7 @@
             <Dependency>kxmlgui</Dependency>
             <Dependency>kcmutils</Dependency>
             <Dependency>kservice</Dependency>
-            <Dependency>qca2-qt5</Dependency>
+            <Dependency>qca2</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>knewstuff</Dependency>
             <Dependency>qt5-script</Dependency>

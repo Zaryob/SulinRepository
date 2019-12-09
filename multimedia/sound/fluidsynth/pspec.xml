@@ -1,0 +1,70 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>fluidsynth</Name>
+        <Homepage>http://fluidsynth.resonance.org/trac</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>A realtime software synthesizer</Summary>
+        <Description>FluidSynth is a real-time software synthesizer based on the SoundFont 2 specifications.</Description>
+        <Archive sha1sum="3822f1406cbf6c810928277a3695b5e38a5dbde4" type="targz">https://github.com/FluidSynth/fluidsynth/archive/v2.1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>lash-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>ladspa-sdk-devel</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>jack-audio-connection-kit-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>fluidsynth</Name>
+        <RuntimeDependencies>
+            <Dependency>lash</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>ladspa-sdk</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>fluidsynth-devel</Name>
+        <Summary>Development files for fluidsynth</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">fluidsynth</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>2.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

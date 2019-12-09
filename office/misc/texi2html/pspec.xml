@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>texi2html</Name>
+        <Homepage>http://savannah.nongnu.org/projects/texi2html/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Texinfo to HTML converter</Summary>
+        <Description>texi2html is a Perl script which can generate HTML from Texinfo source files.</Description>
+        <Archive sha1sum="20072444ce814d0e74fd7e467d1506908f8c889c" type="tarbz2">http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>texi2html</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc/texi2html</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="data">/usr/share/texi2html</Path>
+            <Path fileType="data">/usr/share/texinfo</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>5.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
