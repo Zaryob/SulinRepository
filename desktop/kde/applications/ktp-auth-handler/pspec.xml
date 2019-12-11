@@ -1,0 +1,72 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ktp-auth-handler</Name>
+        <Homepage>http://community.kde.org/Real-Time_Communication_and_Collaboration</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app</IsA>
+        <PartOf>desktop.kde.network</PartOf>
+        <Summary>Provide UI/KWallet Integration For Passwords and SSL Errors on Account Connect</Summary>
+        <Description>Provide UI/KWallet Integration For Passwords and SSL Errors on Account Connect</Description>
+        <Archive type="tarxz" sha1sum="9c44aec7442011013d2010f0fa91906e1d93447b">mirrors://kde/stable/applications/19.08.3/src/ktp-auth-handler-19.08.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kwallet-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kdewebkit-devel</Dependency>
+            <Dependency>telepathy-qt5-devel</Dependency>
+            <Dependency>ktp-common-internals-devel</Dependency>
+            <Dependency>telepathy-logger-qt-devel</Dependency>
+            <Dependency>qca2-devel</Dependency>
+            <Dependency>libaccounts-qt5-devel</Dependency>
+            <Dependency>kaccounts-integration-devel</Dependency>
+            <Dependency>signon-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ktp-auth-handler</Name>
+        <Summary>Provide UI/KWallet Integration For Passwords and SSL Errors on Account Connect</Summary>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>signon</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>qca2-qt5</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>telepathy-qt5</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>libaccounts-qt5</Dependency>
+            <Dependency>ktp-common-internals</Dependency>
+            <Dependency>kaccounts-integration</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/telepathy</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
