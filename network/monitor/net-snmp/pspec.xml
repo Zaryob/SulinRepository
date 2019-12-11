@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>net-snmp</Name>
+        <Homepage>http://net-snmp.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A collection of SNMP protocol tools and libraries</Summary>
+        <Description>Simple Network Management Protocol (SNMP) is a widely used protocol for monitoring the health and welfare of network equipment (eg. routers), computer equipment and even devices like UPSs. Net-SNMP is a suite of applications used to implement SNMP v1, SNMP v2c and SNMP v3 using both IPv4 and IPv6.</Description>
+        <Archive sha1sum="9b5dee54579754e73791bab17791ac90dac68311" type="targz">mirrors://sourceforge/net-snmp/net-snmp/5.8.1-pre-releases/net-snmp-5.8.1.pre1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>pciutils-devel</Dependency>
+            <Dependency>tcp-wrappers-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>net-snmp-5.7.3-include-limits.patch</Patch>
+            <Patch>net-snmp-5.8-do-not-conflate-LDFLAGS-and-LIBS.patch</Patch>
+            <Patch>net-snmp-5.8-pcap.patch</Patch>
+            <Patch>net-snmp-5.8-tinfo.patch</Patch>
+            <Patch>net-snmp-5.8.1-pkg-config.patch</Patch>
+            <Patch>net-snmp-5.8-python.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>net-snmp</Name>
+        <RuntimeDependencies>
+            <Dependency>libnl</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>pciutils</Dependency>
+            <Dependency>tcp-wrappers</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/snmp</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin/snmpd</Path>
+            <Path fileType="config">/etc/conf.d/snmpd</Path>
+            <Path fileType="config">/etc/init.d/snmpd</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/snmp</Path>
+            <Path fileType="data">/var/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+          <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/snmpd">snmpd.conf</AdditionalFile>
+          <AdditionalFile owner="root" permission="0644" target="/etc/init.d/snmpd">snmpd.init.2</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>net-snmptrap</Name>
+        <RuntimeDependencies>
+            <Dependency>net-snmp</Dependency>
+            <Dependency>tcp-wrappers</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/init.d/snmptrapd</Path>
+            <Path fileType="config">/etc/conf.d/snmptrapd</Path>
+            <Path fileType="config">/etc/snmp/snmptrapd.conf</Path>
+            <Path fileType="executable">/usr/sbin/snmptrapd</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/snmptrapd">snmptrapd.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/init.d/snmptrapd">snmptrapd.init.2</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>net-snmp-devel</Name>
+        <Summary>Development files for net-snmp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">net-snmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>5.7.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
