@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>wireshark</Name>
+        <Homepage>http://www.wireshark.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>wireshark</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A commercial-quality network traffic analyzer</Summary>
+        <Description>Wireshark is a commercial-quality network traffic analyzer useful to investigate packets on the network.</Description>
+        <Archive sha1sum="36c8088fc602900044f2b3d446b8faf3e1b74bea" type="tarxz">https://www.wireshark.org/download/src/all-versions/wireshark-3.2.0rc1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>c-ares-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>libssh-devel</Dependency>
+            <Dependency>sbc-devel</Dependency>
+            <Dependency>speexdsp-devel</Dependency>
+            <Dependency>libssh2-devel</Dependency>
+            <Dependency>minizip-devel</Dependency>
+            <Dependency>lz4-devel</Dependency>
+            <Dependency>zstd-devel</Dependency>
+            <Dependency>net-snmp-devel</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>lua-devel</Dependency>
+            <Dependency>lua51-devel</Dependency>
+            <Dependency>portaudio-devel</Dependency>
+            <Dependency>libsmi-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>snappy-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+            <Dependency>geoip-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-multimedia-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">wireshark-2.4-androiddump.patch</Patch>
+            <Patch level="1">wireshark-2.6.0-redhat.patch</Patch>
+            <Patch level="1">wireshark-2.9.0-tfshark-libm.patch</Patch>
+            <Patch level="1">wireshark-99999999-androiddump-wsutil.patch</Patch>
+            <Patch level="1">wireshark-99999999-qtsvg.patch</Patch>
+            <Patch level="1">wireshark-99999999-ui-needs-wiretap.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>wireshark</Name>
+        <RuntimeDependencies>
+            <Dependency>pango</Dependency>
+            <Dependency>geoip</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>c-ares</Dependency>
+            <Dependency>libssh2</Dependency>
+            <Dependency>minizip</Dependency>
+            <Dependency>speexdsp</Dependency>
+            <Dependency>sbc</Dependency>
+            <Dependency>lz4</Dependency>
+            <Dependency>zstd</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>libssh</Dependency>
+            <Dependency>net-snmp</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>lua</Dependency>
+            <Dependency>lua51</Dependency>
+            <Dependency>snappy</Dependency>
+            <Dependency>portaudio</Dependency>
+            <Dependency>libsmi</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libgpg-error</Dependency>
+            <Dependency>geoip</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-multimedia</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc/pam.d</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/wireshark</Path>
+            <Path fileType="data">/usr/share/appdata/wireshark.appdata.xml</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+    <Package>
+        <Name>wireshark-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">wireshark</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>3.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
