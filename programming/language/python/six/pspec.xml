@@ -14,9 +14,11 @@
         <Description>python-six provides simple utilities for wrapping over differences between Python 2 and Python 3.</Description>
         <Archive sha1sum="e6c12160e3da5e164dac9846a1f171fca24e1a8c" type="targz">https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>python-devel</Dependency>
             <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
+
     <Package>
         <Name>python3-six</Name>
         <RuntimeDependencies>
@@ -36,15 +38,15 @@
         </Files>
     </Package>
     <Package>
-        <Name>python-six-docs</Name>
+        <Name>six-docs</Name>
         <Files>
-            <Path fileType="library">/usr/share/doc</Path>
+          <Path fileType="library">/usr/share/doc</Path>
             <Path fileType="library">/usr/share/man</Path>
         </Files>
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-11-21</Date>
+            <Date>2019-12-11</Date>
             <Version>1.13.0</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
