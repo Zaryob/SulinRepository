@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libnet</Name>
+        <Homepage>https://github.com/libnet</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Low level network library</Summary>
+        <Description>libnet is a library to provide an API for commonly used low-level network functions.</Description>
+        <Archive sha1sum="9607f720e0af141c28dc75e06985f2c679f888d6" type="targz">https://github.com/libnet/libnet/releases/download/v1.2/libnet-1.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libnet</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libnet-devel</Name>
+        <Summary>Development files for libnet</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libnet</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/libnet/html</Path>
+            <Path fileType="doc">/usr/share/doc/libnet/examples</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
