@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libaccounts-qt5</Name>
+        <Homepage>https://gitlab.com/accounts-sso/libaccounts-qt</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Qt5-based client library for accessing the online accounts database</Summary>
+        <Description>Qt5-based client library for accessing the online accounts database</Description>
+        <Archive sha1sum="ef424ba560f7793dc03a23671b2f25c76b474a4e" type="tarbz2">https://gitlab.com/accounts-sso/libaccounts-qt/-/archive/VERSION_1.16/libaccounts-qt-VERSION_1.16.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>doxygen</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libaccounts-glib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libaccounts-qt5</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libaccounts-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libaccounts-qt5*</Path>
+            <Path fileType="doc">/usr/share/doc/libaccounts-qt5</Path>
+            <Path fileType="library">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libaccounts-qt5-devel</Name>
+        <Summary>Development files for libaccounts-qt5</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libaccounts-qt5</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libaccounts-qt5-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Help files and API documents for libaccounts-qt5</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libaccounts-qt5</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libaccounts-qt5-tools</Name>
+        <IsA>data:doc</IsA>
+        <Summary>This package contains the tools for the libaccounts-qt5 library</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libaccounts-qt5</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/bin</Path>
+            <Path fileType="data">/usr/share/libaccounts-qt-tests</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>1.16</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
