@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Test-Script</Name>
+        <Homepage>http://search.cpan.org/dist/Test-Script/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Basic cross-platform tests for Perl scripts</Summary>
+        <Description>perl-Test-Script is a Perl module that has basic cross-platform tests for scripts.</Description>
+        <Archive sha1sum="05d348f560eaab6cba7c0f66fe2288db31f7a0fb" type="targz">mirrors://cpan/authors/id/P/PL/PLICEASE/Test-Script-1.26.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-IPC-Run3</Dependency>
+            <Dependency>perl-Probe-Perl</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>perl-Test-Script</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-IPC-Run3</Dependency>
+            <Dependency>perl-Probe-Perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>1.26</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
