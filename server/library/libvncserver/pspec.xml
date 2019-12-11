@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libvncserver</Name>
+        <Homepage>http://libvncserver.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Library for creating VNC (Virtual Network Computing) servers</Summary>
+        <Description>libvncserver provides a C library to create VNC servers.</Description>
+        <Archive sha1sum="f2111a7d7e96d7101e7ff3834abd5b0c71c1ed5f" type="targz">https://github.com/LibVNC/libvncserver/archive/LibVNCServer-0.9.12.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libpng</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libvncserver</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/*-config</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>0.9.12</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
