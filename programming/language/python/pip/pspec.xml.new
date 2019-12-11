@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pip</Name>
+        <Homepage>https://pypi.python.org/pypi/pip</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>The PyPA recommended tool for installing Python packages</Summary>
+        <Description>The PyPA recommended tool for installing Python packages</Description>
+        <License>MIT</License>
+        <Archive sha1sum="" type="targz">https://github.com/pypa/pip/archive/19.3.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python3-pip</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/pip</Path>
+            <Path fileType="executable">/usr/bin/pip3*</Path>
+            <Path fileType="data">/usr/lib/python3*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>python3-setuptools</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>python-pip</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/lib/python2*</Path>
+        </Files>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>python-pip-docs</Name>
+        <Files>
+          <Path fileType="library">/usr/share/doc</Path>
+            <Path fileType="library">/usr/share/man</Path>
+        </Files>
+    </Package>
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>19.3.1</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-26</Date>
+            <Version>19.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

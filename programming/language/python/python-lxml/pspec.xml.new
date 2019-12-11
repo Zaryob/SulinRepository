@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-lxml</Name>
+        <Homepage>http://codespeak.net/lxml</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>lxml is the most feature-rich and easy-to-use library</Summary>
+        <Description>lxml is the most feature-rich and easy-to-use library for working with XML and HTML in the Python language.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/lxml/lxml/archive/lxml-4.4.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>cython</Dependency>
+            <Dependency>cython3</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-lxml</Name>
+        <RuntimeDependencies>
+            <Dependency>libxslt</Dependency>
+            <Dependency>python3-libxml2</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-lxml</Name>
+        <RuntimeDependencies>
+            <Dependency>python-libxml2</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-lxml-docs</Name>
+        <Summary>API documentation of python-lxml</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">python-lxml</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>4.4.2</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019.11.9</Date>
+            <Version>4.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

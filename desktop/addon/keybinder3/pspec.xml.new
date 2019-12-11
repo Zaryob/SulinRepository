@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>keybinder3</Name>
+        <Homepage>http://kaizer.se/wiki/keybinder/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <PartOf>desktop.addon</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>keybinder is a library for registering global keyboard shortcuts.</Summary>
+        <Description>keybinder is a library for registering global keyboard shortcuts. Keybinder works with GTK-based applications using the X Window System.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/kupferlauncher/keybinder/releases/download/keybinder-3.0-v0.3.2/keybinder-3.0-0.3.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>keybinder3</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/gtk-doc/*</Path>
+            <Path fileType="data">/usr/share/gir-1.0/*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>keybinder3-devel</Name>
+        <Summary>Development files for keybinder</Summary>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="current">keybinder3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>3.0-0.3.2</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.3.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

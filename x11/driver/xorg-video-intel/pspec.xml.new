@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xorg-video-intel</Name>
+        <Homepage>http://www.x.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>driver</IsA>
+        <PartOf>x11.driver</PartOf>
+        <Summary>X.Org intel video driver</Summary>
+        <Description>xorg-video-intel contains the X.Org driver for Intel video chipsets.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/SulinOS/xf86-video-intel/archive/release_1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libXv-devel</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libXvMC-devel</Dependency>
+            <Dependency>xcb-util-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>libdrm-intel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>util-macros</Dependency>
+            <Dependency>libpciaccess-devel</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>libxshmfence-devel</Dependency>
+            <Dependency>libXfont-devel</Dependency>
+            <Dependency>libXfont2-devel</Dependency>
+            <Dependency>xscreensaver</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>0001-SNA-fix-PRIME-output-support-since-xserver-1.20.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>xorg-video-intel</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libXvMC</Dependency>
+            <Dependency>xcb-util</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libdrm-intel</Dependency>
+            <Dependency>libpciaccess</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>libxshmfence</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>1</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-12</Date>
+            <Version>2.99.917</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>guile</Name>
+        <Homepage>http://www.gnu.org/software/guile/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>GNU Scheme interpreter and library</Summary>
+        <Description>GUILE (GNU's Ubiquitous Intelligent Language for Extension) is a library implementation of the Scheme programming language, written in C. GUILE provides a machine-independent execution platform that can be linked in as a library during the building of extensible programs.</Description>
+        <Archive sha1sum="" type="targz">https://ftp.gnu.org/gnu/guile/guile-2.2.6.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gc-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>libunistring-devel</Dependency>
+            <Dependency>libffi-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>guile</Name>
+        <RuntimeDependencies>
+            <Dependency>gc</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libtool-ltdl</Dependency>
+            <Dependency>libunistring</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin/guild</Path>
+            <Path fileType="executable">/usr/bin/guile</Path>
+            <Path fileType="executable">/usr/bin/guile-tools</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="library">/usr/lib/lib*</Path>
+            <Path fileType="data">/usr/share/guile</Path>
+            <Path fileType="data">/usr/share/emacs</Path>
+            <Path fileType="data">/usr/share/gdb/auto-load</Path>
+            <Path fileType="library">/usr/lib/guile/2.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>guile-devel</Name>
+        <Summary>Development files for guile</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">guile</Dependency>
+            <Dependency>gc-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="executable">/usr/bin/guile-snarf</Path>
+            <Path fileType="executable">/usr/bin/guile-config</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>2.2.6</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>2.0.14</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

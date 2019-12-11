@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>atk</Name>
+        <Homepage>http://developer.gnome.org/atk</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.toolkit.gtk</PartOf>
+        <Summary>GTK+ and GNOME Accessibility Toolkit</Summary>
+        <Description>These libraries provide tools for making software for people with disabilities.</Description>
+        <Archive sha1sum="" type="targz">http://ftp.gnome.org/pub/gnome/sources/atk/2.35/atk-2.35.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>atk</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libatk*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>atk-devel</Name>
+        <Summary>Development files for atk</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">atk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>atk-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for atk</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>glib2-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">atk</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>2.35.1</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.32.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

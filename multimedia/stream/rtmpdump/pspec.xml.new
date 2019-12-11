@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rtmpdump</Name>
+        <Homepage>http://rtmpdump.mplayerhq.hu/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Toolkit for RTMP streams</Summary>
+        <Description>rtmpdump is a tool for dumping media content streamed over RTMP. All forms of RTMP are supported, including rtmp://, rtmpt://, rtmpe://, rtmpte://, and rtmps:// .</Description>
+        <Archive sha1sum="" type="targz">https://github.com/SulinOS/rtmpdump/archive/2.4_20190914.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rtmpdump</Name>
+        <RuntimeDependencies>
+            <Dependency>gnutls</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/rtmpdump</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>rtmpdump-devel</Name>
+        <Summary>Development files for rtmpdump</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">rtmpdump</Dependency>
+            <Dependency>openssl-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>2.4_20190914</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>2.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

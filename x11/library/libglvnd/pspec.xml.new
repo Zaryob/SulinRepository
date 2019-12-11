@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libglvnd</Name>
+        <Homepage>https://github.com/NVIDIA/libglvnd</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD-like</License>
+        <IsA>Libry</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>the GL Vendor-Neutral Dispatch library</Summary>
+        <Description>This is a work-in-progress implementation of the vendor-neutral dispatch layer for arbitrating OpenGL API calls between multiple vendors on a per-screen basis, as described by Andy Ritger's OpenGL ABI proposal</Description>
+        <Archive sha1sum="" type="targz">https://github.com/NVIDIA/libglvnd/archive/v1.3.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mesa</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libXext</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libglvnd</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/include/*</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/</Path>
+            <Path fileType="doc">/usr/share/*</Path>
+        </Files>
+    </Package>
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>1.3.0</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>  
+        </Update>
+    </History>
+</INARY>

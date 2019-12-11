@@ -1,0 +1,64 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>jbig2dec</Name>
+        <Homepage>https://github.com/ArtifexSoftware/ghostpdl-downloads</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Decoder implementation of the JBIG2 image compression format</Summary>
+        <Description>Decoder implementation of the JBIG2 image compression format.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/ArtifexSoftware/ghostpdl-downloads/archive/9.27.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libpng-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>jbig2dec</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>jbig2dec-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>jbig2dec-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for jbig2dec.</Summary>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>9.27</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>0.16</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ninja</Name>
+        <Homepage>http://martine.github.com/ninja/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>programming.build</PartOf>
+        <Summary>Ninja is a small build system with a focus on speed.</Summary>
+        <Description>Ninja is a small build system with a focus on speed.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/ninja-build/ninja/archive/v1.9.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>re2c</Dependency>
+            <Dependency>asciidoc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ninja</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>1.9.0</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-08</Date>
+            <Version>1.8.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

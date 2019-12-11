@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dbus-c++</Name>
+        <Homepage>http://sourceforge.net/projects/dbus-cplusplus/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>C++ bindings for DBus library</Summary>
+        <Description>dbus-c++ attempts to provide a C++ API for D-BUS. The library has a glib/gtk and an Ecore mainloop integration. It also offers an optional own main loop.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/andreas-volz/dbus-cplusplus/archive/v0.9.1pw.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+
+        <Patches>
+            <Patch>opensuse.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dbus-c++</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>dbus-c++-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">dbus-c++</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>0.9.1pw</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>0.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

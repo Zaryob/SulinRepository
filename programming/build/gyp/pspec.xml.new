@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gyp</Name>
+        <Homepage>https://gyp.gsrc.io/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <PartOf>programming.build</PartOf>
+        <Summary>"Generate Your Projects" Meta-Build system.</Summary>
+        <Description>gyp is a meta build system for "Generate Your Projects" which requires python2.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/SulinOS/gyp/archive/gyp-3-20190115.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>ninja</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gyp</Name>
+        <RuntimeDependencies>
+            <Dependency>ninja</Dependency>
+            <Dependency>python-setuptools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>3-20190115</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-09-08</Date>
+            <Version>20190115</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

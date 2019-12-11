@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ilmbase</Name>
+        <Homepage>http://www.openexr.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Several utility libraries from ILM (Industrial  Light &amp; Magic) used by OpenEXR</Summary>
+        <Description>IlmBase are a set of utility libraries released by ILM, and used in their OpenEXR implementation. Included in this package you can find; libHalf (a class named Half for manipulating "half" values (16-bit floating point format) as if they were a built-in C++ data type), libIlmThread (a thread abstraction library on top of pthreads), libImath (a math library with support for matrices, 2d and 3d transformations, solvers for linear/quadratic/cubic equations and more), libIex (an exception handling library).</Description>
+        <Archive sha1sum="" type="targz">https://github.com</Archive>
+        <Patches>
+            <Patch level="1">ilmbase-2.0.1-no_undefined.patch</Patch>
+            <Patch level="1">ilmbase-1.0.3-pkgconfig.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>ilmbase</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ilmbase-devel</Name>
+        <Summary>Development files for ilmbase</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">ilmbase</Dependency>
+            <!--Dependency>mesa-glu-devel</Dependency>
+            <Dependency>mesa-devel</Dependency-->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version></Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-10-10</Date>
+            <Version>2.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>glpk</Name>
+        <Homepage>http://www.gnu.org/software/glpk/glpk.html</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>GNU Linear Programming Kit</Summary>
+        <Description>The GLPK (GNU Linear Programming Kit) package is intended for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. It is a set of routines written in ANSI C and organized in the form of a callable library.</Description>
+        <Archive sha1sum="" type="targz">https://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gmp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>glpk</Name>
+        <RuntimeDependencies>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>glpk-devel</Name>
+        <IsA>header</IsA>
+        <Summary>Development files for glpk</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">glpk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>glpk-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for glpk package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">glpk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+          </Files>
+    </Package>
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>4.65</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>4.61</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>containerd</Name>
+        <Homepage>https://containerd.tools/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <Summary>A daemon to control runC, built for performance and density.</Summary>
+        <Description>is a daemon with an API and a command line client, to manage containers on one machine. It uses runC to run containers according to the OCI specification.</Description>
+        <Archive sha1sum="" type="targz">https://github.com/containerd/containerd/releases/download/v1.3.2/containerd-1.3.2.linux-amd64.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>golang</Dependency>
+            <Dependency>git</Dependency>
+            <Dependency>btrfs-progs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>containerd</Name>
+        <RuntimeDependencies>
+            <Dependency>btrfs-progs</Dependency>
+            <Dependency>runc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+<History>
+    <History>
+	<Update release="2">
+	<Date>2019-12-11</Date>
+	<Version>1.3.2.linux-amd64</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>1.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
