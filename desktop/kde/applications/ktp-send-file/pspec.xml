@@ -1,0 +1,63 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ktp-send-file</Name>
+        <Homepage>http://community.kde.org/Real-Time_Communication_and_Collaboration</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app</IsA>
+        <PartOf>desktop.kde.network</PartOf>
+        <Summary>A File manager plugin to launch a file transfer job with a specified contact</Summary>
+        <Description>A File manager plugin to launch a file transfer job with a specified contact</Description>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kcmutils-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kiconthemes-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>ktp-common-internals-devel</Dependency>
+            <Dependency>telepathy-logger-qt-devel</Dependency>
+            <Dependency>telepathy-qt5-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="3ceef401dd75c25d49ba586e4e43184c8dd10793" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/ktp-send-file-19.08.3.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>ktp-send-file</Name>
+        <Summary>A File manager plugin to launch a file transfer job with a specified contact</Summary>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>telepathy-qt5</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>ktp-common-internals</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/kservices5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            -->
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>19.08.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
