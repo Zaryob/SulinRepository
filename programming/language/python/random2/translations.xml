@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>random2</Name>
+        <Summary xml:lang="tr">Python 3 compatible port of Python 2 random module</Summary>
+        <Description xml:lang="tr">Python 3 compatible port of Python 2 random module</Description>
+    </Source>
+    <Package>
+        <Name>python-random2</Name>
+        <Summary xml:lang="tr">random2 modülü python2 paketi.</Summary>
+    </Package>
+    <Package>
+        <Name>python3-random2</Name>
+        <Summary xml:lang="tr">random2 modülü python3 paketi.</Summary>
+    </Package>
+    <Package>
+        <Name>random2-docs</Name>
+        <Summary xml:lang="tr">random2 modülü belge paketi.</Summary>
+    </Package>
+</INARY>
