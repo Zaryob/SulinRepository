@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libgphoto2</Name>
+        <Homepage>http://www.gphoto.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Library that implements support for numerous digital cameras</Summary>
+        <Description>libgphoto2 is the core library designed to allow access to digital camera by external programs.</Description>
+        <Archive sha1sum="01f91d2b5d2aef7e80ab846fea4d5eb5cc67ed79" type="tarbz2">mirrors://sourceforge/gphoto/libgphoto/2.5.23/libgphoto2-2.5.23.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>doxygen</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>gd-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>libusb-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgphoto2</Name>
+        <RuntimeDependencies>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libtool-ltdl</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>gd</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/lib/udev</Path>
+            <Path fileType="doc">/usr/share/doc/libgphoto2/README</Path>
+            <Path fileType="doc">/usr/share/doc/libgphoto2/COPYING</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/libgphoto2</Path>
+            <Path fileType="data">/usr/share/hal/fdi</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>libgphoto2-docs</Name>
+        <Summary>Documentation for libgphoto2</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/libgphoto2</Path>
+            <Path fileType="doc">/usr/share/doc/libgphoto2/camlibs</Path>
+            <Path fileType="doc">/usr/share/doc/libgphoto2/apidocs.html</Path>
+            <Path fileType="doc">/usr/share/doc/libgphoto2/linux-hotplug</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgphoto2-devel</Name>
+        <Summary>Development files for libgphoto2</Summary>
+        <RuntimeDependencies>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency release="current">libgphoto2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/gphoto2-config*</Path>
+            <Path fileType="executable">/usr/bin/gphoto2-port-config</Path>
+            <Path fileType="header">/usr/include/gphoto2</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.5.23</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

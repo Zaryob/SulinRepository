@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>sane-backends</Name>
+        <Homepage>http://www.sane-project.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>sane</Icon>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Scanner access software</Summary>
+        <Description>Scanner Access Now Easy (SANE) is a universal scanner interface. The SANE application programming interface provides standardized access to any raster image scanner hardware.</Description>
+        <Archive sha1sum="ad02406ae857f72d1de29024b728bf4d8977de53" type="targz">https://gitlab.com/sane-project/backends/uploads/9e718daff347826f4cfe21126c8d5091/sane-backends-1.0.28.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libieee1284-devel</Dependency>
+            <Dependency>libusb-compat-devel</Dependency>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>libgphoto2-devel</Dependency>
+            <Dependency>libv4l-devel</Dependency>
+            <Dependency>avahi-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>net-snmp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sane-backends</Name>
+        <RuntimeDependencies>
+            <Dependency>libnl</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libusb-compat</Dependency>
+            <Dependency>libieee1284</Dependency>
+            <Dependency>avahi-libs</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>libv4l</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>net-snmp</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>libexif</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc/sane.d/dll.d</Path>
+            <Path fileType="data">/etc/env.d</Path>
+            <Path fileType="config">/etc/sane.d</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/sane-backends/README</Path>
+            <Path fileType="doc">/usr/share/doc/sane-backends/COPYING</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/share/sane</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sane-backends-devel</Name>
+        <Summary>Development files for sane-backends</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">sane-backends</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sane-backends-docs</Name>
+        <Summary>Documentation for SANE backends</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <AdditionalFiles>
+        <AdditionalFile owner="root" permission="0755" target="/etc/init.d/saned">saned.initd</AdditionalFile>
+        <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/saned">saned.confd</AdditionalFile>
+    </AdditionalFiles>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.0.25</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>kdeconnect</Name>
+        <Homepage>https://albertvaka.wordpress.com/2013/08/05/introducing-kde-connect/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>kdeconnect</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Connect KDE with your smartphone</Summary>
+        <Description>Connect KDE with your smartphone</Description>
+        <Archive sha1sum="c46339e0eb115f470d7b4310fe1eca7fb697f5f4" type="tarxz">mirrors://kde/stable/kdeconnect/1.4/kdeconnect-kde-1.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kpeople-devel</Dependency>
+            <Dependency>kpeople-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kcmutils-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kwayland-devel</Dependency>
+            <Dependency>qca2-devel</Dependency>
+            <Dependency>libfakekey-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kdeconnect</Name>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kwayland</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>kpeople</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>kcmutils</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>qca2</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libfakekey</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>sshfs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-09</Date>
+            <Version>1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

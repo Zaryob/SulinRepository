@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>iniparser</Name>
+        <Homepage>http://ndevilla.free.fr/iniparser/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A free ini file parsing library</Summary>
+        <Description>iniparser is a free stand-alone ini file parsing library written in portable ANSI C.</Description>
+        <Archive sha1sum="2035285163f8159b355e9ef8a95c3f21a716cbff" type="targz">https://github.com/ndevilla/iniparser/archive/v4.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>iniparser</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>iniparser-devel</Name>
+        <Summary>Development files for iniparser</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">iniparser</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

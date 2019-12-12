@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pysol-cards</Name>
+        <Homepage>https://github.com/shlomif/pysol_cards</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>The pysol-cards python modules allow the python developer to generate the initial deals of some PySol FC games</Summary>
+        <Description>The pysol-cards python modules allow the python developer to generate the initial deals of some PySol FC games.  It also supports PySol legacy deals and Microsoft FreeCell / Freecell Pro deals.</Description>
+        <Archive sha1sum="587e32c67fa234d015dde02e135bab75a12a7a28" type="targz">https://pypi.io/packages/source/p/pysol_cards/pysol_cards-0.8.7.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-pysol-cards</Name>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-pysol-cards</Name>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pysol-cards-docs</Name>
+        <Files>
+          <Path fileType="library">/usr/share/doc</Path>
+            <Path fileType="library">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>0.8.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

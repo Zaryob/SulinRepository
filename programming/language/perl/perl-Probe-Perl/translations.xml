@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<INARY>
+    <Source>
+        <Name>perl-Probe-Perl</Name>
+        <Summary xml:lang="tr">Çalışan Perl hakkında bilgi verir</Summary>
+        <Description xml:lang="tr">perl-Probe-Perl çalışan Perl hakkında bilgi veren bir Perl modülüdür.</Description>
+    </Source>
+</INARY>

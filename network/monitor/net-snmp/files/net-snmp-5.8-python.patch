@@ -1,0 +1,11 @@
+--- /var/inary/net-snmp-5.7.3-1/work/net-snmp-5.8.1.pre1/python/setup.py	2019-09-03 15:31:07.000000000 +0000
++++ /var/inary/net-snmp-5.7.3-1/work/net-snmp-5.8.1.pre1/python/setup.py.new	2019-12-11 11:22:05.856122031 +0000
+@@ -11,7 +11,7 @@
+ for arg in args:
+     if string.find(arg,'--basedir=') == 0:
+         basedir = string.split(arg,'=')[1]
+-	sys.argv.remove(arg)
++        sys.argv.remove(arg)
+         intree=1
+ 
+ if intree:

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>freecell-solver</Name>
+        <Homepage>https://fc-solve.shlomifish.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>A program that automatically solves layouts of Freecell and similar variants of Card Solitaire</Summary>
+        <Description>Freecell ve Card Solitaire'ın benzer varyantlarının düzenlerini otomatik olarak çözen bir program</Description>
+        <Archive sha1sum="af49018419ff2b505d3be321ee095cd6108f5c83" type="tarxz">https://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-5.14.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>gperf</Dependency>
+            <Dependency>python3-pysol-cards</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>perl-Path-Tiny</Dependency>
+            <Dependency>python3-random2</Dependency>
+            <Dependency>perl-Template-Toolkit</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>freecell-solver</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-pysol-cards</Dependency>
+            <Dependency>perl-Path-Tiny</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>freecell-solver-devel</Name>
+        <Summary>Development files for freecell-solver</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">freecell-solver</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>5.14.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

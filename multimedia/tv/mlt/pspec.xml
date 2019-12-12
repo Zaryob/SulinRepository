@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mlt</Name>
+        <Homepage>http://www.mltframework.org/twiki/bin/view/MLT/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>A multimedia framework, designed and developed for television broadcasting</Summary>
+        <Description>MLT is an open source multimedia framework, designed and developed for television broadcasting.</Description>
+        <Archive sha1sum="47636aaeef5c5a4a9ca149c518d5e23ff2a517e4" type="targz">https://github.com/mltframework/mlt/releases/download/v6.18.0/mlt-6.18.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>swig</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>frei0r-plugins-devel</Dependency>
+            <Dependency>fftw3-devel</Dependency>
+            <Dependency>kdelibs4-support-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>jack-audio-connection-kit-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libsamplerate-devel</Dependency>
+            <Dependency>libquicktime-devel</Dependency>
+            <Dependency>ladspa-sdk-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libvorbis-devel</Dependency>
+            <Dependency>sdl-image-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+<!--             <Dependency>swfdec-devel</Dependency> -->
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libdv-devel</Dependency>
+            <Dependency>sox-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>underlinking.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>perl-mlt</Name>
+        <PartOf>programming.language.perl</PartOf>
+        <Summary>Perl bindings for MLT</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency release="current">mlt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/perl*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-mlt</Name>
+        <PartOf>programming.language.python</PartOf>
+        <Summary>Python bindings for MLT</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency release="current">mlt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mlt</Name>
+        <RuntimeDependencies>
+            <Dependency>sox</Dependency>
+            <Dependency>fftw3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>kdelibs4-support</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>libsamplerate</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>jack-audio-connection-kit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/mlt</Path>
+            <Path fileType="data">/usr/share/mlt/modules</Path>
+            <Path fileType="data">/usr/share/mlt/modules/lumas/PAL</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mlt-devel</Name>
+        <Summary>Development files for mlt</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mlt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>6.18.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

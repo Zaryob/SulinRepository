@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-AppConfig</Name>
+        <Homepage>http://search.cpan.org/dist/AppConfig</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Perl module for reading configuration files and parsing command line arguments</Summary>
+        <Description>perl-AppConfig is a Perl module for managing application configuration information. It maintains the state of any number of variables and provides methods for parsing configuration files, command line arguments and CGI script parameters.</Description>
+        <Archive sha1sum="e059386aabd9230627eef9009921a983f8e42230" type="targz">mirrors://cpan/authors/id/N/NE/NEILB/AppConfig-1.71.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-File-HomeDir</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-AppConfig</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-File-HomeDir</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2012-12-11</Date>
+            <Version>1.71</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
