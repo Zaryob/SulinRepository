@@ -4,10 +4,7 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from inary.actionsapi import get
 from inary.actionsapi import mesontools
-from inary.actionsapi import shelltools
-from inary.actionsapi import inarytools
 
 def setup():
     mesontools.cmake_configure()
