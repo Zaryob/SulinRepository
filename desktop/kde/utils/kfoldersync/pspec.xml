@@ -1,0 +1,68 @@
+<INARY>
+    <Source>
+        <Name>kfoldersync</Name>
+        <Homepage>https://scan.coverity.com/projects/kfoldersync</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>system</PartOf>
+        <Summary>Folder synchronization and backup tool for KDE</Summary>
+        <Description>Smart folder comparison, It depends only on KDE Frameworks.</Description>
+        <BuildDependencies>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>kitemviews-devel</Dependency>
+            <Dependency>kio-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="tarxz" sha1sum="fa632c5f69e9a9623b1362c6a13a2243393e71f9">https://dllb2.pling.com/api/files/download/id/1485353737/s/cb3eeb8ad3c5c89f126ee1c92e7c8510a4fe55233bdd41a4fffc10fa24b943921ded401551fd38359019b5f8959ca77997be07081dee435eaac5462476c2c81f/t/1576193823/c/cb3eeb8ad3c5c89f126ee1c92e7c8510a4fe55233bdd41a4fffc10fa24b943921ded401551fd38359019b5f8959ca77997be07081dee435eaac5462476c2c81f/lt/download/kfoldersync-3.4.1.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>kfoldersync</Name>
+        <Summary>Folder synchronization and backup tool for KDE</Summary>
+        <RuntimeDependencies>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kio</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>kitemviews</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>3.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
