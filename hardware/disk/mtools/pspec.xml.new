@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mtools</Name>
+        <Homepage>http://mtools.linux.lu/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Utilities to access MS-DOS disks without mounting them</Summary>
+        <Description>Mtools are utilities to access MS-DOS disks without mounting them.</Description>
+        <Archive sha1sum="e4faf1dd4658a5ae574885a925d4b8ce1d81df07" type="targz">https://ftp.gnu.org/gnu/mtools/mtools-4.0.23.tar.lz</Archive>
+    </Source>
+
+    <Package>
+        <Name>mtools</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>4.0.23</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.0.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ruby-native-package-installer</Name>
+        <Homepage>https://github.com/rcairo/native-package-installer</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPL-2.1</License>
+        <License>LGPL-2</License>
+        <License>LGPL-3</License>
+        <IsA>library</IsA>
+        <PartOf>programming.language.ruby</PartOf>
+        <Summary>Native-package-installer helps to install native packages on "gem install"</Summary>
+        <Description>native-package-installer helps to install native packages on "gem install"</Description>
+        <Archive sha1sum="ecd39fcabb42c7fd26d55c61592b8628d541a4bf" type="targz">https://github.com/ruby-gnome/native-package-installer/archive/1.0.9.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>rubygems</Dependency>
+            <Dependency>ruby-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ruby-native-package-installer</Name>
+        <RuntimeDependencies>
+            <Dependency>ruby</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>1.0.9</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>1.0.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

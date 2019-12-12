@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>fridibi</Name>
+        <Homepage>https://github.com/fribidi/fribidi/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A Free Implementation of the Unicode Bidirectional Algorithm.</Summary>
+	<Description>A Free Implementation of the Unicode Bidirectional Algorithm</Description>
+        <Archive sha1sum="3cb04f4c04fa29c7fc26fa310838231eeb0fe97f" type="targz">https://github.com/fribidi/fribidi/archive/v1.0.7.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>fridibi</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>fridibi-devel</Name>
+        <PartOf>programming.misc</PartOf>
+        <Summary>Development files for fridibi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">fridibi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>fridibi-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for fridibi</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">fridibi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>1.0.7</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-11</Date>
+            <Version>1.0.5</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

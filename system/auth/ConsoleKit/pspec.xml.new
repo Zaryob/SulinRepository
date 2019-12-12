@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ConsoleKit</Name>
+        <Homepage>https://github.com/Consolekit2</Homepage>
+        <Packager>
+          <Name>Suleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A framework for defining and tracking users, login sessions, and seats</Summary>
+        <Description>ConsoleKit is a system daemon for tracking what users are logged into the system and how they interact with the computer (e.g. which keyboard and mouse they use).</Description>
+        <Archive sha1sum="0fad66d0a29eefb050e155b1cf83d7bba0e1574e" type="targz">https://github.com/ConsoleKit2/ConsoleKit2/archive/1.2.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>acl-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>xmlto</Dependency>
+            <Dependency>util-linux</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ConsoleKit</Name>
+        <RuntimeDependencies>
+            <Dependency>acl</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>eudev</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/ConsoleKit.conf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/polkit-1/actions</Path>
+            <Path fileType="data">/usr/share/polkit-1/rules.d</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/var</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ConsoleKit-devel</Name>
+        <Summary>Development files for ConsoleKit</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">ConsoleKit</Dependency>
+            <Dependency>dbus-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>1.2.1</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>1.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

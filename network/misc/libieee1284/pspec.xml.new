@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libieee1284</Name>
+        <Homepage>http://cyberelk.net/tim/libieee1284/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Library to query devices using IEEE1284</Summary>
+        <Description>Library is intended to be used by applications that need to communicate with (or at least identify) devices that are attached via a parallel port.</Description>
+        <Archive sha1sum="da39a3ee5e6b4b0d3255bfef95601890afd80709" type="targz">https://gitlab.com/Zaryob/libieee1284/-/archive/V0_2_11/libieee1284-V0_2_11.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libieee1284</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libieee1284-devel</Name>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>0_2_11</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.2.11</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

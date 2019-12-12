@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>check</Name>
+        <Homepage>http://sourceforge.net/projects/check/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>A unit test framework for C</Summary>
+        <Description>check is a unit testing framework for C. It features a simple interface for defining unit tests, putting little in the way of the developer. Tests are run in a separate address space, so Check can catch both assertion failures and code errors that cause segmentation faults or other signals. The output from unit tests can be used within source code editors and IDEs.</Description>
+        <Archive sha1sum="da39a3ee5e6b4b0d3255bfef95601890afd80709" type="targz">https://github.comhttps://camo.githubusercontent.com/db479b6b4d25cb4d0503fc9dd6d6b0262560ca4a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f6c6962636865636b2f636865636b2f302e31332e302f636865636b2d302e31332e302e7461722e677a2e737667</Archive>
+        <BuildDependencies>
+            <Dependency>texinfo</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>check</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libcheck*</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>check-devel</Name>
+        <IsA>header</IsA>
+        <Summary>Development files for check</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">check</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>check-docs</Name>
+        <Summary>Documents for check</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>check-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for check package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">check</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f6c6962636865636b2f636865636b2f302e31332e302f636865636b2d302e31332e302e7461722e677a2e737667</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2018-12-28</Date>
+            <Version>0.12</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

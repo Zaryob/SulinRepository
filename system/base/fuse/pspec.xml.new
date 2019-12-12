@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>fuse</Name>
+        <Homepage>http://fuse.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>system.base</PartOf>
+        <Summary>An interface for filesystems implemented in userspace</Summary>
+        <Description>fuse is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
+        <!-- @@@github libfuse libfuse -->
+        <Archive sha1sum="b2bbe641648f7452b9356ad7df6ead0c83e1d4bd" type="targz">https://github.com/libfuse/libfuse/archive/fuse-3.8.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gettext-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>skip_umount_test.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>fuse</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>fuse-devel</Name>
+        <IsA>header</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for fuse</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">fuse</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="3">
+        <Date>2019-12-12</Date>
+        <Version>3.8.0</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="2">
+            <Date>2019-09-19</Date>
+            <Version>2.9.7</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2018-12-23</Date>
+            <Version>2.9.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
