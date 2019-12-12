@@ -176,7 +176,6 @@
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
             <Dependency>glib2</Dependency>
-	    <!--<Dependency>python-gtk</Dependency>-->
             <Dependency release="current">avahi</Dependency>
             <Dependency release="current">avahi-ui</Dependency>
             <Dependency release="current">avahi-glib</Dependency>
