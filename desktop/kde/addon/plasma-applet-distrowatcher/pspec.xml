@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>plasma-applet-distrowatcher</Name>
+        <Homepage>http://kde-apps.org/content/show.php/Distro+Watcher+?content=157314</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Distrowatcher watch the latest Realeases of Linux distributions from Distrowatch</Summary>
+        <Description>The specific plasmoid displays the latest releases of Linux distributions and packages, as published in distrowatch.com. In order to retrieve the relative data, RSS feeds from distrowatch are being used. </Description>
+        <Archive sha1sum="64fe31ccd65e66047b458e7f8e82eee14e92407b" type="targz">https://github.com/dimkard/distrowatcher/archive/v1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency> 
+            <Dependency>qt5-quickcontrols2-devel</Dependency> 
+            <Dependency>kdelibs4-support-devel</Dependency>
+            <Dependency>plasma-framework-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency> 
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>plasma-applet-distrowatcher</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-23</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>netpbm</Name>
+        <Homepage>http://netpbm.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A set of utilities to convert to/from the netpbm (and related) formats</Summary>
+        <Description>Netpbm is a toolkit for manipulation of graphic images, including conversion of images between a variety of different formats. There are over 300 separate tools in the package including converters for about 100 graphics formats.</Description>
+        <Archive sha1sum="df844a252704f37d1e7f64c9a1d98f244f4fc6c7" type="targz">https://netcologne.dl.sourceforge.net/project/netpbm/super_stable/10.73.29/netpbm-10.73.29.tgz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="config.mk">config.mk</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>jasper-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>jbig2dec-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>netpbm</Name>
+        <RuntimeDependencies>
+            <Dependency>jasper</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>jbig2dec</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/netpbm</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>netpbm-devel</Name>
+        <Summary>Development files for netpbm</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">netpbm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>10.73.29</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

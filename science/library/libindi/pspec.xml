@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libindi</Name>
+        <Homepage>http://www.indilib.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Astronomical control protocol library</Summary>
+        <Description>indilib is a distributed control protocol designed to operate astronomical instrumentation. indilib is small, flexible, easy to parse, and scalable.</Description>
+        <Archive sha1sum="eec40fb69f9ccd702c1473864befa01cdd478316" type="targz">https://github.com/indilib/indi/archive/v1.8.2.tar.gz</Archive>
+        <BuildDependencies>
+             <Dependency>libnova-devel</Dependency>
+             <Dependency>cfitsio-devel</Dependency>
+             <Dependency>gsl-devel</Dependency>
+             <Dependency>curl-devel</Dependency>
+             <Dependency>libjpeg-turbo-devel</Dependency>
+             <Dependency>libusb-devel</Dependency>
+             <Dependency>boost-devel</Dependency>
+             <Dependency>zlib-devel</Dependency>
+             <Dependency>pkgconfig</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libindi</Name>
+        <RuntimeDependencies>
+            <Dependency>libnova</Dependency>
+            <Dependency>cfitsio</Dependency>
+            <Dependency>gsl</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>gsl</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="rules">/lib/udev/rules.d</Path>
+            <Path fileType="data">/usr/share/indi</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libindi-devel</Name>
+        <Summary>Development files for libindi</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libindi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>1.8.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

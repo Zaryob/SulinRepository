@@ -16,10 +16,10 @@ def install():
     destDir="/usr/lib32" if get.buildTYPE() == "emul32" else "/usr/lib"
     inarytools.dolib("libjbig/libjbig.a", destinationDirectory = destDir, mode=755)
     inarytools.dolib("libjbig/libjbig85.a", destinationDirectory = destDir, mode=755)
-    inarytools.dolib("libjbig/jbig.h", destinationDirectory = destDir, mode=755)
-    inarytools.dolib("libjbig/jbig_ar.h", destinationDirectory = destDir, mode=755)
-    inarytools.dolib("libjbig/jbig85.h", destinationDirectory = destDir, mode=755)
-    
+    inarytools.insinto("/usr/include", "libjbig/jbig.h")
+    inarytools.insinto("/usr/include", "libjbig/jbig_ar.h")
+    inarytools.insinto("/usr/include", "libjbig/jbig85.h")
+
     if get.buildTYPE() == "emul32":
         inarytools.dobin("pbmtools/jbgtopbm")
         inarytools.dobin("pbmtools/pbmtojbg")
@@ -27,5 +27,5 @@ def install():
         inarytools.dobin("pbmtools/pbmtojbg85")
 
         inarytools.doman("pbmtools/jbgtopbm.1", "pbmtools/pbmtojbg.1")
-     
+
         inarytools.dodoc("ANNOUNCE", "CHANGES", "COPYING", "TODO")

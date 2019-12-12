@@ -4,13 +4,16 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from inary.actionsapi import mesontools
+from inary.actionsapi import inarytools
+from inary.actionsapi import kde
 
 def setup():
-    mesontools.cmake_configure()
+    kde.configure()
 
 def build():
-    mesontools.ninja_build()
+    kde.make()
 
 def install():
-    mesontools.ninja_install()
+    kde.install()
+
+    inarytools.dodoc("LICENSE.GPL3", "changelog.txt", "README")

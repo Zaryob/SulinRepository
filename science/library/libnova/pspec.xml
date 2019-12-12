@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libnova</Name>
+        <Homepage>http://libnova.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Celestial Mechanics and Astronomical Calculation Library</Summary>
+        <Description>libnova is a general purpose, double precision, celestial mechanics, astrometry and astrodynamics library.</Description>
+        <Archive sha1sum="4b8d04cfca0be8d49c1ef7c3607d405a7a8b167d" type="targz">https://netcologne.dl.sourceforge.net/project/libnova/libnova/v%200.15.0/libnova-0.15.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libnova</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libnova-devel</Name>
+        <Summary>Development files for libnova</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libnova</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/bin/libnovaconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>0.15.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
