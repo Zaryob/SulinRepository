@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rpcsvc-proto</Name>
+        <Homepage>https://github.com/thkukuk/rpcsvc-proto</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>rpcsvc protocol definitions from glibc.</Summary>
+        <Description>This package contains rpcsvc proto.x files from glibc, which are missing in libtirpc. Additional it contains rpcgen, which is needed to create header files and sources from protocol files.</Description>
+        <Archive sha1sum="6439172f24679fc0636450046913dc2fc0e3c204" type="tarbz2">https://gitlab.com/sulinos/resources/rpcsvc-proto/-/archive/v1.4/rpcsvc-proto-v1.4.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>rpcsvc-proto</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+<!--             <Path fileType="library">/usr/lib</Path> -->
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1/rpcgen.1</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>rpcsvc-proto-devel</Name>
+        <Summary>Development headers for rpcsvc-proto</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">rpcsvc-proto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>1.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
