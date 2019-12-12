@@ -15,7 +15,6 @@
         <Archive sha1sum="0adea752e5c9573eb4018b979cc5a9d7f0c2fec8" type="tarxz">http://poppler.freedesktop.org/poppler-0.80.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>lcms2-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
@@ -31,9 +30,7 @@
         <Name>poppler</Name>
         <RuntimeDependencies>
             <Dependency>lcms2</Dependency>
-            <Dependency>curl</Dependency>
             <Dependency>freetype</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>tiff</Dependency>
@@ -55,7 +52,6 @@
             <Dependency>cairo</Dependency>
             <Dependency>lcms2</Dependency>
             <Dependency>freetype</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -71,7 +67,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency release="current">poppler</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -95,7 +90,6 @@
         <Name>poppler-cpp</Name>
         <Summary>Pure C++ wrapper for poppler</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency release="current">poppler</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -119,9 +113,7 @@
         <Name>poppler-glib</Name>
         <Summary>Glib wrapper for poppler</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency release="current">poppler</Dependency>
         </RuntimeDependencies>
@@ -177,7 +169,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">poppler</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>lcms2-32bit</Dependency>
             <Dependency>libjpeg-turbo-32bit</Dependency>
             <Dependency>libpng-32bit</Dependency>
@@ -203,7 +194,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">poppler-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>glib2-32bit</Dependency>
             <Dependency>cairo-32bit</Dependency>
             <Dependency>freetype-32bit</Dependency>

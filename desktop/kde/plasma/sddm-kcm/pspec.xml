@@ -41,7 +41,6 @@
         <RuntimeDependencies>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>sddm</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>kauth</Dependency>

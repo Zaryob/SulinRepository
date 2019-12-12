@@ -13,14 +13,12 @@
         <Description>A Uniform Resource Identifier is a compact string of characters that identifies an abstract or physical resource. A Uniform Resource Identifier can be further classified as either a Uniform Resource Locator (URL) or a Uniform Resource Name (URN).</Description>
         <Archive sha1sum="c609c5830899176b61100fce8f10436128471064" type="targz">http://cpan.metacpan.org/authors/id/E/ET/ETHER/URI-1.71.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-URI</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

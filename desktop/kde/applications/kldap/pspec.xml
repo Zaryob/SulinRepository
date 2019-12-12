@@ -36,7 +36,6 @@
             <Dependency>kcompletion</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>cyrus-sasl</Dependency>
             <Dependency>openldap-client</Dependency>
             <Dependency>kwidgetsaddons</Dependency>

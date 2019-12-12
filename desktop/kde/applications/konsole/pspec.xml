@@ -31,7 +31,6 @@
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kcrash-devel</Dependency>
             <Dependency>kdbusaddons-devel</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
         <Patches>
         </Patches>
@@ -40,7 +39,6 @@
     <Package>
         <Name>konsole</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kdelibs4-support</Dependency>
             <Dependency>kiconthemes</Dependency>

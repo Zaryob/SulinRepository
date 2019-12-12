@@ -15,18 +15,11 @@
         <Description>telepathy-salut is Telepathy connection manager for link-local XMPP. Normally, XMPP does no support direct client-to-client interactions, since it requires authentication with a server. This package makes it is possible to establish an XMPP-like communications on a local network using zero-configuration networking.</Description>
         <Archive sha1sum="b37e623be6c6cd7b9ca4ae7ed20fea7d3a13b37d" type="targz">http://telepathy.freedesktop.org/releases/telepathy-salut/telepathy-salut-0.8.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>telepathy-glib-devel</Dependency>
             <Dependency>avahi-devel</Dependency>
             <Dependency>avahi-glib-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -34,13 +27,7 @@
     <Package>
         <Name>telepathy-salut</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>sqlite</Dependency>
             <Dependency>libsoup</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>avahi-glib</Dependency>
             <Dependency>avahi-libs</Dependency>
             <Dependency>telepathy-glib</Dependency>

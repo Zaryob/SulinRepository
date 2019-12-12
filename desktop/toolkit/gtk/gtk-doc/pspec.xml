@@ -21,7 +21,6 @@
             <Dependency>sgml-common</Dependency>
             <Dependency>docbook-xml</Dependency>
             <Dependency>docbook-xsl</Dependency>
-            <Dependency>libxslt-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

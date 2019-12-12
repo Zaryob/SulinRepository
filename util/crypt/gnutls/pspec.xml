@@ -15,14 +15,7 @@
         <Description>gnutls is a project that aims to develop a library which provides a secure layer, over a reliable transport layer. Currently the GnuTLS library implements the proposed standards by the IETF's TLS working group.</Description>
         <Archive sha1sum="4a12757b129562ae92a01ca890ed282050595296" type="tarxz">https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.9.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>gc-devel</Dependency>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
-            <Dependency>autogen-devel</Dependency>
             <Dependency>p11-kit-devel</Dependency>
-            <Dependency>libidn-devel</Dependency>
-            <Dependency>libunistring-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>libtasn1-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -30,14 +23,7 @@
     <Package>
         <Name>gnutls</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libidn</Dependency>
-            <Dependency>gmp</Dependency>
-            <Dependency>nettle</Dependency>
-            <Dependency>autogen</Dependency>
             <Dependency>p11-kit</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libunistring</Dependency>
             <Dependency>libtasn1</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -51,11 +37,8 @@
         <Name>gnutls-devel</Name>
         <Summary>Development files for gnutls</Summary>
         <RuntimeDependencies>
-            <Dependency>nettle-devel</Dependency>
             <Dependency>p11-kit-devel</Dependency>
             <Dependency>libtasn1-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libidn-devel</Dependency>
             <Dependency release="current">gnutls</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -86,7 +69,6 @@
             <Dependency>libtasn1-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>gmp-32bit</Dependency>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>nettle-32bit</Dependency>

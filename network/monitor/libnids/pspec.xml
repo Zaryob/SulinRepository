@@ -16,7 +16,6 @@
         <BuildDependencies>
             <Dependency>libpcap-devel</Dependency>
             <Dependency>libnet-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">libnids-1.20-chksum.c-ebx.patch</Patch>
@@ -30,7 +29,6 @@
         <RuntimeDependencies>
             <Dependency>libpcap</Dependency>
             <Dependency>libnet</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -13,7 +13,6 @@
         <Description>iso-codes provides IS0-639_3, ISO-4127, ISO-3166, ISO-3166_2, ISO-15924 standards.</Description>
         <Archive sha1sum="e32f25d6d79e93845b82329332d776707019850c" type="tarxz">http://anduin.linuxfromscratch.org/BLFS/iso-codes/iso-codes-4.2.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>python3</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

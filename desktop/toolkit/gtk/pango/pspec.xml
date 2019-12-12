@@ -27,13 +27,11 @@
             <Dependency>libXrender-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>pango</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>cairo</Dependency>

@@ -16,7 +16,6 @@
         <Description>Qt Process Manager</Description>
         <Archive sha1sum="554c9dfb124ce4357d72954883bd1f875e41b003" type="tarxz">https://downloads.lxqt.org/downloads/qps/2.0.0/qps-2.0.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>

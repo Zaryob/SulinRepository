@@ -21,7 +21,6 @@
         </Patches>
         <BuildDependencies>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -31,10 +30,8 @@
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
@@ -63,7 +60,6 @@
         <RuntimeDependencies>
             <Dependency release="current">gtksourceview</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

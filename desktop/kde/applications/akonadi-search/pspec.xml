@@ -53,7 +53,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kmime</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcalendarcore</Dependency>

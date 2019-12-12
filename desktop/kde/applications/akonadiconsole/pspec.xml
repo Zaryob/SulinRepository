@@ -64,7 +64,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>kmime</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kcontacts</Dependency>

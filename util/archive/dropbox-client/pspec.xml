@@ -28,7 +28,6 @@
             <Dependency>libICE</Dependency>
             <Dependency>libdrm</Dependency>
             <Dependency>libXmu</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>libXext</Dependency>
             <Dependency>librsync</Dependency>
             <Dependency>libXfixes</Dependency>
@@ -37,14 +36,8 @@
             <Dependency>libXrender</Dependency>
 	        <Dependency>libXxf86vm</Dependency>
             <Dependency>libXcomposite</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>freetype</Dependency>
         </RuntimeDependencies>
         <Files>

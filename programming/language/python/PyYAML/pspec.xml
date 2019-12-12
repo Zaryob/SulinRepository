@@ -35,11 +35,9 @@
     <Package>
         <Name>python3-PyYAML</Name>
         <BuildDependencies>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
 
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
             <Dependency>libyaml</Dependency>
         </RuntimeDependencies>
         <Files>

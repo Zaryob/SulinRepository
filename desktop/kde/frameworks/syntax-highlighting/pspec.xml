@@ -16,8 +16,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-xmlpatterns-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
         <Archive type="tarxz" sha1sum="b26829d21fe841013dc815b4b72babde04d2658f">mirrors://kde/stable/frameworks/5.64/syntax-highlighting-5.64.0.tar.xz</Archive>
     </Source>
@@ -26,7 +24,6 @@
         <Summary>Syntax highlighting engine for structured text and code</Summary>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/xdg</Path>

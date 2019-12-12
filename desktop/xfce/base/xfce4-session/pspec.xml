@@ -29,7 +29,6 @@
             <Dependency>xfconf-devel</Dependency>
             <Dependency>gconf-devel</Dependency>
             <Dependency>libglade-devel</Dependency>
-            <Dependency>perl-XML-Parser</Dependency>
             <Dependency>xfce4-dev-tools</Dependency>
             <Dependency>fontconfig-devel</Dependency>
         </BuildDependencies>

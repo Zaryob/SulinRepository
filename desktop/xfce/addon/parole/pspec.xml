@@ -17,12 +17,10 @@
             <Dependency>xfce4-dev-tools</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libnotify-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>gst-plugins-base-devel</Dependency>
             <Dependency>gst-plugins-good</Dependency>
             <Dependency>orc-devel</Dependency>

@@ -32,7 +32,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kcodecs</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>

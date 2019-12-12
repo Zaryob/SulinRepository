@@ -25,9 +25,6 @@
             <Dependency>libXpm-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXinerama-devel</Dependency>
-            <Dependency>util-macros</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>xtrans</Dependency>
             <Dependency>libbsd-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -44,7 +41,6 @@
     <Package>
         <Name>xdm</Name>
         <RuntimeDependencies>
-            <Dependency>pam</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libXau</Dependency>
             <Dependency>libXdmcp</Dependency>

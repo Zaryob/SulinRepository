@@ -18,9 +18,7 @@
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>libnotify-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>xfconf-devel</Dependency>
         </BuildDependencies>
     </Source>

@@ -29,7 +29,6 @@
             <Dependency>kunitconversion-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
             <Dependency>libcanberra-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>kglobalaccel-devel</Dependency>
             <Dependency>plasma-framework-devel</Dependency>
@@ -57,7 +56,6 @@
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>knotifications</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>plasma-framework</Dependency>
         </RuntimeDependencies>
         <Files>

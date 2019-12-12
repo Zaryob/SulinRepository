@@ -40,7 +40,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kdeclarative</Dependency>
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>kwidgetsaddons</Dependency>

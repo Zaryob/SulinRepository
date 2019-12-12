@@ -17,7 +17,6 @@
         <Archive sha1sum="38f4abf6713e0cf7a1f8bace8bce9a1d5b6a7301" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/blinken-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kdbusaddons-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kguiaddons-devel</Dependency>
@@ -38,7 +37,6 @@
             <Dependency>kguiaddons</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-phonon</Dependency>
             <Dependency>qt5-svg</Dependency>

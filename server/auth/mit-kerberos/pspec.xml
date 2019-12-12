@@ -17,8 +17,6 @@
 
         <BuildDependencies>
             <Dependency>keyutils</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
             <Dependency>openldap-client</Dependency>
         </BuildDependencies>
     </Source>
@@ -27,8 +25,6 @@
         <Name>mit-kerberos</Name>
         <RuntimeDependencies>
             <Dependency>keyutils</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>e2fsprogs</Dependency>
             <Dependency>openldap-client</Dependency>
         </RuntimeDependencies>
         <Files>

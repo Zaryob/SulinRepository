@@ -28,8 +28,6 @@
             <Dependency>akonadi-devel</Dependency>
             <Dependency>libical-devel</Dependency>
             <Dependency>libqjson-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>openldap-client</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
             <Dependency>kitemviews-devel</Dependency>
@@ -56,7 +54,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kmime</Dependency>
             <Dependency>qgpgme</Dependency>
@@ -65,7 +62,6 @@
             <Dependency>kcalendarcore</Dependency>
             <Dependency>kcontacts</Dependency>
             <Dependency>kconfig</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>kguiaddons</Dependency>
             <Dependency>kitemviews</Dependency>

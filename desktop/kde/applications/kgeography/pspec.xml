@@ -36,7 +36,6 @@
         <Name>kgeography</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kwidgetsaddons</Dependency>

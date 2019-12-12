@@ -40,8 +40,6 @@
             <Dependency>kiconthemes-devel</Dependency>
             <Dependency>karchive-devel</Dependency>
             <Dependency>qca2-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </BuildDependencies>
     </Source>
@@ -57,7 +55,6 @@
             <Dependency>kparts</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>sonnet</Dependency>
             <Dependency>kcodecs</Dependency>

@@ -16,9 +16,6 @@
         <Archive sha1sum="7451f3d3a7b82e2c4aba87fae77fd079577443a2" type="targz">http://telepathy.freedesktop.org/releases/telepathy-glib/telepathy-glib-0.24.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>vala-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -28,9 +25,6 @@
         <IsA>library</IsA>
         <Summary>GLib bindings for the Telepathy D-Bus protocol</Summary>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -56,9 +50,6 @@
         <Summary>Development files for telepathy-glib</Summary>
         <RuntimeDependencies>
             <Dependency release="current">telepathy-glib</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

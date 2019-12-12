@@ -18,8 +18,6 @@
         <BuildDependencies>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kdelibs4-support-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
@@ -43,7 +41,6 @@
             <Dependency>kdelibs4-support</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-phonon</Dependency>
             <Dependency>solid</Dependency>
         </RuntimeDependencies>

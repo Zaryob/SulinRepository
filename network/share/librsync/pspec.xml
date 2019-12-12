@@ -15,14 +15,12 @@
         <Description>librsync implements the rolling-checksum algorithm of remote file synchronization that was popularized by the rsync utility and is used in rproxy. This algorithm transfers the differences between 2 files without needing both files on the same system.</Description>
         <Archive sha1sum="879f1d5266213c361e29f9fabf7b5eed5aebb4da" type="targz">https://github.com/librsync/librsync/archive/v2.2.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>popt-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>librsync</Name>
         <RuntimeDependencies>
-            <Dependency>popt</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

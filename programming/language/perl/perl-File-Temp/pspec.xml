@@ -14,7 +14,6 @@
         <Description>This module is designed to support operations commonly performed on temporary files.</Description>
         <Archive sha1sum="8914bf3be7a387377f6fc1f8a5e1cf8a355f17ea" type="targz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Temp-0.2309.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-ExtUtils-MakeMaker</Dependency>
         </BuildDependencies>
     </Source>
@@ -22,7 +21,6 @@
     <Package>
         <Name>perl-File-Temp</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

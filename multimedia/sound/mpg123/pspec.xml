@@ -23,7 +23,6 @@
         <Name>mpg123</Name>
         <RuntimeDependencies>
             <Dependency>alsa-lib</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

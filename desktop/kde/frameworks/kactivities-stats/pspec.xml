@@ -34,7 +34,6 @@
         <Name>kactivities-stats</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kactivities</Dependency>
         </RuntimeDependencies>

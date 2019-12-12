@@ -15,14 +15,12 @@
         <BuildDependencies>
             <Dependency>golang</Dependency>
             <Dependency>git</Dependency>
-            <Dependency>libseccomp-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>runc</Name>
         <RuntimeDependencies>
-            <Dependency>libseccomp</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

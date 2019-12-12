@@ -17,9 +17,6 @@
 type="tarbz2">mirrors://xorg/individual/lib/libXxf86misc-1.0.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -39,7 +36,6 @@ type="tarbz2">mirrors://xorg/individual/lib/libXxf86misc-1.0.4.tar.bz2</Archive>
         <RuntimeDependencies>
             <Dependency release="current">libXxf86misc</Dependency>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/X11</Path>

@@ -54,7 +54,6 @@ It supports email, address books, calendars, tasks, news feeds and much more.</D
             <Dependency>ki18n</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kcmutils</Dependency>

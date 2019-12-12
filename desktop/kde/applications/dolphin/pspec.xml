@@ -51,7 +51,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>solid</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>kconfig</Dependency>

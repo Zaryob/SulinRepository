@@ -17,7 +17,6 @@
         <Archive sha1sum="b93562ab85c93a75c5afb6d9b585bd22c2e91398" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/libkexiv2-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>exiv2-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
         </BuildDependencies>
@@ -28,7 +27,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>exiv2-libs</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

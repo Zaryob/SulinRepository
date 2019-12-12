@@ -15,9 +15,7 @@
         <Description>libXft is the X FreeType interface library.</Description>
         <Archive sha1sum="e025d790a7b6c4d283a78d8df06615cb10278e2d" type="tarbz2">mirrors://xorg/individual/lib/libXft-2.3.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>util-macros</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
         </BuildDependencies>

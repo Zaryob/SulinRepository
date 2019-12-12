@@ -16,9 +16,6 @@
         <Description>telepathy-mission-control, or Mission Control, is a Telepathy component providing a way for end user applications to abstract some of the details of connection managers, to provide a simple way to manipulate a bunch of connection managers at once, and to remove the need to have in each program the account definitions and credentials.</Description>
         <Archive sha1sum="30f4093b6918ffaf6bc0e585cf0d84f40aa24e25" type="targz">http://telepathy.freedesktop.org/releases/telepathy-mission-control/telepathy-mission-control-5.16.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>telepathy-glib-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
             <Dependency>NetworkManager-devel</Dependency>
@@ -30,9 +27,6 @@
     <Package>
         <Name>telepathy-mission-control</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>NetworkManager</Dependency>
             <Dependency>telepathy-glib</Dependency>
             <Dependency>libaccounts-glib</Dependency>

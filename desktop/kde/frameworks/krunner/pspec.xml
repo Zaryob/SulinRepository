@@ -17,7 +17,6 @@
         <Archive sha1sum="3c4d78a5a1ca73d3ff4922178acbbf9f69393211" type="tarxz">mirrors://kde/stable/frameworks/5.64/krunner-5.64.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
@@ -38,7 +37,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>ki18n</Dependency>

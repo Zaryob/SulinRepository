@@ -21,8 +21,6 @@
     <Package>
         <Name>pbzip2</Name>
         <RuntimeDependencies>
-            <Dependency>bzip2</Dependency>
-	    <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

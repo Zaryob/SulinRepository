@@ -67,7 +67,6 @@
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>kwindowsystem</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency >libksysguard</Dependency>
             <Dependency>lm_sensors</Dependency>
             <Dependency>qt5-base</Dependency>

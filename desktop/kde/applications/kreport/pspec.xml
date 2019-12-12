@@ -31,7 +31,6 @@
         <Name>kreport</Name>
         <Summary>A framework for creation and generation of reports in multiple formats</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>marble</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qt5-base</Dependency>

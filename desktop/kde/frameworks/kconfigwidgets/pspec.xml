@@ -34,7 +34,6 @@
     <Package>
         <Name>kconfigwidgets</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kauth</Dependency>
             <Dependency>kcodecs</Dependency>

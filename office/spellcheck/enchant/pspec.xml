@@ -16,7 +16,6 @@
         <BuildDependencies>
             <Dependency>aspell</Dependency>
             <Dependency>hunspell</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,8 +23,6 @@
         <Name>enchant</Name>
         <RuntimeDependencies>
             <Dependency>aspell</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

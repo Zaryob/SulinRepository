@@ -33,7 +33,6 @@
         <Name>kbookmarks</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>

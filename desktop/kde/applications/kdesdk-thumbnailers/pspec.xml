@@ -21,7 +21,6 @@
             <Dependency>kconfig-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>kio-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,8 +29,6 @@
         <RuntimeDependencies>
             <Dependency>kio</Dependency> 
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>gettext</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kwidgetsaddons</Dependency>

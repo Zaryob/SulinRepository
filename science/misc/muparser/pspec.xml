@@ -18,7 +18,6 @@
     <Package>
         <Name>muparser</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

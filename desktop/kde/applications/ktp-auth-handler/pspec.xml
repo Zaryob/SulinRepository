@@ -39,7 +39,6 @@
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>signon</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qca2-qt5</Dependency>

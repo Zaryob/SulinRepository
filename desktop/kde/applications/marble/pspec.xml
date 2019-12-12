@@ -48,11 +48,9 @@
         <Name>marble</Name>
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>krunner</Dependency>
             <Dependency>kxmlgui</Dependency>

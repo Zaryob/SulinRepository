@@ -34,10 +34,8 @@
         <Name>python3-tabulate</Name>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/bin/tabulate</Path>

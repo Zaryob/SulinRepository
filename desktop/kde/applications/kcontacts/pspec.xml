@@ -33,7 +33,6 @@
            <Dependency>kcodecs</Dependency>
            <Dependency>kconfig</Dependency>
            <Dependency>kcoreaddons</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>

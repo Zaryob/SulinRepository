@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
 	          <Dependency>libconfig-devel</Dependency>
-	          <Dependency>pkgconfig</Dependency>
         </BuildDependencies>
     </Source>
 

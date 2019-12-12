@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="482339b3129f933ec6d346af7c3bda8a17c7ac72" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtgamepad-everywhere-src-5.13.2.tar.xz</Archive>
     </Source>
@@ -28,8 +27,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>eudev</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -13,14 +13,12 @@
         <Description>IO provides a simple mechanism to load several of the IO modules in one go.</Description>
         <Archive sha1sum="124826b2c097e6d761ef292d8d56bf0bd199d5d6" type="targz">https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-1.39.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-IO</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

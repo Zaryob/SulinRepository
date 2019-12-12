@@ -15,13 +15,10 @@
         <Archive sha1sum="ccbef63c3d43d6a866b7978db5674dc4b1719f0f" type="targz">https://mupdf.com/downloads/archive/mupdf-1.16.1-source.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>jbig2dec-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXi-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>freeglut-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
@@ -39,7 +36,6 @@
             <Dependency>mesa</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libXext</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>libXrandr</Dependency>
         </RuntimeDependencies>
         <Files>

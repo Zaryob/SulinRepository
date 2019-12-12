@@ -15,8 +15,6 @@
         <Description>libXau provides functions to manage X authorization files</Description>
         <Archive sha1sum="d9512d6869e022d4e9c9d33f6d6199eda4ad096b" type="tarbz2">http://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.8.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>util-macros</Dependency>
-            <Dependency>xorg-proto</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

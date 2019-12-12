@@ -15,7 +15,6 @@
         <Archive sha1sum="347343414db6a6182a9e9f3fa39a95b64ffa5648" type="tarxz">https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs928rc3/ghostpdl-9.28rc3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>tiff</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
@@ -32,7 +31,6 @@
     <Package>
         <Name>ghostscript</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>freetype</Dependency>

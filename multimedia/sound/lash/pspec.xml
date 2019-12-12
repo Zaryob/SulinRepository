@@ -23,10 +23,7 @@
             <Dependency>jack-audio-connection-kit-devel</Dependency>
             <Dependency>dmapi-devel</Dependency>
             <Dependency>texi2html</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="0">makefile.patch</Patch>
@@ -38,15 +35,9 @@
         <Name>lash</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>dmapi</Dependency>
             <Dependency>libtirpc</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>readline</Dependency>
             <Dependency>alsa-lib</Dependency>
-            <Dependency>libutil-linux</Dependency>
             <Dependency>jack-audio-connection-kit</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -61,11 +52,8 @@
         <Name>lash-devel</Name>
         <Summary>Development files for lash</Summary>
         <RuntimeDependencies>
-            <Dependency>dbus-devel</Dependency>
             <Dependency release="current">lash</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

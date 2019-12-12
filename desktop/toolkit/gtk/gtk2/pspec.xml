@@ -54,7 +54,6 @@
             <Dependency>fontconfig</Dependency>
             <Dependency>libXinerama</Dependency>
             <Dependency>libXcomposite</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>pango</Dependency>
@@ -88,7 +87,6 @@
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/gtk-demo</Path>

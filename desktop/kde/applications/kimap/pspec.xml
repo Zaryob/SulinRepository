@@ -38,7 +38,6 @@
             <Dependency>kmime</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>cyrus-sasl</Dependency>
             <Dependency>kcoreaddons</Dependency>

@@ -28,7 +28,6 @@
         <Name>sonnet</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>aspell</Dependency>
             <Dependency>hunspell</Dependency>
         </RuntimeDependencies>

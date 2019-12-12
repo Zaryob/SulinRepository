@@ -13,7 +13,6 @@
         <Description>This module tries to make it easy to build Perl extensions that use functions and typemaps provided by other perl extensions. This means that a perl extension is treated like a shared library that provides also a C and an XS interface besides the perl one.</Description>
         <Archive sha1sum="0561e114df3861dcde0073418513eff1209bd419" type="targz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-0.8000.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Data-Dumper</Dependency>
             <Dependency>perl-ExtUtils-MakeMaker</Dependency>
             <Dependency>perl-File-Spec</Dependency>
@@ -24,7 +23,6 @@
     <Package>
         <Name>perl-ExtUtils-Depends</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Data-Dumper</Dependency>
             <Dependency>perl-ExtUtils-MakeMaker</Dependency>
             <Dependency>perl-File-Spec</Dependency>

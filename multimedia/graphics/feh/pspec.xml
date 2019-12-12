@@ -15,7 +15,6 @@
         <Archive sha1sum="3292fc7a45ff6c54927ab867d5d743869cbbf3ad" type="tarbz2">https://feh.finalrewind.org/feh-3.2.1.tar.bz2</Archive>
     <BuildDependencies>
       <Dependency>libpng-devel</Dependency>
-      <Dependency>curl-devel</Dependency>
       <Dependency>libX11-devel</Dependency>
       <Dependency>libXt-devel</Dependency>
       <Dependency>libXinerama-devel</Dependency>

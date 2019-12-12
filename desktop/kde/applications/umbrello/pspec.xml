@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>kparts-devel</Dependency>
@@ -47,10 +46,8 @@
             <Dependency>qt5-webkit</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>karchive</Dependency>
             <Dependency>kcompletion</Dependency>
@@ -61,7 +58,6 @@
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>ktexteditor</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>kwindowsystem</Dependency>
         </RuntimeDependencies>
         <Files>

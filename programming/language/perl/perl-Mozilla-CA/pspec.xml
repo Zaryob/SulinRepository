@@ -16,14 +16,12 @@
         <Description>Mozilla::CA provides a copy of Mozilla's bundle of Certificate Authority certificates in a form that can be consumed by modules and libraries based on OpenSSL.</Description>
         <Archive sha1sum="0d87ffd8a64b66a3c45ac57dca95bf6ca5471853" type="targz">https://cpan.metacpan.org/authors/id/A/AB/ABH/Mozilla-CA-20180117.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Mozilla-CA</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

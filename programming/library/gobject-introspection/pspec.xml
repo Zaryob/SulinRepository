@@ -17,18 +17,13 @@
         <Description>gobject-introspection can scan C header and source files in order to generate introspection typelib files. It also provides an API to examine typelib files, useful for creating language bindings among other things.</Description>
         <Archive sha1sum="6c51a15d3c067bb99b4b5c799d449c82c873f2b7" type="tarxz">mirrors://gnome/gobject-introspection/1.62/gobject-introspection-1.62.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libffi-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>chrpath</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>gobject-introspection</Name>
         <RuntimeDependencies>
-            <Dependency>libffi</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
@@ -43,10 +38,6 @@
         <Summary>Development files for gobject-introspection</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gobject-introspection</Dependency>
-            <Dependency>libffi</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>cdparanoia-devel</Dependency>
             <Dependency>flac-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kdelibs4-support-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
@@ -53,7 +52,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libogg</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcompletion</Dependency>

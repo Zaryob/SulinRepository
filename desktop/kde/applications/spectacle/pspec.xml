@@ -47,7 +47,6 @@
             <Dependency>libkscreen</Dependency>
             <Dependency>xcb-util-cursor</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>libkipi</Dependency>

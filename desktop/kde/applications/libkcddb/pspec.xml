@@ -33,7 +33,6 @@
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qt5-base</Dependency>

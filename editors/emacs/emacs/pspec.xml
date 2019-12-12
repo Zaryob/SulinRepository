@@ -16,7 +16,6 @@
         <Description>Emacs is the extensible, customizable, self-documenting real-time console-mode editor. It has many features to increase productivity when programming.</Description>
         <Archive sha1sum="2960e1dddef401b18abd779cb159306984157eef" type="tarxz">https://ftp.gnu.org/gnu/emacs/emacs-26.3.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>acl-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
@@ -27,7 +26,6 @@
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>libXpm-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
@@ -42,19 +40,14 @@
     <Package>
         <Name>emacs</Name>
         <RuntimeDependencies>
-            <Dependency>acl</Dependency>
             <Dependency>gpm</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>gtk2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>libSM</Dependency>
             <Dependency>libXft</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>libICE</Dependency>
             <Dependency>giflib</Dependency>
             <Dependency>libXpm</Dependency>
@@ -68,7 +61,6 @@
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>libXfixes</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>

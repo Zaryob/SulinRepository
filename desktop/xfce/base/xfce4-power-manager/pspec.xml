@@ -21,7 +21,6 @@
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>libglade-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
             <Dependency>ConsoleKit-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>libnotify-devel</Dependency>

@@ -23,7 +23,6 @@
             <Dependency>kservice-devel</Dependency>
             <Dependency>kxmlgui-devel</Dependency>
             <Dependency>pimcommon-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>openldap-client</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
@@ -59,7 +58,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>akonadi-mime</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libkdepim</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kmime</Dependency>

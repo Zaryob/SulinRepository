@@ -57,7 +57,6 @@
             <Dependency>kmime</Dependency>
             <Dependency>kross</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>akonadi</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>

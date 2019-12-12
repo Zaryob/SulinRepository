@@ -21,7 +21,6 @@
             <Dependency>libical-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>prison-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>boost-devel</Dependency>
             <Dependency>akonadi-devel</Dependency>
@@ -50,7 +49,6 @@
             <Dependency>kmime</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>akonadi</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kservice</Dependency>

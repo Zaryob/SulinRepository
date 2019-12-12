@@ -38,7 +38,6 @@
         <Name>kxmlgui</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>attica</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfig</Dependency>

@@ -54,7 +54,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kmime</Dependency>
             <Dependency>kldap</Dependency>
@@ -62,7 +61,6 @@
             <Dependency>kcalendarcore</Dependency>
             <Dependency>kcontacts</Dependency>
             <Dependency>kconfig</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>kguiaddons</Dependency>
             <Dependency>kitemviews</Dependency>

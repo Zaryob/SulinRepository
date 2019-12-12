@@ -23,7 +23,6 @@
         <Name>flac</Name>
         <RuntimeDependencies>
             <Dependency>libogg</Dependency>
-	    <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -68,7 +67,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>libogg-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency release="current">flac</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -14,14 +14,12 @@
         <Description>The PSL is a set of domain names beyond the standard suffixes, such as .com.</Description>
         <Archive sha1sum="142a4abbf7ebab9651942b6e7a1b334742307f06" type="targz">https://github.com/rockdaboot/libpsl/releases/download/libpsl-0.21.0/libpsl-0.21.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libidn2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libpsl</Name>
         <RuntimeDependencies>
-            <Dependency>libidn2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -52,9 +50,7 @@
         <Summary>32-bit shared libraries for libpsl</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-            <Dependency>libunistring-32bit</Dependency>
             <Dependency>libidn2-32bit</Dependency>
-            <Dependency>libidn2-devel</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>libpsl</Dependency>

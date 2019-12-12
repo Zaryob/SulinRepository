@@ -36,7 +36,6 @@
         <Summary>An application to enable/disable qCDebug</Summary>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kitemviews</Dependency>

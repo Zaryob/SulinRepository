@@ -33,7 +33,6 @@
         <Name>polkit-kde-authentication-agent-1</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>polkit-qt</Dependency>

@@ -49,7 +49,6 @@
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>

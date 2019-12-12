@@ -49,7 +49,6 @@
         <Name>knewstuff</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>ktextwidgets</Dependency>
             <Dependency>kiconthemes</Dependency>

@@ -27,7 +27,6 @@
         <RuntimeDependencies>
             <Dependency>flite</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>speech-dispatcher</Dependency>
         </RuntimeDependencies>
         <Files>

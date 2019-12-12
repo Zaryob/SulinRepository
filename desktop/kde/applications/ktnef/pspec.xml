@@ -37,7 +37,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kcalutils</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcalendarcore</Dependency>
             <Dependency>kcontacts</Dependency>
             <Dependency>kdelibs4-support</Dependency>

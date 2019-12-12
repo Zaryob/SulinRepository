@@ -37,7 +37,6 @@
     <Package>
         <Name>lumina-desktop</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-base</Dependency>
@@ -82,7 +81,6 @@
         <Name>lumina-archiver</Name>
         <Summary>Archive manager for lumina desktop enviroment.</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>

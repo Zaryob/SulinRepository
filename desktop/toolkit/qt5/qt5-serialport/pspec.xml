@@ -16,7 +16,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
-            <Dependency>eudev-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,8 +23,6 @@
         <Name>qt5-serialport</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>eudev</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
        <Files>
             <Path fileType="library">/usr/lib</Path>

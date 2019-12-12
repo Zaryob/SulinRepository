@@ -15,16 +15,13 @@
         <BuildDependencies>
             <Dependency>gpm</Dependency>
             <Dependency>ctags</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>acl-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libXt-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>ruby-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">sulin/grub_conf.patch</Patch>
@@ -39,10 +36,7 @@
         <RuntimeDependencies>
             <Dependency>gpm</Dependency>
             <Dependency>ctags</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>acl</Dependency>
             <Dependency>ruby</Dependency>
-            <Dependency>ncurses</Dependency>
         </RuntimeDependencies>
         <Conflicts>
             <Package>vi</Package>
@@ -81,11 +75,7 @@
             <Package>ex</Package>
         </Conflicts>
         <RuntimeDependencies>
-            <Dependency>acl</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>gpm</Dependency>
             <Dependency>libSM</Dependency>

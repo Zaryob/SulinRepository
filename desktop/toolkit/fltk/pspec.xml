@@ -18,9 +18,7 @@
         </AdditionalFiles>
 
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
@@ -37,9 +35,7 @@
     <Package>
         <Name>fltk</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>libXft</Dependency>
@@ -64,7 +60,6 @@
         <BuildDependencies>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng-32bit</Dependency>
             <Dependency>mesa-32bit</Dependency>
             <Dependency>libXft-32bit</Dependency>
@@ -104,7 +99,6 @@
         <RuntimeDependencies>
             <Dependency release="current">fltk</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -15,14 +15,12 @@
         <Archive sha1sum="e6c12160e3da5e164dac9846a1f171fca24e1a8c" type="targz">https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>python3-six</Name>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

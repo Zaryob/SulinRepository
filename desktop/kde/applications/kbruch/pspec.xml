@@ -38,7 +38,6 @@
             <Dependency>kconfig</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfigwidgets</Dependency>

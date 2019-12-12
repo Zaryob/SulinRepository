@@ -21,10 +21,6 @@
             <Dependency>qt5-doc</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>telepathy-qt5-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>telepathy-logger-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -32,8 +28,6 @@
     <Package>
         <Name>telepathy-logger-qt</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>telepathy-qt5</Dependency>
             <Dependency>telepathy-glib</Dependency>

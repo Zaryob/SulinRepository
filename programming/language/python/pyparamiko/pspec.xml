@@ -18,7 +18,6 @@
             <Dependency>python-setuptools</Dependency>
             <Dependency>python3-pycrypto</Dependency>
             <Dependency>python-pycrypto</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -41,7 +40,6 @@
         <Summary>Paramiko module for python3</Summary>
         <RuntimeDependencies>
             <Dependency>python3-pycrypto</Dependency>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

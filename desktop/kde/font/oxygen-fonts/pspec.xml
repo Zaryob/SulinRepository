@@ -14,7 +14,6 @@
         <Description>Oxygen font family is a desktop / GUI font family for integrated use with KDE.</Description>
         <Archive sha1sum="d7928c746f3167e929b7c61e1e7137fde89fdc9d" type="tarxz">https://cgit.kde.org/oxygen-fonts.git/snapshot/oxygen-fonts-5.4.3.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>

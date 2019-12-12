@@ -47,7 +47,6 @@
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

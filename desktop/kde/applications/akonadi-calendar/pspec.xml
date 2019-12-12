@@ -51,7 +51,6 @@
             <Dependency>kdelibs4-support</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kmime</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kcalendarcore</Dependency>

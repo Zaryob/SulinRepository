@@ -18,7 +18,6 @@
         <Name>python3-johnnydep</Name>
         <RuntimeDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>python3-pip</Dependency>
             <Dependency>python3-oyaml</Dependency>
             <Dependency>python3-PyYAML</Dependency>
@@ -36,7 +35,6 @@
             <Dependency>python3-six</Dependency>
         </RuntimeDependencies>
         <BuildDependencies>
-            <Dependency>python3</Dependency>
         </BuildDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/johnnydep</Path>

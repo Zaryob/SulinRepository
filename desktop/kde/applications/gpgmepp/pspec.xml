@@ -23,7 +23,6 @@
     <Package>
         <Name>gpgmepp</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>gpgme</Dependency>
         </RuntimeDependencies>

@@ -36,10 +36,8 @@
         <Name>python3-pkginfo</Name>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pkginfo</Path>

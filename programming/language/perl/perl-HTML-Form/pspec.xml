@@ -16,7 +16,6 @@
         <Description>Objects of the HTML::Form class represents a single HTML &lt;form> ... &lt;/form> instance. A form consists of a sequence of inputs that usually have names, and which can take on various values. The state of a form can be tweaked and it can then be asked to provide HTTP::Request objects that can be passed to the request() method of LWP::UserAgent.</Description>
         <Archive sha1sum="9c48a77300e2cdd01c84151683119f455b7570e2" type="targz">https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Form-6.04.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-HTTP-Message</Dependency>
@@ -26,7 +25,6 @@
     <Package>
         <Name>perl-HTML-Form</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-HTTP-Message</Dependency>

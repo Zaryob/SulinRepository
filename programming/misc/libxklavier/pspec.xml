@@ -20,11 +20,8 @@ type="zip">http://cgit.freedesktop.org/libxklavier/snapshot/libxklavier-5.4.zip<
             <Dependency>libXi-devel</Dependency>
             <Dependency>iso-codes</Dependency>
             <Dependency>vala-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -33,9 +30,7 @@ type="zip">http://cgit.freedesktop.org/libxklavier/snapshot/libxklavier-5.4.zip<
             <Dependency>libxkbfile</Dependency>
             <Dependency>libXi</Dependency>
             <Dependency>iso-codes</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libxml2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -48,8 +43,6 @@ type="zip">http://cgit.freedesktop.org/libxklavier/snapshot/libxklavier-5.4.zip<
         <Name>libxklavier-devel</Name>
         <Summary>Development files for libxklavier</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency release="current">libxklavier</Dependency>
         </RuntimeDependencies>
         <Files>

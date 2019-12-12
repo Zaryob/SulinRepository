@@ -42,7 +42,6 @@
             <Dependency>kxmlrpcclient</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>ksyndication</Dependency>
             <Dependency>kdelibs4-support</Dependency>

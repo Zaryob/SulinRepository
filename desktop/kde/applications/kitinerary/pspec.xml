@@ -15,8 +15,6 @@
         <Archive type="tarxz" sha1sum="ebf7c766c238326e821f0035cd3f0c7d171907fa">http://download.kde.org/stable/applications/19.08.3/src/kitinerary-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>karchive-devel</Dependency>
             <Dependency>kconfigwidgets-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>

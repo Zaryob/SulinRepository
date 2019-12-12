@@ -14,7 +14,6 @@
         <Description>perl-AppConfig is a Perl module for managing application configuration information. It maintains the state of any number of variables and provides methods for parsing configuration files, command line arguments and CGI script parameters.</Description>
         <Archive sha1sum="e059386aabd9230627eef9009921a983f8e42230" type="targz">mirrors://cpan/authors/id/N/NE/NEILB/AppConfig-1.71.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-File-HomeDir</Dependency>
         </BuildDependencies>
     </Source>
@@ -22,7 +21,6 @@
     <Package>
         <Name>perl-AppConfig</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-File-HomeDir</Dependency>
         </RuntimeDependencies>
         <Files>

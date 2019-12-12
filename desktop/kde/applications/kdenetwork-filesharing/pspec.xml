@@ -31,7 +31,6 @@
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kcompletion</Dependency>
             <Dependency>kcoreaddons</Dependency>

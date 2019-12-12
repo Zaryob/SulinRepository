@@ -17,7 +17,6 @@
         <Archive sha1sum="f60ad410414929efd08f388c4ed98d79e0fc20de" type="tarxz">mirrors://kde/stable/frameworks/5.64/kfilemetadata-5.64.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
             <Dependency>ebook-tools-devel</Dependency>
             <Dependency>exiv2-devel</Dependency>
             <Dependency>ffmpeg-devel</Dependency>
@@ -34,7 +33,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>ebook-tools</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>exiv2-libs</Dependency>
             <Dependency>taglib</Dependency>
             <Dependency>ffmpeg</Dependency>

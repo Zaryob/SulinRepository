@@ -26,9 +26,6 @@
             <Dependency>qt5-location-devel</Dependency>
             <Dependency>analitza-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>kconfigwidgets-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
@@ -45,10 +42,8 @@
             <Dependency>qt5-webkit</Dependency>
             <Dependency>qt5-location</Dependency>
             <Dependency>analitza</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>readline</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfigwidgets</Dependency>

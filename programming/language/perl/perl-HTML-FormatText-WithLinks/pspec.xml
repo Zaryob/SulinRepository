@@ -15,7 +15,6 @@
         <Description>HTML::FormatText::WithLinks takes HTML and turns it into plain text but prints all the links in the HTML as footnotes.</Description>
         <Archive sha1sum="f1830637ab723f14b502c1205c8af5241d6c7bb6" type="targz">http://search.cpan.org/CPAN/authors/id/S/ST/STRUAN/HTML-FormatText-WithLinks-0.15.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-HTML-Tree</Dependency>
@@ -26,7 +25,6 @@
     <Package>
         <Name>perl-HTML-FormatText-WithLinks</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-HTML-Tree</Dependency>

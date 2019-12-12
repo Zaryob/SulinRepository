@@ -17,9 +17,7 @@
         <Archive sha1sum="ad02406ae857f72d1de29024b728bf4d8977de53" type="targz">https://gitlab.com/sane-project/backends/uploads/9e718daff347826f4cfe21126c8d5091/sane-backends-1.0.28.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libieee1284-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
             <Dependency>libnl-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>cups-devel</Dependency>
             <Dependency>libgphoto2-devel</Dependency>
             <Dependency>libv4l-devel</Dependency>
@@ -34,8 +32,6 @@
         <Name>sane-backends</Name>
         <RuntimeDependencies>
             <Dependency>libnl</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>libusb-compat</Dependency>
             <Dependency>libieee1284</Dependency>
             <Dependency>avahi-libs</Dependency>
             <Dependency>libgphoto2</Dependency>

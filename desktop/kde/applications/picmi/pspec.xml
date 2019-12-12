@@ -43,7 +43,6 @@
         <Icon>picmi</Icon>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-base</Dependency>

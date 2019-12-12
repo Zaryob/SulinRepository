@@ -21,8 +21,6 @@
             <Dependency>qt5-phonon-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>freecell-solver-devel</Dependency>
-            <Dependency>cmake</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>kpackage-devel</Dependency>
             <Dependency>kitemviews-devel</Dependency>
@@ -49,7 +47,6 @@
             <Dependency>kwidgetsaddons-devel</Dependency>
             <Dependency>shared-mime-info</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
         </BuildDependencies>
@@ -64,7 +61,6 @@
             <Dependency>freecell-solver</Dependency>
             <Dependency>knewstuff</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-svg</Dependency>

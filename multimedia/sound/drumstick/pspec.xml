@@ -17,12 +17,10 @@
         <Description>Drumstick library is a C++ wrapper around the ALSA library sequencer interface, using Qt5 objects, idioms and style.</Description>
         <Archive sha1sum="c416ece49cf70c724dce15851c65273c1ad66e12" type="tarbz2">mirrors://sourceforge/drumstick/1.1.3/drumstick-1.1.3.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>fluidsynth-devel</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>shared-mime-info</Dependency>
@@ -33,7 +31,6 @@
         <Name>drumstick</Name>
         <RuntimeDependencies>
             <Dependency release="current">drumstick-libs</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>alsa-lib</Dependency>
@@ -55,7 +52,6 @@
         <Summary>Libraries for Drumstick</Summary>
         <Description>drumstick-libs provides libraries for Drumstick based applications.</Description>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>fluidsynth</Dependency>

@@ -39,7 +39,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

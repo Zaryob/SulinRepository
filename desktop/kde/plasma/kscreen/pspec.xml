@@ -33,7 +33,6 @@
         <Name>kscreen</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libkscreen</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>kconfig</Dependency>

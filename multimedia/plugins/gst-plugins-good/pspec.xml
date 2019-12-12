@@ -49,11 +49,8 @@
         <RuntimeDependencies>
             <Dependency>orc</Dependency>
             <Dependency>flac</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>aalib</Dependency>
-            <Dependency>bzip2</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libdv</Dependency>
             <Dependency>speex</Dependency>
             <Dependency>libX11</Dependency>

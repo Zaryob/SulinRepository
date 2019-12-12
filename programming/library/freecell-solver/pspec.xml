@@ -14,8 +14,6 @@
         <Description>Freecell ve Card Solitaire'ın benzer varyantlarının düzenlerini otomatik olarak çözen bir program</Description>
         <Archive sha1sum="af49018419ff2b505d3be321ee095cd6108f5c83" type="tarxz">https://fc-solve.shlomifish.org/downloads/fc-solve/freecell-solver-5.14.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
-            <Dependency>gperf</Dependency>
             <Dependency>python3-pysol-cards</Dependency>
             <Dependency>python3-six</Dependency>
             <Dependency>perl-Path-Tiny</Dependency>

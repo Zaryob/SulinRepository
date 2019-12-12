@@ -16,7 +16,6 @@
         <Description>High resolution alarm, sleep, gettimeofday, interval timers.</Description>
         <Archive sha1sum="e6ee17e278eea166a9d53ff5fc9ccd2c6ef107ac" type="targz">https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Time-HiRes-1.9760.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-ExtUtils-MakeMaker</Dependency>
             <Dependency>perl-Test-Simple</Dependency>
             <Dependency>perl-XSLoader</Dependency>
@@ -27,7 +26,6 @@
         <Name>perl-Time-Hires</Name>
         <RuntimeDependencies>
             <Dependency>perl-XSLoader</Dependency>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

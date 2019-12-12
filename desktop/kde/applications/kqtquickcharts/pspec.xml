@@ -17,7 +17,6 @@
         <Archive sha1sum="8a494b9959ade062b7405ea7887571a3133c1cec" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/kqtquickcharts-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
@@ -29,7 +28,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/qt5</Path>

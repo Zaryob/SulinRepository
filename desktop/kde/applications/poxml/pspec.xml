@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </BuildDependencies>
@@ -27,8 +26,6 @@
     <Package>
         <Name>poxml</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>gettext</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Replaces>

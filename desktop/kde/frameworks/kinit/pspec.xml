@@ -19,8 +19,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>kcrash-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
@@ -49,8 +47,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libcap</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kcrash</Dependency>
@@ -77,7 +73,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>kcrash-devel</Dependency>

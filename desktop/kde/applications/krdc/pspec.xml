@@ -38,7 +38,6 @@
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
             <Dependency>kdnssd</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kwallet</Dependency>
             <Dependency>kxmlgui</Dependency>

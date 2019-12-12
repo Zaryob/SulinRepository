@@ -20,8 +20,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kconfigwidgets-devel</Dependency>
             <Dependency>kguiaddons-devel</Dependency>
@@ -37,9 +35,7 @@
         <Name>kcalc</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>gmp</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kguiaddons</Dependency>

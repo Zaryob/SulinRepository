@@ -18,7 +18,6 @@
     <Package>
         <Name>perl-Carp</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

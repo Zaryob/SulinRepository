@@ -15,9 +15,7 @@
         <Description>LibXxf86miscproto is the client library for the XFree86-miscproto extension.</Description>
         <Archive sha1sum="52c54ed17e55f26b26654ff16d61da97f9fd36bc" type="tarbz2">mirrors://xorg/individual/proto/xf86miscproto-0.9.3.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>util-macros</Dependency>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

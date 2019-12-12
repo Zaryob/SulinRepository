@@ -17,9 +17,7 @@
         <BuildDependencies>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -43,7 +41,6 @@
             <Dependency release="current">libXt</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency>libX11-devel</Dependency>
         </RuntimeDependencies>
         <Files>

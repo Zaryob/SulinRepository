@@ -55,7 +55,6 @@
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>akonadi</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kwallet</Dependency>

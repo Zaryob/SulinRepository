@@ -27,7 +27,6 @@
             <Dependency>kpkpass-devel</Dependency>
             <Dependency>kitinerary-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>grantleetheme-devel</Dependency>
             <Dependency>incidenceeditor-devel</Dependency>
             <Dependency>kcalutils-devel</Dependency>
@@ -107,7 +106,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>ktnef</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libgravatar</Dependency>
             <Dependency>libkdepim</Dependency>
             <Dependency>libkleo</Dependency>

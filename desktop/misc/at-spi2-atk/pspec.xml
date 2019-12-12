@@ -16,10 +16,8 @@
         <Archive sha1sum="94b575c5376f6d250adfcbcb705dbdfeededc50b" type="tarxz">mirrors://gnome/at-spi2-atk/2.32/at-spi2-atk-2.32.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>atk-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>libXtst-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -27,8 +25,6 @@
         <Name>at-spi2-atk</Name>
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>at-spi2-core</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -62,7 +58,6 @@
         <Summary>at-spi2-atk için geliştirme dosyaları</Summary>
         <RuntimeDependencies>
             <Dependency release="current">at-spi2-atk</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>at-spi2-core-devel</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -37,7 +37,6 @@
             <Dependency>kwayland</Dependency>
             <Dependency>libXrandr</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-x11extras</Dependency>
         </RuntimeDependencies>
         <Files>

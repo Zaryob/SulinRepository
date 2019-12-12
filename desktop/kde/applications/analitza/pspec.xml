@@ -17,7 +17,6 @@
         <Description>analitza is a library to add mathematical features to programs.</Description>
         <Archive sha1sum="d69039d9a1a98962e184ec2f1bacc57f5eb8e76b" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/analitza-19.08.3.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>eigen</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -31,7 +30,6 @@
         <Name>analitza</Name>
         <RuntimeDependencies>
             <Dependency>mesa</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>

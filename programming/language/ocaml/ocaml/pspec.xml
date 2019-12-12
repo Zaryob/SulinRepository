@@ -20,18 +20,13 @@
         -->
         <Archive sha1sum="4512817b6bdee16c05a11bbcf2cf4bb9da291d2d" type="tarxz">https://caml.inria.fr/pub/distrib/ocaml-4.09/ocaml-4.09.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>chrpath</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>ocaml</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>

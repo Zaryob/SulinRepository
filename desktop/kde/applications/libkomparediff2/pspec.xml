@@ -18,8 +18,6 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kcodecs-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
@@ -36,7 +34,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

@@ -14,33 +14,25 @@
         <Description>Multi-protocol instant messaging tool for MSN, Yahoo, IRC, Jabber and Gadu-Gadu protocols.</Description>
         <Archive sha1sum="122f0a48ba63cd7f2bc2962c497df045ce29ef71" type="tarbz2">https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/2.13.0/pidgin-2.13.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>intltool</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libXScrnSaver-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>gtkspell-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>farstream-devel</Dependency>
             <Dependency>meanwhile-devel</Dependency>
             <Dependency>gst-plugins-base-devel</Dependency>
-            <Dependency>libidn-devel</Dependency>
             <Dependency>avahi-glib-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>NetworkManager-devel</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>tcl-devel</Dependency>
             <Dependency>tcltk-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
             <Dependency>atk-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -55,17 +47,13 @@
         <IsA>app:gui</IsA>
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libSM</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>libICE</Dependency>
-            <Dependency>sqlite</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>gtkspell</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>gstreamer</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>meanwhile</Dependency>
@@ -114,11 +102,8 @@
         <IsA>app:console</IsA>
         <Summary>Console based instant messaging application</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>gstreamer</Dependency>
             <Dependency release="current">libpurple</Dependency>
         </RuntimeDependencies>
@@ -154,15 +139,8 @@
         <RuntimeDependencies>
             <Dependency>nss</Dependency>
             <Dependency>tcl</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>nspr</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>tcltk</Dependency>
             <Dependency>gnutls</Dependency>
-            <Dependency>libidn</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>gstreamer</Dependency>
             <Dependency>avahi-glib</Dependency>
             <Dependency>avahi-libs</Dependency>

@@ -26,7 +26,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>qt5-svg</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -15,7 +15,6 @@
         <Description>libjpeg-turbo is a derivative of libjpeg for x86 and x86-64 processors which uses SIMD instructions (MMX, SSE2, etc.) to accelerate baseline JPEG compression and decompression. libjpeg-turbo is generally 2-4x as fast as the unmodified version of libjpeg v6b, all else being equal.</Description>
         <Archive sha1sum="539363a444f92421c098a1a3e7cebfda48d4cfb3" type="targz">http://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>nasm</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

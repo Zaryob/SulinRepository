@@ -29,24 +29,16 @@
             <Dependency>xdg-utils</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>fontforge</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>freetype</Dependency>
-            <Dependency>readline</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>libXi</Dependency>

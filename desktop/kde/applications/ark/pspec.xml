@@ -23,11 +23,9 @@
             <Dependency>kio-devel</Dependency>
             <Dependency>kpty-devel</Dependency>
             <Dependency>khtml-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
             <Dependency>kdbusaddons-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
-            <Dependency>libarchive-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -36,7 +34,6 @@
         <Name>ark</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libarchive</Dependency>
             <Dependency>karchive</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>kconfig</Dependency>
@@ -45,7 +42,6 @@
             <Dependency>kpty</Dependency>
             <Dependency>khtml</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>kcompletion</Dependency>

@@ -15,8 +15,6 @@
 So this nice simple GUI to control the composite manager, the settings are self explanatory.</Description>
         <Archive sha1sum="2f7b547689568ba9fb31fdd0e4edc717dc540cf9" type="targz">https://github.com/SulinOS/xfce4-composite-editor/archive/0.2.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>autoconf</Dependency>
-            <Dependency>make</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
         </BuildDependencies>
     </Source>

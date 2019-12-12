@@ -15,8 +15,6 @@
         <Archive sha1sum="a8bbc00b500be85b2d2a2613b1f1103f30c2143d" type="targz">https://files.pythonhosted.org/packages/48/20/5e83af98eb897935bf7dc39455e892ba866feebb9b7c3b392982866f9958/pycairo-1.18.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>libtool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,7 +22,6 @@
         <Name>python3-cairo</Name>
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

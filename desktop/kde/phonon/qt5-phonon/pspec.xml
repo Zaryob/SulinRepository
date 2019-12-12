@@ -30,7 +30,6 @@
     <Package>
         <Name>qt5-phonon</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-designer</Dependency>
             <Dependency>pulseaudio-libs</Dependency>

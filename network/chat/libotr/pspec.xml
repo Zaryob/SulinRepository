@@ -14,15 +14,12 @@
         <Description>OTR messaging allows you to have private conversations over instant messaging.</Description>
         <Archive sha1sum="3894b82a6c307ad011681ad342d69b18344933ae" type="targz">https://otr.cypherpunks.ca/libotr-4.1.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libotr</Name>
         <RuntimeDependencies>
-            <Dependency>libgcrypt</Dependency>
-            <Dependency>libgpg-error</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

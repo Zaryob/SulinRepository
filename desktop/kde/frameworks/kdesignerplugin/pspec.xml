@@ -37,7 +37,6 @@
         <Name>kdesignerplugin</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kdewebkit</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kitemviews</Dependency>

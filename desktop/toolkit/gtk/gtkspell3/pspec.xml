@@ -16,7 +16,6 @@
         <BuildDependencies>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>enchant-devel</Dependency>
-            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,7 +25,6 @@
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>enchant</Dependency>
             <Dependency>freetype</Dependency>

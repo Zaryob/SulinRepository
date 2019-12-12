@@ -15,15 +15,12 @@
         <Archive sha1sum="389928f17336808ac699e8f36eccf860dd3956fd" type="tarxz">http://www.freedesktop.org/software/libmbim/libmbim-1.20.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libmbim</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libgudev</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -42,7 +39,6 @@
         <Summary>libmbim için geliştirme dosyaları</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libmbim</Dependency>
-            <Dependency>libgudev-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/pkgconfig</Path>

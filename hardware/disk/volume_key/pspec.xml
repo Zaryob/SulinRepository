@@ -16,13 +16,9 @@
         <BuildDependencies>
             <Dependency>swig</Dependency>
             <Dependency>nss-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gpgme-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>libassuan</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>libcryptsetup-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -30,16 +26,10 @@
     <Package>
         <Name>volume_key</Name>
         <RuntimeDependencies>
-            <Dependency>nspr</Dependency>
             <Dependency>nss</Dependency>
-            <Dependency>gettext</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gpgme</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>libassuan</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libutil-linux</Dependency>
             <Dependency>libcryptsetup</Dependency>
         </RuntimeDependencies>
         <Files>

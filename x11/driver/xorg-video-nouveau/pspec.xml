@@ -18,7 +18,6 @@
             <Dependency>libdrm-nouveau</Dependency>
             <Dependency>libpciaccess-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>xorg-server-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -27,7 +26,6 @@
         <Name>xorg-video-nouveau</Name>
         <RuntimeDependencies>
             <Dependency>libdrm</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>libdrm-nouveau</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -71,7 +71,6 @@
             <Dependency>kjobwidgets</Dependency>
             <Dependency>knotifications</Dependency>
             <Dependency>breeze-style</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

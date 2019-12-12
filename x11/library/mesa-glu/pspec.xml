@@ -16,14 +16,12 @@
         <Archive sha1sum="6c547b7c7d5dc0f169f96f1826d44799129bb0aa" type="targz">ftp://ftp.freedesktop.org/pub/mesa/glu/glu-9.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>libgcc</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>mesa-glu</Name>
         <RuntimeDependencies>
             <Dependency>mesa</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -49,13 +47,11 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <Dependency>mesa-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">mesa-glu</Dependency>
             <Dependency>mesa-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             
         </RuntimeDependencies>
         <Files>

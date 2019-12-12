@@ -15,7 +15,6 @@
         <Archive sha1sum="1b77f393a7bcf2c245498a85b9daaa550a2b9366" type="targz">https://github.com/flavio/qjson/archive/0.9.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -23,7 +22,6 @@
         <Name>libqjson</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

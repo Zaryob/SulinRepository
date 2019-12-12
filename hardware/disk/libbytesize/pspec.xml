@@ -14,20 +14,13 @@
         <Description>The goal of this project is to provide a tiny library that would facilitate the common operations with sizes in bytes. Many projects need to work with sizes in bytes (be it sizes of storage space, memory,...) and all of them need to deal with the same issues like:</Description>
         <Archive sha1sum="ef29982499abeeeeffc71cfa500eea15ab64ceb5" type="targz">https://github.com/storaged-project/libbytesize/releases/download/1.4/libbytesize-1.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>mpfr-devel</Dependency>
-            <Dependency>gmp-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libbytesize</Name>
         <RuntimeDependencies>
-            <Dependency>libpcre</Dependency>
-            <Dependency>mpfr</Dependency>
-            <Dependency>gmp</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

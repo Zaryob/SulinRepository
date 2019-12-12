@@ -26,7 +26,6 @@
         <Name>ktp-desktop-applets</Name>
         <Summary>The KDE-Telepathy Plasma desktop applets</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kwindowsystem</Dependency>
             <Dependency>qt5-declarative</Dependency>

@@ -25,7 +25,6 @@
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kdeclarative-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kitemviews-devel</Dependency>
             <Dependency>ktexteditor-devel</Dependency>
             <Dependency>kxmlgui-devel</Dependency>
@@ -38,10 +37,8 @@
             <Dependency>kxmlgui-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
             <Dependency>karchive-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>qt5-location-devel</Dependency>
             <Dependency>grantlee-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>boost-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -58,7 +55,6 @@
             <Dependency>kdeclarative</Dependency>
             <Dependency>ktexteditor</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>karchive</Dependency>

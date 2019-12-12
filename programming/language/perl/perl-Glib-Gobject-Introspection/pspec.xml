@@ -15,7 +15,6 @@
         <Archive sha1sum="c59ee0afc9ab2e182c909fc0498c4f17692b3241" type="targz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-Object-Introspection-0.047.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Glib</Dependency>
             <Dependency>perl-ExtUtils-PkgConfig</Dependency>
             <Dependency>perl-ExtUtils-Depends</Dependency>
@@ -26,7 +25,6 @@
         <Name>perl-Glib-Gobject-Introspection</Name>
         <RuntimeDependencies>
             <Dependency>gobject-introspection</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Glib</Dependency>
         </RuntimeDependencies>
         <Files>

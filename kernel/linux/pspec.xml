@@ -20,12 +20,8 @@
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>
-            <Dependency>cpio</Dependency>
             <Dependency>docbook-xsl</Dependency>
-            <Dependency>diffutils</Dependency>
             <Dependency>xmlto</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <!--Patch compressionType="xz">patches/linux/patch-5.2.14.xz</Patch-->

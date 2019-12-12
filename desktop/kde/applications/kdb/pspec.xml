@@ -18,7 +18,6 @@
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>mariadb-bin-lib</Dependency>
             <Dependency>mariadb-bin-client</Dependency>
             <Dependency>postgresql-lib</Dependency>
@@ -35,8 +34,6 @@
         <Summary>A database connectivity and creation framework for various database vendors.</Summary>
         <RuntimeDependencies>
             <Dependency>icu4c</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>sqlite</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>mariadb-bin-lib</Dependency>

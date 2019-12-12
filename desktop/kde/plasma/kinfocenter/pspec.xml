@@ -33,7 +33,6 @@
             <Dependency>libraw1394-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>pciutils-devel</Dependency>
             <Dependency>plasma-framework-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>solid-devel</Dependency>
@@ -66,12 +65,10 @@
             <Dependency>kwayland</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libraw1394</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>mesa-glu</Dependency>
             <Dependency>mesa</Dependency>
-            <Dependency>pciutils</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>solid</Dependency>

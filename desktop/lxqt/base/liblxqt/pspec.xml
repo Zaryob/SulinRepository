@@ -16,13 +16,10 @@
         <Description>Core utility library for all LXDE-Qt components</Description>
         <Archive sha1sum="7f6f777bae5fb09cd7b4de9de9ac94c18c3348af" type="tarxz">https://downloads.lxqt.org/downloads/liblxqt/0.14.1/liblxqt-0.14.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>libdbusmenu-qt-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>libXScrnSaver-devel</Dependency>
         </BuildDependencies>
     </Source>

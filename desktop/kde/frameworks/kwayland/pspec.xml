@@ -25,7 +25,6 @@
     <Package>
         <Name>kwayland</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>wayland-client</Dependency>

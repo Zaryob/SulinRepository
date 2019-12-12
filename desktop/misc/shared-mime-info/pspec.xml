@@ -15,17 +15,12 @@
         <Description>shared-mime-info is a package containing a large number of common MIME types, created by converting the existing KDE and GNOME databases to the new format and merging them together, and software for updating the database based on the share-mime-info specification.</Description>
         <Archive sha1sum="4f8342ebe7f1f36cc7dd65e232440e8ed8357063" type="tarxz">https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/aee9ae9646cbef724bbb1bd2ba146556/shared-mime-info-1.14.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>shared-mime-info</Name>
         <RuntimeDependencies>
-            <Dependency>libxml2</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/etc/X11/xinit</Path>

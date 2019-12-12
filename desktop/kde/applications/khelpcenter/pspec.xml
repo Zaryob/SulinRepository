@@ -39,8 +39,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>karchive</Dependency>
             <Dependency>kbookmarks</Dependency>
             <Dependency>khtml</Dependency>

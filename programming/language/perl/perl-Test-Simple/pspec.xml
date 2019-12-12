@@ -16,7 +16,6 @@
         <Description>Yet another framework for writing test scripts</Description>
         <Archive sha1sum="586a1582c25bab80c8bd0dbe90bbef2f38a80cc6" type="targz">https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302169.tar.gz</Archive>
         <BuildDependencies>
-          <Dependency>perl</Dependency>
           <Dependency>perl-File-Spec</Dependency>
           <Dependency>perl-File-Temp</Dependency>
           <Dependency>perl-Scalar-Util</Dependency>
@@ -26,7 +25,6 @@
     <Package>
         <Name>perl-Test-Simple</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-File-Spec</Dependency>
             <Dependency>perl-File-Temp</Dependency>
             <Dependency>perl-Scalar-Util</Dependency>

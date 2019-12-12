@@ -15,7 +15,6 @@
         <Description>An opensource implementation of the OpenMAX Integration Layer API</Description>
         <Archive sha1sum="04afd1bde078afa5a03190b6c6865406e2bd01d8" type="targz">http://downloads.sourceforge.net/project/omxil/omxil/Bellagio%200.9.3/libomxil-bellagio-0.9.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>fedora-fixes.patch</Patch>

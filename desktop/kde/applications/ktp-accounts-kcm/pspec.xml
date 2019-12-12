@@ -33,14 +33,12 @@
             <Dependency>solid-devel</Dependency>
             <Dependency>kservice-devel</Dependency>
             <Dependency>libaccounts-glib-devel</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>kaccounts-providers</Dependency>
             <Dependency>telepathy-haze</Dependency>
             <Dependency>telepathy-gabble</Dependency>
             <Dependency>signon-devel</Dependency>
             <Dependency>ktp-common-internals-devel</Dependency>
             <!--<Dependency>telepathy-mission-control-devel</Dependency> -->
-            <Dependency>gettext-devel</Dependency>
              <!--<Dependency>telepathy-idle</Dependency> -->
             <!--<Dependency>telepathy-salut</Dependency>-->
             <!--<Dependency>telepathy-sunshine</Dependency> -->
@@ -52,7 +50,6 @@
         <Name>ktp-accounts-kcm</Name>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>signon</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>qt5-base</Dependency>

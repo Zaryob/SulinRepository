@@ -46,7 +46,6 @@
         <Name>kshisen</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kconfigwidgets</Dependency>

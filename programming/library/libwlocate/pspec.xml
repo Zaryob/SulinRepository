@@ -13,7 +13,6 @@
         <Summary>A shared library that can be used for location-based services</Summary>
         <Description>libwlocate is a shared library that can be used for location-based services.</Description>
         <BuildDependencies>
-            <Dependency>wireless-tools-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="4cd1a99a8b255b0a3988af67858cdf79431035e5" type="targz">https://github.com/openwifi-su/lwlocate/archive/v0.1.tar.gz</Archive>
     </Source>
@@ -22,7 +21,6 @@
         <Name>libwlocate</Name>
         <Summary>A shared library that can be used for location-based services</Summary>
         <RuntimeDependencies>
-            <Dependency>wireless-tools</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

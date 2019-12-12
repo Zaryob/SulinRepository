@@ -26,12 +26,7 @@
         <IsA>library</IsA>
         <Summary>The shared libraries required for MariaDB clients</Summary>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpcre2</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>libaio</Dependency>
             <Dependency>unixODBC</Dependency>
         </RuntimeDependencies>
@@ -77,11 +72,6 @@
         <RuntimeDependencies>
             <Dependency version="current">mariadb-bin-lib</Dependency>
             <Dependency>libaio</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libpcre</Dependency>
-            <Dependency>ncurses</Dependency>
-            <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Replaces>
             <Package>mysql-client</Package>
@@ -150,10 +140,6 @@
         <RuntimeDependencies>
             <Dependency version="current">mariadb-bin-lib</Dependency>
             <Dependency version="current">mariadb-bin-client</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>unixODBC</Dependency>
         </RuntimeDependencies>
         <Replaces>

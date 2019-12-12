@@ -23,7 +23,6 @@
             <Dependency>libconfig-devel</Dependency>
             <Dependency>libraw1394-devel</Dependency>
             <Dependency>libiec61883-devel</Dependency>
-            <Dependency>scons</Dependency>
             <Dependency>doxygen</Dependency>
         </BuildDependencies>
     </Source>
@@ -33,7 +32,6 @@
         <IsA>library</IsA>
         <RuntimeDependencies>
             <Dependency>glibmm</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>dbus-c++</Dependency>
             <Dependency>libxmlpp</Dependency>
             <Dependency>libconfig</Dependency>

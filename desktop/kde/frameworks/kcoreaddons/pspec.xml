@@ -28,7 +28,6 @@
         <Name>kcoreaddons</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>shared-mime-info</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </RuntimeDependencies>

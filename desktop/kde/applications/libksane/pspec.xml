@@ -31,7 +31,6 @@
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
             <Dependency>kwallet</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>ktextwidgets</Dependency>
             <Dependency>sane-backends</Dependency>

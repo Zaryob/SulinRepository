@@ -16,13 +16,11 @@
         <Description>X server is the main application that allows a graphical interface.</Description>
         <Archive sha1sum="fea6fd34c7f48b3c69fbecd8fb294eaa1498e69c" type="tarbz2">mirrors://xorg/individual/xserver/xorg-server-1.20.5.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>meson</Dependency>
             <Dependency>font-util</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>libdmx-devel</Dependency>
             <Dependency>libdrm-devel</Dependency>
             <Dependency>libbsd-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
             <Dependency>libpciaccess-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXaw-devel</Dependency>
@@ -41,18 +39,13 @@
             <Dependency>mesa-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
             <Dependency>xorg-app-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
             <Dependency>libepoxy-devel</Dependency>
             <Dependency>xcb-util-devel</Dependency>
             <Dependency>xcb-util-image-devel</Dependency>
             <Dependency>xcb-util-wm-devel</Dependency>
             <Dependency>xcb-util-keysyms-devel</Dependency>
             <Dependency>xcb-util-renderutil-devel</Dependency>
-            <Dependency>util-macros</Dependency>
-            <Dependency>xtrans</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>libunwind-devel</Dependency>
             <Dependency>libXau-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
@@ -85,7 +78,6 @@
         <IsA>app:console</IsA>
         <RuntimeDependencies>
             <Dependency>libXau</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>libXdmcp</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>libdrm</Dependency>
@@ -94,7 +86,6 @@
             <Dependency>xorg-input-libinput</Dependency>
             <Dependency>xorg-input-mouse</Dependency>
             <Dependency>xorg-input-evdev</Dependency>
-            <Dependency>libunwind</Dependency>
             <Dependency>libpciaccess</Dependency>
             <Dependency>libxshmfence</Dependency>
             <Dependency>libepoxy</Dependency>
@@ -102,7 +93,6 @@
             <Dependency>libbsd</Dependency>
             <Dependency>xorg-app</Dependency>
             <Dependency>xterm</Dependency>
-            <Dependency>nettle</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/X11/xorg.conf.d</Path>
@@ -144,7 +134,6 @@
             <Dependency>libXfont2</Dependency>
             <Dependency>libXfixes</Dependency>
             <Dependency>libXrender</Dependency>
-            <Dependency>libunwind</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*dmx*</Path>
@@ -159,7 +148,6 @@
         <RuntimeDependencies>
             <Dependency>libXau</Dependency>
             <Dependency>libXdmcp</Dependency>
-            <Dependency>libunwind</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>pixman</Dependency>
             <Dependency>libdrm</Dependency>
@@ -185,7 +173,6 @@
             <Dependency relase="current">xorg-server-common</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>xcb-util</Dependency>
-            <Dependency>libunwind</Dependency>
             <Dependency>pixman</Dependency>
             <Dependency>libXext</Dependency>
             <Dependency>libXfont2</Dependency>
@@ -214,7 +201,6 @@
             <Dependency>libXfont2</Dependency>
             <Dependency>pixman</Dependency>
             <Dependency>mesa</Dependency>
-            <Dependency>libunwind</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/[Xx]vfb*</Path>
@@ -230,7 +216,6 @@
             <Dependency>libXdmcp</Dependency>
             <Dependency>libXfont2</Dependency>
             <Dependency>libXext</Dependency>
-            <Dependency>libunwind</Dependency>
             <Dependency>pixman</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -248,7 +233,6 @@
             <Dependency>libpciaccess-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/xorg</Path>

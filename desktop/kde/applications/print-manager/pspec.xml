@@ -22,7 +22,6 @@
             <Dependency>cups-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kservice-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -45,7 +44,6 @@
             <Dependency>kio</Dependency>
             <Dependency>cups</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>qt5-base</Dependency>

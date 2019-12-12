@@ -16,30 +16,21 @@
         <BuildDependencies>
             <Dependency>python3-wheel</Dependency>
             <Dependency>python3-pip</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python-wheel</Dependency>
             <Dependency>python-pip</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>python-setuptools</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libuninamelist</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>freetype</Dependency>
-            <Dependency>readline</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>libXi</Dependency>

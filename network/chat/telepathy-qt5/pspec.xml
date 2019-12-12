@@ -15,13 +15,10 @@
         <Description>The Telepathy project is about building a unified framework for many different kinds of real-time communications. telepathy-qt contains Qt-based base and proxy classes for use in connection managers and clients.</Description>
         <Archive sha1sum="f0dc68fdc05d0d43ae21481c1a875e7bfe919b9b" type="targz">http://telepathy.freedesktop.org/releases/telepathy-qt/telepathy-qt-0.9.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>qt5-doc</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>farstream-devel</Dependency>
             <Dependency>telepathy-farstream-devel</Dependency>
             <Dependency>doxygen</Dependency>
@@ -35,8 +32,6 @@
     <Package>
         <Name>telepathy-qt5</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>telepathy-glib</Dependency>
             <Dependency>telepathy-farstream</Dependency>

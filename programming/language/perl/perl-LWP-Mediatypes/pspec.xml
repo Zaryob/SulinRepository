@@ -16,14 +16,12 @@
         <Description>This module provides functions for handling media (also known as MIME) types and encodings.</Description>
         <Archive sha1sum="f56891f4e718a5f1f16f09ae37d32e454095cbed" type="targz">http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/LWP-MediaTypes-6.02.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-LWP-Mediatypes</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

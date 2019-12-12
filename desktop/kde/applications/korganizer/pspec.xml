@@ -63,7 +63,6 @@
             <Dependency>kmime</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>akonadi</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>

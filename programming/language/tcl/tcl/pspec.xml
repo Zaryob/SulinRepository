@@ -15,13 +15,11 @@
         <Description>Tcl provides a powerful platform for creating integration applications that tie together diverse applications, protocols, devices, and frameworks.</Description>
         <Archive sha1sum="861c5c8bbce9eda892c5e63b6035e09fad90a25f" type="targz">https://downloads.sourceforge.net/tcl/tcl8.6.9-src.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>tcl</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -35,7 +33,6 @@
         <Summary>Development files for tcl</Summary>
         <RuntimeDependencies>
             <Dependency release="current">tcl</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

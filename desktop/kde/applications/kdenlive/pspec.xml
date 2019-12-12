@@ -58,7 +58,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>solid</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ffmpeg</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

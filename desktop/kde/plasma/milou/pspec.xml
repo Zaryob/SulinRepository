@@ -36,7 +36,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>krunner</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>kcoreaddons</Dependency>

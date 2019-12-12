@@ -19,7 +19,6 @@
     <Package>
         <Name>par2cmdline</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

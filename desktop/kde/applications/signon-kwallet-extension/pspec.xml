@@ -25,7 +25,6 @@
         <Name>signon-kwallet-extension</Name>
         <Summary>KWallet signon extension</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>signon</Dependency>
             <Dependency>kwallet</Dependency>
             <Dependency>qt5-base</Dependency>

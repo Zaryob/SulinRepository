@@ -31,7 +31,6 @@
 <!--             <Dependency>flac-devel</Dependency> -->
             <Dependency>gsm-devel</Dependency>
             <Dependency>twolame-devel</Dependency>
-            <Dependency>libgomp</Dependency>
         </BuildDependencies>
         <Patches>
            <Patch level="1">sox-dynamic.patch</Patch> -->
@@ -42,18 +41,15 @@
         <Name>sox</Name>
         <RuntimeDependencies>
             <Dependency>gsm</Dependency>
-            <Dependency>file</Dependency>
             <Dependency>lame</Dependency>
             <Dependency>libao</Dependency>
             <Dependency>libmad</Dependency>
             <Dependency>libogg</Dependency>
-            <Dependency>libgomp</Dependency>
             <Dependency>twolame</Dependency>
             <Dependency>wavpack</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>libvorbis</Dependency>
             <Dependency>libsndfile</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency>opencore-amr</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
         </RuntimeDependencies>

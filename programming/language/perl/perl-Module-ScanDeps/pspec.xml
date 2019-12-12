@@ -16,14 +16,12 @@
         <Description>This module scans potential modules used by perl programs, and returns a hash reference; its keys are the module names as appears in %INC (e.g. Test/More.pm); the values are hash references.</Description>
         <Archive sha1sum="6192b1a765c97c57ea0b38b355ee46a8442d4f31" type="targz">https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/Module-ScanDeps-1.27.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Module-ScanDeps</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-docs</Dependency>
         </RuntimeDependencies>
         <Files>

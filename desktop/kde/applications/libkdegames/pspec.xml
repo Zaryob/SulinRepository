@@ -20,14 +20,11 @@
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kdnssd-devel</Dependency>
             <Dependency>openal-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>kdeclarative-devel</Dependency>
             <Dependency>knewstuff-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kxmlgui-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -60,7 +57,6 @@
             <Dependency>knewstuff</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>openal</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

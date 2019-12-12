@@ -16,8 +16,6 @@
         <BuildDependencies>
             <Dependency>mesa-devel</Dependency>
             <Dependency>lame-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>faac-devel</Dependency>
@@ -49,8 +47,6 @@
         <RuntimeDependencies>
             <Dependency>mesa</Dependency>
             <Dependency>lame</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>faac</Dependency>

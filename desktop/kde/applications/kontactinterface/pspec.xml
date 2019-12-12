@@ -34,7 +34,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kiconthemes</Dependency>

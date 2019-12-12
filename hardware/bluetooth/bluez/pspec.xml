@@ -17,26 +17,18 @@
         <Archive sha1sum="d958fa2fe8aa4b592e8a967f73b8379a8102339c" type="tarxz">https://www.kernel.org/pub/linux/bluetooth/bluez-5.51.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cups-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>libnl-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>libsndfile-devel</Dependency>
             <!--Dependency>gst-plugins-base-devel</Dependency-->
             <Dependency>libical-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>bluez</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>eudev</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>readline</Dependency>
             <Dependency>libical</Dependency>
             <Dependency release="current">bluez-libs</Dependency>
         </RuntimeDependencies>

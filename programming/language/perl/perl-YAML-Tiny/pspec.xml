@@ -16,14 +16,12 @@
         <Description>YAML::Tiny is a perl class for reading and writing YAML-style files, written with as little code as possible, reducing load time and memory overhead.</Description>
         <Archive sha1sum="32ee7a7d499c7d8c2b4672f9735901fb4de1ab88" type="targz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/YAML-Tiny-1.73.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-YAML-Tiny</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-docs</Dependency>
         </RuntimeDependencies>
         <Files>

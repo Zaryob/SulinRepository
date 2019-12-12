@@ -17,14 +17,11 @@
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
             <Dependency>xorg-server-xwayland</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
             <Dependency>wayland-client</Dependency>
@@ -36,9 +33,7 @@
         <Name>qt5-wayland</Name>
         <RuntimeDependencies>
             <Dependency>mesa</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>fontconfig</Dependency>

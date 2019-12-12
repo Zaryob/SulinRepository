@@ -23,7 +23,6 @@
         <Name>kdgantt2</Name>
         <Summary>Library providing gantt support</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

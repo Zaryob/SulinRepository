@@ -24,7 +24,6 @@
         <Name>kdecorations</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

@@ -32,7 +32,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kauth</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcompletion</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfigwidgets</Dependency>

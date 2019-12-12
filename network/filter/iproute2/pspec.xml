@@ -15,8 +15,6 @@
         <Archive sha1sum="b5b3cc248ba6db3af3330129325c5507d02d9fd1" type="tarxz">https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-5.2.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>iptables-devel</Dependency>
-            <Dependency>db-devel</Dependency>
-            <Dependency>elfutils</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>0001-make-iproute2-fhs-compliant.patch</Patch>
@@ -27,8 +25,6 @@
         <Name>iproute2</Name>
         <RuntimeDependencies>
             <Dependency>iptables</Dependency>
-            <Dependency>db</Dependency>
-            <Dependency>elfutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

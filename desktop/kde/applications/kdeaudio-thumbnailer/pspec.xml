@@ -15,7 +15,6 @@
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>flac-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>taglib-devel</Dependency>
             <Dependency>kio-devel</Dependency>
@@ -27,7 +26,6 @@
         <Summary>Thumbnail generator for audio files, ported to KF5</Summary>
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>taglib</Dependency>
         </RuntimeDependencies>

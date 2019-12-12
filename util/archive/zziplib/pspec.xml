@@ -18,7 +18,6 @@
         <Archive sha1sum="1644c03fbc95f33decaaa04b5fb1e83d6bea2dfc" type="targz">https://github.com/gdraheim/zziplib/archive/v0.13.69.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl-devel</Dependency>
-	    <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,7 +25,6 @@
         <Name>zziplib</Name>
         <RuntimeDependencies>
             <Dependency>libsdl</Dependency>
-	    <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

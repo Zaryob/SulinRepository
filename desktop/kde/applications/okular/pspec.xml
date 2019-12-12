@@ -66,10 +66,8 @@
             <Dependency>kpty</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kjs</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kwallet</Dependency>

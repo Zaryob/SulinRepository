@@ -40,7 +40,6 @@
         <Name>bluedevil</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>bluez-qt</Dependency>
             <Dependency>kded</Dependency>
             <Dependency>kio</Dependency>

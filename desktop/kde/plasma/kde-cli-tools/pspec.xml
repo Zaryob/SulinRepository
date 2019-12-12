@@ -51,7 +51,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kdesu</Dependency>
             <Dependency>ki18n</Dependency>

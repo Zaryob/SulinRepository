@@ -29,7 +29,6 @@
             <Dependency>kwayland</Dependency>
             <Dependency>kidletime</Dependency>
             <Dependency>kwindowsystem</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

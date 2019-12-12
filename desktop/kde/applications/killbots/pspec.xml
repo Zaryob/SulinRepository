@@ -47,7 +47,6 @@
         <Name>killbots</Name>        
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-base</Dependency>

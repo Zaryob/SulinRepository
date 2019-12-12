@@ -18,8 +18,6 @@
             <Dependency>libX11-devel</Dependency> 
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXv-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -39,7 +37,6 @@
         <RuntimeDependencies>
             <Dependency>libXv-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency release="current">libXvMC</Dependency>
         </RuntimeDependencies>

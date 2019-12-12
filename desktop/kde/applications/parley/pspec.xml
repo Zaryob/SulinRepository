@@ -20,15 +20,12 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>qt5-multimedia-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>libkeduvocdocument-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kcrash-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>knewstuff-devel</Dependency>
@@ -53,15 +50,12 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-multimedia</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>libXrender</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>libkeduvocdocument</Dependency>
             <Dependency>kdoctools</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>gettext</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>knewstuff</Dependency>
@@ -71,7 +65,6 @@
             <Dependency>knotifications</Dependency>
             <Dependency>sonnet</Dependency>
             <Dependency>kservice</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ktextwidgets</Dependency>
             <Dependency>kcompletion</Dependency>
             <Dependency>kconfigwidgets</Dependency>

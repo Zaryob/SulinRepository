@@ -16,7 +16,6 @@
         <Archive sha1sum="e7a0b34fadd82d84d4197706d5b8fd383f312747" type="tarbz2">http://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.6.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libxfcegui4-devel</Dependency>

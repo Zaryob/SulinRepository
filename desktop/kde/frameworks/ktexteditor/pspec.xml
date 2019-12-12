@@ -55,7 +55,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-script</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libgit2</Dependency>
             <Dependency>syntax-highlighting</Dependency>
             <Dependency>ktextwidgets</Dependency>

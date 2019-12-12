@@ -30,7 +30,6 @@
             <Dependency>knewstuff-devel</Dependency>
             <Dependency>kplotting-devel</Dependency>
             <Dependency>eigen</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>libqalculate-devel</Dependency>
             <Dependency>cln-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
@@ -53,7 +52,6 @@
             <Dependency>libqalculate</Dependency>
             <Dependency>kparts</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kdelibs4-support</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>

@@ -22,7 +22,6 @@
             <Dependency>libXxf86vm-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

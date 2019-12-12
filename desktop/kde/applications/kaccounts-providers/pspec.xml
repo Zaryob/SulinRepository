@@ -17,7 +17,6 @@
         <Archive sha1sum="b127ad69b2236479a5b2be04d1fcc5da89b80a17" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/kaccounts-providers-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>kaccounts-integration-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -37,7 +36,6 @@
         <RuntimeDependencies>
             <Dependency>kaccounts-integration</Dependency>
             <Dependency>libaccounts-glib</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kpackage</Dependency>

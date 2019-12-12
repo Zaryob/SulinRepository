@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kconfigwidgets-devel</Dependency>
             <Dependency>kcompletion-devel</Dependency>
@@ -35,7 +34,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>karchive</Dependency>
             <Dependency>kcompletion</Dependency>

@@ -53,7 +53,6 @@
             <Dependency>libXrender-devel</Dependency>
             <Dependency>NetworkManager-devel</Dependency>
             <Dependency>networkmanager-qt-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
             <Dependency>prison-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>xorg-app-devel</Dependency>
@@ -64,8 +63,6 @@
             <Dependency>xcb-util-image-devel</Dependency>
             <Dependency>xcb-util-keysyms-devel</Dependency>
             <Dependency>xcb-util-renderutil-devel</Dependency>
-            <Dependency>xorg-util</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <!--Dependency>kholidays-devel</Dependency-->
@@ -118,7 +115,6 @@
             <Dependency>kxmlgui</Dependency>
             <Dependency>kxmlrpcclient</Dependency>
             <Dependency>libdbusmenu-qt</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libICE</Dependency>
             <Dependency>libkscreen</Dependency>
             <Dependency>libksysguard</Dependency>
@@ -131,7 +127,6 @@
             <Dependency>libXi</Dependency>
             <Dependency>libXrender</Dependency>
             <Dependency>networkmanager-qt</Dependency>
-            <Dependency>pam</Dependency>
             <Dependency>prison</Dependency>
             <Dependency>plasma-framework</Dependency>
             <Dependency>qt5-base</Dependency>
@@ -150,7 +145,6 @@
             <Dependency>kscreenlocker</Dependency>
             <Dependency>xcb-util-image</Dependency>
             <Dependency>xorg-app</Dependency>
-            <Dependency>zlib</Dependency>
             <!--Dependency>kholidays</Dependency-->
         </RuntimeDependencies>
         <Files>
@@ -230,7 +224,6 @@
             <Dependency>libXi-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>networkmanager-qt-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
             <Dependency>plasma-framework-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
@@ -242,7 +235,6 @@
             <Dependency>solid-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
             <Dependency>xcb-util-keysyms-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

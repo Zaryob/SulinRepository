@@ -16,7 +16,6 @@
         <Archive sha1sum="5cd06789874216c59ae70e84d42eab24afaa8742" type="targz">https://github.com/p11-glue/p11-kit/releases/download/0.23.17/p11-kit-0.23.17.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libtasn1-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,7 +23,6 @@
         <Name>p11-kit</Name>
         <RuntimeDependencies>
             <Dependency versionFrom="4.10">libtasn1</Dependency>
-            <Dependency>libffi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

@@ -35,11 +35,9 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
-            <Dependency>libutil-linux</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>libical</Dependency>
             <Dependency>kdelibs4-support</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>

@@ -74,7 +74,6 @@
             <Dependency>qt5-quickcontrols2</Dependency>
             <!--<Dependency>qt5-quick1</Dependency>--><!--no longer available-->
             <Dependency>mesa</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>kactivities</Dependency>

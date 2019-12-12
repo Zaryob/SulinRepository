@@ -31,7 +31,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>libical</Dependency>
             <Dependency>kcoreaddons</Dependency>

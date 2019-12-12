@@ -26,10 +26,8 @@
     <Package>
         <Name>obconf</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>openbox</Dependency>
             <Dependency>libglade</Dependency>
             <Dependency>gdk-pixbuf</Dependency>

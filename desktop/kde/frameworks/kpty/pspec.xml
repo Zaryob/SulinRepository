@@ -28,7 +28,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>utempter</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>ki18n</Dependency>
         </RuntimeDependencies>

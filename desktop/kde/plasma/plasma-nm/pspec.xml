@@ -16,7 +16,6 @@
         <Archive sha1sum="3cb2260c87d882ca2021b57b27d60424e9a98218" type="tarxz">mirrors://kde/stable/plasma/5.17.3/plasma-nm-5.17.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>networkmanager-qt-devel</Dependency>
             <Dependency>modemmanager-qt-devel</Dependency>
             <Dependency>ModemManager-devel</Dependency>
@@ -43,7 +42,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qca2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>openconnect</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>networkmanager-qt</Dependency>

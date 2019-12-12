@@ -19,12 +19,10 @@
             <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>qt5-sql-odbc</Dependency>
             <Dependency>qt5-sql-postgresql</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>shared-mime-info</Dependency>
             <Dependency>mariadb-bin-client</Dependency>
             <Dependency>mariadb-bin-server</Dependency>
             <Dependency>postgresql-server</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>boost-devel</Dependency>
             <Dependency>kitemmodels-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
@@ -39,8 +37,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>sqlite</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>qt5-sql-postgresql</Dependency>
             <Dependency>postgresql-server</Dependency>
@@ -49,7 +45,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>kitemviews</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kdbusaddons</Dependency>

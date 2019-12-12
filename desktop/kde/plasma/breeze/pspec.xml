@@ -42,7 +42,6 @@
         <Name>breeze-style</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kguiaddons</Dependency>
             <Dependency>kcoreaddons</Dependency>

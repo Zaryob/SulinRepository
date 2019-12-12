@@ -19,7 +19,6 @@
         <BuildDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kdoctools-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kauth-devel</Dependency>
@@ -51,7 +50,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kjobwidgets</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kwallet</Dependency>

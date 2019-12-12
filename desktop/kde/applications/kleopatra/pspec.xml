@@ -36,7 +36,6 @@
             <Dependency>gpgme</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kmime</Dependency>
-            <Dependency>libgcc</Dependency>
             <!--<Dependency>gpgmepp</Dependency>-->
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
@@ -48,7 +47,6 @@
             <Dependency>kdbusaddons</Dependency>
             <Dependency>kiconthemes</Dependency>
             <Dependency>ktextwidgets</Dependency>
-            <Dependency>libgpg-error</Dependency>
             <Dependency>kwindowsystem</Dependency>
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>knotifications</Dependency>

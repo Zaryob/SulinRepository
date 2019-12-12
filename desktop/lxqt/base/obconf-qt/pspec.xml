@@ -17,7 +17,6 @@
         <Archive sha1sum="1468271a9f09df9f83924e01172d7810242b1916" type="tarxz">https://downloads.lxqt.org/downloads/obconf-qt/0.14.1/obconf-qt-0.14.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>openbox-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>qt5-base-devel</Dependency>
         </BuildDependencies>
     </Source>

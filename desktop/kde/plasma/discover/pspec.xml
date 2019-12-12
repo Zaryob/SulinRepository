@@ -31,7 +31,6 @@
         <Name>discover</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>attica</Dependency>
             <Dependency>kconfig</Dependency>

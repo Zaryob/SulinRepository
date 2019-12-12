@@ -22,7 +22,6 @@
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXres-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>plasma-framework-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
@@ -33,8 +32,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>libXres</Dependency>
             <Dependency>qt5-webkit</Dependency>
             <Dependency>qt5-x11extras</Dependency>
@@ -63,7 +60,6 @@
             <Dependency release="current">libksysguard</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>libXres-devel</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>

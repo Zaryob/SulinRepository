@@ -15,18 +15,12 @@
         <Description>A plain C library to interface with the git version control system</Description>
         <Archive sha1sum="b9f2cdaafd8a0ff95eb565a592d650465242efab" type="targz">https://github.com/libgit2/libgit2/archive/v0.27.9.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>python3</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgit2</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -37,8 +31,6 @@
         <Name>libgit2-devel</Name>
         <RuntimeDependencies>
             <Dependency release="current">libgit2</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/pkgconfig</Path>

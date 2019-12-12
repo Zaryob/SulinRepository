@@ -15,7 +15,6 @@
         <Description>libical is an Open Source implementation of the IETF's iCalendar Calendaring and Scheduling protocols. (RFC 2445, 2446, and 2447). It parses iCal components and provides a C API for manipulating the component properties, parameters, and subcomponents.</Description>
         <Archive sha1sum="bbcb0d60f396b247b952c22e9c1d9e41fc4c4d6e" type="targz">https://github.com/libical/libical/releases/download/v3.0.6/libical-3.0.6.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 

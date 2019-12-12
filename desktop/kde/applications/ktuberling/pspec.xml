@@ -48,7 +48,6 @@
         <Summary>A simple constructor game suitable for children and adults alike</Summary>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-svg</Dependency>

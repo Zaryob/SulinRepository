@@ -16,11 +16,8 @@
         <Archive sha1sum="16fa8d44caa82db33c04f7764121190635c5184b" type="tarxz">mirrors://gnome/gupnp/1.2/gupnp-1.2.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>gssdp-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>vala-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -29,11 +26,8 @@
         <Name>gupnp</Name>
         <RuntimeDependencies>
             <Dependency>gobject-introspection</Dependency>
-            <Dependency>libutil-linux</Dependency>
             <Dependency>libsoup</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>gssdp</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>vala</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -49,9 +43,7 @@
         <Summary>Development files for gupnp</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gupnp</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>gssdp-devel</Dependency>
         </RuntimeDependencies>
         <Files>

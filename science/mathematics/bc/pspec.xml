@@ -14,16 +14,12 @@
         <Description>bc is an arbitrary precision numeric processing language and can be used as a calculator. Syntax is similar to C, but differs in many substantial areas. For example, it supports interactive execution of statements.</Description>
         <Archive sha1sum="97e1f5ad5a299e8e914a957e90dcdb01ac898ce1" type="targz">https://github.com/gavinhoward/bc/archive/2.1.3/bc-2.1.3.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>flex</Dependency>
-            <Dependency>texinfo</Dependency>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>bc</Name>
         <RuntimeDependencies>
-            <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

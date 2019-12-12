@@ -26,7 +26,6 @@
         <RuntimeDependencies>
             <Dependency>libsdl2</Dependency>
             <Dependency>tiff</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>

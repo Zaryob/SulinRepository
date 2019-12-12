@@ -65,7 +65,6 @@
             <Dependency>wayland-devel</Dependency>
             <Dependency>xcb-util-image-devel</Dependency>
             <Dependency>xcb-util-keysyms-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>libinput</Dependency>
             <Dependency>xcb-util-cursor-devel</Dependency>
             <Dependency>qt5-multimedia</Dependency>
@@ -107,7 +106,6 @@
             <Dependency>kscreenlocker</Dependency>
             <Dependency>kidletime</Dependency>
             <Dependency>libepoxy</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libXi</Dependency>
             <Dependency>libICE</Dependency>
             <Dependency>libSM</Dependency>
@@ -124,7 +122,6 @@
             <Dependency>wayland-client</Dependency>
             <Dependency>xcb-util-image</Dependency>
             <Dependency>xcb-util-keysyms</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>kpackage</Dependency>
             <Dependency>libdrm</Dependency>
             <Dependency>libinput</Dependency>
@@ -189,7 +186,6 @@
             <Dependency>wayland-devel</Dependency>
             <Dependency>xcb-util-image-devel</Dependency>
             <Dependency>xcb-util-keysyms-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>libinput</Dependency>
             <Dependency>xcb-util-cursor-devel</Dependency>
             <Dependency>qt5-multimedia-devel</Dependency>

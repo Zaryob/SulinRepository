@@ -14,7 +14,6 @@
         <Description>GUPnP-IGD is a plugin to handle Internet Gateway Device port mappings for UPnP connections.</Description>
         <Archive sha1sum="8650df82fff054bc703a0a8662d117761c3b5aea" type="tarxz">mirrors://gnome/gupnp-igd/0.2/gupnp-igd-0.2.5.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gupnp-devel</Dependency>
             <Dependency>gssdp-devel</Dependency>
             <Dependency>python3-pygobject3</Dependency>
@@ -27,7 +26,6 @@
     <Package>
         <Name>gupnp-igd</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>gupnp</Dependency>
             <Dependency>gssdp</Dependency>
             <Dependency>python3-pygobject3</Dependency>

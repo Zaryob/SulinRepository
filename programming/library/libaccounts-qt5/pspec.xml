@@ -17,7 +17,6 @@
             <Dependency>doxygen</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libaccounts-glib-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,8 +24,6 @@
     <Package>
         <Name>libaccounts-qt5</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>libaccounts-glib</Dependency>
         </RuntimeDependencies>
@@ -43,7 +40,6 @@
         <RuntimeDependencies>
             <Dependency release="current">libaccounts-qt5</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -69,7 +65,6 @@
         <Summary>This package contains the tools for the libaccounts-qt5 library</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libaccounts-qt5</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

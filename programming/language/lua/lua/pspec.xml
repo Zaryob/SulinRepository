@@ -17,7 +17,6 @@
             <AdditionalFile target="lua.pc">lua.pc</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">liblua.so.patch</Patch>
@@ -27,7 +26,6 @@
     <Package>
         <Name>lua</Name>
         <RuntimeDependencies>
-            <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

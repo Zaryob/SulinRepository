@@ -26,7 +26,6 @@
             <Dependency>kconfigwidgets-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>khtml-devel</Dependency>
             <Dependency>kxmlgui-devel</Dependency>
@@ -46,13 +45,11 @@
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kdoctools</Dependency>
-            <Dependency>gettext</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>khtml</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
         </RuntimeDependencies>
         <Files>

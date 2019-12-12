@@ -30,7 +30,6 @@
         <Name>kmediaplayer</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>    
             <Dependency>kparts</Dependency>    
             <Dependency>kxmlgui</Dependency>    
         </RuntimeDependencies>

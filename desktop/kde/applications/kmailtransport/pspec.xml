@@ -44,7 +44,6 @@
             <Dependency>libkgapi</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kmime</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kwallet</Dependency>

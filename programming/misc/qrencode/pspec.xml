@@ -15,8 +15,6 @@
         <Archive sha1sum="404505af5c6a3cfc9b5f97db8be288c734fce05e" type="targz">https://fukuchi.org/works/qrencode/qrencode-4.0.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl-devel</Dependency>
-            <Dependency>m4</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
         </BuildDependencies>
     </Source>

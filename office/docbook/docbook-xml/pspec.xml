@@ -24,7 +24,6 @@
         <Name>docbook-xml</Name>
         <RuntimeDependencies>
             <Dependency>sgml-common</Dependency>
-            <Dependency>libxml2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc/</Path>

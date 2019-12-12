@@ -21,10 +21,7 @@
             <Dependency>libXres-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>libXt-devel</Dependency>
-            <Dependency>gettext</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">libwnck-2.18.0-above.patch</Patch>
@@ -41,7 +38,6 @@
             <Dependency>cairo</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>atk</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -58,7 +54,6 @@
             <Dependency>cairo-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>libXres-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
         </RuntimeDependencies>

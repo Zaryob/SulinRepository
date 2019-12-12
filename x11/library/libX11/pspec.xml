@@ -16,9 +16,6 @@
         <Archive sha1sum="94f375f28e592a599594d3d6ce982516afdc212c" type="tarbz2">mirrors://xorg/individual/lib/libX11-1.6.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libxcb-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>util-macros</Dependency>
-            <Dependency>xtrans</Dependency>
         </BuildDependencies>
         <Patches>
             <!--<Patch level="1">fix_typo.diff</Patch>
@@ -44,7 +41,6 @@
         <RuntimeDependencies>
             <Dependency release="current">libX11</Dependency>
             <Dependency>libxcb-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/X11</Path>

@@ -26,7 +26,6 @@
         <Name>breeze-gtk</Name>
         <Summary>Breeze widget theme for GTK 2 and 3</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>breeze-style</Dependency>
             <Dependency>python3-cairo</Dependency>
             <Dependency>qt5-base</Dependency>

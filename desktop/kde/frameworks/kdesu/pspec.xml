@@ -36,7 +36,6 @@
             <Dependency>kservice</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>

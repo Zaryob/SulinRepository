@@ -22,7 +22,6 @@
             <Dependency>kservice-devel</Dependency>
             <Dependency>kxmlgui-devel</Dependency>
             <Dependency>pimcommon-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>openldap-client</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
@@ -61,7 +60,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>kcoreaddons</Dependency>

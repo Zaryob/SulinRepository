@@ -16,7 +16,6 @@
         <Description>perl-IPC-Run3 is a Perl module that runs a subprocess with input/ouput redirection.</Description>
         <Archive sha1sum="b035ea6e0a89f309d88a0472ab0e531f6e8626b1" type="targz">mirrors://cpan/authors/id/R/RJ/RJBS/IPC-Run3-0.048.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Test-Pod</Dependency>
             <Dependency>perl-Test-Simple</Dependency>
             <Dependency>perl-Time-Hires</Dependency>
@@ -25,7 +24,6 @@
     <Package>
         <Name>perl-IPC-Run3</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -36,7 +36,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <!--Dependency>accountsservice</Dependency-->
-            <Dependency>libgcc</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>

@@ -25,7 +25,6 @@
         <Name>kunitconversion</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ki18n</Dependency>
         </RuntimeDependencies>
         <Files>

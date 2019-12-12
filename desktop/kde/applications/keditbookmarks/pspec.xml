@@ -15,8 +15,6 @@
         <Archive sha1sum="5a012a4d757b0f09a7224527d673b217b87aaeff" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/keditbookmarks-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>kbookmarks-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
@@ -39,7 +37,6 @@
             <Dependency>kio</Dependency>
             <Dependency>kparts</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kservice</Dependency>

@@ -19,7 +19,6 @@
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>polkit-qt-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

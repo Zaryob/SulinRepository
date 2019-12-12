@@ -19,7 +19,6 @@
             <Dependency>libatasmart-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>parted-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
@@ -41,14 +40,12 @@
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>parted</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kiconthemes</Dependency>
             <Dependency>libatasmart</Dependency>
-            <Dependency>libutil-linux</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

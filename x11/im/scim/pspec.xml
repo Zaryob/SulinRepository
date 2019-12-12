@@ -19,7 +19,6 @@
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libXt-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -28,12 +27,10 @@
         <Summary>Core of SCIM for users</Summary>
         <RuntimeDependencies>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>scim-libs</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -51,7 +48,6 @@
         <Summary>Libraries of SCIM</Summary>
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libscim-*</Path>
@@ -77,7 +73,6 @@
         <Summary>IM Module for GTK3 applications</Summary>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -90,7 +85,6 @@
         <Summary>IM Module for GTK2 applications</Summary>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
         <Files>

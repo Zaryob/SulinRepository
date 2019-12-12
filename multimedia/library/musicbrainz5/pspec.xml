@@ -16,17 +16,13 @@
         <Archive sha1sum="1576b474c777bb9c4ff906853ef1d3bb14915f50" type="targz">https://github.com/metabrainz/libmusicbrainz/releases/download/release-5.1.0/libmusicbrainz-5.1.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>neon-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>python3-libxml2</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>musicbrainz5</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>python3-libxml2</Dependency>
             <Dependency>neon</Dependency>
         </RuntimeDependencies>
@@ -42,7 +38,6 @@
         <RuntimeDependencies>
             <Dependency release="current">musicbrainz5</Dependency>
             <Dependency>neon-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

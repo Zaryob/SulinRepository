@@ -21,7 +21,6 @@
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>kwallet-devel</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
@@ -31,7 +30,6 @@
         <Name>ksshaskpass</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>    
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>ki18n</Dependency>

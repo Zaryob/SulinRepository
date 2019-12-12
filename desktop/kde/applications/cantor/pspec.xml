@@ -46,7 +46,6 @@
             <Dependency>kpty</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>analitza</Dependency>

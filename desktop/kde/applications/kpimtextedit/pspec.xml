@@ -44,7 +44,6 @@
             <Dependency>kcodecs</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>sonnet</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kemoticons</Dependency>
             <Dependency>kcompletion</Dependency>
             <Dependency>ktextwidgets</Dependency>

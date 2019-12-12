@@ -18,7 +18,6 @@
             <AdditionalFile permission="0755" target="compile-voices">compile-voices.sh</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
-            <Dependency>coreutils</Dependency>
             <Dependency>portaudio-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
         </BuildDependencies>

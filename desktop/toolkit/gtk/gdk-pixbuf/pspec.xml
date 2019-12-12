@@ -16,7 +16,6 @@
         <Archive sha1sum="9396bd89c4647d8db2d02ef93c20c17dbce359d8" type="tarxz">mirrors://gnome/gdk-pixbuf/2.40/gdk-pixbuf-2.40.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>tiff</Dependency>
@@ -30,7 +29,6 @@
     <Package>
         <Name>gdk-pixbuf</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>tiff</Dependency>
@@ -56,7 +54,6 @@
         <Summary>Development files for gdk-pixbuf</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gdk-pixbuf</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/gdk-pixbuf-csource</Path>

@@ -15,7 +15,6 @@
         <Description>QT5-based multitab terminal emulator.</Description>
         <Archive sha1sum="5ca08bc1267c65a813926d330036811e6965505b" type="tarxz">https://downloads.lxqt.org/downloads/qterminal/0.14.1/qterminal-0.14.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
             <Dependency>libxcb-devel</Dependency>

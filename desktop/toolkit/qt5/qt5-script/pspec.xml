@@ -18,7 +18,6 @@
             <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>libgcc</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,7 +25,6 @@
         <Name>qt5-script</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

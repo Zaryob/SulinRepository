@@ -28,7 +28,6 @@
         <Name>kimageformats</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>openexr-libs</Dependency>
             <Dependency>ilmbase</Dependency>
         </RuntimeDependencies>

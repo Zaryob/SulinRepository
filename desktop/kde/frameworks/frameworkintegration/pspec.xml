@@ -42,7 +42,6 @@
     <Package>
         <Name>frameworkintegration</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>libXcursor</Dependency>

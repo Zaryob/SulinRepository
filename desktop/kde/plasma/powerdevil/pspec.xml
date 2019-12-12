@@ -20,7 +20,6 @@
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kidletime-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
             <Dependency>kinit-devel</Dependency>
             <Dependency>kunitconversion-devel</Dependency>
@@ -44,9 +43,7 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kidletime</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>plasma-workspace</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kauth</Dependency>

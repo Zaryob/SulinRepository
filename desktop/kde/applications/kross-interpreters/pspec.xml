@@ -34,7 +34,6 @@
         <Name>kross-interpreters</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>python</Dependency>
             <Dependency>kross</Dependency>
         </RuntimeDependencies>

@@ -32,7 +32,6 @@
         <Summary>KRunner plugin for KDE Telepathy</Summary>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>krunner</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kcoreaddons</Dependency>

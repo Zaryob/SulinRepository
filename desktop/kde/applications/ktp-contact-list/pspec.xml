@@ -39,7 +39,6 @@
         <Summary>KDE Telepathy contact list application</Summary>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kpeople</Dependency>
             <Dependency>kxmlgui</Dependency>

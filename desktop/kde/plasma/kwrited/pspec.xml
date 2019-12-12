@@ -33,7 +33,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kpty</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>knotifications</Dependency>
             <Dependency>kdbusaddons</Dependency>

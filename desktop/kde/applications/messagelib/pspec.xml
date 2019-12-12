@@ -69,7 +69,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-webengine</Dependency>
             <Dependency>akonadi-notes</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libkdepim</Dependency>
             <Dependency>mailimporter</Dependency>
             <Dependency>kio</Dependency>

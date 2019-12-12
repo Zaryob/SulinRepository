@@ -18,8 +18,6 @@
     <Package>
         <Name>screen</Name>
         <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
-            <Dependency>pam</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/run</Path>

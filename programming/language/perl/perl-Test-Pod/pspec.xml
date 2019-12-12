@@ -15,14 +15,12 @@
         <Description>Check POD files for errors or warnings in a test file, using Pod::Simple.</Description>
         <Archive sha1sum="ee3c3c98b27d39c173a23d12d47a502da136ae39" type="targz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Pod-1.52.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Test-Pod</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

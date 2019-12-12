@@ -17,8 +17,6 @@
         <Archive sha1sum="22a87858eaf99200f51303e272664f55f4ad6245" type="zip">https://master.dl.sourceforge.net/project/quazip/quazip/0.7.3/quazip-0.7.3.zip</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,8 +24,6 @@
         <Name>quazip</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
