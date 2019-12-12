@@ -235,6 +235,1318 @@
             </Maintainer>
         </Component>
 
+        <Component>
+            <Name>desktop</Name>
+            <LocalName xml:lang="en">desktop component</LocalName>
+            <LocalName xml:lang="tr">masaüstü bileşeni</LocalName>
+            <LocalName xml:lang="az">masaüstü komponentiy</LocalName>
+            <LocalName xml:lang="ru">настольный компонент</LocalName>
+            <LocalName xml:lang="de">composant de bureau</LocalName>
+            <LocalName xml:lang="fr">composant de bureau</LocalName>
+            <Summary xml:lang="en">Component that includes desktop software and desktop environments</Summary>
+            <Summary xml:lang="tr">Masaüstü yazılımları ve masaüstü ortamlarını içeren bileşen</Summary>
+            <Summary xml:lang="az">Bu masa üstü kompüter üçün proqram olan komponentdir.</Summary>
+            <Summary xml:lang="ru">Компонент, который включает в себя программное обеспечение рабочего стола и среды рабочего стола</Summary>
+            <Summary xml:lang="de">Komponente, die desktop-software und desktop-Umgebungen</Summary>
+            <Summary xml:lang="fr">Composante qui comprend les logiciels et les environnements de bureau</Summary>
+            <Description xml:lang="en">Desktop component includes basic desktop and gui toolkits (GimpToolKit, QT) and desktop environments and applications built with these tool kits. In that component, all desktop environments, especially KDE gnome Xfce LXDE and lxqt are available.</Description>
+            <Description xml:lang="tr">Masaüstü bileşeni temel masaüstü ve guı araç kitleri (Gımptoolkit, QT) ve masaüstü ortamları ve bu araç kitleri ile inşa uygulamaları içerir. Bu bileşende, tüm masaüstü ortamları, özellikle KDE gnome XFCE LXDE ve lxqt mevcuttur.</Description>
+            <Description xml:lang="az">Komponent Desktop daxildir əsas dəstləri və alətləri üçün masa üstü kompüter və qrafik istifadəçi interfeysi (GimpToolKit, QT) və ətraf mühitin masa üstü və proqramlar vasitəsilə yaradılmış bu alətlər dəsti. Bu komponent bütün masa üstü mühitləri, xüsusilə gnome Xfce LXDE və lxqt KDE mövcuddur.</Description>
+            <Description xml:lang="ru">Компонент Desktop включает в себя основные наборы инструментов для настольных компьютеров и графического интерфейса пользователя (GimpToolKit, QT) и среды рабочего стола и приложения, созданные с помощью этих наборов инструментов. В этом компоненте доступны все среды рабочего стола, особенно KDE gnome Xfce LXDE и lxqt.</Description>
+            <Description xml:lang="de">Die Desktop-Komponente umfasst die grundlegende desktop - und grafische Benutzeroberfläche (GimpToolKit, QT) sowie die mit diesen toolkits erstellten desktop-Umgebungen und-Anwendungen. Alle desktop-Umgebungen sind in dieser Komponente verfügbar, insbesondere KDE gnome Xfce LXDE und lxqt.</Description>
+            <Description xml:lang="fr">La composante de bureau comprend le bureau de base et l'interface graphique utilisateur (GimpToolKit, QT) toolkits et les environnements de bureau et les applications créées avec ces toolkits. Tous les environnements de bureau sont disponibles dans cette composante, en particulier KDE gnome Xfce LXDE et lxqt.</Description>
+            <Group>other</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.addon</Name>
+            <LocalName xml:lang="en">desktop addons</LocalName>
+            <LocalName xml:lang="tr">masaüstü eklentileri</LocalName>
+            <LocalName xml:lang="az">masaüstü genişləndirilməsi</LocalName>
+            <LocalName xml:lang="ru">настольные аддоны</LocalName>
+            <LocalName xml:lang="de">desktop-addons</LocalName>
+            <LocalName xml:lang="fr">bureau addons</LocalName>
+            <Summary xml:lang="en">Includes some common plug-in libraries for desktop environments.</Summary>
+            <Summary xml:lang="tr">Masaüstü ortamlarına ait bazı ortak eklenti kütüphanelerini içerir.</Summary>
+            <Summary xml:lang="az">Masa üstü mühit üçün plug-ins bəzi ümumi kitabxana daxildir.</Summary>
+            <Summary xml:lang="ru">включает в себя некоторые общие библиотеки плагинов для настольных сред.</Summary>
+            <Summary xml:lang="de">Enthält einige gängige plug-in-Bibliotheken für desktop-Umgebungen.</Summary>
+            <Summary xml:lang="fr">Inclut quelques bibliothèques plug-in communes pour les environnements de bureau.</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>other</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.toolkit</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.toolkit.qt</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.toolkit.qt5</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.toolkit.motif</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.toolkit.gtk</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.toolkit.clutter</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.mate</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>mate.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.mate.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>mate.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.mate.extras</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>mate.desktop.extras</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.lookandfeel</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>xfce.addon</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.misc</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>other</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.gnome2</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>gnome2.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.gnome</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>gnome.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.gnome.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>gnome.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.gnome.addons</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>gnome.desktop.addons</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.font</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>fonts</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.openbox</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.fluxbox</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.fluxbox.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.fluxbox.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.enlightenment</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>enlightenment.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.enlightenment.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>enlightenment.addon</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.enlightenment.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>enlightenment.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.i3</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>i3.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.admin</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.network</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.sdk</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.toys</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.bindings</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdebindings</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.multimedia</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdemultimedia</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.utils</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdeutils</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.edu</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdeedu</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.accessibility</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdeaccessibility</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.graphics</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdegraphics</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.games</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.kdegames</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.l10n</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>localization</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lxqt</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>lxqt.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lxqt.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>lxqt.addon</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lxqt.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>lxqt.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lxde</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>lxde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lxde.addon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>lxde.addon</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.lxde.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>lxde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1898,1306 +3210,6 @@
             <Description xml:lang="de">FIXME</Description>
             <Description xml:lang="fr">FIXME</Description>
             <Group>science</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>other</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lookandfeel</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>other</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.toolkit</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>programming</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.toolkit.qt</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>programming</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.toolkit.qt5</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>programming</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.toolkit.motif</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>programming</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.toolkit.gtk</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>programming</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.toolkit.clutter</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>programming</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.mate</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>mate.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.mate.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>mate.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.mate.extras</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>mate.desktop.extras</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce.lookandfeel</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.addon</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.misc</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>other</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.gnome2</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>gnome2.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.gnome</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>gnome.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.gnome.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>gnome.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.gnome.addons</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>gnome.desktop.addons</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.font</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>fonts</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.openbox</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.fluxbox</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.fluxbox.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.fluxbox.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.enlightenment</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>enlightenment.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.enlightenment.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>enlightenment.addon</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.enlightenment.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>enlightenment.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.i3</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>i3.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.admin</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.network</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.sdk</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.toys</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.bindings</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdebindings</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.multimedia</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdemultimedia</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.utils</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdeutils</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.edu</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdeedu</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.accessibility</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdeaccessibility</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.graphics</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdegraphics</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.games</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>kde.kdegames</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.kde.l10n</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>localization</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lxqt</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>lxqt.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lxqt.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>lxqt.addon</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lxqt.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>lxqt.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lxde</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>lxde.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lxde.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>lxde.addon</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.lxde.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>lxde.desktop</Group>
             <Maintainer>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
