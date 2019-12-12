@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xplanet</Name>
+        <Homepage>http://xplanet.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Render a planetary image into an X window</Summary>
+        <Description>Xplanet was inspired by Xearth, which renders an image of the earth into the X root window. All of the major planets and most satellites can be drawn, similar to the Solar System Simulator. A number of different map projections are also supported, including azimuthal, Lambert, Mercator, Mollweide, orthographic, and rectangular.</Description>
+        <Archive sha1sum="e711dc5a561f83d5bafcc4e47094addfd1806af7" type="targz">https://netcologne.dl.sourceforge.net/project/xplanet/xplanet/1.3.1/xplanet-1.3.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>netpbm-devel</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>giflib6.patch</Patch>
+            <Patch>xplanet-1.3.1-remove-null-comparison.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>xplanet</Name>
+        <RuntimeDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>netpbm</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-13</Date>
+            <Version>1.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
