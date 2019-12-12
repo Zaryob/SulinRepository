@@ -20,13 +20,7 @@
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>libepoxy-devel</Dependency>
             <Dependency>at-spi2-core-devel</Dependency>
-            <!--Dependency>python-gtk-devel</Dependency>-->
-            <!--not mono <Dependency>mono-devel</Dependency>
-            <Dependency>gtk-sharp-devel</Dependency>-->
         </BuildDependencies>
-        <Patches>
-<!--             <Patch level="1">avahi-0.6.31-no-deprecations.patch</Patch> -->
-        </Patches>
     </Source>
 
     <Package>
@@ -167,13 +161,11 @@
         <Summary>UI tools for mDNS browsing</Summary>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
-	    <!--<Dependency>python-gtk</Dependency>-->
             <Dependency release="current">avahi</Dependency>
             <Dependency release="current">avahi-ui</Dependency>
             <Dependency release="current">avahi-glib</Dependency>
             <Dependency release="current">avahi-ui-gtk3</Dependency>
             <Dependency release="current">avahi-libs</Dependency>
-            <Dependency>gtk3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python*/site-packages</Path>
