@@ -105,6 +105,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="5">
+            <Date>2019-12-13</Date>
+            <Version>7.66.0</Version>
+            <Comment>REcompiled due to lack of some ldd links.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="4">
             <Date>2019-11-18</Date>
             <Version>7.66.0</Version>
