@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Dependency based init system that works with sysvinit.</Summary>
         <Description>Dependency based init system that works with sysvinit.</Description>
-        <Archive sha1sum="dfc5e16a1f32d320f6056f774997e5f6dfbfcba9" type="targz">https://github.com/OpenRC/openrc/archive/0.24.2.tar.gz</Archive>
+        <Archive sha1sum="a8c47060eb90a7e212a48dc58c0b3abe20940f9c" type="targz">https://github.com/OpenRC/openrc/archive/0.42.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>pam</Dependency>
@@ -64,6 +64,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="4">
+            <Date>2019-12-13</Date>
+            <Version>0.42.1</Version>
+            <Comment>Automatic version upgrade.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="3">
             <Date>2019-11-19</Date>
             <Version>0.24.2</Version>
