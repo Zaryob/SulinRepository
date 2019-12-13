@@ -16,7 +16,7 @@
         <Summary>A ut ility for getting files from remote servers</Summary>
         <Description>curl is a command line tool for transferring data with URL syntax, supporting various protocols.</Description>
         <!-- @@@blfs basicnet curl -->
-        <Archive sha1sum="c2a57bf4976743770e0ca6f312d34f15237ef209" type="tarbz2">http://curl.haxx.se/download/curl-7.66.0.tar.bz2</Archive>
+        <Archive sha1sum="e7d38ff78c8590ccbf5d0ed767cae4b0f0fb55e3" type="tarbz2">http://curl.haxx.se/download/curl-7.67.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>glibc-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -107,8 +107,8 @@
     <History>
         <Update release="5">
             <Date>2019-12-13</Date>
-            <Version>7.66.0</Version>
-            <Comment>REcompiled due to lack of some ldd links.</Comment>
+            <Version>7.67.0</Version>
+            <Comment>REcompiled and new upstream release bumped due to lack of some ldd links.</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
