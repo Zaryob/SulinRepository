@@ -38,6 +38,6 @@ def install():
     inarytools.dodir("/etc/env.d")
     shelltools.echo("%s/etc/env.d/50guile" % get.installDIR(), 'GUILE_LOAD_PATH="/usr/share/guile/%s"' % major)
     
-    inarytools.domove("/usr/lib/libguile-2.0.so.22.*.scm", "/usr/share/gdb/auto-load")
+    inarytools.domove("/usr/lib/libguile-2.2.so.*.scm", "/usr/share/gdb/auto-load")
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "HACKING", "NEWS", "README", "THANKS")

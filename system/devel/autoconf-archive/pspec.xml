@@ -14,7 +14,7 @@
             <Dependency>autoconf</Dependency>
             <Dependency>automake</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="6177513edcf3998e07684cf65fbb7470acc72997" type="tarxz">mirrors://gnu/autoconf-archive/autoconf-archive-2018.03.13.tar.xz</Archive>
+        <Archive sha1sum="25986729b9a156a6aee058e6bcf90406659eac83" type="tarxz">mirrors://gnu/autoconf-archive/autoconf-archive-2019.01.06.tar.xz</Archive>
     </Source>
     <Package>
         <Name>autoconf-archive</Name>
@@ -40,6 +40,13 @@
           </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2019-12-13</Date>
+            <Version>2019.01.06</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>2018.03.13</Version>
