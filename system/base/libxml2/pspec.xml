@@ -44,7 +44,7 @@
     </Package>
     <Package>
         <Name>python3-libxml2</Name>
-      	<PartOf>programming.language.python</PartOf>
+        <PartOf>programming.language.python</PartOf>
         <RuntimeDependencies>
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
@@ -55,7 +55,7 @@
     <Package>
         <Name>python-libxml2</Name>
         <BuildType>rebuild_python</BuildType>
-      	<PartOf>programming.language.python</PartOf>
+        <PartOf>programming.language.python</PartOf>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
         </RuntimeDependencies>

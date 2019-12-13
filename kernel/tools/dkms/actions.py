@@ -5,4 +5,4 @@ def build():
     autotools.make()
 
 def install():
-	autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
+    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))

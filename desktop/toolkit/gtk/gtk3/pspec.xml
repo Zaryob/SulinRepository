@@ -14,7 +14,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>The GIMP Toolkit version 3</Summary>
         <Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-	<Archive sha1sum="daa1657db7716ff53c500de679dfbd1d965d8010" type="tarbz2">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.12/gtk-3.24.12.tar.bz2</Archive>
+        <Archive sha1sum="daa1657db7716ff53c500de679dfbd1d965d8010" type="tarbz2">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.12/gtk-3.24.12.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>

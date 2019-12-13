@@ -19,7 +19,7 @@
     </Source>
     <Package>
         <Name>libedit</Name>
-	<RuntimeDependencies>
+        <RuntimeDependencies>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

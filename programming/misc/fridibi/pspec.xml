@@ -11,7 +11,7 @@
         <License>LGPLv2</License>
         <IsA>library</IsA>
         <Summary>A Free Implementation of the Unicode Bidirectional Algorithm.</Summary>
-	<Description>A Free Implementation of the Unicode Bidirectional Algorithm</Description>
+        <Description>A Free Implementation of the Unicode Bidirectional Algorithm</Description>
         <Archive sha1sum="39d2bcb3ef93365222e7cdaf648cd167785ec3bf" type="tarbz2">https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2</Archive>
         <BuildDependencies>
         </BuildDependencies>

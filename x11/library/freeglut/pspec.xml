@@ -55,7 +55,7 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <Dependency>mesa-32bit</Dependency>
-	    <Dependency>mesa-glu-32bit</Dependency>
+            <Dependency>mesa-glu-32bit</Dependency>
             <Dependency>libXi-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
             <Dependency>libXxf86vm-32bit</Dependency>

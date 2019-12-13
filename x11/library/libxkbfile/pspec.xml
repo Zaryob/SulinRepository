@@ -33,7 +33,7 @@
         <Summary>Development files for libxkbfile</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libxkbfile</Dependency>
-	    <Dependency>libX11-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/X11</Path>

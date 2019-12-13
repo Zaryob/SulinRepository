@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -43,7 +42,6 @@
             <Dependency>fftw3</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kcrash</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libogg</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

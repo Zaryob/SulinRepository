@@ -19,9 +19,9 @@ def setup():
 
     autotools.autoreconf("-vfi")
     autotools.configure("""--with-packager="Sulin" \
-    		               --with-packager-version="3.6" \
-    		                --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
-                            --enable-nls""")
+                           --with-packager-version="3.6" \
+                           --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
+                           --enable-nls""")
 
 def build():
     autotools.make('LDFLAGS="%s"' % get.LDFLAGS())

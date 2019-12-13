@@ -10,13 +10,13 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>library</IsA>
-	      <PartOf>desktop.xfce.plugin</PartOf>
+        <PartOf>desktop.xfce.plugin</PartOf>
         <Summary>A plugin allows you to create and extract archive files</Summary>
         <Description>The Thunar Archive Plugin allows you to create and extract archive files using the file context menus in the Thunar file manager.</Description>
         <Archive sha1sum="a5f2e9c57b2439364b089eeccd1a7d0e926a0cc2" type="tarbz2">http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.4/thunar-archive-plugin-0.4.0.tar.bz2</Archive>
         <BuildDependencies>
-          <Dependency>exo-devel</Dependency>
-      	    <Dependency>Thunar-devel</Dependency>
+            <Dependency>exo-devel</Dependency>
+            <Dependency>Thunar-devel</Dependency>
         </BuildDependencies>
     </Source>
 

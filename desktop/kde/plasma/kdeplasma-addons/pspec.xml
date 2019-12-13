@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -42,7 +41,7 @@
     <Package>
         <Name>kdeplasma-addons</Name>
         <RuntimeDependencies>
-             <Dependency>qt5-base</Dependency>	
+             <Dependency>qt5-base</Dependency>  
              <Dependency>plasma-framework</Dependency>
              <Dependency>libxcb</Dependency>
              <Dependency>xcb-util-image</Dependency>

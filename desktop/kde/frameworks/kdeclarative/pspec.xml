@@ -88,7 +88,7 @@
             <Dependency>kio-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency release="current">kdeclarative</Dependency>	    
+            <Dependency release="current">kdeclarative</Dependency>         
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

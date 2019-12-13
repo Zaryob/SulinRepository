@@ -27,7 +27,6 @@
         <Name>snorenotify</Name>
         <Summary>Multi-platform Qt5 notification framework</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-multimedia</Dependency>
             <Dependency>qt5-websockets</Dependency>

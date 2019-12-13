@@ -26,10 +26,10 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libwnck3-devel</Dependency>
             <Dependency>keybinder3-devel</Dependency>
-      	    <Dependency>libfm-devel</Dependency>
-      	    <Dependency>libXtst-devel</Dependency>
-      	    <Dependency>at-spi2-atk</Dependency>
-      	    <Dependency>at-spi2-core</Dependency>
+            <Dependency>libfm-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+            <Dependency>at-spi2-core</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -58,7 +58,7 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share</Path>
-      	    <Path fileType="config">/etc/xdg/lxpanel</Path>
+            <Path fileType="config">/etc/xdg/lxpanel</Path>
         </Files>
     </Package>
 

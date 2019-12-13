@@ -89,7 +89,7 @@
         <Files>
             <Path fileType="data">/usr/lib/pkgconfig/avahi-ui-sharp.pc</Path>
         </Files>
-	</Package>-->
+        </Package>-->
 
     <Package>
         <Name>avahi-ui</Name>

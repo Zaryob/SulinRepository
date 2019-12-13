@@ -10,7 +10,7 @@
         </Packager>
         <License>LGPLv2</License>
         <IsA>library</IsA>
-	      <IsA>app:console</IsA>
+        <IsA>app:console</IsA>
         <PartOf>desktop.kde.frameworks</PartOf>
         <Summary>HTML rendering engine for KDE</Summary>
         <Description>KHTML is a web rendering engine, based on the KParts technology and using KJS for JavaScript support.</Description>

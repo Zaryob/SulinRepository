@@ -17,7 +17,6 @@
         <Archive sha1sum="bb63ebe472067a6cda44185d1d0efc1731260498" type="tarxz">https://download.kde.org/stable/release-service/19.12.0/src/kio-extras-19.12.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>exiv2-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>karchive-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
@@ -83,7 +82,6 @@
             <Dependency>kpty</Dependency>
             <Dependency>kservice</Dependency>
             <Dependency>kxmlgui</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>libmtp</Dependency>
             <Dependency>qt5-base</Dependency>

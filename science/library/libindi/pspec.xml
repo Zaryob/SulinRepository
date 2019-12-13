@@ -18,13 +18,8 @@
              <Dependency>libnova-devel</Dependency>
              <Dependency>cfitsio-devel</Dependency>
              <Dependency>gsl-devel</Dependency>
-             <Dependency>curl-devel</Dependency>
              <Dependency>libjpeg-turbo-devel</Dependency>
-             <Dependency>libusb-devel</Dependency>
              <Dependency>boost-devel</Dependency>
-             <Dependency>zlib-devel</Dependency>
-             <Dependency>pkgconfig</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -34,12 +29,8 @@
             <Dependency>libnova</Dependency>
             <Dependency>cfitsio</Dependency>
             <Dependency>gsl</Dependency>
-            <Dependency>curl</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>libusb</Dependency>
             <Dependency>gsl</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

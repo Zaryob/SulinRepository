@@ -14,7 +14,6 @@
         <Description>Service Location Protocol is an IETF standards track protocol that provides a framework to allow networking applications to discover the existence, location, and configuration of networked services in enterprise networks.</Description>
         <Archive sha1sum="e4630bfb986cdffab6bb829b37e9340c9152d838" type="targz">https://gitlab.com/sulinos/resources/binaries/raw/master/openslp-2.0.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </BuildDependencies>
@@ -32,7 +31,6 @@
     <Package>
         <Name>openslp</Name>
         <RuntimeDependencies>
-            <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/slp.conf</Path>
@@ -51,7 +49,6 @@
         <Summary>OpenSLP server daemon</Summary>
         <Description>openslp-server contains ths OpenSLP server daemon to dynamically register services.</Description>
         <RuntimeDependencies>
-            <Dependency>openssl</Dependency>
             <Dependency release="current">openslp</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -70,7 +67,6 @@
         <Summary>Development files for openslp</Summary>
         <RuntimeDependencies>
             <Dependency release="current">openslp</Dependency>
-            <Dependency>openssl-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

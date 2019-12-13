@@ -34,7 +34,7 @@
     
     <Package>
         <Name>libepoxy-devel</Name>
-	<Summary>Development files for libepoxy</Summary>
+        <Summary>Development files for libepoxy</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libepoxy</Dependency>
         </RuntimeDependencies>

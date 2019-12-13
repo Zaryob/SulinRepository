@@ -56,9 +56,9 @@
         </Files>
     </Package>
     <Package>
-      	<Name>tcl-docs</Name>
-	      <IsA>data:doc</IsA>
-	      <Summary>Documentation for tcl package.</Summary>
+        <Name>tcl-docs</Name>
+              <IsA>data:doc</IsA>
+              <Summary>Documentation for tcl package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">tcl</Dependency>
         </RuntimeDependencies>
@@ -68,9 +68,9 @@
     </Package>
 
     <Package>
-      	<Name>tcl-pages</Name>
-	      <IsA>data:doc</IsA>
-	      <Summary>Man pages for tcl package.</Summary>
+        <Name>tcl-pages</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Man pages for tcl package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">tcl</Dependency>
         </RuntimeDependencies>

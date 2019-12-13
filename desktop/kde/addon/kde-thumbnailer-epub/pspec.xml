@@ -27,7 +27,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>karchive</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -19,21 +19,21 @@ def setup():
 
     options ="PYTHON=/usr/bin/python3 \
                         --prefix=/usr \
-          		--sysconfdir=/etc \
-           		--enable-llvm \
-          		--enable-gbm \
-          		--enable-gles1 \
-          		--enable-gles2 \
-          		--enable-glx-tls \
-          		--enable-osmesa \
-          		--enable-texture-float \
+                        --sysconfdir=/etc \
+                        --enable-llvm \
+                        --enable-gbm \
+                        --enable-gles1 \
+                        --enable-gles2 \
+                        --enable-glx-tls \
+                        --enable-osmesa \
+                        --enable-texture-float \
                         --enable-autotools \
-          		--enable-xa \
-          		--enable-vdpau \
-          		--enable-llvm-shared-libs \
-          		--disable-dependency-tracking \
-          		--with-platforms=x11,drm,wayland \
-          		--with-gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast \
+                        --enable-xa \
+                        --enable-vdpau \
+                        --enable-llvm-shared-libs \
+                        --disable-dependency-tracking \
+                        --with-platforms=x11,drm,wayland \
+                        --with-gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast \
                         --with-dri-drivers=i915,i965,r200,nouveau \
                         --with-vulkan-drivers=intel,radeon"
 

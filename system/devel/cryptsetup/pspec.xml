@@ -55,21 +55,21 @@
     </Package>
 
     <Package>
-      	<Name>cryptsetup-docs</Name>
-	      <PartOf>system.doc</PartOf>
-	      <Summary>Documentation for cryptsetup package.</Summary>
+        <Name>cryptsetup-docs</Name>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for cryptsetup package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">cryptsetup</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
-          </Files>
+        </Files>
     </Package>
 
     <Package>
-      	<Name>cryptsetup-pages</Name>
-      	<PartOf>system.doc</PartOf>
-      	<Summary>Man pages for cryptsetup package.</Summary>
+        <Name>cryptsetup-pages</Name>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for cryptsetup package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">cryptsetup</Dependency>
         </RuntimeDependencies>

@@ -31,7 +31,7 @@
             <Dependency>kwidgetsaddons-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-         </BuildDependencies>	
+         </BuildDependencies>   
     </Source>
 
     <Package>

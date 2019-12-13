@@ -47,10 +47,10 @@
         </Files>
     </Package>
     <Package>
-      	<Name>acl-docs</Name>
-	      <IsA>data:doc</IsA>
+        <Name>acl-docs</Name>
+        <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
-	      <Summary>Documentation for acl package.</Summary>
+        <Summary>Documentation for acl package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">acl</Dependency>
         </RuntimeDependencies>
@@ -60,10 +60,10 @@
     </Package>
 
     <Package>
-      	<Name>acl-pages</Name>
-	      <IsA>data:doc</IsA>
+        <Name>acl-pages</Name>
+        <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
-	      <Summary>Man pages for acl package.</Summary>
+        <Summary>Man pages for acl package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">acl</Dependency>
         </RuntimeDependencies>

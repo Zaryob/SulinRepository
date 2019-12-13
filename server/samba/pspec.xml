@@ -77,7 +77,7 @@
             <Path fileType="data">/usr/libexec/ctdb/</Path>
             <Path fileType="data">/var/cache/samba</Path>
             <Path fileType="data">/usr/share/ctdb</Path>
-	          <Path fileType="data">/var/run/ctdb</Path>
+            <Path fileType="data">/var/run/ctdb</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/samba.conf</Path>
         </Files>

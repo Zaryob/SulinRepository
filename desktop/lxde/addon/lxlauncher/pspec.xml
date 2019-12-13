@@ -18,7 +18,7 @@
             <Dependency>startup-notification-devel</Dependency>
             <Dependency>lxde-menu-cache-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
-	          <Dependency>cairo-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
         </BuildDependencies>

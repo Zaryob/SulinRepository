@@ -12,8 +12,6 @@
         <Description>Smart folder comparison, It depends only on KDE Frameworks.</Description>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kdbusaddons-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
@@ -41,7 +39,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>kitemviews</Dependency>

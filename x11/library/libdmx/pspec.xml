@@ -23,7 +23,7 @@
         <Name>libdmx</Name>
         <RuntimeDependencies>
             <Dependency>libXext</Dependency>
-	    <Dependency>libX11</Dependency>
+            <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -14,10 +13,10 @@
         <IsA>app:gui</IsA>
         <Summary>GUI configuration tool for compton X composite manager.</Summary>
         <Description>GUI configuration tool for compton X composite manager.</Description>
-	      <Archive sha1sum="286d60ac0a5805c1c9f1817dd93c1ce6cad645ab" type="tarxz">https://downloads.lxqt.org/downloads/compton-conf/0.14.1/compton-conf-0.14.1.tar.xz</Archive>
+            <Archive sha1sum="286d60ac0a5805c1c9f1817dd93c1ce6cad645ab" type="tarxz">https://downloads.lxqt.org/downloads/compton-conf/0.14.1/compton-conf-0.14.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-	          <Dependency>libconfig-devel</Dependency>
+            <Dependency>libconfig-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,12 +24,12 @@
         <Name>compton-conf</Name>
         <RuntimeDependencies>
             <Dependency>qt</Dependency>
-	          <Dependency>libconfig</Dependency>
+            <Dependency>libconfig</Dependency>
         </RuntimeDependencies>
         <Files>
-    	      <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share</Path>
-    	      <Path fileType="data">/etc/autostart/lxqt-compton.desktop</Path>
+            <Path fileType="data">/etc/autostart/lxqt-compton.desktop</Path>
         </Files>
     </Package>
     <History>

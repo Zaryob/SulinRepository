@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -43,7 +42,7 @@
             <Path fileType="data">/usr/share/kservices5</Path>
             <Path fileType="data">/usr/share/config.kcfg</Path>
             <Path fileType="library">/usr/lib</Path>
-	    <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>

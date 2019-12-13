@@ -27,10 +27,10 @@
         </Files>
     </Package>
     <Package>
-      	<Name>yasm-docs</Name>
-	      <IsA>data:doc</IsA>
+        <Name>yasm-docs</Name>
+        <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
-	      <Summary>Documentation for yasm package.</Summary>
+        <Summary>Documentation for yasm package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">yasm</Dependency>
         </RuntimeDependencies>
@@ -40,10 +40,10 @@
     </Package>
 
     <Package>
-      	<Name>yasm-pages</Name>
-	 <IsA>data:doc</IsA>
+        <Name>yasm-pages</Name>
+         <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
-	      <Summary>Man pages for yasm package.</Summary>
+        <Summary>Man pages for yasm package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">yasm</Dependency>
         </RuntimeDependencies>

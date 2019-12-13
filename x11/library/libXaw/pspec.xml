@@ -48,7 +48,7 @@
             <Dependency>libXpm-devel</Dependency>
             <Dependency>libXt-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-	    </RuntimeDependencies>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/X11</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>

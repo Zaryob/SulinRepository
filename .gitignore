@@ -13,3 +13,7 @@ MYMETA.*
 *~Stashed changes
 nohup.out
 sedrSmcUs
+
+*.xml~
+
+*.py~

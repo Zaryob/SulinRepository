@@ -74,7 +74,7 @@
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="library">/usr/lib/pidgin</Path>
             <Path fileType="config">/etc/gconf/schemas</Path>
-	    <Path fileType="data">/usr/share/appdata/</Path>
+            <Path fileType="data">/usr/share/appdata/</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/applications</Path>
         </Files>

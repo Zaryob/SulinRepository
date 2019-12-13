@@ -20,7 +20,7 @@
             <Dependency>lua-devel</Dependency>
             <Dependency>apr-util-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
-	 </BuildDependencies>
+         </BuildDependencies>
     </Source>
 
     <Package>

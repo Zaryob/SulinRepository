@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Icon>gpicview</Icon>
         <IsA>app:gui</IsA>
-	      <PartOf>desktop.lxde.addon</PartOf>
+        <PartOf>desktop.lxde.addon</PartOf>
         <Summary>A Simple and Fast Image Viewer for X</Summary>
         <Description>GPicView is a simple and fast image viewer for X.</Description>
         <Archive sha1sum="423143c850390db9784ad9812b9f929c18dd51ea" type="targz">mirrors://sourceforge/lxde/gpicview-0.2.4.tar.gz</Archive>

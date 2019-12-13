@@ -1,0 +1,37 @@
+
+* working on /devel/appling/inary-index.xml
+* working on /home/suleyman/sourceforge/SulinRepository/inary-index.xml
+
+* Packages missing in /home/suleyman/sourceforge/SulinRepository/inary-index.xml
+  desktop/kde/applications/konversation
+  desktop/lxqt/base/lxqt-notificationd
+  desktop/toolkit/gtk/gtksourceview3
+  desktop/toolkit/gtk/gtkspell3
+  desktop/xfce/lookandfeel/gtk-style-xfce
+  programming/language/python/polkit-python
+  programming/misc/gamin
+  server/database/mariadb-source
+  system/boot/efibootmgr
+  system/boot/efivar
+  system/boot/grub2
+  util/misc/figlet
+  x11/driver/libva-intel-driver
+  x11/driver/vdpau-video
+  x11/driver/xorg-input-aiptek
+  x11/driver/xorg-input-hyperpen
+  x11/driver/xorg-video-armsoc-odroid
+  x11/driver/xorg-video-geode
+  x11/driver/xorg-video-mach64
+  x11/driver/xorg-video-newport
+  x11/driver/xorg-video-nv
+  x11/driver/xorg-video-r128
+  x11/driver/xorg-video-radeon
+  x11/driver/xorg-video-rendition
+  x11/driver/xorg-video-s3virge
+  x11/driver/xorg-video-savage
+  x11/driver/xorg-video-siliconmotion
+  x11/driver/xorg-video-tseng
+
+* Packages that needs compiling
+  system/base/baselayout  (2 > 1)
+

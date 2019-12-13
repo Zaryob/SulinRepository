@@ -55,7 +55,7 @@
             <Path fileType="library">/usr/lib/galera/libgalera_smm.so</Path>
             <Path fileType="library">/usr/lib/mysql/plugin</Path>
             <Path fileType="data">/usr/lib/simple_password_check*</Path>
-	          <Path fileType="data">/usr/share/aclocal/mysql.m4</Path>
+            <Path fileType="data">/usr/share/aclocal/mysql.m4</Path>
         </Files>
         <Provides>
             <SCOM script="pakhandler.py">System.PackageHandler</SCOM>

@@ -18,14 +18,14 @@
             <Dependency>zlib</Dependency>
             <Dependency>pam</Dependency>
             <Dependency>perl</Dependency>
-	          <Dependency>ncurses</Dependency>
+            <Dependency>ncurses</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>openrc</Name>
         <RuntimeDependencies>
             <Dependency>zlib</Dependency>
-	          <Dependency>ncurses</Dependency>
+            <Dependency>ncurses</Dependency>
             <Dependency>sysvinit</Dependency>
             <Dependency>elogind</Dependency>
         </RuntimeDependencies>
@@ -42,9 +42,9 @@
        </Provides>
     </Package>
     <Package>
-      	<Name>openrc-docs</Name>
-	      <PartOf>system.doc</PartOf>
-	      <Summary>Documentation for openrc package.</Summary>
+        <Name>openrc-docs</Name>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for openrc package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">openrc</Dependency>
         </RuntimeDependencies>
@@ -53,9 +53,9 @@
         </Files>
     </Package>
     <Package>
-      	<Name>openrc-pages</Name>
-	      <PartOf>system.doc</PartOf>
-	      <Summary>Man pages for openrc package.</Summary>
+        <Name>openrc-pages</Name>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for openrc package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">openrc</Dependency>
         </RuntimeDependencies>

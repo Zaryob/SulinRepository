@@ -23,7 +23,7 @@
         <RuntimeDependencies>
             <Dependency>libxcb</Dependency>
         </RuntimeDependencies>
-	<Files>
+        <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>

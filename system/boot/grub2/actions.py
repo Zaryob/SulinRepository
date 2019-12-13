@@ -26,7 +26,7 @@ def setup():
                          --program-transform-name='s,grub,grub2,'\
                          --program-prefix= \
                          --enable-grub-mkfont \
-	                     --enable-grub-mount \
+                         --enable-grub-mount \
                          --with-platform=pc \
                          --target='i386' \
                          --htmldir='/usr/share/doc/grub2/html' ")

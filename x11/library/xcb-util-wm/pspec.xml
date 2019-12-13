@@ -52,7 +52,7 @@
         <RuntimeDependencies>
             <Dependency release="current">xcb-util-wm</Dependency>
             <Dependency>libxcb-32bit</Dependency>
-	    
+            
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>

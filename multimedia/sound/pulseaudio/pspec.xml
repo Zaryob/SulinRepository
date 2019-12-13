@@ -15,7 +15,7 @@
         <IsA>library</IsA>
         <Summary>A networked sound server with an advanced plugin system</Summary>
         <Description>pulseaudio is a sound server for POSIX and Win32 systems. It allows you to do advanced operations on your sound data as it passes between your application and your hardware.</Description>
-             <Archive sha1sum="dd07a49f09821913c5ed1b131ea7f85f27085d0b" type="tarxz">https://freedesktop.org/software/pulseaudio/releases/pulseaudio-13.0.tar.xz</Archive>
+        <Archive sha1sum="dd07a49f09821913c5ed1b131ea7f85f27085d0b" type="tarxz">https://freedesktop.org/software/pulseaudio/releases/pulseaudio-13.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>orc-devel</Dependency>
             <Dependency>sbc-devel</Dependency>
@@ -71,8 +71,8 @@
             <Path fileType="library">/usr/lib/libpulse-mainloop-glib.so</Path>
             <Path fileType="library">/usr/lib/libpulse-mainloop-glib.so*</Path>
             <Path fileType="library">/usr/lib/pulseaudio/libpulsedsp.*</Path>
-	          <Path fileType="library">/usr/lib/pulse/modules</Path>
-	          <Path fileType="library">/usr/lib/udev/rules.d</Path>
+            <Path fileType="library">/usr/lib/pulse/modules</Path>
+            <Path fileType="library">/usr/lib/udev/rules.d</Path>
             <Path fileType="library">/usr/lib/pulseaudio/libpulsecore*.so</Path>
         </Files>
     </Package>

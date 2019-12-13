@@ -54,7 +54,7 @@
         <Summary>32-bit shared libraries for libXcursor</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-	    
+            
             <Dependency>libX11-32bit</Dependency>
             <Dependency>libXfixes-32bit</Dependency>
             <Dependency>libXrender-32bit</Dependency>

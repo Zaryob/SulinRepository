@@ -60,7 +60,7 @@
         <Summary>Development files for kconfigwidgets</Summary>
         <RuntimeDependencies>
              <Dependency release="current">kconfigwidgets</Dependency>
-	     <Dependency>qt5-base-devel</Dependency>
+             <Dependency>qt5-base-devel</Dependency>
              <Dependency>kauth-devel</Dependency>
              <Dependency>kcodecs-devel</Dependency>
              <Dependency>kconfig-devel</Dependency>

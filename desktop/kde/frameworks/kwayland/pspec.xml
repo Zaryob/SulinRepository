@@ -45,7 +45,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-	    <Dependency release="current">kwayland</Dependency>
+            <Dependency release="current">kwayland</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/cmake</Path>

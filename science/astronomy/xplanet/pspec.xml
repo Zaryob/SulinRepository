@@ -33,9 +33,7 @@
             <Dependency>tiff</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>giflib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>netpbm</Dependency>
             <Dependency>freetype</Dependency>

@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -28,7 +27,7 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc/autostart/lxqt-globalkeyshortcuts.desktop</Path>
             <Path fileType="data">/usr/share</Path>
-      	    <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
          </Files>
     </Package>
     <Package>
