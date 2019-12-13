@@ -13,7 +13,7 @@
         <PartOf>kernel.linux</PartOf>
         <Summary>The Linux libre kernel (the core of the Linux operating system) for Sulin</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. ddtionally libre kernel is a cleant up version of original kernel. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="e34c3da2dae6895513c52915d772fadb891e5e94" type="tarxz">https://gitlab.com/sulinos/linux/libre/-/archive/v5.4-libre/libre-v5.4-libre.tar.gz</Archive>
+        <Archive sha1sum="dc832c4b6af12a5629a0be4495091b2a3bb06ae8" type="targz">https://gitlab.com/sulinos/linux/libre/-/archive/v5.4-libre/libre-v5.4-libre.tar.gz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
             <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.4.2-gnu</AdditionalFile>

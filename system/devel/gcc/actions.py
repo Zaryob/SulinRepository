@@ -138,3 +138,5 @@ def install():
 
     if arch == "x86-64":
         inarytools.remove("/usr/lib32/libstdc++*gdb.py*")
+    inarytools.rename("/usr/bin/go", "go1.12.2")
+    inarytools.rename("/usr/bin/gofmt", "gofmt1.12.2")

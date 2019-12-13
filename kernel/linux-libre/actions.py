@@ -27,17 +27,12 @@ def build():
 
 def install():
     kerneltools.install()
-
+    
     # add objtool for external module building and enabled VALIDATION_STACK option
     inarytools.insinto("/usr/src/linux-headers-%s-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 
-    # Install kernel headers needed for out-of-tree module compilation
-    kerneltools.installHeaders()
-
-    kerneltools.installLibcHeaders()
-
     # Generate some module lists to use within mkinitramfs
-    shelltools.system("./generate-module-list %s/lib/modules/%s" % (get.installDIR(), kerneltools.__getSuffix()))
+    shelltools.system("./generate-module-list %s/lib/modules/%s-sulinos" % (get.installDIR(), kerneltools.__getSuffix()))
 
     #mkinitcpio default config
     inarytools.dodir("/etc/mkinitcpio.d")
