@@ -15,6 +15,7 @@
         <Archive sha1sum="51b541f6ec12c900a3c89ecdad0f4e00455b9269" type="targz">https://github.com/Qalculate/libqalculate/releases/download/v3.6.0/libqalculate-3.6.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cln-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -22,6 +23,7 @@
         <Name>libqalculate</Name>
         <RuntimeDependencies>
             <Dependency>cln</Dependency>
+            <Dependency>icu4c</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

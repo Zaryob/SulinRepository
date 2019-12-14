@@ -14,19 +14,16 @@
         <Summary>The ultimate disassembler (for AMD64, X86-64).</Summary>
         <Description>diStorm3 is really a decomposer, which means it takes an instruction and returns a binary structure which describes it rather than static text, which is great for advanced binary code analysis.</Description>
         <Archive sha1sum="8cb227b137bc06156bc29fd0e2cbe6a8cc0d7fa1" type="targz">https://github.com/gdabah/distorm/archive/v3.4.1.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>python-devel</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>distorm</Name>
         <RuntimeDependencies>
-            <Dependency>python</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/include</Path>
             <Path fileType="data">/usr/share/distorm</Path>

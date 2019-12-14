@@ -11,7 +11,7 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    shelltools.system("bash autogen.sh")
+    autotools.autoreconf("-vif")
     autotools.configure()
 
 def build():

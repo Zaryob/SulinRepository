@@ -14,15 +14,17 @@
         <Description>The goal of this project is to provide a tiny library that would facilitate the common operations with sizes in bytes. Many projects need to work with sizes in bytes (be it sizes of storage space, memory,...) and all of them need to deal with the same issues like:</Description>
         <Archive sha1sum="fc2c2d9beca3a0b038d2769c6840be6ad2514185" type="targz">https://github.com/storaged-project/libbytesize/releases/download/2.1/libbytesize-2.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-devel</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libbytesize</Name>
         <RuntimeDependencies>
+            <Dependency>libpcre2</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="executable">/usr/bin/bscalc</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share</Path>
             <Path fileType="localedata">/usr/share/locale</Path>

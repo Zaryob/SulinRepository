@@ -18,11 +18,11 @@ def setup():
 
 def build():
     autotools.make("-C make/linux")
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 def install():
     inarytools.dodir("/usr/lib")
     autotools.rawInstall("-C make/linux PREFIX=/usr DESTDIR=%s" % get.installDIR())
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")
     inarytools.insinto("/usr/include/", "include/*.h")
     inarytools.dodoc("COPYING", "MANIFEST", "README*")
