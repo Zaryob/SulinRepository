@@ -13,7 +13,7 @@
         <IsA>service</IsA>
         <Summary>A low-latency audio server</Summary>
         <Description>JACK is a low-latency audio server written for POSIX conformant operating systems. It can connect a number of different applications to an audio device, as well as allowing them to share audio between themselves.</Description>
-        <Archive sha1sum="8ab6329c6a107cdf370c40afac154370b406437d" type="targz">https://github.com/jackaudio/jack2/archive/v1.9.12.tar.gz</Archive>
+        <Archive sha1sum="08059d188b7653d067509aac36ebf45d0e84e5bd" type="targz">https://github.com/jackaudio/jack2/archive/v1.9.14.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsamplerate-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
@@ -76,6 +76,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>1.9.14</Version>
+            <Comment>Version bump to 1.9.14</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-29</Date>
             <Version>1.9.12</Version>

@@ -16,3 +16,4 @@ def build():
 
 def install():
     autotools.install()
+    inarytools.dosym("/usr/bin/vim", "/usr/bin/vi")

@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>A fast library for creating graphic images</Summary>
         <Description>The gd graphics library allows your code to quickly draw images complete with lines, arcs, text, multiple colors, cut and paste from other images, and flood fills, and to write out the result as a PNG or JPEG file. This is particularly useful in Web applications, where PNG and JPEG are two of the formats accepted for inline images by most browsers. Note that gd is not a paint program.</Description>
-        <Archive sha1sum="67779817d7aecb94594c43ace949af350ca1df7f" type="tarxz">https://github.com/libgd/libgd/releases/download/gd-2.2.4/libgd-2.2.4.tar.xz</Archive>
+        <Archive sha1sum="b777b005c401b6fa310ccf09eeb29f6c6e17ab2c" type="tarxz">https://github.com/libgd/libgd/releases/download/gd-2.2.5/libgd-2.2.5.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
@@ -68,6 +68,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>2.2.5</Version>
+            <Comment>Version bump to 2.2.5</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-10</Date>
             <Version>2.2.4</Version>

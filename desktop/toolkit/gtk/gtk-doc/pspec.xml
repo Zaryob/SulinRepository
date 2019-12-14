@@ -15,7 +15,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>GTK+ API documentation generator</Summary>
         <Description>Gtk-Doc is typically used to document the public API of GTK+ and GNOME libraries, but it can also be used to document application code.</Description>
-        <Archive sha1sum="c3dc579d84221c43ce2b0b5f523c46b13525416b" type="tarxz">mirrors://gnome/gtk-doc/1.29/gtk-doc-1.29.tar.xz</Archive>
+        <Archive sha1sum="36eb741d2f2e7791da37aa34dafea6d0506c9c45" type="tarxz">mirrors://gnome/gtk-doc/1.32/gtk-doc-1.32.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>itstool</Dependency>
             <Dependency>sgml-common</Dependency>
@@ -26,7 +26,6 @@
     <Package>
         <Name>gtk-doc</Name>
         <RuntimeDependencies>
-            <!--<Dependency>rarian</Dependency>-->
             <Dependency>docbook-xml</Dependency>
             <Dependency>sgml-common</Dependency>
         </RuntimeDependencies>
@@ -40,6 +39,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>1.32</Version>
+            <Comment>Automatic version upgrade.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.29</Version>

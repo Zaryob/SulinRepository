@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Google's data interchange format</Summary>
         <Description>Protocol Buffers are a way of encoding structured data in an efficient yet extensible format. Google uses Protocol Buffers for almost all of its internal RPC protocols and file formats.</Description>
-        <Archive sha1sum="db72018ec38e53202a4cd726ab4f17f8c85ad527" type="targz">https://github.com/protocolbuffers/protobuf/releases/download/v3.10.1/protobuf-all-3.10.1.tar.gz</Archive>
+        <Archive sha1sum="88e481e9a3966a485a146416d0b1839a1d59e7af" type="targz">https://github.com/protocolbuffers/protobuf/releases/download/v3.11.1/protobuf-all-3.11.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>3.11.1</Version>
+            <Comment>Version bump to 3.11.1</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.10.1</Version>
