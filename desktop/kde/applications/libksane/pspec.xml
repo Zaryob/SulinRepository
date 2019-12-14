@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -31,7 +30,6 @@
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
             <Dependency>kwallet</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>ktextwidgets</Dependency>
             <Dependency>sane-backends</Dependency>

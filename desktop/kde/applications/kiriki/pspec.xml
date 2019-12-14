@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -45,7 +44,6 @@
         <Name>kiriki</Name>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-base</Dependency>

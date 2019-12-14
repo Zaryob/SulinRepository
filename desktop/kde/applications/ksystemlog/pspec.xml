@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -38,7 +37,6 @@
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>karchive</Dependency>

@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -17,8 +16,6 @@
         <Archive type="tarxz" sha1sum="b6b970bbb9df838dfc8c7142a966456295d7403c">mirrors://kde/stable/applications/19.08.3/src/konqueror-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>kactivities-devel</Dependency>
             <Dependency>karchive-devel</Dependency>
             <Dependency>kbookmarks-devel</Dependency>
@@ -40,7 +37,6 @@
             <Dependency>libICE-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>qt5-location-devel</Dependency>
@@ -48,7 +44,6 @@
             <Dependency>qt5-webengine-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>tidy-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>libevent-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -72,14 +67,12 @@
             <Dependency>kwidgetsaddons</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libXext</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>qt5-location</Dependency>
             <Dependency>qt5-webchannel</Dependency>
             <Dependency>qt5-webengine</Dependency>
             <Dependency>qt5-x11extras</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>tidy</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>sonnet</Dependency>

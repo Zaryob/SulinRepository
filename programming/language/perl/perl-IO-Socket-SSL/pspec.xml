@@ -16,7 +16,6 @@
         <Archive sha1sum="4eacd69b81f7edae24135a53411cf87429584289" type="targz">http://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.066.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>perl-Net-SSLeay</Dependency>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,7 +23,6 @@
         <Name>perl-IO-Socket-SSL</Name>
         <RuntimeDependencies>
             <Dependency>perl-Net-SSLeay</Dependency>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

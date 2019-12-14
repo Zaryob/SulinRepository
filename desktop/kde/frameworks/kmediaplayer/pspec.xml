@@ -30,7 +30,6 @@
         <Name>kmediaplayer</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>    
             <Dependency>kparts</Dependency>    
             <Dependency>kxmlgui</Dependency>    
         </RuntimeDependencies>
@@ -49,8 +48,8 @@
         <RuntimeDependencies>
             <Dependency release="current">kmediaplayer</Dependency>
             <Dependency>qt5-base-devel</Dependency>  
-            <Dependency>kparts-devel</Dependency>	    
-            <Dependency>kxmlgui-devel</Dependency>	
+            <Dependency>kparts-devel</Dependency>           
+            <Dependency>kxmlgui-devel</Dependency>      
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

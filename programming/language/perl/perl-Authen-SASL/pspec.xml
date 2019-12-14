@@ -15,7 +15,6 @@
         <Description>SASL is a generic mechanism for authentication used by several network protocols. Authen::SASL provides an implementation framework that all protocols should be able to share. The framework allows different implementations of the connection class to be plugged in.</Description>
         <Archive sha1sum="0f1e0c448deab4dad0f15466ba765def4012db93" type="targz">http://search.cpan.org/CPAN/authors/id/G/GB/GBARR/Authen-SASL-2.16.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Module-Install</Dependency>
             <Dependency>perl-GSSAPI</Dependency>
             <Dependency>perl-Digest-HMAC</Dependency>
@@ -25,7 +24,6 @@
     <Package>
         <Name>perl-Authen-SASL</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-GSSAPI</Dependency>
             <Dependency>perl-Digest-HMAC</Dependency>
         </RuntimeDependencies>

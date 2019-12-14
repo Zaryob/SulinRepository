@@ -17,11 +17,6 @@
         <BuildDependencies>
             <Dependency>libnl-devel</Dependency>
             <Dependency>python-setuptools</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>pciutils-devel</Dependency>
-            <Dependency>tcp-wrappers-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>net-snmp-5.7.3-include-limits.patch</Patch>
@@ -37,11 +32,7 @@
         <Name>net-snmp</Name>
         <RuntimeDependencies>
             <Dependency>libnl</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>pciutils</Dependency>
-            <Dependency>tcp-wrappers</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/snmp</Path>
@@ -65,7 +56,6 @@
         <Name>net-snmptrap</Name>
         <RuntimeDependencies>
             <Dependency>net-snmp</Dependency>
-            <Dependency>tcp-wrappers</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/init.d/snmptrapd</Path>

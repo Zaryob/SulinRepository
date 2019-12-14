@@ -20,12 +20,6 @@
             <Dependency>pango-devel</Dependency>
             <Dependency>dejavu-fonts</Dependency>
             <Dependency>libart_lgpl</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>tcp-wrappers-devel</Dependency>
-            <Dependency>groff</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -39,11 +33,6 @@
             <Dependency>pango</Dependency>
             <Dependency>libart_lgpl</Dependency>
             <Dependency>dejavu-fonts</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>python3</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>tcp-wrappers</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

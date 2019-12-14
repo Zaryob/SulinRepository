@@ -14,20 +14,13 @@
         <Description>openconnect provides the core HTTP and authentication support from the OpenConnect VPN client, to be used by GUI authentication dialogs for NetworkManager etc.</Description>
         <Archive sha1sum="7fc0ed9cb34b401740100f36695036d3333256c0" type="targz">ftp://ftp.infradead.org/pub/openconnect/openconnect-8.05.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>intltool</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>openconnect</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>openssl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/openconnect</Path>
@@ -44,8 +37,6 @@
         <Summary>Development files and headers for openconnect</Summary>
         <RuntimeDependencies>
             <Dependency release="current">openconnect</Dependency>
-            <Dependency>zlib-devel</Dependency>
-	    <Dependency>openssl-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

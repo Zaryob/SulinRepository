@@ -1,4 +1,3 @@
-
 <INARY>
     <Source>
         <Name>libksieve</Name>
@@ -53,7 +52,6 @@
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kmime</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>sonnet</Dependency>
             <Dependency>akonadi</Dependency>
             <Dependency>kconfig</Dependency>

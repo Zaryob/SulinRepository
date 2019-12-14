@@ -16,14 +16,12 @@
         <Description>This module provides functions that deal the date formats used by the HTTP protocol (and then some more). Only the first two functions, time2str() and str2time(), are exported by default.</Description>
         <Archive sha1sum="85f8dbcad22f2680775a185ce91a42c89e0ad2a8" type="targz">http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Date-6.02.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-HTTP-Date</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

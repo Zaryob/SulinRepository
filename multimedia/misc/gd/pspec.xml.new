@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gd</Name>
+        <Homepage>http://www.libgd.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A fast library for creating graphic images</Summary>
+        <Description>The gd graphics library allows your code to quickly draw images complete with lines, arcs, text, multiple colors, cut and paste from other images, and flood fills, and to write out the result as a PNG or JPEG file. This is particularly useful in Web applications, where PNG and JPEG are two of the formats accepted for inline images by most browsers. Note that gd is not a paint program.</Description>
+        <Archive sha1sum="4436a77ec3e31d93cc371f96743152e745767dfc" type="targz">https://github.com/libgd/libgd/releases/download/gd-2.2.5/libgd-2.2.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libvpx-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">gd-2.1.0-multilib.patch</Patch>
+            <Patch level="1">gd-2.2.3-tests.patch</Patch>
+            <Patch level="1">gd-2.2.4-upstream.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gd</Name>
+        <RuntimeDependencies>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libvpx</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libpng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/gd</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gd-devel</Name>
+        <Summary>Development files for gd</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="executable">/usr/bin/gdlib-config</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gd-docs</Name>
+        <Summary>Documents for gd</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/gd/html</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>2.2.5</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-10-10</Date>
+            <Version>2.2.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

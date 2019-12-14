@@ -14,14 +14,7 @@
         <Description>cups provides a portable printing layer for *nix-based operating systems.</Description>
         <Archive sha1sum="ccdce595a90d768968b1e908684594738eba3a91" type="targz">https://github.com/apple/cups/releases/download/v2.3.0/cups-2.3.0-source.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>avahi-libs</Dependency>
             <Dependency>avahi-devel</Dependency>
             <Dependency>mit-kerberos</Dependency>
@@ -32,12 +25,6 @@
     <Package>
         <Name>cups</Name>
         <RuntimeDependencies>
-            <Dependency>acl</Dependency>
-            <Dependency>pam</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libusb</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpaper</Dependency>
             <Dependency>avahi</Dependency>
             <Dependency>avahi-libs</Dependency>
@@ -99,7 +86,6 @@
         <RuntimeDependencies>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>openssl-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency release="current">cups</Dependency>
         </RuntimeDependencies>
         <Files>

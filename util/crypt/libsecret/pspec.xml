@@ -16,9 +16,7 @@
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>vala-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
             <Dependency>valgrind</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -35,8 +33,6 @@
             <Dependency>valgrind</Dependency>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>vala</Dependency>
-            <Dependency>libgcrypt</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
     </Package>
     <Package>

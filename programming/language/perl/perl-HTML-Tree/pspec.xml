@@ -16,7 +16,6 @@
         <Description>Build and scan parse-trees of HTML. It allows to represent,create and extract information from HTML syntax trees.</Description>
         <Archive sha1sum="2de118d967ce1616f039a1e77822cdb0b7155cb1" type="targz">https://cpan.metacpan.org/authors/id/K/KE/KENTNL/HTML-Tree-5.07.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTML-Tagset</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-Test-Exception</Dependency>
@@ -29,7 +28,6 @@
     <Package>
         <Name>perl-HTML-Tree</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTML-Tagset</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-Test-Exception</Dependency>

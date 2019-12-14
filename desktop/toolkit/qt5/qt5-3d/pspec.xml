@@ -19,7 +19,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>assimp-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="abecf93fd922bd87408ca7b96fd373c06ca3c30e" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qt3d-everywhere-src-5.13.2.tar.xz</Archive>
     </Source>
@@ -29,7 +28,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>assimp</Dependency>
         </RuntimeDependencies>
         <Files>

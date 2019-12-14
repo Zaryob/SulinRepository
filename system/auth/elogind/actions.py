@@ -16,4 +16,4 @@ def build():
 
 def install():
     mesontools.ninja_install()
-    inarytools.dodoc("NEWS", "README", "LICENSE.GPL2", "LICENSE.LGPL2.1")
+    inarytools.dodoc("NEWS", "README*", "LICENSE.GPL2", "LICENSE.LGPL2.1")

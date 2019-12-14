@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -40,7 +39,6 @@
         <Name>bluedevil</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>bluez-qt</Dependency>
             <Dependency>kded</Dependency>
             <Dependency>kio</Dependency>

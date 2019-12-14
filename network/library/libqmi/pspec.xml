@@ -14,7 +14,6 @@
         <Description>libqmi is a glib-based library for talking to WWAN modems and devices which speak the Qualcomm MSM Interface (QMI) protocol.</Description>
         <Archive sha1sum="3ab11e8789b88d0879bccc4e05cfa33c30b87a39" type="tarxz">http://www.freedesktop.org/software/libqmi/libqmi-1.24.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -22,7 +21,6 @@
     <Package>
         <Name>libqmi</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>gobject-introspection</Dependency>
         </RuntimeDependencies>
         <Files>

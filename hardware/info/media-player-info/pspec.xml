@@ -13,8 +13,6 @@
         <Description>media-player-info is a repository of data files describing media player capabilities. These files contain information about the directory layout to use to add music to these devices, about the supported file formats, etc.</Description>
         <Archive sha1sum="12c9b26a3428d9434695ee8d2d51ba495590beb3" type="targz">http://www.freedesktop.org/software/media-player-info/media-player-info-24.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 

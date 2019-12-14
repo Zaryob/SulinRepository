@@ -15,9 +15,6 @@
         <Description>LibXdmcp is the X Display Manager Control Protocol library.</Description>
         <Archive sha1sum="3c09eabb0617c275b5ab09fae021d279a4832cac" type="tarbz2">http://xorg.freedesktop.org/archive/individual/lib/libXdmcp-1.1.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libxslt</Dependency>
-            <Dependency>util-macros</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency>libbsd-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -35,7 +32,6 @@
         <Name>libXdmcp-devel</Name>
         <Summary>Development files for libXdmcp</Summary>
         <RuntimeDependencies>
-            <Dependency>xorg-proto</Dependency>
             <Dependency release="current">libXdmcp</Dependency>
         </RuntimeDependencies>
         <Files>

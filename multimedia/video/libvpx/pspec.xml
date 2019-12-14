@@ -15,15 +15,12 @@
         <Description>libvpx is the VP8 development library usually used in WebM and similiar formats.</Description>
         <Archive sha1sum="6c9a55e1f92d7301383f387486bb574f22faf855" type="targz">https://github.com/webmproject/libvpx/archive/v1.8.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>yasm-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libvpx</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

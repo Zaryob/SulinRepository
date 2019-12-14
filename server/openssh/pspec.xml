@@ -17,11 +17,7 @@
         <Archive sha1sum="756dbb99193f9541c9206a667eaa27b0fa184a4f" type="targz">https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.0p1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libedit-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>pam-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,10 +25,7 @@
         <Name>openssh</Name>
         <RuntimeDependencies>
             <Dependency>libedit</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>pam</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

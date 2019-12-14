@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -19,7 +18,6 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>knotifications-devel</Dependency>
@@ -37,7 +35,6 @@
             <Dependency>kxmlgui</Dependency>
             <Dependency>knotifications</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcoreaddons</Dependency>

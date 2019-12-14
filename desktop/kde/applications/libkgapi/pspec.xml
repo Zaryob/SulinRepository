@@ -18,7 +18,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>libical-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>qt5-xmlpatterns-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>kdelibs4-support-devel</Dependency>
@@ -45,7 +44,6 @@
             <Dependency>kcalendarcore</Dependency>
             <Dependency>kcontacts</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-webkit</Dependency>
             <Dependency>kwindowsystem</Dependency>
             <Dependency>kdelibs4-support</Dependency>

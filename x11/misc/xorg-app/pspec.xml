@@ -131,16 +131,11 @@
             <Dependency>xbitmaps</Dependency>
             <Dependency>xcb-util-devel</Dependency>
             <Dependency>libXxf86misc-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>util-macros</Dependency>
-            <Dependency>xtrans</Dependency>
-            <Dependency>xtrans</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>xorg-app</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libXau</Dependency>
             <Dependency>libpng</Dependency>

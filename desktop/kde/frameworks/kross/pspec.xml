@@ -41,7 +41,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-script</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kcompletion</Dependency>

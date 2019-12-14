@@ -15,7 +15,6 @@
         <Archive sha1sum="d85717035cb9bd6c45557a1eb1351d3af9a69ff7" type="tarbz2">https://downloads.sourceforge.net/libtirpc/libtirpc-1.1.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -57,7 +56,6 @@
         <Summary>32-bit shared libraries for libtirpc</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>libtirpc</Dependency>

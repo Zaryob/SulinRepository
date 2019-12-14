@@ -15,8 +15,6 @@
         <Description>C++ library for asynchronous interaction with VK social network via its web API</Description>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kdewebkit-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
@@ -37,7 +35,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-webkit</Dependency>
             <Dependency>kwidgetsaddons</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

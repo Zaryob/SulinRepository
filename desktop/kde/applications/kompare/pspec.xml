@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -19,7 +18,6 @@
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>libkomparediff2-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kcodecs-devel</Dependency>
@@ -40,7 +38,6 @@
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

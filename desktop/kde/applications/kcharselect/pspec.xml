@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -20,7 +19,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kbookmarks-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>ki18n-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
@@ -35,7 +33,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfigwidgets</Dependency>

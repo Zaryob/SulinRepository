@@ -21,7 +21,6 @@
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>gst-plugins-base-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -32,8 +31,6 @@
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>qt5-phonon</Dependency>
             <Dependency>mesa</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>gstreamer</Dependency>
             <Dependency>gst-plugins-base</Dependency>
         </RuntimeDependencies>

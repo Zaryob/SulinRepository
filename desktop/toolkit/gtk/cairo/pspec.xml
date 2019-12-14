@@ -16,14 +16,10 @@
         <Description>Cairo is a 2D graphics library with support for multiple output devices (and fileformats).</Description>
         <Archive sha1sum="47e3d3f4f32afb6f941b3b7d3de61deb01a11b19" type="tarbz2">https://gitlab.freedesktop.org/cairo/cairo/-/archive/1.17.2/cairo-1.17.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>lzo-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>pixman-devel</Dependency>
@@ -37,9 +33,6 @@
     <Package>
         <Name>cairo</Name>
         <RuntimeDependencies>
-            <Dependency>lzo</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libxcb</Dependency>
@@ -65,7 +58,6 @@
         <RuntimeDependencies>
             <Dependency release="current">cairo</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>

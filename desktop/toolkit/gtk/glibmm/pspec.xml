@@ -31,7 +31,7 @@
         </Files>
     </Package>
     <Package>
-	<Name>glibmm-devel</Name>
+        <Name>glibmm-devel</Name>
         <RuntimeDependencies>
             <Dependency>glibmm</Dependency>
         </RuntimeDependencies>

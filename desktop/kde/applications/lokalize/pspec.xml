@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -36,7 +35,6 @@
             <Dependency>kconfigwidgets-devel</Dependency>
             <Dependency>knotifications-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>qt5-sql-postgresql</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>qt5-sql-odbc</Dependency>
@@ -52,7 +50,6 @@
             <Dependency>ki18n</Dependency>
             <Dependency>kross</Dependency>
             <Dependency>kparts</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>sonnet</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kxmlgui</Dependency>

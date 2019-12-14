@@ -15,7 +15,6 @@
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>plasma-workspace-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
         <Archive type="targz" sha1sum="9252c6c54f9a79a69c50f60fba9ecd817798150d">https://github.com/kotelnik/plasma-applet-weather-widget/archive/v1.6.7.tar.gz</Archive>
     </Source>

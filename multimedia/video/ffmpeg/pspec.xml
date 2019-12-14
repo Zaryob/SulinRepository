@@ -43,15 +43,12 @@
             <Dependency>rtmpdump-devel</Dependency>
             <Dependency>schroedinger-devel</Dependency>
             <Dependency>speex-devel</Dependency>
-            <Dependency>yasm-devel</Dependency>
             <Dependency>libv4l-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>xvid-devel</Dependency>
             <Dependency>libdc1394-devel</Dependency>
             <Dependency>libnut</Dependency>
             <Dependency>libcdio-paranoia-devel</Dependency>
             <Dependency>libXv-devel</Dependency>
-            <Dependency>libidn-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -66,8 +63,6 @@
             <Dependency>libnut</Dependency>
             <Dependency>x265</Dependency>
             <Dependency>xvid</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>bzip2</Dependency>
             <Dependency>speex</Dependency>
             <Dependency>libva</Dependency>
             <Dependency>libXv</Dependency>

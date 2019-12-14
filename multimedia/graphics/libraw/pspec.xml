@@ -23,7 +23,6 @@
     <Package>
         <Name>libraw</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>lcms2</Dependency>
             <Dependency>jasper</Dependency>
             <Dependency>libjpeg-turbo</Dependency>

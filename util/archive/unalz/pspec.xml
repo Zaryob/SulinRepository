@@ -17,16 +17,12 @@
             <Patch level="1">unalz-0.65-zlib-get_crc_table-return-type-can-vary.patch</Patch>
         </Patches>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>unalz</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

@@ -14,17 +14,10 @@
         <Description>libsoup is an HTTP client/server library for GNOME.</Description>
         <Archive sha1sum="d3f15038fae4f48ae386cfdf53ae12382ab7524b" type="tarxz">mirrors://gnome/libsoup/2.68/libsoup-2.68.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libgcrypt-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>python-libbrotli</Dependency>
             <Dependency>python3-libbrotli</Dependency>s
             <Dependency>libbrotli-devel</Dependency>
-            <Dependency>intltool</Dependency>
-            <Dependency>intltool</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>libpsl-devel</Dependency>
             <Dependency>vala-devel</Dependency>
             <Dependency>glib-networking</Dependency>
@@ -37,9 +30,6 @@
         <RuntimeDependencies>
              <Dependency>libbrotli</Dependency>
              <Dependency>libpsl</Dependency>
-             <Dependency>glib2</Dependency>
-             <Dependency>libxml2</Dependency>
-             <Dependency>sqlite</Dependency>
              <Dependency>glib-networking</Dependency>
              <Dependency>python-libbrotli</Dependency>
              <Dependency>python3-libbrotli</Dependency>
@@ -57,7 +47,6 @@
     <Package>
         <Name>libsoup-gnome</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libsoup</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -82,10 +71,8 @@
         <Name>libsoup-devel</Name>
         <Summary>Development files for libsoup</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libbrotli-devel</Dependency>
             <Dependency>libpsl-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency release="current">libsoup</Dependency>
         </RuntimeDependencies>

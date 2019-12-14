@@ -34,10 +34,10 @@
             <Path fileType="library">/usr/lib/xorg</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
-	        <Path fileType="data">/etc/X11</Path>
+            <Path fileType="data">/etc/X11</Path>
             <Path fileType="data">/usr/share/X11/xorg.conf.d/</Path>
         </Files>    
-	<AdditionalFiles>
+        <AdditionalFiles>
             <!--AdditionalFile owner="root" permission="0644" target="/etc/X11/xorg.conf.d/20-glamor.conf">20-glamor.conf</AdditionalFile-->
         </AdditionalFiles>
     </Package>

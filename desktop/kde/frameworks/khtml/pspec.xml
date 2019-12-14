@@ -10,7 +10,7 @@
         </Packager>
         <License>LGPLv2</License>
         <IsA>library</IsA>
-	      <IsA>app:console</IsA>
+        <IsA>app:console</IsA>
         <PartOf>desktop.kde.frameworks</PartOf>
         <Summary>HTML rendering engine for KDE</Summary>
         <Description>KHTML is a web rendering engine, based on the KParts technology and using KJS for JavaScript support.</Description>
@@ -22,7 +22,6 @@
              <Dependency>libpng-devel</Dependency>
              <Dependency>qt5-phonon-devel</Dependency>
              <Dependency>libX11-devel</Dependency>
-             <Dependency>zlib-devel</Dependency>
              <Dependency>kio-devel</Dependency>
              <Dependency>kjs-devel</Dependency>
              <Dependency>kglobalaccel-devel</Dependency>
@@ -30,8 +29,6 @@
              <Dependency>kparts-devel</Dependency>
              <Dependency>ktextwidgets-devel</Dependency>
              <Dependency>sonnet-devel</Dependency>
-             <Dependency>openssl-devel</Dependency>
-             <Dependency>gperf</Dependency>
              <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -42,11 +39,8 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>qt5-phonon</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>giflib</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>sonnet</Dependency>
@@ -90,8 +84,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>qt5-phonon-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>giflib</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>

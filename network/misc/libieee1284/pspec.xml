@@ -15,7 +15,6 @@
         <Archive sha1sum="d09ed041cebe1f65e49e285f7d9393cda045731e" type="targz">https://gitlab.com/Zaryob/libieee1284/-/archive/V0_2_11/libieee1284-V0_2_11.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python</Dependency>
-            <Dependency>chrpath</Dependency>
         </BuildDependencies>
     </Source>
 

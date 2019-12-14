@@ -24,7 +24,6 @@
         <Name>qt5-keychain</Name>
         <Summary>Provides support for secure credentials storage</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

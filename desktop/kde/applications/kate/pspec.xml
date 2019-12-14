@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -24,7 +23,6 @@
             <Dependency>ktexteditor-devel</Dependency>
             <Dependency>threadweaver-devel</Dependency>
             <Dependency>kitemmodels-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>qt5-sql-postgresql</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>qt5-sql-odbc</Dependency>
@@ -39,7 +37,6 @@
         <Name>kate</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libgit2</Dependency>
             <Dependency>knewstuff</Dependency>
             <Dependency>ki18n</Dependency>

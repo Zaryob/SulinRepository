@@ -14,10 +14,8 @@
         <Description>libtevent is an event system based on the talloc memory management library. It is the core event system used in Samba. Tevent has support for many event types, including timers, signals, and the classic file descriptor events.</Description>
         <Archive sha1sum="b3d40917a253c0e082f75eb7e70b5ce1b6c04b7e" type="targz">https://www.samba.org/ftp/tevent/tevent-0.10.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-devel</Dependency>
             <Dependency>gdb-devel</Dependency>
             <Dependency>libtalloc-devel</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </BuildDependencies>
     </Source>

@@ -20,7 +20,6 @@
             <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libXfixes-devel</Dependency>
@@ -35,7 +34,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>libXfixes</Dependency>

@@ -37,7 +37,6 @@
         <Name>ktextwidgets</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcompletion</Dependency>
             <Dependency>kconfigwidgets</Dependency>

@@ -15,7 +15,6 @@
         <Description>perl-NET-SMTP-SSL implements the same API as Net::SMTP but uses IO::Socket::SSL for its network operations.</Description>
         <Archive sha1sum="2c84497109b0f92a8e3532f966421cc5a92c018b" type="targz">http://www.cpan.org/authors/id/R/RJ/RJBS/Net-SMTP-SSL-1.04.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-IO-Socket-SSL</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,7 +22,6 @@
     <Package>
         <Name>perl-Net-SMTP-SSL</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-IO-Socket-SSL</Dependency>
         </RuntimeDependencies>
         <Files>

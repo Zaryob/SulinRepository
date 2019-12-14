@@ -15,7 +15,6 @@
         <Description>The Error package provides two interfaces. Firstly Error provides a procedural interface to exception handling. Secondly Error is a base class for errors/exceptions that can either be thrown, for subsequent catch, or can simply be recorded.</Description>
         <Archive sha1sum="358ba91d1480d6f462f4c139cc3e3a62d136f1a4" type="targz">http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/Error-0.17028.tar.gz</Archive>
         <BuildDependencies>
-          <Dependency>perl</Dependency>
             <Dependency>perl-Module-Build</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,7 +22,6 @@
     <Package>
         <Name>perl-Error</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

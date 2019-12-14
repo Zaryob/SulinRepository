@@ -29,7 +29,6 @@
             <Path fileType="data">/usr/share/licenses</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
@@ -54,7 +53,6 @@
             <Path fileType="doc">/usr/share/doc/qt5</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>

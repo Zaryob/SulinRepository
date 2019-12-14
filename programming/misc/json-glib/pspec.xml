@@ -16,14 +16,12 @@
         <Archive sha1sum="d9b6d58c0a5b45aa86fbf0da31c65c19254edf96" type="tarxz">mirrors://gnome/json-glib/1.4/json-glib-1.4.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>json-glib</Name>
         <RuntimeDependencies>
             <Dependency>gobject-introspection</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -38,7 +36,6 @@
         <Summary>Development files for json-glib</Summary>
         <RuntimeDependencies>
             <Dependency release="current">json-glib</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

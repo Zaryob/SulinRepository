@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -33,7 +32,6 @@
         <Name>kscreen</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libkscreen</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>kconfig</Dependency>

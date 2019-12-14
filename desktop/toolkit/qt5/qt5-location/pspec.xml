@@ -14,7 +14,6 @@
         <Archive sha1sum="1a2384701abf783a38be61eb7d10994f885fad9d" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtlocation-everywhere-src-5.13.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>geoclue-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
@@ -27,8 +26,6 @@
         <Name>qt5-location</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>geoclue</Dependency>
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>

@@ -16,15 +16,12 @@
             <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
             <Dependency>qt5-sql-sqlite</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>qt5-svg</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

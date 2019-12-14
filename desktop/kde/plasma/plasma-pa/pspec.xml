@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -24,7 +23,6 @@
             <Dependency>kdeclarative-devel</Dependency>
             <Dependency>plasma-framework-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gconf-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
@@ -37,13 +35,11 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>kdeclarative</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kglobalaccel</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>gconf</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>pulseaudio-libs</Dependency> 
         </RuntimeDependencies>

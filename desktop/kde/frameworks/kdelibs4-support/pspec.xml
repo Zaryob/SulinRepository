@@ -21,13 +21,11 @@
              <Dependency>perl-URI</Dependency>
              <Dependency>libSM-devel</Dependency>
              <Dependency>docbook-xml</Dependency>
-             <Dependency>openssl-devel</Dependency>
              <Dependency>libX11-devel</Dependency>
              <Dependency>kio-devel</Dependency>
              <Dependency>kauth-devel</Dependency>
              <Dependency>kcrash-devel</Dependency>
              <Dependency>kdesignerplugin</Dependency>
-             <Dependency>intltool</Dependency>
              <Dependency>kdoctools-devel</Dependency>
              <Dependency>kglobalaccel-devel</Dependency>
              <Dependency>kguiaddons-devel</Dependency>
@@ -47,7 +45,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libICE</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>qt5-x11extras</Dependency>

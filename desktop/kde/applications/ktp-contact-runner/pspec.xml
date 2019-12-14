@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -32,7 +31,6 @@
         <Summary>KRunner plugin for KDE Telepathy</Summary>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>krunner</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kcoreaddons</Dependency>

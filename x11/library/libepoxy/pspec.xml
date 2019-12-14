@@ -17,7 +17,6 @@
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -35,7 +34,7 @@
     
     <Package>
         <Name>libepoxy-devel</Name>
-	<Summary>Development files for libepoxy</Summary>
+        <Summary>Development files for libepoxy</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libepoxy</Dependency>
         </RuntimeDependencies>

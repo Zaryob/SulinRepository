@@ -18,7 +18,6 @@
             <Dependency>mesa-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,7 +25,6 @@
         <Name>libdbusmenu-qt</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-	    <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

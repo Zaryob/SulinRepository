@@ -45,7 +45,6 @@
         <Summary>CLI tools to manage akonadi calendars</Summary>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>akonadi</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcalendarcore</Dependency>

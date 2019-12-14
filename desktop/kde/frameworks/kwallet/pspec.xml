@@ -16,10 +16,8 @@
         <Description>This framework contains two main components: Interface to KWallet, the safe desktop-wide storage for passwords on KDE workspaces. The kwalletd used to safely store the passwords on KDE work spaces.</Description>
         <Archive sha1sum="81dc1d778917265668e5e4a69e08a6ede6e301d6" type="tarxz">mirrors://kde/stable/frameworks/5.64/kwallet-5.64.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libxslt</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
@@ -38,8 +36,6 @@
         <Name>kwallet</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libgcrypt</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kdbusaddons</Dependency>
@@ -67,7 +63,6 @@
         <RuntimeDependencies>
             <Dependency release="current">kwallet</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>kcoreaddons-devel</Dependency>
             <Dependency>kdbusaddons-devel</Dependency>

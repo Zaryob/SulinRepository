@@ -14,9 +14,7 @@
         <Description>DirectFB is a thin library that provides hardware graphics acceleration, input device handling and abstraction, integrated windowing system with support for translucent windows and multiple display layers.</Description>
         <Archive sha1sum="205d824906906303db9b096cc2d3bea0662e8860" type="targz">http://sources.webos-ports.org/DirectFB-1.7.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>jasper-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
@@ -49,8 +47,6 @@
     <Package>
         <Name>DirectFB</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>libX11</Dependency>

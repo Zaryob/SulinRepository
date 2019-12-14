@@ -40,7 +40,6 @@
             <Dependency>kcalendarcore</Dependency>
             <Dependency>kidentitymanagement</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kcodecs</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>grantlee</Dependency>

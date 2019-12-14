@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -19,7 +18,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>xcb-util-image-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>scim-devel</Dependency>
             <Dependency>ibus-devel</Dependency>
             <Dependency>kdoctools-devel</Dependency>
@@ -43,12 +41,10 @@
     <Package>
         <Name>kdeplasma-addons</Name>
         <RuntimeDependencies>
-             <Dependency>qt5-base</Dependency>	
+             <Dependency>qt5-base</Dependency>  
              <Dependency>plasma-framework</Dependency>
-             <Dependency>libgcc</Dependency>
              <Dependency>libxcb</Dependency>
              <Dependency>xcb-util-image</Dependency>
-             <Dependency>glib2</Dependency>
              <Dependency>knewstuff</Dependency>
              <Dependency>krunner</Dependency>
              <Dependency>kio</Dependency>

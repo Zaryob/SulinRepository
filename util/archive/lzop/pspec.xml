@@ -14,14 +14,12 @@
         <Description>lzop is a file compressor which is very similar to gzip.</Description>
         <Archive sha1sum="3540761ce8fc6dc42c326a9fcb1471e190a4db62" type="targz">http://www.lzop.org/download/lzop-1.04.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>lzo-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lzop</Name>
         <RuntimeDependencies>
-            <Dependency>lzo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

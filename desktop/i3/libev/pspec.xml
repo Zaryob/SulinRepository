@@ -13,8 +13,6 @@
         <Description>A full-featured and high-performance event loop</Description>
         <Archive sha1sum="60b60d4f41f848a0dec63f708bb90bd0b95c0158" type="targz">https://github.com/SulinOS/libev/archive/4.22.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>yajl</Dependency>
         </BuildDependencies>
     </Source>

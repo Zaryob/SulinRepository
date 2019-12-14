@@ -16,18 +16,12 @@
         <Archive sha1sum="de406057b0a2201d4dddcd296020a2bbdc2c3833" type="tarbz2">http://archive.apache.org/dist/subversion/subversion-1.9.12.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>apache</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>ruby-devel</Dependency>
             <Dependency>serf-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>jdk7-openjdk</Dependency>
             <Dependency>apr-util-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-	    <Dependency>openssl-devel</Dependency>
             <Dependency>swig</Dependency>
         </BuildDependencies>
         <Patches>
@@ -44,11 +38,6 @@
     <Package>
         <Name>subversion</Name>
         <RuntimeDependencies>
-            <Dependency>file</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>sqlite</Dependency>
             <Dependency>apr</Dependency>
             <Dependency>serf</Dependency>
             <Dependency>apr-util</Dependency>
@@ -89,10 +78,8 @@
         <Name>subversion-devel</Name>
         <Summary>Development files for subversion</Summary>
         <RuntimeDependencies>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>apr-devel</Dependency>
             <Dependency>serf-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>apr-util-devel</Dependency>
             <Dependency release="current">subversion</Dependency>
         </RuntimeDependencies>

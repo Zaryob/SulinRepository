@@ -31,28 +31,17 @@
             <Dependency>icu4c-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>ruby-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>webp-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>perl-Digest-MD5</Dependency>
             <Dependency>perl-Text-ParseWords</Dependency>
-            <Dependency>gperf</Dependency>
-            <Dependency>bison</Dependency>
-            <Dependency>flex</Dependency>
             <Dependency>gst-plugins-base-devel</Dependency>
             <Dependency>gst-plugins-base-devel</Dependency>
         </BuildDependencies>
@@ -72,15 +61,9 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>webp</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>icu4c</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>sqlite</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>libXrender</Dependency>
             <Dependency>qt5-sensors</Dependency>
             <Dependency>qt5-webchannel</Dependency>
@@ -106,14 +89,9 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>webp-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>qt5-sensors-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>

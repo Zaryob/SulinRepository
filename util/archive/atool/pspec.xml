@@ -18,8 +18,6 @@
     <Package>
         <Name>atool</Name>
             <BuildDependencies>
-	    <Dependency>file</Dependency>
-	    <Dependency>perl</Dependency>
         </BuildDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

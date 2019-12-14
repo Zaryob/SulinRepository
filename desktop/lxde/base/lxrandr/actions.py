@@ -9,7 +9,6 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-	#Not sure but it is not needed (obsoleteman)
     autotools.autoreconf("-fiv")
 
     autotools.configure("--enable-gtk3")

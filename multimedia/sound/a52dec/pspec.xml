@@ -14,7 +14,6 @@
         <Description>liba52 is a free library for decoding ATSC A/52 streams. The A/52 standard is used in a variety of applications, including digital television and DVD. It is also known as AC-3.</Description>
         <Archive sha1sum="79b33bd8d89dad7436f85b9154ad35667aa37321" type="targz">http://liba52.sourceforge.net/files/a52dec-0.7.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>djbfft-devel</Dependency>
         </BuildDependencies>
         <Patches>

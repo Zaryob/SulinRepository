@@ -18,5 +18,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.domove("/usr/share/autoconf-archive/", "/usr/share/doc")
     inarytools.dodoc("AUTHORS", "NEWS", "ChangeLog", "COPYING", "README")

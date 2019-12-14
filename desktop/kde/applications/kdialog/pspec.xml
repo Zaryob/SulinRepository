@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -16,8 +15,6 @@
         <Archive sha1sum="29a77b20626784c74267d1e94bbe61a567ff4e87" type="tarxz">mirrors://kde/stable/applications/19.08.3/src/kdialog-19.08.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>kdelibs4-support-devel</Dependency>
             <Dependency>kio-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
@@ -43,7 +40,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kguiaddons</Dependency>
             <Dependency>kcompletion</Dependency>

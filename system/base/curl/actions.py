@@ -52,6 +52,11 @@ def check():
     pass
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
+    
+    if get.buildTYPE() == "emul32":
+        shelltools.system("make install DESTDIR=%s/emul32" % get.installDIR())
+        shelltools.copytree("%s/emul32/usr/lib32" % get.installDIR(), "%s/usr/lib32" % get.installDIR())
+        inarytools.removeDir("/emul32")
+        return
+    autotools.install()
     inarytools.dodoc("CHANGES", "docs/*.md")

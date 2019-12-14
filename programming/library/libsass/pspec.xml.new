@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libsass</Name>
+        <Homepage>https://github.com/sass/libsass</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app</IsA>
+        <Summary>Sass CSS ön işlemcisinin C uygulaması (kütüphane)</Summary>
+        <Description>C implementation of Sass CSS preprocessor (library)</Description>
+        <Archive sha1sum="2ae7ab6f4ea61c0e7803d4e47caa734e03580e7f" type="targz">https://github.com/sass/libsass/archive/3.6.3.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libsass</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libsass-devel</Name>
+        <Summary>Development files for libsass</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libsass</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>3.6.3</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-11-24</Date>
+            <Version>3.5.5</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

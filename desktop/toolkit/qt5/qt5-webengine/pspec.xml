@@ -20,29 +20,19 @@
             <Dependency>qt5-location-devel</Dependency>
             <Dependency>qt5-sensors-devel</Dependency>
             <Dependency>qt5-webchannel-devel</Dependency>
-            <Dependency>bison</Dependency>
             <Dependency>re2c</Dependency>
             <Dependency>ninja</Dependency>
-            <Dependency>gperf</Dependency>
-            <Dependency>snappy-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>webp-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
-            <Dependency>json-c-devel</Dependency>
             <Dependency>protobuf-devel</Dependency>
             <Dependency>libdrm-devel</Dependency>
             <Dependency>libopus-devel</Dependency>
             <Dependency>libevent-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXi-devel</Dependency>
             <Dependency>libXcursor-devel</Dependency>
@@ -54,16 +44,11 @@
             <Dependency>libXtst-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
             <Dependency>libXScrnSaver-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>pciutils-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>lcms2-devel</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>libvpx-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>x264-devel</Dependency>
@@ -91,22 +76,15 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>nss</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>lcms2</Dependency>
-            <Dependency>nspr</Dependency>
             <Dependency>webp</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>snappy</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>libXi</Dependency>
             <Dependency>libXext</Dependency>
             <Dependency>libXtst</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>libopus</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>libvpx</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>alsa-lib</Dependency>
@@ -122,7 +100,6 @@
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>qt5-webchannel</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>minizip</Dependency>
             <Dependency>protobuf</Dependency>
         </RuntimeDependencies>

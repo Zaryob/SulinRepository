@@ -16,8 +16,6 @@
         <BuildDependencies>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>swig</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>frei0r-plugins-devel</Dependency>
             <Dependency>fftw3-devel</Dependency>
             <Dependency>kdelibs4-support-devel</Dependency>
@@ -27,8 +25,6 @@
             <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>libsamplerate-devel</Dependency>
             <Dependency>libquicktime-devel</Dependency>
             <Dependency>ladspa-sdk-devel</Dependency>
@@ -54,8 +50,6 @@
         <PartOf>programming.language.perl</PartOf>
         <Summary>Perl bindings for MLT</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency release="current">mlt</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -68,8 +62,6 @@
         <PartOf>programming.language.python</PartOf>
         <Summary>Python bindings for MLT</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency release="current">mlt</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -82,14 +74,11 @@
         <RuntimeDependencies>
             <Dependency>sox</Dependency>
             <Dependency>fftw3</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>kdelibs4-support</Dependency>
             <Dependency>ffmpeg</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libsdl</Dependency>
             <Dependency>libexif</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>qt5-base</Dependency>

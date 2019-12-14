@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -51,7 +50,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>kdesu</Dependency>
             <Dependency>ki18n</Dependency>

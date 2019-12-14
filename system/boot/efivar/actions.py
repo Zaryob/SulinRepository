@@ -12,6 +12,7 @@ from inary.actionsapi import get
 def build():
     shelltools.export("CFLAGS", "-Os")
     inarytools.dosed("Make.defaults","-O0","-Os")
+    inarytools.dosed("gcc.specs","-Werror ","")
     inarytools.dosed("src/test/Makefile","-rpath=$(TOPDIR)/src/","-rpath=$(libdir)|g")
     autotools.make("libdir=/usr/lib bindir=/usr/bin includedir=/usr/include/ V=1 -j1")
 

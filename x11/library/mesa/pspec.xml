@@ -17,9 +17,6 @@
         <Description>Mesa is an open-source implementation of the OpenGL specification - a system for rendering interactive 3D graphics.</Description>
         <Archive sha1sum="41e825653b29c847912d51a37ff4cff4bab3d878" type="tarxz">https://mesa.freedesktop.org/archive/mesa-19.0.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
             <Dependency>libdrm-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
@@ -35,8 +32,6 @@
             <Dependency>libXxf86vm-devel</Dependency>
             <Dependency>libXvMC-devel</Dependency>
             <Dependency>libXv-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
             <Dependency>python3-mako</Dependency>
             <Dependency>llvm</Dependency>
             <Dependency>llvm-libs</Dependency>
@@ -56,12 +51,9 @@
     <Package>
         <Name>mesa</Name>
         <RuntimeDependencies>
-            <Dependency>elfutils</Dependency>
             <Dependency>libdrm-amd</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>expat</Dependency>
             <Dependency>libdrm</Dependency>
             <Dependency>libXext</Dependency>
             <Dependency>libXfixes</Dependency>
@@ -75,7 +67,6 @@
             <Dependency>wayland-client</Dependency>
             <Dependency>wayland-server</Dependency>
             <Dependency>libomxil-bellagio</Dependency>
-            <Dependency>nettle</Dependency>
             <Dependency>libxshmfence</Dependency>
             <Dependency>llvm</Dependency>
             <Dependency>llvm-clang</Dependency>
@@ -97,7 +88,6 @@
         <Name>mesa-devel</Name>
         <Summary>Development files for mesa</Summary>
         <RuntimeDependencies>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>libdrm-devel</Dependency>
@@ -122,7 +112,6 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <Dependency>libunwind-32bit</Dependency>
-            <Dependency>elfutils-32bit</Dependency>
             <Dependency>expat-32bit</Dependency>
             <Dependency>libXt-devel</Dependency>
             <Dependency>libXv-32bit</Dependency>
@@ -147,9 +136,7 @@
             <Dependency>llvm-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>elfutils-32bit</Dependency>
             <Dependency>openssl-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb-32bit</Dependency>
             <Dependency>expat-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>

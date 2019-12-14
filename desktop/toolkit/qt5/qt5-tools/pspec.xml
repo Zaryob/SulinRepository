@@ -22,7 +22,6 @@
     <Package>
         <Name>qt5-assistant</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -72,7 +71,6 @@
     <Package>
         <Name>qt5-designer</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -128,7 +126,6 @@
     <Package>
         <Name>qt5-linguist</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -170,7 +167,6 @@
     <Package>
         <Name>qt5-qdbusviewer</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

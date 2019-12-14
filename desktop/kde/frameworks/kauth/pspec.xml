@@ -29,7 +29,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>polkit-qt</Dependency>
             <Dependency>kcoreaddons</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

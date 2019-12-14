@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gobject-introspection</Name>
+        <Homepage>http://live.gnome.org/GObjectIntrospection</Homepage>
+        <Packager>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Introspection system for GObject-based libraries</Summary>
+        <Description>gobject-introspection can scan C header and source files in order to generate introspection typelib files. It also provides an API to examine typelib files, useful for creating language bindings among other things.</Description>
+        <Archive sha1sum="4911c01f9a783a66535079e5990fc53fcb847ac7" type="targz">http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.63/gobject-introspection-1.63.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gobject-introspection</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0/*.typelib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gobject-introspection-devel</Name>
+        <Summary>Development files for gobject-introspection</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/gobject-introspection</Path>
+            <Path fileType="executable">/usr/bin/g-ir-*</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/gobject-introspection-1.0</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="3">
+        <Date>2019-12-12</Date>
+        <Version>1.63.1</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="2">
+            <Date>2019-09-25</Date>
+            <Version>1.62.0</Version>
+            <Comment>Upgraded with new glib2</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-09-07</Date>
+            <Version>1.54.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+  </History>
+</INARY>

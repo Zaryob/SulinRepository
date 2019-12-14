@@ -29,7 +29,6 @@
         <Name>firebird-client</Name>
         <RuntimeDependencies>
             <Dependency>libtommath</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Summary>Firebird database client library</Summary>
         <Description>Firebird relational database client library.</Description>
@@ -51,7 +50,6 @@
             <Dependency>firebird-client</Dependency>
             <Dependency>icu4c</Dependency>
             <Dependency>libedit</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Summary>Firebird super server</Summary>
         <Files>

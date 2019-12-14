@@ -14,12 +14,8 @@
         <Description>telepathy-haze is a connection manager built around libpurple, the core of Pidgin, as a Summer of Code project under the Pidgin umbrella. Ultimately, any protocol supported by libpurple will be supported by telepathy-haze; for now, XMPP, MSN and AIM are known to work acceptably, and other will probably work too.</Description>
         <Archive sha1sum="e985b4553a5499470df14a0bf60a91fda09bc37d" type="targz">http://telepathy.freedesktop.org/releases/telepathy-haze/telepathy-haze-0.8.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>libpurple-devel</Dependency>
             <Dependency>telepathy-glib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -30,9 +26,6 @@
     <Package>
         <Name>telepathy-haze</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>libpurple</Dependency>
             <Dependency>telepathy-glib</Dependency>
         </RuntimeDependencies>

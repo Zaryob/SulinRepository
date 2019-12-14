@@ -15,9 +15,7 @@
         <Description>perl-GSSAPI module gives access to the routines of the GSSAPI library, as described in rfc2743 and rfc2744 and implemented by the Kerberos-1.2 distribution from MIT.</Description>
         <Archive sha1sum="c857485532e92e266a75b56ed247284f94b2d3d4" type="targz">http://search.cpan.org/CPAN/authors/id/A/AG/AGROLMS/GSSAPI-0.28.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="0">disable_failing_test.patch</Patch>
@@ -27,9 +25,7 @@
     <Package>
         <Name>perl-GSSAPI</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>mit-kerberos</Dependency>
-            <Dependency>e2fsprogs</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

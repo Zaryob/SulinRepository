@@ -47,7 +47,7 @@
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/rsyslog">rsyslog.logrotate</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/rsyslog.conf">rsyslog.conf</AdditionalFile>
-	    <AdditionalFile owner="root" permission="0644" target="/etc/rsyslog.d/50-default.conf">50-default.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/rsyslog.d/50-default.conf">50-default.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/rsyslog">rsyslog.sysconfig</AdditionalFile>
         </AdditionalFiles>
         <Provides>

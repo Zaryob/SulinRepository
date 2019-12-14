@@ -26,7 +26,6 @@
         <Name>kproperty</Name>
         <Summary>A property editing framework with editor widget similar to what is known from Qt Designer</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kguiaddons</Dependency>

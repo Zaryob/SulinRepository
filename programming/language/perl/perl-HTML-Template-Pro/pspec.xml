@@ -17,8 +17,6 @@
         <Description>A fast and lightweight C/Perl+XS HTML Template engine implementation.</Description>
         <Archive sha1sum="493a942db702ab99be4bb075defd7452c1f407c5" type="targz">http://search.cpan.org/CPAN/authors/id/V/VI/VIY/HTML-Template-Pro-0.9510.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
-            <Dependency>libpcre-devel</Dependency>
             <Dependency>perl-JSON</Dependency>
         </BuildDependencies>
     </Source>
@@ -26,8 +24,6 @@
     <Package>
         <Name>perl-HTML-Template-Pro</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
-            <Dependency>libpcre</Dependency>
             <Dependency>perl-JSON</Dependency>
         </RuntimeDependencies>
         <Files>

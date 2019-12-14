@@ -18,9 +18,6 @@
         <Archive sha1sum="af1590286cf852702591e5db0ef1ba7b9c1e597c" type="targz">https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_46_RTM/src/nss-3.46.tar.gz</Archive>
         <BuildDependencies>
           <Dependency>gyp</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>nspr-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>standlone.patch</Patch>
@@ -30,10 +27,6 @@
     <Package>
         <Name>nss</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>sqlite</Dependency>
-            <Dependency>nspr</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -52,7 +45,6 @@
         <Name>nss-devel</Name>
         <Summary>Development files for nss</Summary>
         <RuntimeDependencies>
-            <Dependency>nspr-devel</Dependency>
             <Dependency release="current">nss</Dependency>
         </RuntimeDependencies>
         <Files>

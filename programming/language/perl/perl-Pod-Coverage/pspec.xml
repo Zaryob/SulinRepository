@@ -15,14 +15,12 @@
         <Description>perl-Test-Pod-Coverage module provides a mechanism for determining if the pod for a given module is comprehensive.</Description>
         <Archive sha1sum="1d235e670f478168fcbe43aeea1994536ec6e4f6" type="targz">https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Pod-Coverage-0.23.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Devel-Symdump</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>perl-Pod-Coverage</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Devel-Symdump</Dependency>
         </RuntimeDependencies>
         <Files>

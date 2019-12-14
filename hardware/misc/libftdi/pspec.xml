@@ -14,9 +14,7 @@
         <Description>libftdi allows access to eeprom and bitbang modes of FT232/245/2232 USB serial interface chips.</Description>
         <Archive sha1sum="5b14cebab8168e12dd6c2b5325a29ad93ed40f3d" type="tarbz2">https://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.4.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>libusb-devel</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>swig</Dependency>
         </BuildDependencies>
@@ -29,8 +27,6 @@
     <Package>
         <Name>libftdi</Name>
         <RuntimeDependencies>
-            <Dependency>libusb</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -43,7 +39,6 @@
     <Package>
         <Name>python-libftdi</Name>
         <RuntimeDependencies>
-            <Dependency>libusb</Dependency>
             <Dependency>python</Dependency>
             <Dependency release="current">libftdi</Dependency>
         </RuntimeDependencies>
@@ -58,7 +53,6 @@
         <Summary>Development files for libftdi</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libftdi</Dependency>
-            <Dependency>libusb-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/libftdi-config</Path>

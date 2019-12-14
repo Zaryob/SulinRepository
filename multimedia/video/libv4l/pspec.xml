@@ -16,14 +16,11 @@
         <Archive sha1sum="3c3c9d4c9924f0153974ebcf8554331e04914050" type="tarbz2">https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.18.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>eudev-32bit</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>libX11-32bit</Dependency>
         </BuildDependencies>
     </Source>
@@ -47,7 +44,6 @@
         <Summary>Utilities for libv4l</Summary>
         <RuntimeDependencies>
             <Dependency>mesa</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency release="current">libv4l</Dependency>
         </RuntimeDependencies>

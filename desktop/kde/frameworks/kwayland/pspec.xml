@@ -25,7 +25,6 @@
     <Package>
         <Name>kwayland</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>wayland-client</Dependency>
@@ -46,7 +45,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-	    <Dependency release="current">kwayland</Dependency>
+            <Dependency release="current">kwayland</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/cmake</Path>

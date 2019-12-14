@@ -16,7 +16,6 @@
         <Description>ACM Letters on Programming Languages and Systems (LOPLAS)</Description>
         <Archive sha1sum="fb604b6b89748ad965db4eda09ccb41cd6fbaad9" type="tarxz">https://github.com/skvadrik/re2c/releases/download/1.2.1/re2c-1.2.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>gcc</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

@@ -23,7 +23,6 @@
         <Name>libdvdread</Name>
         <RuntimeDependencies>
             <Dependency>libdvdcss</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

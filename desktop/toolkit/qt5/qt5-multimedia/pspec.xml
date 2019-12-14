@@ -35,7 +35,6 @@
             <Path fileType="data">/usr/share/licenses</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>openal</Dependency>
             <Dependency>alsa-lib</Dependency>
@@ -44,7 +43,6 @@
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>gst-plugins-base</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gst-plugins-bad</Dependency>
         </RuntimeDependencies>
     </Package>

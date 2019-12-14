@@ -15,7 +15,6 @@
         <Description>The xcb-util-wm module provides a number of libraries which sit on top of libxcb, the core X protocol library, and some of the extension libraries.</Description>
         <Archive sha1sum="7006c52b961c123355320bfc30477cdf90c8bbb7" type="tarbz2">http://xcb.freedesktop.org/dist/xcb-util-wm-0.4.1.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>util-macros</Dependency>
             <Dependency>libxcb-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -53,7 +52,7 @@
         <RuntimeDependencies>
             <Dependency release="current">xcb-util-wm</Dependency>
             <Dependency>libxcb-32bit</Dependency>
-	    
+            
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>

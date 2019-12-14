@@ -15,8 +15,6 @@
         <Description>Extra cmake modules KDE5</Description>
         <Archive sha1sum="f052be00a86f5497bf618e1272c20c577d301811" type="tarxz">mirrors://kde/stable/frameworks/5.64/extra-cmake-modules-5.64.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
-            <Dependency>flex</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,8 +22,6 @@
         <Name>extra-cmake-modules</Name>
         <PartOf>programming.build</PartOf>
         <RuntimeDependencies>
-            <Dependency>cmake</Dependency>
-            <Dependency>flex</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>

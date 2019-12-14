@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>imlib2</Dependency>
             <Dependency>slang</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>libX11</Dependency>
         </BuildDependencies>
     </Source>
@@ -27,16 +26,14 @@
         <Name>libcaca</Name>
         <RuntimeDependencies>
             <Dependency>imlib2</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>slang</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share</Path>
-	    <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>

@@ -19,8 +19,8 @@
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libpcre2-devel</Dependency>
-	          <Dependency>fridibi-devel</Dependency>
-	          <Dependency>gnutls-devel</Dependency>
+            <Dependency>fridibi-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -32,13 +32,13 @@
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-       	    <Dependency>libpcre2</Dependency>
-	          <Dependency>gnutls</Dependency>
+            <Dependency>libpcre2</Dependency>
+            <Dependency>gnutls</Dependency>
             <Dependency>fridibi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-	          <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -46,7 +46,7 @@
             <Path fileType="data">/usr/share/pygtk</Path>
             <Path fileType="data">/usr/share</Path>
             <Path fileType="config">/etc/profile.d/vte.sh</Path>
-	          <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>

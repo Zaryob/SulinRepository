@@ -47,7 +47,6 @@
         <Name>kdeclarative</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libepoxy</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>kpackage</Dependency>
@@ -89,7 +88,7 @@
             <Dependency>kio-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency release="current">kdeclarative</Dependency>	    
+            <Dependency release="current">kdeclarative</Dependency>         
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

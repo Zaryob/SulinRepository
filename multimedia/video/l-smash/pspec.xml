@@ -19,7 +19,6 @@
         <Name>l-smash</Name>
         <Summary>MP4 muxer and other tools.</Summary>
         <RuntimeDependencies>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

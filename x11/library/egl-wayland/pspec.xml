@@ -18,7 +18,6 @@
         <BuildDependencies>
             <Dependency>wayland-devel</Dependency>
             <Dependency>eglexternalplatform</Dependency>
-            <Dependency>meson</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

@@ -14,8 +14,6 @@
         <Description>The purpose of xmlto is to convert an XML file to the desired format using whatever means necessary.</Description>
         <Archive sha1sum="aa63af9a86ab6ed0c92ea8b177dc808c18902c73" type="tarbz2">https://releases.pagure.org/xmlto/xmlto-0.0.28.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>util-linux</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>docbook-xml</Dependency>
         </BuildDependencies>
@@ -25,7 +23,6 @@
         <RuntimeDependencies>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>docbook-xml</Dependency>
-            <Dependency>util-linux</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

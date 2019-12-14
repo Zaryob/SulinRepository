@@ -22,7 +22,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
     </Package>
     <Package>

@@ -15,14 +15,12 @@
         <Description>Object to handle .desktop files.</Description>
         <Archive sha1sum="5cec1844dc150db3eab387467379888b43b3fb35" type="targz">https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-DesktopEntry-0.22.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-File-DesktopEntry</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-File-Spec</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -17,11 +17,7 @@
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>glibmm-devel</Dependency>
-            <Dependency>libtool</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>pkgconfig</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libsigc++-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -29,8 +25,6 @@
         <Name>atkmm</Name>
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>glibmm</Dependency>
             <Dependency>libsigc++</Dependency>
         </RuntimeDependencies>

@@ -16,7 +16,6 @@
         <Archive sha1sum="24b5d84d221a75650f390ff63315912bf9a94992" type="tarbz2">mirrors://xorg/individual/driver/xf86-input-keyboard-1.9.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xorg-server-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
 

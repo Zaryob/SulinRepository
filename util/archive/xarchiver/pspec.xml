@@ -15,9 +15,7 @@
         <Description>Xarchiver is a GTK+2 only frontend to 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm and deb (open and extract only). Xarchiver allows you to create, add, extract and delete files in the above formats. 7z, zip, rar, arj password protected archives are supported.</Description>
         <Archive sha1sum="db763b3eaf926ebfc78ba0f647902d0d3764a813" type="targz">https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xarchiver/1:0.5.4.14-1/xarchiver_0.5.4.14.orig.tar.gz</Archive>
         <BuildDependencies>
-	    <Dependency>intltool</Dependency>
             <Dependency>gtk2-devel</Dependency>
-	    <Dependency>glib2-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
         </BuildDependencies>
@@ -27,7 +25,6 @@
         <Name>xarchiver</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-	    <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>p7zip</Dependency>
             <Dependency>unarj</Dependency>

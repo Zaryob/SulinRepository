@@ -15,7 +15,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>GNU Scheme interpreter and library</Summary>
         <Description>GUILE (GNU's Ubiquitous Intelligent Language for Extension) is a library implementation of the Scheme programming language, written in C. GUILE provides a machine-independent execution platform that can be linked in as a library during the building of extensible programs.</Description>
-        <Archive sha1sum="88cac56a7c017aae29a581772146057a9cd283f9" type="tarxz">mirrors://gnu/guile/guile-2.0.14.tar.xz</Archive>
+        <Archive sha1sum="75239d0f03a4860da60a07e02a715549a7465ba3" type="tarxz">mirrors://gnu/guile/guile-2.2.6.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gc-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
@@ -50,7 +50,7 @@
             <Path fileType="data">/usr/share/guile</Path>
             <Path fileType="data">/usr/share/emacs</Path>
             <Path fileType="data">/usr/share/gdb/auto-load</Path>
-            <Path fileType="library">/usr/lib/guile/2.0</Path>
+            <Path fileType="library">/usr/lib/guile/2.2</Path>
         </Files>
     </Package>
 
@@ -72,6 +72,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-13</Date>
+            <Version>2.2.6</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>2.0.14</Version>

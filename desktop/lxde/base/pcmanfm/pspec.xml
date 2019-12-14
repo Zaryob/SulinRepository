@@ -42,7 +42,7 @@
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/pcmanfm</Path>
             <Path fileType="data">/usr/share/man/</Path>
-	    <Path fileType="library">/usr/lib/pcmanfm</Path>
+            <Path fileType="library">/usr/lib/pcmanfm</Path>
         </Files>
     </Package>
 

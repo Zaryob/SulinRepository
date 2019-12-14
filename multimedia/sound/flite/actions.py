@@ -14,7 +14,7 @@ from inary.actionsapi import get
 def setup(): 
     autotools.configure("--prefix=/usr \
                          --with-audio=alsa \
-	                 --with-vox=cmu_us_kal16")
+                         --with-vox=cmu_us_kal16")
 
 def build():
     autotools.make()

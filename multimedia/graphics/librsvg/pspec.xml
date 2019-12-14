@@ -16,11 +16,9 @@
         <BuildDependencies>
             <Dependency>libcroco-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>vala-devel</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>rust-cargo</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
@@ -33,11 +31,9 @@
         <RuntimeDependencies>
             <Dependency>libcroco</Dependency>
             <Dependency>gtk3</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>vala</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>rustc</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>gobject-introspection</Dependency>
@@ -64,7 +60,6 @@
           <Dependency release="current">librsvg</Dependency>
           <Dependency>libcroco-devel</Dependency>
           <Dependency>gtk3-devel</Dependency>
-          <Dependency>libxml2-devel</Dependency>
           <Dependency>pango-devel</Dependency>
           <Dependency>cairo-devel</Dependency>
           <Dependency>vala-devel</Dependency>

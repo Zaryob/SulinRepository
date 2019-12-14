@@ -15,7 +15,6 @@
         <Description>This Perl module provides HMAC-MD5 hashing.</Description>
         <Archive sha1sum="b3f931032a9a8d9ba42d1c5d4684b06e60e183c7" type="targz">http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/Digest-HMAC-1.03.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Digest-SHA1</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,7 +22,6 @@
     <Package>
         <Name>perl-Digest-HMAC</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Digest-SHA1</Dependency>
         </RuntimeDependencies>
         <Files>

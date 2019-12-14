@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A framework for defining and tracking users, login sessions, and seats</Summary>
         <Description>ConsoleKit is a system daemon for tracking what users are logged into the system and how they interact with the computer (e.g. which keyboard and mouse they use).</Description>
-        <Archive sha1sum="57b5fc3eae0391105e4933e79e6aeda943e6da81" type="tarbz2">https://github.com/ConsoleKit2/ConsoleKit2/releases/download/1.0.2/ConsoleKit2-1.0.2.tar.bz2</Archive>
+        <Archive sha1sum="28869807eed0cc4a7a1d98030be1f2c7e5700d0e" type="tarbz2">https://github.com/ConsoleKit2/ConsoleKit2/releases/download/1.2.1/ConsoleKit2-1.2.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>
             <Dependency>pam-devel</Dependency>
@@ -54,6 +54,7 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
             <Path fileType="data">/var</Path>
         </Files>
     </Package>
@@ -72,6 +73,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-13</Date>
+            <Version>1.2.1</Version>
+            <Comment>Automatic version upgrade.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-14</Date>
             <Version>1.0.2</Version>

@@ -16,15 +16,11 @@
         <BuildDependencies>
             <Dependency>nss-devel</Dependency>
             <Dependency>mdadm</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>parted-devel</Dependency>
             <Dependency>libyaml-devel</Dependency>
-            <Dependency>libkmod-devel</Dependency>
             <Dependency>volume_key-devel</Dependency>
             <Dependency>libbytesize-devel</Dependency>
             <Dependency>libcryptsetup-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>device-mapper-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
@@ -34,16 +30,11 @@
         <Name>libblockdev</Name>
         <RuntimeDependencies>
             <Dependency>nss</Dependency>
-            <Dependency>nspr</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>parted</Dependency>
             <Dependency>libyaml</Dependency>
-            <Dependency>libkmod</Dependency>
             <Dependency>volume_key</Dependency>
             <Dependency>libbytesize</Dependency>
             <Dependency>libcryptsetup</Dependency>
-            <Dependency>libutil-linux</Dependency>
             <Dependency>device-mapper</Dependency>
         </RuntimeDependencies>
         <Files>

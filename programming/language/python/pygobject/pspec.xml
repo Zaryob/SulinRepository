@@ -15,10 +15,8 @@
         <Archive sha1sum="b1749ba806499f4c2780dbd1cbb363aaf1f41e78" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/pygobject/2.28/pygobject-2.28.6.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-cairo-devel</Dependency>
             <Dependency>python3-cairo-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -30,10 +28,8 @@
     <Package>
         <Name>python-pygobject</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>python-cairo</Dependency>
-            <Dependency>libffi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libpyglib-2.0-python2.7.so*</Path>
@@ -44,10 +40,8 @@
         <Name>python3-pygobject</Name>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>python3-cairo</Dependency>
-            <Dependency>libffi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libpyglib-2.0-python3*</Path>
@@ -60,8 +54,6 @@
         <RuntimeDependencies>
             <Dependency release="current">python-pygobject</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libffi-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pygobject-codegen-2.0</Path>

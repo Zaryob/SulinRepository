@@ -54,12 +54,11 @@
             <Dependency>fontconfig</Dependency>
             <Dependency>libXinerama</Dependency>
             <Dependency>libXcomposite</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-	    <!--<Dependency>gtk-theme-mediterranean</Dependency>--><!--it need gtk2-engines-murrine is need gtk2 too-->
+            <!--<Dependency>gtk-theme-mediterranean</Dependency>--><!--it need gtk2-engines-murrine is need gtk2 too-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -88,7 +87,6 @@
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/gtk-demo</Path>

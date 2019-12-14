@@ -16,7 +16,6 @@
         <Description>Nice is an implementation of the IETF's draft Interactive Connectivity Establishment standard (ICE).</Description>
         <Archive sha1sum="811f9ee1c98f3ddfdedf091cafdc3cb449f8330d" type="targz">https://nice.freedesktop.org/releases/libnice-0.1.16.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
@@ -26,9 +25,7 @@
     <Package>
         <Name>libnice</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>gnutls</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>gstreamer</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -44,7 +41,6 @@
         <Summary>Development files for libnice</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libnice</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
         </RuntimeDependencies>
         <Files>

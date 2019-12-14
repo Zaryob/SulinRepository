@@ -53,7 +53,6 @@
         <Summary>32-bit shared libraries for libnsl</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>libtirpc-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>

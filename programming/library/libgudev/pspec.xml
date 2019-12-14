@@ -17,18 +17,13 @@
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>docbook-xsl</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgudev</Name>
         <RuntimeDependencies>
-            <Dependency>eudev</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -43,8 +38,6 @@
         <Summary>Development files for libgudev</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libgudev</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/pkgconfig</Path>

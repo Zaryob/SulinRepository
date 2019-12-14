@@ -25,7 +25,6 @@
     <Package>
         <Name>qt5-quickcontrols2</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>qt5-base-devel</Dependency>

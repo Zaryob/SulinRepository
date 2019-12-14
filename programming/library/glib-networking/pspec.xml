@@ -19,8 +19,6 @@
         <Name>glib-networking</Name>
         <RuntimeDependencies>
             <Dependency>gnutls</Dependency>
-            <Dependency>libgcrypt</Dependency>
-            <Dependency>libgpg-error</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

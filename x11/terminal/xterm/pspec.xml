@@ -26,7 +26,6 @@
             <Dependency>libXinerama-devel</Dependency>
             <Dependency>xorg-app</Dependency>
             <Dependency>libXpm-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -47,7 +46,6 @@
             <Dependency>utempter</Dependency>
             <Dependency>xorg-app</Dependency>
             <Dependency>libXpm</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>

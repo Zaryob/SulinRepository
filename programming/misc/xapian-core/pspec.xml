@@ -15,17 +15,12 @@
         <Description>Xapian is an Open Source Probabilistic Information Retrieval Library. It offers a highly adaptable toolkit that allows developers to easily add advanced indexing and search facilities to applications.</Description>
         <Archive sha1sum="17527a8bfa8254d3755b4b482157c245f33ea53d" type="tarxz">https://oligarchy.co.uk/xapian/1.4.14/xapian-core-1.4.14.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-      	    <Dependency>libutil-linux-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>xapian-core</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libutil-linux</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

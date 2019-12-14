@@ -16,7 +16,6 @@
         <Description>This class is for objects that represent a "cookie jar" -- that is, a database of all the HTTP cookies that a given LWP::UserAgent object knows about.</Description>
         <Archive sha1sum="a8601a34e62666572bc8a4a98f56822b008afd17" type="targz">http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Cookies-6.01.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTTP-Message</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,7 +23,6 @@
     <Package>
         <Name>perl-HTTP-Cookies</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTTP-Message</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -15,8 +15,6 @@
         <Description>libtdb contains C library and Python bindings to access to a trivial database. TDB is very much like GDBM and BSDDB except that it allows multiple simultaneous writers and uses locking internally to keep writers from trampling on each other.</Description>
         <Archive sha1sum="9a6e51cde16a2400b76448c4e7de2f87656477a2" type="targz">https://www.samba.org/ftp/tdb/tdb-1.4.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxslt</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>libbsd-devel</Dependency>
         </BuildDependencies>
@@ -27,7 +25,6 @@
     <Package>
         <Name>libtdb</Name>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

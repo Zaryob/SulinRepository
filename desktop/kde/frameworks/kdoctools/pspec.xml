@@ -19,8 +19,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>perl-URI</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>docbook-xml</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>docbook-sgml</Dependency>
@@ -34,9 +32,6 @@
         <Name>kdoctools</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>karchive</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -58,8 +53,6 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency release="current">kdoctools</Dependency>
             <Dependency>karchive-devel</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

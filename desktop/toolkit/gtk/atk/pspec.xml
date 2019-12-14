@@ -16,14 +16,12 @@
         <Archive sha1sum="e0ea7c9c87e988091253e3fe76047691600776cd" type="tarxz">mirrors://gnome/atk/2.32/atk-2.32.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>atk</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libatk*</Path>

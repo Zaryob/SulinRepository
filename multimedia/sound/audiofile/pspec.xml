@@ -26,7 +26,6 @@
         <RuntimeDependencies>
             <Dependency>alsa-lib</Dependency>
             <Dependency>flac</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

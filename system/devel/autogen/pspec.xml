@@ -13,9 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>The automated text and program generation tool</Summary>
         <Description>autogen is a tool designed to simplify the creation and maintenance of programs that contain large amounts of repetitious text.</Description>
-        <Archive
-sha1sum="fff5c0bf812cb1c65ccb9f56d25f7c77914fa72c"
-type="targz">mirrors://gnu/autogen/rel5.18.12/autogen-5.18.12.tar.gz</Archive>
+        <Archive sha1sum="e539a6340e4bde7409593c03be012036d37a9ca9" type="targz">mirrors://gnu/autogen/rel5.18.16/autogen-5.18.16.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gc-devel</Dependency>
             <Dependency>gmp-devel</Dependency>
@@ -23,6 +21,9 @@ type="targz">mirrors://gnu/autogen/rel5.18.12/autogen-5.18.12.tar.gz</Archive>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>which</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>autogen-5.18.16-no-werror.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -79,6 +80,13 @@ type="targz">mirrors://gnu/autogen/rel5.18.12/autogen-5.18.12.tar.gz</Archive>
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-12-13</Date>
+            <Version>5.18.16</Version>
+            <Comment>Guile broke this package. So I bumped with upgrading new release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>5.18.12</Version>

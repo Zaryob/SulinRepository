@@ -30,7 +30,6 @@
             <Dependency>exo-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
             <Dependency>xfce4-dev-tools</Dependency>
-            <Dependency>perl-XML-Parser</Dependency>
             <Dependency>libnotify-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>xfce4-panel-devel</Dependency>

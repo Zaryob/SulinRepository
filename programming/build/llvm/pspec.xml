@@ -18,18 +18,11 @@
        <Archive sha1sum="6286b90b2762404baee55a69a2a7e9ed0fce58a2" type="binary">http://llvm.org/releases/7.0.1/lldb-7.0.1.src.tar.xz</Archive>
        <Archive sha1sum="5ac063b474abe730b551477cdc02db789228f9c7" type="binary">http://llvm.org/releases/7.0.1/compiler-rt-7.0.1.src.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
             <Dependency>ocaml</Dependency>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>groff</Dependency>
             <Dependency>swig</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>libedit-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <!-- Use new plugin-api.h header file from binutils to enable LLVM gold plugin -->
-            <Dependency>binutils</Dependency>
         </BuildDependencies>
     </Source>
      <Package>
@@ -38,11 +31,6 @@
         <IsA>library</IsA>
         <RuntimeDependencies>
             <Dependency release="current">llvm-libs</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>ncurses</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libffi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -65,11 +53,7 @@
         <Name>llvm-libs</Name>
         <IsA>library</IsA>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libffi</Dependency>
             <Dependency>libedit</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>ncurses</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libLLVM.*</Path>
@@ -85,13 +69,8 @@
         <Summary>Next generation, high-performance debugger</Summary>
         <RuntimeDependencies>
             <Dependency release="current">llvm</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libffi</Dependency>
             <Dependency>libedit</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>libxml2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/argdumper</Path>
@@ -136,8 +115,6 @@
         <Description>The goal of the Clang project is to create a new C, C++, Objective C and Objective C++ front-end for the LLVM compiler.</Description>
         <RuntimeDependencies>
             <Dependency release="current">llvm-libs</Dependency>
-	    <Dependency>libgcc</Dependency>
-	    <Dependency>ncurses</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/clang*</Path>
@@ -183,7 +160,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">llvm</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libedit</Dependency>
             <Dependency>ncurses-32bit</Dependency>
             <Dependency>zlib-32bit</Dependency>

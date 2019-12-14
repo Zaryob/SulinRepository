@@ -18,7 +18,6 @@
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -41,7 +40,6 @@
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/X11</Path>

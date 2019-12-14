@@ -14,14 +14,12 @@
         <Description>The mission of the Apache portable runtime (APR) is to provide a free library of C data structures and routines.</Description>
         <Archive sha1sum="caac4a92d51b211b0c1374217e4fc64ca8142288" type="targz">mirrors://apache/apr/apr-1.7.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libutil-linux-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>apr</Name>
         <RuntimeDependencies>
-            <Dependency>libutil-linux</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

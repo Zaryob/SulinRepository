@@ -16,7 +16,6 @@
         <Archive sha1sum="7635bec769a17edd140282fa2c46838c4a44bc91" type="tarbz2">https://dri.freedesktop.org/libdrm/libdrm-2.4.97.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency versionFrom="0.13.4">libpciaccess-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

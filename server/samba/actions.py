@@ -21,7 +21,7 @@ def setup():
     shelltools.system("""sed -i -e '/"dns.resolver":/d' third_party/wscript""")
     shelltools.system("""sed -i -e '/"iso8601":/d' third_party/wscript""")
     shelltools.system("sed -e 's:<gpgme\.h>:<gpgme/gpgme.h>:' \
-	                   -i source4/dsdb/samdb/ldb_modules/password_hash.c ")
+                           -i source4/dsdb/samdb/ldb_modules/password_hash.c ")
     autotools.configure("\
                          --libdir=/usr/lib \
                          --with-cachedir=/var/lib/samba \

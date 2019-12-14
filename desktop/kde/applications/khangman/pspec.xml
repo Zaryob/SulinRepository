@@ -1,4 +1,3 @@
-
 <INARY>
     <Source>
         <Name>khangman</Name>
@@ -50,7 +49,6 @@
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>libkeduvocdocument</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/xdg</Path>

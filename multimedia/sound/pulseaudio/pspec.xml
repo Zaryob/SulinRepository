@@ -15,13 +15,12 @@
         <IsA>library</IsA>
         <Summary>A networked sound server with an advanced plugin system</Summary>
         <Description>pulseaudio is a sound server for POSIX and Win32 systems. It allows you to do advanced operations on your sound data as it passes between your application and your hardware.</Description>
-             <Archive sha1sum="dd07a49f09821913c5ed1b131ea7f85f27085d0b" type="tarxz">https://freedesktop.org/software/pulseaudio/releases/pulseaudio-13.0.tar.xz</Archive>
+        <Archive sha1sum="dd07a49f09821913c5ed1b131ea7f85f27085d0b" type="tarxz">https://freedesktop.org/software/pulseaudio/releases/pulseaudio-13.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>orc-devel</Dependency>
             <Dependency>sbc-devel</Dependency>
             <Dependency>fftw3-devel</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>xcb-proto</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>avahi-devel</Dependency>
             <Dependency>speex-devel</Dependency>
@@ -33,12 +32,6 @@
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>libsndfile-devel</Dependency>
             <Dependency>libasyncns-devel</Dependency>
-            <Dependency>libatomic_ops-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>intltool</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>json-c-devel</Dependency>
             <Dependency>bluez</Dependency>
             <Dependency>bluez-libs-devel</Dependency>
             <Dependency>jack-audio-connection-kit-devel</Dependency>
@@ -49,14 +42,9 @@
         <Name>pulseaudio-libs</Name>
         <Summary>Libraries for PulseAudio clients</Summary>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>json-c</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libtdb</Dependency>
             <Dependency>libxcb</Dependency>
-            <Dependency>eudev</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency>orc</Dependency>
             <Dependency>sbc</Dependency>
             <Dependency>fftw3</Dependency>
@@ -69,8 +57,6 @@
             <Dependency>libasyncns</Dependency>
             <Dependency>libsndfile</Dependency>
             <Dependency>bluez</Dependency>
-            <Dependency>tcp-wrappers</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>lirc</Dependency>
             <Dependency>jack-audio-connection-kit</Dependency>
         </RuntimeDependencies>
@@ -85,8 +71,8 @@
             <Path fileType="library">/usr/lib/libpulse-mainloop-glib.so</Path>
             <Path fileType="library">/usr/lib/libpulse-mainloop-glib.so*</Path>
             <Path fileType="library">/usr/lib/pulseaudio/libpulsedsp.*</Path>
-	          <Path fileType="library">/usr/lib/pulse/modules</Path>
-	          <Path fileType="library">/usr/lib/udev/rules.d</Path>
+            <Path fileType="library">/usr/lib/pulse/modules</Path>
+            <Path fileType="library">/usr/lib/udev/rules.d</Path>
             <Path fileType="library">/usr/lib/pulseaudio/libpulsecore*.so</Path>
         </Files>
     </Package>
@@ -96,7 +82,6 @@
         <Summary>Development files for pulseaudio-libs</Summary>
         <RuntimeDependencies>
             <Dependency release="current">pulseaudio-libs</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -117,9 +102,6 @@
     <Package>
         <Name>pulseaudio</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>libcap</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency release="current">pulseaudio-libs</Dependency>
         </RuntimeDependencies>
         <Files>

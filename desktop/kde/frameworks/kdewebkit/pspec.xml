@@ -36,7 +36,6 @@
         <Name>kdewebkit</Name>
         <RuntimeDependencies>
             <Dependency>qt5-webkit</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kjobwidgets</Dependency>
             <Dependency>qt5-base</Dependency>

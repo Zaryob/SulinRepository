@@ -15,8 +15,6 @@
         <Description>cairomm package is the C++ binding for Cairo (it makes possible using Cairo in C++).</Description>
         <Archive sha1sum="621546f32221a2ddc079167a13ce5b5409bed704" type="targz">https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>grep</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>libsigc++-devel</Dependency>
@@ -27,7 +25,6 @@
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
             <Dependency>libsigc++</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>

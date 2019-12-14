@@ -17,21 +17,15 @@
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>exo-devel</Dependency>
             <Dependency>gtksourceview3</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>desktop-file-utils</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>mousepad</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
             <Dependency>gtk2</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>gtksourceview3</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vte3</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Summary>Xft powered terminal widget</Summary>
+        <Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
+        <Archive sha1sum="50f10d22c42fe73cdabccfbd30d89a4853575374" type="targz">http://ftp.gnome.org/pub/gnome/sources/vte/0.59/vte-0.59.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
+	          <Dependency>fridibi-devel</Dependency>
+	          <Dependency>gnutls-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vte3</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+       	    <Dependency>libpcre2</Dependency>
+	          <Dependency>gnutls</Dependency>
+            <Dependency>fridibi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+	          <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/vte</Path>
+            <Path fileType="data">/usr/share/pygtk</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="config">/etc/profile.d/vte.sh</Path>
+	          <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>0.59.0</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.58.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

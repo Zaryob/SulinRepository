@@ -17,8 +17,6 @@
         <Archive sha1sum="54a34066ae66b74bb5ea627d58e8c61ca26d93cb" type="tarxz">mirrors://kde/stable/frameworks/5.64/kio-5.64.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
             <Dependency>mit-kerberos</Dependency>
             <Dependency>karchive-devel</Dependency>
             <Dependency>kconfig-devel</Dependency>
@@ -44,9 +42,7 @@
             <Dependency>kxmlgui-devel</Dependency>
             <Dependency>ktextwidgets-devel</Dependency>
             <Dependency>knotifications-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>qt5-script-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>docbook-sgml</Dependency>
             <Dependency>docbook-xml</Dependency>
             <Dependency>docbook-xsl</Dependency>
@@ -58,11 +54,6 @@
         <Name>kio</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>acl</Dependency>
-            <Dependency>attr</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>mit-kerberos</Dependency>
             <Dependency>knotifications</Dependency>
             <Dependency>qt5-script</Dependency>
@@ -106,10 +97,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency release="current">kio</Dependency>
-            <Dependency>acl-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>knotifications-devel</Dependency>
             <Dependency>qt5-script-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>

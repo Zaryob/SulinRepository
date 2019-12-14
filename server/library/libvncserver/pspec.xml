@@ -16,7 +16,6 @@
         <BuildDependencies>
             <Dependency>gnutls</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>libgcrypt</Dependency>
             <Dependency>libpng</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,9 +23,7 @@
     <Package>
         <Name>libvncserver</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>libgcrypt</Dependency>
             <Dependency>gnutls</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>

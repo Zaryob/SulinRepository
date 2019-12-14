@@ -17,7 +17,6 @@
         <BuildDependencies>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-Module-Build</Dependency>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,7 +24,6 @@
         <Name>perl-HTML-Scrubber</Name>
         <RuntimeDependencies>
             <Dependency>perl-HTML-Parser</Dependency>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

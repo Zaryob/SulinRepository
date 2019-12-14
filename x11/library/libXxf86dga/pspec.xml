@@ -17,14 +17,13 @@
         <BuildDependencies>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>libXxf86dga</Name>
         <RuntimeDependencies>
             <Dependency>libXext</Dependency>
-	    <Dependency>libX11</Dependency>
+            <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

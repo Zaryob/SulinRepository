@@ -16,9 +16,6 @@
         <Archive sha1sum="a4fa9263939561f6de8dd6e04381761fe29fa03b" type="tarxz">mirrors://kde/stable/frameworks/5.64/karchive-5.64.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>xz-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>bzip2</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -27,10 +24,6 @@
         <Name>karchive</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>xz</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>

@@ -21,14 +21,12 @@
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-YAML-Tiny</Dependency>
             <Dependency>perl-Module-ScanDeps</Dependency>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Module-Install</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-docs</Dependency>
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-Module-ScanDeps</Dependency>

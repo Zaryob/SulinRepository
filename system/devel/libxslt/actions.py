@@ -9,7 +9,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 
 def setup():
-    python = "--without-python" if get.buildTYPE() == "emul32" else "--with-python=/usr/bin/python2.7 "
+    python = "--without-python" if get.buildTYPE() == "emul32" else "--with-python=/usr/bin/python3.7 "
     # don't remove --with-debugger as it is needed for reverse dependencies
     autotools.configure("%s \
                          --with-crypto \

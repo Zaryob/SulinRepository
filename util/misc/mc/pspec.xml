@@ -15,13 +15,8 @@
         <Archive sha1sum="021a33828922b45d18daa23189d6c86d17e61e09" type="tarxz">http://ftp.midnight-commander.org/mc-4.8.23.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gpm</Dependency>
-            <Dependency>check-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>slang-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,7 +24,6 @@
         <Name>mc</Name>
         <RuntimeDependencies>
             <Dependency>gpm</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>slang</Dependency>
         </RuntimeDependencies>
         <Files>

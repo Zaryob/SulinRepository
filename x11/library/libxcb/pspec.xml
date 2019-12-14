@@ -18,8 +18,6 @@
             <Dependency>libXau-devel</Dependency>
             <Dependency>libXdmcp-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>util-macros</Dependency>
             <Dependency versionFrom="1.12">xcb-proto</Dependency>
         </BuildDependencies>
         <Patches>
@@ -31,7 +29,6 @@
         <RuntimeDependencies>
             <Dependency>libXau</Dependency>
             <Dependency>libXdmcp</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

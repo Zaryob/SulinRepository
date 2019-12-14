@@ -15,14 +15,12 @@
         <Description>HTML-Tagset contains several data tables useful in various kinds of HTML parsing operations.</Description>
         <Archive sha1sum="cc906acec09b23d5ffa5e1d4f40441f9de1ad777" type="targz">http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/HTML-Tagset-3.20.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-HTML-Tagset</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

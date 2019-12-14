@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -18,13 +17,8 @@
         <BuildDependencies>
             <Dependency>libnice-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>telepathy-glib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
             <Dependency>libnice-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
@@ -34,14 +28,9 @@
     <Package>
         <Name>telepathy-gabble</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gnutls</Dependency>
-            <Dependency>sqlite</Dependency>
             <Dependency>libnice</Dependency>
             <Dependency>libsoup</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>telepathy-glib</Dependency>
         </RuntimeDependencies>
         <Files>

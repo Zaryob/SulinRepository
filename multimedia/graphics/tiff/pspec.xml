@@ -18,7 +18,7 @@
         </BuildDependencies>
     </Source>
     <Package>
-	      <Name>tiff</Name>
+        <Name>tiff</Name>
         <RuntimeDependencies>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>jbigkit</Dependency>

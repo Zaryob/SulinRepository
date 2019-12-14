@@ -14,9 +14,7 @@
         <Description>Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C.</Description>
         <Archive sha1sum="4cc3d574121efa3aca850d7aef0307cc778177ea" type="tarxz">mirrors://gnome/vala/0.44/vala-0.44.2.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-	          <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>libxslt</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -24,7 +22,6 @@
         <IsA>app:console</IsA>
         <IsA>library</IsA>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/lib/vala</Path>

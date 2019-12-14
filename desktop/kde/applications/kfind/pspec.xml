@@ -1,4 +1,3 @@
-
 <INARY>
     <Source>
         <Name>kfind</Name>
@@ -13,8 +12,6 @@
         <Description>Find Files/Folders</Description>
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
-            <Dependency>gettext-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>karchive-devel</Dependency>
             <Dependency>kdesignerplugin</Dependency>
             <Dependency>kemoticons-devel</Dependency>
@@ -34,7 +31,6 @@
         <RuntimeDependencies>
             <Dependency>karchive</Dependency>
             <Dependency>kdelibs4-support</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>ki18n</Dependency>

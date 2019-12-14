@@ -15,23 +15,14 @@
         <Description>xorriso is a program which maps file objects from POSIX compliant filesystems into Rock Ridge enhanced ISO 9660 filesystems and allows session-wise manipulation of such filesystems. It can load the management information of existing ISO images and it writes the session results to optical media or to filesystem objects. Vice versa xorriso is able to restore file objects from ISO 9660 filesystems.</Description>
         <Archive sha1sum="98bab86082614a1a0f9601db5c9da14e5ad2d440" type="targz">http://www.gnu.org/software/xorriso/xorriso-1.5.2.tar.gz</Archive>
         <BuildDependencies>
-	    <Dependency>acl-devel</Dependency>
-	    <Dependency>attr-devel</Dependency>
-	    <Dependency>zlib-devel</Dependency>
             <Dependency>libedit-devel</Dependency>
-	    <Dependency>readline-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>xorriso</Name>
         <RuntimeDependencies>
-	    <Dependency>acl</Dependency>
-            <Dependency>attr</Dependency>
-	    <Dependency>zlib</Dependency>
-	    <Dependency>bzip2</Dependency>
             <Dependency>libedit</Dependency>
-	    <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

@@ -14,17 +14,12 @@
         <Description>A command-line program that does structural, content-preserving transformations on PDF files</Description>
         <Archive sha1sum="5a3f8f86a71cd1fde2fcba08837b61d995f6aa39" type="targz">https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.0.1/qpdf-9.0.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>qpdf</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libpcre</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -38,8 +33,6 @@
         <Name>qpdf-devel</Name>
         <Summary>Development files for qpdf</Summary>
         <RuntimeDependencies>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency release="current">qpdf</Dependency>
         </RuntimeDependencies>
         <Files>

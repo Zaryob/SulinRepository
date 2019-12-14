@@ -7,18 +7,18 @@ from inary.actionsapi import get
 
 
 def setup():
-	inarytools.dosed("scripts/gen-api-gtkdoc.py", "python", "python3")
-	autotools.configure("PYTHON=python3 \
-	                     --prefix=/usr \
-                         --enable-gtk3 \
-						 --enable-gtkdoc-header")
-	inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+        inarytools.dosed("scripts/gen-api-gtkdoc.py", "python", "python3")
+        autotools.configure("PYTHON=python3 \
+                            --prefix=/usr \
+                            --enable-gtk3 \
+                            --enable-gtkdoc-header")
+        inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
-	autotools.make()
+        autotools.make()
 
 def install():
-	inarytools.dodoc('AUTHORS', 'ChangeLog',
-	                'COPYING', 'HACKING', 'INSTALL', 'NEWS', 'README',
-	                'README.I18N', 'README.Packagers', 'THANKS', 'TODO')
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+        inarytools.dodoc('AUTHORS', 'ChangeLog',
+                        'COPYING', 'HACKING', 'INSTALL', 'NEWS', 'README',
+                        'README.I18N', 'README.Packagers', 'THANKS', 'TODO')
+        autotools.rawInstall("DESTDIR=%s" % get.installDIR())

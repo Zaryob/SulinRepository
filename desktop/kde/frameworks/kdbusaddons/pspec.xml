@@ -26,7 +26,6 @@
     <Package>
         <Name>kdbusaddons</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-x11extras</Dependency>
         </RuntimeDependencies>

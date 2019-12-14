@@ -29,7 +29,6 @@
         <Name>kemoticons</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>karchive</Dependency>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kconfig</Dependency>

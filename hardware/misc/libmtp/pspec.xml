@@ -16,16 +16,12 @@
         <Archive sha1sum="c043053b0f219ab8968cc183f3a4477ae3337f6d" type="targz">mirrors://sourceforge/libmtp/1.1.15/libmtp-1.1.15.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>doxygen</Dependency>
-            <Dependency>libusb-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libmtp</Name>
         <RuntimeDependencies>
-            <Dependency>libusb</Dependency>
-            <Dependency>libgcrypt</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -41,7 +37,6 @@
         <Summary>Development files for libmtp</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libmtp</Dependency>
-            <Dependency>libusb-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

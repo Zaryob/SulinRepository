@@ -42,7 +42,6 @@
             <Dependency>kcoreaddons</Dependency>
             <Dependency>kdbusaddons</Dependency>
             <Dependency>kauth</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>ki18n</Dependency>

@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -19,7 +18,6 @@
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>polkit-qt-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

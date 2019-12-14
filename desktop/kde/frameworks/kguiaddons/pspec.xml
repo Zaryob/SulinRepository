@@ -26,7 +26,6 @@
     <Package>
         <Name>kguiaddons</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-x11extras</Dependency>

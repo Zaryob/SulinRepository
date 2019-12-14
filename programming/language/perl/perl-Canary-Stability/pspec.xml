@@ -15,7 +15,6 @@
         <Description>CPAN/Canary-Stability - canary to check perl compatability for schmorp's modules</Description>
         <Archive sha1sum="b20e8478a0658634e12d2cbc33b449450760af19" type="targz">https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Canary-Stability-2013.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -23,7 +22,6 @@
         <Name>perl-Canary-Stability</Name>
         <Summary>CPAN/Canary-Stability - canary to check perl compatability for schmorp's modules</Summary>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="all">/</Path>

@@ -19,8 +19,6 @@
             <Dependency>libXrandr-devel</Dependency>
             <Dependency>xorg-server-devel</Dependency>
             <Dependency>libXinerama-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -32,7 +30,6 @@
             <Dependency>libXrandr</Dependency>
             <Dependency>libXinerama</Dependency>
             <Dependency>xorg-server</Dependency>
-            <Dependency>eudev</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib/udev</Path>

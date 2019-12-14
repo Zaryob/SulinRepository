@@ -17,14 +17,12 @@
             <Patch level="1">libmodplug-0.8.4-timidity-patches.patch</Patch>
         </Patches>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libmodplug</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

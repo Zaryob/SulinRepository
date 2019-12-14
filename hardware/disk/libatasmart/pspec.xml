@@ -18,14 +18,12 @@
             <Patch level="1">libatasmart-uninitialized-var.patch</Patch>
         </Patches>
         <BuildDependencies>
-             <Dependency>eudev-devel</Dependency>
          </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libatasmart</Name>
         <RuntimeDependencies>
-             <Dependency>eudev</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/sbin/skdump</Path>
@@ -41,7 +39,6 @@
         <Summary>Development files for libatasmart</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libatasmart</Dependency>
-            <Dependency>eudev-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

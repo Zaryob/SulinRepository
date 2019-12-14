@@ -17,7 +17,6 @@
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>vala-devel</Dependency>
         </BuildDependencies>
@@ -30,7 +29,6 @@
         <RuntimeDependencies>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>libsoup</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>vala</Dependency>
         </RuntimeDependencies>
@@ -47,7 +45,6 @@
         <Summary>Development files for gssdp</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gssdp</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

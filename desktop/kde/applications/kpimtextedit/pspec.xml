@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -44,7 +43,6 @@
             <Dependency>kcodecs</Dependency>
             <Dependency>kio</Dependency>
             <Dependency>sonnet</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>kemoticons</Dependency>
             <Dependency>kcompletion</Dependency>
             <Dependency>ktextwidgets</Dependency>

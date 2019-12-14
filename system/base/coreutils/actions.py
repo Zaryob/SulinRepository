@@ -28,9 +28,9 @@ def setup():
     autotools.autoreconf("-vfi")
 
     # Fedora also installs su and hostname
-    autotools.configure("""--with-packager="Gentoo" \
-    		             --with-packager-version="coreutils-8.28-r1" \
-    		             --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
+    autotools.configure("""--with-packager="Sulin" \
+                         --with-packager-version="coreutils-8.28" \
+                         --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
                          --enable-largefile \
                          --enable-install-program=arch \
                          --enable-no-install-program=faillog,hostname,login,lastlog,uptime \

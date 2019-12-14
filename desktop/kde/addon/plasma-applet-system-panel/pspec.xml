@@ -15,7 +15,6 @@
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>plasma-workspace-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>glibc-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
         <Archive type="targz" sha1sum="80fc56952f658da41d2599343af32f14070bc879">https://github.com/Musikolo/plasma5-applets-system-panel/archive/v1.3.0.tar.gz</Archive>
@@ -26,7 +25,6 @@
         <RuntimeDependencies>
             <Dependency>plasma-workspace</Dependency>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>            
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>

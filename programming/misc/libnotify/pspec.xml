@@ -28,7 +28,6 @@
         <Name>libnotify</Name>
         <RuntimeDependencies>
             <Dependency>gdk-pixbuf</Dependency>
-	    <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

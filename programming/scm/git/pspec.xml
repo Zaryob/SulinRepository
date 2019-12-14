@@ -14,17 +14,10 @@
         <Archive sha1sum="fc627f8cb994c60ae6c4580ca514af2a18c464d7" type="tarxz">https://www.kernel.org/pub/software/scm/git/git-2.23.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>tcltk-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
             <Dependency>libpcre2-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
             <Dependency>xmlto</Dependency>
             <Dependency>asciidoc</Dependency>
             <Dependency>perl-Error</Dependency>
-            <Dependency>perl</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>util-linux</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -39,11 +32,7 @@
             <Dependency>libpcre2</Dependency>
             <Dependency version="current">perl-Git</Dependency>
             <Dependency>openssh</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>rsync</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>curl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -73,7 +62,6 @@
         <IsA>service</IsA>
         <Summary>GIT protocol daemon</Summary>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libpcre2</Dependency>
             <Dependency version="current">git</Dependency>
         </RuntimeDependencies>
@@ -100,7 +88,6 @@
         <Summary>Perl interface to GIT</Summary>
         <RuntimeDependencies>
             <Dependency>perl-Error</Dependency>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/perl5</Path>

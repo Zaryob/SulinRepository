@@ -14,14 +14,9 @@
         <Summary>The Geoinformation Service.</Summary>
         <Description>Geoclue is a modular geoinformation service built on top of the D-Bus messaging system.</Description>
         <BuildDependencies>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>avahi-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>json-glib-devel</Dependency>
             <Dependency>avahi-glib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>libnotify-devel</Dependency>
             <Dependency>NetworkManager-devel</Dependency>
         </BuildDependencies>
@@ -33,9 +28,6 @@
         <Name>geoclue</Name>
         <RuntimeDependencies>
             <!--Dependency>gpsd</Dependency-->
-            <Dependency>glib2</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>json-glib</Dependency>
             <Dependency>avahi</Dependency>
             <Dependency>avahi-glib</Dependency>
@@ -57,8 +49,6 @@
         <Summary>geoclue için geliştirme dosyaları</Summary>
         <RuntimeDependencies>
             <Dependency release="current">geoclue</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libgeoclue-2.0</Path>

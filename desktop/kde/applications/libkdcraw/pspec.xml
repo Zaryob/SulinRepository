@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -21,7 +20,6 @@
             <Dependency>libraw</Dependency>
             <Dependency>kconfig-devel</Dependency>
             <Dependency>ki18n-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
         </BuildDependencies>
     </Source>
@@ -33,7 +31,6 @@
             <Dependency>libraw</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -1,4 +1,3 @@
-
 <INARY>
     <Source>
         <Name>oxygen</Name>
@@ -30,7 +29,6 @@
         <Name>oxygen</Name>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>qt5-base</Dependency>

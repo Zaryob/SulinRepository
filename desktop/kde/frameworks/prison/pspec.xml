@@ -26,7 +26,6 @@
         <Name>prison</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libdmtx</Dependency>
             <Dependency>qrencode</Dependency>
         </RuntimeDependencies>

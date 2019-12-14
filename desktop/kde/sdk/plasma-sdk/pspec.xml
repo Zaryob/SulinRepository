@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -53,7 +52,6 @@
             <Dependency>ktexteditor</Dependency>
             <Dependency>plasma-framework</Dependency>
             <Dependency>kio</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>kconfig</Dependency>
             <Dependency>karchive</Dependency>

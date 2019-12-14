@@ -17,13 +17,10 @@
             <Dependency>gtk2-devel</Dependency>
             <Dependency>unicode-ucd</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>dconf-devel</Dependency>
             <Dependency>vala-devel</Dependency>
             <Dependency>libnotify-devel</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>iso-codes</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>gtk-doc</Dependency>
             <Dependency>nodejs</Dependency>
             <Dependency>json-glib-devel</Dependency>
@@ -36,7 +33,6 @@
     <Package>
         <Name>ibus</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>unicode-ucd</Dependency>
@@ -68,7 +64,6 @@
         <Summary>ibus için gtk2 desteği</Summary>
         <RuntimeDependencies>
             <Dependency release="current">ibus</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
@@ -82,7 +77,6 @@
         <Summary>ibus için gtk3 desteği</Summary>
         <RuntimeDependencies>
             <Dependency release="current">ibus</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>pango</Dependency>
         </RuntimeDependencies>
@@ -96,7 +90,6 @@
         <Summary>ibus için geliştirme dosyaları</Summary>
         <RuntimeDependencies>
             <Dependency release="current">ibus</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

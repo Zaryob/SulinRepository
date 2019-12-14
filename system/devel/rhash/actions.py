@@ -10,19 +10,15 @@ from inary.actionsapi import get
 
 
 def setup():
-    ##shelltools.export("CFLAGS","%s -fPIC -DPIC" % get.CFLAGS())
-    #shelltools.export("LDFLAGS","%s -fPIC" % get.LDFLAGS())
     shelltools.system("./configure --prefix=/usr \
                                    --sysconfdir=/etc \
                                    --enable-lib-shared \
-                                   --enable-gettext \
-                                   --disable-openssl-runtime \
-                                   --enable-openssl")
+                                   --enable-gettext ")
     
 def install():
     autotools.make("PREFIX=/usr DESTDIR=%s build-shared install-gmo install-lib-shared" % get.installDIR())
-    autotools.make("PREFIX=/usr DESTDIR=%s -C librhash install-so-link install-headers" % get.installDIR())
+    autotools.make("PREFIX=/usr DESTDIR=%s -C librhash install-lib-headers install-so-link" % get.installDIR())
     autotools.rawInstall("PREFIX=/usr DESTDIR=%s" % get.installDIR())
     
-    inarytools.dodoc("ChangeLog", "INSTALL*", "README", "COPYING")
+    inarytools.dodoc("ChangeLog", "INSTALL*", "README*", "COPYING*")
 

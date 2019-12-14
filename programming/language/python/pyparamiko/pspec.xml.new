@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pyparamiko</Name>
+        <Homepage>http://www.lag.net/paramiko/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPL</License>
+        <IsA>library</IsA>
+        <Summary>SSH2 implementation for Python</Summary>
+        <Description>python-paramiko is a module for python 2.2 (or higher) that implements the SSH2 protocol for secure (encrypted and authenticated) connections to remote machines.</Description>
+        <Archive sha1sum="bcbd77a81f7a5b6ae93f59f3586a248513aa31e2" type="targz">https://github.com/paramiko/paramiko/archive/2.7.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-pycrypto</Dependency>
+            <Dependency>python-pycrypto</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-paramiko</Name>
+        <Summary>Paramiko module for python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-pycrypto</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/pyparamiko</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-paramiko</Name>
+        <Summary>Paramiko module for python3</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-pycrypto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>2.7.1</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-16</Date>
+            <Version>2.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

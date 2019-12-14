@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -26,7 +25,6 @@
             <Dependency>libaccounts-qt5-devel</Dependency>
             <Dependency>libaccounts-glib-devel</Dependency>
             <Dependency>signon-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
             <Dependency>kdeclarative-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -35,7 +33,6 @@
         <Name>kaccounts-integration</Name>
         <RuntimeDependencies>
             <Dependency>ki18n</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>signon</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>kcoreaddons</Dependency>

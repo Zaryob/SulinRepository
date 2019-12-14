@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -16,13 +15,11 @@
         <Description>libstatgrab is a library for accessing information from the system for statistical purposes.</Description>
         <Archive sha1sum="e929bf6d4566ad2cf30a878eb972c8583deef959" type="targz">https://github.com/libstatgrab/libstatgrab/releases/download/LIBSTATGRAB_0_92/libstatgrab-0.92.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>libstatgrab</Name>
         <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

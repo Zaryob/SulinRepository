@@ -16,23 +16,13 @@
         <BuildDependencies>
             <Dependency>xmlto</Dependency>
             <Dependency>asciidoc</Dependency>
-            <Dependency>lzo-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>util-linux</Dependency>
-            <Dependency>libxslt</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
             <Dependency>zstd-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>btrfs-progs</Name>
         <RuntimeDependencies>
-            <Dependency>lzo</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>zstd</Dependency>
-            <Dependency>libutil-linux</Dependency>
-            <Dependency>e2fsprogs</Dependency>
          </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

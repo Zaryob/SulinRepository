@@ -16,15 +16,12 @@
         <BuildDependencies>
             <Dependency>glibmm-devel</Dependency>
             <Dependency>libsigc++-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libxmlpp</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>glibmm</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -39,7 +36,6 @@
         <RuntimeDependencies>
             <Dependency release="current">libxmlpp</Dependency>
             <Dependency>glibmm-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

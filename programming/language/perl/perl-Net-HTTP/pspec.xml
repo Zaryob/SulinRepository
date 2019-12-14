@@ -16,7 +16,6 @@
         <Description>The Net::HTTP class is a low-level HTTP client. An instance of the Net::HTTP class represents a connection to an HTTP server. The HTTP protocol is described in RFC 2616. The Net::HTTP class supports HTTP/1.0 and HTTP/1.1.</Description>
         <Archive sha1sum="f778151365bfb0f3d23df330ddbd6695f0257df5" type="targz">https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Net-HTTP-6.19.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,7 +23,6 @@
     <Package>
         <Name>perl-Net-HTTP</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
         </RuntimeDependencies>
         <Files>

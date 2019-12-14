@@ -15,7 +15,6 @@
         <Archive sha1sum="2e5ba0e95f665d60e72cbebcf1c4989e0d6c92c8" type="targz">mirrors://sourceforge/libdv/libdv-1.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl-devel</Dependency>
-            <Dependency>popt-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">libdv-0.99-2.6.patch</Patch>
@@ -28,7 +27,6 @@
     <Package>
         <Name>libdv</Name>
         <RuntimeDependencies>
-            <Dependency>popt</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

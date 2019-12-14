@@ -28,12 +28,7 @@
             <Dependency>at-spi2-core-devel</Dependency>
             <Dependency>NetworkManager-devel</Dependency>
             <Dependency>iso-codes</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>atk-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -51,9 +46,6 @@
             <Dependency>libmm-glib</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>NetworkManager</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>libgudev</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -80,7 +72,6 @@
         <RuntimeDependencies>
             <Dependency release="current">network-manager-applet</Dependency>
             <Dependency>NetworkManager-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
         </RuntimeDependencies>
         <Files>

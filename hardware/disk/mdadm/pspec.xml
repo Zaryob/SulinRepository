@@ -15,7 +15,6 @@
         <Archive sha1sum="4bbbd02674ac67dc9773f41aace7677aa5374c1c" type="tarxz">https://www.kernel.org/pub/linux/utils/raid/mdadm/mdadm-4.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>linux-module-headers</Dependency>
-            <Dependency>dietlibc</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>0001-Assemble-keep-MD_DISK_FAILFAST-and-MD_DISK_WRITEMOST.patch</Patch>

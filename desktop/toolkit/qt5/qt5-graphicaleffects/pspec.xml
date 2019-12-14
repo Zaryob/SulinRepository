@@ -25,7 +25,6 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

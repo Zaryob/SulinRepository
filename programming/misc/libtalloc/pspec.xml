@@ -16,16 +16,12 @@
         <Archive sha1sum="338b81ceda18101b3b977223693c41552161999d" type="targz">http://www.samba.org/ftp/talloc/talloc-2.3.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>docbook-xsl</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>libtalloc</Name>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
-            <Dependency>attr</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

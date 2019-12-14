@@ -16,18 +16,13 @@
         <Archive sha1sum="a9470774f271622c1b425826d1c8836ed96e4a96" type="tarbz2">mirrors://xorg/individual/lib/libXfont-1.5.2.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libfontenc-devel</Dependency>
-            <Dependency>util-macros</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>xtrans</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>libXfont</Name>
         <RuntimeDependencies>
             <Dependency>libfontenc</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>freetype</Dependency>
         </RuntimeDependencies>
         <Files>

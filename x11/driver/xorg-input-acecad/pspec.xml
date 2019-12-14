@@ -16,9 +16,6 @@
         <Archive sha1sum="410cee68e4435dc95774fb389fcefae1b2ffe3d1" type="tarbz2">mirrors://xorg/individual/driver/xf86-input-acecad-1.5.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xorg-server-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
-            <Dependency>sysfsutils-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">assign-local-private-after-allocating.patch</Patch>
@@ -28,7 +25,6 @@
     <Package>
         <Name>xorg-input-acecad</Name>
         <RuntimeDependencies>
-            <Dependency>sysfsutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/xorg</Path>

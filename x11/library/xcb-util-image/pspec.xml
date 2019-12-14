@@ -15,7 +15,6 @@
         <Description>The xcb-util-image module provides a number of libraries which sit on top of libxcb, the core X protocol library, and some of the extension libraries.</Description>
         <Archive sha1sum="c9c9361781911a47b28f74fc6ebe0abd1273fae4" type="tarbz2">http://xcb.freedesktop.org/dist/xcb-util-image-0.4.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>util-macros</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>xcb-util-devel</Dependency>
         </BuildDependencies>

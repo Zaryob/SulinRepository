@@ -17,11 +17,8 @@
         <BuildDependencies>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>libftdi-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>doxygen</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
         </Source>
 
@@ -30,11 +27,7 @@
         <RuntimeDependencies>
             <Dependency>alsa-lib</Dependency>
             <Dependency>libftdi</Dependency>
-            <Dependency>libusb-compat</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>eudev</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libusb</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

@@ -12,16 +12,12 @@
         <Description>The libpwquality package contains a library used for password quality checking and generation of random passwords that pass the checks</Description>
         <Archive sha1sum="d70c24327aa898a1d3dc84b9e14303f0ac852fb1" type="tarbz2">https://github.com/libpwquality/libpwquality/releases/download/libpwquality-1.4.2/libpwquality-1.4.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>cracklib-devel</Dependency>
-            <Dependency>pam-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libpwquality</Name>
         <RuntimeDependencies>
-            <Dependency>cracklib</Dependency>
-            <Dependency>pam</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/lib</Path>

@@ -13,7 +13,6 @@
         <Summary>DSP library derived from Speex.</Summary>
         <Description>DSP library derived from Speex</Description>
         <BuildDependencies>
-            <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="818403a21ec428feb39fe58f6cb6836d595e639b" type="targz">http://downloads.xiph.org/releases/speex/speexdsp-1.2rc3.tar.gz</Archive>
         <Patches>
@@ -25,7 +24,6 @@
         <Name>speexdsp</Name>
         <Summary>DSP library derived from Speex.</Summary>
         <RuntimeDependencies>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libspeexdsp*</Path>

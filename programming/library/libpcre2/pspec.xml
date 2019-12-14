@@ -15,15 +15,12 @@
         <Description>The PCRE 2nd version (Perl Compatible Regular Expressions) library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5 .</Description>
         <Archive sha1sum="2cc3ed45936f5684b3189c132a68952c42cf65d0" type="tarbz2">https://ftp.pcre.org/pub/pcre/pcre2-10.33.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libpcre2</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -60,7 +57,6 @@
             <Dependency>readline-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency release="current">libpcre2</Dependency>
         </RuntimeDependencies>
         <Files>

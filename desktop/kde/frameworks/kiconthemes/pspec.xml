@@ -33,7 +33,6 @@
     <Package>
         <Name>kiconthemes</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>kconfigwidgets</Dependency>

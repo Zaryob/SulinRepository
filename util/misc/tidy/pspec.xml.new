@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tidy</Name>
+        <Homepage>http://tidy.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>HTML and XML error checking</Summary>
+        <Description>tidy, as the name suggests, tidies the layout of and corrects errors in HTML and XML documents.</Description>
+        <Archive sha1sum="7daa0200b0c7a175b8d60a19fe3d98a95107a447" type="targz">https://gitlab.com/sulinos/resources/tidy-html5/-/archive/5.7.28/tidy-html5-5.7.28.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>tidy</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tidy-devel</Name>
+        <Summary>Development files for tidy</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tidy</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>5-5.7.28</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-12-11</Date>
+            <Version>5.7.28</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

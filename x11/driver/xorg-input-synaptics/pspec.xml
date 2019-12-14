@@ -19,7 +19,6 @@
             <Dependency>libXtst-devel</Dependency>
             <Dependency>xorg-server-devel</Dependency>
             <Dependency>libevdev</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>      
     </Source>
 

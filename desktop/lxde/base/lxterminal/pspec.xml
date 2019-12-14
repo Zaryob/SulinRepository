@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Icon>lxterminal</Icon>
         <IsA>app:gui</IsA>
-	      <PartOf>desktop.lxde.base</PartOf>
+        <PartOf>desktop.lxde.base</PartOf>
         <Summary>Lightweight terminal emulator</Summary>
         <Description>Lxterminal is a Lightweight vte-based tabbed terminal emulator for LXDE.</Description>
         <Archive sha1sum="896c32c065e065d62591f4484ff1dca8ac6f7ce7" type="tarxz">https://downloads.sourceforge.net/lxde/lxterminal-0.3.2.tar.xz</Archive>
@@ -37,7 +37,7 @@
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="data">/usr/share/lxterminal</Path>
             <Path fileType="data">/usr/share/applications</Path>
-	    <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/icons</Path>
         </Files>
     </Package>
 

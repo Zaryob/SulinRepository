@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -41,7 +40,6 @@
         <RuntimeDependencies>
             <Dependency>kcoreaddons</Dependency>
             <Dependency>sddm</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>kconfigwidgets</Dependency>
             <Dependency>kauth</Dependency>

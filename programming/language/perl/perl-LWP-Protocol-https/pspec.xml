@@ -16,7 +16,6 @@
         <Description>The LWP::Protocol::https module provides support for using https schemed URLs with LWP. This module is a plug-in to the LWP protocol handling, so you don't use it directly. Once the module is installed LWP is able to access sites using HTTP over SSL/TLS.</Description>
         <Archive sha1sum="210a2f7ba3f82ffc7a18836d0a4356986080d407" type="targz">https://cpan.metacpan.org/authors/id/M/MS/MSCHILLI/LWP-Protocol-https-6.06.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-IO-Socket-SSL</Dependency>
             <Dependency>perl-Net-HTTP</Dependency>
             <Dependency>perl-Mozilla-CA</Dependency>
@@ -29,8 +28,6 @@
     <Package>
         <Name>perl-LWP-Protocol-https</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
-            <Dependency>ca-certificates</Dependency>
             <Dependency>perl-IO-Socket-SSL</Dependency>
             <Dependency>perl-Net-HTTP</Dependency>
             <Dependency>perl-Mozilla-CA</Dependency>

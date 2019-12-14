@@ -12,7 +12,7 @@ import os
 def setup():
     autotools.autoreconf("-vfi")
     autotools.configure("--prefix=/usr \
-			 --disable-dependency-tracking \
+                         --disable-dependency-tracking \
                          --disable-static ")
     
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
