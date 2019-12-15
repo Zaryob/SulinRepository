@@ -37,7 +37,7 @@ def install():
     kerneltools.installLibcHeaders()
 
     # Generate some module lists to use within mkinitramfs
-    shelltools.system("./generate-module-list %s/lib/modules/%s" % (get.installDIR(), kerneltools.__getSuffix()))
+    shelltools.system("./generate-module-list %s/lib/modules/%s-sulinos" % (get.installDIR(), kerneltools.__getSuffix()))
 
     #mkinitcpio default config
     inarytools.dodir("/etc/mkinitcpio.d")
