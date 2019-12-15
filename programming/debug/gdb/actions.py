@@ -12,8 +12,8 @@ from inary.actionsapi import get
 def setup():
     inarytools.dosed("config/override.m4", "2.64", "2.69")
     shelltools.system('sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" libiberty/configure')
-    autotools.autoreconf("-vfi")
-    autotools.configure("--with-system-readline \
+    autotools.configure(" \
+                         --with-system-readline \
                          --with-separate-debug-dir=/usr/lib/debug \
                          --with-gdb-datadir=/usr/share/gdb \
                          --with-pythondir=/usr/lib/%s/site-packages \
@@ -27,18 +27,15 @@ def build():
     autotools.make()
 
 def install():
-    autotools.rawInstall('DESTDIR="%s"' % get.installDIR())
+    autotools.rawInstall('-C gdb DESTDIR="%s"' % get.installDIR())
+    autotools.rawInstall('-C gdb/data-directory DESTDIR="%s"' % get.installDIR())
     
-    for libdel in ["libbfd.a","libopcodes.a"]:
-        inarytools.remove("/usr/lib/%s" % libdel)
-
     # these are not necessary
     #for info in ["bfd","configure","standards"]:
         #inarytools.remove("/usr/share/info/%s.info" % info)
         
-    inarytools.remove("/usr/share/info/bfd.info")
   
-    for hea in ["ansidecl","symcat","dis-asm", "bfd", "bfdlink", "plugin-api"]:
-        inarytools.remove("/usr/include/%s.h" % hea)
+#    for hea in ["diagnostics","bfd_stdint","ansidecl","symcat","dis-asm", "bfd", "bfdlink", "plugin-api"]:
+#        inarytools.remove("/usr/include/%s.h" % hea)
     
     inarytools.dodoc("README*", "MAINTAINERS", "COPYING*", "ChangeLog*")
