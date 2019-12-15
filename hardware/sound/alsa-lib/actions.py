@@ -15,8 +15,10 @@ def setup():
     if get.buildTYPE() == "emul32":
         options += " --disable-python"
         shelltools.export("CFLAGS", "%s -m32" % get.CFLAGS())
-
-    autotools.autoreconf("-fi")
+    else:
+        options += " --enable-python \
+                    --with-python=/usr/bin/python3"
+        shelltools.export("PYTHON", "/usr/bin/python3")
 
     autotools.configure(options)
     inarytools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
