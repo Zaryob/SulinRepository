@@ -38,15 +38,6 @@
             <Dependency>llvm-clang-devel</Dependency>
             <Dependency>libxshmfence-devel</Dependency>
         </BuildDependencies>
-        <!--Patches>
-            <Patch level="1">n_VDPAU-XVMC-libs-Replace-hardlinks-with-copies.patch</Patch>
-            <Patch level="1">n_Define-GLAPIVAR-separate-from-GLAPI.patch</Patch>
-            <Patch level="1">N_01-WIP-nouveau-add-locking.patch</Patch>
-            <Patch level="1">N_02-nouveau-more-locking-make-sure-that-fence-work-is-always-done-with-the-push-mutex-acquired.patch</Patch>
-            <Patch level="1">N_03-nv30-locking-fixes.patch</Patch>
-            <Patch level="1">N_04-nv50-Fix-double-lock-in-nv50_hw_sm_get_query_result.patch</Patch>
-            <Patch level="1">N_05-Use-nv50_render_condition-in-nv50_blitctx_post_blit.patch</Patch>
-        </Patches-->
     </Source>
     <Package>
         <Name>mesa</Name>
@@ -162,6 +153,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-12-15</Date>
+            <Version>19.0.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>19.0.1</Version>
