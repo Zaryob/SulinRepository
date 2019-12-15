@@ -11,7 +11,7 @@
         <License>OpenSoftware</License>
         <IsA>app:console</IsA>
         <IsA>library</IsA>
-        <PartOf>system.devel</PartOf>
+        <PartOf>system.base</PartOf>
         <Summary>Libraries/utilities to handle ELF objects</Summary>
         <Description>elfutils contains libraries and utilities to handle ELF objects and is a replacement for libelf.</Description>
         <Archive sha1sum="922161f84baaae845382338098071544b98ca92d" type="tarbz2">ftp://sourceware.org/pub/elfutils/0.177/elfutils-0.177.tar.bz2</Archive>
@@ -67,6 +67,13 @@
           </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2019-12-15</Date>
+            <Version>0.177</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>0.177</Version>
