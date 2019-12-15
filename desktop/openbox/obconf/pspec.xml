@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Icon>obconf</Icon>
         <IsA>app:gui</IsA>
-        <PartOf>x11.wm</PartOf>
+        <PartOf>desktop.openbox</PartOf>
         <Summary>Openbox preferences manager</Summary>
         <Description>ObConf is a graphical configuration tool for the Openbox window manager.</Description>
         <Archive sha1sum="90638645b53275fda175281a1826c8c4c01746df" type="targz">http://openbox.org/dist/obconf/obconf-2.0.4.tar.gz</Archive>
@@ -41,6 +41,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-12-15</Date>
+            <Version>2.0.4</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.0.4</Version>
