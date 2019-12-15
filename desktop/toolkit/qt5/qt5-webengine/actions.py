@@ -13,6 +13,7 @@ from inary.actionsapi import get
 def setup():
     shelltools.export("QT5LINK", "/usr/lib/qt5/bin")
     shelltools.export("QT5DIR", "/usr/lib/qt5")
+    shelltools.export("PYTHON","/usr/bin/python3")
     qt.configure()
     
 def build():

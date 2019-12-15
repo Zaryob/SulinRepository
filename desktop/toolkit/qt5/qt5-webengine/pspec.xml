@@ -48,7 +48,6 @@
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>lcms2-devel</Dependency>
-            <Dependency>python-devel</Dependency>
             <Dependency>libvpx-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>x264-devel</Dependency>
@@ -57,9 +56,6 @@
             <Dependency>ffmpeg-devel</Dependency>
             <Dependency>git</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">chrome.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
