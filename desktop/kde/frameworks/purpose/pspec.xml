@@ -45,6 +45,7 @@
         <PartOf>desktop.kde.devel</PartOf>
         <Summary>Development files for purpose</Summary>
         <RuntimeDependencies>
+            <Dependency release="current">purpose</Dependency>
             <Dependency>qt5-base-devel</Dependency>
         </RuntimeDependencies>
         <Files>

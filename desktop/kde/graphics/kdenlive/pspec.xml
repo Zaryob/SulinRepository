@@ -17,6 +17,8 @@
         <BuildDependencies>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-multimedia-devel</Dependency>
+            <Dependency>kdeclarative-devel</Dependency>
             <Dependency>qt5-script-devel</Dependency>
             <Dependency>ladspa-sdk-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -31,6 +33,7 @@
             <Dependency>kfilemetadata-devel</Dependency>
             <Dependency>libv4l-devel</Dependency>
             <Dependency>kio-devel</Dependency>
+            <Dependency>purpose-devel</Dependency>
             <Dependency>ffmpeg-devel</Dependency>
             <Dependency>sdl-image-devel</Dependency>
             <Dependency>kwidgetsaddons-devel</Dependency>
@@ -52,13 +55,15 @@
         <Name>kdenlive</Name>
         <RuntimeDependencies>
             <Dependency>kio</Dependency>
+            <Dependency>qt5-multimedia</Dependency>
             <Dependency>mlt</Dependency>
-            <Dependency>cdrkit</Dependency>
+            <Dependency>cdrtools</Dependency>
             <Dependency>ki18n</Dependency>
             <Dependency>solid</Dependency>
             <Dependency>kcrash</Dependency>
             <Dependency>ffmpeg</Dependency>
             <Dependency>kconfig</Dependency>
+            <Dependency>purpose</Dependency>
             <Dependency>kxmlgui</Dependency>
             <Dependency>qt5-svg</Dependency>
             <Dependency>karchive</Dependency>
