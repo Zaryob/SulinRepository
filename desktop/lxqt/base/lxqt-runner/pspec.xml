@@ -18,6 +18,7 @@
             <Dependency>muparser-devel</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>lxqt-globalkeys-devel</Dependency>
+            <Dependency>lxqt-build-tools</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,7 +26,7 @@
         <Name>lxqt-runner</Name>
         <RuntimeDependencies>
             <Dependency>libqtxdg</Dependency>
-            <Dependency>lxqt-menu-cache</Dependency>
+            <Dependency>lxde-menu-cache</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>libXext</Dependency>
         </RuntimeDependencies>

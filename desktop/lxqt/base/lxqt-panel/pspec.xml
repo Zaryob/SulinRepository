@@ -17,7 +17,9 @@
         <BuildDependencies>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
             <Dependency>desktop-file-utils</Dependency>
+            <Dependency>libdbusmenu-qt-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libsysstat-devel</Dependency>
@@ -28,23 +30,26 @@
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>lm_sensors-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
+            <Dependency>solid-devel</Dependency>
             <Dependency>libstatgrab</Dependency>
             <Dependency>network-manager-applet-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
         </BuildDependencies>
-        </Source>
+    </Source>
     <Package>
         <Name>lxqt-panel</Name>
         <RuntimeDependencies>
             <Dependency>liblxqt</Dependency>
             <Dependency>libqtxdg</Dependency>
-            <Dependency>liblxqt-mount</Dependency>
+            <Dependency>libdbusmenu-qt</Dependency>
+            <Dependency>libxkbcommon</Dependency>
             <Dependency>lxqt-globalkeys</Dependency>
             <Dependency>libsysstat</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>pulseaudio</Dependency>
             <Dependency>libstatgrab</Dependency>
+            <Dependency>solid</Dependency>
             <Dependency>libXcomposite</Dependency>
         </RuntimeDependencies>
         <Files>
