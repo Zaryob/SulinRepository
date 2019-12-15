@@ -33,7 +33,7 @@
             <Path fileType="executable">/usr/bin/qhelpconverter-qt5</Path>
             <Path fileType="executable">/usr/lib/qt5/bin/qdoc</Path>
             <Path fileType="executable">/usr/bin/qdoc-qt5</Path>
-            <Path fileType="library">/usr/lib/cmake/Qt5Help</Path>
+            <Path fileType="library">/usr/lib/cmake/</Path>
             <Path fileType="library">/usr/lib/libQt5Help*</Path>
             <Path fileType="library">/usr/lib/libQt5CLucene*</Path>
             <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_clucene_private.pri</Path>
