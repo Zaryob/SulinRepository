@@ -20,7 +20,7 @@
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>assimp-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="abecf93fd922bd87408ca7b96fd373c06ca3c30e" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qt3d-everywhere-src-5.13.2.tar.xz</Archive>
+        <Archive sha1sum="5685ad49cee639289153fb834befb5553f39bb20" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qt3d-everywhere-src-5.14.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-3d</Name>
@@ -54,6 +54,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-12-14</Date>
+            <Version>5.14.0</Version>
+            <Comment>QT 5.14 upgraded</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-27</Date>
             <Version>5.13.2</Version>
