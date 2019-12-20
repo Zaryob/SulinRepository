@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mozjs60</Name>
+        <Homepage>http://www.mozilla.org/js/spidermonkey/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>NPL-1.1</License>
+        <IsA>library</IsA>
+        <Summary>Stand-alone JavaScript C Library</Summary>
+        <Description>Mozjs60 is Mozilla's C implementation of JavaScript.</Description>
+        <Archive type="tarbz2" sha1sum="069bdffcc96f2b23f935d1e91a16282fedc2d430">ftp://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-60.8.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>libffi</Dependency>
+            <Dependency>libX11-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mozjs60</Name>
+        <RuntimeDependencies>
+            <Dependency>nspr</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>60.8.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

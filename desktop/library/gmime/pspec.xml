@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gmime</Name>
+        <Homepage>http://spruce.sourceforge.net/gmime</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.library</PartOf>
+        <Summary>Utilities for creating and parsing messages using MIME</Summary>
+        <Description>gmime contains gmime-uudecode and gmime-uuencode and will allow you to manipulate MIME messages. These utilities can also be used instead of uudecode and uuencode from the sharutils package.</Description>
+        <Archive sha1sum="12e2d6aa0206ce99093ad3f0619b8870df156cb2" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gmime/2.6/gmime-2.6.23.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gpgme-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gmime</Name>
+        <RuntimeDependencies>
+            <Dependency>gpgme</Dependency>
+        </RuntimeDependencies>
+        <IsA>app:console</IsA>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GMime-2.6.gir</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gmime-devel</Name>
+        <Summary>gmime development files</Summary>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="current">gmime</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/vala</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gmime-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>gmime reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>2.6.23</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
