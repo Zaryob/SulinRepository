@@ -234,7 +234,6 @@
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
-
         <Component>
             <Name>desktop</Name>
             <LocalName xml:lang="en">desktop component</LocalName>
@@ -261,6 +260,164 @@
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
+        <Component>
+            <Name>desktop.xfce</Name>
+            <LocalName xml:lang="en">xfce4 component</LocalName>
+            <LocalName xml:lang="tr">xfce4 bileşeni</LocalName>
+            <LocalName xml:lang="az">xfce4 komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент xfce4</LocalName>
+            <LocalName xml:lang="de">xfce4-Komponente</LocalName>
+            <LocalName xml:lang="fr">composant de bureu xfce4</LocalName>
+            <Summary xml:lang="en">This is the root component that contains the xfce4  desktop environment.</Summary>
+            <Summary xml:lang="tr">xfce masaüstü ortamını içeren kök bileşendir.</Summary>
+            <Summary xml:lang="az">xfce masa üstü mühitini ehtiva edən bir kök komponentdir</Summary>
+            <Summary xml:lang="ru">xfce-это корневой компонент, содержащий среду рабочего стола</Summary>
+            <Summary xml:lang="de">desktop.xfce ist die root-Komponente, die xfce4 desktop-Umgebung enthält</Summary>
+            <Summary xml:lang="fr">desktop.xfce  est le composant racine qui contient l'environnement de xfce4 bureau</Summary>
+            <Description xml:lang="en">As offical description that Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly. In that component xfce, addons, panel extensions and its related programs like gigolo mousepad and other programs comes with.</Description>
+            <Description xml:lang="tr">Xfce'nin UNİX benzeri işletim sistemleri için hafif bir masaüstü ortamı olduğu resmi açıklama olarak. Hala görsel olarak çekici ve kullanıcı dostu olurken, sistem kaynakları üzerinde hızlı ve düşük olmayı hedeflemektedir. Bu bileşen xfce, eklentiler, panel uzantıları ve gigolo mousepad ve diğer programlar gibi ilgili programları ile birlikte gelir</Description>
+            <Description xml:lang="az">Xfce-nin UNIX kimi əməliyyat sistemləri üçün yüngül bir masa üstü mühiti olduğunu rəsmi olaraq təsvir edir. Bu, eyni zamanda vizual müraciət və istifadəçi dostu, sistem resursları sürətli və aşağı olmaq məqsədi daşıyır. Bu komponentdə, Xfce, addons, panel uzantıları və gigolo mousepad və digər proqramlar kimi əlaqəli proqramlar içerir.</Description>
+            <Description xml:lang="ru">Как официальное описание, что Xfce-это легкая настольная среда для UNIX-подобных операционных систем. Он стремится быть быстрым и низким на системных ресурсах, в то же время визуально привлекательным и удобным для пользователя. В этом компоненте xfce, аддоны, расширения панелей и связанные с ними программы, такие как gigolo mousepad и другие программы.</Description>
+            <Description xml:lang="de">Als offizielle Beschreibung, dass Xfce eine leichte desktop-Umgebung für UNIX-ähnliche Betriebssysteme ist. Es zielt darauf ab, schnell und niedrig auf Systemressourcen zu sein, während immer noch optisch Ansprechend und benutzerfreundlich. In dieser Komponente kommt xfce, addons, panel extensions und zugehörige Programme wie gigolo mousepad und andere Programme mit.</Description>
+            <Description xml:lang="fr">Comme description officielle que Xfce est un environnement de bureau léger pour les systèmes D'exploitation de type UNIX. Il vise à être rapide et à faible sur les ressources système, tout en étant visuellement attrayant et convivial. Dans ce component xfce, addons, panel extensions et ses programmes associés comme gigolo mousepad et d'autres programmes vient avec.</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.addon</Name>
+            <LocalName xml:lang="en">xfce addon component</LocalName>
+            <LocalName xml:lang="tr">xfce eklenti bileşeni</LocalName>
+            <LocalName xml:lang="az">xfce üçün addons komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент аддона xfce</LocalName>
+            <LocalName xml:lang="de">xfce addon-Komponente</LocalName>
+            <LocalName xml:lang="fr">xfce addon composant</LocalName>
+            <Summary xml:lang="en">Component that includes extra programs (addons) desktop software and desktop environments</Summary>
+            <Summary xml:lang="tr">xfce ek paketler içeren bileşendir</Summary>
+            <Summary xml:lang="az">Bu xfce üçün ek paketler olan komponentdir.</Summary>
+            <Summary xml:lang="ru">компонент, содержащий Плагины xfce.</Summary>
+            <Summary xml:lang="de">Komponente, die Xfce-addons enthält.</Summary>
+            <Summary xml:lang="fr">composant contenant Xfce addons.</Summary>
+            <Description xml:lang="en">That is the component that contains plug-in packages for the xfce panel and some other xfce applications.</Description>
+            <Description xml:lang="tr">xfce panel ve diğer bazı uygulamalar için eklenti paketlerini içeren bileşendir.</Description>
+            <Description xml:lang="az">Xfce panel üçün və bəzi digər tətbiqlər üçün plugin paketlərini ehtiva edən bir komponentdir.</Description>
+            <Description xml:lang="ru">Это компонент, который содержит пакеты плагинов для панели xfce и некоторых других приложений xfce.</Description>
+            <Description xml:lang="de">Das ist die Komponente, die plug-in-Pakete für das Xfce-panel und einige andere xfce-Anwendungen enthält.</Description>
+            <Description xml:lang="fr">C'est le composant qui contient les paquets plug-in pour le panneau xfce et d'autres applications xfce.</Description>
+            <Group>accessories</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.plugin</Name>
+            <LocalName xml:lang="en">xfce plugin component</LocalName>
+            <LocalName xml:lang="tr">xfce eklenti bileşeni</LocalName>
+            <LocalName xml:lang="az">xfce üçün plugins komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент аддона xfce</LocalName>
+            <LocalName xml:lang="de">xfce plugin-Komponente</LocalName>
+            <LocalName xml:lang="fr">xfce plugin composant</LocalName>
+            <Summary xml:lang="en">Component that includes desktop software and desktop environments</Summary>
+            <Summary xml:lang="tr">xfce eklentilerini içeren bileşendir</Summary>
+            <Summary xml:lang="az">Bu xfce üçün eklentiler olan komponentdir.</Summary>
+            <Summary xml:lang="ru">компонент, содержащий Плагины xfce.</Summary>
+            <Summary xml:lang="de">Komponente, die Xfce-plugins enthält.</Summary>
+            <Summary xml:lang="fr">composant contenant Xfce plugins.</Summary>
+            <Description xml:lang="en">Component that includes desktop software and desktop environments</Description>
+            <Description xml:lang="tr">xfce eklentilerini içeren bileşendir</Description>
+            <Description xml:lang="az">Bu xfce üçün eklentiler olan komponentdir.</Description>
+            <Description xml:lang="ru">компонент, содержащий Плагины xfce.</Description>
+            <Description xml:lang="de">Komponente, die Xfce-plugins enthält.</Description>
+            <Description xml:lang="fr">composant contenant Xfce plugins.</Description>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.base</Name>
+            <LocalName xml:lang="en">base desktop component</LocalName>
+            <LocalName xml:lang="tr">masaüstü bileşeni</LocalName>
+            <LocalName xml:lang="az">masaüstü komponentiy</LocalName>
+            <LocalName xml:lang="ru">настольный компонент</LocalName>
+            <LocalName xml:lang="de">composant de bureau</LocalName>
+            <LocalName xml:lang="fr">composant de bureau</LocalName>
+            <Summary xml:lang="en">Component that includes base packages of xfce desktop environment.</Summary>
+            <Summary xml:lang="tr">Xfce masaüstü ortamının temel paketlerini içeren bileşen.</Summary>
+            <Summary xml:lang="az">Xfce masa üstü mühitinin əsas paketlərini əhatə edən komponent.</Summary>
+            <Summary xml:lang="ru">Компонент, который включает в себя основные пакеты среды рабочего стола xfce.</Summary>
+            <Summary xml:lang="de">Komponente, die Basispakete der Xfce-desktop-Umgebung enthält.</Summary>
+            <Summary xml:lang="fr">Composant qui inclut les paquets de base de l'environnement de bureau xfce.</Summary>
+            <Description xml:lang="en">Xfce-includes all the packages that will be sufficient to run the Xfce desktop in its simplest and simplest form, such as the panel.</Description>
+            <Description xml:lang="tr">xfce-panel gibi xfce masaüstünü en sade ve basit haliyle çalştırmak için yeterli olacak tüm paketleri içerir.</Description>
+            <Description xml:lang="az">Xfce masa üstü üçün ən asan və ən sadə şəkildə işləmək üçün kifayət edəcək xfce-panel kimi bütün paketləri əhatə edir.</Description>
+            <Description xml:lang="ru">он включает в себя все пакеты, такие как xfce-panel, которые будут достаточными для того, чтобы рабочий стол xfce работал в самой простой и простой форме.</Description>
+            <Description xml:lang="de">Xfce-enthält alle Pakete, die ausreichen, um den Xfce desktop in seiner einfachsten und einfachsten form auszuführen, wie das panel.</Description>
+            <Description xml:lang="fr">Xfce-inclut tous les paquets qui seront suffisants pour exécuter le bureau Xfce dans sa forme la plus simple et la plus simple, comme le panneau.</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.admin</Name>
+            <LocalName xml:lang="en">xfce admin tool component</LocalName>
+            <LocalName xml:lang="tr">xfce yönetici aracı bileşeni</LocalName>
+            <LocalName xml:lang="az">xfce idarə aləti komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент инструмента администрирования xfce</LocalName>
+            <LocalName xml:lang="de">xfce-admin-tool-Komponente</LocalName>
+            <LocalName xml:lang="fr">composante de l'outil d'administration xfce</LocalName>
+            <Summary xml:lang="en">That component includes xfce administration tools.</Summary>
+            <Summary xml:lang="tr">xfce yönetici araçlarını içeren paket bileşeni.</Summary>
+            <Summary xml:lang="az">Bu masa üstü kompüter üçün proqram olan komponentdir.</Summary>
+            <Summary xml:lang="ru">этот компонент включает в себя средства администрирования xfce.</Summary>
+            <Summary xml:lang="de">Komponente, enthält Xfce-Verwaltungstools.</Summary>
+            <Summary xml:lang="fr">cette composante comprend des outils d'administration xfce.</Summary>
+            <Description xml:lang="en">That component includes xfce administration tools.</Description>
+            <Description xml:lang="tr">xfce yönetici araçlarını içeren paket bileşeni.</Description>
+            <Description xml:lang="az">Bu masa üstü kompüter üçün proqram olan komponentdir.</Description>
+            <Description xml:lang="ru">этот компонент включает в себя средства администрирования xfce.</Description>
+            <Description xml:lang="de">Komponente, enthält Xfce-Verwaltungstools.</Description>
+            <Description xml:lang="fr">cette composante comprend des outils d'administration xfce.</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.xfce.lookandfeel</Name>
+            <LocalName xml:lang="en">xfce lookandfeel component</LocalName>
+            <LocalName xml:lang="tr">xfce görünüm bileşeni</LocalName>
+            <LocalName xml:lang="az">komponent təqdim xfce</LocalName>
+            <LocalName xml:lang="ru">компонент представления xfce</LocalName>
+            <LocalName xml:lang="de">xfce schaut und fühlt Komponente</LocalName>
+            <LocalName xml:lang="fr">composante de vue Xfce</LocalName>
+            <Summary xml:lang="en">Includes appearance and palettes for xfce</Summary>
+            <Summary xml:lang="tr">Xfce için görünüm ve paletleri içerir</Summary>
+            <Summary xml:lang="az">Xfce üçün görünüşünü və paletleri ehtiva edir.</Summary>
+            <Summary xml:lang="ru">Включает в себя внешний вид и палитры для Xfce</Summary>
+            <Summary xml:lang="de">Inklusive Aussehen und Paletten für Xfce</Summary>
+            <Summary xml:lang="fr">Comprend l'apparence et les palettes pour Xfce</Summary>
+            <Description xml:lang="en">The default recommended views for Xfce include themes and packages of the icon set.</Description>
+            <Description xml:lang="tr">Xfce için öntanımlı olarak tavsiye edilen görünümleri temaları ve simge setinin paketlerini içerir.</Description>
+            <Description xml:lang="az">Default Xfce üçün tövsiyə təqdim mövzular və icon set paketləri ehtiva edir.</Description>
+            <Description xml:lang="ru">По умолчанию рекомендуемые представления для Xfce включают темы и пакеты набора значков.</Description>
+            <Description xml:lang="de">Die empfohlenen Standardbilder für Xfce enthalten Themen und icon-Set-Pakete.</Description>
+            <Description xml:lang="fr">Les images recommandées par défaut pour Xfce incluent les thèmes et les paquets de jeu d'icônes.</Description>
+            <Group>xfce.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+
+
+        <!--Complated to here.-->
         <Component>
             <Name>desktop.addon</Name>
             <LocalName xml:lang="en">desktop addons</LocalName>
@@ -516,110 +673,6 @@
             <Description xml:lang="de">FIXME</Description>
             <Description xml:lang="fr">FIXME</Description>
             <Group>mate.desktop.extras</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce.lookandfeel</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.desktop</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce.addon</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.addon</Group>
-            <Maintainer>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Maintainer>
-        </Component>
-        <Component>
-            <Name>desktop.xfce.base</Name>
-            <LocalName xml:lang="en">FIXME</LocalName>
-            <LocalName xml:lang="tr">FIXME</LocalName>
-            <LocalName xml:lang="az">FIXME</LocalName>
-            <LocalName xml:lang="ru">FIXME</LocalName>
-            <LocalName xml:lang="de">FIXME</LocalName>
-            <LocalName xml:lang="fr">FIXME</LocalName>
-            <Summary xml:lang="en">FIXME</Summary>
-            <Summary xml:lang="tr">FIXME</Summary>
-            <Summary xml:lang="az">FIXME</Summary>
-            <Summary xml:lang="ru">FIXME</Summary>
-            <Summary xml:lang="de">FIXME</Summary>
-            <Summary xml:lang="fr">FIXME</Summary>
-            <Description xml:lang="en">FIXME</Description>
-            <Description xml:lang="tr">FIXME</Description>
-            <Description xml:lang="az">FIXME</Description>
-            <Description xml:lang="ru">FIXME</Description>
-            <Description xml:lang="de">FIXME</Description>
-            <Description xml:lang="fr">FIXME</Description>
-            <Group>xfce.desktop</Group>
             <Maintainer>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
