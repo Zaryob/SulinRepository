@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dnsmasq</Name>
+        <Homepage>http://www.thekelleys.org.uk/dnsmasq/doc.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>GPLv3</License>
+        <IsA>service</IsA>
+        <Summary>Lightweight, easy to configure DNS forwarder and DHCP server</Summary>
+        <Description>dnsmasq is a DNS forwarder and DHCP server that can serve the names of local machines which are not in the global DNS. The DHCP server integrates with the DNS server and allows machines with DHCP-allocated addresses to appear in the DNS with names configured in each host.</Description>
+        <Archive sha1sum="45317f3ce129c670c812428f97b92273b5286df0">http://www.thekelleys.org.uk/dnsmasq/dnsmasq-2.80.tar.xz</Archive>
+        <Patches>
+            <Patch>001_SIOCGARP_fix-Sulin.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dnsmasq</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/var/lib/dnsmasq</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+         </Files>
+         <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/dnsmasq">dnsmasq.confd-r1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/dnsmasq">dnsmasq-init-r4</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/dnsmasq.logrotate">dnsmasq.logrotate</AdditionalFile>
+         </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-08</Date>
+            <Version>2.88</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

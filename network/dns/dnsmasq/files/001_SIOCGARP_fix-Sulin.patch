@@ -1,0 +1,13 @@
+diff --git a/src/dhcp.c b/src/dhcp.c
+index f8d323b..0bf7c08 100644
+--- a/src/dhcp.c
++++ b/src/dhcp.c
+@@ -179,7 +179,7 @@ void dhcp_packet(time_t now, int pxe_fd)
+     return;
+     
+   #if defined (HAVE_LINUX_NETWORK)
+-  if (ioctl(fd, SIOCGSTAMP, &tv) == 0)
++  if (ioctl(fd, SIOCGARP, &tv) == 0)
+     recvtime = tv.tv_sec;
+ 
+   if (msg.msg_controllen >= sizeof(struct cmsghdr))
