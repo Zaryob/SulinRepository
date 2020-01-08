@@ -16,14 +16,19 @@
         <BuildDependencies>
             <Dependency>libpsl-devel</Dependency>
             <Dependency>jansson-devel</Dependency>
+            <Dependency>dnsmasq</Dependency>
+            <Dependency>dhcp-devel</Dependency>
             <Dependency>ppp-devel</Dependency>
+            <Dependency>iputils</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>newt-devel</Dependency>
             <Dependency>libnl-devel</Dependency>
+            <Dependency>iproute2</Dependency>
             <Dependency>bluez-libs-devel</Dependency>
             <Dependency>elogind-devel</Dependency>
             <Dependency>iptables-devel</Dependency>
             <Dependency>wpa_supplicant</Dependency>
+            <Dependency>mobile-broadband-provider-info</Dependency>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>libndp-devel</Dependency>
             <Dependency>libmm-glib-devel</Dependency>
@@ -42,12 +47,18 @@
             <Dependency>libpsl</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>audit</Dependency>
+            <Dependency>iproute2</Dependency>
             <Dependency>elogind</Dependency>
             <Dependency>newt</Dependency>
+            <Dependency>dnsmasq</Dependency>
+            <Dependency>iputils</Dependency>
+            <Dependency>dhclient</Dependency>
+            <Dependency>ppp-devel</Dependency>
             <Dependency>ppp</Dependency>
             <Dependency>libnl</Dependency>
             <Dependency>libsoup</Dependency>
             <Dependency>libgudev</Dependency>
+            <Dependency>mobile-broadband-provider-info</Dependency>
             <Dependency>bluez-libs</Dependency>
             <Dependency>iproute2</Dependency>
             <Dependency>iptables</Dependency>
