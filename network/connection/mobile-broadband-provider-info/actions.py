@@ -9,7 +9,6 @@ from inary.actionsapi import autotools
 from inary.actionsapi import get
 
 def setup():
-    autotools.autoreconf("-vif")
     autotools.configure()
 
 def build():
@@ -18,3 +17,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
+    inarytools.dodoc("COPYING", "README*")

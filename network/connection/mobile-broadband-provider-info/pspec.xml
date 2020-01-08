@@ -12,7 +12,7 @@
         <IsA>data</IsA>
         <Summary>Service provider specific settings of mobile broadband providers in different countries</Summary>
         <Description>The mobile-broadband-provider-info package contains listings of mobile broadband (3G) providers and associated network and plan information.</Description>
-        <Archive sha1sum="100f311d48b3bbdd7bf751c563d54cbe05f21025" type="targz">https://github.com/GNOME/mobile-broadband-provider-info/archive/20190618.tar.gz</Archive>
+	<Archive sha1sum="897255b8b726834b2af77f9919abaccb6fbdc2bd" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/mobile-broadband-provider-info/20190618/mobile-broadband-provider-info-20190618.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -24,7 +24,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019-09-28</Date>
+            <Date>2020-01-08</Date>
             <Version>20190618</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
