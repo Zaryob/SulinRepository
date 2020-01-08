@@ -1,0 +1,40 @@
+<INARY>
+    <Source>
+        <Name>ply</Name>
+        <Homepage>http://www.dabeaz.com/ply/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>Implementation of lex and yacc parsing tools for Python.</Summary>
+        <Description>PLY is an implementation of lex and yacc parsing tools for Python.</Description>
+        <Archive sha1sum="10a555a32095991fbc7f7ed10c677a14e21fad1d">http://www.dabeaz.com/ply/ply-3.11.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-ply</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.*/site-packages</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-ply</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.*/site-packages</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-12-08</Date>
+            <Version>3.11</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
