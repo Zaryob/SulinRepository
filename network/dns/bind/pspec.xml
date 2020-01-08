@@ -1,0 +1,131 @@
+<INARY>
+    <Source>
+        <Name>bind</Name>
+        <Homepage>http://www.isc.org/products/BIND/bind9.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>service</IsA>
+        <Summary>The Berkeley Internet Name Domain (BIND) DNS (Domain Name System) server</Summary>
+        <Description>bind is an implementation of the DNS protocols, bind includes a DNS server (named), a resolver library and tools for verifying that the DNS server is operating properly.</Description>
+        <Archive sha1sum="5df91cc846c3233111970030d3d79b23380076ca">https://downloads.isc.org/isc/bind9/9.15.7/bind-9.15.7.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <Dependency>python3-ply</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>lmdb-devel</Dependency>
+            <Dependency>e2fsprogs-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>geoip-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>bind-libs</Name>
+        <IsA>library</IsA>
+        <PartOf>server.library</PartOf>
+        <Summary>bind-libs contains the libraries used by both the bind server package and the tools package</Summary>
+        <RuntimeDependencies>
+            <Dependency>openssl</Dependency>
+            <Dependency>lmdb</Dependency>
+            <Dependency>geoip</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>bind-devel</Name>
+        <IsA>library</IsA>
+        <PartOf>server.library</PartOf>
+        <Summary>bind header and development files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bind-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/bin/isc-config.sh</Path>
+            <Path fileType="man">/usr/share/man/man1/isc-config*</Path>
+            <Path fileType="man">/usr/share/man/man3/lwres*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>bind-tools</Name>
+        <IsA>app:console</IsA>
+        <PartOf>network.analyzer</PartOf>
+        <Summary>Utilities for querying DNS name servers</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bind-libs</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>bind-chroot</Name>
+        <IsA>service</IsA>
+        <Summary>A chroot runtime environment for the ISC BIND DNS server 'named'</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">bind</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/var/named/chroot/etc</Path>
+            <Path fileType="data">/var/named/chroot</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>bind</Name>
+        <IsA>service</IsA>
+        <RuntimeDependencies>
+            <Dependency release="current">bind-libs</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/var</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+            <Path fileType="man">/usr/share/man/man5</Path>
+            <Path fileType="man">/usr/share/man/man8</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/bind/named.config">named.conf-r8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/named">named.confd-r7</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/named">named.init-r13</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/var/bind/pri/localhost.zone">localhost.zone-r3</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/env.d/10bind">10bind.env</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="bind.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-08</Date>
+            <Version>9.15.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
