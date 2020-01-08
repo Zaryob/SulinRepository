@@ -1478,6 +1478,51 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>icon-naming-utils</Name>
+            <Homepage>http://tango.freedesktop.org/Standard_Icon_Naming_Specification</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.misc</PartOf>
+            <Summary xml:lang="en">Icon naming utils</Summary>
+            <Summary xml:lang="tr">Simge isimlendirme araçları</Summary>
+            <Description xml:lang="en">This utility maps the icon names used by the GNOME and KDE desktops to the icon names proposed in the Icon Naming Specification linked above.</Description>
+            <Description xml:lang="tr">Bu araç, GNOME ve KDE masaüstlerinde, Simge İsimlendirme Standartlarına uygun biçimde isimlendirmeye yarar.</Description>
+            <Archive type="targz" sha1sum="a195e635fd663f0697a2a047f0c9134876900cf1">http://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl-XML-Simple</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/misc/icon-naming-utils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>icon-naming-utils</Name>
+            <RuntimeDependencies>
+                <Dependency>perl-XML-Simple</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/dtds</Path>
+                <Path fileType="data">/usr/share/icon-naming-utils</Path>
+                <Path fileType="data">/usr/share/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>0.8.90</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>at-spi2-atk</Name>
             <Homepage>http://www.linuxfoundation.org/collaborate/workgroups/accessibility</Homepage>
             <Packager>
@@ -3366,6 +3411,7 @@
                 <Dependency>libpng-devel</Dependency>
                 <Dependency>jasper-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/gdk-pixbuf/pspec.xml</SourceURI>
         </Source>
@@ -3375,6 +3421,7 @@
                 <Dependency>libpng</Dependency>
                 <Dependency>libX11</Dependency>
                 <Dependency>tiff</Dependency>
+                <Dependency>libxkbcommon</Dependency>
                 <Dependency>jasper</Dependency>
                 <Dependency>shared-mime-info</Dependency>
                 <Dependency>libjpeg-turbo</Dependency>
@@ -3396,7 +3443,9 @@
             <Name>gdk-pixbuf-devel</Name>
             <Summary xml:lang="en">Development files for gdk-pixbuf</Summary>
             <RuntimeDependencies>
-                <Dependency release="3">gdk-pixbuf</Dependency>
+                <Dependency release="4">gdk-pixbuf</Dependency>
+                <Dependency>wayland-protocols-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/gdk-pixbuf-csource</Path>
@@ -3422,6 +3471,7 @@
             <BuildDependencies>
                 <Dependency>tiff-32bit</Dependency>
                 <Dependency>libjpeg-turbo-32bit</Dependency>
+                <Dependency>libxkbcommon-32bit</Dependency>
                 <Dependency>glib2-32bit</Dependency>
                 <Dependency>libX11-32bit</Dependency>
                 <Dependency>libpng-32bit</Dependency>
@@ -3429,12 +3479,13 @@
                 <Dependency>libX11-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="3">gdk-pixbuf</Dependency>
+                <Dependency release="4">gdk-pixbuf</Dependency>
                 <Dependency>tiff-32bit</Dependency>
                 <Dependency>glib2-32bit</Dependency>
                 <Dependency>libpng-32bit</Dependency>
                 <Dependency>libX11-32bit</Dependency>
                 <Dependency>jasper-32bit</Dependency>
+                <Dependency>libxkbcommon-32bit</Dependency>
                 <Dependency>libjpeg-turbo-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -3446,6 +3497,13 @@
             </Provides>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-12-15</Date>
+                <Version>2.40.0</Version>
+                <Comment>Eksik bağımlılık giderildi</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-11-26</Date>
                 <Version>2.40.0</Version>
@@ -4297,6 +4355,53 @@
                 <Version>2.32.0</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtk-engines</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">A collection of GTK+ 2.x engines</Summary>
+            <Summary xml:lang="tr">C altında yazılmış GTK+ 2.x motorları</Summary>
+            <Description xml:lang="en">gtk-engines is a collection of GTK+ 2.x engines written in C that transforms your GNOME/XFCE desktop into a modern looking environment. It is fast, and easy on the eyes.</Description>
+            <Description xml:lang="tr">gtk-engines GNOME masaüstü görünümünü düzelten ve güzelleştiren bir GTK+ 2.x motorları koleksiyonudur.</Description>
+            <Description xml:lang="fr">gtk-engines est une collection de moteurs GTK+ 2.x écrits en C qui transforme votre bureau GNOME/XFCE en environnement à l&apos;apparence moderne. Il est rapide et facile pour les yeux.</Description>
+            <Archive type="tarbz2" sha1sum="574c7577d70eaacecd2ffa14e288ef88fdcb6c2a">mirrors://gnome/gtk-engines/2.20/gtk-engines-2.20.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>lua-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/gtk-engines/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtk-engines</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>lua</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/gtk-engines</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.20.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -7987,7 +8092,7 @@
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
-            <PartOf>x11.wm</PartOf>
+            <PartOf>desktop.openbox</PartOf>
             <Summary xml:lang="en">Openbox preferences manager</Summary>
             <Description xml:lang="en">ObConf is a graphical configuration tool for the Openbox window manager.</Description>
             <Icon>obconf</Icon>
@@ -8019,6 +8124,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>2.0.4</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>2.0.4</Version>
@@ -8639,6 +8751,65 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>geocode-glib</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">The geographical code library.</Summary>
+            <Description xml:lang="en">The Geocode GLib is a convenience library for the Yahoo! Place Finder APIs. The Place Finder web service allows to do geocoding (finding longitude and latitude from an address), and reverse geocoding (finding an address from coordinates).</Description>
+            <Archive type="tarxz" sha1sum="2177dabc19fb0aa5d2134130620238b69d9bdae5">mirrors://gnome/geocode-glib/3.26/geocode-glib-3.26.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/geocode-glib/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>geocode-glib</Name>
+            <RuntimeDependencies>
+                <Dependency>json-glib</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>geocode-glib-devel</Name>
+            <Summary xml:lang="en">Development files for geocode-glib</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">geocode-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig/geocode-glib-1.0.pc</Path>
+                <Path fileType="data">/usr/share/gir-1.0/GeocodeGlib-1.0.gir</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-24</Date>
+                <Version>3.26.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libstatgrab</Name>
             <Homepage>http://www.i-scream.org/libstatgrab</Homepage>
             <Packager>
@@ -8897,6 +9068,93 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gcr</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">The Gcr package contains libraries used for displaying certificates and accessing key stores.</Summary>
+            <Description xml:lang="en">The Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Description>
+            <Archive type="tarxz" sha1sum="947ca5958d20f9d648e82210f056ff5ed63d9ccc">mirrors://gnome/gcr/3.28/gcr-3.28.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gnupg</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>p11-kit-devel</Dependency>
+                <Dependency>libgcrypt-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/gcr/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gcr</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>p11-kit</Dependency>
+                <Dependency>libgcrypt</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/libgcr*</Path>
+                <Path fileType="library">/usr/lib/libgck*</Path>
+                <Path fileType="library">/usr/lib/girepository-1.0</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/GConf</Path>
+                <Path fileType="data">/usr/share/gcr-3</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/security/limits.d/10-gcr.conf" permission="0644" owner="root">10-gcr.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>gcr-devel</Name>
+            <Summary xml:lang="en">Development files for gcr</Summary>
+            <RuntimeDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>p11-kit-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency release="1">gcr</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-15</Date>
+                <Version>3.28.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libfm-extra</Name>
             <Homepage>http://pcmanfm.sourceforge.net</Homepage>
             <Packager>
@@ -8932,6 +9190,68 @@
                 <Date>2019-09-10</Date>
                 <Version>1.3.1</Version>
                 <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gmime</Name>
+            <Homepage>http://spruce.sourceforge.net/gmime</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">Utilities for creating and parsing messages using MIME</Summary>
+            <Description xml:lang="en">gmime contains gmime-uudecode and gmime-uuencode and will allow you to manipulate MIME messages. These utilities can also be used instead of uudecode and uuencode from the sharutils package.</Description>
+            <Archive type="tarxz" sha1sum="12e2d6aa0206ce99093ad3f0619b8870df156cb2">http://ftp.gnome.org/pub/gnome/sources/gmime/2.6/gmime-2.6.23.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gpgme-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/gmime/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gmime</Name>
+            <IsA>app:console</IsA>
+            <RuntimeDependencies>
+                <Dependency>gpgme</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/gir-1.0/GMime-2.6.gir</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gmime-devel</Name>
+            <Summary xml:lang="en">gmime development files</Summary>
+            <RuntimeDependencies>
+                <Dependency releaseFrom="1">gmime</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="doc">/usr/share/vala</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gmime-docs</Name>
+            <Summary xml:lang="en">gmime reference documents</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-15</Date>
+                <Version>2.6.23</Version>
+                <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
@@ -17144,88 +17464,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>elfutils</Name>
-            <Homepage>http://www.redhat.com/</Homepage>
-            <Packager>
-                <Name>Süleyman POYRAZ</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-            <License>OpenSoftware</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>system.devel</PartOf>
-            <Summary xml:lang="en">Libraries/utilities to handle ELF objects</Summary>
-            <Description xml:lang="en">elfutils contains libraries and utilities to handle ELF objects and is a replacement for libelf.</Description>
-            <Archive type="tarbz2" sha1sum="922161f84baaae845382338098071544b98ca92d">ftp://sourceware.org/pub/elfutils/0.177/elfutils-0.177.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>bzip2</Dependency>
-                <Dependency>xz-devel</Dependency>
-                <Dependency>zlib-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>system/devel/elfutils/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>elfutils</Name>
-            <RuntimeDependencies>
-                <Dependency>xz</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>bzip2</Dependency>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="header">/usr/include</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>elfutils-32bit</Name>
-            <Summary xml:lang="en">32-bit shared libraries for elfutils</Summary>
-            <BuildType>emul32</BuildType>
-            <BuildDependencies>
-                <Dependency>xz-32bit</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-            </BuildDependencies>
-            <RuntimeDependencies>
-                <Dependency>xz-32bit</Dependency>
-                <Dependency>zlib-32bit</Dependency>
-                <Dependency release="2">elfutils</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib32</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>elfutils-docs</Name>
-            <Summary xml:lang="en">Documentation for elfutils package.</Summary>
-            <IsA>data:doc</IsA>
-            <PartOf>system.doc</PartOf>
-            <RuntimeDependencies>
-                <Dependency release="2">elfutils</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-09-17</Date>
-                <Version>0.177</Version>
-                <Comment>Version bump to 0.177</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-01-19</Date>
-                <Version>0.175</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman POYRAZ</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>klibc</Name>
             <Homepage>http://www.zytor.com/mailman/listinfo/klibc</Homepage>
             <Packager>
@@ -21108,6 +21346,95 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>elfutils</Name>
+            <Homepage>http://www.redhat.com/</Homepage>
+            <Packager>
+                <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>OpenSoftware</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>system.base</PartOf>
+            <Summary xml:lang="en">Libraries/utilities to handle ELF objects</Summary>
+            <Description xml:lang="en">elfutils contains libraries and utilities to handle ELF objects and is a replacement for libelf.</Description>
+            <Archive type="tarbz2" sha1sum="922161f84baaae845382338098071544b98ca92d">ftp://sourceware.org/pub/elfutils/0.177/elfutils-0.177.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>bzip2</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>system/base/elfutils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>elfutils</Name>
+            <RuntimeDependencies>
+                <Dependency>xz</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>elfutils-32bit</Name>
+            <Summary xml:lang="en">32-bit shared libraries for elfutils</Summary>
+            <BuildType>emul32</BuildType>
+            <BuildDependencies>
+                <Dependency>xz-32bit</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+            </BuildDependencies>
+            <RuntimeDependencies>
+                <Dependency>xz-32bit</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+                <Dependency release="3">elfutils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib32</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>elfutils-docs</Name>
+            <Summary xml:lang="en">Documentation for elfutils package.</Summary>
+            <IsA>data:doc</IsA>
+            <PartOf>system.doc</PartOf>
+            <RuntimeDependencies>
+                <Dependency release="3">elfutils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2019-12-15</Date>
+                <Version>0.177</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2019-09-17</Date>
+                <Version>0.177</Version>
+                <Comment>Version bump to 0.177</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-01-19</Date>
+                <Version>0.175</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>net-tools</Name>
             <Homepage>http://sites.inka.de/lina/linux/NetTools/</Homepage>
             <Packager>
@@ -22634,7 +22961,7 @@
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Statically linked binary providing simplified versions of system commands</Summary>
             <Description xml:lang="en">busybox is a single binary which includes versions of a large number of system commands, including a shell.</Description>
-            <Archive type="tarbz2" sha1sum="c855f6fa3144654345ef4cae9b80ab68449fd090">http://busybox.net/downloads/busybox-1.29.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="d5514f5cf8eb89a3b20ac3b965f4463f14a5709a">http://busybox.net/downloads/busybox-1.31.1.tar.bz2</Archive>
             <AdditionalFiles>
                 <AdditionalFile target=".config">config</AdditionalFile>
             </AdditionalFiles>
@@ -22664,6 +22991,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-08</Date>
+                <Version>1.31.1</Version>
+                <Comment>Version bump to 1.31.1 The package was built static.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-19</Date>
                 <Version>1.29.3</Version>
@@ -33232,7 +33566,7 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2019.11.14</Date>
+                <Date>2019-11-14</Date>
                 <Version>0.3.15</Version>
                 <Comment>First release</Comment>
                 <Name>Ali Rıza KESKİN</Name>
@@ -33349,7 +33683,7 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2019.11.14</Date>
+                <Date>2019-11-14</Date>
                 <Version>3.4.1</Version>
                 <Comment>First release</Comment>
                 <Name>Ali Rıza KESKİN</Name>
@@ -38407,6 +38741,47 @@
             <Update release="1">
                 <Date>2019-11-20</Date>
                 <Version>0.22</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-XML-Simple</Name>
+            <Homepage>http://search.cpan.org/~grantm/XML-Simple-2.18</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">XML::Simple Perl module</Summary>
+            <Summary xml:lang="tr">XML::Simple Perl kütüphanesi</Summary>
+            <Description xml:lang="en">XML::Simple is an easy API to read/write XML. This package provides XML::Simple&apos;s Perl module.</Description>
+            <Description xml:lang="tr">XML::Simple, XML okumak ve yazmak için kolay bir API&apos;dir. Bu paket de, XML::Simple&apos;in Perl kütüphanesini içermektedir.</Description>
+            <Archive type="targz" sha1sum="2642718bf55485798de4693ac34f051c1eaff5c9">https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl-XML-Parser</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-XML-Simple/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-XML-Simple</Name>
+            <RuntimeDependencies>
+                <Dependency>perl-XML-Parser</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.25</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -46644,7 +47019,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.debug</PartOf>
             <Summary xml:lang="en">GNU debugger</Summary>
             <Description xml:lang="en">GDB, the GNU Project debugger, allows you to see what is going on &apos;inside&apos; another program while it executes -- or what another program was doing at the moment it crashed.</Description>
-            <Archive type="tarxz" sha1sum="023556a6d6effa1ffaadf0007cc4458cbe8dde3d">mirrors://gnu/gdb/gdb-8.2.1.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="d403ba208945bbf04f8130ea4853730cdf0c8fc7">mirrors://gnu/gdb/gdb-8.3.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
@@ -46652,9 +47027,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
         </Source>
         <Package>
             <Name>gdb</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
@@ -46671,13 +47043,20 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>gdb-devel</Name>
             <Summary xml:lang="en">Development files for gdb</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">gdb</Dependency>
+                <Dependency release="2">gdb</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>8.3.1</Version>
+                <Comment>Version bump to 8.3.1</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>8.2.1</Version>
@@ -47727,6 +48106,54 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mozjs60</Name>
+            <Homepage>http://www.mozilla.org/js/spidermonkey/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>NPL-1.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Stand-alone JavaScript C Library</Summary>
+            <Description xml:lang="en">Mozjs60 is Mozilla&apos;s C implementation of JavaScript.</Description>
+            <Archive type="tarbz2" sha1sum="069bdffcc96f2b23f935d1e91a16282fedc2d430">ftp://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-60.8.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>readline</Dependency>
+                <Dependency>libffi</Dependency>
+                <Dependency>libX11-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/mozjs60/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mozjs60</Name>
+            <RuntimeDependencies>
+                <Dependency>nspr</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>readline</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>60.8.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>ModemManager</Name>
             <Homepage>http://projects.gnome.org/NetworkManager</Homepage>
             <Packager>
@@ -47739,7 +48166,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>network.connection</PartOf>
             <Summary xml:lang="en">A manager framework for mobile broadband modems</Summary>
             <Description xml:lang="en">ModemManager provides a unified high level API for communicating with mobile broadband modems.</Description>
-            <Archive type="tarxz" sha1sum="bde9d60148fe3b2cb54a4d39a6e10f2dc914e6ff">http://www.freedesktop.org/software/ModemManager/ModemManager-1.10.6.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="7b6d45e2a379c5d9d630acec117383061d793059">http://www.freedesktop.org/software/ModemManager/ModemManager-1.12.2.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>gobject-introspection-devel</Dependency>
                 <Dependency>ppp-devel</Dependency>
@@ -47783,7 +48210,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>ModemManager-devel</Name>
             <Summary xml:lang="en">Development files for ModemManager</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">ModemManager</Dependency>
+                <Dependency release="2">ModemManager</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include/ModemManager/</Path>
@@ -47805,7 +48232,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>libmm-glib-devel</Name>
             <Summary xml:lang="en">Development files for libmm-glib</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libmm-glib</Dependency>
+                <Dependency release="2">libmm-glib</Dependency>
                 <Dependency>ModemManager-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -47814,6 +48241,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>1.12.2</Version>
+                <Comment>Version bump to 1.12.2</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-28</Date>
                 <Version>1.10.6</Version>
@@ -47865,11 +48299,18 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <AdditionalFiles>
                 <AdditionalFile target="/etc/wpa_supplicant.conf" permission="0600" owner="root">wpa_supplicant.conf</AdditionalFile>
                 <AdditionalFile target="/etc/conf.d/wpa_supplicant" permission="0644" owner="root">wpa_supplicant.confd</AdditionalFile>
+                <AdditionalFile target="/etc/init.d/wpa_supplicant" permission="0755" owner="root">wpa_supplicant.initd</AdditionalFile>
                 <AdditionalFile target="/etc/logrotate.d/wpa_supplicant" permission="0644" owner="root">wpa_supplicant.logrotate</AdditionalFile>
-                <AdditionalFile target="/usr/lib/python2.7/site-packages/wpa_supplicant.py" permission="0644" owner="root">wpa_supplicant.py</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>2.9</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-28</Date>
                 <Version>2.9</Version>
@@ -47963,7 +48404,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>network.connection</PartOf>
             <Summary xml:lang="en">Network connection manager powered by D-Bus and UDEV</Summary>
             <Description xml:lang="en">NetworkManager attempts to keep an active network connection available at all times.</Description>
-            <Archive type="tarxz" sha1sum="57839dbf3baaee868f5b01f81b045ebd4577aa7c">https://download.gnome.org/sources/NetworkManager/1.20/NetworkManager-1.20.2.tar.xz</Archive>
+            <Archive sha1sum="30ba56d6af47d6a8d432be4b490858b4825ac710">https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/1.23.0-dev/NetworkManager-1.23.0-dev.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libpsl-devel</Dependency>
                 <Dependency>jansson-devel</Dependency>
@@ -48027,16 +48468,12 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="config">/usr/lib/tmpfiles.d/NetworkManager.conf</Path>
                 <Path fileType="config">/etc/polkit-1/localauthority/10-vendor.d</Path>
             </Files>
-            <Provides>
-                <SCOM script="service.py">System.Service</SCOM>
-            </Provides>
             <AdditionalFiles>
                 <AdditionalFile target="/etc/NetworkManager/dispatcher.d/10-openrc-status" permission="0755" owner="root">10-openrc-status</AdditionalFile>
                 <AdditionalFile target="/etc/init.d/NetworkManager" permission="0755" owner="root">NetworkManager.initd</AdditionalFile>
                 <AdditionalFile target="/etc/conf.d/NetworkManager" permission="0755" owner="root">NetworkManager.confd</AdditionalFile>
                 <AdditionalFile target="/usr/lib/tmpfiles.d/NetworkManager.conf" permission="0644" owner="root">tmpfiles.conf</AdditionalFile>
                 <AdditionalFile target="/etc/NetworkManager/NetworkManager.conf" permission="0644" owner="root">NetworkManager.conf</AdditionalFile>
-                <AdditionalFile target="/usr/sbin/migrate-scom-network-profiles" permission="0755" owner="root">migrate-scom-network-profiles</AdditionalFile>
                 <AdditionalFile target="/etc/polkit-1/localauthority/10-vendor.d/01-org.freedesktop.NetworkManager.settings.modify.system.pkla" permission="0644" owner="root">gentoo/01-org.freedesktop.NetworkManager.settings.modify.system.pkla</AdditionalFile>
                 <AdditionalFile target="/usr/share/polkit-1/rules.d/10-vendor.d/01-org.freedesktop.ModemManager1.rules" permission="0644" owner="root">01-org.freedesktop.ModemManager1.rules</AdditionalFile>
                 <AdditionalFile target="/usr/share/polkit-1/rules.d/10-vendor.d/01-org.freedesktop.NetworkManager.settings.modify.system.rules" permission="0644" owner="root">01-org.freedesktop.NetworkManager.settings.modify.system.rules</AdditionalFile>
@@ -48046,7 +48483,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>NetworkManager-devel</Name>
             <Summary xml:lang="en">Development files for NetworkManager</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">NetworkManager</Dependency>
+                <Dependency release="2">NetworkManager</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -48054,6 +48491,16 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>1.23</Version>
+                <Comment>Gereksiz scom servisi silindi.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+                <Requires>
+                    <Action package="NetworkManager">systemRestart</Action>
+                </Requires>
+            </Update>
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>1.20.2</Version>
@@ -48219,13 +48666,16 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
             </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
         </Package>
         <Package>
             <Name>network-manager-applet-devel</Name>
             <Summary xml:lang="en">network-manager-applet için geliştirme dosyaları</Summary>
             <Summary xml:lang="tr">network-manager-applet için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">network-manager-applet</Dependency>
+                <Dependency release="2">network-manager-applet</Dependency>
                 <Dependency>NetworkManager-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
             </RuntimeDependencies>
@@ -48235,6 +48685,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>1.8.24</Version>
+                <Comment>Added needed scom script.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-11-28</Date>
                 <Version>1.8.24</Version>
@@ -50008,6 +50465,51 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Date>2019-12-12</Date>
                 <Version>2.0.0</Version>
                 <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>openresolv</Name>
+            <Homepage>https://roy.marples.name/projects/openresolv</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>network</PartOf>
+            <Summary xml:lang="en">A framework for managing DNS information.</Summary>
+            <Description xml:lang="en">openrc compatible DNS framework provided systemd-resolv</Description>
+            <Archive sha1sum="7ed1245b2b5b25111a7bcc12ef534faf4b4f5bcf">https://roy.marples.name/downloads/openresolv/openresolv-3.9.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>dnsmasq</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/dns/openresolv/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>openresolv</Name>
+            <RuntimeDependencies>
+                <Dependency>dnsmasq</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-08</Date>
+                <Version>3.9.2</Version>
+                <Comment>First release.</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
@@ -53224,7 +53726,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>hardware.sound</PartOf>
             <Summary xml:lang="en">Advanced Linux Sound Architecture (ALSA) utilities</Summary>
             <Description xml:lang="en">alsa-utils contains command line utilities for the Advanced Linux Sound Architecture (ALSA).</Description>
-            <Archive type="tarbz2" sha1sum="9aee48df54a6df7519f50b9b62a13217e2a91bf8">ftp://ftp.alsa-project.org/pub/utils/alsa-utils-1.1.9.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="f45e0a4f37a74235d09fcf2540de9d11f8e3a7e3">https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>xmlto</Dependency>
                 <Dependency>libsamplerate-devel</Dependency>
@@ -53261,6 +53763,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>1.2.1</Version>
+                <Comment>Version bump to 1.2.1</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-10</Date>
                 <Version>1.1.9</Version>
@@ -53284,17 +53793,11 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>hardware.sound</PartOf>
             <Summary xml:lang="en">The Advanced Linux Sound Architecture (ALSA) library</Summary>
             <Description xml:lang="en">alsa-lib provides ALSA runtime libraries to simplify application programming and provide higher level functionality as well as support for the older OSS API, providing binary compatibility for most OSS programs.</Description>
-            <Archive type="tarbz2" sha1sum="2404e1c377428908c5188076d5652a2a1ecd028e">ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.9.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
+            <Archive type="tarbz2" sha1sum="b58599c1237b2525962ed190ef501d3b9aa6edf5">https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.1.2.tar.bz2</Archive>
             <SourceURI>hardware/sound/alsa-lib/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>alsa-lib</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="executable">/usr/bin</Path>
@@ -53306,7 +53809,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>alsa-lib-devel</Name>
             <Summary xml:lang="en">Development files for alsa-lib</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">alsa-lib</Dependency>
+                <Dependency release="2">alsa-lib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -53324,13 +53827,20 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">alsa-lib</Dependency>
+                <Dependency release="2">alsa-lib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-15</Date>
+                <Version>1.2.1.2</Version>
+                <Comment>Version bump to 1.2.1.2</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-10</Date>
                 <Version>1.1.39</Version>
@@ -54216,6 +54726,48 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-09-28</Date>
                 <Version>3.10.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>cdrtools</Name>
+            <Homepage>http://cdrecord.berlios.de/old/private/cdrecord.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>CDDL</License>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.optical</PartOf>
+            <Summary xml:lang="en">A set of tools for CD/DVD recording</Summary>
+            <Description xml:lang="en">Contains a set of tools for CD/DVD recording, including cdrecord.</Description>
+            <Archive sha1sum="3507890dfda91a9631253a654cf004465a209688">https://gitlab.com/sulinos/resources/binaries/raw/master/cdrtools-3.02a09.tar.bz2</Archive>
+            <SourceURI>hardware/optical/cdrtools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cdrtools</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-15</Date>
+                <Version>3.01_alpha9</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
