@@ -1,0 +1,65 @@
+<INARY>
+    <Source>
+        <Name>sddm</Name>
+        <Homepage>https://github.com/sddm/sddm</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:graphical</IsA>
+        <Summary>QML based X11 display manager</Summary>
+        <Description>QML based X11 display manager</Description>
+        <Archive sha1sum="ca4f453fd32e68faca437d66d9fbad59258c505c">https://github.com/sddm/sddm/releases/download/v0.18.1/sddm-0.18.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>docutils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sddm</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>libxcb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/sddm.conf">sddm.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/sddm">sddm</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/sddm-autologin">sddm-autologin</AdditionalFile>
+	    <AdditionalFile owner="root" permission="0644" target="/etc/pam.d/sddm-greeter">sddm-greeter</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/polkit-1/rules.d/10-backlight.rules">10-backlight.rules</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>0.18.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
