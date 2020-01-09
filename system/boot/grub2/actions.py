@@ -19,9 +19,10 @@ def setup():
     inarytools.cflags.remove("-fstack-protector", "-fasynchronous-unwind-tables", "-fexceptions", "-fPIC")
     inarytools.cflags.sub("\s?(-O[\ds]|-D_FORTIFY_SOURCE=\d)\s?", " ")
 
-    shelltools.system("./linguas.sh")
+#    shelltools.system("./linguas.sh")
     shelltools.system("./autogen.sh")
-    autotools.configure("--disable-werror \
+    autotools.configure("PYTHON=/usr/bin/python3 \
+                         --disable-werror \
                          --with-grubdir=grub2 \
                          --program-transform-name='s,grub,grub2,'\
                          --program-prefix= \
@@ -35,7 +36,8 @@ def setup():
     shelltools.copytree("../grub-%s" % (get.srcVERSION().replace("_", "~")), "../grub-%s-efi" % get.srcVERSION())
     shelltools.cd("../grub-%s-efi" % get.srcVERSION())
     shelltools.system("./autogen.sh")
-    autotools.configure("--disable-werror \
+    autotools.configure("PYTHON=/usr/bin/python3 \
+                         --disable-werror \
                          --with-grubdir=grub2 \
                          --program-transform-name='s,grub,grub2,'\
                          --program-prefix= \
