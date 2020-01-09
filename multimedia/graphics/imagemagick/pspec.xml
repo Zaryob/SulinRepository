@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>A collection of tools and libraries for many image file formats</Summary>
         <Description>ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. You can use ImageMagick to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</Description>
-        <Archive sha1sum="82a29b9a18c8d804bccefc1600652861568d915d" type="zip">https://www.imagemagick.org/download/releases/ImageMagick-7.0.8-68.zip</Archive>
+        <Archive sha1sum="2ea91fcd69ee8fddd4aa5e2ad8d1f3a87c42279b">https://github.com/ImageMagick/ImageMagick/archive/7.0.9-14.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>ghostscript-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
@@ -62,19 +62,28 @@
             <Path fileType="data">/usr/share/ImageMagick-*</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man/man3</Path>
             <Path fileType="man">/usr/share/man/man1/*-config*</Path>
             <Path fileType="executable">/usr/bin/*-config</Path>
             <Path fileType="doc">/usr/share/doc/imagemagick/html</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>imagemagick-devel</Name>
+        <Summary>Development files for imagemagick</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">imagemagick</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
 
     <History>
         <Update release="1">
             <Date>2019-10-10</Date>
-            <Version>7.0.8</Version>
+            <Version>7.0.9</Version>
             <Comment>First release</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
