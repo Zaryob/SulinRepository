@@ -23,7 +23,7 @@ def install():
 
     #move html docs to html doc dir
     inarytools.dodir("/usr/share/doc/{}/html".format(get.srcNAME()))
-    inarytools.domove("/usr/share/doc/{}-1.16/*".format(get.srcNAME()), "/usr/share/doc/{}/html".format(get.srcNAME()))
-    inarytools.removeDir("/usr/share/doc/{}-1.16".format(get.srcNAME()))
+    inarytools.domove("/usr/share/doc/{}-1.0/*".format(get.srcNAME()), "/usr/share/doc/{}/html".format(get.srcNAME()))
+    inarytools.removeDir("/usr/share/doc/{}-1.0".format(get.srcNAME()))
 
     inarytools.dodoc("AUTHORS", "README", "COPYING", "ChangeLog", "NEWS")
