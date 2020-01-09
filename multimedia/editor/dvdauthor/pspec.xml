@@ -1,0 +1,58 @@
+<INARY>
+    <Source>
+        <Name>dvdauthor</Name>
+        <Homepage>http://dvdauthor.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A simple DVD tool</Summary>
+        <Description>dvdauthor is a set of simple tools to help you author a DVD.</Description>
+        <Archive sha1sum="0e605642140576bfb3e963414d77630d1c073a51">mirrors://sourceforge/dvdauthor/dvdauthor-0.7.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>fridibi-devel</Dependency>
+            <Dependency>libdvdread-devel</Dependency>
+            <Dependency>imagemagick-devel</Dependency>
+            <Dependency>GraphicsMagick-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>imagemagick7.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dvdauthor</Name>
+        <RuntimeDependencies>
+            <Dependency>libpng</Dependency>
+            <Dependency>fridibi</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libdvdread</Dependency>
+            <Dependency>GraphicsMagick</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>0.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
