@@ -1,0 +1,32 @@
+<INARY>
+    <Source>
+        <Name>aufs-headers</Name>
+        <Homepage>http://aufs.sourceforge.ne</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Linux headers for aufs</Summary>
+        <Description>Linux headers for aufs</Description>
+        <Archive sha1sum="2a0de7a1f2d82a17432e07d9bd3d2563c0de22c0">https://gitlab.com/sulinos/resources/aufs-headers/-/archive/20190603/aufs-headers-20190603.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>aufs-headers</Name>
+        <Files>
+            <Path fileType="include">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>20190603</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
