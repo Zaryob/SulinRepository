@@ -55,12 +55,9 @@
     <Package>
         <Name>pango-devel</Name>
         <Summary>Development files for pango</Summary>
-        <BuildDependencies>
-            <Dependency>fridibi-32bit</Dependency>
-        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">pango</Dependency>
-            <Dependency>fridibi-32bit</Dependency>
+            <Dependency>fridibi-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
@@ -95,6 +92,7 @@
             <Dependency>fontconfig-32bit</Dependency>
             <Dependency>libffi-32bit</Dependency>
             <Dependency>harfbuzz-32bit</Dependency>
+            <Dependency>fridibi-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">pango</Dependency>
@@ -107,6 +105,7 @@
             <Dependency>fontconfig-32bit</Dependency>
             <Dependency>libffi-32bit</Dependency>
             <Dependency>harfbuzz-32bit</Dependency>
+            <Dependency>fridibi-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pango-querymodules-32</Path>
@@ -116,6 +115,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-01-09</Date>
+            <Version>1.44.7</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-26</Date>
             <Version>1.44.7</Version>
