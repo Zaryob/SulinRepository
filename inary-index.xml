@@ -2663,6 +2663,70 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libglademm</Name>
+            <Homepage>http://www.gtkmm.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">C++ binding for libglade</Summary>
+            <Description xml:lang="en">libglademm provides a C++ interface for glade2. It is a subpackage of the gnomemm project. The interface provides a convenient interface for C++ programmers to create glade2 objects.</Description>
+            <Archive type="tarbz2" sha1sum="d7c0138c80ea337d2e9ae55f74a6953ce2eb9f5d">mirrors://gnome/libglademm/2.6/libglademm-2.6.7.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtkmm2-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">remove-doc-dir.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/toolkit/gtk/libglademm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libglademm</Name>
+            <RuntimeDependencies>
+                <Dependency>gtkmm2</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libsigc++</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/devhelp</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libglademm-devel</Name>
+            <Summary xml:lang="en">Development files for libglademm</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtkmm2-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency release="1">libglademm</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+                <Path fileType="doc">/usr/share/doc/libglademm/html</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-08</Date>
+                <Version>2.6.7</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>webkit2gtk</Name>
             <Homepage>http://webkitgtk.org</Homepage>
             <Packager>
@@ -2849,6 +2913,72 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gtkmm3</Name>
+            <Homepage>http://gtkmm.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">C++ binding for GTK+-3</Summary>
+            <Description xml:lang="en">gtkmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks, and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
+            <Archive type="tarxz" sha1sum="2b65ff352fde95b6054e1accc4fb6571bb988b52">mirrors://gnome/gtkmm/3.24/gtkmm-3.24.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>atkmm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>cairomm-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/gtkmm3/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtkmm3</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>atkmm</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>cairomm</Dependency>
+                <Dependency>pangomm</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gtkmm3-devel</Name>
+            <Summary xml:lang="en">Development files for gtkmm3</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gtkmm3</Dependency>
+                <Dependency>atkmm-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-08</Date>
+                <Version>3.24.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>atkmm</Name>
             <Homepage>http://www.gtkmm.org</Homepage>
             <Packager>
@@ -2995,6 +3125,72 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gtkmm2</Name>
+            <Homepage>http://gtkmm.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">C++ binding for GTK+</Summary>
+            <Description xml:lang="en">gtkmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks, and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
+            <Archive type="tarxz" sha1sum="dcb41b487577594a5ecf0dee3c4993ff9a2ade26">mirrors://gnome/gtkmm/2.24/gtkmm-2.24.5.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>atkmm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>cairomm-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/gtkmm2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtkmm2</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>atkmm</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>cairomm</Dependency>
+                <Dependency>pangomm</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gtkmm2-devel</Name>
+            <Summary xml:lang="en">Development files for gtkmm2</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gtkmm2</Dependency>
+                <Dependency>atkmm-devel</Dependency>
+                <Dependency>pangomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>2.24.5</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gtkspell</Name>
             <Homepage>http://gtkspell.sourceforge.net</Homepage>
             <Packager>
@@ -3072,17 +3268,16 @@
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">C++ interface for glib2</Summary>
             <Description xml:lang="en">Glibmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
-            <Archive type="tarxz" sha1sum="d733d9206d706d53058749f92dfb319bb189c289">mirrors://gnome/glibmm/2.56/glibmm-2.56.0.tar.xz</Archive>
+            <Archive sha1sum="46669946421b1ffc7e3c47a3af71c6cfc719c5b3">http://ftp.gnome.org/pub/gnome/sources/glibmm/2.62/glibmm-2.62.0.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>libsigc++</Dependency>
-                <Dependency>libsigc++-devel</Dependency>
+                <Dependency versionTo="2.99">libsigc++-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/glibmm/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>glibmm</Name>
             <RuntimeDependencies>
-                <Dependency>libsigc++</Dependency>
+                <Dependency versionTo="2.99">libsigc++</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -3100,6 +3295,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-08</Date>
+                <Version>2.62.0</Version>
+                <Comment>Upgraded to newest stable release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>2.56.0</Version>
@@ -3138,6 +3340,7 @@
             <RuntimeDependencies>
                 <Dependency>docbook-xml</Dependency>
                 <Dependency>sgml-common</Dependency>
+                <Dependency>python3-pygments</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -3149,6 +3352,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-08</Date>
+                <Version>1.32</Version>
+                <Comment>pygments bağımlılık eksiği düzeltildi.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-14</Date>
                 <Version>1.32</Version>
@@ -3248,6 +3458,74 @@
             <Update release="1">
                 <Date>2019-09-14</Date>
                 <Version>3.8.6</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pangomm</Name>
+            <Homepage>http://www.gtkmm.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">C++ interface for Pango</Summary>
+            <Description xml:lang="en">Pangomm is a library that provides pango based C++ interface for object-oriented gtkmm applications.</Description>
+            <Archive type="tarxz" sha1sum="6d85e5600389c7ee04cc08b6a826832cd360e944">mirrors://gnome/pangomm/2.42/pangomm-2.42.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>grep</Dependency>
+                <Dependency>libtool</Dependency>
+                <Dependency>doxygen</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>cairomm-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/pangomm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pangomm</Name>
+            <RuntimeDependencies>
+                <Dependency>pango</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairomm</Dependency>
+                <Dependency>libsigc++</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pangomm-devel</Name>
+            <Summary xml:lang="en">Development files for pangomm</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">pangomm</Dependency>
+                <Dependency>cairomm-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/pangomm-1.4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-08</Date>
+                <Version>2.42.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -4531,11 +4809,11 @@
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">C++ binding for Cairo</Summary>
             <Description xml:lang="en">cairomm package is the C++ binding for Cairo (it makes possible using Cairo in C++).</Description>
-            <Archive type="targz" sha1sum="621546f32221a2ddc079167a13ce5b5409bed704">https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="63cd9eab40686f368a8edd3e6912ac18b3048ecf">https://www.cairographics.org/releases/cairomm-1.13.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>doxygen</Dependency>
                 <Dependency>cairo-devel</Dependency>
-                <Dependency>libsigc++-devel</Dependency>
+                <Dependency versionTo="2.99">libsigc++-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/cairomm/pspec.xml</SourceURI>
         </Source>
@@ -4543,7 +4821,7 @@
             <Name>cairomm</Name>
             <RuntimeDependencies>
                 <Dependency>cairo</Dependency>
-                <Dependency>libsigc++</Dependency>
+                <Dependency versionTo="2.99">libsigc++</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -4554,7 +4832,7 @@
             <Name>cairomm-devel</Name>
             <Summary xml:lang="en">Development files for cairomm</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">cairomm</Dependency>
+                <Dependency release="2">cairomm</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>libsigc++-devel</Dependency>
             </RuntimeDependencies>
@@ -4572,6 +4850,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-09</Date>
+                <Version>1.13.1</Version>
+                <Comment>Version bump to 1.13.1</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-04-12</Date>
                 <Version>1.12.2</Version>
@@ -10680,6 +10965,59 @@
             <Update release="1">
                 <Date>2019-09-29</Date>
                 <Version>1.9.12</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pavucontrol</Name>
+            <Homepage>https://freedesktop.org/software/pulseaudio/pavucontrol/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.library</PartOf>
+            <Summary xml:lang="en">PulseAudio Volume Control</Summary>
+            <Description xml:lang="en">pavucontrol is a simple GTK based volume control tool (&quot;mixer&quot;) for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream seperately.</Description>
+            <Archive sha1sum="14e76f8bdbf4e628e18a9260ce197c472af416ff">https://gitlab.freedesktop.org/pulseaudio/pavucontrol/-/archive/v4.0/pavucontrol-v4.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>libcanberra-gtk-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>gtkmm2-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/pavucontrol/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pavucontrol</Name>
+            <RuntimeDependencies>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>libcanberra-gtk</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>gtkmm2</Dependency>
+                <Dependency>gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-08</Date>
+                <Version>4.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -31952,7 +32290,7 @@
             </Packager>
             <License>GPLv2</License>
             <IsA>app:console</IsA>
-            <PartOf>system.base</PartOf>
+            <PartOf>util.environment</PartOf>
             <Summary xml:lang="en">Busybox alternative command environment</Summary>
             <Summary xml:lang="tr">Busybox alternatifi komut ortamı</Summary>
             <Description xml:lang="en">toybox is a single binary which includes versions of a large number of system commands, including a shell.</Description>
@@ -31967,6 +32305,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-08</Date>
+                <Version>0.8.2</Version>
+                <Comment>Paket statik olarak yeniden derlendi.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-11-5</Date>
                 <Version>0.8.2</Version>
@@ -45691,6 +46036,43 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-09-15</Date>
                 <Version>1.3.7</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-pygments</Name>
+            <Homepage>http://pygments.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A syntax highlighting package written in Python</Summary>
+            <Description xml:lang="en">Pygments is a generic syntax highlighter for general use in all kinds of software such as forum systems, wikis or other applications that need to prettify source code.</Description>
+            <Archive sha1sum="92c56858468d4278fed5448e6b7b8021d4a4b382">https://github.com/pygments/pygments/archive/2.5.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/pygments/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-pygments</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/python3.7</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.5.2</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>

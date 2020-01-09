@@ -28,7 +28,7 @@
         <Name>pavucontrol</Name>
         <RuntimeDependencies>
             <Dependency>pulseaudio-libs</Dependency>
-            <Dependency>libcanberra-gtk2</Dependency>
+            <Dependency>libcanberra-gtk</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libsigc++</Dependency>
             <Dependency>glibmm</Dependency>
