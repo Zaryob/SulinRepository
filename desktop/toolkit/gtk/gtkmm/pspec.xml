@@ -1,0 +1,67 @@
+<INARY>
+    <Source>
+        <Name>gtkmm</Name>
+        <Homepage>http://gtkmm.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>C++ binding for GTK+</Summary>
+        <Description>gtkmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks, and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
+        <Archive sha1sum="2b65ff352fde95b6054e1accc4fb6571bb988b52" type="tarxz">mirrors://gnome/gtkmm/3.24/gtkmm-3.24.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>atkmm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>cairomm-devel</Dependency>
+            <Dependency>pangomm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gtkmm</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>cairomm</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gtkmm-devel</Name>
+        <Summary>Development files for gtkmm</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkmm</Dependency>
+            <Dependency>atkmm-devel</Dependency>
+            <Dependency>pangomm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-08</Date>
+            <Version>3.24.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
