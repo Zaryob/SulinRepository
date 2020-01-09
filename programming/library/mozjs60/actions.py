@@ -18,12 +18,21 @@ def setup():
     shelltools.makedirs("moz-build")
     shelltools.cd("moz-build")
     shelltools.system(" ../configure   --prefix=/usr       \
-                            --with-intl-api     \
-                            --with-system-zlib  \
-                            --with-system-icu   \
-                            --disable-jemalloc  \
-                            --enable-readline  ")
-
+                        --disable-debug                    \
+                        --disable-debug-symbols            \
+                        --disable-jemalloc                 \
+                        --disable-strip                    \
+                        --enable-hardening                 \
+                        --enable-linker=gold               \
+                        --enable-optimize                  \
+                        --enable-posix-nspr-emulation      \
+                        --enable-readline                  \
+                        --enable-release                   \
+                        --enable-shared-js                 \
+                        --enable-tests                     \
+                        --with-intl-api                    \
+                        --with-system-zlib                 \
+                        --without-system-icu")
 def build():
     shelltools.cd("moz-build")
     shelltools.export("SHELL", "/bin/bash")
@@ -34,3 +43,5 @@ def install():
     shelltools.cd("moz-build")
     shelltools.export("SHELL", "/bin/bash")
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    #BUG: at issue #24 in gitlab
+    inarytools.remove("/usr/lib/*.ajs")
