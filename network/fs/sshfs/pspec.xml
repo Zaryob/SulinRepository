@@ -1,0 +1,44 @@
+<INARY>
+    <Source>
+        <Name>sshfs</Name>
+        <Homepage>http://fuse.sourceforge.net/sshfs.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A filesystem client based on the SSH FTP</Summary>
+        <Description>sshfs allows mounting remote SSH accounts as a filesystem.</Description>
+        <Archive sha1sum="63832e22e6801a2d199475fe7fd979248f812aae">https://github.com/libfuse/sshfs/releases/download/sshfs-3.7.0/sshfs-3.7.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>fuse-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sshfs</Name>
+        <RuntimeDependencies>
+            <Dependency>fuse</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>3.7.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
