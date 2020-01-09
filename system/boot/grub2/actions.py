@@ -69,9 +69,6 @@ def install():
 
     inarytools.insinto("/boot/grub2", "unicode.pf2")
 
-    # Insall our theme
-    inarytools.insinto("/usr/share/grub/themes/","themes/grub2-theme-breeze-5.13.1")
-
     #remove -r 0x0-0x7F entries to fix ugly fonts or find a suitable range parameter -r ***
     shelltools.system("./grub-mkfont -o DejaVuSans-10.pf2 -r 0x0-0x7F -s 10 /usr/share/fonts/dejavu/DejaVuSans.ttf")
     shelltools.system("./grub-mkfont -o DejaVuSans-12.pf2 -r 0x0-0x7F -s 12 /usr/share/fonts/dejavu/DejaVuSans.ttf")
@@ -79,12 +76,6 @@ def install():
     shelltools.system("./grub-mkfont -o DejaVuSans-16.pf2 -r 0x0-0x7F -s 16 /usr/share/fonts/dejavu/DejaVuSans.ttf")
     shelltools.system("./grub-mkfont -o DejaVuSans-Bold-14.pf2 -r 0x0-0x7F -s 14 /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf")
     shelltools.system("./grub-mkfont -o DejaVuSans-Mono-14.pf2 -r 0x0-0x7F -s 14 /usr/share/fonts/dejavu/DejaVuSansMono.ttf")
-    shelltools.copy("ascii.pf2","%s/usr/share/grub/themes/grub2-theme-breeze-5.13.1" % get.installDIR())
-
-    # Do not install auto generated dejavu* fonts
-    fonts=["DejaVuSans-10.pf2" , "DejaVuSans-12.pf2" , "DejaVuSans-14.pf2" , "DejaVuSans-16.pf2" , "DejaVuSans-Mono-14.pf2", "DejaVuSans-Bold-14.pf2"]
-    for font in fonts:
-        shelltools.copy(font,"%s/usr/share/grub/themes/grub2-theme-breeze-5.13.1" % get.installDIR())
 
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
