@@ -13,18 +13,18 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>C++ binding for Cairo</Summary>
         <Description>cairomm package is the C++ binding for Cairo (it makes possible using Cairo in C++).</Description>
-        <Archive sha1sum="621546f32221a2ddc079167a13ce5b5409bed704" type="targz">https://www.cairographics.org/releases/cairomm-1.12.2.tar.gz</Archive>
+        <Archive sha1sum="f95ae92551ea4d0a9214e45834ae9806dfee9e3d" type="targz">https://www.cairographics.org/releases/cairomm-1.15.5.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>doxygen</Dependency>
             <Dependency>cairo-devel</Dependency>
-            <Dependency>libsigc++-devel</Dependency>
+            <Dependency versionFrom="3">libsigc++-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>cairomm</Name>
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
-            <Dependency>libsigc++</Dependency>
+            <Dependency versionFrom="3">libsigc++</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -53,6 +53,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-01-09</Date>
+            <Version>1.15.5</Version>
+            <Comment>Version bump to 1.15.5</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.12.2</Version>
