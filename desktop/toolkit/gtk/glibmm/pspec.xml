@@ -13,16 +13,15 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>C++ interface for glib2</Summary>
         <Description>Glibmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
-        <Archive sha1sum="fde1d1880f72eefcfa8ca05db23fb95094453686">http://ftp.gnome.org/pub/gnome/sources/glibmm/2.63/glibmm-2.63.1.tar.xz</Archive>
+        <Archive sha1sum="46669946421b1ffc7e3c47a3af71c6cfc719c5b3">http://ftp.gnome.org/pub/gnome/sources/glibmm/2.62/glibmm-2.62.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libsigc++</Dependency>
-            <Dependency>libsigc++-devel</Dependency>
+            <Dependency versionTo="2.99">libsigc++-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>glibmm</Name>
         <RuntimeDependencies>
-            <Dependency>libsigc++</Dependency>
+            <Dependency versionTo="2.99">libsigc++</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -42,7 +41,7 @@
     <History>
         <Update release="2">
             <Date>2020-01-08</Date>
-            <Version>2.63.1</Version>
+            <Version>2.62.0</Version>
             <Comment>Upgraded to newest stable release.</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
