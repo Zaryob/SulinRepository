@@ -11,6 +11,7 @@ from inary.actionsapi import get
 
 def setup():
     autotools.configure("--disable-static \
+                         --enable-freetype-config \
                          --with-harfbuzz=no")
 
 def build():
