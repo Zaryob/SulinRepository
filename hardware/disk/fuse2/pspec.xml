@@ -1,0 +1,49 @@
+<INARY>
+    <Source>
+        <Name>fuse2</Name>
+        <Homepage>http://fuse.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>An interface for filesystems implemented in userspace. This is 2.x version of fuse</Summary>
+        <Description>fuse2 is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
+        <Archive sha1sum="4bad8cd2c4d669a7b4f3ad57e4465350b972c94f" type="targz">https://github.com/libfuse/libfuse/archive/fuse-2.9.9.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>fuse2</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>fuse2-devel</Name>
+        <Summary>Development files for fuse2</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">fuse2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>2.9.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
