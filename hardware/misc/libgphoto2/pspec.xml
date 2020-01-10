@@ -19,6 +19,7 @@
             <Dependency>tiff</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>libexif-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,6 +27,7 @@
         <Name>libgphoto2</Name>
         <RuntimeDependencies>
             <Dependency>gd</Dependency>
+            <Dependency>webp</Dependency>
             <Dependency>libexif</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>
@@ -74,6 +76,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-10</Date>
+            <Version>2.5.23</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyra</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>2.5.23</Version>
