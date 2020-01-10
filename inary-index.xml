@@ -484,6 +484,9 @@
         <Package>
             <Name>docutils</Name>
             <Summary xml:lang="en">A library and applications for processing plaintext documentation</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3-docutils</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -508,6 +511,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-09</Date>
+                <Version>0.15.2</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-06</Date>
                 <Version>0.15.2</Version>
@@ -2293,6 +2303,60 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>noto-fonts</Name>
+            <Homepage>http://www.google.com/get/noto</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>Apache</License>
+            <IsA>data:font</IsA>
+            <PartOf>desktop.font</PartOf>
+            <Summary xml:lang="en">Google Noto TTF fonts</Summary>
+            <Description xml:lang="en">Noto fonts are open source. All Noto fonts are published under the SIL Open Font License, Version 1.1. Language data and some sample texts are from the Unicode CLDR project.</Description>
+            <Archive sha1sum="8f6e4bc8f883a315326669e817ba978bfbd6a6ae">https://github.com/googlefonts/noto-fonts/archive/v2.7-NotoSlimVF.tar.gz</Archive>
+            <SourceURI>desktop/font/noto-fonts/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>noto-fonts</Name>
+            <Files>
+                <Path fileType="config">/etc/fonts</Path>
+                <Path fileType="data">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/fonts/noto</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/fonts/conf.d/66-noto-serif.conf">66-noto-serif.conf</AdditionalFile>
+                <AdditionalFile target="/etc/fonts/conf.d/66-noto-sans.conf">66-noto-sans.conf</AdditionalFile>
+                <AdditionalFile target="/etc/fonts/conf.d/66-noto-mono.conf">66-noto-mono.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>noto-fonts-extra</Name>
+            <Files>
+                <Path fileType="doc">/usr/share/fonts/noto/*Condensed*.ttf</Path>
+                <Path fileType="doc">/usr/share/fonts/noto/*SemiBold*.ttf</Path>
+                <Path fileType="doc">/usr/share/fonts/noto/*Extra*.ttf</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>noto-fonts-ttf-croscore</Name>
+            <Summary xml:lang="en">Chrome OS core fonts</Summary>
+            <Files>
+                <Path fileType="data">/usr/share/fonts/croscore/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>2.7</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>dejavu-fonts</Name>
             <Homepage>http://www.dejavu-fonts.org</Homepage>
             <Packager>
@@ -2444,7 +2508,7 @@
             <PartOf>desktop.font</PartOf>
             <Summary xml:lang="en">A high-quality and portable font engine</Summary>
             <Description xml:lang="en">FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output. It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well.</Description>
-            <Archive type="tarbz2" sha1sum="220c82062171c513e4017c523d196933c9de4a7d">mirrors://sourceforge/freetype/freetype-2.9.1.tar.bz2</Archive>
+            <Archive sha1sum="79874ef4eaa52025126b71d836453b8279bdd331">mirrors://sourceforge/freetype/freetype2/2.10.1/freetype-2.10.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>libpng-devel</Dependency>
             </BuildDependencies>
@@ -2465,7 +2529,7 @@
             <Name>freetype-devel</Name>
             <Summary xml:lang="en">Development files for freetype</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">freetype</Dependency>
+                <Dependency release="2">freetype</Dependency>
                 <Dependency>libpng-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -2494,9 +2558,54 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-09</Date>
+                <Version>2.10.1</Version>
+                <Comment>freetype-config support added.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2017-02-02</Date>
                 <Version>2.9.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>noto-fonts-cjk</Name>
+            <Homepage>http://www.google.com/get/noto</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>CUSTOM:SIL</License>
+            <IsA>data:font</IsA>
+            <PartOf>desktop.font</PartOf>
+            <Summary xml:lang="en">Google Noto CJK fonts</Summary>
+            <Description xml:lang="en">noto-fonts-cjk, Google Noto CJK fonts.</Description>
+            <Archive sha1sum="5753c766b71215913fa28e47dc471d51a5739e5e">https://github.com/googlefonts/noto-cjk/archive/NotoSansV2.001.tar.gz</Archive>
+            <SourceURI>desktop/font/noto-fonts-cjk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>noto-fonts-cjk</Name>
+            <Summary xml:lang="en">Google Noto CJK fonts</Summary>
+            <Files>
+                <Path fileType="config">/etc/fonts</Path>
+                <Path fileType="data">/usr/share/fonts/noto/*.ttc</Path>
+                <Path fileType="doc">/usr/share/doc/noto-fonts-cjk/</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/fonts/conf.d/70-noto-cjk.conf">70-noto-cjk.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-10</Date>
+                <Version>2.001_20200110</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -3588,12 +3697,9 @@
         <Package>
             <Name>pango-devel</Name>
             <Summary xml:lang="en">Development files for pango</Summary>
-            <BuildDependencies>
-                <Dependency>fridibi-32bit</Dependency>
-            </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="2">pango</Dependency>
-                <Dependency>fridibi-32bit</Dependency>
+                <Dependency release="3">pango</Dependency>
+                <Dependency>fridibi-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>libXft-devel</Dependency>
                 <Dependency>harfbuzz-devel</Dependency>
@@ -3628,9 +3734,10 @@
                 <Dependency>fontconfig-32bit</Dependency>
                 <Dependency>libffi-32bit</Dependency>
                 <Dependency>harfbuzz-32bit</Dependency>
+                <Dependency>fridibi-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="2">pango</Dependency>
+                <Dependency release="3">pango</Dependency>
                 <Dependency>cairo-32bit</Dependency>
                 <Dependency>glib2-32bit</Dependency>
                 <Dependency>libX11-32bit</Dependency>
@@ -3640,6 +3747,7 @@
                 <Dependency>fontconfig-32bit</Dependency>
                 <Dependency>libffi-32bit</Dependency>
                 <Dependency>harfbuzz-32bit</Dependency>
+                <Dependency>fridibi-32bit</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/pango-querymodules-32</Path>
@@ -3649,6 +3757,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-09</Date>
+                <Version>1.44.7</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-11-26</Date>
                 <Version>1.44.7</Version>
@@ -3819,7 +3934,7 @@
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">The GIMP Toolkit version 3</Summary>
             <Description xml:lang="en">GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-            <Archive type="tarbz2" sha1sum="daa1657db7716ff53c500de679dfbd1d965d8010">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.12/gtk-3.24.12.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="728a64ef5ff8061b86db7f78db62f597b820c870">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.13/gtk-3.24.13.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>atk-devel</Dependency>
                 <Dependency>at-spi2-atk-devel</Dependency>
@@ -3837,6 +3952,7 @@
                 <Dependency>libXcursor-devel</Dependency>
                 <Dependency>libXdamage-devel</Dependency>
                 <Dependency>libXinerama-devel</Dependency>
+                <Dependency>colord-devel</Dependency>
                 <Dependency>wayland-cursor</Dependency>
                 <Dependency>libXcomposite-devel</Dependency>
                 <Dependency>at-spi2-core-devel</Dependency>
@@ -3864,6 +3980,7 @@
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>fontconfig</Dependency>
                 <Dependency>libXcursor</Dependency>
+                <Dependency>colord</Dependency>
                 <Dependency>libXdamage</Dependency>
                 <Dependency>libXinerama</Dependency>
                 <Dependency>at-spi2-atk</Dependency>
@@ -3895,7 +4012,7 @@
             <Summary xml:lang="en">GTK demo application</Summary>
             <IsA>app:gui</IsA>
             <RuntimeDependencies>
-                <Dependency release="2">gtk3</Dependency>
+                <Dependency release="3">gtk3</Dependency>
                 <Dependency>libepoxy</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
@@ -3918,7 +4035,7 @@
             <Name>gtk3-devel</Name>
             <Summary xml:lang="en">Development files for gtk3</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">gtk3</Dependency>
+                <Dependency release="3">gtk3</Dependency>
                 <Dependency>atk-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
@@ -3936,6 +4053,7 @@
                 <Dependency>at-spi2-atk-devel</Dependency>
                 <Dependency>libXcomposite-devel</Dependency>
                 <Dependency>libXtst-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -3973,7 +4091,7 @@
                 <Dependency>libXtst-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="2">gtk3</Dependency>
+                <Dependency release="3">gtk3</Dependency>
                 <Dependency>atk-32bit</Dependency>
                 <Dependency>cups-32bit</Dependency>
                 <Dependency>glib2-32bit</Dependency>
@@ -4000,6 +4118,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-09</Date>
+                <Version>3.24.13</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-11-27</Date>
                 <Version>3.24.12</Version>
@@ -11928,6 +12053,7 @@
             <BuildDependencies>
                 <Dependency>fontconfig-devel</Dependency>
                 <Dependency>freetype-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
                 <Dependency>libpng-devel</Dependency>
                 <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>tiff</Dependency>
@@ -11935,8 +12061,6 @@
             </BuildDependencies>
             <Patches>
                 <Patch level="1">gd-2.1.0-multilib.patch</Patch>
-                <Patch level="1">gd-2.2.3-tests.patch</Patch>
-                <Patch level="1">gd-2.2.4-upstream.patch</Patch>
             </Patches>
             <SourceURI>multimedia/misc/gd/pspec.xml</SourceURI>
         </Source>
@@ -11948,6 +12072,7 @@
                 <Dependency>libvpx</Dependency>
                 <Dependency>libjpeg-turbo</Dependency>
                 <Dependency>freetype</Dependency>
+                <Dependency>webp</Dependency>
                 <Dependency>libpng</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -11960,7 +12085,7 @@
             <Name>gd-devel</Name>
             <Summary xml:lang="en">Development files for gd</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">gd</Dependency>
+                <Dependency release="3">gd</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -11976,6 +12101,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-10</Date>
+                <Version>2.2.5</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyra</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-14</Date>
                 <Version>2.2.5</Version>
@@ -13490,7 +13622,7 @@
             <PartOf>multimedia.graphics</PartOf>
             <Summary xml:lang="en">A collection of tools and libraries for many image file formats</Summary>
             <Description xml:lang="en">ImageMagick is a software suite to create, edit, and compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. You can use ImageMagick to translate, flip, mirror, rotate, scale, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</Description>
-            <Archive type="zip" sha1sum="82a29b9a18c8d804bccefc1600652861568d915d">https://www.imagemagick.org/download/releases/ImageMagick-7.0.8-68.zip</Archive>
+            <Archive sha1sum="2ea91fcd69ee8fddd4aa5e2ad8d1f3a87c42279b">https://github.com/ImageMagick/ImageMagick/archive/7.0.9-14.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>ghostscript-devel</Dependency>
                 <Dependency>fontconfig-devel</Dependency>
@@ -13540,18 +13672,27 @@
                 <Path fileType="data">/usr/share/ImageMagick-*</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="man">/usr/share/man/man3</Path>
                 <Path fileType="man">/usr/share/man/man1/*-config*</Path>
                 <Path fileType="executable">/usr/bin/*-config</Path>
                 <Path fileType="doc">/usr/share/doc/imagemagick/html</Path>
             </Files>
         </Package>
+        <Package>
+            <Name>imagemagick-devel</Name>
+            <Summary xml:lang="en">Development files for imagemagick</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">imagemagick</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="executable">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
         <History>
             <Update release="1">
                 <Date>2019-10-10</Date>
-                <Version>7.0.8</Version>
+                <Version>7.0.9</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -13899,6 +14040,97 @@
                 <Version>1.6.35</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>GraphicsMagick</Name>
+            <Homepage>http://www.graphicsmagick.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">GraphicsMagick Image Processing System</Summary>
+            <Description xml:lang="en">GraphicsMagick is a comprehensive image processing package which is initially based on ImageMagick 5.5.2, but which has undergone significant re-work by the GraphicsMagick Group to significantly improve the quality and performance of the software.</Description>
+            <Archive sha1sum="cc1b77b7f2e4b0b345f97f7963704dbb4d0d3e3b">mirrors://sourceforge/graphicsmagick/graphicsmagick/1.3.34/GraphicsMagick-1.3.34.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libwmf</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>jasper-devel</Dependency>
+                <Dependency>jbigkit</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>ghostscript-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>xz-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/graphics/GraphicsMagick/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>GraphicsMagick</Name>
+            <IsA>app:console</IsA>
+            <RuntimeDependencies>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>libwmf</Dependency>
+                <Dependency>jasper</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>jbigkit</Dependency>
+                <Dependency>ghostscript</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libtool</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin/gm</Path>
+                <Path fileType="library">/usr/lib/GraphicsMagick-*</Path>
+                <Path fileType="library">/usr/lib/lib*</Path>
+                <Path fileType="data">/usr/share/GraphicsMagick-*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin/*-config</Path>
+                <Path fileType="doc">/usr/share/doc/GraphicsMagick/www</Path>
+                <Path fileType="man">/usr/share/man/man1/*-config.*</Path>
+                <Path fileType="library">/usr/lib/perl5</Path>
+                <Path fileType="doc">/usr/share/doc/PerlMagick</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>GraphicsMagick-devel</Name>
+            <Summary xml:lang="en">Development files for GraphicsMagick</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">GraphicsMagick</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="executable">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>1.3.34</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -14768,6 +15000,64 @@
                 <Version>4.0.10</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>dvdauthor</Name>
+            <Homepage>http://dvdauthor.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.editor</PartOf>
+            <Summary xml:lang="en">A simple DVD tool</Summary>
+            <Description xml:lang="en">dvdauthor is a set of simple tools to help you author a DVD.</Description>
+            <Archive sha1sum="0e605642140576bfb3e963414d77630d1c073a51">mirrors://sourceforge/dvdauthor/dvdauthor-0.7.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>fridibi-devel</Dependency>
+                <Dependency>libdvdread-devel</Dependency>
+                <Dependency>imagemagick-devel</Dependency>
+                <Dependency>GraphicsMagick-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>imagemagick7.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/editor/dvdauthor/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dvdauthor</Name>
+            <RuntimeDependencies>
+                <Dependency>libpng</Dependency>
+                <Dependency>fridibi</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libdvdread</Dependency>
+                <Dependency>GraphicsMagick</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>0.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -17632,20 +17922,12 @@
             <Description xml:lang="en">GNU GRUB (short for GNU GRand Unified Bootloader) is a boot loader package from the GNU Project.</Description>
             <Archive type="tarxz" sha1sum="045e0fd93453c361da2a0a62ebe806c866cafd81">ftp://alpha.gnu.org/gnu/grub/grub-2.04~rc1.tar.xz</Archive>
             <Archive type="gz" sha1sum="30797ba7a86fc32213b9ae994c9fa45f37d01170">http://ftp.gnu.org/gnu/unifont/unifont-6.3.20131217/unifont-6.3.20131217.bdf.gz</Archive>
-            <Archive type="targz" sha1sum="b77b6342e35f144b81d2c0c3419079d4a36bccfb" target="grub-2.04~rc1/themes">https://dl.opendesktop.org/api/files/download/id/1536850554/s/5a614d0a33dbb2a3810e8644dcd8ea09e1a64e238e4f1f9bb751201f25564664583351684bbaec961dcb4e31751889182340bbcbf468c6b08bd9b25c30fb0c46/t/1555281419/u//grub2-theme-breeze-5.13.1.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>autogen</Dependency>
-                <Dependency>binutils</Dependency>
-                <Dependency>bison</Dependency>
-                <Dependency>flex</Dependency>
-                <Dependency>gcc</Dependency>
-                <Dependency>help2man</Dependency>
-                <Dependency>texinfo</Dependency>
                 <Dependency>freetype-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
                 <Dependency>ncurses-devel</Dependency>
                 <Dependency>xz-devel</Dependency>
-                <Dependency>fuse-devel</Dependency>
+                <Dependency>fuse2-devel</Dependency>
                 <Dependency>lvm2-devel</Dependency>
                 <Dependency>device-mapper-devel</Dependency>
                 <Dependency>gettext-devel</Dependency>
@@ -17660,12 +17942,10 @@
             <Name>grub2</Name>
             <RuntimeDependencies>
                 <Dependency>freetype</Dependency>
-                <Dependency>xz</Dependency>
-                <Dependency>fuse</Dependency>
+                <Dependency>fuse2</Dependency>
                 <Dependency>lvm2</Dependency>
                 <Dependency>device-mapper</Dependency>
                 <Dependency>mtools</Dependency>
-                <Dependency>os-prober</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -17691,7 +17971,7 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2019-04-14</Date>
+                <Date>2020-01-09</Date>
                 <Version>2.04_rc1</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
@@ -24464,7 +24744,7 @@
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">An interface for filesystems implemented in userspace</Summary>
             <Description xml:lang="en">fuse is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
-            <Archive type="targz" sha1sum="b2bbe641648f7452b9356ad7df6ead0c83e1d4bd">https://github.com/libfuse/libfuse/archive/fuse-3.8.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="73f62b57dfeabb108f783d7773226f7c377af658">https://github.com/libfuse/libfuse/archive/fuse-3.9.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>gettext-devel</Dependency>
             </BuildDependencies>
@@ -24493,7 +24773,7 @@
             <IsA>header</IsA>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="3">fuse</Dependency>
+                <Dependency release="4">fuse</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -24501,6 +24781,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-01-09</Date>
+                <Version>3.9.0</Version>
+                <Comment>Version bump to 3.9.0</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-12-13</Date>
                 <Version>3.8.0</Version>
@@ -25015,13 +25302,18 @@
                 <AdditionalFile target="/etc/pam.d/groupmod" permission="0644" owner="root">pam.d/groupmod</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/groupmod" permission="0644" owner="root">pam.d/groupmems</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/login" permission="0644" owner="root">pam.d/login</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/newusers" permission="0644" owner="root">pam.d/newusers</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/other" permission="0644" owner="root">pam.d/other</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/passwd" permission="0644" owner="root">pam.d/passwd</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/password-auth" permission="0644" owner="root">pam.d/password-auth</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/start-stop-daemon" permission="0644" owner="root">pam.d/start-stop-daemon</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/su" permission="0644" owner="root">pam.d/su</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/su-l" permission="0644" owner="root">pam.d/su-l</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/system-auth" permission="0644" owner="root">pam.d/system-auth</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/system-login" permission="0644" owner="root">pam.d/system-login</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/system-local-login" permission="0644" owner="root">pam.d/system-local-login</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/system-remote-login" permission="0644" owner="root">pam.d/system-remote-login</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/system-services" permission="0644" owner="root">pam.d/system-services</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/useradd" permission="0644" owner="root">pam.d/useradd</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/userdel" permission="0644" owner="root">pam.d/userdel</AdditionalFile>
                 <AdditionalFile target="/etc/pam.d/usermod" permission="0644" owner="root">pam.d/usermod</AdditionalFile>
@@ -25045,13 +25337,20 @@
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="4">shadow</Dependency>
+                <Dependency release="5">shadow</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-01-10</Date>
+                <Version>4.8</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyra</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2019-12-08</Date>
                 <Version>4.8</Version>
@@ -31638,9 +31937,6 @@
                 <Path fileType="config">/etc/rsyslog.conf</Path>
                 <Path fileType="data">/var</Path>
             </Files>
-            <Provides>
-                <SCOM script="service.py">System.Service</SCOM>
-            </Provides>
             <AdditionalFiles>
                 <AdditionalFile target="/etc/logrotate.d/rsyslog" permission="0644" owner="root">rsyslog.logrotate</AdditionalFile>
                 <AdditionalFile target="/etc/rsyslog.conf" permission="0644" owner="root">rsyslog.conf</AdditionalFile>
@@ -31665,13 +31961,20 @@
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">rsyslog</Dependency>
+                <Dependency release="3">rsyslog</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-10</Date>
+                <Version>8.24.0</Version>
+                <Comment>Servis dosyası silindi.</Comment>
+                <Name>Süleyman Poyra</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-19</Date>
                 <Version>8.24.0</Version>
@@ -41943,7 +42246,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.vala</PartOf>
             <Summary xml:lang="en">A modern programming language for GNOME</Summary>
             <Description xml:lang="en">Vala is a new programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C.</Description>
-            <Archive type="tarxz" sha1sum="4cc3d574121efa3aca850d7aef0307cc778177ea">mirrors://gnome/vala/0.44/vala-0.44.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="6be54596ff4cac9aceb8b9c963b22c7fcb1bd4df">mirrors://gnome/vala/0.46/vala-0.46.5.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
@@ -41979,7 +42282,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>vala-devel</Name>
             <Summary xml:lang="en">Development files for vala</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">vala</Dependency>
+                <Dependency release="3">vala</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -41991,6 +42294,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-09</Date>
+                <Version>0.46.5</Version>
+                <Comment>Version bump to 0.46.5</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-27</Date>
                 <Version>0.44.2</Version>
@@ -48501,6 +48811,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Description xml:lang="en">Mozjs60 is Mozilla&apos;s C implementation of JavaScript.</Description>
             <Archive type="tarbz2" sha1sum="069bdffcc96f2b23f935d1e91a16282fedc2d430">ftp://ftp.gnome.org/pub/gnome/teams/releng/tarballs-needing-help/mozjs/mozjs-60.8.0.tar.bz2</Archive>
             <BuildDependencies>
+                <Dependency>autoconf213</Dependency>
                 <Dependency>zlib</Dependency>
                 <Dependency>nspr</Dependency>
                 <Dependency>readline</Dependency>
@@ -48525,6 +48836,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-09</Date>
+                <Version>60.8.0</Version>
+                <Comment>Package rebuilded due to file conflicts.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>60.8.0</Version>
@@ -50044,6 +50362,50 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-09-27</Date>
                 <Version>2.9.0_rc4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>sshfs</Name>
+            <Homepage>http://fuse.sourceforge.net/sshfs.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>network.fs</PartOf>
+            <Summary xml:lang="en">A filesystem client based on the SSH FTP</Summary>
+            <Description xml:lang="en">sshfs allows mounting remote SSH accounts as a filesystem.</Description>
+            <Archive sha1sum="63832e22e6801a2d199475fe7fd979248f812aae">https://github.com/libfuse/sshfs/releases/download/sshfs-3.7.0/sshfs-3.7.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>fuse-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/fs/sshfs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sshfs</Name>
+            <RuntimeDependencies>
+                <Dependency>fuse</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>3.7.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -52990,6 +53352,84 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>fuse-exfat</Name>
+            <Homepage>http://code.google.com/p/exfat/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">exFAT filesystem fuse module</Summary>
+            <Description xml:lang="en">exFAT filesystem fuse module</Description>
+            <Archive sha1sum="48fd2b6e71387dcbb29ff881ea1c39877a11113d">https://github.com/relan/exfat/releases/download/v1.3.0/fuse-exfat-1.3.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>exfat-utils</Dependency>
+                <Dependency>fuse2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/fuse-exfat/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>fuse-exfat</Name>
+            <RuntimeDependencies>
+                <Dependency>fuse2</Dependency>
+                <Dependency>exfat-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>1.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>exfat-utils</Name>
+            <Homepage>http://code.google.com/p/exfat</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Utilities for exFAT file system</Summary>
+            <Description xml:lang="en">This project aims to provide a full-featured exFAT file system implementation for GNU/Linux and other Unix-like systems as a FUSE module and a set of utilities.</Description>
+            <Archive type="targz" sha1sum="ab02c7a8c697a68c5562ca27eb7ede522d454de7">https://github.com/relan/exfat/releases/download/v1.3.0/exfat-utils-1.3.0.tar.gz</Archive>
+            <SourceURI>hardware/disk/exfat-utils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>exfat-utils</Name>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>1.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libatasmart</Name>
             <Homepage>http://git.0pointer.de/?p=libatasmart.git</Homepage>
             <Packager>
@@ -53274,6 +53714,45 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-12-09</Date>
                 <Version>2.2.12</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>aufs-util</Name>
+            <Homepage>http://aufs.sourceforge.ne</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">Utilities are always necessary for aufs</Summary>
+            <Description xml:lang="en">Utilities are always necessary for aufs</Description>
+            <Archive sha1sum="539ed53e1998844d70ff4a2c4362ef5668ccb542">https://gitlab.com/sulinos/resources/aufs-util/-/archive/20190603/aufs-util-20190603.tar.gz</Archive>
+            <SourceURI>hardware/disk/aufs-util/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>aufs-util</Name>
+            <RuntimeDependencies>
+                <Dependency>aufs-headers</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>20190603</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -53863,6 +54342,54 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-11-18</Date>
                 <Version>3.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>fuse2</Name>
+            <Homepage>http://fuse.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">An interface for filesystems implemented in userspace. This is 2.x version of fuse</Summary>
+            <Description xml:lang="en">fuse2 is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
+            <Archive type="targz" sha1sum="4bad8cd2c4d669a7b4f3ad57e4465350b972c94f">https://github.com/libfuse/libfuse/archive/fuse-2.9.9.tar.gz</Archive>
+            <SourceURI>hardware/disk/fuse2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>fuse2</Name>
+            <Files>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>fuse2-devel</Name>
+            <Summary xml:lang="en">Development files for fuse2</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">fuse2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>2.9.9</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -54613,6 +55140,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Dependency>tiff</Dependency>
                 <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>libexif-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
             </BuildDependencies>
             <SourceURI>hardware/misc/libgphoto2/pspec.xml</SourceURI>
         </Source>
@@ -54620,6 +55148,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>libgphoto2</Name>
             <RuntimeDependencies>
                 <Dependency>gd</Dependency>
+                <Dependency>webp</Dependency>
                 <Dependency>libexif</Dependency>
                 <Dependency>libjpeg-turbo</Dependency>
             </RuntimeDependencies>
@@ -54656,7 +55185,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="tr">libgphoto2 için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
                 <Dependency>libexif-devel</Dependency>
-                <Dependency release="1">libgphoto2</Dependency>
+                <Dependency release="2">libgphoto2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/gphoto2-config*</Path>
@@ -54667,6 +55196,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-10</Date>
+                <Version>2.5.23</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyra</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>2.5.23</Version>
@@ -55426,6 +55962,96 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>system-config-printer</Name>
+            <Homepage>http://cyberelk.net/tim/software/system-config-printer</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.printer</PartOf>
+            <Summary xml:lang="en">A printer administration tool</Summary>
+            <Description xml:lang="en">system-config-printer is a graphical user interface that allows the user to configure a CUPS print server.</Description>
+            <Archive type="tarxz" sha1sum="d828d1820336603502e358010560993b498bbe31">https://github.com/OpenPrinting/system-config-printer/releases/download/1.5.12/system-config-printer-1.5.12.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>xmlto</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>cups-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libusb-devel</Dependency>
+                <Dependency>libgnome-keyring-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">fix-icon.patch</Patch>
+            </Patches>
+            <SourceURI>hardware/printer/system-config-printer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>system-config-printer</Name>
+            <RuntimeDependencies>
+                <Dependency>eudev</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libusb</Dependency>
+                <Dependency>libgnome-keyring</Dependency>
+                <Dependency>dbus-python3</Dependency>
+                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>cups</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="config">/etc/dbus-1</Path>
+                <Path fileType="data">/etc/cupshelpers</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/lib/udev/rules.d</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/system-config-printer/debug.py</Path>
+                <Path fileType="data">/usr/share/appdata/system-config-printer.appdata.xml</Path>
+                <Path fileType="data">/usr/share/system-config-printer/smburi.py</Path>
+                <Path fileType="data">/usr/share/system-config-printer/config.py</Path>
+                <Path fileType="data">/usr/share/system-config-printer/ppdippstr.py</Path>
+                <Path fileType="library">/lib/systemd/system/configure-printer@.service</Path>
+                <Path fileType="data">/run/udev-configure-printer</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+                <Path fileType="executable">/lib/udev</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="config">/usr/lib/tmpfiles.d/system-config-printer.conf</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/lib/tmpfiles.d/system-config-printer.conf" permission="0644" owner="root">tmpfiles.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>system-config-printer-gtk</Name>
+            <Summary xml:lang="en">GTK+ frontend of system-config-printer</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>system-config-printer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/system-config-printer</Path>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>1.5.12</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libpaper</Name>
             <Homepage>http://packages.debian.org/unstable/source/libpaper</Homepage>
             <Packager>
@@ -55776,6 +56402,102 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Version>0.29</Version>
                 <Comment>First Release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>aufs-headers</Name>
+            <Homepage>http://aufs.sourceforge.ne</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>hardware.library</PartOf>
+            <Summary xml:lang="en">Linux headers for aufs</Summary>
+            <Description xml:lang="en">Linux headers for aufs</Description>
+            <Archive sha1sum="2a0de7a1f2d82a17432e07d9bd3d2563c0de22c0">https://gitlab.com/sulinos/resources/aufs-headers/-/archive/20190603/aufs-headers-20190603.tar.gz</Archive>
+            <SourceURI>hardware/library/aufs-headers/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>aufs-headers</Name>
+            <Files>
+                <Path fileType="include">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>20190603</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libgusb</Name>
+            <Homepage>https://gitorious.org/gusb/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>hardware.library</PartOf>
+            <Summary xml:lang="en">GObject wrapper for libusb.</Summary>
+            <Description xml:lang="en">GLib wrapper around libusb1.</Description>
+            <Archive sha1sum="124e0b033028522fda3113af0bb14ff718ba3693">https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libusb-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/library/libgusb/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libgusb</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>vala</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libusb</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgusb-devel</Name>
+            <Summary xml:lang="en">Development files for libgusb</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libgusb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-10</Date>
+                <Version>0.3.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -58956,6 +59678,64 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>argyllcms</Name>
+            <Homepage>http://gitorious.org/hargyllcms</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <License>MIT</License>
+            <IsA>app:gui</IsA>
+            <PartOf>x11.misc</PartOf>
+            <Summary xml:lang="en">ICC compatible color management system</Summary>
+            <Description xml:lang="en">The Argyll color management system supports accurate ICC profile creation for acquisition devices, CMYK printers, film recorders and calibration and profiling of displays.</Description>
+            <Archive type="tarxz" sha1sum="8d30ec223f0b8ba6b990fc07c01e3b759a6ac900">https://people.freedesktop.org/~hughsient/releases/hargyllcms-1.9.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>tiff</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXxf86vm-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libusb-devel</Dependency>
+                <Dependency>libtool</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/misc/argyllcms/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>argyllcms</Name>
+            <RuntimeDependencies>
+                <Dependency>tiff</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/color</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>1.9.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>xscreensaver</Name>
             <Homepage>http://www.jwz.org/xscreensaver/</Homepage>
             <Packager>
@@ -59291,6 +60071,108 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>font-util</Name>
+            <Homepage>http://www.x.org/</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>app:console</IsA>
+            <PartOf>x11.util</PartOf>
+            <Summary xml:lang="en">X.Org font utilities</Summary>
+            <Description xml:lang="en">font-util package contains core font utilities for the Xorg XWindow system.</Description>
+            <Archive type="tarbz2" sha1sum="1b36275c174b64a9c16da5c902c91546789a67ef">mirrors://xorg/individual/font/font-util-1.3.2.tar.bz2</Archive>
+            <SourceURI>x11/util/font-util/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>font-util</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/fonts</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-04-12</Date>
+                <Version>1.3.1</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>sddm</Name>
+            <Homepage>https://github.com/sddm/sddm</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:graphical</IsA>
+            <PartOf>x11.login-manager</PartOf>
+            <Summary xml:lang="en">QML based X11 display manager</Summary>
+            <Description xml:lang="en">QML based X11 display manager</Description>
+            <Archive sha1sum="ca4f453fd32e68faca437d66d9fbad59258c505c">https://github.com/sddm/sddm/releases/download/v0.18.1/sddm-0.18.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-declarative-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libxkbfile-devel</Dependency>
+                <Dependency>pam-devel</Dependency>
+                <Dependency>extra-cmake-modules</Dependency>
+                <Dependency>docutils</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/login-manager/sddm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sddm</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-declarative</Dependency>
+                <Dependency>pam</Dependency>
+                <Dependency>libxcb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Provides>
+                <SCOM script="package.py">System.Package</SCOM>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/sddm.conf" permission="0644" owner="root">sddm.conf</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/sddm" permission="0644" owner="root">sddm</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/sddm-autologin" permission="0644" owner="root">sddm-autologin</AdditionalFile>
+                <AdditionalFile target="/etc/pam.d/sddm-greeter" permission="0644" owner="root">sddm-greeter</AdditionalFile>
+                <AdditionalFile target="/etc/polkit-1/rules.d/10-backlight.rules" permission="0644" owner="root">10-backlight.rules</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>0.18.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>xdm</Name>
             <Homepage>http://www.x.org</Homepage>
             <Packager>
@@ -59299,7 +60181,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Packager>
             <License>MIT</License>
             <IsA>app:gui</IsA>
-            <PartOf>x11.misc</PartOf>
+            <PartOf>x11.login-manager</PartOf>
             <Summary xml:lang="en">X Display Manager</Summary>
             <Description xml:lang="en">X Display Manager provides a login screen, session management, and support for XDMCP.</Description>
             <Icon>xorg</Icon>
@@ -59326,7 +60208,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Patch level="1">xdm-1.1.11-setproctitle-include.patch</Patch>
                 <Patch level="1">xdm-consolekit.patch</Patch>
             </Patches>
-            <SourceURI>x11/misc/xdm/pspec.xml</SourceURI>
+            <SourceURI>x11/login-manager/xdm/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>xdm</Name>
@@ -59369,43 +60251,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Version>1.1.11</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>font-util</Name>
-            <Homepage>http://www.x.org/</Homepage>
-            <Packager>
-                <Name>Suleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>app:console</IsA>
-            <PartOf>x11.util</PartOf>
-            <Summary xml:lang="en">X.Org font utilities</Summary>
-            <Description xml:lang="en">font-util package contains core font utilities for the Xorg XWindow system.</Description>
-            <Archive type="tarbz2" sha1sum="1b36275c174b64a9c16da5c902c91546789a67ef">mirrors://xorg/individual/font/font-util-1.3.2.tar.bz2</Archive>
-            <SourceURI>x11/util/font-util/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>font-util</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/share/fonts</Path>
-                <Path fileType="data">/usr/share/aclocal</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-04-12</Date>
-                <Version>1.3.1</Version>
-                <Comment>First release</Comment>
-                <Name>Suleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -61779,7 +62624,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>x11.library</PartOf>
             <Summary xml:lang="en">Wayland EGL platform.</Summary>
             <Description xml:lang="en">EGLStream-based Wayland external platform.</Description>
-            <Archive type="targz" sha1sum="a487b2062455e9552edf902577a9eb9d61592a48">https://github.com/NVIDIA/egl-wayland/archive/1.1.3.tar.gz</Archive>
+            <Archive type="targz" sha1sum="5008c8371114a48e02c2fb47aa6487b7b5fa6aaf">https://github.com/NVIDIA/egl-wayland/archive/1.1.4.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>wayland-devel</Dependency>
                 <Dependency>eglexternalplatform</Dependency>
@@ -61797,6 +62642,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-10</Date>
+                <Version>1.1.4</Version>
+                <Comment>Issue 32 içerisindeki problem giderildi.</Comment>
+                <Name>Süleyman Poyra</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-12</Date>
                 <Version>1.1.3</Version>
@@ -62005,6 +62857,113 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Version>0.3.9</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>colord</Name>
+            <Homepage>http://www.freedesktop.org/software/colord</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>x11.library</PartOf>
+            <Summary xml:lang="en">Colord is a system activated daemon that maps devices to color profiles</Summary>
+            <Description xml:lang="en">Colord is a system activated daemon that maps devices to color profiles. It is used by GNOME Color Manager for system integration and use when there are no users logged in.</Description>
+            <Archive sha1sum="0fd8147af23b9c2264ccb7dca213330bfa9923f4">https://www.freedesktop.org/software/colord/releases/colord-1.4.4.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>argyllcms</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>sane-backends-devel</Dependency>
+                <Dependency>bash-completion</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>libtool</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libgudev-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>libgusb-devel</Dependency>
+                <Dependency>libusb-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>polkit-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/library/colord/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>colord</Name>
+            <RuntimeDependencies>
+                <Dependency>lcms2</Dependency>
+                <Dependency>libgusb</Dependency>
+                <Dependency>shared-color-profiles</Dependency>
+                <Dependency>sane-backends</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgudev</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="libexec">/usr/libexec/colord-session</Path>
+                <Path fileType="data">/var/lib/colord/icc/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec/colord</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="data">/usr/share/vala/vapi/colord.deps</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/var</Path>
+                <Path fileType="data">/usr/share/colord</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/bash-completion</Path>
+                <Path fileType="data">/usr/libexec/colord-sane</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>colord-devel</Name>
+            <Summary xml:lang="en">Development files for colord</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">colord</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>libgusb-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share/vala/vapi/colord.vapi</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>shared-color-profiles</Name>
+            <Files>
+                <Path fileType="data">/usr/share/color</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>1.4.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
