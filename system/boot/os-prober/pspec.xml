@@ -1,0 +1,36 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>os-prober</Name>
+        <Homepage>http://joey.kitenet.net/code/os-prober/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Utility to detect other OSes on a set of drives</Summary>
+        <Description>os-probe detects other OSes available on a system and outputs the results in a generic machine-readable format. Support for new OSes and Linux distributions can be added easily.</Description>
+        <Archive sha1sum="604118a2c85c019f26429d836053675f76a46063">http://http.debian.net/debian/pool/main/o/os-prober/os-prober_1.77.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>os-prober</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/var/lib/os-prober</Path>
+            <Path fileType="data">/usr/share/os-prober</Path>
+            <Path fileType="doc">/usr/share/doc/os-prober</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-01-17</Date>
+            <Version>1.77</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
