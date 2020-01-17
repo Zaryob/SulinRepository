@@ -11,10 +11,13 @@
         <IsA>app:console</IsA>
         <Summary>Tools and library to manipulate EFI variables</Summary>
         <Description>Tools and library to manipulate EFI variables.</Description>
-        <Archive sha1sum="1ef24e0a06e1a42d7a93ba7a76b2970659c7c0c0" type="tarbz2">https://github.com/rhboot/efivar/releases/download/37/efivar-37.tar.bz2</Archive>
+        <Archive sha1sum="1ef24e0a06e1a42d7a93ba7a76b2970659c7c0c0">https://github.com/rhboot/efivar/releases/download/37/efivar-37.tar.bz2</Archive>
         <BuildDependencies>
            <Dependency>popt-devel</Dependency>
         </BuildDependencies>
+        <Patches>
+           <Patch>efivar-37-gcc_9-1.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>efivar</Name>
