@@ -18,7 +18,6 @@
     <Package>
         <Name>jansson</Name>
         <RuntimeDependencies>
-            <Dependency>glibc</Dependency>            
         </RuntimeDependencies>
         <Files>            
             <Path fileType="library">/usr/lib</Path>            

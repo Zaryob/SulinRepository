@@ -21,7 +21,6 @@
     <Package>
         <Name>rcs</Name>
         <RuntimeDependencies>
-             <Dependency>diffutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

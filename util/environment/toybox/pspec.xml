@@ -10,12 +10,10 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
-        <PartOf>system.base</PartOf>
+        <PartOf>util.environment</PartOf>
         <Summary>Busybox alternative command environment</Summary>
         <Description>toybox is a single binary which includes versions of a large number of system commands, including a shell.</Description>
         <BuildDependencies>
-            <Dependency>pam</Dependency>
-            <Dependency>linux-headers</Dependency>
         </BuildDependencies>
         <!-- @@@github landley toybox -->
         <Archive sha1sum="0477740759f5132397fdfdbf8aea88e811869173" type="targz">https://github.com/landley/toybox/archive/0.8.2.tar.gz</Archive>
@@ -29,6 +27,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-08</Date>
+            <Version>0.8.2</Version>
+            <Comment>Paket statik olarak yeniden derlendi.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-5</Date>
             <Version>0.8.2</Version>

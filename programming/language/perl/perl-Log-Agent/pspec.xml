@@ -13,14 +13,12 @@
         <Description>The Log::Agent module provides an abstract layer for logging and tracing, which is independent from the actual method used to physically perform those activities. It acts as an agent (hence the name) that collects the requests and delegates processing to a sublayer: the logging driver.</Description>
         <Archive sha1sum="97844208761919ddd6b279390eabf5775945a514" type="targz">https://cpan.metacpan.org/authors/id/M/MR/MROGASKI/Log-Agent-1.003.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
       <Name>perl-Log-Agent</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-ExtUtils-MakeMaker</Dependency>
         </RuntimeDependencies>
         <Files>

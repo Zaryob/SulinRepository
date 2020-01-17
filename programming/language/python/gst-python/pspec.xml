@@ -15,9 +15,7 @@
         <Archive sha1sum="839fd35bd924a768c05288ce45a057a29c1e736c" type="tarxz">https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.16.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>pygobject3-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>gst-plugins-base-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -26,8 +24,6 @@
         <Name>gst-python3</Name>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>python3-pygobject3</Dependency>
             <Dependency>gstreamer</Dependency>
             <Dependency>gst-plugins-base</Dependency>
@@ -40,7 +36,6 @@
     <Package>
         <Name>gst-python</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>python</Dependency>
             <Dependency>python-pygobject3</Dependency>
             <Dependency>gstreamer</Dependency>

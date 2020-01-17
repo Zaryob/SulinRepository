@@ -12,13 +12,12 @@
         <IsA>library</IsA>
         <Summary>Mathematical expressions parser library</Summary>
         <Description>muparser is a mathematical expressions parser library. It is based on transforming an expression into a bytecode and precalculating constant parts of it.</Description>
-        <Archive sha1sum="363ec441935cc7b74f9bb0e5f2af9a801f0da712" type="targz">https://github.com/beltoforion/muparser/archive/v2.2.6.tar.gz</Archive>
+        <Archive sha1sum="e489115c7424b3877bee7646cb748c6ef32cfa7f" type="targz">https://github.com/beltoforion/muparser/archive/v2.2.6.1.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>muparser</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -38,6 +37,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>2.2.6.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>2.2.6</Version>

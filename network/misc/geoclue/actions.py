@@ -9,10 +9,10 @@ from inary.actionsapi import mesontools
 
 def setup():
     mesontools.meson_configure("-Denable-backend=true \
-		-Ddemo-agent=true \
-		-Dsystemd-system-unit-dir=false \
-		-Ddbus-srv-user=geoclue \
-        -Dlibgeoclue=true")
+                                -Ddemo-agent=true \
+                                -Dsystemd-system-unit-dir=false \
+                                -Ddbus-srv-user=geoclue \
+                                -Dlibgeoclue=true")
 
 def build():
     mesontools.ninja_build()

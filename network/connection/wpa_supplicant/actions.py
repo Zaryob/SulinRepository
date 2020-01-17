@@ -15,6 +15,7 @@ def build():
     #Enable syslog output
     cflags = get.CFLAGS() + " -DCONFIG_DEBUG_SYSLOG"
     shelltools.export("CFLAGS", cflags)
+    shelltools.export("PYTHON", "/usr/bin/python3")
 
     autotools.make("V=1")
     autotools.make("eapol_test")

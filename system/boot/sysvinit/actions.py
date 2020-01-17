@@ -19,4 +19,5 @@ def install():
     autotools.rawInstall("ROOT='%s' STRIP=/bin/true" % get.installDIR())
 
     inarytools.remove("/bin/pidof")
+    inarytools.remove("/sbin/sulogin") # PAMdan gelmesi daha güvenli
     inarytools.dosym("killall5", "/sbin/pidof")

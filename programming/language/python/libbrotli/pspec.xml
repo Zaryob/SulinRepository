@@ -15,11 +15,9 @@
         <Description>Brotli is a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling, with a compression ratio comparable to the best currently available general-purpose compression methods. It is similar in speed with deflate but offers more dense compression.</Description>
         <Archive sha1sum="ee64a380152aa20fbc1098fe3799104884c570c1" type="targz">https://github.com/google/brotli/archive/v1.0.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
          </BuildDependencies>
     </Source>
 
@@ -56,7 +54,6 @@
         <Name>python3-libbrotli</Name>
         <RuntimeDependencies>
             <Dependency>libbrotli</Dependency>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

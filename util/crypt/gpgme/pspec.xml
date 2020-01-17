@@ -17,11 +17,9 @@
         <BuildDependencies>
             <Dependency>gnupg</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
             <Dependency>libassuan-devel</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>swig</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -30,10 +28,7 @@
         <Name>gpgme</Name>
         <RuntimeDependencies>
             <Dependency>gnupg</Dependency>
-            <Dependency>libgpg-error</Dependency>
             <Dependency>libassuan</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>python3</Dependency>
             <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -50,7 +45,6 @@
         <Summary>Development files for gpgme</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gpgme</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
             <Dependency>libassuan-devel</Dependency>
         </RuntimeDependencies>
         <Files>

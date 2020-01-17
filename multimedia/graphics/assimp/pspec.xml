@@ -14,10 +14,6 @@
         <Archive sha1sum="48e574bcbee05f66a680e768e929f82f32ec9703" type="targz">https://github.com/assimp/assimp/archive/v5.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>boost-devel</Dependency>
-            <Dependency>cmake</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
             <Dependency>minizip-devel</Dependency>
             <Dependency>git</Dependency>
         </BuildDependencies>
@@ -26,9 +22,7 @@
         <Name>assimp</Name>
         <Summary>Portable Open Source library to import various well-known 3D model formats in an uniform manner</Summary>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>minizip</Dependency>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

@@ -15,12 +15,12 @@
         <Summary>X.Org tseng video driver</Summary>
         <Description>xorg-video-tseng contains the X.Org driver for Tseng cards.</Description>
         <Archive sha1sum="95c35b28a19ab486f0bb7482df944d5b0076bdd5" type="tarbz2">mirrors://xorg/individual/driver/xf86-video-tseng-1.2.5.tar.bz2</Archive>
-	<BuildDependencies>
+        <BuildDependencies>
             <Dependency>xorg-server-devel</Dependency>
         </BuildDependencies>
-	<Patches>
-	    <Patch>git_fixes.patch</Patch>
-	</Patches>
+        <Patches>
+            <Patch>git_fixes.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>

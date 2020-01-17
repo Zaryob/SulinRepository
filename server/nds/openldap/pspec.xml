@@ -14,18 +14,10 @@
         <Archive sha1sum="c1984e80f6db038b317bf931866adb38e5537dcd" type="targz">ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-2.4.48.tgz</Archive>
         <BuildDependencies>
             <Dependency>nss-devel</Dependency>
-            <Dependency>db-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>tcp-wrappers-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>unixODBC-devel</Dependency>
             <Dependency>mariadb-bin-server</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>e2fsprogs-devel</Dependency>
-            <Dependency>chrpath</Dependency>
-            <Dependency>groff</Dependency>
         </BuildDependencies>
 
     </Source>
@@ -37,8 +29,6 @@
         <Summary>Command-line ldap client commands (ldapsearch, ldapadd etc..)</Summary>
         <RuntimeDependencies>
             <Dependency>nss</Dependency>
-            <Dependency>nspr</Dependency>
-            <Dependency>openssl</Dependency>
             <Dependency>cyrus-sasl</Dependency>
             <Dependency>mariadb-bin-client</Dependency>
         </RuntimeDependencies>
@@ -58,12 +48,7 @@
         <Summary>OpenLDAP server slapd and releated tools</Summary>
         <Description>OpenLDAP server slapd, additional backends, configuration files, schema definitions required for operation, and database maintenance tools</Description>
         <RuntimeDependencies>
-            <Dependency>db</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>unixODBC</Dependency>
-            <Dependency>libutil-linux</Dependency>
-            <Dependency>tcp-wrappers</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>cyrus-sasl</Dependency>
             <Dependency>mariadb-bin-server</Dependency>

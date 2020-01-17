@@ -16,14 +16,12 @@
         <Description>perl-File-Which is a Perl module that is portable implementation of the "which" utility.</Description>
         <Archive sha1sum="3a1b54e0a4e470e62958749cffcf87bad027bfb4" type="targz">mirrors://cpan/authors/id/P/PL/PLICEASE/File-Which-1.23.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Test-Script</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>perl-File-Which</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Test-Script</Dependency>
         </RuntimeDependencies>
         <Files>

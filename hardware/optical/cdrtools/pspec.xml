@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/inary/pisi-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cdrtools</Name>
+        <Homepage>http://cdrecord.berlios.de/old/private/cdrecord.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>CDDL</License>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A set of tools for CD/DVD recording</Summary>
+        <Description>Contains a set of tools for CD/DVD recording, including cdrecord.</Description>
+        <Archive sha1sum="3507890dfda91a9631253a654cf004465a209688">https://gitlab.com/sulinos/resources/binaries/raw/master/cdrtools-3.02a09.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>cdrtools</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-15</Date>
+            <Version>3.01_alpha9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

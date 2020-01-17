@@ -23,7 +23,7 @@
             <Dependency>gettext</Dependency>
             <Dependency>gzip</Dependency>
             <Dependency>pam-devel</Dependency>
-	    <Dependency>check-devel</Dependency>
+            <Dependency>check-devel</Dependency>
         </BuildDependencies>
     </Source>
 

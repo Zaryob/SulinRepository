@@ -16,11 +16,8 @@
         <Archive sha1sum="ed23e5951771f03d71dffdbd222617dd451fa511" type="tarbz2" target="go-go1.7.5">https://dev.gentoo.org/~williamh/dist/go-linux-amd64-bootstrap-1.8.tbz</Archive>
         <BuildDependencies>
             <Dependency>git</Dependency>
-            <Dependency>gawk</Dependency>
-            <Dependency>libgccgo</Dependency>
         </BuildDependencies>
         <!--BuildDependencies>
-            <Dependency>gawk</Dependency>
             <Dependency>mercurial</Dependency>
             <Dependency>git</Dependency>
         </BuildDependencies-->
@@ -28,7 +25,6 @@
     <Package>
         <Name>golang</Name>
         <RuntimeDependencies>
-            <Dependency>libgccgo</Dependency>
             <Dependency>git</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -14,9 +14,6 @@
         <Summary>X.Org PCI access library</Summary>
         <Description>libpciaccess is the Xorg library for portable PCI access routines across multiple operating systems.</Description>
         <Archive sha1sum="99e791fe20924b9da29bf7c7ed9438739c4f2930" type="tarbz2">mirrors://xorg/individual/lib/libpciaccess-0.13.4.tar.bz2</Archive>
-        <BuildDependencies>
-            <Dependency>util-macros</Dependency>
-        </BuildDependencies>
     </Source>
     <Package>
         <Name>libpciaccess</Name>
@@ -42,7 +39,7 @@
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for libpciaccess</Summary>
         <BuildType>emul32</BuildType>
-	<BuildDependencies>
+        <BuildDependencies>
             
         </BuildDependencies>
         <RuntimeDependencies>

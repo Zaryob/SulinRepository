@@ -14,7 +14,6 @@
         <Description>Numpy contains a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, and useful linear algebra, Fourier transform, and random number capabilities.</Description>
         <Archive sha1sum="88136de7fbe6ef86f845a8fafd2dfb681d14c393" type="targz">https://github.com/numpy/numpy/releases/download/v1.17.2/numpy-1.17.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgfortran</Dependency>
             <Dependency>lapack-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,14 +22,12 @@
         <Name>python3-numpy</Name>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python3-nose</Dependency>
             <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>blas</Dependency>
             <Dependency>lapack</Dependency>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/bin/f2py*</Path>

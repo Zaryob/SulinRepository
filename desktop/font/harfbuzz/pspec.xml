@@ -16,20 +16,16 @@
         <Archive sha1sum="abaeb9bca4f79edaff708dc124a81f9d34499acd" type="tarxz">https://github.com/harfbuzz/harfbuzz/releases/download/2.6.4/harfbuzz-2.6.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>graphite2-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>harfbuzz</Name>
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>icu4c</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>graphite2</Dependency>
         </RuntimeDependencies>
@@ -44,7 +40,6 @@
     <Package>
         <Name>harfbuzz-devel</Name>
         <RuntimeDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>graphite2-devel</Dependency>
             <Dependency release="current">harfbuzz</Dependency>

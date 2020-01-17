@@ -13,9 +13,6 @@
         <Description>Accounts and SSO (Single Sign-On) framework for Linux and POSIX based platforms.</Description>
         <Archive sha1sum="98e439637b5a6462dd67b579dfb731bbfcf122e7" type="tarbz2">https://gitlab.com/accounts-sso/libaccounts-glib/-/archive/VERSION_1.24/libaccounts-glib-VERSION_1.24.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>pygobject3-devel</Dependency>
@@ -26,9 +23,6 @@
         <Name>libaccounts-glib</Name>
         <IsA>library</IsA>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>sqlite</Dependency>
-            <Dependency>libxml2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -49,9 +43,6 @@
         <Summary>Development files for libaccounts-glib</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libaccounts-glib</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

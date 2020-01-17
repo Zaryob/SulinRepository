@@ -19,14 +19,7 @@
             <Dependency>npth-devel</Dependency>
             <Dependency>libassuan-devel</Dependency>
             <Dependency>libksba-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>texinfo</Dependency>
             <Dependency>gnutls-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
         </BuildDependencies>
         <Patches>
         <!--<Patch level="1">protect-tool-env.patch</Patch>-->
@@ -49,15 +42,8 @@
             <Dependency>libassuan</Dependency>
             <Dependency>pinentry</Dependency>
             <Dependency>libksba</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>bzip2</Dependency>
             <Dependency>gnutls</Dependency>
-            <Dependency>readline</Dependency>
-            <Dependency>libgcrypt</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libusb</Dependency>
             <!-- For scdaemon -->
-            <Dependency>libusb-compat</Dependency>
          </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

@@ -15,16 +15,12 @@
         <Description>augeas is a library for programmatically editing configuration files. Augeas parses configuration files into a tree structure, which it exposes through its public API.</Description>
         <Archive sha1sum="afe7aee292e058141d8c19f6a82b5f8bae2d5163" type="targz">http://download.augeas.net/augeas-1.12.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>augeas</Name>
         <RuntimeDependencies>
-            <Dependency>libxml2</Dependency>
-            <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -41,7 +37,6 @@
         <Summary>Development files for augeas</Summary>
         <RuntimeDependencies>
             <Dependency release="current">augeas</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

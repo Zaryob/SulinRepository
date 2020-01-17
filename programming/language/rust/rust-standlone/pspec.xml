@@ -22,8 +22,6 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>glibc</Dependency>
             <Dependency version="current">rust-std</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -99,9 +97,7 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/bin/cargo</Path>
@@ -118,10 +114,8 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
             <Dependency version="current">rust-cargo</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/bin/cargo-miri</Path>
@@ -136,10 +130,8 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rust-cargo</Dependency>
             <Dependency version="current">rustc</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/bin/cargo-fmt</Path>
@@ -154,10 +146,8 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
             <Dependency version="current">rust-cargo</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/bin/cargo-clippy</Path>
@@ -172,11 +162,9 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
             <Dependency version="current">rust-cargo</Dependency>
             <Dependency>llvm-libs</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
           <Path fileType="executable">/usr/lib/rustlib/x86_64-unknown-linux-gnu/bin/llvm-*</Path>
@@ -189,9 +177,7 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
           <Path fileType="doc">/usr/share/doc/rls/</Path>
@@ -226,8 +212,6 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-*.rlib</Path>
@@ -359,9 +343,7 @@
             <Flag>noDebug</Flag>
         </BuildFlags>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency version="current">rustc</Dependency>
-            <Dependency>glibc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/rustlib/x86_64-unknown-linux-gnu/analysis/liballoc-*.json</Path>

@@ -16,7 +16,7 @@
         <Summary>eudev is a fork of system-udev</Summary>
         <Description>eudev is a fork of system-udev with the goal of obtaining better compatibility with existing software such as OpenRC and Upstart, older kernels, various toolchains and anything else required by users and various distributions.</Description>
         <!-- @@@github gentoo eudev -->
-        <Archive sha1sum="1cf0ed7275d631ade61df671644e617848a1de0a" type="targz">https://github.com/gentoo/eudev/archive/v3.2.8.tar.gz</Archive>
+        <Archive sha1sum="0648c6e104057fc074a80a742d316cd0b6bee949" type="targz">https://github.com/gentoo/eudev/archive/v3.2.9.tar.gz</Archive>
         <AdditionalFiles>
              <AdditionalFile target="config.cache">config.cache</AdditionalFile>
         </AdditionalFiles>
@@ -121,6 +121,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-12-13</Date>
+            <Version>3.2.9</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="3">
             <Date>2019-11-19</Date>
             <Version>3.2.8</Version>

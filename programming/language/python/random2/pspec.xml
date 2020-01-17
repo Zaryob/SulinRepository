@@ -15,7 +15,6 @@
         <Archive sha1sum="02e35dd53fa534dbb8f6e7baa8cf609ea1368eef" type="zip">https://files.pythonhosted.org/packages/ee/b5/5aca5217501fbd06b1e5aed6d5986baa0da5380880e6bb6f421ed18e3a32/random2-1.0.1.zip</Archive>
         <BuildDependencies>
             <Dependency>python3-six</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,7 +23,6 @@
         <Name>python3-random2</Name>
         <Summary>random2 module python3 package.</Summary>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

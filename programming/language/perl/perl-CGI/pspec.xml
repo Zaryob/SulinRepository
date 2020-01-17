@@ -16,7 +16,6 @@
         <Description>Handle Common Gateway Interface requests and responses.</Description>
         <Archive type="targz" sha1sum="5ec34c8cb99eb9aaab413e3efac670a13a5cdf29">http://www.cpan.org/authors/id/L/LE/LEEJO/CGI-4.44.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-Test-Deep</Dependency>
             <Dependency>perl-Test-Warn</Dependency>
@@ -27,7 +26,6 @@
         <Name>perl-CGI</Name>
         <Summary>Handle Common Gateway Interface requests and responses.</Summary>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTML-Parser</Dependency>
             <Dependency>perl-Test-Deep</Dependency>
             <Dependency>perl-Test-Warn</Dependency>

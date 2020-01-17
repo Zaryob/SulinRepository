@@ -17,7 +17,7 @@
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
         </BuildDependencies>
-        <Archive type="tarxz" sha1sum="caf38466593eb31aa8da632903d061475fcfb544">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtvirtualkeyboard-everywhere-src-5.13.2.tar.xz</Archive>
+        <Archive type="tarxz" sha1sum="9ee6c2f983edd91e12a0a350a70a04bd956dcb45">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtvirtualkeyboard-everywhere-src-5.14.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-virtualkeyboard</Name>
@@ -26,7 +26,6 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>qt5-svg</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libxcb</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -48,6 +47,13 @@
         </RuntimeDependencies>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2019-12-14</Date>
+            <Version>5.14.0</Version>
+            <Comment>QT 5.14 upgraded</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-27</Date>
             <Version>5.13.2</Version>

@@ -17,7 +17,6 @@
         <BuildDependencies>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXi-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -58,7 +57,6 @@
             <Dependency>libXi-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency release="current">libXtst</Dependency>
         </RuntimeDependencies>
         <Files>

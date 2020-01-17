@@ -1,0 +1,39 @@
+<INARY>
+    <Source>
+        <Name>aufs-util</Name>
+        <Homepage>http://aufs.sourceforge.ne</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Utilities are always necessary for aufs</Summary>
+        <Description>Utilities are always necessary for aufs</Description>
+        <Archive sha1sum="539ed53e1998844d70ff4a2c4362ef5668ccb542">https://gitlab.com/sulinos/resources/aufs-util/-/archive/20190603/aufs-util-20190603.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>aufs-util</Name>
+        <RuntimeDependencies>
+            <Dependency>aufs-headers</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>20190603</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

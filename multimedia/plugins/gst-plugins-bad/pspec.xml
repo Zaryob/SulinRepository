@@ -64,14 +64,11 @@
             <Dependency>mesa</Dependency>
             <Dependency>webp</Dependency>
             <Dependency>x265</Dependency>
-            <Dependency>bzip2</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>faad2</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libdca</Dependency>
             <Dependency>libdrm</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libkms</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libopus</Dependency>

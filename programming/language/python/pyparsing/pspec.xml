@@ -30,10 +30,8 @@
     <Package>
         <Name>python3-pyparsing</Name>
         <BuildDependencies>
-            <Dependency>python3</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

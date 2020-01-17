@@ -15,12 +15,8 @@
         <Description>gnome-doc-utils is a collection of documentation utilities for the Gnome project.</Description>
         <Archive sha1sum="8320a30e1b7239aa33ba276da046090407a93bbf" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/gnome-doc-utils/0.20/gnome-doc-utils-0.20.10.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>python-libxml2</Dependency>
-            <Dependency>libxslt-devel</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>gnome-common</Dependency>
-            <Dependency>gettext</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">do-not-update-scrollkeeper-database.patch</Patch>

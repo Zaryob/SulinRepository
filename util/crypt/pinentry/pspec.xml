@@ -15,13 +15,9 @@
         <Archive sha1sum="693bdf9f48dfb3e040d92f50b1bb464e268b9fb0" type="tarbz2">ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-1.1.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libsecret-devel</Dependency>
-            <Dependency>libgpg-error-devel</Dependency>
             <Dependency>libassuan-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency>libcap-devel</Dependency>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,12 +29,8 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libassuan</Dependency>
             <Dependency>libsecret</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>libcap</Dependency>
-            <Dependency>ncurses</Dependency>
         </RuntimeDependencies>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/pinentry">pinentry-wrapper</AdditionalFile>
@@ -50,7 +42,6 @@
         <Summary>pinentry for Qt4 toolkit</Summary>
         <RuntimeDependencies>
             <Dependency>qt</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>pinentry</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -63,12 +54,8 @@
         <Summary>pinentry for GTK toolkit</Summary>
         <RuntimeDependencies>
             <Dependency>pinentry</Dependency>
-            <Dependency>ncurses</Dependency>
-            <Dependency>libcap</Dependency>
             <Dependency>libassuan</Dependency>
             <Dependency>libsecret</Dependency>
-            <Dependency>libgpg-error</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>pango</Dependency>
         </RuntimeDependencies>

@@ -20,9 +20,6 @@
             <!-- Just compile it with https://download.java.net/openjdk/jdk7u75/ri/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz -->
             <Dependency>wget</Dependency>
             <Dependency>nss-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>attr-devel</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>cups-devel</Dependency>
             <Dependency>libXt-devel</Dependency>
@@ -33,7 +30,6 @@
             <Dependency>libpng-devel</Dependency>
             <Dependency>giflib</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>libXtst-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
@@ -46,7 +42,6 @@
             <Dependency>giflib</Dependency>
             <Dependency>freetype-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
-            <Dependency>chrpath</Dependency>
         </BuildDependencies>
         <AdditionalFiles>
             <AdditionalFile target="patches/giflib_5.1.diff">giflib_5.1.diff</AdditionalFile>
@@ -62,14 +57,11 @@
             <Dependency>atk</Dependency>
             <Dependency>cups</Dependency>
             <Dependency>gtk2</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>lcms2</Dependency>
             <Dependency>libXi</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libXext</Dependency>
             <Dependency>libXtst</Dependency>
             <Dependency>libXt</Dependency>
@@ -157,7 +149,6 @@
         <Name>jre7-openjdk</Name>
         <Summary>Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - Full Java runtime environment - needed for executing Java GUI and Webstart programs</Summary>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>giflib</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
@@ -196,9 +187,7 @@
         <Name>jdk7-openjdk</Name>
         <Summary>Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - SDK</Summary>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>jre7-openjdk-headless</Dependency>
         </RuntimeDependencies>
         <Files>

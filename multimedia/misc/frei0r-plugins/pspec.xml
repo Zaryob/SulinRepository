@@ -15,14 +15,12 @@
         <Description>frei0r-plugins is a minimalistic plugin API for video sources and filters. The behaviour of the effects can be controlled from the host by simple parameters. The intent is to solve the recurring reimplementation or adaptation issue of standard effects.</Description>
         <Archive sha1sum="e76c4608aff637822bbde8bf0b2a8ce0440b0141" type="targz">https://files.dyne.org/frei0r/frei0r-plugins-1.6.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>frei0r-plugins</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

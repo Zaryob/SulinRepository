@@ -14,7 +14,6 @@
         <Archive sha1sum="bab4838b248026c968e171a5467b5176caf4e2e5" type="targz">https://github.com/google/woff2/archive/v1.0.2.tar.gz</Archive>
         <BuildDependencies>
           <Dependency>ninja</Dependency>
-          <Dependency>cmake</Dependency>
           <Dependency>libbrotli-devel</Dependency>
         </BuildDependencies>
     </Source>

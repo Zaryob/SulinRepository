@@ -73,7 +73,7 @@
         <Summary>Development files for libuser</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libuser</Dependency>
-	    <Dependency>glib2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

@@ -16,11 +16,6 @@
         <Archive sha1sum="2afa30938207ded2c35b11ea64b1c7eda0fa4314" type="targz">https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.8.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,7 +24,6 @@
         <PartOf>programming.language.python</PartOf>
         <Summary>Common dbus-python files shared between dbus-python and dbus-python3</Summary>
         <RuntimeDependencies>
-            <Dependency>dbus-devel</Dependency>
             <Dependency release="current">dbus-python3</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -44,9 +38,6 @@
         <PartOf>programming.language.python</PartOf>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
@@ -57,10 +48,6 @@
         <PartOf>programming.language.python</PartOf>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

@@ -1,5 +1,4 @@
-
-<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
         <Name>exiv2</Name>
@@ -15,8 +14,6 @@
         <Description>exiv2 is a C++ library and a command line utility to access image metadata. Exiv2 is available as free software and with a commercial license, and is used in a growing number of projects.</Description>
         <Archive sha1sum="1a72065c95e721b1c21df4f2ee64d8338c6acf94" type="targz">https://www.exiv2.org/builds/exiv2-0.27.2-Source.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -36,9 +33,6 @@
     <Package>
         <Name>exiv2-libs</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -157,6 +157,18 @@
       <Icon>kde</Icon>
     </Group>
     <Group>
+      <Name>xfce.desktop</Name>
+      <LocalName xml:lang="en">XFCE Desktop</LocalName>
+      <LocalName xml:lang="nl">XFCE Desktop</LocalName>
+      <LocalName xml:lang="sv">Skrivbord, XFCE</LocalName>
+      <LocalName xml:lang="tr">XFCE Masaüstü</LocalName>
+      <LocalName xml:lang="fr">Bureau XFCE</LocalName>
+      <LocalName xml:lang="es">XFCE</LocalName>
+      <LocalName xml:lang="de">XFCE</LocalName>
+      <LocalName xml:lang="it">XFCE</LocalName>
+      <Icon>xfce</Icon>
+    </Group>
+    <Group>
       <Name>other.desktop</Name>
       <LocalName xml:lang="en">Other Desktops</LocalName>
       <LocalName xml:lang="nl">Overige Desktop</LocalName>

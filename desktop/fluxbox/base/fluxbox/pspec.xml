@@ -39,7 +39,6 @@
             <Dependency>libXrandr</Dependency>
             <Dependency>libXrender</Dependency>
             <Dependency>fridibi</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>perl-Linux-Desktopfiles</Dependency>
         </RuntimeDependencies>

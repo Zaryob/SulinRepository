@@ -15,7 +15,6 @@
         <Description>The HTML-Parser distribution is a collection of modules that parse and extract information from HTML documents.</Description>
         <Archive sha1sum="0d8491510f4e56588678ef0fd2b6ddee5d134137" type="targz">http://www.cpan.org/authors/id/G/GA/GAAS/HTML-Parser-3.72.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Test-Pod</Dependency>
             <Dependency>perl-HTML-Tagset</Dependency>
         </BuildDependencies>
@@ -24,7 +23,6 @@
     <Package>
         <Name>perl-HTML-Parser</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTML-Tagset</Dependency>
         </RuntimeDependencies>
         <Files>

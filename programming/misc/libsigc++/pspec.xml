@@ -13,7 +13,7 @@
         <PartOf>programming.library</PartOf>
         <Summary>Typesafe signal framework for C++</Summary>
         <Description>libsigc++ is a library which implements a full callback system for use in widget libraries, abstract interfaces, and general programming.</Description>
-        <Archive sha1sum="7807a12a1e90a98bd8c9440e5b312d3cb1121bf7" type="tarxz">mirrors://gnome/libsigc++/2.10/libsigc++-2.10.0.tar.xz</Archive>
+        <Archive sha1sum="92bea5cff9b155cca1bc1534c008e3c7a0028234" type="tarxz">mirrors://gnome/libsigc++/3.0/libsigc++-3.0.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>libsigc++</Name>
@@ -21,9 +21,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-        </RuntimeDependencies>
     </Package>
     <Package>
         <Name>libsigc++-devel</Name>
@@ -45,6 +42,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>3.0.0</Version>
+            <Comment>Automatic version upgrade.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.10.0</Version>

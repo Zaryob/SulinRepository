@@ -14,7 +14,6 @@
         <Description>perl-Linux-Desktopfiles Perl module to get and parse the linux desktop files</Description>
         <Archive sha1sum="b94e75b6d85986a72aa167be36c209a41b701950" type="targz">https://cpan.metacpan.org/authors/id/T/TR/TRIZEN/Linux-DesktopFiles-0.25.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Module-Build</Dependency>
         </BuildDependencies>
      </Source>
@@ -22,7 +21,6 @@
     <Package>
         <Name>perl-Linux-Desktopfiles</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-Data-Dump</Dependency>
         </RuntimeDependencies>

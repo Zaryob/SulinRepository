@@ -18,15 +18,9 @@
             <Dependency>apr-devel</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>lua-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
-            <Dependency>db-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
             <Dependency>apr-util-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
-	 </BuildDependencies>
+         </BuildDependencies>
     </Source>
 
     <Package>
@@ -38,12 +32,6 @@
             <Dependency>apr-util</Dependency>
             <Dependency>cyrus-sasl</Dependency>
             <Dependency>openldap-client</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>libxml2</Dependency>
-	    <Dependency>libpcre</Dependency>
-            <Dependency>db</Dependency>
-            <Dependency>expat</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

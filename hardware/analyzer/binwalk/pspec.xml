@@ -15,7 +15,6 @@
         <Archive sha1sum="7a958497f7eccd951379d2e358a4ca94317cd6bc" type="targz">https://github.com/devttys0/binwalk/archive/v2.1.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -23,7 +22,6 @@
         <Name>binwalk</Name>
         <Summary>Firmware analysis tool</Summary>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

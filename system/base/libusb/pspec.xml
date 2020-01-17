@@ -56,7 +56,7 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">libusb</Dependency>
-       	    <Dependency>eudev-32bit</Dependency>
+            <Dependency>eudev-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>

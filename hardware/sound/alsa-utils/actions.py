@@ -10,7 +10,10 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--sbindir=/sbin \
+    autotools.configure("--disable-maintainer-mode \
+                         --with-asound-state-dir=/var/lib/alsa \
+                         --with-udev-rules-dir=/lib/udev/rules.d \
+                         --sbindir=/sbin \
                          --disable-alsaconf")
 
 def build():

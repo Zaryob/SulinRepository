@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -16,8 +15,6 @@
         <Archive sha1sum="27d4fb3e31eb7404b5f2ba72f73194fc1d2b704f" type="targz">http://telepathy.freedesktop.org/releases/telepathy-farstream/telepathy-farstream-0.6.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>telepathy-glib-devel</Dependency>
             <Dependency>farstream-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
@@ -28,9 +25,6 @@
         <Name>telepathy-farstream</Name>
         <IsA>library</IsA>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>farstream</Dependency>
             <Dependency>gstreamer</Dependency>
             <Dependency>telepathy-glib</Dependency>
@@ -59,8 +53,6 @@
         <Summary>Development files for telepathy-farstream</Summary>
         <RuntimeDependencies>
             <Dependency release="current">telepathy-farstream</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>farstream-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>telepathy-glib-devel</Dependency>

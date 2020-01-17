@@ -1,0 +1,35 @@
+<INARY>
+    <Source>
+        <Name>exfat-utils</Name>
+        <Homepage>http://code.google.com/p/exfat</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Utilities for exFAT file system</Summary>
+        <Description>This project aims to provide a full-featured exFAT file system implementation for GNU/Linux and other Unix-like systems as a FUSE module and a set of utilities.</Description>
+        <Archive sha1sum="ab02c7a8c697a68c5562ca27eb7ede522d454de7" type="targz">https://github.com/relan/exfat/releases/download/v1.3.0/exfat-utils-1.3.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>exfat-utils</Name>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>1.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -19,7 +19,6 @@
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>aalib</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
             <Dependency>libXtst-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
@@ -62,7 +61,6 @@
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>aalib</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libusb-compat-devel</Dependency>
             <Dependency>libXtst-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>

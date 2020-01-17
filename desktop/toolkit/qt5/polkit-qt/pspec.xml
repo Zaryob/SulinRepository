@@ -13,19 +13,14 @@
         <Archive sha1sum="a4bf39a6b0844db0da6cfab3faa35f8cd91f42a5" type="tarxz">https://download.kde.org/stable/polkit-qt-1/polkit-qt-1-0.113.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>polkit-qt</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>polkit</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -38,8 +33,6 @@
         <RuntimeDependencies>
             <Dependency release="current">polkit-qt</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/pkgconfig</Path>

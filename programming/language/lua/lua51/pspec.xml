@@ -14,7 +14,6 @@
         <Description>lua51 is a powerful light-weight programming language designed for extending applications.</Description>
         <Archive sha1sum="b3882111ad02ecc6b972f8c1241647905cb2e3fc" type="targz">http://www.lua.org/ftp/lua-5.1.5.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">lua-arch.patch</Patch>
@@ -24,7 +23,6 @@
     <Package>
         <Name>lua51</Name>
         <RuntimeDependencies>
-            <Dependency>readline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

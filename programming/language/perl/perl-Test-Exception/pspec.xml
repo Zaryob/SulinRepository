@@ -15,7 +15,6 @@
         <Description>This module provides a few convenience methods for testing exception based code. It is built with Test::Builder and plays happily with Test::More and friends.</Description>
         <Archive sha1sum="f1d7589c3f8fce18331b8bba98e1429eae2e24be" type="targz">http://search.cpan.org/CPAN/authors/id/E/EX/EXODIST/Test-Exception-0.43.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Sub-Uplevel</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,7 +22,6 @@
     <Package>
         <Name>perl-Test-Exception</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Sub-Uplevel</Dependency>
         </RuntimeDependencies>
         <Files>

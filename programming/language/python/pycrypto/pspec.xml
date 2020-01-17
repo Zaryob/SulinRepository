@@ -17,9 +17,7 @@
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>gmp-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -28,7 +26,6 @@
         <Summary>Python pycrypto module</Summary>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
-            <Dependency>gmp</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
@@ -40,8 +37,6 @@
         <Name>python3-pycrypto</Name>
         <Summary>Python3 pycrypto module</Summary>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-            <Dependency>gmp</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>

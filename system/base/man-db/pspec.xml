@@ -16,7 +16,7 @@
         <Summary>Application to read Linux man pages</Summary>
         <Description>Man package consists of programs which is used to read most of the documentation available in linux system. For example, you can write "man nameoftheprogram" into the konsole or "man:nameoftheprogram" into the konqueror to get a detailed usage information for many programs.</Description>
         <!-- @@@savannah man-db -->
-        <Archive sha1sum="dd0ca174d0effdfc203579ba4fde5a11469d0e0c" type="tarxz">http://download.savannah.gnu.org/releases/man-db/man-db-2.8.7.tar.xz</Archive>
+        <Archive sha1sum="807392e422d22d3dc9e9fec3fdd0fe7ce9c53fc7" type="tarxz">http://download.savannah.gnu.org/releases/man-db/man-db-2.9.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>less</Dependency>
             <Dependency>gzip</Dependency>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-12-13</Date>
+            <Version>2.9.0</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-18</Date>
             <Version>2.8.7</Version>

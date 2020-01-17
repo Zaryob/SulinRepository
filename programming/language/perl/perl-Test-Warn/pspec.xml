@@ -16,7 +16,6 @@
         <Description>perl-Test-Warn module provides a few convenience methods for testing warning based code.</Description>
         <Archive sha1sum="a6a56aa08cb3f62897cf6844ad7e350c37668223" type="targz">https://cpan.metacpan.org/authors/id/B/BI/BIGJ/Test-Warn-0.36.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Sub-Uplevel</Dependency>
             <Dependency>perl-Test-Pod</Dependency>
         </BuildDependencies>
@@ -25,7 +24,6 @@
     <Package>
         <Name>perl-Test-Warn</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Sub-Uplevel</Dependency>
         </RuntimeDependencies>
         <Files>

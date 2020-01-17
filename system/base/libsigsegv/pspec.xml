@@ -14,7 +14,7 @@
         <Summary>A library for handling page faults in user mode</Summary>
         <Description>This is a library for handling page faults in user mode. A page fault occurs when a program tries to access to a region of memory that is currently not available.</Description>
         <!-- @@@gnu libsigsegv -->
-        <Archive sha1sum="b75a647a9ebda70e7a3b33583efdd550e0eac094" type="targz">mirrors://gnu/libsigsegv/libsigsegv-2.10.tar.gz</Archive>
+        <Archive sha1sum="df167811328b050d2b746bec3d88423edc5a8cbf" type="targz">mirrors://gnu/libsigsegv/libsigsegv-2.12.tar.gz</Archive>
     </Source>
     <Package>
         <Name>libsigsegv</Name>
@@ -34,6 +34,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2019-12-13</Date>
+            <Version>2.12</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-19</Date>
             <Version>2.10</Version>

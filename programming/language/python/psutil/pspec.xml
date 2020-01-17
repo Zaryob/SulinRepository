@@ -15,7 +15,6 @@
         <Archive sha1sum="0cfc35492185bc6ebe768c70ed86a4eb32e25e4f" type="targz">https://github.com/giampaolo/psutil/archive/release-5.0.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -23,7 +22,6 @@
         <Name>python3-psutil</Name>
         <PartOf>system.base</PartOf>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
@@ -45,7 +43,6 @@
         <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>

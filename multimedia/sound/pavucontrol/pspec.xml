@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pavucontrol</Name>
+        <Homepage>https://freedesktop.org/software/pulseaudio/pavucontrol/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>PulseAudio Volume Control</Summary>
+        <Description>pavucontrol is a simple GTK based volume control tool ("mixer") for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream seperately.</Description>
+        <Archive sha1sum="14e76f8bdbf4e628e18a9260ce197c472af416ff">https://gitlab.freedesktop.org/pulseaudio/pavucontrol/-/archive/v4.0/pavucontrol-v4.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libcanberra-gtk-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtkmm2-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pavucontrol</Name>
+        <RuntimeDependencies>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libcanberra-gtk</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>gtkmm2</Dependency>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-08</Date>
+            <Version>4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

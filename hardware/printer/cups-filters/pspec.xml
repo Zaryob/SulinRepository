@@ -22,11 +22,9 @@
         <Archive sha1sum="5edd6c5973b2ea34b862bdc66c194ba0d77f8b8a" type="targz">http://www.openprinting.org/download/cups-filters/cups-filters-1-20190926.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cups-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>mupdf-devel</Dependency>
             <Dependency>lcms2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
@@ -35,7 +33,6 @@
             <Dependency>dejavu-fonts</Dependency>
             <Dependency>poppler-utils</Dependency>
             <Dependency>poppler-cpp-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>openldap-client</Dependency>
             <Dependency>avahi-devel</Dependency>
             <Dependency>avahi-glib-devel</Dependency>
@@ -49,13 +46,9 @@
         <Name>cups-filters</Name>
         <RuntimeDependencies>
             <Dependency>cups</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>mupdf</Dependency>
             <Dependency>tiff</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>lcms2</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>mit-kerberos</Dependency>
@@ -63,7 +56,6 @@
             <Dependency>qpdf</Dependency>
             <Dependency>ghostscript</Dependency>
             <Dependency>poppler</Dependency>
-            <Dependency>e2fsprogs</Dependency>
             <Dependency>avahi-glib</Dependency>
             <Dependency>avahi-libs</Dependency>
         </RuntimeDependencies>

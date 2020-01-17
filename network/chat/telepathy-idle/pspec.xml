@@ -1,4 +1,3 @@
-
 <?xml version="1.0" ?>
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
@@ -16,19 +15,13 @@
         <Archive sha1sum="932c11e7c131cc106ef0a6670158535925d9ca9e" type="targz">http://telepathy.freedesktop.org/releases/telepathy-idle/telepathy-idle-0.2.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>telepathy-glib-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>telepathy-idle</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>telepathy-glib</Dependency>
         </RuntimeDependencies>
         <Files>

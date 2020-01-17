@@ -16,14 +16,12 @@
         <Description>perl-Module-Build Module::Build is a system for building, testing, and installing Perl modules.</Description>
         <Archive sha1sum="a31d20eb918870732b3974b0c9f680adbd5b0b20" type="targz">http://www.cpan.org/authors/id/L/LE/LEONT/Module-Build-0.4229.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Module-Build</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-docs</Dependency>
         </RuntimeDependencies>
         <Files>

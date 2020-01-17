@@ -15,7 +15,6 @@
         <Archive sha1sum="87e6214cbea594f67854c41d844c2930e97a7e9d" type="tarxz">https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>orc-devel</Dependency>
-            <Dependency>yasm-devel</Dependency>
             <Dependency version="1.16.2">gst-plugins-base-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,8 +22,6 @@
     <Package>
         <Name>gst-libav</Name>
         <RuntimeDependencies>
-            <Dependency>bzip2</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency version="1.16.2">gstreamer</Dependency>
             <Dependency version="1.16.2">gst-plugins-base</Dependency>
     </RuntimeDependencies>

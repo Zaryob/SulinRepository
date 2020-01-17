@@ -19,17 +19,11 @@
             <Dependency>python-devel</Dependency>
             <Dependency>boost-devel</Dependency>
             <Dependency>ruby-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>swig</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libpcre</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

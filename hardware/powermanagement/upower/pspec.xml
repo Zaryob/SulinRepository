@@ -15,15 +15,8 @@
         <Description>upower provides a daemon, API and command line tools for managing power devices attached to the system.</Description>
         <Archive sha1sum="5a023b29d64a6ce41cc6901bc46a279041784a9b" type="tarxz">http://upower.freedesktop.org/releases/upower-0.99.11.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>libusb-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
-            <Dependency>intltool</Dependency>
         </BuildDependencies>
 
     </Source>
@@ -31,12 +24,8 @@
     <Package>
         <Name>upower</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>polkit</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>libgudev</Dependency>
-            <Dependency>libusb</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/lib</Path>
@@ -62,11 +51,6 @@
         <Summary>Development files for upower</Summary>
         <RuntimeDependencies>
             <Dependency release="current">upower</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

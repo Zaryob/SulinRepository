@@ -16,7 +16,6 @@
         <Archive sha1sum="c3fc0f4b02dce2239bf46c82a5f06b06585720ae" type="tarbz2">mirrors://xorg/individual/lib/libXdamage-1.1.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libXfixes-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

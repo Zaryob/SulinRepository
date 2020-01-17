@@ -11,10 +11,10 @@ from inary.actionsapi import get
 
 
 def setup():
-    shelltools.system('	sed -e "/torture_keyfiles/d" \
-                		-i tests/unittests/CMakeLists.txt && \
-                	    sed -e "/^check_include_file.*HAVE_VALGRIND_VALGRIND_H/s/^/#DONT /" \
-                		-i ConfigureChecks.cmake')
+    shelltools.system(' sed -e "/torture_keyfiles/d" \
+                                -i tests/unittests/CMakeLists.txt && \
+                            sed -e "/^check_include_file.*HAVE_VALGRIND_VALGRIND_H/s/^/#DONT /" \
+                                -i ConfigureChecks.cmake')
     shelltools.makedirs("build")
     shelltools.cd("build")
     cmaketools.configure("-DCMAKE_BUILD_TYPE=Release \

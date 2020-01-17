@@ -14,14 +14,12 @@
         <Description>This is the IPC library used by GnuPG 2, GPGME and a few other packages.</Description>
         <Archive sha1sum="6d81bf42fa91ed2894df8b65764ce899e39776f8" type="tarbz2">https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.3.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>libgpg-error-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libassuan</Name>
         <RuntimeDependencies>
-            <Dependency>libgpg-error</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

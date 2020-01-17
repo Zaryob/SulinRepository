@@ -14,14 +14,12 @@
         <Description>Perl interface to the MD5 Algorithm</Description>
         <Archive sha1sum="59dc31b43c84d5e18ba60f25f513929c2f05ad51" type="targz">http://www.cpan.org/authors/id/G/GA/GAAS/Digest-MD5-2.55.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Digest-MD5</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

@@ -1,0 +1,69 @@
+<INARY>
+    <Source>
+        <Name>pangomm</Name>
+        <Homepage>http://www.gtkmm.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>C++ interface for Pango</Summary>
+        <Description>Pangomm is a library that provides pango based C++ interface for object-oriented gtkmm applications.</Description>
+        <Archive sha1sum="6d85e5600389c7ee04cc08b6a826832cd360e944" type="tarxz">mirrors://gnome/pangomm/2.42/pangomm-2.42.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>grep</Dependency>
+            <Dependency>libtool</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>cairomm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pangomm</Name>
+        <RuntimeDependencies>
+            <Dependency>pango</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>cairomm</Dependency>
+            <Dependency>libsigc++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>pangomm-devel</Name>
+        <Summary>Development files for pangomm</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">pangomm</Dependency>
+            <Dependency>cairomm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/pangomm-1.4</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-08</Date>
+            <Version>2.42.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

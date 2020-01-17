@@ -18,7 +18,7 @@
             <Dependency>linux-headers</Dependency>
         </BuildDependencies>
         <!-- @@@blfs final-system busybox -->
-        <Archive sha1sum="c855f6fa3144654345ef4cae9b80ab68449fd090" type="tarbz2">http://busybox.net/downloads/busybox-1.29.3.tar.bz2</Archive>
+        <Archive sha1sum="d5514f5cf8eb89a3b20ac3b965f4463f14a5709a" type="tarbz2">http://busybox.net/downloads/busybox-1.31.1.tar.bz2</Archive>
         <AdditionalFiles>
             <AdditionalFile target=".config">config</AdditionalFile>
         </AdditionalFiles>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-01-08</Date>
+            <Version>1.31.1</Version>
+            <Comment>Version bump to 1.31.1 The package was built static.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-19</Date>
             <Version>1.29.3</Version>

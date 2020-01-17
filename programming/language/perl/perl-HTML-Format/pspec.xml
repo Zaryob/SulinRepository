@@ -15,7 +15,6 @@
         <Description>perl-HTML-Format is a Perl module that formats HTML as plaintext, RTF and PostScript.</Description>
         <Archive sha1sum="f5b752d97a424f7abcaa16341b85ea943af87429" type="targz">http://search.cpan.org/CPAN/authors/id/N/NI/NIGELM/HTML-Format-2.12.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-HTML-Tree</Dependency>
             <Dependency>perl-Font-AFM</Dependency>
@@ -25,7 +24,6 @@
     <Package>
         <Name>perl-HTML-Format</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Module-Build</Dependency>
             <Dependency>perl-HTML-Tree</Dependency>
             <Dependency>perl-Font-AFM</Dependency>

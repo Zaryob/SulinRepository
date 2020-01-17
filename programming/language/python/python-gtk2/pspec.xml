@@ -17,7 +17,6 @@
             <Dependency>cairo-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>libglade-devel</Dependency>
             <Dependency>pygobject-devel</Dependency>
@@ -32,7 +31,6 @@
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>libglade</Dependency>
             <Dependency>gdk-pixbuf</Dependency>

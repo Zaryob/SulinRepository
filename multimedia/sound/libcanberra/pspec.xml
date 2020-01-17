@@ -19,11 +19,9 @@
             <Dependency>libvorbis-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
             <!--Dependency>gconf</Dependency-->
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>at-spi2-core-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
             <Dependency>atk-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>pango-devel</Dependency>
@@ -43,8 +41,6 @@
         <Name>libcanberra</Name>
         <RuntimeDependencies>
             <Dependency>libtdb</Dependency>
-            <Dependency>libtool-ltdl</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>libvorbis</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
@@ -77,7 +73,6 @@
         <RuntimeDependencies>
             <Dependency release="current">libcanberra</Dependency>
             <Dependency>gtk2</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -107,8 +102,6 @@
         <Summary>GTK+ convenience API and utilities for libcanberra</Summary>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>eudev</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency release="current">libcanberra</Dependency>
         </RuntimeDependencies>

@@ -13,14 +13,12 @@
         <Description>The pkg-config program retrieves information about installed libraries, usually for the purposes of compiling against and linking to them.</Description>
         <Archive sha1sum="18ff3b44c9bb281f85eec4bb1145f83cc759df93" type="targz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-PkgConfig-1.16.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-ExtUtils-PkgConfig</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

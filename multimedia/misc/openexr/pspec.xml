@@ -16,7 +16,6 @@
         <Archive sha1sum="67c4f9c2b4ab7c5922671536f93827ecb966969f" type="targz">https://github.com/openexr/openexr/releases/download/v2.3.0/openexr-2.3.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>ilmbase-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,7 +24,6 @@
         <Name>openexr</Name>
         <RuntimeDependencies>
             <Dependency>ilmbase</Dependency>
-	          <Dependency>libgcc</Dependency>
             <Dependency>openexr-libs</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -38,8 +36,6 @@
         <Summary>OpenEXR runtime libraries</Summary>
         <RuntimeDependencies>
             <Dependency>ilmbase</Dependency>
-	          <Dependency>zlib</Dependency>
-	          <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/lib*</Path>

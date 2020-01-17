@@ -16,14 +16,12 @@
         <Description>Buraları bilmiyorum araştırmak lazım :D</Description>
         <Archive sha1sum="b02322398e601c905a1fe458c712519345f56639" type="targz">https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/File-Next-1.18.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
 
     </Source>
     <Package>
         <Name>perl-File-Next</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

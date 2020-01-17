@@ -16,7 +16,6 @@
         <Description>This module parses /robots.txt files as specified in "A Standard for Robot Exclusion", at &lt;http://www.robotstxt.org/wc/norobots.html> Webmasters can use the /robots.txt file to forbid conforming robots from accessing parts of their web site.</Description>
         <Archive sha1sum="e158e6559307878b32d8e4c241bf257c2bc88ebb" type="targz">http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/WWW-RobotRules-6.02.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,7 +23,6 @@
     <Package>
         <Name>perl-WWW-Robotrules</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-URI</Dependency>
         </RuntimeDependencies>
         <Files>

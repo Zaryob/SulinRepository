@@ -18,8 +18,6 @@
             <Dependency>harfbuzz</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>libX11</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>gettext</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
         </BuildDependencies>
         <Patches>
@@ -38,10 +36,8 @@
     <Package>
         <Name>libwmf</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>

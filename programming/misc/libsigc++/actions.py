@@ -26,7 +26,7 @@ def install():
 
     #move html docs to html doc dir
     inarytools.dodir("/usr/share/doc/%s/html" % get.srcNAME())
-    inarytools.domove("/usr/share/doc/%s-2.0/*" % get.srcNAME(), "/usr/share/doc/%s/html" % get.srcNAME())
-    inarytools.removeDir("/usr/share/doc/%s-2.0" % get.srcNAME())
+    inarytools.domove("/usr/share/doc/%s-3.0/*" % get.srcNAME(), "/usr/share/doc/%s/html" % get.srcNAME())
+    inarytools.removeDir("/usr/share/doc/%s-3.0" % get.srcNAME())
 
-    inarytools.dodoc("AUTHORS", "ChangeLog", "README", "NEWS")
+    inarytools.dodoc("AUTHORS", "ChangeLog", "README*", "NEWS")

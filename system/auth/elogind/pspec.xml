@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>eLogind systemd-logind extracted package</Summary>
         <Description>The systemd project's logind, extracted to a standalone package</Description>
-        <Archive sha1sum="bc60623b90da52c958fb9ae721b0fa2424a9b8a9" type="targz">https://github.com/elogind/elogind/archive/v241.3.tar.gz</Archive>
+        <Archive sha1sum="78d65cc7f9921bd98ab95000197ef0f9a9489349" type="targz">https://github.com/elogind/elogind/archive/v241.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>intltool</Dependency>
             <Dependency>libtool</Dependency>
@@ -68,6 +68,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2019-12-13</Date>
+            <Version>241.4</Version>
+            <Comment>Automatic version upgrade.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
       <Update release="2">
           <Date>2019-11-19</Date>
           <Version>241.3</Version>

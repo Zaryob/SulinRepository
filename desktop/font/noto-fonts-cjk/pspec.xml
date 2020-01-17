@@ -1,0 +1,38 @@
+<INARY>
+    <Source>
+        <Name>noto-fonts-cjk</Name>
+        <Homepage>http://www.google.com/get/noto</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>CUSTOM:SIL</License>
+        <IsA>data:font</IsA>
+        <Summary>Google Noto CJK fonts</Summary>
+        <Description>noto-fonts-cjk, Google Noto CJK fonts.</Description>
+        <Archive sha1sum="5753c766b71215913fa28e47dc471d51a5739e5e">https://github.com/googlefonts/noto-cjk/archive/NotoSansV2.001.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>noto-fonts-cjk</Name>
+        <Summary>Google Noto CJK fonts</Summary>
+        <Files>
+            <Path fileType="config">/etc/fonts</Path>
+            <Path fileType="data">/usr/share/fonts/noto/*.ttc</Path>
+            <Path fileType="doc">/usr/share/doc/noto-fonts-cjk/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/fonts/conf.d/70-noto-cjk.conf">70-noto-cjk.conf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-10</Date>
+            <Version>2.001_20200110</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

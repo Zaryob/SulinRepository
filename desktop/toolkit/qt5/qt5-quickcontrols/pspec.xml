@@ -11,7 +11,7 @@
         <Summary>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Summary>
         <Description>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="6c26e39fd25b3920ab8355520061e0654bdb683c" type="tarxz">http://download.qt.io/official_releases/qt/5.13/5.13.2/submodules/qtquickcontrols-everywhere-src-5.13.2.tar.xz</Archive>
+        <Archive sha1sum="0cfca95843d0684c90cf8f624d3dd9ef2ced8f0c" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtquickcontrols-everywhere-src-5.14.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
@@ -25,7 +25,6 @@
     <Package>
         <Name>qt5-quickcontrols</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
@@ -47,6 +46,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-12-14</Date>
+            <Version>5.14.0</Version>
+            <Comment>QT 5.14 upgraded</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-27</Date>
             <Version>5.13.2</Version>

@@ -15,16 +15,11 @@
         <Description>Wayland is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol.</Description>
         <Archive sha1sum="24c63a5045c653dcfa24efd10fa7c7de89aca9ef" type="tarxz">https://wayland.freedesktop.org/releases/wayland-1.16.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libffi-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>wayland</Name>
         <RuntimeDependencies>
-            <Dependency>libxml2</Dependency>
-            <Dependency>expat</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -38,7 +33,6 @@
         <Name>wayland-client</Name>
         <Summary>Wayland client library</Summary>
         <RuntimeDependencies>
-            <Dependency>libffi</Dependency>
             <Dependency release="current">wayland</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -61,7 +55,6 @@
         <Name>wayland-server</Name>
         <Summary>Wayland server library</Summary>
         <RuntimeDependencies>
-            <Dependency>libffi</Dependency>
             <Dependency release="current">wayland</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -72,7 +65,6 @@
         <Name>wayland-devel</Name>
         <Summary>Development files for wayland</Summary>
         <RuntimeDependencies>
-            <Dependency>expat-devel</Dependency>
             <Dependency release="current">wayland</Dependency>
         </RuntimeDependencies>
         <Files>

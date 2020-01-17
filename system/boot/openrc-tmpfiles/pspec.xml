@@ -21,7 +21,7 @@
     <Package>
         <Name>openrc-tmpfiles</Name>
         <RuntimeDependencies>
-	        	<Dependency>openrc</Dependency>
+            <Dependency>openrc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/bin</Path>

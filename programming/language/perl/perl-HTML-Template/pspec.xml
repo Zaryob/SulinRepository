@@ -16,7 +16,6 @@
         <Description>First you make a template - this is just a normal HTML file with a few extra tags, the simplest being &lt;TMPL_VAR></Description>
         <Archive sha1sum="8182e47778ee498214fdfdb035310c627aa939fb" type="targz">http://search.cpan.org/CPAN/authors/id/W/WO/WONKO/HTML-Template-2.95.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-CGI</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,7 +23,6 @@
     <Package>
         <Name>perl-HTML-Template</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-CGI</Dependency>
         </RuntimeDependencies>
         <Files>

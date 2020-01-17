@@ -19,9 +19,7 @@
             <Dependency>libXft-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>imlib2</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>libXrandr-devel</Dependency>
             <Dependency>libXcursor-devel</Dependency>
             <Dependency>libXinerama-devel</Dependency>
@@ -40,7 +38,6 @@
     <Package>
         <Name>openbox</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>libSM</Dependency>
             <Dependency>libXft</Dependency>
@@ -48,7 +45,6 @@
             <Dependency>libX11</Dependency>
             <Dependency>imlib2</Dependency>
             <Dependency>libXext</Dependency>
-            <Dependency>libxml2</Dependency>
             <Dependency>graphite2</Dependency>
             <Dependency>libXrandr</Dependency>
             <Dependency>libXcursor</Dependency>
@@ -89,8 +85,6 @@
         <RuntimeDependencies>
             <Dependency release="current">openbox</Dependency>
             <Dependency>pango-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>libXft-devel</Dependency>
         </RuntimeDependencies>
         <Files>

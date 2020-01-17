@@ -14,17 +14,13 @@
         <Description>TagLib is a library for reading and editing the meta data of several popular audio formats.</Description>
         <Archive sha1sum="80a30eeae67392f636c9f113c60d778c2995c99e" type="targz">http://taglib.org/releases/taglib-1.11.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
             <Dependency>boost-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>taglib</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>
           </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

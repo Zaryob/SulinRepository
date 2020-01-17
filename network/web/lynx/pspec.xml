@@ -15,9 +15,6 @@
         <Description>This is the top level page for the Lynx software distribution site hosted by the Internet Software Consortium.</Description>
         <Archive sha1sum="98e327df323246c4d22f1cdd12fd6b87f9ec82eb" type="zip">http://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.0dev.4.zip</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
-            <Dependency>openssl-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">lynx2-8-6-don-t-accept-command-line-args-to-telnet.patch</Patch>
@@ -30,9 +27,6 @@
     <Package>
         <Name>lynx</Name>
         <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>gettext</Dependency>
         </RuntimeDependencies>
 
         <Files>

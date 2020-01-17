@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>openresolv</Name>
+        <Homepage>https://roy.marples.name/projects/openresolv</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A framework for managing DNS information.</Summary>
+        <Description>openrc compatible DNS framework provided systemd-resolv</Description>
+        <Archive sha1sum="7ed1245b2b5b25111a7bcc12ef534faf4b4f5bcf">https://roy.marples.name/downloads/openresolv/openresolv-3.9.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>dnsmasq</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>openresolv</Name>
+        <RuntimeDependencies>
+            <Dependency>dnsmasq</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-08</Date>
+            <Version>3.9.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
+

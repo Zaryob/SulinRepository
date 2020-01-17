@@ -14,19 +14,14 @@
         <Description>pypolkit is a Python binding for the PolicyKit library.</Description>
         <Archive sha1sum="7cde06f96cca97a9e34401041dc9bd98f2885b32" type="targz">https://github.com/Zaryob/python-polkit/archive/polkit-1.0.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>python3-pypolkit</Name>
         <Summary>Python3 binding of PolicyKit</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>polkit</Dependency>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
@@ -37,7 +32,6 @@
         <Name>python2-pypolkit</Name>
         <Summary>Python2 binding of PolicyKit</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>polkit</Dependency>
             <Dependency>python</Dependency>
         </RuntimeDependencies>

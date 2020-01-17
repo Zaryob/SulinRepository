@@ -14,27 +14,16 @@
         <Description>aria2 is a download utility with resuming and segmented downloading. Supported protocols are HTTP, HTTPS, FTP and BitTorrent. It also supports Metalink version 3.0.</Description>
         <Archive sha1sum="1e4f8dba13e6eb5860b90c567a9c03d2c4be8f18" type="tarxz">https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>gmp-devel</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>c-ares-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
-            <Dependency>nettle-devel</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>libxml2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>aria2</Name>
         <RuntimeDependencies>
-            <Dependency>gmp</Dependency>
-            <Dependency>zlib</Dependency>
             <Dependency>c-ares</Dependency>
             <Dependency>gnutls</Dependency>
-            <Dependency>nettle</Dependency>
-            <Dependency>sqlite</Dependency>
-            <Dependency>libxml2</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -45,6 +34,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-14</Date>
+            <Version>1.35.0</Version>
+            <Comment>Version bump to 1.35.0</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-11</Date>
             <Version>1.21.0</Version>

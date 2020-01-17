@@ -15,21 +15,16 @@
         <Description>lxml is the most feature-rich and easy-to-use library for working with XML and HTML in the Python language.</Description>
         <Archive sha1sum="8e96a9ef9c40bcb62400f8619499c5ac8877caa3" type="targz">https://github.com/lxml/lxml/archive/lxml-4.4.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libxml2-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>cython</Dependency>
             <Dependency>cython3</Dependency>
-            <Dependency>libxslt-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>python3-lxml</Name>
         <RuntimeDependencies>
-            <Dependency>libxslt</Dependency>
             <Dependency>python3-libxml2</Dependency>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
@@ -39,7 +34,6 @@
         <Name>python-lxml</Name>
         <RuntimeDependencies>
             <Dependency>python-libxml2</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -59,7 +53,7 @@
 
     <History>
         <Update release="1">
-            <Date>2019.11.9</Date>
+            <Date>2019-11-09</Date>
             <Version>4.4.1</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>

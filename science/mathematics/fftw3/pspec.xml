@@ -14,16 +14,12 @@
         <Description>fftw3 is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST).</Description>
         <Archive sha1sum="59831bd4b2705381ee395e54aa6e0069b10c3626" type="targz">ftp://ftp.fftw.org/pub/fftw/fftw-3.3.8.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgfortran</Dependency>
-            <Dependency>libquadmath</Dependency>
-            <Dependency>gettext</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>fftw3</Name>
         <RuntimeDependencies>
-            <Dependency>libquadmath</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

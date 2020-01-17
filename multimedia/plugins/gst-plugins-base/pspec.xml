@@ -36,8 +36,6 @@
         <Name>gst-plugins-base</Name>
         <RuntimeDependencies>
             <Dependency>orc</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>libXv</Dependency>
@@ -71,7 +69,6 @@
         <RuntimeDependencies>
             <Dependency release="current">gst-plugins-base</Dependency>
             <Dependency version="1.16.2">gstreamer-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

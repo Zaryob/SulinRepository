@@ -18,7 +18,6 @@
     <Package>
         <Name>rpm2targz</Name>
         <RuntimeDependencies>
-            <Dependency>xz</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

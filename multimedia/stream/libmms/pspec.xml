@@ -28,7 +28,6 @@
         <Summary>Development files for libmms</Summary>
         <RuntimeDependencies>
             <Dependency release="current">libmms</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

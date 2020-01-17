@@ -15,7 +15,6 @@
         <Archive sha1sum="b7bcc5d47211b7bbac35bb221860407db3601f5b" type="tarbz2">https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">0001-fix-test-with-freetype2-2.7.1.patch</Patch>
@@ -28,8 +27,7 @@
     <Package>
         <Name>fontconfig</Name>
         <RuntimeDependencies>
-	    <Dependency>freetype</Dependency>
-            <Dependency>expat</Dependency>
+            <Dependency>freetype</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/fonts</Path>
@@ -50,7 +48,6 @@
         <RuntimeDependencies>
             <Dependency release="current">fontconfig</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

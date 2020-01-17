@@ -20,14 +20,12 @@ Installation requires MakeMaker 3.5 or higher (MakeMaker 3.7 is included
 with perl 5.001, so now is a good time to upgrade if you haven't already.).</Description>
         <Archive sha1sum="e869c13a485e6c56561c34351fd62352bdac793c" type="targz">mirrors://cpan/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-Term-ReadKey</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

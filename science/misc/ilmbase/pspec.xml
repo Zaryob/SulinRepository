@@ -22,7 +22,6 @@
     <Package>
         <Name>ilmbase</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

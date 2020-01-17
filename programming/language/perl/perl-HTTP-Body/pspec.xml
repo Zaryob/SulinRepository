@@ -16,7 +16,6 @@
         <Description>HTTP::Body parses chunks of HTTP POST data and supports application/octet-stream, application/x-www-form-urlencoded, and multipart/form-data.</Description>
         <Archive sha1sum="eb1db245fd2a0d6a652b3452fbea63404629a49c" type="targz">http://search.cpan.org/CPAN/authors/id/G/GE/GETTY/HTTP-Body-1.22.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTTP-Message</Dependency>
             <Dependency>perl-Test-Deep</Dependency>
             <Dependency>perl-Test-Pod</Dependency>
@@ -27,7 +26,6 @@
     <Package>
         <Name>perl-HTTP-Body</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-HTTP-Message</Dependency>
         </RuntimeDependencies>
         <Files>

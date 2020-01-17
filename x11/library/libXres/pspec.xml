@@ -17,7 +17,6 @@
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

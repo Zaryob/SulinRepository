@@ -14,7 +14,6 @@
         <Description>alternatives creates, removes, maintains and displays information about the symbolic links comprising the alternatives system. Alternatives system determines the defaults when several programs fulfilling the same or similar functions to be installed on a single system at the same time.</Description>
         <Archive sha1sum="301f801381368a85df7f5d1c83285807fc6b40c3" type="targz">https://github.com/SulinOS/chkconfig/archive/1.11p.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>popt-devel</Dependency>
             <Dependency>newt-devel</Dependency>
         </BuildDependencies>
     </Source>

@@ -19,7 +19,6 @@
             <Dependency>boost-devel</Dependency>
             <Dependency>libsdl2-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>sdl-image-devel</Dependency>
             <Dependency>glm</Dependency>
@@ -30,9 +29,7 @@
         <Name>gource</Name>
         <RuntimeDependencies>
             <Dependency>glew</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>sdl-image</Dependency>
-            <Dependency>libpcre</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libsdl</Dependency>

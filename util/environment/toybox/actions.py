@@ -14,6 +14,6 @@ def build():
     autotools.make("toybox")
 
 def install():
-        shelltools.system("pwd")
-        shelltools.system("mkdir -p {}/bin/".format(get.installDIR()))
-        shelltools.system("install toybox {}/bin/toybox".format(get.installDIR()))
+    shelltools.system("pwd")
+    shelltools.system("mkdir -p {}/bin/".format(get.installDIR()))
+    shelltools.system("install toybox {}/bin/toybox".format(get.installDIR()))

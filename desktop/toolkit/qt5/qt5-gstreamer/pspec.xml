@@ -17,9 +17,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>qt5-quickcontrols2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>boost-devel</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>gstreamer-devel</Dependency>
@@ -36,8 +34,6 @@
             <Dependency>gstreamer</Dependency>
             <Dependency>gst-plugins-base</Dependency>
             <Dependency>mesa</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -51,7 +47,6 @@
         <Summary>Development files for qt5-gstreamer</Summary>
         <RuntimeDependencies>
             <Dependency release="current">qt5-gstreamer</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
@@ -74,3 +69,4 @@
         </Update>
     </History>
 </INARY>
+

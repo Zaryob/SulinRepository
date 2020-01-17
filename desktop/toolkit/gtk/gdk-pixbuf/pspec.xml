@@ -16,7 +16,6 @@
         <Archive sha1sum="9396bd89c4647d8db2d02ef93c20c17dbce359d8" type="tarxz">mirrors://gnome/gdk-pixbuf/2.40/gdk-pixbuf-2.40.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>tiff</Dependency>
@@ -25,15 +24,16 @@
             <Dependency>libpng-devel</Dependency>
             <Dependency>jasper-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>gdk-pixbuf</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>tiff</Dependency>
+            <Dependency>libxkbcommon</Dependency>
             <Dependency>jasper</Dependency>
             <Dependency>shared-mime-info</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
@@ -56,7 +56,8 @@
         <Summary>Development files for gdk-pixbuf</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gdk-pixbuf</Dependency>
-            <Dependency>glib2</Dependency>
+            <Dependency>wayland-protocols-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/gdk-pixbuf-csource</Path>
@@ -82,6 +83,7 @@
         <BuildDependencies>
             <Dependency>tiff-32bit</Dependency>
             <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>libxkbcommon-32bit</Dependency>
             <Dependency>glib2-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
             <Dependency>libpng-32bit</Dependency>
@@ -95,6 +97,7 @@
             <Dependency>libpng-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
             <Dependency>jasper-32bit</Dependency>
+            <Dependency>libxkbcommon-32bit</Dependency>
             <Dependency>libjpeg-turbo-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -106,6 +109,13 @@
         </Provides>
     </Package>
     <History>
+        <Update release="4">
+            <Date>2019-12-15</Date>
+            <Version>2.40.0</Version>
+            <Comment>Eksik bağımlılık giderildi</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2019-11-26</Date>
             <Version>2.40.0</Version>

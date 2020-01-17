@@ -13,7 +13,6 @@
         <Description>This wrapper attempts to provide a perlish interface while remaining as true as possible to the underlying C API, so that any reference materials you can find on using GLib may still apply to using the libraries from perl. This module also provides facilities for creating wrappers for other GObject-based libraries. The "SEE ALSO" section contains pointers to all sorts of good information.</Description>
         <Archive sha1sum="3b448b18e58fca06c0829f0186f859d2019cec29" type="targz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-1.329.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Log-Agent</Dependency>
             <Dependency>perl-ExtUtils-PkgConfig</Dependency>
             <Dependency>perl-ExtUtils-Depends</Dependency>
@@ -24,7 +23,6 @@
         <Name>perl-Glib</Name>
         <RuntimeDependencies>
             <Dependency>perl-Log-Agent</Dependency>
-            <Dependency>perl</Dependency>
             <Dependency>perl-ExtUtils-PkgConfig</Dependency>
             <Dependency>perl-ExtUtils-Depends</Dependency>
         </RuntimeDependencies>

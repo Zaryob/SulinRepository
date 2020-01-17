@@ -30,7 +30,7 @@
        </Files>
     </Package>
     <Package>
-	<Name>libmng-devel</Name>
+        <Name>libmng-devel</Name>
         <RuntimeDependencies>
             <Dependency>libmng</Dependency>
         </RuntimeDependencies>

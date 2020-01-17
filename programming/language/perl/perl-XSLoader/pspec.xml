@@ -15,7 +15,6 @@
         <Description>This module defines a standard simplified interface to the dynamic linking mechanisms available on many platforms. Its primary purpose is to implement cheap automatic dynamic loading of Perl modules.</Description>
         <Archive sha1sum="177b018f11088dbe10d87cf19ef7a39b960c79c6" type="targz">https://cpan.metacpan.org/authors/id/S/SA/SAPER/XSLoader-0.24.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-Test-Simple</Dependency>
         </BuildDependencies>
     </Source>
@@ -23,7 +22,6 @@
     <Package>
         <Name>perl-XSLoader</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
             <Dependency>perl-GSSAPI</Dependency>
             <Dependency>perl-Digest-HMAC</Dependency>
         </RuntimeDependencies>

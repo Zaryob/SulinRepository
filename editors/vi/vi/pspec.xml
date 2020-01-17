@@ -11,9 +11,8 @@
         <License>custom:ex</License>
         <Summary>Basic vi editor from VIM source.</Summary>
         <Description>Basic vi editor from VIM source. This comes from same source with ViM package, but it contains only ncurses based vim.</Description>
-        <Archive sha1sum="8819f67ac6b9cd47cd39c87a53a2ab00de63029a" type="targz">https://github.com/vim/vim/archive/v8.1.1846/vim-8.1.1846.tar.gz</Archive>
+        <Archive sha1sum="90449202244be0481e31c233635b7036e40160a9" type="targz">https://github.com/vim/vim/archive/v8.2.0000.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -21,7 +20,6 @@
         <Name>vi</Name>
         <IsA>app:console</IsA>
         <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
         </RuntimeDependencies>
         <Conflicts>
             <Package>gvim</Package>
@@ -47,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-12-12</Date>
+            <Version>8.2.0000</Version>
+            <Comment>Automatic version upgrade.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-07</Date>
             <Version>8.1.1846</Version>

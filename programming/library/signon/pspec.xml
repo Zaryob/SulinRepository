@@ -21,7 +21,6 @@
         <Name>signon</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>doxygen</Dependency>
         </RuntimeDependencies>
         <Files>

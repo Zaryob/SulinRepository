@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtevent</Name>
+        <Homepage>http://tevent.samba.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3+</License>
+        <IsA>library</IsA>
+        <Summary>Event system based on the talloc memory management library</Summary>
+        <Description>libtevent is an event system based on the talloc memory management library. It is the core event system used in Samba. Tevent has support for many event types, including timers, signals, and the classic file descriptor events.</Description>
+        <Archive sha1sum="b3d40917a253c0e082f75eb7e70b5ce1b6c04b7e" type="targz">https://www.samba.org/ftp/tevent/tevent-0.10.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gdb-devel</Dependency>
+            <Dependency>libtalloc-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libtevent</Name>
+        <RuntimeDependencies>
+            <Dependency>libtalloc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtevent-devel</Name>
+        <Summary>Development files for libtevent</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtevent</Dependency>
+            <Dependency>libtalloc-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-12</Date>
+            <Version>0.10.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

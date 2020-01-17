@@ -22,9 +22,6 @@
         <Name>vsftpd</Name>
         <RuntimeDependencies>
             <Dependency>libnsl</Dependency>
-            <Dependency>libcap</Dependency>
-            <Dependency>openssl</Dependency>
-            <Dependency>pam</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

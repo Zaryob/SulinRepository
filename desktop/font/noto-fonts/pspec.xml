@@ -1,0 +1,56 @@
+<INARY>
+    <Source>
+        <Name>noto-fonts</Name>
+        <Homepage>http://www.google.com/get/noto</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <IsA>data:font</IsA>
+        <Summary>Google Noto TTF fonts</Summary>
+        <Description>Noto fonts are open source. All Noto fonts are published under the SIL Open Font License, Version 1.1. Language data and some sample texts are from the Unicode CLDR project.</Description>
+        <Archive sha1sum="8f6e4bc8f883a315326669e817ba978bfbd6a6ae">https://github.com/googlefonts/noto-fonts/archive/v2.7-NotoSlimVF.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>noto-fonts</Name>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/fonts/conf.d/66-noto-serif.conf">66-noto-serif.conf</AdditionalFile>
+            <AdditionalFile target="/etc/fonts/conf.d/66-noto-sans.conf">66-noto-sans.conf</AdditionalFile>
+            <AdditionalFile target="/etc/fonts/conf.d/66-noto-mono.conf">66-noto-mono.conf</AdditionalFile>
+        </AdditionalFiles>
+        <Files>
+            <Path fileType="config">/etc/fonts</Path>
+            <Path fileType="data">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/fonts/noto</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>noto-fonts-extra</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/fonts/noto/*Condensed*.ttf</Path>
+            <Path fileType="doc">/usr/share/fonts/noto/*SemiBold*.ttf</Path>
+            <Path fileType="doc">/usr/share/fonts/noto/*Extra*.ttf</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>noto-fonts-ttf-croscore</Name>
+        <Summary>Chrome OS core fonts</Summary>
+        <Files>
+            <Path fileType="data">/usr/share/fonts/croscore/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>2.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

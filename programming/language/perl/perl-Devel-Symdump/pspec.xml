@@ -16,13 +16,11 @@
         <Description>perl-Devel-Symdump is a Perl module that dumps symbol names or the symbol table.</Description>
         <Archive sha1sum="1d1de227c3abbb4b41afa0ba08b55647d6513167" type="targz">http://www.cpan.org/authors/id/A/AN/ANDK/Devel-Symdump-2.18.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>perl-Devel-Symdump</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

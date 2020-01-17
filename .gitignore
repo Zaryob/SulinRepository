@@ -11,3 +11,9 @@ MYMETA.*
 çöp/
 *~Updated upstream
 *~Stashed changes
+nohup.out
+sedrSmcUs
+
+*.xml~
+
+*.py~

@@ -16,7 +16,6 @@
         <Archive sha1sum="78455583a34ccd209edc1aba5538926df4faf47f" type="tarbz2">mirrors://xorg/individual/driver/xf86-input-elographics-1.4.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xorg-server-devel</Dependency>
-            <Dependency>util-macros</Dependency>
         </BuildDependencies>
     </Source>
 

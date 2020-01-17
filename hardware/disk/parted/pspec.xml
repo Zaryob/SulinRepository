@@ -14,20 +14,14 @@
         <Description>The GNU Parted program allows you to create, destroy, resize, move, and copy hard disk partitions. Parted can be used for creating space for new operating systems, reorganizing disk usage, and copying data to new hard disks.</Description>
         <Archive sha1sum="e639500f9587cf6fa9b0dbc08e5e760244614595" type="tarxz">https://ftp.gnu.org/gnu/parted/parted-3.3.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>device-mapper-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>parted</Name>
         <RuntimeDependencies>
-            <Dependency>libutil-linux</Dependency>
-            <Dependency>ncurses</Dependency>
             <Dependency>device-mapper</Dependency>
-            <Dependency>readline</Dependency>
-            <Dependency>util-linux</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

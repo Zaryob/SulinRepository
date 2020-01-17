@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <PartOf>system.base</PartOf>
         <Summary>A set of tools for manipulatig extended attributes on filesystem objects.</Summary>
-	<Description>The attr package contains utilities to administer the extended attributes on filesystem objects.</Description>
+        <Description>The attr package contains utilities to administer the extended attributes on filesystem objects.</Description>
         <!-- @@@savannah attr -->
         <Archive sha1sum="d7c88cb5db51c5e255a511b0a15e832fcdda5b4f" type="targz">http://download.savannah.nongnu.org/releases/attr/attr-2.4.48.tar.gz</Archive>
         <BuildDependencies>
@@ -68,10 +68,10 @@
         </Files>
     </Package>
     <Package>
-      	<Name>attr-docs</Name>
-	      <IsA>data:doc</IsA>
+        <Name>attr-docs</Name>
+        <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
-	      <Summary>Documentation for attr package.</Summary>
+        <Summary>Documentation for attr package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">attr</Dependency>
         </RuntimeDependencies>
@@ -81,10 +81,10 @@
     </Package>
 
     <Package>
-      	<Name>attr-pages</Name>
-	      <IsA>data:doc</IsA>
+        <Name>attr-pages</Name>
+        <IsA>data:doc</IsA>
         <PartOf>system.doc</PartOf>
-	      <Summary>Man pages for attr package.</Summary>
+        <Summary>Man pages for attr package.</Summary>
         <RuntimeDependencies>
             <Dependency release="current">attr</Dependency>
         </RuntimeDependencies>

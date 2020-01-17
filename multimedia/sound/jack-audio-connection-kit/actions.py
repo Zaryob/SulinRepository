@@ -29,4 +29,4 @@ def install():
 
     shelltools.chmod("%s/usr/lib/jack/*.so*" % get.installDIR(), 0o755)
 
-    inarytools.dodoc("ChangeLog", "README*", "TODO")
+    inarytools.dodoc("README*")

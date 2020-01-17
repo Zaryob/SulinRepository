@@ -20,7 +20,7 @@ args = 'BRANDING="Sulin" \
             LIBEXECDIR=/usr/lib/openrc \
             BINDIR=/usr/bin \
             SBINDIR=/sbin \
-	    INCLUDEDIR=/usr/include \
+            INCLUDEDIR=/usr/include \
             SYSCONFDIR=/etc'
 
 

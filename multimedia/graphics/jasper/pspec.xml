@@ -21,9 +21,9 @@
         <Name>jasper</Name>
         <RuntimeDependencies>
             <Dependency>libjpeg-turbo</Dependency>
-	    <Dependency>mesa</Dependency>
-	    <Dependency>mesa-glu</Dependency>
-	    <Dependency>freeglut</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>freeglut</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -42,7 +42,7 @@
         </Files>
     </Package>
     <Package>
-      	<Name>jasper-32bit</Name>
+        <Name>jasper-32bit</Name>
         <PartOf>emul32</PartOf>
         <BuildType>emul32</BuildType>
         <BuildDependencies>

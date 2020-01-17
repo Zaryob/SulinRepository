@@ -17,16 +17,12 @@
         <Description>LVM2 includes all of the support for handling read/write operations physical and logical volumes.</Description>
         <Archive sha1sum="1e04b3e70a2eaec7c037b0b07f063eacc434d3f2" type="targz">ftp://sources.redhat.com/pub/lvm2/LVM2.2.02.173.tgz</Archive>
         <BuildDependencies>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>eudev-devel</Dependency>
-            <Dependency>autoconf-archive</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>device-mapper</Name>
         <RuntimeDependencies>
-            <Dependency>eudev</Dependency>
         </RuntimeDependencies>
         <Summary>Light-weight kernel component can support user-space tools for logical volume management</Summary>
         <Description>Device-mapper includes the driver enables the definition of new block devices composed of ranges of sectors of existing devices to define disk partitions or logical volumes.</Description>
@@ -54,7 +50,6 @@
         <Description>Device-mapper-devel contains files needed to develop applications that use the device-mapper libraries.</Description>
         <RuntimeDependencies>
             <Dependency release="current" >device-mapper</Dependency>
-	    <Dependency>eudev-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libdevmapper.h</Path>
@@ -99,8 +94,6 @@
         <RuntimeDependencies>
             <Dependency release="current">device-mapper</Dependency>
             <Dependency release="current">device-mapper-event</Dependency>
-            <Dependency>libutil-linux</Dependency>
-            <Dependency>eudev</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/sbin/lvmconf</Path>
@@ -144,7 +137,6 @@
         <Summary>Development libraries and headers</Summary>
         <Description>This package contains files needed to develop applications that use the lvm2 libraries.</Description>
         <RuntimeDependencies>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency release="current">lvm2</Dependency>
             <Dependency release="current">device-mapper-devel</Dependency>
             <Dependency release="current">device-mapper-event-devel</Dependency>

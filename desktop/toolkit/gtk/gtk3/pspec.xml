@@ -14,7 +14,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>The GIMP Toolkit version 3</Summary>
         <Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-	<Archive sha1sum="daa1657db7716ff53c500de679dfbd1d965d8010" type="tarbz2">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.12/gtk-3.24.12.tar.bz2</Archive>
+        <Archive sha1sum="728a64ef5ff8061b86db7f78db62f597b820c870" type="tarbz2">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.13/gtk-3.24.13.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
@@ -32,6 +32,7 @@
             <Dependency>libXcursor-devel</Dependency>
             <Dependency>libXdamage-devel</Dependency>
             <Dependency>libXinerama-devel</Dependency>
+            <Dependency>colord-devel</Dependency>
             <Dependency>wayland-cursor</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>at-spi2-core-devel</Dependency>
@@ -45,7 +46,6 @@
     <Package>
         <Name>gtk3</Name>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libepoxy</Dependency>
             <Dependency>atk</Dependency>
@@ -59,6 +59,7 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>libXcursor</Dependency>
+            <Dependency>colord</Dependency>
             <Dependency>libXdamage</Dependency>
             <Dependency>libXinerama</Dependency>
             <Dependency>at-spi2-atk</Dependency>
@@ -78,7 +79,6 @@
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
-        <!-- Use Clearlooks as default theme for now until native Oxygen GTK style is ready -->
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/gtk-3.0/settings.ini">settings.ini</AdditionalFile>
         </AdditionalFiles>
@@ -92,7 +92,6 @@
         <Summary>GTK demo application</Summary>
         <RuntimeDependencies>
             <Dependency release="current">gtk3</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libepoxy</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
@@ -121,7 +120,6 @@
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXi-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libepoxy-devel</Dependency>
             <Dependency>libXfixes-devel</Dependency>
@@ -134,6 +132,7 @@
             <Dependency>at-spi2-atk-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libXtst-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -199,6 +198,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-01-09</Date>
+            <Version>3.24.13</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-27</Date>
             <Version>3.24.12</Version>

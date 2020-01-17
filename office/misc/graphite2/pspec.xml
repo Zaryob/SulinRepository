@@ -14,7 +14,6 @@
         <Description>Graphite is a project within SIL's scripts and software dev groups to provide cross-platform rendering for complex writing systems.</Description>
         <Archive sha1sum="0693e9eef87edf1792db247dd38794211666a1b9" type="targz">mirrors://sourceforge/silgraphite/graphite2-1.3.9.tgz</Archive>
         <BuildDependencies>
-           <Dependency>cmake</Dependency>
            <Dependency>freetype-devel</Dependency>
         </BuildDependencies>
     </Source>

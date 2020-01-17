@@ -17,15 +17,12 @@
         <Description>hunspell spell checker is an improved replacement for myspell in Openoffice.org. It is also used in Firefox and Thunderbird as spell checker.</Description>
         <Archive sha1sum="e9099d3c261cc388e067e7f9a86acd97c8417b0e" type="targz">https://github.com/hunspell/hunspell/files/2573619/hunspell-1.7.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ncurses-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>hunspell</Name>
         <RuntimeDependencies>
-            <Dependency>ncurses</Dependency>
-	    <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

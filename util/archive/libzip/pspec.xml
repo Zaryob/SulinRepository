@@ -14,14 +14,12 @@
         <Description>libzip is a C library for reading, creating and modifying zip archives. Files can be added from data buffers, files or compressed data copied directly from other zip archives.</Description>
         <Archive sha1sum="1389d3836bbec27623a549a8e9162b9b2dac115d" type="targz">https://nih.at/libzip/libzip-1.5.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libzip</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -35,7 +33,6 @@
         <Name>libzip-devel</Name>
         <Summary>Development files for libzip</Summary>
         <RuntimeDependencies>
-            <Dependency>zlib-devel</Dependency>
             <Dependency release="current">libzip</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -12,35 +12,23 @@
         <IsA>app:console</IsA>
         <Summary>Network connection manager powered by D-Bus and UDEV</Summary>
         <Description>NetworkManager attempts to keep an active network connection available at all times.</Description>
-        <Archive sha1sum="57839dbf3baaee868f5b01f81b045ebd4577aa7c" type="tarxz">https://download.gnome.org/sources/NetworkManager/1.20/NetworkManager-1.20.2.tar.xz</Archive>
+        <Archive sha1sum="30ba56d6af47d6a8d432be4b490858b4825ac710">https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/1.23.0-dev/NetworkManager-1.23.0-dev.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>curl-devel</Dependency>
             <Dependency>libpsl-devel</Dependency>
             <Dependency>jansson-devel</Dependency>
-            <Dependency>audit-devel</Dependency>
-            <Dependency>intltool</Dependency>
             <Dependency>ppp-devel</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>newt-devel</Dependency>
-            <Dependency>nspr-devel</Dependency>
             <Dependency>libnl-devel</Dependency>
             <Dependency>bluez-libs-devel</Dependency>
             <Dependency>elogind-devel</Dependency>
             <Dependency>iptables-devel</Dependency>
             <Dependency>wpa_supplicant</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>libndp-devel</Dependency>
             <Dependency>libmm-glib-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>polkit-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>libgudev-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
             <Dependency>ConsoleKit-devel</Dependency>
             <Dependency>python3-pygobject3</Dependency>
-            <Dependency>libxslt-devel</Dependency>
         </BuildDependencies>
         <Patches>
         </Patches>
@@ -49,17 +37,9 @@
     <Package>
         <Name>NetworkManager</Name>
         <RuntimeDependencies>
-            <Dependency>curl</Dependency>
-            <Dependency>eudev</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>jansson</Dependency>
-            <Dependency>nspr</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>polkit</Dependency>
             <Dependency>libpsl</Dependency>
-            <Dependency>readline</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>libutil-linux</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>audit</Dependency>
             <Dependency>elogind</Dependency>
@@ -104,22 +84,16 @@
             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/NetworkManager">NetworkManager.confd</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/NetworkManager.conf">tmpfiles.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/NetworkManager/NetworkManager.conf">NetworkManager.conf</AdditionalFile>
-            <AdditionalFile owner="root" permission="0755" target="/usr/sbin/migrate-scom-network-profiles">migrate-scom-network-profiles</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/polkit-1/localauthority/10-vendor.d/01-org.freedesktop.NetworkManager.settings.modify.system.pkla">gentoo/01-org.freedesktop.NetworkManager.settings.modify.system.pkla</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/polkit-1/rules.d/10-vendor.d/01-org.freedesktop.ModemManager1.rules">01-org.freedesktop.ModemManager1.rules</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/polkit-1/rules.d/10-vendor.d/01-org.freedesktop.NetworkManager.settings.modify.system.rules">01-org.freedesktop.NetworkManager.settings.modify.system.rules</AdditionalFile>
         </AdditionalFiles>
-        <Provides>
-            <SCOM script="service.py">System.Service</SCOM>
-        </Provides>
     </Package>
 
     <Package>
         <Name>NetworkManager-devel</Name>
         <Summary>Development files for NetworkManager</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
             <Dependency release="current">NetworkManager</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -129,7 +103,17 @@
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2019-12-15</Date>
+            <Version>1.23</Version>
+            <Comment>Gereksiz scom servisi silindi.</Comment>
+            <Requires>
+                <Action package="NetworkManager">systemRestart</Action>
+            </Requires>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+	<Update release="1">
             <Date>2019-09-18</Date>
             <Version>1.20.2</Version>
             <Comment>First release</Comment>

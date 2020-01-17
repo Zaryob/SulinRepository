@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dbus-c++</Name>
+        <Homepage>http://sourceforge.net/projects/dbus-cplusplus/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>C++ bindings for DBus library</Summary>
+        <Description>dbus-c++ attempts to provide a C++ API for D-BUS. The library has a glib/gtk and an Ecore mainloop integration. It also offers an optional own main loop.</Description>
+        <Archive sha1sum="2c0ab768c411d6204eeaa815abb9eecc54f82b2f" type="targz">https://github.com/andreas-volz/dbus-cplusplus/archive/v0.9.1pw.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+
+        <Patches>
+            <Patch>opensuse.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dbus-c++</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>dbus-c++-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">dbus-c++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>0.9.1pw</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
+        <Update release="1">
+            <Date>2019-09-29</Date>
+            <Version>0.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

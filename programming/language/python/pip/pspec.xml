@@ -17,11 +17,9 @@
     <Package>
         <Name>python3-pip</Name>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pip</Path>

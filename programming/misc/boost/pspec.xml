@@ -16,23 +16,16 @@
         <Description>Boost provides free portable peer-reviewed C++ libraries. The emphasis is on portable libraries which work well with the C++ Standard Library.</Description>
         <Archive sha1sum="9bd3d7c6e9e142d0ae4d73d0d7654bd09ad7d7c0" type="zip">https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.zip</Archive>
         <BuildDependencies>
-            <Dependency>bzip2</Dependency>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
             <!-- libsxlt is needed for xsltproc -->
-            <Dependency>libxslt</Dependency>
             <!--Dependency>openmpi-devel</Dependency-->
         </BuildDependencies>
     </Source>
     <Package>
         <Name>boost</Name>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>bzip2</Dependency>
             <Dependency>icu4c</Dependency>
-            <Dependency>libgcc</Dependency>
             <!--Dependency>openmpi</Dependency-->
         </RuntimeDependencies>
         <Files>
@@ -59,7 +52,6 @@
         <Summary>a C++ library which enables seamless interoperability between C++ and the Python</Summary>
         <RuntimeDependencies>
             <Dependency release="current">boost</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libboost_python27.so*</Path>
@@ -71,7 +63,6 @@
         <Summary>Headers and library documentation for boosta C++ library which enables seamless interoperability between C++ and the Python3</Summary>
         <RuntimeDependencies>
             <Dependency release="current">boost</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libboost_python37.so*</Path>

@@ -14,12 +14,9 @@
         <Description>GTK+ based fast and lightweight IDE</Description>
         <Archive sha1sum="896c15d87a177b63342c1463f4ed6a56aa09c6d5" type="targz">https://download.geany.org/geany-1.36.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>intltool</Dependency>
             <Dependency>doxygen</Dependency>
             <Dependency>python3-lxml</Dependency>
-            <Dependency>libgcc</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,8 +27,6 @@
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

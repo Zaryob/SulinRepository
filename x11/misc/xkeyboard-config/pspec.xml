@@ -15,10 +15,7 @@
         <Description>xkeyboard-config aims to provide consistent and well-structured X keyboard configuration data for X Window System implementations.</Description>
         <Archive sha1sum="fe36dc8259571721776f885ba66060e0b5a0616c" type="tarbz2">mirrors://xorg/individual/data/xkeyboard-config/xkeyboard-config-2.20.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>intltool</Dependency>
-            <Dependency>xorg-proto</Dependency>
             <Dependency>xorg-app</Dependency>
-            <Dependency>libxslt-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -29,7 +26,6 @@
         <Name>xkeyboard-config</Name>
         <RuntimeDependencies>
             <Dependency>xorg-app</Dependency>
-            <Dependency>libxslt</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>

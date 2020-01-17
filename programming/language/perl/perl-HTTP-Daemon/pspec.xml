@@ -16,14 +16,12 @@
         <Description>Instances of the HTTP::Daemon class are HTTP/1.1 servers that listen on a socket for incoming requests.</Description>
         <Archive sha1sum="d3b7614d4b3be4b61d26011efe90026c955102a4" type="targz">http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Daemon-6.01.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>perl</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>perl-HTTP-Daemon</Name>
         <RuntimeDependencies>
-            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -9,6 +9,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
+    autotools.autoreconf("-vif")
     autotools.configure("--disable-static \
                          --enable-shared")
 

@@ -18,7 +18,6 @@
     <Package>
         <Name>rzip</Name>
         <RuntimeDependencies>
-            <Dependency>bzip2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

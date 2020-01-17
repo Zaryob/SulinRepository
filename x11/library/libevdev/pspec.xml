@@ -15,7 +15,6 @@
         <Description>Wrapper library for evdev devices</Description>
         <Archive sha1sum="94292b014f65bf4665db68ae997ed76c2e12a016" type="tarxz">https://www.freedesktop.org/software/libevdev/libevdev-1.5.6.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>check-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -26,7 +25,6 @@
     <Package>
         <Name>libevdev</Name>
         <RuntimeDependencies>
-<!--             <Dependency>acl</Dependency> -->
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
