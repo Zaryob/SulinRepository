@@ -11,10 +11,8 @@
         <IsA>app:gui</IsA>
         <Summary>GNU GRUB is a Multiboot boot loader.</Summary>
         <Description>GNU GRUB (short for GNU GRand Unified Bootloader) is a boot loader package from the GNU Project.</Description>
-        <Archive sha1sum="045e0fd93453c361da2a0a62ebe806c866cafd81" type="tarxz">ftp://alpha.gnu.org/gnu/grub/grub-2.04~rc1.tar.xz</Archive>
-        <Archive sha1sum="30797ba7a86fc32213b9ae994c9fa45f37d01170" type="gz">http://ftp.gnu.org/gnu/unifont/unifont-6.3.20131217/unifont-6.3.20131217.bdf.gz</Archive>
+        <Archive sha1sum="3ed21de7be5970d7638b9f526bca3292af78e0fc">https://ftp.gnu.org/gnu/grub/grub-2.04.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>freetype-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
             <Dependency>ncurses-devel</Dependency>
             <Dependency>xz-devel</Dependency>
@@ -23,22 +21,18 @@
             <Dependency>device-mapper-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">mkconfig-fix.patch</Patch>
-            <Patch level="1">sulin_name_and_initramfs.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>grub2</Name>
         <RuntimeDependencies>
-            <Dependency>freetype</Dependency>
             <Dependency>fuse2</Dependency>
             <Dependency>lvm2</Dependency>
             <Dependency>device-mapper</Dependency>
-            <Dependency>mtools</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="library">/usr/lib/grub/i386-pc/</Path>
             <Path fileType="library">/usr/lib/grub/x86_64-efi</Path>
@@ -56,10 +50,18 @@
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/default/grub">grub-defaults</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/grub.d/30_uefi-firmware">30_uefi-firmware</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/grub.d/10_linux">10_linux</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/update-grub">update-grub</AdditionalFile>
         </AdditionalFiles>
     </Package>
     <History>
+       <Update release="2">
+            <Date>2020-01-17</Date>
+            <Version>2.04</Version>
+            <Comment>Second release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
          <Update release="1">
             <Date>2020-01-09</Date>
             <Version>2.04_rc1</Version>
