@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 2.
-# See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+# Licensed under the GNU General Public License, version 3.
+# See the file http://www.gnu.org/licenses/gpl.txt
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 
 def setup():
-    autotools.configure("--disable-static\
-                         --with-system-lua\
-                         --enable-lua")
+    autotools.configure("--prefix=/usr --enable-animation")
+    inarytools.dosed("libtool", " -shared ", \
+                    " -Wl,--as-needed -shared ")
 
 def build():
     autotools.make()
