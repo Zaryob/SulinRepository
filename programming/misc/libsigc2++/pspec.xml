@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libsigc2++</Name>
+        <Homepage>http://libsigc.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Typesafe signal framework for C++</Summary>
+        <Description>libsigc++ is a library which implements a full callback system for use in widget libraries, abstract interfaces, and general programming.</Description>
+        <Archive sha1sum="9250f1c54d1985fb1a36c9650b963ecdae1227de">http://ftp.gnome.org/pub/gnome/sources/libsigc++/2.10/libsigc++-2.10.2.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>libsigc2++</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libsigc2++-devel</Name>
+        <Summary>Development files for libsigc++</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libsigc2++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/lib/sigc++*/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libsigc2++-docs</Name>
+        <Summary>Development documents for libsigc++</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/libsigc++/html</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-01-18</Date>
+            <Version>2.10.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
