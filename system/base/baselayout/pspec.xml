@@ -14,7 +14,7 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-        <Archive sha1sum="44b342017e59f65d2a65fd7a82f3ca3875fc40e2" type="targz">https://github.com/Zaryob/baselayout/archive/baselayout-2.13.tar.gz</Archive>
+        <Archive sha1sum="158f95c9a1cd12a42900483de095f38ee9887076">https://gitlab.com/sulinos/devel/baselayout/-/archive/2.14/baselayout-2.14.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -49,9 +49,6 @@
 
             <AdditionalFile owner="root" permission="0644" target="/etc/sysctl.conf">sysctl.conf</AdditionalFile>
 
-            <!-- Release file for Sulin, there's another in lsb-release package -->
-            <AdditionalFile owner="root" permission="0644" target="/etc/sulin-release">sulin-release</AdditionalFile>
-
             <!-- Should be dropped after switching to systemd as the only user is SCOM -->
         </AdditionalFiles>
         <Provides>
@@ -63,6 +60,13 @@
     </Package>
 
     <History>
+      <Update release="3">
+          <Date>2019-10-10</Date>
+          <Version>2.14</Version>
+          <Comment>s19 finished.</Comment>
+          <Name>Ali Rıza KESKİN</Name>
+          <Email>parduscix@yandex.ru</Email>
+      </Update>
       <Update release="2">
           <Date>2019-10-10</Date>
           <Version>2.13</Version>
