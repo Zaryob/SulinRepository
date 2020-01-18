@@ -6,13 +6,14 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 
 def setup():
+    shelltools.export("CFLAGS","")
+    shelltools.export("CXXFLAGS","")
+    shelltools.export("LDFLAGS","")
     autotools.configure("--disable-demos \
                          --disable-docs")
-    inarytools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
-    inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
-    inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
 
 def build():
     autotools.make()

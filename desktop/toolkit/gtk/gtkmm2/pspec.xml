@@ -56,6 +56,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-18</Date>
+            <Version>2.24.5</Version>
+            <Comment>Rebuild.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-09</Date>
             <Version>2.24.5</Version>
