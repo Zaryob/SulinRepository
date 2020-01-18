@@ -14,6 +14,9 @@ if get.buildTYPE()=="emul32":
 
 
 def setup():
+    shelltools.export("CFLAGS"," -DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS")
+    shelltools.export("CXXFLAGS","")
+    shelltools.export("LDFLAGS","")
     mesontools.meson_configure("-D broadway_backend=true  -Dcolord=yes -Denable-gtk-doc=false ")
 
 def build():

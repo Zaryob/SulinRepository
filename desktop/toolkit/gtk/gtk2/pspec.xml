@@ -13,7 +13,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>The GIMP Toolkit version 2</Summary>
         <Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-        <Archive sha1sum="c3d828135994a52cc9428a60175bd2b294656611" type="tarxz">mirrors://gnome/gtk+/2.24/gtk+-2.24.31.tar.xz</Archive>
+        <Archive sha1sum="c885ade62b06854590822c8eb906daf7dd15d90a" >http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz</Archive>
         <BuildDependencies>
             <!--Dependency>cups-devel</Dependency--><!--It was disabled to avoid circle-->
             <Dependency>libXi-devel</Dependency>
@@ -169,6 +169,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-04-12</Date>
+            <Version>2.24.32</Version>
+            <Comment>Upstream and rebuild.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>        
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.24.31</Version>
