@@ -1,0 +1,52 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libgdiplus</Name>
+        <Homepage>http://www.mono-project.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Library for using System.Drawing with Mono</Summary>
+        <Description>Libgdiplus is an open source implementation of the GDI+ API. This is part of the Mono project.</Description>
+        <Archive sha1sum="a3801ec92f21c60df2e382599af27e9645893a93" >https://github.com/mono/libgdiplus/archive/6.0.4.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgdiplus</Name>
+        <RuntimeDependencies>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>giflib</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>fontconfig</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-19</Date>
+            <Version>6.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

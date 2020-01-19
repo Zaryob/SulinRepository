@@ -1,0 +1,36 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dash</Name>
+        <Homepage>http://gondor.apana.org.au/~herbert/dash/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Small and fast POSIX-compliant shell</Summary>
+        <Description>DASH is a POSIX-compliant implementation of /bin/sh that aims to be as small as possible.</Description>
+        <Archive sha1sum="bcfe37148a26bf1a222660cf4b4f6c6b64e4c94c" type="targz">http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.10.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>dash</Name>
+        <Files>
+            <Path fileType="executable">/bin/dash</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-19</Date>
+            <Version>0.5.10.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

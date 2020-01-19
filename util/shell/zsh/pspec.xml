@@ -1,0 +1,37 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>zsh</Name>
+        <Homepage>http://www.zsh.org</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Powerful command line shell</Summary>
+        <Description>Zsh is a command interpreter (shell) which has command-line editing, built-in spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and a lots of other features.</Description>
+        <Archive sha1sum="b2fd47fdb878aa681edc974864e37baae9b0d6b7">http://deb.debian.org/debian/pool/main/z/zsh/zsh_5.7.1.orig.tar.xz</Archive>
+    </Source>
+    <!--Makefile içinden man ve doc kısmını elle sildim.-->
+    <Package>
+        <Name>zsh</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/zsh</Path>
+            <Path fileType="data">/usr/share/zsh</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
