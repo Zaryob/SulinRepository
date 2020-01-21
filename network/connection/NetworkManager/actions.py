@@ -11,26 +11,32 @@ from inary.actionsapi import shelltools
 def setup():
     shelltools.system("grep -rl '^#!.*python$' | xargs sed -i '1s/python/&3/'")
     shelltools.export("CXXFLAGS","-O2 -fPIC")
-    mesontools.meson_configure("--prefix /usr              \
-      --sysconfdir /etc          \
-      --localstatedir /var       \
-      -Djson_validation=false    \
-      -Dlibaudit=no              \
-      -Dlibpsl=false             \
-      -Dnmtui=true               \
-      -Dovs=true                 \
-      -Diwd=true                 \
-      -Dnm_cloud_setup=true      \
-      -Dbluez5_dun=true          \
-      -Debpf=true                \
-      -Dppp=true                 \
-      -Dselinux=false            \
-      -Dudev_dir=/lib/udev       \
-      -Dsession_tracking=elogind \
-      -Dmodem_manager=false      \
-      -Dsystemdsystemunitdir=no  \
-      -Dsystemd_journal=false    \
-      -Dqt=false")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh -enable-wifi --enable-ppp --enable-static --with-gnu-ld")
+    mesontools.meson_configure("-Dlibaudit=yes             \
+           -Dlibpsl=true              \
+           -Dnmtui=true               \
+           -Dovs=true                 \
+           -Dsession_tracking_consolekit=false    \
+           -Dmodify_system=true      \
+           -Dpolkit_agent=true       \
+           -Dselinux=false           \
+           -Dconfig_plugins_default=keyfile \
+           -Diwd=true                \
+           -Dnm_cloud_setup=true     \
+           -Dbluez5_dun=true         \
+           -Debpf=true               \
+           -Dvapi=true               \
+           -Ddocs=true               \
+           -Dmore_asserts=no         \
+           -Dmore_logging=false      \
+           -Dppp=true                 \
+           -Dselinux=false            \
+           -Dudev_dir=/lib/udev       \
+           -Dsession_tracking=elogind \
+           -Dmodem_manager=true       \
+           -Dsystemdsystemunitdir=no  \
+           -Dsystemd_journal=false    \
+           -Dqt=false                 ")
 
 def build():
     mesontools.ninja_build()
