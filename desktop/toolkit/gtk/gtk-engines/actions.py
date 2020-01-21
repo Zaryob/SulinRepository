@@ -8,14 +8,10 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 
 def setup():
-    autotools.configure("--prefix=/usr --enable-animation")
-    inarytools.dosed("libtool", " -shared ", \
-                    " -Wl,--as-needed -shared ")
+    autotools.configure("--prefix=/usr --enable-lua --with-system-lua")
 
 def build():
     autotools.make()
 
 def install():
     autotools.install()
-
-    inarytools.dodoc("ChangeLog", "COPYING", "NEWS", "README")
