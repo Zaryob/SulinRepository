@@ -1,0 +1,45 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>squashfs-tools</Name>
+        <Homepage>http://squashfs.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Userspace tools to create squashfs compressed filesystem</Summary>
+        <Description>Squashfs is a highly compressed read-only filesystem for Linux. This package contains the utilities for manipulating squashfs filesystems.</Description>
+        <Archive sha1sum="a42fdedb8a1543274592e317c437cafa54e02705">https://master.dl.sourceforge.net/project/squashfs/squashfs/squashfs4.4/squashfs4.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>lzo-devel</Dependency>
+            <Dependency>xz-devel</Dependency>
+	    <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>squashfs-tools</Name>
+        <RuntimeDependencies>
+            <Dependency>lzo</Dependency>
+            <Dependency>zlib</Dependency>
+	        <Dependency>xz</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-22</Date>
+            <Version>4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
