@@ -52,6 +52,7 @@
             <AdditionalFile owner="root" permission="0755" target="/etc/grub.d/30_uefi-firmware">30_uefi-firmware</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/grub.d/10_linux">10_linux</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/update-grub">update-grub</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/grub/unicode.pf2">unicode.pf2</AdditionalFile>
         </AdditionalFiles>
     </Package>
     <History>
