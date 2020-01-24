@@ -39,12 +39,12 @@ GRUB_DISABLE_RECOVERY=false
 GRUB_COLOR_NORMAL="white/black"
 GRUB_COLOR_HIGHLIGHT="black/white"
 
-GRUB_BACKGROUND="/usr/share/grub/background.png"
+#GRUB_BACKGROUND="/usr/share/grub/background.png"
 
 GRUB_FONT="/usr/share/grub/unicode.pf2"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-GRUB_THEME="/usr/share/grub/themes/starfield/theme.txt"
+#GRUB_THEME="/usr/share/grub/themes/starfield/theme.txt"
 #Possible locations
 #GRUB_THEME="/path/to/gfxtheme/theme.txt"
 # Uncomment to get a beep at GRUB start

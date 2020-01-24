@@ -7,10 +7,12 @@
 from inary.actionsapi import mesontools
 from inary.actionsapi import shelltools
 
-
+shelltools.export("CXXFLAGS","-O2 -fPIC")
+shelltools.export("CFLAGS","")
+shelltools.export("LDFLAGS","")
+    
 def setup():
     shelltools.system("grep -rl '^#!.*python$' | xargs sed -i '1s/python/&3/'")
-    shelltools.export("CXXFLAGS","-O2 -fPIC")
     shelltools.system("NOCONFIGURE=1 ./autogen.sh -enable-wifi --enable-ppp --enable-static --with-gnu-ld")
     mesontools.meson_configure("-Dlibaudit=yes             \
            -Dlibpsl=true              \
