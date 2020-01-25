@@ -13,7 +13,9 @@ def build():
     shelltools.cd("wpa_supplicant")
     shelltools.export("CXXFLAGS","")
     shelltools.export("CFLAGS","")
-    shelltools.export("LDFLAGS","")
+    shelltools.export("CFLAGS","-I/usr/include/openssl-1.0")
+    shelltools.export("LIB","-L/usr/lib/openssl-1.0")
+    shelltools.export("LIBS_p","-L/usr/lib/openssl-1.0")
     shelltools.export("PYTHON", "/usr/bin/python3")
 
     autotools.make("LIBDIR=/usr/lib BINDIR=/usr/bin")
