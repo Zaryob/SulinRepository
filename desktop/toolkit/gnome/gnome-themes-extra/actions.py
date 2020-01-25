@@ -8,11 +8,15 @@ from inary.actionsapi import autotools
 from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
 
+shelltools.export("CXXFLAGS","")
+shelltools.export("CFLAGS","")
+shelltools.export("LDFLAGS","")
+    
 def setup():
     shelltools.system("mkdir m4")
     shelltools.system("intltoolize")
     shelltools.system("autoreconf -fvi")
-    autotools.configure("--prefix=/usr")
+    autotools.configure("--prefix=/usr --disable-static")
 
 def build():
     autotools.make()

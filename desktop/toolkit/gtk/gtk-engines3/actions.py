@@ -6,12 +6,14 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 
+shelltools.export("CXXFLAGS","")
+shelltools.export("LDFLAGS","")
+shelltools.export("CFLAGS","")
+    
 def setup():
-    autotools.configure("--disable-static\
-                         --enable-animation")
-    inarytools.dosed("libtool", " -shared ", \
-                    " -Wl,--as-needed -shared ")
+    autotools.configure("--enable-animation --enable-lua --with-system-lua")
 
 def build():
     autotools.make()

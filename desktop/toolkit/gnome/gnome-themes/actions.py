@@ -8,7 +8,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 
 def setup():
-    autotools.configure("--enable-lua --with-system-lua")
+    autotools.configure("--enable-lua --with-system-lua --enable-gtk3")
 
 def build():
     autotools.make()
