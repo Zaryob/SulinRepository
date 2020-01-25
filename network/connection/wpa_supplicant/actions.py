@@ -11,27 +11,23 @@ from inary.actionsapi import get
 
 def build():
     shelltools.cd("wpa_supplicant")
-
-    #Enable syslog output
-    cflags = get.CFLAGS() + " -DCONFIG_DEBUG_SYSLOG"
-    shelltools.export("CFLAGS", cflags)
+    shelltools.export("CXXFLAGS","")
+    shelltools.export("CFLAGS","")
+    shelltools.export("LDFLAGS","")
     shelltools.export("PYTHON", "/usr/bin/python3")
 
-    autotools.make("V=1")
-    autotools.make("eapol_test")
+    autotools.make("LIBDIR=/usr/lib BINDIR=/usr/bin")
+    autotools.make("LIBDIR=/usr/lib BINDIR=/usr/bin eapol_test")
 
 def install():
     shelltools.cd("wpa_supplicant")
-
-    for bin in ["wpa_supplicant", "wpa_cli", "wpa_passphrase", "eapol_test"]:
-        inarytools.dosbin(bin)
-
-    # Install dbus files
-    inarytools.insinto("/usr/share/dbus-1/system-services", "dbus/*.service")
-    inarytools.insinto("/etc/dbus-1/system.d", "dbus/dbus-wpa_supplicant.conf", "wpa_supplicant.conf")
-
-    inarytools.doman("doc/docbook/*.5")
-    inarytools.doman("doc/docbook/*.8")
-    inarytools.newdoc("wpa_supplicant.conf", "wpa_supplicant.conf.example")
-
-    inarytools.dodoc("ChangeLog", "../COPYING", "eap_testing.txt", "../README", "todo.txt")
+    autotools.rawInstall('LIBDIR="/usr/lib" BINDIR="/usr/bin" DESTDIR={}'.format(get.installDIR()))
+    shelltools.system('install -Dm755 "eapol_test" "{}/usr/bin/eapol_test"'.format(get.installDIR()))
+    #dbus
+    shelltools.system('install -Dm644 "dbus/fi.w1.wpa_supplicant1.service" "{}/usr/share/dbus-1/system-services/fi.w1.wpa_supplicant1.service"'.format(get.installDIR()))
+    shelltools.system('install -Dm644 "dbus/dbus-wpa_supplicant.conf" "{}/etc/dbus-1/system.d/wpa_supplicant.conf"'.format(get.installDIR()))
+    shelltools.system('install -d {}/etc/dbus-1/system.d'.format(get.installDIR()))
+    shelltools.system('install -d {}/var/run/wpa_supplicant'.format(get.installDIR()))
+	
+	  
+	  
