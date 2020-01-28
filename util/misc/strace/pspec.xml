@@ -1,0 +1,43 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>strace</Name>
+        <Homepage>http://sourceforge.net/projects/strace/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Tracks and displays system calls associated with a running process</Summary>
+        <Description>strace intercepts and records the system calls called and received by a running process. strace can print a record of each system call, its arguments and its return value.</Description>
+        <Archive sha1sum="a73590b4489deb832d969a51850ce564677c7e46">https://github.com/strace/strace/releases/download/v5.4/strace-5.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libaio-devel</Dependency>
+	    <Dependency>libunwind-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>strace</Name>
+	<RuntimeDependencies>
+            <Dependency>libunwind</Dependency>
+	</RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-28</Date>
+            <Version>5.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
