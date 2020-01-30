@@ -1,0 +1,60 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>nmap</Name>
+        <Homepage>http://www.insecure.org/nmap/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>nmap</Icon>
+        <Summary>Utility for network exploration or security auditing</Summary>
+        <Description>Nmap is a utility for network exploration or security auditing.</Description>
+        <Archive sha1sum="71057361a0953bba5967dc0385de77f3eed792de">http://nmap.org/dist/nmap-7.70.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>subversion-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>lua-devel</Dependency>
+            <Dependency>apr-devel</Dependency>
+            <Dependency>gcc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>nmap</Name>
+        <IsA>app:console</IsA>
+        <RuntimeDependencies>
+            <Dependency>subversion</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>lua</Dependency>
+            <Dependency>apr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/ncat</Path>
+            <Path fileType="data">/usr/share/nmap</Path>
+            <Path fileType="data">/usr/share/nping</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/nmap.png">nmap.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-01-30</Date>
+            <Version>7.70</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

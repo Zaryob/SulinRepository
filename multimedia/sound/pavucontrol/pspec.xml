@@ -16,11 +16,11 @@
         <BuildDependencies>
             <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
-            <Dependency>libcanberra-gtk-devel</Dependency>
-            <Dependency>libsigc++-devel</Dependency>
+            <Dependency>libcanberra-gtk3-devel</Dependency>
+            <Dependency>libsigc2++-devel</Dependency>
             <Dependency>glibmm-devel</Dependency>
-            <Dependency>gtkmm2-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtkmm3-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -28,12 +28,12 @@
         <Name>pavucontrol</Name>
         <RuntimeDependencies>
             <Dependency>pulseaudio-libs</Dependency>
-            <Dependency>libcanberra-gtk</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libsigc++</Dependency>
             <Dependency>glibmm</Dependency>
-            <Dependency>gtkmm2</Dependency>
-            <Dependency>gtk2</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>gtk3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -44,6 +44,13 @@
     </Package>
 
     <History>
+		<Update release="2">
+            <Date>2020-01-28</Date>
+            <Version>4.0</Version>
+            <Comment>Recompile with 2tk3</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-08</Date>
             <Version>4.0</Version>
