@@ -1,0 +1,41 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-cffi</Name>
+        <Homepage>http://cffi.readthedocs.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Foreign Function Interface for Python calling C code</Summary>
+        <Description>Foreign Function Interface for Python calling C code</Description>
+        <Archive sha1sum="ad94c1b64570ec3016a945d4b226d527de81f9b9">https://files.pythonhosted.org/packages/2d/bf/960e5a422db3ac1a5e612cb35ca436c3fc985ed4b7ed13a1b4879006f450/cffi-1.13.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>    
+    </Source>
+
+    <Package>
+        <Name>python-cffi</Name>
+        <RuntimeDependencies>
+            <Dependency>python-pycparser</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-01</Date>
+            <Version>1.13.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

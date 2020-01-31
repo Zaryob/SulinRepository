@@ -1,0 +1,36 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-chardet</Name>
+        <Homepage>http://www.zope.org/Products/ZopeInterface/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>ZPL</License>
+        <IsA>library</IsA>
+        <Summary>zope.interface library</Summary>
+        <Description>Interfaces are objects that specify (document) the external behavior of objects that provide them.</Description>
+        <Archive sha1sum="4766fb07e700945a7085d073257f1f320d037ce8">https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-chardet</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="exectable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-31</Date>
+            <Version>3.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

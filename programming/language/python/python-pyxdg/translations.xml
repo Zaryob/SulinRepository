@@ -1,0 +1,8 @@
+
+<INARY>
+    <Source>
+        <Name>python-pyxdg</Name>
+        <Summary xml:lang="tr">Python için freedesktop.org standartları kütüphanesi</Summary>
+        <Description xml:lang="tr">PyXDG, freedesktop.org standartlarına erişmek için yazılmış bir Python kütüphanesidir.</Description>
+    </Source>
+</INARY>

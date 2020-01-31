@@ -4,14 +4,13 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
+from inary.actionsapi import pythonmodules
 from inary.actionsapi import inarytools
-import os
 
 def build():
-    os.system("make -C lib PREFIX=/usr  ")
-    os.system("make -C programs lz4 lz4c PREFIX=/usr")
+    pythonmodules.compile()
 
 def install():
-    os.system("make install")
+    pythonmodules.install()
 
-    inarytools.dodoc("LICENSE", "NEWS", "README.md")
+    inarytools.dodoc("LICENSE")

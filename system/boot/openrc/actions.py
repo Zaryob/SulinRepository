@@ -12,12 +12,14 @@ from inary.actionsapi import get
 shelltools.export("HOME", get.workDIR())
 
 args = 'BRANDING="Sulin" \
+            MKBASHCOMP=yes \
             MKSELINUX=no \
             MKTERMCAP=ncurses \
+            MKZSHCOMP=yes\
             PKG_PREFIX=""\
             LIBDIR=/usr/lib \
             SHLIBDIR=/usr/lib \
-            LIBEXECDIR=/usr/lib/openrc \
+            LIBEXECDIR=/usr/libexec/openrc \
             BINDIR=/usr/bin \
             SBINDIR=/sbin \
             INCLUDEDIR=/usr/include \

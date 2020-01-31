@@ -1,0 +1,35 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-pyxdg</Name>
+        <Homepage>http://freedesktop.org/wiki/Software/pyxdg</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A freedesktop.org standards library for Python</Summary>
+        <Description>PyXDG is a Python library to access freedesktop.org standarts.</Description>
+        <Archive sha1sum="904b336596167b8e4a829d77ec4107d5d2e200a6" type="targz">https://files.pythonhosted.org/packages/47/6e/311d5f22e2b76381719b5d0c6e9dc39cd33999adae67db71d7279a6d70f4/pyxdg-0.26.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-pyxdg</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-01</Date>
+            <Version>0.26</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
