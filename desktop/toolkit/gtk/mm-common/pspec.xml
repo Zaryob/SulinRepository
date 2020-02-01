@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mm-common</Name>
+        <Homepage>http://www.gtk.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <IsA>library</IsA>
+        <License>LGPLv2.1</License>
+        <PartOf>desktop.toolkit.gtk</PartOf>
+        <Summary>Common build files of the C++ bindings </Summary>
+        <Description>Common build files of the C++ bindings </Description>
+        <Archive sha1sum="1109b44f7c335b60bde7cd11030f5aa3f1349ccd">https://gitlab.gnome.org/GNOME/mm-common/-/archive/1.0.0/mm-common-1.0.0.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libsigc2++-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>mm-common</Name>
+        <RuntimeDependencies>
+            <Dependency>doxygen</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-02-01</Date>
+            <Version>0.9.12</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -7,18 +7,19 @@
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+import os
 
 def setup():
-    shelltools.export("CFLAGS","")
-    shelltools.export("CXXFLAGS","")
-    shelltools.export("LDFLAGS","")
-    autotools.configure("--disable-docs")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure("--enable-maintainer-mode --prefix=/usr")
 
 def build():
-    autotools.make()
+    _env=os.environ.copy()
+    os.environ.clear()
+    os.system("make")
+    os.environ.update(_env)
 
 def install():
     autotools.install()
 
-    #inarytools.removeDir("/usr/share/gtkmm-2.4")
-    inarytools.removeDir("/usr/share/devhelp")
+    inarytools.dodoc("ChangeLog","COPYING", "README")
