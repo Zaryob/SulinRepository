@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>C parser and AST generator written in Python</Summary>
         <Description>C parser and AST generator written in Python</Description>
-        <Archive sha1sum="ab03de505c6680048211326c074e2f3e5aa04c27" type="targz">https://github.com/eliben/pycparser/archive/release_v2.19.zip</Archive>
+        <Archive sha1sum="3c8845142c9065ae4407c166964b57bd34dde88d">https://github.com/eliben/pycparser/archive/release_v2.19.zip</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
         </BuildDependencies>
@@ -25,6 +25,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>

@@ -15,6 +15,7 @@ WorkDir = "zope.interface-%s" % get.srcVERSION()
 
 def install():
     pythonmodules.install()
+    pythonmodules.install(pyVer="3")
 
     pythonmodules.fixCompiledPy()
 

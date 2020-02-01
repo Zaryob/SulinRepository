@@ -9,8 +9,10 @@ from inary.actionsapi import inarytools
 
 def build():
     pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 def install():
     pythonmodules.install()
+    pythonmodules.install(pyVer="3")
 
     inarytools.dodoc("LICENSE", "README.*")

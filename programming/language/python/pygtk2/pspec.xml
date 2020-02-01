@@ -2,7 +2,7 @@
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>python-gtk2</Name>
+        <Name>pygtk2</Name>
         <Homepage>http://www.pygtk.org</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
@@ -23,10 +23,14 @@
             <Dependency>python-numpy</Dependency>
             <Dependency>python-cairo-devel</Dependency>
         </BuildDependencies>
+        <Patches>
+			<Patch>fix-leaks-of-pango-objects.patch</Patch>
+			<Patch>python27.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
-        <Name>python-gtk2</Name>
+        <Name>pygtk2</Name>
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
@@ -42,7 +46,7 @@
     </Package>
 
     <Package>
-        <Name>python-gtk2-demo</Name>
+        <Name>pygtk2-demo</Name>
         <IsA>app:gui</IsA>
         <Summary>Demo applications for python-gtk</Summary>
         <RuntimeDependencies>
@@ -56,7 +60,7 @@
     </Package>
 
     <Package>
-        <Name>python-gtk2-docs</Name>
+        <Name>pygtk2-docs</Name>
         <IsA>data:doc</IsA>
         <Summary>Reference documents for python-gtk</Summary>
         <RuntimeDependencies>
@@ -68,7 +72,7 @@
     </Package>
 
     <Package>
-        <Name>python-gtk2-devel</Name>
+        <Name>pygtk2-devel</Name>
         <Summary>Development files for python-gtk</Summary>
         <RuntimeDependencies>
             <Dependency release="current">python-gtk2</Dependency>

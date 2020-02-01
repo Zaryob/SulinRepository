@@ -28,6 +28,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>

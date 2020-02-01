@@ -10,7 +10,9 @@ from inary.actionsapi import get
 
 def setup():
     pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 def install():
     pythonmodules.install()
+    pythonmodules.install(pyVer="3")
 

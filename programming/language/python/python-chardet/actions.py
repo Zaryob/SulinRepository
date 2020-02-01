@@ -13,6 +13,7 @@ shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 
 
 def install():
+    pythonmodules.install(pyVer="3")
     pythonmodules.install()
 
     pythonmodules.fixCompiledPy()

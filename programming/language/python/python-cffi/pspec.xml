@@ -25,6 +25,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="library">/usr/lib/python3.7</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>

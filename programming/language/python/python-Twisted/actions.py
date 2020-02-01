@@ -15,4 +15,5 @@ WorkDir = "twisted-twisted-%s" % (get.srcVERSION())
 
 def install():
     pythonmodules.install()
+    pythonmodules.install(pyVer="3")
 

@@ -8,9 +8,11 @@ from inary.actionsapi import pythonmodules
 from inary.actionsapi import inarytools
 
 def build():
+    pythonmodules.compile(pyVer="3")
     pythonmodules.compile()
 
 def install():
+    pythonmodules.install(pyVer="3")
     pythonmodules.install()
 
     inarytools.dodoc("LICENSE")

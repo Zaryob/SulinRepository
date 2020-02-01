@@ -8,25 +8,19 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import get
-
-WorkDir = "pygtk-%s" % (get.srcVERSION())
+import os
 
 def setup():
-    shelltools.unlink("py-compile" )
-    shelltools.sym("/bin/true", "%s/py-compile" % get.curDIR())
-
-    autotools.configure("PYTHON=/usr/bin/python2 \
-                         --prefix=/usr \
-                         --enable-thread \
-                         --enable-numpy")
-
-    shelltools.touch("%s/style.css" % get.curDIR())
-    inarytools.dosed("docs/Makefile", "CSS_FILES = .*", "CSS_FILES = %s/style.css" % get.curDIR())
-
+    shelltools.system("sed -i -e 's#env python$#env python2#' examples/pygtk-demo/{,demos/}*.py")
+    shelltools.export("PYTHON","/usr/bin/python2")
+    autotools.configure("--prefix=/usr")
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
 def build():
-    autotools.make()
+    _env=os.environ.copy()
+    os.environ.clear()
+    os.system("make")
+    os.environ.update(_env)
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

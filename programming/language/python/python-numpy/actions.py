@@ -23,7 +23,4 @@ def build():
 
 def install():
     pythonmodules.install(NUMPY_FCONFIG)
-
-    inarytools.remove("/usr/bin/f2py")
-    inarytools.removeDir("/usr/share")
     inarytools.dodoc("LICENSE.txt", "THANKS.txt")
