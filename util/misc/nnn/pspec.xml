@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>nnn</Name>
+        <Homepage>https://github.com/jarun/nnn</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Terminal file manager</Summary>
+        <Description>The missing terminal file manager for X. </Description>
+        <Archive sha1sum="17f41def0cde1485eb2b3ebdeee65d0457c5f0e7">https://github.com/jarun/nnn/archive/v2.9.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>nnn</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+
+        <Update release="1">
+            <Date>2020-01-28</Date>
+            <Version>2.9</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

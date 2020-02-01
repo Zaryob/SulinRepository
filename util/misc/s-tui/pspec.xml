@@ -1,0 +1,39 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>s-tui</Name>
+        <Homepage>https://github.com/amanusk/s-tui</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>ZPL</License>
+        <IsA>library</IsA>
+        <Summary>Stress Terminal UI stress test and monitoring tool</Summary>
+        <Description>Stress Terminal UI stress test and monitoring tool</Description>
+        <Archive sha1sum="db83ecdfe90bd41605a795fba24cfc76be4b2c8b">https://files.pythonhosted.org/packages/db/45/8f9d63838bf91e6d5dadd90f3c2da92d340b0a2ef735b8df75af51027fe2/s-tui-1.0.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>s-tui</Name>
+        <RuntimeDependencies>
+            <Dependency>python-urwid</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="exectable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-02</Date>
+            <Version>1.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
