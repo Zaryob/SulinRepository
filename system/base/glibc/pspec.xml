@@ -37,7 +37,7 @@
             <Path fileType="library">/usr/lib/*.so</Path>
             <Path fileType="library">/usr/lib/audit</Path>
             <Path fileType="library">/usr/lib/gconv</Path>
-            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib/misc</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/i18n/charmaps</Path>
