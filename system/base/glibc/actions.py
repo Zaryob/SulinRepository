@@ -17,17 +17,6 @@ defaultflags = "-O3 -g -fasynchronous-unwind-tables -mtune=generic -march=%s" % 
 if get.buildTYPE() == "emul32": defaultflags += " -m32"
 # this is getting ridiculous, also gdb3 breaks resulting binary
 sysflags = "-mtune=generic -march=x86-64" if get.ARCH() == "x86_64" else "-mtune=generic -march=i686"
-
-### helper functions ###
-def removeSulinLinuxSection(_dir):
-    for root, dirs, files in os.walk(_dir):
-        for name in files:
-            # FIXME: should we do this only on nonshared or all ?
-            # if ("crt" in name and name.endswith(".o")) or name.endswith("nonshared.a"):
-            if ("crt" in name and name.endswith(".o")) or name.endswith(".a"):
-                i = os.path.join(root, name)
-                shelltools.system('objcopy -R ".comment.SULIN.OPTs" -R ".note.gnu.build-id" %s' % i)
-
 ldconf32bit = """/lib32
 /usr/lib32
 """
@@ -37,28 +26,25 @@ def setup():
     shelltools.export("LANG","C")
     shelltools.export("LC_ALL","C")
 
-    shelltools.export("CC", "gcc %s " % defaultflags)
-    shelltools.export("CXX", "g++ %s " % defaultflags)
-
-    shelltools.export("CFLAGS", defaultflags)
-    shelltools.export("CXXFLAGS", defaultflags)
-
     shelltools.makedirs("build")
     shelltools.cd("build")
     options = "--prefix=/usr \
                --libdir=/usr/lib \
                --mandir=/usr/share/man \
                --infodir=/usr/share/info \
-               --libexecdir=/usr/lib/misc \
+               --libexecdir=/usr/libexec \
                --with-bugurl=http://gitlab.com/sulinos/main/issues \
                --enable-add-ons \
-               --enable-kernel=3.2.0 \
-               --enable-static-pie \
-               --enable-bind-now --disable-profile \
-               --enable-stackguard-randomization \
+               --enable-bind-now \
+               --enable-cet \
                --enable-lock-elision \
                --enable-multi-arch \
+               --enable-static-pie\
+               --enable-stack-protector=strong \
+               --enable-stackguard-randomization \
+               --disable-profile \
                --disable-werror"
+
     if get.buildTYPE() == "emul32":
         options += "\
                     --libdir=/usr/lib32 \
@@ -73,10 +59,10 @@ def build():
         shelltools.echo("configparms","build-programs=no")
         shelltools.echo("configparms", "slibdir=/lib32")
         shelltools.echo("configparms", "rtlddir=/lib32")
-        shelltools.echo("configparms", "bindir=/tmp32")
-        shelltools.echo("configparms", "sbindir=/tmp32")
-        shelltools.echo("configparms", "rootsbindir=/tmp32")
-        shelltools.echo("configparms", "datarootdir=/tmp32/share")
+        shelltools.echo("configparms", "bindir=/bin")
+        shelltools.echo("configparms", "sbindir=/sbin")
+        shelltools.echo("configparms", "rootsbindir=/sbin")
+        shelltools.echo("configparms", "datarootdir=/usr/share")
 
         autotools.make()
 
@@ -116,10 +102,6 @@ def install():
 
         shelltools.echo("%s/etc/ld.so.conf.d/60-glibc-32bit.conf" % get.installDIR(), ldconf32bit)
 
-        # Remove our options section from crt stuff
-        #removeSulinLinuxSection("%s/usr/lib32/" % get.installDIR())
-
-        inarytools.removeDir("/tmp32")
 
 
     # We'll take care of the cache ourselves

@@ -22,9 +22,6 @@
             <Dependency>texinfo</Dependency>
             <Dependency>binutils</Dependency>
         </BuildDependencies>
-    <Patches>
-        <Patch>glibc-2.28-fhs-1.patch</Patch>
-    </Patches>
     </Source>
     <Package>
         <Name>glibc</Name>
@@ -36,10 +33,11 @@
             <Path fileType="config">/etc</Path>
             <Path fileType="library">/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/bin</Path>
             <Path fileType="library">/usr/lib/*.so</Path>
             <Path fileType="library">/usr/lib/audit</Path>
             <Path fileType="library">/usr/lib/gconv</Path>
-            <Path fileType="library">/usr/lib/misc</Path>
+            <Path fileType="library">/usr/libexec</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/i18n/charmaps</Path>
@@ -142,7 +140,7 @@
     </Package>
 
     <Package>
-        <Name>glibc-doc-32bit</Name>
+        <Name>glibc-docs-32bit</Name>
         <PartOf>system.doc</PartOf>
         <!-- Do not write dep. any package-->
         <Summary>32-bit doc for glibc</Summary>
