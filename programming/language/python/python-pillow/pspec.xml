@@ -1,0 +1,54 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-pillow</Name>
+        <Homepage>http://python-pillow.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>PIL is the Python Imaging Library.</Summary>
+        <Description>The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter. This library supports many file formats, and provides powerful image processing and graphics capabilities.</Description>
+        <Archive sha1sum="f155a3296a73c1cfc9b38bcebe03a626ad931b82">https://github.com/python-pillow/Pillow/archive/6.2.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>tcltk-devel</Dependency>
+            <Dependency>tcl-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>sane-backends-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        </BuildDependencies>        
+    </Source>
+
+    <Package>
+        <Name>python-pillow</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>lcms2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-01</Date>
+            <Version>7.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

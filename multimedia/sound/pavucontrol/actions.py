@@ -11,7 +11,7 @@ from inary.actionsapi import get
 
 def setup():
     autotools.autogen()
-    autotools.configure("--disable-lynx")
+    autotools.configure("--prefix=/usr --enable-gtk3")
 
 def build():
     autotools.make()

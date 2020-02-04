@@ -13,7 +13,7 @@ if get.buildTYPE()=="emul32":
     shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
 
 def setup():
-    mesontools.meson_configure("-Denable-gtk-doc=false ")
+    mesontools.meson_configure("-Dgtk-doc=false ")
 
 def build():
     mesontools.ninja_build()

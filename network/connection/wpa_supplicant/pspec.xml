@@ -15,7 +15,7 @@
         <Description>wpa_supplicant is a WPA supplicant with support for WPA and WPA2.</Description>
         <Archive sha1sum="b784c0e5e56889c81d027757a4623659bf15f9a8" type="targz">https://w1.fi/releases/wpa_supplicant-2.9.tar.gz</Archive>
         <AdditionalFiles>
-            <AdditionalFile target="wpa_supplicant/.config">wpa_supplicant.config</AdditionalFile>
+            <AdditionalFile target="wpa_supplicant/.config">config</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>libnl-devel</Dependency>
@@ -36,12 +36,14 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/dbus-1/system-services</Path>
-            <Path fileType="data">/run</Path>
+            <Path fileType="data">/var/run</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0600" target="/etc/wpa_supplicant.conf">wpa_supplicant.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0600" target="/etc/wpa_supplicant/wpa_supplicant.conf">wpa_supplicant.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/conf.d/wpa_supplicant">wpa_supplicant.confd</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/wpa_supplicant">wpa_supplicant.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/wpa_cli">wpa_cli.initd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/wpa_supplicant/wpa_cli.sh">wpa_cli.sh</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/wpa_supplicant">wpa_supplicant.logrotate</AdditionalFile>
         </AdditionalFiles>
     </Package>

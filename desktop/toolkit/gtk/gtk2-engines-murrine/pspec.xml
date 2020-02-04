@@ -1,0 +1,54 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gtk2-engines-murrine</Name>
+        <Homepage>http://cimitan.com/murrine/project/murrine</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>GTK+ Murrine theme engine</Summary>
+        <Description>The Murrine engine is a cairo-based GTK+ theming tool. It's very fast compared to clearlooks-cairo. Murrine includes animations and a unique style.</Description>
+        <Archive sha1sum="ddaca56b6e10736838572014ae9d20b814242615" type="tarxz">mirrors://gnome/murrine/0.98/murrine-0.98.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gtk2-engines-murrine</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <!-- commented to fix cyclic deps, gtk2 depends on murrine through mediternean theme -->
+            <Dependency>glib2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gtk-engines</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.98.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

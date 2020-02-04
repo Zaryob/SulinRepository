@@ -1,0 +1,42 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-pycparser</Name>
+        <Homepage>https://github.com/eliben/pycparser</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>C parser and AST generator written in Python</Summary>
+        <Description>C parser and AST generator written in Python</Description>
+        <Archive sha1sum="3c8845142c9065ae4407c166964b57bd34dde88d">https://github.com/eliben/pycparser/archive/release_v2.19.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pycparser</Name>
+        <RuntimeDependencies>
+            <Dependency>python-ply</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-01</Date>
+            <Version>2.19</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

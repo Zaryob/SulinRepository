@@ -1,0 +1,44 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>whois</Name>
+        <Homepage>http://www.linux.it/~md/software/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Improved whois client</Summary>
+        <Description>This is a new whois (RFC 3912) client rewritten from scratch. It is inspired from and compatible with the usual BSD and RIPE whois programs. It is intelligent and can automatically select the appropriate whois server for most queries.</Description>
+        <Archive sha1sum="1e2e27d1120b365a704b10374ecaf690f93407d1">https://github.com/rfc1036/whois/archive/v5.4.3/whois-5.4.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libidn-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>whois</Name>
+        <RuntimeDependencies>
+            <Dependency>libidn</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc/whois</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-30</Date>
+            <Version>5.4.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,46 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-themes</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>data</IsA>
+        <Summary>Default themes for the GNOME desktop</Summary>
+        <Description>gnome-themes allows to change appearance of window frames, cursors, icon and gtk themes.</Description>
+        <Archive sha1sum="492f3c6433bec3405340fe644f1d7552a71f293d" type="targz">http://deb.debian.org/debian/pool/main/g/gnome-themes/gnome-themes_2.30.2.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>icon-naming-utils</Dependency>
+            <Dependency>gtk-engines</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-themes</Name>
+        <RuntimeDependencies>
+            <Dependency>icon-naming-utils</Dependency>
+            <Dependency>gtk-engines</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.30.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

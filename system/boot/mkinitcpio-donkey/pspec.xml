@@ -1,0 +1,35 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mkinitcpio-donkey</Name>
+        <Homepage>http://joey.kitenet.net/code/os-prober/</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Sulin initrd system</Summary>
+        <Description>Sulin initramfs creation system with live boot support.</Description>
+        <Archive sha1sum="1b82a6912bd284892321ddac79d98f900ba2f4b0">https://gitlab.com/sulinos/devel/mkinitcpio-donkey/-/archive/1.0/mkinitcpio-donkey-1.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>mkinitcpio-donkey</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="config">/etc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-01-18</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

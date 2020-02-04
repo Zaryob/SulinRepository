@@ -84,7 +84,7 @@ def zemberek_hack():
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     # We don't want to overwrite an existing file during upgrade
-    specialFiles = ["passwd", "locale.conf","shadow", "group", "fstab", "hosts", "ld.so.conf", "resolv.conf"]
+    specialFiles = ["passwd", "locale.conf","shadow", "group", "fstab", "ld.so.conf", "resolv.conf"]
 
     for specialFile in specialFiles:
         if not os.path.exists("/etc/%s" % specialFile):

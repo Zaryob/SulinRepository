@@ -1,0 +1,42 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>fish</Name>
+        <Homepage>http://fishshell.org/</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A user friendly command line shell</Summary>
+        <Description>Fish is a user friendly command line shell for UNIX-like operating systems such as Linux.</Description>
+        <Archive sha1sum="d9571606b8f56696be29f5518ce6a7d89d10a866">https://github.com/fish-shell/fish-shell/archive/3.0.2.zip</Archive>
+        <BuildDependencies>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>fish</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/fish</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+         <Update release="1">
+            <Date>2020-01-19</Date>
+            <Version>3.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

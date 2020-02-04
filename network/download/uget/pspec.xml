@@ -1,0 +1,66 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>uget</Name>
+        <Homepage>http://ugetdm.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>uget</Icon>
+        <PartOf>network.download</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>uget - Download manager using GTK+ and libcurl</Summary>
+        <Description>uGet is an Open Source download manager application for GNU/Linux developed with GTK+.</Description>
+        <Archive sha1sum="e0f2718fdf36d6db42f8f596ea15a5a987a2b2ab">https://master.dl.sourceforge.net/project/urlget/uget%20%28stable%29/2.2.3/uget-2.2.3-1.tar.gz</Archive>
+        <Archive sha1sum="8e740b383d05b59a7004a7dc2cc13543dbb93188">https://master.dl.sourceforge.net/project/urlget/aria2-plugin/1.18.x/aria2-1.18.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>uget</Name>
+        <RuntimeDependencies>
+            <Dependency>curl</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gstreamer</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/sounds</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-30</Date>
+            <Version>2.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -6,10 +6,11 @@
 
 from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
+from inary.actionsapi import get
 
 
 def setup():
-    mesontools.meson_configure()
+    mesontools.meson_configure('-D cairo=enabled ')
 
 def build():
     mesontools.ninja_build()

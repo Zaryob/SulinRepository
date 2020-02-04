@@ -1,0 +1,47 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>htop</Name>
+        <Homepage>http://htop.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>htop</Icon>
+        <IsA>app:console</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>An interactive process viewer for Linux</Summary>
+        <Description>htop is an interactive text-mode process viewer for Linux. It aims to be a better 'top'.</Description>
+        <Archive sha1sum="201f793f13dce2448e36047079875b9bd5bba75a" >http://hisham.hm/htop/releases/2.0.2/htop-2.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>htop</Name>
+        <RuntimeDependencies>
+            <Dependency>ncurses</Dependency>
+            </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-20</Date>
+            <Version>2.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

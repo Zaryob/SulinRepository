@@ -1,0 +1,36 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-setproctitle</Name>
+        <Homepage>https://github.com/dvarrazzo/py-setproctitle</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>A Python module to customize the process title</Summary>
+        <Description>A Python module to customize the process title</Description>
+        <Archive sha1sum="e9b0dab8139731646ac22ffe44104123919ea635">https://files.pythonhosted.org/packages/8a/b9/058c53e8e55e9d549da8d60bbb7a404aac57b153c7cb815129d726c4cbbb/setproctitle-1.1.10.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-setproctitle</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-31</Date>
+            <Version>1.1.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

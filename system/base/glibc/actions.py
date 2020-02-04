@@ -13,20 +13,10 @@ import os
 
 
 arch = "x86-64" if get.ARCH() == "x86_64" and not get.buildTYPE() == "emul32" else "i686"
-defaultflags = "-O3 -g -fasynchronous-unwind-tables -mtune=generic -march=%s" % arch
-if get.buildTYPE() == "emul32": defaultflags += " -m32"
+defaultflags = "-Os -g -mno-tls-direct-seg-refs -mtune=generic -march=%s" % arch
+if get.buildTYPE() == "emul32": defaultflags += " -m32 -fasynchronous-unwind-tables"
 # this is getting ridiculous, also gdb3 breaks resulting binary
 sysflags = "-mtune=generic -march=x86-64" if get.ARCH() == "x86_64" else "-mtune=generic -march=i686"
-
-### helper functions ###
-def removeSulinLinuxSection(_dir):
-    for root, dirs, files in os.walk(_dir):
-        for name in files:
-            # FIXME: should we do this only on nonshared or all ?
-            # if ("crt" in name and name.endswith(".o")) or name.endswith("nonshared.a"):
-            if ("crt" in name and name.endswith(".o")) or name.endswith(".a"):
-                i = os.path.join(root, name)
-                shelltools.system('objcopy -R ".comment.SULIN.OPTs" -R ".note.gnu.build-id" %s' % i)
 
 ldconf32bit = """/lib32
 /usr/lib32
@@ -52,12 +42,14 @@ def setup():
                --libexecdir=/usr/lib/misc \
                --with-bugurl=http://gitlab.com/sulinos/main/issues \
                --enable-add-ons \
-               --enable-kernel=3.2.0 \
-               --enable-static-pie \
-               --enable-bind-now --disable-profile \
-               --enable-stackguard-randomization \
+               --enable-bind-now \
                --enable-lock-elision \
                --enable-multi-arch \
+               --enable-static-pie\
+               --enable-stack-protector=all \
+               --enable-kernel=5.4.0 \
+               --with-headers=/usr/include \
+               --enable-stackguard-randomization \
                --disable-werror"
     if get.buildTYPE() == "emul32":
         options += "\
@@ -88,13 +80,6 @@ def build():
 
     autotools.make()
 
-def check():
-     shelltools.cd("build")
-
-     if get.buildTYPE() != "emul32":
-        autotools.make("check || true")
-     else:
-        pass
 
 def install():
     shelltools.cd("build")
@@ -107,17 +92,12 @@ def install():
         #Install locales once.
         autotools.rawInstall("install_root=%s localedata/install-locales" % get.installDIR())
 
-        # Remove our options section from crt stuff
-        #removeSulinLinuxSection("%s/usr/lib/" % get.installDIR())
 
 
     if get.buildTYPE() == "emul32":
         inarytools.dosym("/lib32/ld-linux.so.2", "/lib/ld-linux.so.2")
 
         shelltools.echo("%s/etc/ld.so.conf.d/60-glibc-32bit.conf" % get.installDIR(), ldconf32bit)
-
-        # Remove our options section from crt stuff
-        #removeSulinLinuxSection("%s/usr/lib32/" % get.installDIR())
 
         inarytools.removeDir("/tmp32")
 
@@ -146,3 +126,4 @@ def install():
 
     shelltools.cd("..")
     inarytools.dodoc("ChangeLog", "NEWS", "README*", "LICENSES")
+

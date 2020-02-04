@@ -9,7 +9,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    cmaketools.configure()
+    cmaketools.configure("-DBUILD_SHARED_LIBS=yes")
 
 def build():
     cmaketools.make()

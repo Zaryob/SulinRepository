@@ -1,0 +1,45 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-cryptography</Name>
+        <Homepage>https://pypi.python.org/pypi/cryptography</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>apache</License>
+        <IsA>library</IsA>
+        <Summary>Cryptographic recipes and primitives to Python developers</Summary>
+        <Description>A package designed to expose cryptographic recipes and primitives to Python developers</Description>
+        <Archive sha1sum="94ef5dc1261a4388572ce3ad9af1515691276d2c" type="targz">https://files.pythonhosted.org/packages/be/60/da377e1bed002716fb2d5d1d1cab720f298cb33ecff7bf7adea72788e4e4/cryptography-2.8.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-cffi</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-cryptography</Name>
+        <RuntimeDependencies>
+            <Dependency>python-six</Dependency>
+            <Dependency>python-enum34</Dependency>
+            <Dependency>python-cffi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-01</Date>
+            <Version>2.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

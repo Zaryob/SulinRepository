@@ -1,0 +1,50 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libtorrent</Name>
+        <Homepage>http://www.rasterbar.com/products/libtorrent</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Full featured torrent client library</Summary>
+        <Description>Rasterbar's C++ library that aims to be a good alternative to all the other bittorrent implementations around. It is a library and not a full featured client, although it comes with a working example client.</Description>
+	<Archive sha1sum="a911424e0a057f3f204da72cda51a2eaa08b7784" >https://github.com/arvidn/libtorrent/archive/libtorrent-1_2_3.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libsigc2++</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>geoip</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libtorrent</Name>
+        <RuntimeDependencies>
+            <Dependency>libsigc2++</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>geoip</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/libtorrent</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc/libtorrent/html</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-31</Date>
+            <Version>1.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

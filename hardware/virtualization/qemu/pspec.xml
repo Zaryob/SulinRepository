@@ -1,0 +1,102 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qemu</Name>
+        <Homepage>http://bellard.org/qemu</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Userspace virtual machine and processor emulator</Summary>
+        <Description>QEMU emulates a full system (for example a PC), including a processor and various peripherials. It can be used to launch different operating systems without rebooting the PC or to debug system code. In user-mode emulation mode, QEMU can launch Linux processes compiled for one CPU on another CPU.</Description>
+        <Archive sha1sum="b27aa828a8457bd8551ae3c81b80cc365e1f6bfe" >https://download.qemu.org/qemu-4.2.0.tar.xz</Archive>
+  
+        <BuildDependencies>
+            <Dependency>aalib</Dependency>
+            <Dependency>vte3</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qemu</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>vte3</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libsdl2</Dependency>
+            <Dependency>libusb</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libepoxy</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libdrm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="config">/run</Path>
+            <Path fileType="config">/var/run</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/qemu</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>qemu-devel</Name>
+        <Summary>Development files for qemu</Summary>
+        <RuntimeDependencies>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency release="current">qemu</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/libcacard.pc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-17</Date>
+            <Version>4.2.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

@@ -40,6 +40,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-18</Date>
+            <Version>3.24.11</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-23</Date>
             <Version>3.24.11</Version>
