@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Library for reading and writing streaming archives</Summary>
         <Description>libarchive includes a library and command-line tools for reading and writing tar, cpio, zip, ISO, and other archive formats.</Description>
-        <Archive sha1sum="580064227105e30322caa6c67b59e8c8e6060027" type="targz">http://www.libarchive.org/downloads/libarchive-3.3.2.tar.gz</Archive>
+        <Archive sha1sum="e185d3cd101314234fc897c021535c735b3a3f98">https://github.com/libarchive/libarchive/releases/download/v3.4.1/libarchive-3.4.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>
             <Dependency>nettle-devel</Dependency>
@@ -23,6 +23,7 @@
             <Dependency>openssl-devel</Dependency>
             <Dependency>xz-devel</Dependency>
             <Dependency>lzo-devel</Dependency>
+            <Dependency>lz4-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -31,6 +32,7 @@
         <Name>libarchive</Name>
         <RuntimeDependencies>
             <Dependency>lzo</Dependency>
+            <Dependency>lz4</Dependency>
             <Dependency>nettle</Dependency>
             <Dependency>xz</Dependency>
             <Dependency>acl</Dependency>
@@ -81,6 +83,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-01-31</Date>
+            <Version>3.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Upstream</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>3.3.2</Version>

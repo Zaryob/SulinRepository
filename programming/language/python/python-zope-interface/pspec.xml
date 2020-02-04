@@ -1,0 +1,35 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-zope-interface</Name>
+        <Homepage>http://www.zope.org/Products/ZopeInterface/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>ZPL</License>
+        <IsA>library</IsA>
+        <Summary>zope.interface library</Summary>
+        <Description>Interfaces are objects that specify (document) the external behavior of objects that provide them.</Description>
+        <Archive sha1sum="693e793efc3e03746c12cf2269861a5369545b0e">https://files.pythonhosted.org/packages/c3/05/bf3130eb799548882ce61b7c3d2dbc5d4d5cc6e821efa8786c5273d56844/zope.interface-4.7.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-zope-interface</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-31</Date>
+            <Version>4.7.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>icon-theme-gnome</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>GNOME icon theme</Summary>
+        <Description>gnome-icon-theme package contains the default icon theme used by the GNOME desktop.</Description>
+        <Archive sha1sum="cc0f0dc55db3c4ca7f2f34564402f712807f1342" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-icon-theme/3.12/gnome-icon-theme-3.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>icon-naming-utils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>icon-theme-gnome</Name>
+        <Replaces>
+            <Package>gnome-icon-theme</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

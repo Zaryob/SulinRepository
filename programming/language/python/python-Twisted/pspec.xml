@@ -1,0 +1,42 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-Twisted</Name>
+        <Homepage>http://twistedmatrix.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Event driven network framework</Summary>
+        <Description>Twisted is an event-driven networking framework written in Python and licensed under the MIT license. Twisted projects variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and much more.</Description>
+        <Archive sha1sum="a5b6f7feb801272fddae4cc19b037c7a53ea03fc">https://github.com/twisted/twisted/archive/twisted-19.10.0.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python-zope-interface</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-Twisted</Name>
+        <RuntimeDependencies>
+            <Dependency>python-zope-interface</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-31</Date>
+            <Version>19.10.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

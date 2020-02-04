@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Dependency based init system that works with sysvinit.</Summary>
         <Description>Dependency based init system that works with sysvinit.</Description>
-        <Archive sha1sum="a8c47060eb90a7e212a48dc58c0b3abe20940f9c" type="targz">https://github.com/OpenRC/openrc/archive/0.42.1.tar.gz</Archive>
+        <Archive sha1sum="a8c47060eb90a7e212a48dc58c0b3abe20940f9c">https://github.com/OpenRC/openrc/archive/0.42.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib</Dependency>
             <Dependency>pam</Dependency>
@@ -34,8 +34,9 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/sbin</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="doc">/usr/share/openrc</Path>
+            <Path fileType="data">/usr/share/</Path>
        </Files>
        <Provides>
          <SCOM script="package.py">System.Package</SCOM>
@@ -64,6 +65,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="5">
+            <Date>2019-12-13</Date>
+            <Version>0.42.1</Version>
+            <Comment>bashcomp and zshcomp enabled</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="4">
             <Date>2019-12-13</Date>
             <Version>0.42.1</Version>

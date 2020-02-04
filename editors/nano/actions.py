@@ -7,10 +7,11 @@ from inary.actionsapi import get
 
 def setup():
 #    autotools.autoreconf("-fvi")
-    autotools.configure("--disable-rpath \
-                         --enable-utf8 \
-                         --enable-altrcname \
-                         --disable-speller")
+    autotools.configure("--enable-utf8 \
+                         --enable-color \
+                         --with-slang\
+                         --enable-nanorc \
+                         --enable-multibuffer")
 
 def build():
     autotools.make()

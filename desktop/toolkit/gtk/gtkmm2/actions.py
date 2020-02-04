@@ -6,19 +6,20 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
+import os
 
 def setup():
-    autotools.configure("--disable-demos \
-                         --disable-docs")
-    inarytools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
-    inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
-    inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure("--enable-maintainer-mode --prefix=/usr")
 
 def build():
-    autotools.make()
+    _env=os.environ.copy()
+    os.environ.clear()
+    os.system("make")
+    os.environ.update(_env)
 
 def install():
     autotools.install()
 
-    #inarytools.removeDir("/usr/share/gtkmm-2.4")
-    inarytools.removeDir("/usr/share/devhelp")
+    inarytools.dodoc("ChangeLog","COPYING", "README")

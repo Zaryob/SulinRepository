@@ -11,7 +11,7 @@
         <Summary>The PyPA recommended tool for installing Python packages</Summary>
         <Description>The PyPA recommended tool for installing Python packages</Description>
         <License>MIT</License>
-        <Archive sha1sum="20c279ff55abd78c11ce5ca0a66d47755434d00f" type="targz">https://github.com/pypa/pip/archive/19.2.3.tar.gz</Archive>
+        <Archive sha1sum="bb825314632e0528aa93a19ab18e87f4cc36e998" type="targz">https://github.com/pypa/pip/archive/19.3.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -53,6 +53,13 @@
         </Files>
     </Package>
     <History>
+    <Update release="2">
+        <Date>2019-12-12</Date>
+        <Version>19.3.1</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
         <Update release="1">
             <Date>2019-09-26</Date>
             <Version>19.2.3</Version>

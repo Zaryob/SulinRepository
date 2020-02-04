@@ -12,6 +12,7 @@ from inary.actionsapi import libtools
 
 def setup():
     options = "-with-xinput=yes \
+               --disable-cups\
                --enable-man"
 
     #shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer",""))
@@ -22,15 +23,17 @@ def setup():
     if get.buildTYPE() == "emul32":
         options += " --libdir=/usr/lib32 \
                      --bindir=/usr/bin32 \
-                     --sbindir=/usr/sbin32 \
-                     --disable-cups"
+                     --sbindir=/usr/sbin32"
 
-        shelltools.export("CC", "%s -m32" % get.CC())
-        shelltools.export("CXX", "%s -m32" % get.CC())
-        shelltools.export("CXXFLAGS", "%s -m32" % get.CFLAGS())
-        shelltools.export("LDFLAGS", "%s -m32" % get.LDFLAGS())
-        shelltools.export("CPPFLAGS", "-DGTK_COMPILATION")
-
+        shelltools.export("CC","%s -m32" % get.CC())
+        shelltools.export("CXX","%s -m32" % get.CC())
+        shelltools.export("CXXFLAGS","-m32")
+        shelltools.export("LDFLAGS","-m32")
+    else:
+        shelltools.export("CFLAGS","")
+        shelltools.export("CXXFLAGS","")
+        shelltools.export("LDFLAGS","")
+        
     autotools.autoconf()
     autotools.configure(options)
 

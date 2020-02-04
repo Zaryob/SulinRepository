@@ -14,11 +14,10 @@ def setup():
     shelltools.export("CFLAGS", "{} -DG_DISABLE_CAST_CHECKS".format(get.CFLAGS()))
     options=""
     if get.buildTYPE()=="emul32":
-        shelltools.export("CC", "gcc -m32 -mstackrealign -mfpmath=sse")
-        shelltools.export("CXX", "g++ -m32 -mstackrealign -mfpmath=sse")
+        shelltools.export("CC", "gcc -m32")
+        shelltools.export("CXX", "g++ -m32")
         shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
         shelltools.system("patch -p1 < multilib.patch")
-        options+="-Dtests=false"
     mesontools.meson_configure(options)
 
 

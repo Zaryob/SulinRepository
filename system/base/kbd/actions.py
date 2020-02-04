@@ -5,10 +5,12 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--enable-nls \
+    shelltools.system("autoreconf -if")
+    autotools.configure("--disable-nls \
                          --prefix=/usr \
                          --datadir=/usr/share/kbd \
                          --mandir=/usr/share/man")

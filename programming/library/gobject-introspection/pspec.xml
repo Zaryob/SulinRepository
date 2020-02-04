@@ -15,7 +15,7 @@
         <PartOf>programming.library</PartOf>
         <Summary>Introspection system for GObject-based libraries</Summary>
         <Description>gobject-introspection can scan C header and source files in order to generate introspection typelib files. It also provides an API to examine typelib files, useful for creating language bindings among other things.</Description>
-        <Archive sha1sum="6c51a15d3c067bb99b4b5c799d449c82c873f2b7" type="tarxz">mirrors://gnome/gobject-introspection/1.62/gobject-introspection-1.62.0.tar.xz</Archive>
+        <Archive sha1sum="4911c01f9a783a66535079e5990fc53fcb847ac7">http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.63/gobject-introspection-1.63.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
@@ -52,6 +52,13 @@
     </Package>
 
     <History>
+    <Update release="3">
+        <Date>2019-12-12</Date>
+        <Version>1.63.1</Version>
+        <Comment>Automatic version upgrade.</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
         <Update release="2">
             <Date>2019-09-25</Date>
             <Version>1.62.0</Version>

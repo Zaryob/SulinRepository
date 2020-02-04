@@ -1,0 +1,54 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gtk2-engines-xfce</Name>
+        <Homepage>http://cimitan.com/murrine/project/murrine</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>GTK+ xfce theme engine</Summary>
+        <Description>The GTK Xfce Engine package contains several GTK+ 2 and GTK+ 3 themes and libraries needed to display them.</Description>
+        <Archive sha1sum="a00e0925728ca2dd9e8b1d41c692b775c446bf28">http://deb.debian.org/debian/pool/main/g/gtk2-engines-xfce/gtk2-engines-xfce_3.2.0.orig.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>pixman-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gtk2-engines-xfce</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <!-- commented to fix cyclic deps, gtk2 depends on murrine through mediternean theme -->
+            <Dependency>glib2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pixman</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

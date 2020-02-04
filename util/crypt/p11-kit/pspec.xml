@@ -13,7 +13,7 @@
         <PartOf>util.crypt</PartOf>
         <Summary>Library to work with PKCS#11 modules</Summary>
         <Description>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Description>
-        <Archive sha1sum="1869a48bdaea6c6d1c89348b4f8964b14d6c2949" type="targz">https://github.com/p11-glue/p11-kit/releases/download/0.23.18.1/p11-kit-0.23.18.1.tar.gz</Archive>
+        <Archive sha1sum="1869a48bdaea6c6d1c89348b4f8964b14d6c2949">https://github.com/p11-glue/p11-kit/releases/download/0.23.18.1/p11-kit-0.23.18.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libtasn1-devel</Dependency>
         </BuildDependencies>
@@ -47,8 +47,6 @@
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
-
-    <!-- Needs rebuild-->
     <Package>
         <Name>p11-kit-32bit</Name>
         <PartOf>emul32</PartOf>
@@ -69,6 +67,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-01-19</Date>
+            <Version>0.23.18.1</Version>
+            <Comment>Rebuild.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-12-14</Date>
             <Version>0.23.18.1</Version>

@@ -10,7 +10,7 @@
         <IsA>library</IsA>
         <Summary>C++ binding for GTK+-3</Summary>
         <Description>gtkmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks, and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
-        <Archive sha1sum="2b65ff352fde95b6054e1accc4fb6571bb988b52" type="tarxz">mirrors://gnome/gtkmm/3.24/gtkmm-3.24.2.tar.xz</Archive>
+        <Archive sha1sum="2b65ff352fde95b6054e1accc4fb6571bb988b52">http://ftp.gnome.org/pub/gnome/sources/gtkmm/3.24/gtkmm-3.24.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>atkmm-devel</Dependency>
@@ -56,6 +56,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-18</Date>
+            <Version>3.24.2</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-08</Date>
             <Version>3.24.2</Version>

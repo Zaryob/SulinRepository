@@ -23,4 +23,5 @@ def build():
 
 def install():
     pythonmodules.install(NUMPY_FCONFIG, pyVer="3")
+    inarytools.remove("/usr/bin/f2py") # fix conflict with py2 version
     inarytools.dodoc("LICENSE.txt", "THANKS.txt")

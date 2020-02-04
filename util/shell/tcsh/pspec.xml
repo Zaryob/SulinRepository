@@ -1,0 +1,36 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tcsh</Name>
+        <Homepage>http://www.tcsh.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Enhanced version of the Berkeley C shell (csh)</Summary>
+        <Description>Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh). It is a command language interpreter usable both as an interactive login shell and a shell script command processor. It includes a command-line editor, programmable word completion, spelling correction, a history mechanism, job control and a C-like syntax.</Description>
+        <Archive sha1sum="d3c916c82eec7e20c49dedf660edd51a7971f8ab" type="targz">https://astron.com/pub/tcsh/tcsh-6.22.02.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>tcsh</Name>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-19</Date>
+            <Version>6.22.02</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

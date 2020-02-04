@@ -9,12 +9,17 @@ from inary.actionsapi import get
 from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
 
+
+shelltools.export("CFLAGS","")
+shelltools.export("CXXFLAGS","")
+shelltools.export("LDFLAGS","")
+
 if get.buildTYPE()=="emul32":
     shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
 
 
 def setup():
-    mesontools.meson_configure("-D broadway_backend=true  -Dcolord=yes -Denable-gtk-doc=false ")
+    mesontools.meson_configure("-Dbroadway_backend=true -Dx11_backend=true -Dcolord=yes -Dgtk_doc=false -Dman=true")
 
 def build():
     mesontools.ninja_build()
