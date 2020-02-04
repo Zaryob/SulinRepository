@@ -68536,7 +68536,12 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <SourceURI>system/boot/grub2/pspec.xml</SourceURI>
         </Source>
         <Package>
+            <Name>grub-efi32</Name>
+            <BuildType>efi32</BuildType>
+        </Package>
+        <Package>
             <Name>grub2</Name>
+            <BuildType>efi</BuildType>
             <RuntimeDependencies>
                 <Dependency>fuse2</Dependency>
                 <Dependency>lvm2</Dependency>
@@ -68549,6 +68554,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="executable">/usr/sbin</Path>
                 <Path fileType="library">/usr/lib/grub/i386-pc/</Path>
                 <Path fileType="library">/usr/lib/grub/x86_64-efi</Path>
+                <Path fileType="library">/usr/lib/grub/i386-efi</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/grub</Path>
                 <Path fileType="data">/usr/share/info</Path>
@@ -68569,6 +68575,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-05</Date>
+                <Version>2.04</Version>
+                <Comment>Second release</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-17</Date>
                 <Version>2.04</Version>
