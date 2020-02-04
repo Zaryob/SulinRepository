@@ -880,52 +880,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>lz4</Name>
-            <Homepage>https://github.com/lz4/lz4</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">LZ4 - Extremely fast compression</Summary>
-            <Description xml:lang="en">LZ4 is lossless compression algorithm, providing compression speed &gt; 500 MB/s per core, scalable with multi-cores CPU. It features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems.</Description>
-            <Archive type="targz" sha1sum="4dc36f29d7b4e5b45b114be2674068200714abb3">https://github.com/lz4/lz4/archive/v1.9.2.tar.gz</Archive>
-            <SourceURI>util/archive/lz4/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>lz4</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="info">/usr/share/info</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lz4-devel</Name>
-            <RuntimeDependencies>
-                <Dependency release="1">lz4</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-19</Date>
-                <Version>1.9.2</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>unarj</Name>
             <Homepage>http://ibiblio.org/pub/Linux/utils/compress/</Homepage>
             <Packager>
@@ -4011,6 +3965,43 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>s-tui</Name>
+            <Homepage>https://github.com/amanusk/s-tui</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>ZPL</License>
+            <IsA>library</IsA>
+            <PartOf>util.misc</PartOf>
+            <Summary xml:lang="en">Stress Terminal UI stress test and monitoring tool</Summary>
+            <Description xml:lang="en">Stress Terminal UI stress test and monitoring tool</Description>
+            <Archive sha1sum="db83ecdfe90bd41605a795fba24cfc76be4b2c8b">https://files.pythonhosted.org/packages/db/45/8f9d63838bf91e6d5dadd90f3c2da92d340b0a2ef735b8df75af51027fe2/s-tui-1.0.0.tar.gz</Archive>
+            <SourceURI>util/misc/s-tui/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>s-tui</Name>
+            <RuntimeDependencies>
+                <Dependency>python-urwid</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="exectable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-02</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>augeas</Name>
             <Homepage>http://augeas.net</Homepage>
             <Packager>
@@ -4056,6 +4047,47 @@
             <Update release="1">
                 <Date>2019-11-10</Date>
                 <Version>1.12.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>strace</Name>
+            <Homepage>http://sourceforge.net/projects/strace/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.misc</PartOf>
+            <Summary xml:lang="en">Tracks and displays system calls associated with a running process</Summary>
+            <Description xml:lang="en">strace intercepts and records the system calls called and received by a running process. strace can print a record of each system call, its arguments and its return value.</Description>
+            <Archive sha1sum="a73590b4489deb832d969a51850ce564677c7e46">https://github.com/strace/strace/releases/download/v5.4/strace-5.4.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>libaio-devel</Dependency>
+                <Dependency>libunwind-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/misc/strace/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>strace</Name>
+            <RuntimeDependencies>
+                <Dependency>libunwind</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-28</Date>
+                <Version>5.4</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -4138,6 +4170,39 @@
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>nnn</Name>
+            <Homepage>https://github.com/jarun/nnn</Homepage>
+            <Packager>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.misc</PartOf>
+            <Summary xml:lang="en">Terminal file manager</Summary>
+            <Description xml:lang="en">The missing terminal file manager for X.</Description>
+            <Archive sha1sum="17f41def0cde1485eb2b3ebdeee65d0457c5f0e7">https://github.com/jarun/nnn/archive/v2.9.tar.gz</Archive>
+            <SourceURI>util/misc/nnn/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>nnn</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-28</Date>
+                <Version>2.9</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -6193,11 +6258,11 @@
             <BuildDependencies>
                 <Dependency>pulseaudio-libs-devel</Dependency>
                 <Dependency>libcanberra-devel</Dependency>
-                <Dependency>libcanberra-gtk-devel</Dependency>
-                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>libcanberra-gtk3-devel</Dependency>
+                <Dependency>libsigc2++-devel</Dependency>
                 <Dependency>glibmm-devel</Dependency>
-                <Dependency>gtkmm2-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtkmm3-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
             </BuildDependencies>
             <SourceURI>multimedia/sound/pavucontrol/pspec.xml</SourceURI>
         </Source>
@@ -6205,12 +6270,12 @@
             <Name>pavucontrol</Name>
             <RuntimeDependencies>
                 <Dependency>pulseaudio-libs</Dependency>
-                <Dependency>libcanberra-gtk</Dependency>
+                <Dependency>libcanberra-gtk3</Dependency>
                 <Dependency>libcanberra</Dependency>
                 <Dependency>libsigc++</Dependency>
                 <Dependency>glibmm</Dependency>
-                <Dependency>gtkmm2</Dependency>
-                <Dependency>gtk2</Dependency>
+                <Dependency>gtkmm3</Dependency>
+                <Dependency>gtk3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -6220,6 +6285,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-28</Date>
+                <Version>4.0</Version>
+                <Comment>Recompile with 2tk3</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2020-01-08</Date>
                 <Version>4.0</Version>
@@ -9019,6 +9091,69 @@
                 <Version>3.2.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libpng12</Name>
+            <Homepage>http://www.libpng.org/</Homepage>
+            <Packager>
+                <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">Portable Network Graphics library</Summary>
+            <Description xml:lang="en">The Portable Network Graphics (PNG) format was designed to replace the older and simpler GIF format and, to some extent, the much more complex TIFF format. Project&apos;s main aim is to concentrate on two major uses: the World Wide Web (WWW) and image-editing.</Description>
+            <Archive type="tarxz" sha1sum="3ac9c32fc08804d4a1858cb5d02c6d0fb55ede37">http://deb.debian.org/debian/pool/main/libp/libpng/libpng_1.2.50.orig.tar.xz</Archive>
+            <SourceURI>multimedia/graphics/libpng12/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libpng12</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libpng12-devel</Name>
+            <Summary xml:lang="en">Development files for libpng</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libpng</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib32/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libpng12-32bit</Name>
+            <Summary xml:lang="en">32-bit shared libraries for libpng</Summary>
+            <PartOf>emul32</PartOf>
+            <BuildType>emul32</BuildType>
+            <BuildDependencies>
+                <Dependency>zlib-32bit</Dependency>
+            </BuildDependencies>
+            <RuntimeDependencies>
+                <Dependency release="1">libpng</Dependency>
+                <Dependency>zlib-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib32</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-01-28</Date>
+                <Version>1.2.50</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman POYRAZ</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -19923,7 +20058,7 @@
             <PartOf>x11.terminal</PartOf>
             <Summary xml:lang="en">Xft powered terminal widget</Summary>
             <Description xml:lang="en">The VTE package contains a termcap file implementation for terminal emulators.</Description>
-            <Archive type="tarxz" sha1sum="12ad69e419ce148fbffd7c866702841559a7ce08">mirrors://gnome/vte/0.58/vte-0.58.0.tar.xz</Archive>
+            <Archive sha1sum="50f10d22c42fe73cdabccfbd30d89a4853575374">http://ftp.gnome.org/pub/gnome/sources/vte/0.59/vte-0.59.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>atk</Dependency>
                 <Dependency>gtk3</Dependency>
@@ -19963,6 +20098,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>0.59.0</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-10</Date>
                 <Version>0.58.0</Version>
@@ -21791,7 +21933,7 @@
             <PartOf>programming.build</PartOf>
             <Summary xml:lang="en">Ninja is a small build system with a focus on speed.</Summary>
             <Description xml:lang="en">Ninja is a small build system with a focus on speed.</Description>
-            <Archive type="targz" sha1sum="17219deb34dd816363e37470f77ff7231509143a">https://github.com/ninja-build/ninja/archive/v1.8.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="d130e8cb7ed883125af978ec165199065e830d6a">https://github.com/ninja-build/ninja/archive/v1.9.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>re2c</Dependency>
                 <Dependency>asciidoc</Dependency>
@@ -21807,6 +21949,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>1.9.0</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-08</Date>
                 <Version>1.8.2</Version>
@@ -32165,6 +32314,135 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-pillow</Name>
+            <Homepage>http://python-pillow.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">PIL is the Python Imaging Library.</Summary>
+            <Description xml:lang="en">The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter. This library supports many file formats, and provides powerful image processing and graphics capabilities.</Description>
+            <Archive sha1sum="f155a3296a73c1cfc9b38bcebe03a626ad931b82">https://github.com/python-pillow/Pillow/archive/6.2.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>tcltk-devel</Dependency>
+                <Dependency>tcl-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>sane-backends-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pillow/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pillow</Name>
+            <RuntimeDependencies>
+                <Dependency>python</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>lcms2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>7.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-zope-interface</Name>
+            <Homepage>http://www.zope.org/Products/ZopeInterface/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>ZPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">zope.interface library</Summary>
+            <Summary xml:lang="tr">zope.interface kütüphanesi</Summary>
+            <Description xml:lang="en">Interfaces are objects that specify (document) the external behavior of objects that provide them.</Description>
+            <Description xml:lang="tr">Arayüzler, kendilerini sağlayan nesnelerin dış davranışını bildiren (anlatan) nesnelerdir.</Description>
+            <Description xml:lang="fr">Les interfaces sont des objets spécifiant (documentant) le comportement extérieur des objets qui les fournissent.</Description>
+            <Description xml:lang="es">Interfaces son objetos que especifican (documentan) el comportamiento externo de objetos que los proveen.</Description>
+            <Archive sha1sum="693e793efc3e03746c12cf2269861a5369545b0e">https://files.pythonhosted.org/packages/c3/05/bf3130eb799548882ce61b7c3d2dbc5d4d5cc6e821efa8786c5273d56844/zope.interface-4.7.1.tar.gz</Archive>
+            <SourceURI>programming/language/python/python-zope-interface/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-zope-interface</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-31</Date>
+                <Version>4.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-cffi</Name>
+            <Homepage>http://cffi.readthedocs.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Foreign Function Interface for Python calling C code</Summary>
+            <Description xml:lang="en">Foreign Function Interface for Python calling C code</Description>
+            <Archive sha1sum="ad94c1b64570ec3016a945d4b226d527de81f9b9">https://files.pythonhosted.org/packages/2d/bf/960e5a422db3ac1a5e612cb35ca436c3fc985ed4b7ed13a1b4879006f450/cffi-1.13.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-cffi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-cffi</Name>
+            <RuntimeDependencies>
+                <Dependency>python-pycparser</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2.7</Path>
+                <Path fileType="library">/usr/lib/python3.7</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>1.13.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>oyaml</Name>
             <Homepage>https://github.com/wimglenn/oyaml</Homepage>
             <Packager>
@@ -32290,7 +32568,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">The fundamental package needed for scientific computing with Python</Summary>
             <Description xml:lang="en">Numpy contains a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, and useful linear algebra, Fourier transform, and random number capabilities.</Description>
-            <Archive type="targz" sha1sum="88136de7fbe6ef86f845a8fafd2dfb681d14c393">https://github.com/numpy/numpy/releases/download/v1.17.2/numpy-1.17.2.tar.gz</Archive>
+            <Archive sha1sum="86094dfb9774c766af02eb9e4ddc56d9296cba4c">https://github.com/numpy/numpy/releases/download/v1.18.1/numpy-1.18.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>lapack-devel</Dependency>
             </BuildDependencies>
@@ -32320,6 +32598,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>1.18.1</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-15</Date>
                 <Version>1.17.2</Version>
@@ -32369,6 +32654,40 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-11-21</Date>
                 <Version>1.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-setproctitle</Name>
+            <Homepage>https://github.com/dvarrazzo/py-setproctitle</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A Python module to customize the process title</Summary>
+            <Description xml:lang="en">A Python module to customize the process title</Description>
+            <Archive sha1sum="e9b0dab8139731646ac22ffe44104123919ea635">https://files.pythonhosted.org/packages/8a/b9/058c53e8e55e9d549da8d60bbb7a404aac57b153c7cb815129d726c4cbbb/setproctitle-1.1.10.zip</Archive>
+            <SourceURI>programming/language/python/python-setproctitle/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-setproctitle</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-31</Date>
+                <Version>1.1.10</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -32442,7 +32761,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">A cross-platform process utilities module for Python</Summary>
             <Description xml:lang="en">psutil is a module providing an interface for retrieving information on all running processes and system utilization (CPU, memory) in a portable way by using Python, implementing many functionalities offered by command line tools like ps, top, kill, lsof and netstat.</Description>
-            <Archive type="targz" sha1sum="0cfc35492185bc6ebe768c70ed86a4eb32e25e4f">https://github.com/giampaolo/psutil/archive/release-5.0.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="9ea8f25fe66897d9a2354708e769da530fb4687d">https://github.com/giampaolo/psutil/archive/release-5.6.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
@@ -32475,6 +32794,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>5.6.7</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-24</Date>
                 <Version>5.0.1</Version>
@@ -32525,97 +32851,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-09-15</Date>
                 <Version>1.16.5</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-gtk2</Name>
-            <Homepage>http://www.pygtk.org</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">GTK+ bindings for Python</Summary>
-            <Description xml:lang="en">python-gtk lets you to easily create programs with a graphical user interface using the Python programming language and GTK+ library.</Description>
-            <Archive type="tarbz2" sha1sum="344e6a32a5e8c7e0aaeb807e0636a163095231c2">mirrors://gnome/pygtk/2.24/pygtk-2.24.0.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>pygobject-devel</Dependency>
-                <Dependency>python-numpy</Dependency>
-                <Dependency>python-cairo-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-gtk2/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-gtk2</Name>
-            <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python-gtk2-demo</Name>
-            <Summary xml:lang="en">Demo applications for python-gtk</Summary>
-            <IsA>app:gui</IsA>
-            <RuntimeDependencies>
-                <Dependency releaseFrom="1">python-gtk2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/pygtk-demo</Path>
-                <Path fileType="library">/usr/lib/pygtk/2.0/pygtk-demo.py</Path>
-                <Path fileType="data">/usr/lib/pygtk/2.0/demos</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python-gtk2-docs</Name>
-            <Summary xml:lang="en">Reference documents for python-gtk</Summary>
-            <IsA>data:doc</IsA>
-            <RuntimeDependencies>
-                <Dependency releaseFrom="1">python-gtk2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/gtk-doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python-gtk2-devel</Name>
-            <Summary xml:lang="en">Development files for python-gtk</Summary>
-            <RuntimeDependencies>
-                <Dependency release="1">python-gtk2</Dependency>
-                <Dependency>python-pygobject-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/pygtk-codegen-2.0</Path>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/share/pygtk</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-09-15</Date>
-                <Version>2.24.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -32739,7 +32974,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">SSH2 implementation for Python</Summary>
             <Description xml:lang="en">python-paramiko is a module for python 2.2 (or higher) that implements the SSH2 protocol for secure (encrypted and authenticated) connections to remote machines.</Description>
-            <Archive type="targz" sha1sum="9e6cab36109afba7c5513cf4c371fda961ffd294">https://github.com/paramiko/paramiko/archive/2.6.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="bcbd77a81f7a5b6ae93f59f3586a248513aa31e2">https://github.com/paramiko/paramiko/archive/2.7.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
@@ -32772,6 +33007,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>2.7.1</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-16</Date>
                 <Version>2.6.0</Version>
@@ -32959,6 +33201,49 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-cryptography</Name>
+            <Homepage>https://pypi.python.org/pypi/cryptography</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>apache</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Cryptographic recipes and primitives to Python developers</Summary>
+            <Description xml:lang="en">A package designed to expose cryptographic recipes and primitives to Python developers</Description>
+            <Archive type="targz" sha1sum="94ef5dc1261a4388572ce3ad9af1515691276d2c">https://files.pythonhosted.org/packages/be/60/da377e1bed002716fb2d5d1d1cab720f298cb33ecff7bf7adea72788e4e4/cryptography-2.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-cffi</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-cryptography/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-cryptography</Name>
+            <RuntimeDependencies>
+                <Dependency>python-six</Dependency>
+                <Dependency>python-enum34</Dependency>
+                <Dependency>python-cffi</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+                <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>2.8</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>PyYAML</Name>
             <Homepage>http://pyyaml.org/wiki/PyYAML</Homepage>
             <Packager>
@@ -33031,7 +33316,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="tr">Zengin içerikli ve kolay kullanımlı bir kütüphane.</Summary>
             <Description xml:lang="en">lxml is the most feature-rich and easy-to-use library for working with XML and HTML in the Python language.</Description>
             <Description xml:lang="tr">Python dilinde xml ve html ile çalışmak için, zengin içerikli ve kolay kullanımlı bir kütüphane.</Description>
-            <Archive type="targz" sha1sum="8e96a9ef9c40bcb62400f8619499c5ac8877caa3">https://github.com/lxml/lxml/archive/lxml-4.4.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="bf12037032da7bb34670bcbf89d3f2302d796f27">https://github.com/lxml/lxml/archive/lxml-4.4.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-devel</Dependency>
                 <Dependency>cython</Dependency>
@@ -33063,13 +33348,20 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="en">API documentation of python-lxml</Summary>
             <Summary xml:lang="tr">python-lxml paketine ait API belgeleri</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">python-lxml</Dependency>
+                <Dependency release="2">python-lxml</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>4.4.2</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-11-09</Date>
                 <Version>4.4.1</Version>
@@ -33205,7 +33497,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Python setuptools</Summary>
             <Description xml:lang="en">python-setuptools is a collection of enhancements to the Python distutils that allow you to more easily build and distribute Python packages, especially ones that have dependencies on other packages.</Description>
-            <Archive type="targz" sha1sum="b5ea03183a313091083ca322eb68e90dfc290504">https://github.com/pypa/setuptools/archive/v39.2.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="1460a02840bdab87aa419451819933368d33d810">https://github.com/pypa/setuptools/archive/v42.0.2.tar.gz</Archive>
             <SourceURI>programming/language/python/setuptools/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -33224,6 +33516,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>42.0.2</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>39.2.0</Version>
@@ -33677,7 +33976,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">The PyPA recommended tool for installing Python packages</Summary>
             <Description xml:lang="en">The PyPA recommended tool for installing Python packages</Description>
-            <Archive type="targz" sha1sum="20c279ff55abd78c11ce5ca0a66d47755434d00f">https://github.com/pypa/pip/archive/19.2.3.tar.gz</Archive>
+            <Archive type="targz" sha1sum="bb825314632e0528aa93a19ab18e87f4cc36e998">https://github.com/pypa/pip/archive/19.3.1.tar.gz</Archive>
             <SourceURI>programming/language/python/pip/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -33716,6 +34015,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-12</Date>
+                <Version>19.3.1</Version>
+                <Comment>Automatic version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-26</Date>
                 <Version>19.2.3</Version>
@@ -33846,7 +34152,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <SourceURI>programming/language/python/pygobject/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python-pygobject</Name>
+            <Name>pygobject</Name>
             <RuntimeDependencies>
                 <Dependency>gobject-introspection</Dependency>
                 <Dependency>python-cairo</Dependency>
@@ -33857,7 +34163,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <Package>
-            <Name>python3-pygobject</Name>
+            <Name>pygobject3</Name>
             <BuildType>rebuild_python</BuildType>
             <RuntimeDependencies>
                 <Dependency>gobject-introspection</Dependency>
@@ -33872,7 +34178,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>pygobject-devel</Name>
             <Summary xml:lang="en">pygobject development files</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">python-pygobject</Dependency>
+                <Dependency release="2">python-pygobject</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -33892,6 +34198,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-01</Date>
+                <Version>2.28.6</Version>
+                <Comment>fix package name</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2017-02-06</Date>
                 <Version>2.28.6</Version>
@@ -34012,6 +34325,143 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-11-21</Date>
                 <Version>0.10.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-pycparser</Name>
+            <Homepage>https://github.com/eliben/pycparser</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">C parser and AST generator written in Python</Summary>
+            <Summary xml:lang="tr">C parser and AST generator written in Python</Summary>
+            <Description xml:lang="en">C parser and AST generator written in Python</Description>
+            <Description xml:lang="tr">C parser and AST generator written in Python</Description>
+            <Archive sha1sum="3c8845142c9065ae4407c166964b57bd34dde88d">https://github.com/eliben/pycparser/archive/release_v2.19.zip</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pycparser/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pycparser</Name>
+            <RuntimeDependencies>
+                <Dependency>python-ply</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+                <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>2.19</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pygtk2</Name>
+            <Homepage>http://www.pygtk.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">GTK+ bindings for Python</Summary>
+            <Description xml:lang="en">python-gtk lets you to easily create programs with a graphical user interface using the Python programming language and GTK+ library.</Description>
+            <Archive type="tarbz2" sha1sum="344e6a32a5e8c7e0aaeb807e0636a163095231c2">mirrors://gnome/pygtk/2.24/pygtk-2.24.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>pygobject-devel</Dependency>
+                <Dependency>python-numpy</Dependency>
+                <Dependency>python-cairo-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>fix-leaks-of-pango-objects.patch</Patch>
+                <Patch>python27.patch</Patch>
+            </Patches>
+            <SourceURI>programming/language/python/pygtk2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pygtk2</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pygtk2-demo</Name>
+            <Summary xml:lang="en">Demo applications for python-gtk</Summary>
+            <IsA>app:gui</IsA>
+            <RuntimeDependencies>
+                <Dependency releaseFrom="1">python-gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/pygtk-demo</Path>
+                <Path fileType="library">/usr/lib/pygtk/2.0/pygtk-demo.py</Path>
+                <Path fileType="data">/usr/lib/pygtk/2.0/demos</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pygtk2-docs</Name>
+            <Summary xml:lang="en">Reference documents for python-gtk</Summary>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency releaseFrom="1">python-gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pygtk2-devel</Name>
+            <Summary xml:lang="en">Development files for python-gtk</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">python-gtk2</Dependency>
+                <Dependency>python-pygobject-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/pygtk-codegen-2.0</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/pygtk</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-15</Date>
+                <Version>2.24.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -34205,6 +34655,47 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-Twisted</Name>
+            <Homepage>http://twistedmatrix.com</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Event driven network framework</Summary>
+            <Description xml:lang="en">Twisted is an event-driven networking framework written in Python and licensed under the MIT license. Twisted projects variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and much more.</Description>
+            <Description xml:lang="es">Twisted es un entorno de redes controlado por eventos, escrito en Python y licenciado bajo la licencia MIT. Los proyectos Twisted soportan TCP, UDP, SSL/TLS, multicast, Unix sockets, una gran cantidad de protocolos (incluyendo HTTP, NNTP, IMAP, SSH, IRC, FTP, y otros), y mucho más.</Description>
+            <Archive sha1sum="a5b6f7feb801272fddae4cc19b037c7a53ea03fc">https://github.com/twisted/twisted/archive/twisted-19.10.0.zip</Archive>
+            <BuildDependencies>
+                <Dependency>python-zope-interface</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-Twisted/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-Twisted</Name>
+            <RuntimeDependencies>
+                <Dependency>python-zope-interface</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-31</Date>
+                <Version>19.10.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>cachetools</Name>
             <Homepage>https://github.com/tkem/</Homepage>
             <Packager>
@@ -34304,6 +34795,41 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-12-11</Date>
                 <Version>1.13.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-enum34</Name>
+            <Homepage>http://pypi.python.org/pypi/enum34</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python 3.4 Enum backported</Summary>
+            <Description xml:lang="en">Python 3.4 Enum backported</Description>
+            <Archive sha1sum="1436ec8f017fb7159a1ab8e073587bc5162c6d48">https://files.pythonhosted.org/packages/e8/26/a6101edcf724453845c850281b96b89a10dac6bd98edebc82634fccce6a5/enum34-1.1.6.zip</Archive>
+            <SourceURI>programming/language/python/python-enum34/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-enum34</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.1.6</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -34450,6 +34976,41 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-pyxdg</Name>
+            <Homepage>http://freedesktop.org/wiki/Software/pyxdg</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A freedesktop.org standards library for Python</Summary>
+            <Summary xml:lang="tr">Python için freedesktop.org standartları kütüphanesi</Summary>
+            <Description xml:lang="en">PyXDG is a Python library to access freedesktop.org standarts.</Description>
+            <Description xml:lang="tr">PyXDG, freedesktop.org standartlarına erişmek için yazılmış bir Python kütüphanesidir.</Description>
+            <Archive type="targz" sha1sum="904b336596167b8e4a829d77ec4107d5d2e200a6">https://files.pythonhosted.org/packages/47/6e/311d5f22e2b76381719b5d0c6e9dc39cd33999adae67db71d7279a6d70f4/pyxdg-0.26.tar.gz</Archive>
+            <SourceURI>programming/language/python/python-pyxdg/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pyxdg</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>0.26</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>packaging</Name>
             <Homepage>https://pypi.org/project/packaging/#files/</Homepage>
             <Packager>
@@ -34563,6 +35124,40 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-12-11</Date>
                 <Version>1.0.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-urwid</Name>
+            <Homepage>http://urwid.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>ZPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A full-featured console (xterm et al.) user interface library</Summary>
+            <Description xml:lang="en">A full-featured console (xterm et al.) user interface library</Description>
+            <Archive sha1sum="829010a8bcd5f02e12434da429f052a5afcf5186">https://files.pythonhosted.org/packages/45/dd/d57924f77b0914f8a61c81222647888fbb583f89168a376ffeb5613b02a6/urwid-2.1.0.tar.gz</Archive>
+            <SourceURI>programming/language/python/python-urwid/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-urwid</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="exectable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-02</Date>
+                <Version>2.1.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -34935,6 +35530,40 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-chardet</Name>
+            <Homepage>http://www.zope.org/Products/ZopeInterface/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>ZPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">zope.interface library</Summary>
+            <Description xml:lang="en">Interfaces are objects that specify (document) the external behavior of objects that provide them.</Description>
+            <Archive sha1sum="4766fb07e700945a7085d073257f1f320d037ce8">https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz</Archive>
+            <SourceURI>programming/language/python/python-chardet/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-chardet</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="exectable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-31</Date>
+                <Version>3.0.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>dkms</Name>
             <Homepage>https://github.com/dell/dkms</Homepage>
             <Packager>
@@ -34983,10 +35612,10 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>kernel.linux</PartOf>
             <Summary xml:lang="en">The Linux libre kernel (the core of the Linux operating system) for Sulin</Summary>
             <Description xml:lang="en">kernel contains the Linux kernel, the core of any Linux operating system. ddtionally libre kernel is a cleant up version of original kernel. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-            <Archive type="targz" sha1sum="dc832c4b6af12a5629a0be4495091b2a3bb06ae8">https://gitlab.com/sulinos/linux/libre/-/archive/v5.4-libre/libre-v5.4-libre.tar.gz</Archive>
+            <Archive sha1sum="9c34799a9488dbe6b6ea18a6f1455b005812f168">http://linux-libre.fsfla.org/pub/linux-libre/releases/5.5.1-gnu/linux-libre-5.5.1-gnu.tar.xz</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="generate-module-list" permission="0755">scripts/generate-module-list</AdditionalFile>
-                <AdditionalFile target=".config" permission="0755">configs/kernel-x86_64-config-5.4.2-gnu</AdditionalFile>
+                <AdditionalFile target=".config" permission="0755">configs/kernel-x86_64-config-5.5.1-gnu</AdditionalFile>
             </AdditionalFiles>
             <BuildDependencies>
                 <Dependency>bc</Dependency>
@@ -35008,30 +35637,25 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="executable" permanent="true">/boot</Path>
                 <Path fileType="library" permanent="true">/lib/modules</Path>
                 <Path fileType="data">/etc/kernel</Path>
-                <Path fileType="config" permanent="true">/etc/mkinitcpio.d</Path>
             </Files>
-            <Provides>
-                <SCOM script="package.py">System.Package</SCOM>
-            </Provides>
         </Package>
         <Package>
             <Name>libre-module-headers</Name>
             <Summary xml:lang="en">Kernel header files for external module building</Summary>
             <Description xml:lang="en">kernel-module-headers includes the C header files and the necessary Kbuild files for being able to build external kernel modules.</Description>
             <Files>
-                <Path fileType="header">/usr/src/linux-headers*</Path>
+                <Path fileType="header">/usr/src</Path>
                 <Path fileType="header">/tmp-headers*</Path>
             </Files>
         </Package>
-        <Package>
-            <Name>libre-docs</Name>
-            <Summary xml:lang="en">Documentation and scripts for the Linux kernel</Summary>
-            <Description xml:lang="en">kernel-docs includes several documentation files and scripts for managing several debugging and other tasks.</Description>
-            <Files>
-                <Path fileType="header">/usr/src/linux-headers*/Documentation</Path>
-            </Files>
-        </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-02</Date>
+                <Version>5.5.1</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-15</Date>
                 <Version>5.4.0</Version>
@@ -35062,10 +35686,10 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>kernel.linux</PartOf>
             <Summary xml:lang="en">The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
             <Description xml:lang="en">kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-            <Archive type="tarxz" sha1sum="d5d947ecc209af6ce553d330f6a807fbef12d55a">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.4.2.tar.xz</Archive>
+            <Archive sha1sum="04a78eff1a4eafdcc4d5493068ed5a7c313e93e4">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.5.1.tar.xz</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="generate-module-list" permission="0755">scripts/generate-module-list</AdditionalFile>
-                <AdditionalFile target=".config" permission="0755">configs/kernel-x86_64-config-5.4.2</AdditionalFile>
+                <AdditionalFile target=".config" permission="0755">configs/kernel-x86_64-config-5.5.1</AdditionalFile>
             </AdditionalFiles>
             <BuildDependencies>
                 <Dependency>bc</Dependency>
@@ -35086,19 +35710,14 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="executable" permanent="true">/boot</Path>
                 <Path fileType="library" permanent="true">/lib/modules</Path>
                 <Path fileType="data">/etc/kernel</Path>
-                <Path fileType="config" permanent="true">/etc/mkinitcpio.d</Path>
             </Files>
-            <Provides>
-                <SCOM script="package.py">System.Package</SCOM>
-            </Provides>
         </Package>
         <Package>
             <Name>linux-module-headers</Name>
             <Summary xml:lang="en">Kernel header files for external module building</Summary>
             <Description xml:lang="en">kernel-module-headers includes the C header files and the necessary Kbuild files for being able to build external kernel modules.</Description>
             <Files>
-                <Path fileType="header">/usr/src/linux-headers*</Path>
-                <Path fileType="header">/tmp-headers*</Path>
+                <Path fileType="header">/usr/src/</Path>
             </Files>
         </Package>
         <Package>
@@ -35110,15 +35729,14 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
-        <Package>
-            <Name>linux-docs</Name>
-            <Summary xml:lang="en">Documentation and scripts for the Linux kernel</Summary>
-            <Description xml:lang="en">kernel-docs includes several documentation files and scripts for managing several debugging and other tasks.</Description>
-            <Files>
-                <Path fileType="header">/usr/src/linux-headers*/Documentation</Path>
-            </Files>
-        </Package>
         <History>
+            <Update release="6">
+                <Date>2020-02-02</Date>
+                <Version>5.5.1</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="5">
                 <Date>2019-12-14</Date>
                 <Version>5.4.2</Version>
@@ -36344,6 +36962,48 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>whois</Name>
+            <Homepage>http://www.linux.it/~md/software/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>network.analyzer</PartOf>
+            <Summary xml:lang="en">Improved whois client</Summary>
+            <Description xml:lang="en">This is a new whois (RFC 3912) client rewritten from scratch. It is inspired from and compatible with the usual BSD and RIPE whois programs. It is intelligent and can automatically select the appropriate whois server for most queries.</Description>
+            <Archive sha1sum="1e2e27d1120b365a704b10374ecaf690f93407d1">https://github.com/rfc1036/whois/archive/v5.4.3/whois-5.4.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libidn-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/analyzer/whois/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>whois</Name>
+            <RuntimeDependencies>
+                <Dependency>libidn</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc/whois</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-30</Date>
+                <Version>5.4.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>netcat</Name>
             <Homepage>http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/nc/</Homepage>
             <Packager>
@@ -36445,6 +37105,65 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-11-23</Date>
                 <Version>1.7.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>nmap</Name>
+            <Homepage>http://www.insecure.org/nmap/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <PartOf>network.analyzer</PartOf>
+            <Summary xml:lang="en">Utility for network exploration or security auditing</Summary>
+            <Description xml:lang="en">Nmap is a utility for network exploration or security auditing.</Description>
+            <Icon>nmap</Icon>
+            <Archive sha1sum="71057361a0953bba5967dc0385de77f3eed792de">http://nmap.org/dist/nmap-7.70.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>subversion-devel</Dependency>
+                <Dependency>libpcap-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>lua-devel</Dependency>
+                <Dependency>apr-devel</Dependency>
+                <Dependency>gcc</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/analyzer/nmap/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>nmap</Name>
+            <IsA>app:console</IsA>
+            <RuntimeDependencies>
+                <Dependency>subversion</Dependency>
+                <Dependency>libpcap</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>lua</Dependency>
+                <Dependency>apr</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/ncat</Path>
+                <Path fileType="data">/usr/share/nmap</Path>
+                <Path fileType="data">/usr/share/nping</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/pixmaps/nmap.png" permission="0644" owner="root">nmap.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-30</Date>
+                <Version>7.70</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -36855,6 +37574,55 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Comment>First release</Comment>
                 <Name>Ali Rıza Ünal</Name>
                 <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libtorrent</Name>
+            <Homepage>http://www.rasterbar.com/products/libtorrent</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>network.library</PartOf>
+            <Summary xml:lang="en">Full featured torrent client library</Summary>
+            <Summary xml:lang="tr">Gelişmiş bir torrent kitaplığı</Summary>
+            <Description xml:lang="en">Rasterbar&apos;s C++ library that aims to be a good alternative to all the other bittorrent implementations around. It is a library and not a full featured client, although it comes with a working example client.</Description>
+            <Description xml:lang="tr">Libtorrent Rasterbar C++ kitaplığı, diğer bittorrent kitaplıklarına karşın iyi bir alternatifdir.</Description>
+            <Archive sha1sum="a911424e0a057f3f204da72cda51a2eaa08b7784">https://github.com/arvidn/libtorrent/archive/libtorrent-1_2_3.zip</Archive>
+            <BuildDependencies>
+                <Dependency>libsigc2++</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>geoip</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/library/libtorrent/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libtorrent</Name>
+            <RuntimeDependencies>
+                <Dependency>libsigc2++</Dependency>
+                <Dependency>boost</Dependency>
+                <Dependency>geoip</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/libtorrent</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc/libtorrent/html</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-31</Date>
+                <Version>1.2.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -37611,6 +38379,132 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-11-11</Date>
                 <Version>1.21.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>deluge</Name>
+            <Homepage>http://deluge-torrent.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network</PartOf>
+            <Summary xml:lang="en">Full-featured GTK+ Bittorrent client</Summary>
+            <Summary xml:lang="tr">Tam donanımlı GTK+ Bittorrent istemcisi</Summary>
+            <Description xml:lang="en">Deluge is a Bittorrent client. Deluge is intended to bring a native, full-featured client to Linux GTK+ desktop environments such as GNOME and Xfce.</Description>
+            <Description xml:lang="tr">Deluge, bir Bittorrent istemcisidir. Xfce ve GNOME gibi GTK+ tabanlı masaüstü ortamlarıyla görsel kitaplıkları açısından uyumlu çalışması için yazılmış tam donanımlı bir istemcidir.</Description>
+            <Icon>deluge</Icon>
+            <Archive sha1sum="78fc8cf85141b474fe63fb063771583eefbfe449">http://download.deluge-torrent.org/source/2.0/deluge-2.0.3.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>boost</Dependency>
+                <Dependency>python-Twisted</Dependency>
+                <Dependency>python-chardet</Dependency>
+                <Dependency>libtorrent</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>librsvg</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/download/deluge/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>deluge</Name>
+            <RuntimeDependencies>
+                <Dependency>librsvg</Dependency>
+                <Dependency>python-gtk2</Dependency>
+                <Dependency>python-pyxdg</Dependency>
+                <Dependency>python-Twisted</Dependency>
+                <Dependency>python-chardet</Dependency>
+                <Dependency>libtorrent</Dependency>
+                <Dependency>python-mako</Dependency>
+                <Dependency>python-six</Dependency>
+                <Dependency>python-cffi</Dependency>
+                <Dependency>python-pycparser</Dependency>
+                <Dependency>python-cryptography</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-31</Date>
+                <Version>2.0.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>uget</Name>
+            <Homepage>http://ugetdm.com/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.download</PartOf>
+            <Summary xml:lang="en">uget - Download manager using GTK+ and libcurl</Summary>
+            <Description xml:lang="en">uGet is an Open Source download manager application for GNU/Linux developed with GTK+.</Description>
+            <Icon>uget</Icon>
+            <Archive sha1sum="e0f2718fdf36d6db42f8f596ea15a5a987a2b2ab">https://master.dl.sourceforge.net/project/urlget/uget%20%28stable%29/2.2.3/uget-2.2.3-1.tar.gz</Archive>
+            <Archive sha1sum="8e740b383d05b59a7004a7dc2cc13543dbb93188">https://master.dl.sourceforge.net/project/urlget/aria2-plugin/1.18.x/aria2-1.18.3.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>curl-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/download/uget/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>uget</Name>
+            <RuntimeDependencies>
+                <Dependency>curl</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gstreamer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/sounds</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-30</Date>
+                <Version>2.2.3</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -39450,7 +40344,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>NetworkManager-devel</Name>
             <Summary xml:lang="en">Development files for NetworkManager</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">NetworkManager</Dependency>
+                <Dependency release="3">NetworkManager</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -39458,7 +40352,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
-            <Update release="2">
+            <Update release="3">
                 <Date>2020-01-20</Date>
                 <Version>1.22.4</Version>
                 <Comment>Rebuild.</Comment>
@@ -46902,6 +47796,45 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mm-common</Name>
+            <Homepage>http://www.gtk.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">Common build files of the C++ bindings</Summary>
+            <Description xml:lang="en">Common build files of the C++ bindings</Description>
+            <Archive sha1sum="1109b44f7c335b60bde7cd11030f5aa3f1349ccd">https://gitlab.gnome.org/GNOME/mm-common/-/archive/1.0.0/mm-common-1.0.0.zip</Archive>
+            <BuildDependencies>
+                <Dependency>libsigc2++-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/mm-common/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mm-common</Name>
+            <RuntimeDependencies>
+                <Dependency>doxygen</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>0.9.12</Version>
+                <Comment>First release</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>pango</Name>
             <Homepage>http://www.pango.org</Homepage>
             <Packager>
@@ -46957,7 +47890,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>pango-devel</Name>
             <Summary xml:lang="en">Development files for pango</Summary>
             <RuntimeDependencies>
-                <Dependency release="3">pango</Dependency>
+                <Dependency release="4">pango</Dependency>
                 <Dependency>fridibi-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>libXft-devel</Dependency>
@@ -46996,7 +47929,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Dependency>fridibi-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="3">pango</Dependency>
+                <Dependency release="4">pango</Dependency>
                 <Dependency>cairo-32bit</Dependency>
                 <Dependency>glib2-32bit</Dependency>
                 <Dependency>libX11-32bit</Dependency>
@@ -47016,6 +47949,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-01</Date>
+                <Version>1.44.7</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2020-01-09</Date>
                 <Version>1.44.7</Version>
@@ -47349,6 +48289,95 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-10-23</Date>
                 <Version>3.24.11</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wxGTK</Name>
+            <Homepage>http://www.wxwidgets.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>wxWinLL-3</License>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <License>wxWinFDL-3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit</Summary>
+            <Summary xml:lang="tr">Birçok platform için ortak C++ arayüz araç takımı olan wxWindows&apos;un GTK+ sürümü</Summary>
+            <Description xml:lang="en">wxWidgets/GTK2 is the GTK2 port of the C++ cross-platform wxWidgets GUI library, offering classes for all common GUI controls as well as a comprehensive set of helper classes for most common application tasks, ranging from networking to HTML display and image manipulation.</Description>
+            <Description xml:lang="tr">wxWidgets/GTK2 birçok platform için ortak bir C++ arayüz kitaplığı olan wxWidgets&apos;ın GTK2 sürümüdür. Ağ araçları, HTML gösterimi ve resim işleme gibi en yaygın kullanılan uygulama görevleri için kapsamlı bir sınıf kümesinin yanında tüm genel GUI denetimlerini içerir.</Description>
+            <Description xml:lang="fr">wxWidgets/GTK2 est le port GTK2 de la librairie graphique multi-plateforme wxWidgets, offrant des classes pour les contrôles IHM communs ainsi qu&apos;un ensemble complet de classes d&apos;aides pour les tâches applicatives habituelles, allant du réseau à l&apos;affichage HTML en passant par la manipulation d&apos;images.</Description>
+            <Description xml:lang="es">wxWidgets/GTK2 es la versión portada a GTK2 de la librería GUI wxWidgets cross-plataforma en C++, con clases para todos los controles GUI comunes y tambien un conjunto de clases con ayudantes para la mayoría de las tareas comunes de aplicaciones, desde networking a visualización HTML y manipulación de imagenes.</Description>
+            <Archive sha1sum="88d6f0823d8397896c97f8a1f8ddb23739a29440">https://github.com/wxWidgets/wxWidgets/archive/v3.1.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>mesa-glu-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/wxGTK/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wxGTK</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>webkit2gtk</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/usr/share/aclocal/</Path>
+                <Path fileType="data">/usr/share/bakefile/</Path>
+                <Path fileType="library">/usr/lib/wx/config</Path>
+                <Path fileType="localedata">/usr/share/locale/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>wxGTK-devel</Name>
+            <Summary xml:lang="en">wxGTK-devel is the development files for wxGTK</Summary>
+            <Summary xml:lang="tr">wxGTK araç seti için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">wxGTK</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.1.3</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -47855,6 +48884,121 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2019-10-10</Date>
                 <Version>2.26.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wxGTK2.8</Name>
+            <Homepage>http://www.wxwidgets.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>wxWinLL-3</License>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <License>wxWinFDL-3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit</Summary>
+            <Description xml:lang="en">wxWidgets/GTK2 is the GTK2 port of the C++ cross-platform wxWidgets GUI library, offering classes for all common GUI controls as well as a comprehensive set of helper classes for most common application tasks, ranging from networking to HTML display and image manipulation.</Description>
+            <Archive sha1sum="4cf67e4c7b451b27d7924eaddfc9a216a97b1b15">https://master.dl.sourceforge.net/project/wxpython/wxPython/2.8.12.1/wxwidgets2.8_2.8.12.1.orig.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libXxf86vm-devel</Dependency>
+                <Dependency>libsdl-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>mesa-glu-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>tiff</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/wxGTK2.8/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wxGTK2.8</Name>
+            <RuntimeDependencies>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency release="1">wxBase</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/wx-config-2.8</Path>
+                <Path fileType="executable">/usr/bin/wxconfig</Path>
+                <Path fileType="library">/usr/lib/libwx_gtk*</Path>
+                <Path fileType="library">/usr/lib/wx/config/gtk2-unicode-release-2.8</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>wxGTK2.8-devel</Name>
+            <Summary xml:lang="en">wxGTK-devel is the development files for wxGTK</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">wxBase-devel</Dependency>
+                <Dependency release="1">wxGTK2.8</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/lib/wx/include</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>wxBase</Name>
+            <Summary xml:lang="en">wxBase is the GUI independent part of wxWidgets</Summary>
+            <Summary xml:lang="tr">wxWidgets/wxGTK için arayüz bağımsız olan kitaplıklar</Summary>
+            <RuntimeDependencies>
+                <Dependency>libunwind</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/wxrc</Path>
+                <Path fileType="executable">/usr/bin/wxrc-2.8</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/bakefile</Path>
+                <Path fileType="locale">/usr/share/locale</Path>
+                <Path fileType="library">/usr/lib/libwx_base*</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>wxBase-devel</Name>
+            <Summary xml:lang="en">wxBase-devel is the development files for wxBase</Summary>
+            <Summary xml:lang="tr">wxBase sınıfları için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">wxGTK2.8</Dependency>
+                <Dependency release="1">wxBase</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.8.12.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -52036,6 +53180,38 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sconf</Name>
+            <Homepage>https://gitlab.com/sulinos/devel/sulin-manager</Homepage>
+            <Packager>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>system.devel</PartOf>
+            <Summary xml:lang="en">SulinOS config</Summary>
+            <Description xml:lang="en">Sulin configure manager.</Description>
+            <Archive sha1sum="b86d08b46990298c990fe0fd2bd2401082dc213d">https://gitlab.com/sulinos/devel/sulin-manager/-/archive/1.0/sulin-manager-1.0.tar.gz</Archive>
+            <SourceURI>system/sulin/sconf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sconf</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-28</Date>
+                <Version>1.0</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>elogind</Name>
             <Homepage>https://github.com/elogind/elogind</Homepage>
             <Packager>
@@ -52185,18 +53361,22 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="data">/usr/share/dbus-1</Path>
                 <Path fileType="data">/usr/share/polkit-1/actions</Path>
                 <Path fileType="data">/usr/share/polkit-1/rules.d</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
                 <Path fileType="data">/var</Path>
             </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/init.d/consolekit" permission="0755" owner="root">consolekit.initd</AdditionalFile>
+            </AdditionalFiles>
         </Package>
         <Package>
             <Name>ConsoleKit-devel</Name>
             <Summary xml:lang="en">Development files for ConsoleKit</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">ConsoleKit</Dependency>
+                <Dependency release="3">ConsoleKit</Dependency>
                 <Dependency>dbus-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -52205,6 +53385,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-04</Date>
+                <Version>1.2.1</Version>
+                <Comment>Missing initd script added.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-13</Date>
                 <Version>1.2.1</Version>
@@ -53207,7 +54394,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Library for reading and writing streaming archives</Summary>
             <Description xml:lang="en">libarchive includes a library and command-line tools for reading and writing tar, cpio, zip, ISO, and other archive formats.</Description>
-            <Archive type="targz" sha1sum="580064227105e30322caa6c67b59e8c8e6060027">http://www.libarchive.org/downloads/libarchive-3.3.2.tar.gz</Archive>
+            <Archive sha1sum="e185d3cd101314234fc897c021535c735b3a3f98">https://github.com/libarchive/libarchive/releases/download/v3.4.1/libarchive-3.4.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>acl-devel</Dependency>
                 <Dependency>nettle-devel</Dependency>
@@ -53217,6 +54404,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Dependency>openssl-devel</Dependency>
                 <Dependency>xz-devel</Dependency>
                 <Dependency>lzo-devel</Dependency>
+                <Dependency>lz4-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
             </BuildDependencies>
             <SourceURI>system/devel/libarchive/pspec.xml</SourceURI>
@@ -53225,6 +54413,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>libarchive</Name>
             <RuntimeDependencies>
                 <Dependency>lzo</Dependency>
+                <Dependency>lz4</Dependency>
                 <Dependency>nettle</Dependency>
                 <Dependency>xz</Dependency>
                 <Dependency>acl</Dependency>
@@ -53242,7 +54431,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>libarchive-devel</Name>
             <Summary xml:lang="en">Development files for libarchive</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">libarchive</Dependency>
+                <Dependency release="2">libarchive</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -53255,7 +54444,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">libarchive</Dependency>
+                <Dependency release="2">libarchive</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -53267,13 +54456,20 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">libarchive</Dependency>
+                <Dependency release="2">libarchive</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-31</Date>
+                <Version>3.4.1</Version>
+                <Comment>First release</Comment>
+                <Name>Upstream</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>3.3.2</Version>
@@ -53975,6 +55171,45 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Comment>First release</Comment>
                 <Name>Süleyman POYRAZ</Name>
                 <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ccache</Name>
+            <Homepage>https://ccache.samba.org/</Homepage>
+            <Packager>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>system.devel</PartOf>
+            <Summary xml:lang="en">Compiler cache that speeds up</Summary>
+            <Description xml:lang="en">Compiler cache that speeds up recompilation by caching previous compilations</Description>
+            <Archive sha1sum="8e7cf0b53c5cd912d23da3dff66fb8fb91321eef">https://github.com/ccache/ccache/releases/download/v3.7.7/ccache-3.7.7.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>system/devel/ccache/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ccache</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-28</Date>
+                <Version>3.7.7</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -55574,7 +56809,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Cross-platform, open-source make system</Summary>
             <Description xml:lang="en">CMake, the cross-platform, open-source make system. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.</Description>
-            <Archive type="targz" sha1sum="591fc2fabd44f3612676beef6e15f81fbe5417f7">https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz</Archive>
+            <Archive sha1sum="d4ee0e45d63915a17559fe479e62dc776012e7b6">https://github.com/Kitware/CMake/releases/download/v3.16.3/cmake-3.16.3.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>curl-devel</Dependency>
                 <Dependency>expat-devel</Dependency>
@@ -55611,7 +56846,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">cmake</Dependency>
+                <Dependency release="2">cmake</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -55623,13 +56858,20 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="1">cmake</Dependency>
+                <Dependency release="2">cmake</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-31</Date>
+                <Version>3.16.3</Version>
+                <Comment>Upstream</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>3.11.1</Version>
@@ -56133,6 +57375,59 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Version>2.3.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>lz4</Name>
+            <Homepage>https://github.com/lz4/lz4</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>system.base</PartOf>
+            <Summary xml:lang="en">LZ4 - Extremely fast compression</Summary>
+            <Description xml:lang="en">LZ4 is lossless compression algorithm, providing compression speed &gt; 500 MB/s per core, scalable with multi-cores CPU. It features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems.</Description>
+            <Archive sha1sum="36930b1316e847f21e318e804cc6064aebc51601">https://github.com/lz4/lz4/archive/e55548b0bd553cc25d8c0994db6f5d49663fb3f5.zip</Archive>
+            <SourceURI>system/base/lz4/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>lz4</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>lz4-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="2">lz4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2020-01-31</Date>
+                <Version>1.9.2</Version>
+                <Comment>Rebuilded</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-11-19</Date>
+                <Version>1.9.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -59474,7 +60769,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">A library of handy utility functions</Summary>
             <Description xml:lang="en">glib2 is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.</Description>
-            <Archive type="targz" sha1sum="4d7963c2bbd9e5dac3e134e84b9d757a2270cca5">https://gitlab.gnome.org/GNOME/glib/-/archive/2.63.1/glib-2.63.1.tar.gz</Archive>
+            <Archive sha1sum="ee2772b44a36334e9d494b3f5d4c6f40e759fbaa">https://gitlab.gnome.org/GNOME/glib/-/archive/2.63.4/glib-2.63.4.zip</Archive>
             <AdditionalFiles>
                 <AdditionalFile target="multilib.patch">multilib.patch</AdditionalFile>
             </AdditionalFiles>
@@ -59512,6 +60807,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
                 <Path fileType="data">/usr/share/gettext</Path>
                 <Path fileType="data">/usr/share/gdb</Path>
+                <Path fileType="data">/usr/share/installed-tests</Path>
             </Files>
             <Provides>
                 <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
@@ -59526,7 +60822,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="en">Development files for glib2</Summary>
             <PartOf>system.devel</PartOf>
             <RuntimeDependencies>
-                <Dependency release="5">glib2</Dependency>
+                <Dependency release="6">glib2</Dependency>
                 <Dependency>libpcre-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -59568,7 +60864,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Dependency>dbus-32bit</Dependency>
             </BuildDependencies>
             <RuntimeDependencies>
-                <Dependency release="5">glib2</Dependency>
+                <Dependency release="6">glib2</Dependency>
                 <Dependency>libpcre-32bit</Dependency>
                 <Dependency>zlib-32bit</Dependency>
                 <Dependency>libffi-32bit</Dependency>
@@ -59591,6 +60887,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-02-01</Date>
+                <Version>2.63.4</Version>
+                <Comment>Package is rebuilded and released up.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="5">
                 <Date>2019-11-26</Date>
                 <Version>2.63.1</Version>
@@ -61063,9 +62366,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Dependency>texinfo</Dependency>
                 <Dependency>binutils</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch>glibc-2.28-fhs-1.patch</Patch>
-            </Patches>
             <SourceURI>system/base/glibc/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -61078,6 +62378,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="config">/etc</Path>
                 <Path fileType="library">/lib</Path>
                 <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/bin</Path>
                 <Path fileType="library">/usr/lib/*.so</Path>
                 <Path fileType="library">/usr/lib/audit</Path>
                 <Path fileType="library">/usr/lib/gconv</Path>
@@ -61181,7 +62482,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <Package>
-            <Name>glibc-doc-32bit</Name>
+            <Name>glibc-docs-32bit</Name>
             <Summary xml:lang="en">32-bit doc for glibc</Summary>
             <PartOf>system.doc</PartOf>
             <BuildType>emul32</BuildType>
@@ -66961,7 +68262,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>system.boot</PartOf>
             <Summary xml:lang="en">Dependency based init system that works with sysvinit.</Summary>
             <Description xml:lang="en">Dependency based init system that works with sysvinit.</Description>
-            <Archive type="targz" sha1sum="a8c47060eb90a7e212a48dc58c0b3abe20940f9c">https://github.com/OpenRC/openrc/archive/0.42.1.tar.gz</Archive>
+            <Archive sha1sum="a8c47060eb90a7e212a48dc58c0b3abe20940f9c">https://github.com/OpenRC/openrc/archive/0.42.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>zlib</Dependency>
                 <Dependency>pam</Dependency>
@@ -66983,8 +68284,9 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="executable">/sbin</Path>
                 <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/libexec</Path>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="doc">/usr/share/openrc</Path>
+                <Path fileType="data">/usr/share/</Path>
             </Files>
             <Provides>
                 <SCOM script="package.py">System.Package</SCOM>
@@ -66995,7 +68297,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="en">Documentation for openrc package.</Summary>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="4">openrc</Dependency>
+                <Dependency release="5">openrc</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -67006,13 +68308,20 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="en">Man pages for openrc package.</Summary>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="4">openrc</Dependency>
+                <Dependency release="5">openrc</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2019-12-13</Date>
+                <Version>0.42.1</Version>
+                <Comment>bashcomp and zshcomp enabled</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="4">
                 <Date>2019-12-13</Date>
                 <Version>0.42.1</Version>

@@ -101,7 +101,7 @@
     </Package>
 
     <History>
-		<Update release="2">
+		<Update release="3">
             <Date>2020-01-20</Date>
             <Version>1.22.4</Version>
             <Comment>Rebuild.</Comment>
