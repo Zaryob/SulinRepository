@@ -6,19 +6,22 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import cmaketools
 from inary.actionsapi import get
 
 
 def setup():
-    autotools.configure("--enable-shared=yes \
-                         --enable-debug=no \
-                         --enable-samples=no")
+    cmaketools.configure('-DCMAKE_INSTALL_PREFIX=/usr \
+		-DBUILD_SHARED_LIBS=ON \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DBUILD_EXAMPLES=OFF \
+		-DCMAKE_SKIP_RPATH=ON')
 
 def build():
     autotools.make()
 
 
 def install():
-    autotools.install()
+    autotools.install("DESTDIR=\""+get.installDIR()+"\"")
 
     inarytools.dodoc("Changes.txt", "License.txt")
