@@ -7,6 +7,7 @@ def createNode(mode, uid, gid, minor, major, path):
     os.system("/bin/chown %s:%s %s" % (uid, gid, path))
 
 def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+    os.system("mkdir -p /lib/udev/devices/net 2>/dev/null")
     createNode(600, "root", "root",     1, 11,      "/lib/udev/devices/kmsg")
     createNode(666, "root", "root",     1, 3,       "/lib/udev/devices/null")
     createNode(666, "root", "root",     1, 5,       "/lib/udev/devices/zero")
@@ -22,13 +23,6 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     createNode(660, "root", "dialout",  108, 0,     "/lib/udev/devices/ppp")
 
     os.system("/sbin/udevadm hwdb --update")
-
-    if os.path.exists("/lib/udev/devices/rtc"):
-        os.unlink("/lib/udev/devices/rtc")
-
-    # Migrate UDEV database
-    if fromVersion and int(fromVersion) < 165:
-        os.system("/sbin/udevadm info --convert-db &> /dev/null")
 
 def postRemove():
     pass

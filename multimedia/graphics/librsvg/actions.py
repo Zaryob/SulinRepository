@@ -11,12 +11,17 @@ from inary.actionsapi import get
 
 
 def setup():
-    shelltools.export("PKG_CONFIG_PATH", "/usr/lib/pkgconfig")
-    autotools.configure("--disable-gtk-doc \
-                         --enable-gtk3 \
-                         --enable-vala \
-                         --disable-static")
-
+    if get.buildTYPE() == "emul32":
+        shelltools.export("CC","gcc -m32")
+        shelltools.system("PKG_CONFIG_PATH=/usr/lib32/pkgconfig USE_ARCH=m32 \
+                          ./configure --prefix=/usr --sysconfdir=/etc \
+                          --enable-svgz --disable-gtk-doc")
+    else:
+        shelltools.export("CC","gcc")
+        shelltools.system("PKG_CONFIG_PATH=/usr/lib/pkgconfig USE_ARCH=64 \
+                          ./configure --prefix=/usr --sysconfdir=/etc \
+                          --libdir=/usr/lib \
+                          --enable-svgz --disable-gtk-doc")
 def build():
     autotools.make()
 
