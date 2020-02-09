@@ -3,7 +3,7 @@
 import os
 
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     try:
         # Trailing slash is important since it is used with dosed.
         encodingsDir = "/usr/share/fonts/encodings/"

@@ -10,7 +10,7 @@ OUR_DESC = "sddm"
 DATADIR = "/var/lib/sddm"
 DATADIRMODE = 0755
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
 
     # On first install...
     if not os.path.exists(DATADIR):

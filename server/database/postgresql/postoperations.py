@@ -2,7 +2,7 @@
 
 import os
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     os.system("/bin/chown -R postgres:postgres /var/lib/postgresql")
     os.system("/bin/chmod -R 0700 /var/lib/postgresql/data")
     os.system("/bin/chmod -R 0700 /var/lib/postgresql/backups")

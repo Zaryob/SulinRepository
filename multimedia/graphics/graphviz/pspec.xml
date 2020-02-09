@@ -38,6 +38,7 @@
             <Dependency>ghostscript</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
+        <IsA>postOps</IsA>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
@@ -45,9 +46,6 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-        </Provides>
     </Package>
 
     <Package>
@@ -71,7 +69,14 @@
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2019-10-10</Date>
+            <Version>2.40.1</Version>
+            <Comment>postOps uyumluluğu</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+                <Update release="1">
             <Date>2019-10-10</Date>
             <Version>2.40.1</Version>
             <Comment>First release</Comment>

@@ -12,43 +12,42 @@
         <IsA>data:font</IsA>
         <Summary>X.Org font files</Summary>
         <Description>xorg-font contains base X.Org fonts.</Description>
-        <Archive sha1sum="7ffec76dba1cfd5040c5b43ccfae930c83ddf92e" >mirrors://xorg/individual/font/encodings-1.0.5.tar.bz2</Archive>
-        <Archive sha1sum="6a2ec569336b5646682a14eee3c7790274beffd1" >mirrors://xorg/individual/font/font-adobe-75dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="53311cbd604f18bd9570727105a4222473d363e3" >mirrors://xorg/individual/font/font-adobe-100dpi-1.0.3.tar.bz2</Archive>
-        <!--Archive sha1sum="35b2d6598315b7e63e44f65e21c2406458e4fec8" >mirrors://xorg/individual/font/font-adobe-utopia-75dpi-1.0.4.tar.bz2</Archive-->
-        <Archive sha1sum="9e80cf5bbd5522a5cfad2a9f8f8fce86de0f0226" >mirrors://xorg/individual/font/font-adobe-utopia-100dpi-1.0.4.tar.bz2</Archive>
-        <Archive sha1sum="3113cfafb91c2c53df6a1fae57dca6c50fb8ce20" >mirrors://xorg/individual/font/font-adobe-utopia-type1-1.0.4.tar.bz2</Archive>
-        <Archive sha1sum="96b0aa38f88a54ef32ab85d3eef6f29b0437f70d" >mirrors://xorg/individual/font/font-alias-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="322ae41e74deea8de11fa077fd0e0191927a667c" >mirrors://xorg/individual/font/font-arabic-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="7290567d42a0f5adb6a3ad170524bb7ed59871d7" >mirrors://xorg/individual/font/font-bh-75dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="47d5e50be9e78695017650a088da52bfcf1eeb40" >mirrors://xorg/individual/font/font-bh-100dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="3c6678e6bbb2bd352baaf610a8f6aac9c5140c85" >mirrors://xorg/individual/font/font-bh-lucidatypewriter-75dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="bc4f804e49db8c6add04f52ffb1c0cd63e714b2c" >mirrors://xorg/individual/font/font-bh-lucidatypewriter-100dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="f42ebd527096011040a312e0f9cdf78d64177419" >mirrors://xorg/individual/font/font-bh-ttf-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="69ff038d38015cd305a4cd4d1a921fe3bd08bbde" >mirrors://xorg/individual/font/font-bh-type1-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="975e9f7872483394ebd87610f8bbc924d99bea34" >mirrors://xorg/individual/font/font-bitstream-75dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="138376f8683c09b9068c7c124842a7af9f0fcc2e" >mirrors://xorg/individual/font/font-bitstream-100dpi-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="7633551be3525c501278e81259b22ad9a893de4d" >mirrors://xorg/individual/font/font-bitstream-type1-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="e299d2bd2a84c98be5202435c8355e73e0282970" >mirrors://xorg/individual/font/font-bitstream-speedo-1.0.2.tar.bz2</Archive>
-        <Archive sha1sum="e5af8c2e8fb23955808a08bd38728ab3ad284d61" >mirrors://xorg/individual/font/font-cronyx-cyrillic-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="1649271129bbeff3aeee70a9da87a8e5e59162c1" >mirrors://xorg/individual/font/font-cursor-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="0c7b24e08e6d42eb006d79ae7ab4bbf446d59f7a" >mirrors://xorg/individual/font/font-daewoo-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="a748d35b8b0241abd3e1d85f80da318b529a74d0" >mirrors://xorg/individual/font/font-dec-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="bfc7d0a3aa0f96bf61ea26d6b3f5afbbdd0f35f6" >mirrors://xorg/individual/font/font-ibm-type1-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="cbd9bf441b25362123c817b1aa7a7be1ee4a9321" >mirrors://xorg/individual/font/font-isas-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="8c08c5fe01d4605f2886822cb3655548a6535e58" >mirrors://xorg/individual/font/font-jis-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="db3e912d41bda20f60b520c19e65bd7134ee1224" >mirrors://xorg/individual/font/font-micro-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="9c0e283ae59e7b05c0798fe0645cc822d22dcb0c" >mirrors://xorg/individual/font/font-misc-cyrillic-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="3f6af53047cb1206d737e8e8fbbbbb315c5419bb" >mirrors://xorg/individual/font/font-misc-ethiopic-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="f0693ea8fbc1d43177014155a0ecd2516348b51b" >mirrors://xorg/individual/font/font-misc-meltho-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="245d3041d9138b7e4a00858228adad2de304043b" >mirrors://xorg/individual/font/font-mutt-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="c6d28c56880807963175cbbd682fb6f75a35f77d" >mirrors://xorg/individual/font/font-misc-misc-1.1.2.tar.bz2</Archive>
-        <Archive sha1sum="fbe3629e9dcc03d12300d4ebab64fd038ea98952" >mirrors://xorg/individual/font/font-schumacher-misc-1.1.2.tar.bz2</Archive>
-        <Archive sha1sum="de1f0226f74d7e4d3ee9ab0b9c87478ab2a7db30" >mirrors://xorg/individual/font/font-screen-cyrillic-1.0.4.tar.bz2</Archive>
-        <Archive sha1sum="8d0dd87148283c8ac8c5ac37906b12fab5ddb1d8" >mirrors://xorg/individual/font/font-sony-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="6a72602557bb5dfe46c1ee3b56658aeed1e04f9d" >mirrors://xorg/individual/font/font-sun-misc-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="29249b49eac7e3f32d7a1a93808fcfd9d399011c" >mirrors://xorg/individual/font/font-winitzki-cyrillic-1.0.3.tar.bz2</Archive>
-        <Archive sha1sum="1381f274a178cbd08627560e17a4a8f6653be3f7" >mirrors://xorg/individual/font/font-xfree86-type1-1.0.4.tar.bz2</Archive>
+        <Archive sha1sum="f0397607b67abfadc00251d069149fc363890e55" >https://www.x.org/archive//individual/font/encodings-1.0.5.tar.gz</Archive>
+        <Archive sha1sum="aa2a8acf4e5a45d579ce5e7c7c69c40f7039de68" >https://www.x.org/archive//individual/font/font-adobe-75dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="be4841c7cc0c8d0505aaba8d04147098381f9aaf" >https://www.x.org/archive//individual/font/font-adobe-100dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="c8ed4daf49a4db89b0f9df125420b299a93747a6" >https://www.x.org/archive//individual/font/font-adobe-utopia-75dpi-1.0.4.tar.gz</Archive>
+        <Archive sha1sum="fec0c4810069bb47182d300fb73737b218ada56e" >https://www.x.org/archive//individual/font/font-adobe-utopia-100dpi-1.0.4.tar.gz</Archive>
+        <Archive sha1sum="289c4641ed48f509315c9dbfe60f4641f7458569" >https://www.x.org/archive//individual/font/font-adobe-utopia-type1-1.0.4.tar.gz</Archive>
+        <Archive sha1sum="6866f0bcb35a693293fbdaf351b2550dca5593a4" >https://www.x.org/archive//individual/font/font-alias-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="186b05721e6fea0c1b0d600704c67fdb0d777e55" >https://www.x.org/archive//individual/font/font-arabic-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="0372601465344d9e5638b59fc3fc3d933be8de7f" >https://www.x.org/archive//individual/font/font-bh-75dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="3845c95b62b94dc119ed2bb75bec48bf6c6d1e9a" >https://www.x.org/archive//individual/font/font-bh-100dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="3e9b56f2baedd7c1eda5b2e73c7e51c2807abe8e" >https://www.x.org/archive//individual/font/font-bh-lucidatypewriter-100dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="99b473e2db79cbc7734d6f5c2b1830457333585c" >https://www.x.org/archive//individual/font/font-bh-ttf-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="d7da5d0d0fa7f78977f51094b2d5245183c822be" >https://www.x.org/archive//individual/font/font-bh-type1-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="d75e182737ef5667e2e538b081e9a6c07ff7a53c" >https://www.x.org/archive//individual/font/font-bitstream-75dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="2b4df89a59d93d01393c9ea21517cce575717ecf" >https://www.x.org/archive//individual/font/font-bitstream-100dpi-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="303f2a2c4dd3a5a29b1e3ec0a91e4433cbf6dad8" >https://www.x.org/archive//individual/font/font-bitstream-speedo-1.0.2.tar.gz</Archive>
+        <Archive sha1sum="a57248a1c373b527444307b26769ca042febae48" >https://www.x.org/archive//individual/font/font-bitstream-type1-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="00c7ccf0bfb432665a0de679f409918b28cbed36" >https://www.x.org/archive//individual/font/font-cronyx-cyrillic-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="e9d61b27bb30c0c3a3e31fa9d30a759a8b3a0a08" >https://www.x.org/archive//individual/font/font-cursor-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="fd31f49a5463b587c6845e4e112c4cdd84e0f0c0" >https://www.x.org/archive//individual/font/font-daewoo-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="fb63bf93887c1d5b0d710dc76def35bf8d06154e" >https://www.x.org/archive//individual/font/font-dec-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="97bcf76406243d75d35d4c4773c16be38388190d" >https://www.x.org/archive//individual/font/font-ibm-type1-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="a810defd3e06f6b4704e5f86a30b9cc2d9d65376" >https://www.x.org/archive//individual/font/font-isas-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="27d60e701acbf0637f6a28500ed6ffded399c348" >https://www.x.org/archive//individual/font/font-jis-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="fbf4b2cda8886c1aeb4c5751db2cc42669355a2e" >https://www.x.org/archive//individual/font/font-micro-misc-1.0.3.tar.gzhttps://www.x.org/archive//individual/font/font-misc-cyrillic-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="fbf4b2cda8886c1aeb4c5751db2cc42669355a2e" >https://www.x.org/archive//individual/font/font-misc-cyrillic-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="b0808ec9090bd7e05cc0e58ea0de713e0cfb5af8" >https://www.x.org/archive//individual/font/font-misc-ethiopic-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="a0f7c2a7862ba223f662e6607832afdff9feb804" >https://www.x.org/archive//individual/font/font-misc-meltho-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="d632b75fd78ea0e9a46be1a1d3085a8629304fde" >https://www.x.org/archive//individual/font/font-misc-misc-1.1.2.tar.gz</Archive>
+        <Archive sha1sum="a039c31880810423b5d6c9a5edb26c139764c8da" >https://www.x.org/archive//individual/font/font-mutt-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="b0dd290eecca80570ed30f624110506be24d4970" >https://www.x.org/archive//individual/font/font-schumacher-misc-1.1.2.tar.gz</Archive>
+        <Archive sha1sum="bb4e44351426dd85af79e88b97cfe7361decf937" >https://www.x.org/archive//individual/font/font-screen-cyrillic-1.0.4.tar.gz</Archive>
+        <Archive sha1sum="663e09c748efa3f93391e4198ca89273ecfd9b15" >https://www.x.org/archive//individual/font/font-sony-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="e8926e7e3e370f3796a0fcdd15e0d3e373f91e2c" >https://www.x.org/archive//individual/font/font-sun-misc-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="51e53351458cbcd50ddb020a5c4015e01aa634aa" >https://www.x.org/archive//individual/font/font-winitzki-cyrillic-1.0.3.tar.gz</Archive>
+        <Archive sha1sum="3e3d382a62ff9f36b3c3e4316bf4e06001fc9f4f" >https://www.x.org/archive//individual/font/font-xfree86-type1-1.0.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>font-util</Dependency>
             <Dependency>xorg-app</Dependency>
@@ -60,15 +59,16 @@
         <RuntimeDependencies>
             <Dependency>xorg-app</Dependency>
         </RuntimeDependencies>
+        <IsA>postOps</IsA>
         <Files>
             <Path fileType="config">/etc/X11/fontpath.d</Path>
-            <Path fileType="data">/usr/share/fonts</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/man</Path>
             <Path fileType="config">/etc/fonts/conf.avail/42-luxi-mono.conf</Path>
             <Path fileType="config">/etc/fonts/conf.d/42-luxi-mono.conf</Path>
         </Files>
-        <Provides>
-            <SCOM script='package.py'>System.Package</SCOM>
-        </Provides>
     </Package>
 
     <History>

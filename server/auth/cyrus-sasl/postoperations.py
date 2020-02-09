@@ -2,7 +2,7 @@
 
 import os
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     if not os.path.exists("/etc/sasl2/sasldb2"):
         os.system("/usr/sbin/saslpasswd2 -f /etc/sasl2/sasldb2 -p login")
         os.system("/usr/sbin/saslpasswd2 -f /etc/sasl2/sasldb2 -d login")

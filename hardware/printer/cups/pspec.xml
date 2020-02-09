@@ -30,6 +30,7 @@
             <Dependency>avahi-libs</Dependency>
             <Dependency>mit-kerberos</Dependency>
         </RuntimeDependencies>
+        <IsA>postOps</IsA>
         <Files>
             <Path fileType="config">/etc/cups/*conf</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/cups.conf</Path>
@@ -95,6 +96,13 @@
     </Package>
 
     <History>
+		<Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.3.0</Version>
+            <Comment>postOps uyumluluğu</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>2.3.0</Version>

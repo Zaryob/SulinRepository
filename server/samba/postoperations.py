@@ -2,7 +2,7 @@
 
 import os
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     if not os.path.exists("/home/samba"):
         os.system("/bin/mkdir /home/samba")
         os.system("/bin/chmod 0777 /home/samba")

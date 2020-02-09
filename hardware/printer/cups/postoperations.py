@@ -11,7 +11,7 @@ ownerships = {
 
 CUPSD_CONFIG_FILE = "/etc/cups/cupsd.conf"
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     for directory,owners in ownerships.items():
         if os.path.exists(directory):
             os.system("chown %s %s" % (owners, directory))
