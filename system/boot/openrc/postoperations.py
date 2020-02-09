@@ -5,7 +5,7 @@ import grp
 import pwd
 import shutil
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     try:
         os.system("rc-update add dbus default nonetwork")
         os.system("rc-update add elogind default nonetwork")

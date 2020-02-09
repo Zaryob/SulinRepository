@@ -3,7 +3,7 @@
 import os
 import os.path
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     os.system("/bin/chown -R root:cron /var/spool/cron")
     os.system("/bin/chmod -R 01730 /var/spool/cron")
 

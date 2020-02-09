@@ -64,25 +64,7 @@ def migrateUsers():
         # setUser(uid, realname, homedir, shell, passwd, groups)
         hav("setUser", user, "", "", "", "", group)
 
-# Big ugly zemberek-openoffice hack
-def zemberek_hack():
-    import re
-
-    f = "/var/db/scom3/scripts/System.Package/zemberek_openoffice.py"
-
-    if os.path.exists(f):
-        postContent = open(f).read()
-        pattern = re.compile('oxt"\)\[0\]$', re.M)
-        postContent = re.sub(pattern, 'oxt")', postContent)
-        postContent = re.sub("raise Exception", "print", postContent)
-        postFile = open(f, 'w')
-        postFile.write(postContent)
-
-
-### SCOM methods
-
-
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     # We don't want to overwrite an existing file during upgrade
     specialFiles = ["passwd", "locale.conf","shadow", "group", "fstab", "ld.so.conf", "resolv.conf"]
 
@@ -93,11 +75,6 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
 
     shutil.copy("/etc/passwd", "/usr/share/baselayout/passwd.backup")
     shutil.copy("/etc/group", "/usr/share/baselayout/group.backup")
-
-    if fromRelease and int(fromRelease) < 143:
-        # Release 143 starts using /etc/ld.so.conf.d. Copy ld.so.conf
-        # for "include" statement.
-        shutil.copy("/usr/share/baselayout/ld.so.conf", "/etc")
 
     ##################################
     # Merge new system groups
@@ -292,10 +269,9 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     os.system("/usr/sbin/grpck -r &>/dev/null")
 
     # Create /root if not exists
-    if not os.path.exists("/root/"):
-        shutil.copytree("/etc/skel", "/root")
-        os.chown("/root", 0, 0)
-        os.chmod("/root", 0o700)
+    if not os.path.exists("/data/user/root/"):
+        os.chown("/data/user/root/", 0, 0)
+        os.chmod("/data/user/root/", 0o700)
 
     # Tell init to reload new inittab
     os.system("/sbin/telinit q")
@@ -303,9 +279,6 @@ def postInstall(fromVersion, fromRelease, toVersion, toRelease):
     # Save user defined DNS
     if not os.access("/etc/resolv.default.conf", os.R_OK):
         os.system("cp /etc/resolv.conf /etc/resolv.default.conf")
-
-    # Apply zemberek hack
-    zemberek_hack()
 
     # Fix permissions of /var/lock folder
     os.chown("/var/lock", 0, 54)

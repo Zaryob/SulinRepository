@@ -5,7 +5,7 @@ import os
 import shutil
 import subprocess
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
 
     tz = os.popen("/usr/bin/timezone").read().strip()
 

@@ -7,7 +7,7 @@ OUR_NAME = "dbus"
 OUR_DESC = "dbus"
 
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     try:
         os.system("groupadd -g %d %s" % (OUR_ID, OUR_NAME))
         os.system("useradd -m -d /var/run/dbus -r -s /bin/false -u %d -g %d %s -c \"%s\"" % (OUR_ID, OUR_ID, OUR_NAME, OUR_DESC))

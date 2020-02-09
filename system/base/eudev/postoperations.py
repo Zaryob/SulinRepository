@@ -6,7 +6,7 @@ def createNode(mode, uid, gid, minor, major, path):
     os.system("/bin/mknod --mode=%d %s c %d %d" % (mode, path, minor, major))
     os.system("/bin/chown %s:%s %s" % (uid, gid, path))
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     os.system("mkdir -p /lib/udev/devices/net 2>/dev/null")
     createNode(600, "root", "root",     1, 11,      "/lib/udev/devices/kmsg")
     createNode(666, "root", "root",     1, 3,       "/lib/udev/devices/null")

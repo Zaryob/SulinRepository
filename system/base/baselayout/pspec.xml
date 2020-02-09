@@ -14,15 +14,15 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-        <Archive sha1sum="158f95c9a1cd12a42900483de095f38ee9887076">https://gitlab.com/sulinos/devel/baselayout/-/archive/2.14/baselayout-2.14.tar.gz</Archive>
+        <Archive sha1sum="cfd81a74b29a8041af4384c2f55291e7a71c47d0">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0/baselayout-3.0.zip</Archive>
     </Source>
 
     <Package>
         <Name>baselayout</Name>
         <RuntimeDependencies>
-            <!--Dependency>python3-pypolkit</Dependency-->
             <Dependency>python3-libuser</Dependency>
         </RuntimeDependencies>
+        <IsA>postOps</IsA>
         <Files>
             <Path fileType="executable" permanent="true">/bin</Path>
             <Path fileType="executable" permanent="true">/sbin</Path>
@@ -33,6 +33,7 @@
             <Path fileType="data" permanent="true">/boot</Path>
             <Path fileType="data" permanent="true">/proc</Path>
             <Path fileType="data" permanent="true">/home</Path>
+            <Path fileType="data" permanent="true">/user</Path>
             <Path fileType="data" permanent="true">/mnt</Path>
             <Path fileType="data" permanent="true">/opt</Path>
             <Path fileType="data" permanent="true">/dev</Path>
@@ -42,6 +43,8 @@
             <Path fileType="data" permanent="true">/tmp</Path>
             <Path fileType="data" permanent="true">/usr</Path>
             <Path fileType="data" permanent="true">/var</Path>
+            <Path fileType="data" permanent="true">/data</Path>
+            <Path fileType="data" permanent="true">/kernel</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/baselayout.conf</Path>
         </Files>
         <AdditionalFiles>
@@ -49,14 +52,7 @@
 
             <AdditionalFile owner="root" permission="0644" target="/etc/sysctl.conf">sysctl.conf</AdditionalFile>
 
-            <!-- Should be dropped after switching to systemd as the only user is SCOM -->
         </AdditionalFiles>
-        <Provides>
-            <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
-            <SCOM script="package.py">System.Package</SCOM>
-            <!--SCOM script="usermgr.py">User.Manager</SCOM-->
-            <SCOM script="stack.py">Network.Stack</SCOM>
-        </Provides>
     </Package>
 
     <History>

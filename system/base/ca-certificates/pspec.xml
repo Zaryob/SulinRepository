@@ -14,7 +14,6 @@
         <PartOf>system.base</PartOf>
         <Summary>Common CA certificates</Summary>
         <Description>Common CA certificates</Description>
-        <!-- @@@debian ca-certificates-->
         <Archive sha1sum="47d4584eae85fc905e4994766eb3930a8a84e2e1" type="tarxz">http://ftp.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20190110.tar.xz</Archive>
     </Source>
 
@@ -23,6 +22,7 @@
         <RuntimeDependencies>
             <Dependency>run-parts</Dependency>
         </RuntimeDependencies>
+        <IsA>postOps</IsA>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/sbin</Path>
@@ -41,6 +41,13 @@
         </Files>
     </Package>
     <History>
+		<Update release="3">
+            <Date>2019-09-17</Date>
+            <Version>20190110</Version>
+            <Comment>postOps uyumluluğu</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>20190110</Version>
