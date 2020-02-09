@@ -29,22 +29,18 @@
             <Path fileType="library" permanent="true">/lib*</Path>
             <Path fileType="config" permanent="true">/etc</Path>
             <Path fileType="data" permanent="true">/etc/sulin-release</Path>
-            <Path fileType="data" permanent="true">/media</Path>
             <Path fileType="data" permanent="true">/boot</Path>
             <Path fileType="data" permanent="true">/proc</Path>
-            <Path fileType="data" permanent="true">/home</Path>
             <Path fileType="data" permanent="true">/user</Path>
-            <Path fileType="data" permanent="true">/mnt</Path>
-            <Path fileType="data" permanent="true">/opt</Path>
             <Path fileType="data" permanent="true">/dev</Path>
             <Path fileType="data" permanent="true">/run</Path>
             <Path fileType="data" permanent="true">/sys</Path>
-            <Path fileType="data" permanent="true">/srv</Path>
             <Path fileType="data" permanent="true">/tmp</Path>
             <Path fileType="data" permanent="true">/usr</Path>
             <Path fileType="data" permanent="true">/var</Path>
             <Path fileType="data" permanent="true">/data</Path>
             <Path fileType="data" permanent="true">/kernel</Path>
+            <Path fileType="data" permanent="true">/root</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/baselayout.conf</Path>
         </Files>
         <AdditionalFiles>

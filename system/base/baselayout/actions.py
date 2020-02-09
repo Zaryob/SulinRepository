@@ -10,38 +10,37 @@ from inary.actionsapi import get
 
 
 def install():
-    for i in {"/bin", "/sbin", "/lib", "/lib32","/data/srv","/kernel"
-              "/etc","/tmp","/data/misc","/data/mnt"
+    for i in {"/bin", "/sbin", "/lib", "/lib32","/data/srv","/kernel","/kernel/boot",
+              "/etc","/tmp","/data/misc","/data/media/system","/kernel/dev","/kernel/sys","/kernel/proc",
               "/data","/data/user","/data/app","/data/app/system","/data/user/root",
-              "/tmp", "/var/tmp", "/var/lock", "/usr", "/usr/bin",
-              "/usr/lib", "/usr/lib32", "/usr/libexec", "/usr/share",
-              "/run","/run/shm","/run/media","/lib/modules","lib/firmware",
-              "/usr/local", "/usr/local/bin", "/usr/local/lib", "/usr/local/libexec",
-              "/usr/local/lib32"}:
+              "/tmp", "/usr", "/usr/bin","/kernel/modules","/data/media",
+              "/usr/lib", "/usr/lib32", "/usr/libexec", "/usr/share","/kernel/firmware",
+              "/run", "/usr/local", "/usr/local/bin", "/usr/local/lib", "/usr/local/libexec",
+              "/usr/local/lib32","/data/log","/data/lock","/var"}:
         inarytools.dodir(i)
 
     autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
 
 # Adjust permissions
     shelltools.chmod("{}/tmp".format(get.installDIR()), 0o1777)
-    shelltools.chmod("{}/var/tmp".format(get.installDIR()), 0o1777)
-    shelltools.chmod("{}/run/shm".format(get.installDIR()), 0o1777)
-    shelltools.chmod("{}/var/lock".format(get.installDIR()), 0o775)
     shelltools.chmod("{}/usr/share/baselayout/shadow".format(get.installDIR()), 0o600)
+    shelltools.chmod("{}/data/user/root".format(get.installDIR()), 0o600)
 
 # SulinOS GNU/Linux filesystem architecture (like android and LFS)
 #
 #    /data/
 #        ->app          = Userspace application directory
-#            ->system   = Userspace optional system application ( /opt linked here )
+#            ->system   = Userspace optional system application
 #        ->data         = Infinitive loop directory ( /data linked here )
-#        ->media        = userspace mounted volumes ( linked /var/run/media )
-#        ->mnt          = Root mounted volumes ( /mnt linked here )
-#        ->user         = User's home directory ( /home linked here )
+#        ->media        = userspace mounted volumes ( linked /var/run/mount )
+#            ->system   = Root mounted volumes
+#        ->user         = User's home directory
 #            ->root     = The root home ( /root linked here )
 #        ->misc         = Is an unused directory
 #        ->tmp          = Temp directory ( linked /tmp )
-#        ->srv          = Served directory ( /srv linked here )
+#        ->srv          = Served directory
+#        ->log          = System logs
+#        ->lock         = System locks
 #
 #    /kernel/
 #         ->boot        = Linux kernel files ( /boot linked here )
@@ -55,21 +54,19 @@ def install():
 #
 
     inarytools.dosym("../run", "/var/run")
-    inarytools.dosym("data/user", "/home")
-    inarytools.dosym("../run/media", "/data/media")
+    inarytools.dosym("../tmp", "/var/tmp")
     inarytools.dosym("data/user/root", "/root")
     inarytools.dosym("../tmp/", "/data/tmp")
     inarytools.dosym("../data", "/data/data")
-    inarytools.dosym("data/srv", "/srv")
-    inarytools.dosym("data/app/system/", "/opt")
-    inarytools.dosym("data/mnt/", "/mnt")
+    inarytools.dosym("../data/log", "/var/log")
+    inarytools.dosym("../data/lock", "/var/lock")
 
-    inarytools.dosym("../dev", "/kernel/dev")
-    inarytools.dosym("../sys", "/kernel/sys")
-    inarytools.dosym("../proc", "/kernel/proc")
-    inarytools.dosym("../boot", "/kernel/boot")
-    inarytools.dosym("../lib/modules", "/kernel/modules")
-    inarytools.dosym("../lib/firmware", "/kernel/firmware")
+    inarytools.dosym("kernel/dev", "/dev")
+    inarytools.dosym("kernel/sys", "/sys")
+    inarytools.dosym("kernel/proc", "/proc")
+    inarytools.dosym("kernel/boot", "/boot")
+    inarytools.dosym("../kernel/modules", "/lib/modules")
+    inarytools.dosym("../kernel/firmware", "/lib/firmware")
 
     if get.ARCH() == "x86_64":
         # Directories for 32bit libraries
@@ -77,7 +74,7 @@ def install():
         inarytools.dodir("/usr/lib32")
 
         # Hack for binary blobs built on multi-lib systems
-        inarytools.dosym("../lib", "{}/lib64".format(get.installDIR()))
-        inarytools.dosym("../lib", "{}/usr/lib64".format(get.installDIR()))
-        inarytools.dosym("../lib", "{}/usr/local/lib64".format(get.installDIR()))
+        inarytools.dosym("lib", "/lib64")
+        inarytools.dosym("lib", "/usr/lib64")
+        inarytools.dosym("lib", "/usr/local/lib64")
 
