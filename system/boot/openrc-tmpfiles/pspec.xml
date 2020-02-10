@@ -34,9 +34,6 @@
             <Path fileType="data">/usr/share</Path>
            <Path fileType="header">/usr/include/</Path>
         </Files>
-        <Provides>
-            <SCOM script="postInstall.py">System.Package</SCOM>
-        </Provides>
     </Package>
 
     <History>
