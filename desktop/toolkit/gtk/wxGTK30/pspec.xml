@@ -1,0 +1,87 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>wxGTK30</Name>
+        <Homepage>http://www.wxwidgets.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>wxWinLL-3</License>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <License>wxWinFDL-3</License>
+        <IsA>library</IsA>
+        <Summary>GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit</Summary>
+        <Description>wxWidgets/GTK2 is the GTK2 port of the C++ cross-platform wxWidgets GUI library, offering classes for all common GUI controls as well as a comprehensive set of helper classes for most common application tasks, ranging from networking to HTML display and image manipulation.</Description>
+        <Archive sha1sum="edb9f65d380b47b3d31455dd62d3315f24ffd715">https://github.com/wxWidgets/wxWidgets/archive/v3.0.4.zip</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wxGTK30</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="data">/usr/share/aclocal/</Path>
+            <Path fileType="data">/usr/share/bakefile/</Path>
+            <Path fileType="library">/usr/lib/wx/config</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wxGTK30-devel</Name>
+        <Summary>wxGTK-devel is the development files for wxGTK</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">wxGTK</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

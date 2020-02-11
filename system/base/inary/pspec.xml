@@ -12,10 +12,8 @@
         <IsA>app:console</IsA>
         <Summary>INARY is the package management system of Sulin</Summary>
         <Description>INARY is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-        <!-- @@@github SulinOS inary -->
-        <Archive sha1sum="0d8ac0a49116d540120a470be4916451a16a227d" type="targz">https://github.com/Zaryob/inary/archive/inary-1.2_beta.tar.gz</Archive>
+        <Archive sha1sum="e63f60835b9182ffbab915002dfeb26faf16af06">https://gitlab.com/sulinos/devel/inary/-/archive/1.3a/inary-1.3a.zip</Archive>
         <BuildDependencies>
-            <Dependency>scom</Dependency>
             <Dependency>python3</Dependency>
             <Dependency>python3-pycurl</Dependency>
             <Dependency>gettext</Dependency>
@@ -30,7 +28,6 @@
         <RuntimeDependencies>
             <Dependency>tar</Dependency>
             <Dependency>file</Dependency>
-            <Dependency>scom</Dependency>
             <Dependency>python3</Dependency>
             <Dependency>gettext</Dependency>
             <Dependency>ciksemel</Dependency>
@@ -50,12 +47,16 @@
             <Path fileType="data">/usr/lib/sulin/inary-1.0-py3.7.egg-info</Path>
             <Path fileType="data">/var/lib/inary/info</Path>
         </Files>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-        </Provides>
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-02-10</Date>
+            <Version>1.3a</Version>
+            <Comment>INARY package manager have been upgraded new beta release.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="3">
             <Date>2019-11-17</Date>
             <Version>1.2b</Version>

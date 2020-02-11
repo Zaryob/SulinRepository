@@ -41,6 +41,13 @@
     </Package>
 
     <History>
+		<Update release="2">
+            <Date>2019-09-08</Date>
+            <Version>3.0.3</Version>
+            <Comment>artık inary scom bağımlı değil.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-08</Date>
             <Version>3.0.3</Version>
