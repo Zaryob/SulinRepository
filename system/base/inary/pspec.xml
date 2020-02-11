@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>INARY is the package management system of Sulin</Summary>
         <Description>INARY is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-        <Archive sha1sum="e63f60835b9182ffbab915002dfeb26faf16af06">https://gitlab.com/sulinos/devel/inary/-/archive/1.3a/inary-1.3a.zip</Archive>
+        <Archive sha1sum="1a83d00c6db1cb10293f45f66d011bf061c05679">https://gitlab.com/sulinos/devel/inary/-/archive/1.3.1a/inary-1.3.1a.zip</Archive>
         <BuildDependencies>
             <Dependency>python3</Dependency>
             <Dependency>python3-pycurl</Dependency>
@@ -44,12 +44,19 @@
             <Path fileType="config">/etc/inary</Path>
             <Path fileType="data">/usr/share/mime/packages</Path>
             <Path fileType="data">/usr/lib/tmpfiles.d/inary.conf-armv7h</Path>
-            <Path fileType="data">/usr/lib/sulin/inary-1.0-py3.7.egg-info</Path>
+            <Path fileType="data">/usr/lib/sulin/inary-*-py3.7.egg-info</Path>
             <Path fileType="data">/var/lib/inary/info</Path>
         </Files>
     </Package>
 
     <History>
+		<Update release="5">
+            <Date>2020-02-11</Date>
+            <Version>1.3.1a</Version>
+            <Comment>postOps sorunları çözüldü.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="4">
             <Date>2020-02-10</Date>
             <Version>1.3a</Version>
