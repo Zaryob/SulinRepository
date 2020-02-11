@@ -1,0 +1,62 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pangox-compat</Name>
+        <Homepage>http://www.pangox-compat.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>PangoX compatibility library</Summary>
+        <Description>X Window System font support for Pango</Description>
+        <Archive sha1sum="5dda5ca4081d8c8df1c208e0d464ac6012415912">https://gitlab.gnome.org/Archive/pangox-compat/-/archive/0.0.2/pangox-compat-0.0.2.zip</Archive>
+        <BuildDependencies>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>pangox-compat</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/pango</Path>
+            <Path fileType="library">/usr/lib/libpangox*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>pangox-compat-devel</Name>
+        <Summary>Development files for pangox-compat</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">pangox-compat</Dependency>
+            <Dependency>pango-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-12</Date>
+            <Version>0.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

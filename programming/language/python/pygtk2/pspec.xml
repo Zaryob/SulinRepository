@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>GTK+ bindings for Python</Summary>
         <Description>python-gtk lets you to easily create programs with a graphical user interface using the Python programming language and GTK+ library.</Description>
-        <Archive sha1sum="344e6a32a5e8c7e0aaeb807e0636a163095231c2" type="tarbz2">mirrors://gnome/pygtk/2.24/pygtk-2.24.0.tar.bz2</Archive>
+        <Archive sha1sum="95fce378c45e8d5aceb9640bd75ec2c7f4132880">http://ftp.acc.umu.se/pub/gnome/sources/pygtk/2.24/pygtk-2.24.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
             <Dependency>pango-devel</Dependency>
