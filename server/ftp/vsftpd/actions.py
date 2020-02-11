@@ -16,8 +16,8 @@ def build():
 def install():
     inarytools.dosbin("vsftpd")
 
-    inarytools.dodir("/home/ftp")
-    inarytools.dodir("/home/ftp/incoming")
+    inarytools.dodir("/data/user/ftp")
+    inarytools.dodir("/data/user/ftp/incoming")
     inarytools.dodir("/usr/share/vsftpd/empty")
     inarytools.dodir("/var/log/vsftpd")
 

@@ -1,0 +1,48 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-ExtUtils-typemap</Name>
+        <Homepage>https://metacpan.org/pod/ExtUtils::Depends</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>Artistic</License>
+        <IsA>library</IsA>
+        <Summary>Easily build XS extensions that depend on XS extensions</Summary>
+        <Description>This module tries to make it easy to build Perl extensions that use functions and typemaps provided by other perl extensions. This means that a perl extension is treated like a shared library that provides also a C and an XS interface besides the perl one.</Description>
+        <Archive sha1sum="d75915ec475952cb8f91b6c6625c94365a7fcace">http://search.cpan.org/CPAN/authors/id/S/SM/SMUELLER/ExtUtils-Typemap-1.00.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl-Data-Dumper</Dependency>
+            <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+            <Dependency>perl-File-Spec</Dependency>
+            <Dependency>perl-IO</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-ExtUtils-typemap</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-Data-Dumper</Dependency>
+            <Dependency>perl-ExtUtils-MakeMaker</Dependency>
+            <Dependency>perl-File-Spec</Dependency>
+            <Dependency>perl-IO</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-04-13</Date>
+            <Version>1.00</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

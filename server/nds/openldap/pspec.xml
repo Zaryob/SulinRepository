@@ -75,10 +75,7 @@
              <AdditionalFile owner="root" permission="0755" target="/etc/init.d/slapd">slapd-initd</AdditionalFile>
              <AdditionalFile owner="root" permission="0755" target="/usr/lib/tmpfiles.d/slapd.conf">tmpfiles.conf</AdditionalFile>
         </AdditionalFiles>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-            <SCOM script="slapd.py">System.Service</SCOM>
-        </Provides>
+        <IsA>postOps</IsA>
     </Package>
 
     <Package>
@@ -100,6 +97,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-13</Date>
+            <Version>2.4.48</Version>
+            <Comment>postOps uyumluluğu</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-13</Date>
             <Version>2.4.48</Version>

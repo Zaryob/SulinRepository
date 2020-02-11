@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>Documentation metadata library and scrollkeeper wrapper</Summary>
         <Description>Rarian is a documentation metadata library based on the freedesktop.org specification and contains well-designed scrollkeeper wrapper.</Description>
-        <Archive sha1sum="9b3f1bad1cdbb0de51d6f74431b20eb3647edc5a" type="tarbz2">mirrors://gnome/rarian/0.8/rarian-0.8.1.tar.bz2</Archive>
+        <Archive sha1sum="9b3f1bad1cdbb0de51d6f74431b20eb3647edc5a" type="tarbz2">https://download.gnome.org/sources/rarian/0.8/rarian-0.8.1.tar.bz2</Archive>
         <Patches>
             <Patch>user-segfault.patch</Patch>
             <Patch>01_info_shortnames.patch</Patch>
@@ -36,13 +36,17 @@
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd">scrollkeeper-omf.dtd</AdditionalFile>
         </AdditionalFiles>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-        </Provides>
+        <IsA>postOps</IsA>
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2019-09-15</Date>
+            <Version>0.8.1</Version>
+            <Comment>postOps uyumluluğu</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update><Update release="1">
             <Date>2019-09-15</Date>
             <Version>0.8.1</Version>
             <Comment>First release</Comment>

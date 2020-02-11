@@ -19,18 +19,13 @@ def setup():
                 zlib enable-camellia enable-idea \
                 enable-seed enable-rfc3779 enable-rc5 \
                 enable-cms enable-md2 enable-mdc2 threads"
-
-    if get.buildTYPE() == "_emul32":
-        options += " --prefix=/_emul32 --libdir=lib32".format(get.installDIR())
+    shelltools.system("echo "+get.buildTYPE())
+    if get.buildTYPE() == "emul32":
+        options += " --prefix=/emul32 --libdir=lib32".format(get.installDIR())
         shelltools.export("CC", "%s -m32" % get.CC())
         shelltools.export("CXX", "%s -m32" % get.CXX())
         shelltools.system("./Configure linux-elf %s" % options)
         shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
-
-    elif get.ARCH() == "i686":
-         shelltools.system("./Configure linux-elf %s" % options)
-         inarytools.dosed("Makefile", "^(SHARED_LDFLAGS=).*", "\\1 ${LDFLAGS}")
-         inarytools.dosed("Makefile", "^(CFLAG=.*)", "\\1 ${CFLAGS}")
 
     else:
         options += " enable-ec_nistp_64_gcc_128"
@@ -40,7 +35,7 @@ def setup():
 
 def build():
     autotools.make("depend")
-    autotools.make("-j1")
+    autotools.make()
     #autotools.make("rehash")
 
 #def check():
@@ -79,7 +74,6 @@ def install():
 
     # Move engines to /usr/lib/openssl/engines
     inarytools.dodir("/usr/lib/openssl")
-    inarytools.domove("/usr/lib/engines-1.1", "/usr/lib/openssl")
 
     # Certificate stuff
     inarytools.dobin("tools/c_rehash")

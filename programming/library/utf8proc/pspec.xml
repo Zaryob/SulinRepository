@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>utf8proc</Name>
+        <Homepage>https://github.com/JuliaStrings/utf8proc/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <IsA>library</IsA>
+        <License>GNU</License>
+        <PartOf>programming.library</PartOf>
+        <Summary>Provides useful functions commonly found on BSD systems</Summary>
+        <Description>This library provides useful functions commonly found on BSD systems, and lacking on others like GNU systems, thus making it easier to port projects with strong BSD origins, without needing to embed the same code over and over again on each project.</Description>
+        <Archive sha1sum="f3595df67a245e7f65d0a368a413898dc273d45e" >https://github.com/JuliaStrings/utf8proc/archive/v2.4.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>utf8proc</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>2.4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

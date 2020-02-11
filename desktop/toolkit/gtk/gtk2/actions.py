@@ -11,9 +11,12 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import libtools
 
 def setup():
-    options = "-with-xinput=yes \
-               --disable-cups\
-               --enable-man"
+    options = "--prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --with-xinput=yes \
+        --enable-gtk-doc \
+        --enable-test-print-backend"
 
     #shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer",""))
     #gtk2 needs -DGTK_COMPILATION CPPFLAG when compiling itself
@@ -45,7 +48,7 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    # remove empty dir
+    # fix conflict with gtk3
     #inarytools.removeDir("/usr/share/man")
 
     inarytools.dodoc("AUTHORS", "README*", "HACKING", "ChangeLog*", "NEWS*")

@@ -10,16 +10,22 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure('LIBS="-lcrypt"\
-                         --enable-shadowgrp \
-                         --without-selinux \
-                         --with-audit \
-                         --with-libcrack \
-                         --with-libpam \
-                         --with-sha-crypt \
-                         --enable-nls \
-                         --with-group-name-max-length=32 \
-                         --disable-shared')
+    shelltools.system("./autogen.sh --help") # nasıl olduğunu bilmiyorum ama böyle çözülüyo
+    autotools.configure('--prefix=/usr \
+		--sysconfdir=/etc \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--localstatedir=/var \
+		--disable-nls \
+		--with-libpam \
+		--with-audit \
+		--without-selinux \
+		--without-acl \
+		--without-attr \
+		--without-tcb \
+		--without-nscd \
+                --enable-man \
+		--without-group-name-max-length')
 def build():
     # Rebuild gmo catalogs
     autotools.make("-C po update-gmo")

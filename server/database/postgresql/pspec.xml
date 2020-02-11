@@ -100,6 +100,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-10-25</Date>
+            <Version>12.0</Version>
+            <Comment>First release</Comment>
+            <Name>postOps uyumluluğu</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-25</Date>
             <Version>12.0</Version>

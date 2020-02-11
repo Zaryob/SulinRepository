@@ -14,9 +14,6 @@
         <Summary>Application that allows non-privileged applications to write utmp (login) info</Summary>
         <Description>Utempter is a utility that allows non-privileged applications such as terminal emulators to modify the utmp database without having to setuid root.</Description>
         <Archive sha1sum="1964279755290c4b576f2db0ed518e2b45a9ca53" type="tarbz2">ftp://ftp.altlinux.org/pub/people/ldv/utempter/libutempter-1.1.6.tar.bz2</Archive>
-        <Patches>
-            <Patch level="1">libutempter-pierelro.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
@@ -27,9 +24,6 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-        </Provides>
     </Package>
 
     <Package>
@@ -44,6 +38,13 @@
     </Package>
 
     <History>
+		<Update release="2">
+            <Date>2020-02-07</Date>
+            <Version>1.1.6</Version>
+            <Comment>Rebuild.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-15</Date>
             <Version>1.1.6</Version>
