@@ -14,8 +14,6 @@ def install():
                          % get.installDIR())
     inarytools.insinto("/usr/share/xml/docbook/xsl-stylesheets/","VERSION.xsl")
 
-    # Don't ship the extensions
-    inarytools.remove("/usr/share/xml/docbook/xsl-stylesheets/extensions/*")
 
     inarytools.dodoc("AUTHORS", "BUGS", "COPYING", "NEWS", "README",
                     "RELEASE-NOTES.txt", "TODO", "VERSION")

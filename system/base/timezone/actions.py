@@ -43,6 +43,7 @@ def install():
         #shelltools.system ("zic -d %s -y \"%s/yearistype.sh\" %s -p Europe/Istanbul" % (TargetDir, get.workDIR(), tzdata))
 
     shelltools.system ("zic -d %s -p Europe/Istanbul" % TargetDir)
+    shelltools.system ("rm -rf {}/var/".format(get.installDIR()))
     
 
 

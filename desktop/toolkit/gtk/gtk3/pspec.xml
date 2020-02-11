@@ -80,7 +80,8 @@
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/gtk-3.0/settings.ini">settings.ini</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/gtk-3.0/settings.ini">settings.ini</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/libalpm/hooks/gtk-query-immodules-3.0.hook">gtk-query-immodules-3.0.hook</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="pakhandler.py">System.PackageHandler</SCOM>

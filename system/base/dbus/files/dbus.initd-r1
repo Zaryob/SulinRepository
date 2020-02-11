@@ -21,6 +21,9 @@ start_pre() {
 
 	# We need to test if /var/run/dbus exists, since script will fail if it does not
 	checkpath -q -d /var/run/dbus 
+        if [ -e /var/run/dbus.pid ]; then
+            rm -f /var/run/dbus.pid
+        fi
 }
 
 stop_post() {

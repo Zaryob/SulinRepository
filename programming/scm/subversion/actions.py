@@ -17,19 +17,11 @@ def setup():
     shelltools.export("EXTRA_LDFLAGS", get.LDFLAGS())
 
     autotools.configure("PYTHON=python2 \
-                         --disable-static \
-                         --with-jdk=/usr/lib/jvm/java-7-openjdk \
-                         --enable-javahl \
-                         --with-apr=/usr \
-                         --with-apr-util=/usr \
-                         --with-apache=/usr/lib/apache2/ \
-                         --with-apxs \
-                         --with-serf=/usr \
-                         --with-sqlite=/usr \
-                         --with-zlib=/usr \
-                         --with-jikes=no \
-                         --without-berkeley-db \
-                         --disable-mod-activation")
+                         --prefix=/usr             \
+            --disable-static          \
+            --with-apache-libexecdir  \
+            --with-lz4=internal       \
+            --with-utf8proc=internal")
 
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
@@ -37,15 +29,11 @@ def build():
     # svn
     autotools.make()
 
-    # python bindings
-    autotools.make("swig-py")
+    autotools.make('LT_LDFLAGS="-L{}/usr/lib"'.format(get.installDIR()))
 
-    # perl bindings (needed by git-svn*)
-    # Sometimes parallel build breaks perl bindings
-    autotools.make("-j1 swig-pl")
+    autotools.make("swig_pydir=/usr/lib/python2.7/site-packages/libsvn \
+     swig_pydir_extra=/usr/lib/python2.7/site-packages/svnswig-py swig-pl swig-rb")
 
-    # java bindings
-    autotools.make("-j1 javahl")
 
 def install():
     # install svn
@@ -58,7 +46,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "install-swig-pl")
 
     # install javahl
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "install-javahl")
+    #autotools.rawInstall("DESTDIR=%s" % get.installDIR(), "install-javahl")
 
     # Move py/c'into proper dir
     inarytools.domove("/usr/lib/svn-python/svn", "/usr/lib/%s/site-packages" % get.curPYTHON())

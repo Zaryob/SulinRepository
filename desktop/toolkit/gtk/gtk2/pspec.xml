@@ -15,7 +15,6 @@
         <Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
         <Archive sha1sum="c885ade62b06854590822c8eb906daf7dd15d90a" >http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz</Archive>
         <BuildDependencies>
-            <!--Dependency>cups-devel</Dependency--><!--It was disabled to avoid circle-->
             <Dependency>libXi-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
             <Dependency>cairo-devel</Dependency>
@@ -35,10 +34,6 @@
             <Dependency>gtk-doc</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <!--Patch level="1">gtk2-fixdso.patch</Patch> -->
-            <Patch level="1">xid-collision-debug.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>gtk2</Name>
@@ -58,21 +53,21 @@
             <Dependency>atk</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <!--<Dependency>gtk-theme-mediterranean</Dependency>--><!--it need gtk2-engines-murrine is need gtk2 too-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/themes</Path>
             <Path fileType="data">/usr/share/gtk-2.0</Path>
+            <Path fileType="data">/usr/share/libalpm</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
-        <!-- Use Clearlooks as default theme for now until native Oxygen GTK style is ready -->
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/gtk-2.0/gtkrc">gtkrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/gtk-2.0/gtkrc">gtkrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/libalpm/hooks/gtk-query-immodules-2.0.hook">gtk-query-immodules-2.0.hook</AdditionalFile>
         </AdditionalFiles>
         <Provides>
             <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
@@ -126,7 +121,6 @@
         <BuildType>emul32</BuildType>
         <BuildDependencies>
             <Dependency>cairo-32bit</Dependency>
-            <!--Dependency>cups-32bit</Dependency-->
             <Dependency>fontconfig-32bit</Dependency>
             <Dependency>pango-32bit</Dependency>
             <Dependency>glib2-32bit</Dependency>
@@ -169,6 +163,13 @@
         </Files>
     </Package>
     <History>
+		<Update release="3">
+            <Date>2020-02-06</Date>
+            <Version>2.24.32</Version>
+            <Comment>Fix conflict.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update> 
         <Update release="2">
             <Date>2019-04-12</Date>
             <Version>2.24.32</Version>

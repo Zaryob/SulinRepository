@@ -10,16 +10,30 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
 
 
-shelltools.export("CFLAGS","")
+shelltools.export("CFLAGS","-DG_ENABLE_DEBUG -DG_DISABLE_CAST_CHECKS")
 shelltools.export("CXXFLAGS","")
 shelltools.export("LDFLAGS","")
 
 if get.buildTYPE()=="emul32":
-    shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
+    shelltools.export("PKG_CONFIG_LIBDIR","/usr/lib32/pkgconfig")
+    shelltools.export("PKG_CONFIG_PATH","/usr/share/pkgconfig")
 
 
 def setup():
-    mesontools.meson_configure("-Dbroadway_backend=true -Dx11_backend=true -Dcolord=yes -Dgtk_doc=false -Dman=true")
+    if get.buildTYPE()!="emul32":
+        mesontools.meson_configure('-D broadway_backend=true \
+		-D colord=no \
+		-D demos=true \
+		-D examples=false \
+		-D tests=false \
+		-D installed_tests=false')
+    else:
+        mesontools.meson_configure('-D broadway_backend=true \
+		-D colord=no \
+		-D demos=false \
+		-D examples=false \
+		-D tests=false \
+		-D installed_tests=false')
 
 def build():
     mesontools.ninja_build()

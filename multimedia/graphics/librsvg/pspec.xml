@@ -53,7 +53,19 @@
             <Path fileType="locale">/usr/share/locale</Path>
         </Files>
     </Package>
-
+        <Package>
+        <Name>librsvg-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency>libcroco-32bit</Dependency>
+            <Dependency>gtk3-32bit</Dependency>
+            <Dependency>pango-32bit</Dependency>
+            <Dependency>gdk-pixbuf-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
     <Package>
       <Name>librsvg-devel</Name>
       <RuntimeDependencies>

@@ -40,6 +40,9 @@
             <Dependency>polkit</Dependency>
             <Dependency>eudev</Dependency>
         </RuntimeDependencies>
+        <AdditionalFiles>
+        <AdditionalFile owner="root" permission="0755" target="/etc/init.d/consolekit">consolekit.initd</AdditionalFile>
+        </AdditionalFiles>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="config">/usr/lib/tmpfiles.d/ConsoleKit.conf</Path>
@@ -51,6 +54,7 @@
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/polkit-1/actions</Path>
             <Path fileType="data">/usr/share/polkit-1/rules.d</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -73,6 +77,13 @@
     </Package>
 
     <History>
+		<Update release="3">
+            <Date>2020-02-04</Date>
+            <Version>1.2.1</Version>
+            <Comment>Missing initd script added.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-12-13</Date>
             <Version>1.2.1</Version>

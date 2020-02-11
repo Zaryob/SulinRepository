@@ -12,16 +12,21 @@ from inary.actionsapi import shelltools
 WorkDir="grub-%s" % (get.srcVERSION().replace("_", "~"))
 
 def setup():
-    shelltools.system("CFLAGS="" CXXFLAGS="" LDFLAGS="" ./autogen.sh")
+    platform="pc"
+    if get.buildTYPE() == "efi":
+        platform="efi"
+    elif get.buildTYPE() == "efi32":
+        platform="efi --target=i386"
     shelltools.system('CFLAGS="" CXXFLAGS="" LDFLAGS="" ./configure --prefix=/usr  \
         --sbindir=/sbin        \
         --sysconfdir=/etc      \
         --disable-efiemu       \
-        --with-platform=efi    \
+        --with-platform='+platform+'    \
         --disable-werror')
 
 def build():
-    shelltools.system('CFLAGS="-fno-stack-protector" CXXFLAGS="" LDFLAGS="" make')
+    shelltools.system('CFLAGS="-fno-stack-protector" CXXFLAGS="" LDFLAGS="" make -j5')
 
 def install():
     shelltools.system("CFLAGS="" CXXFLAGS="" LDFLAGS="" make install DESTDIR={}".format(get.installDIR()))
+

@@ -26,7 +26,7 @@
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/sbin</Path>
-            <Path fileType="data">/home/ftp</Path>
+            <Path fileType="data">/data/user/ftp</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/vsftpd/empty</Path>
@@ -41,13 +41,16 @@
             <AdditionalFile owner="root" permission="0644" target="/etc/vsftpd/vsftpd.conf">vsftpd.conf</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/etc/vsftpd/ftpusers">ftpusers</AdditionalFile>
         </AdditionalFiles>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-            <SCOM script="service.py">System.Service</SCOM>
-        </Provides>
     </Package>
 
     <History>
+		 <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.0.3</Version>
+            <Comment>yeni baselayout uyumluluğu</Comment>
+            <Name>Ali Riza KESKIN</Name>
+            <Email>parduscix@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.0.3</Version>
