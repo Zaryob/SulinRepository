@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>parole</Name>
+        <Homepage>http://goodies.xfce.org/projects/applications/parole</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A modern simple media player</Summary>
+        <Description>Parole is a modern simple media player based on the GStreamer framework and written to fit well in the Xfce desktop. Parole is designed with simplicity, speed and resource usage in mind.</Description>
+        <Archive sha1sum="190e09b77f04076f2e7279b0fd3142628a4caf35" type="tarbz2">http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xfce4-dev-tools</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>xfconf-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>parole</Name>
+        <RuntimeDependencies>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-plugins-bad</Dependency>
+            <Dependency>gst-plugins-ugly</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>orc</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+            <Dependency>libxfce4util</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>xfconf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>parole-devel</Name>
+        <Summary>Development files for parole</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">parole</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>1.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

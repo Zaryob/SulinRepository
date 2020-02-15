@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>X.Org Protocol Headers</Summary>
         <Description>This package includes the protocol headers needed for X11 development.</Description>
-        <Archive sha1sum="2e4a3db312e1ce81e15515dfcac52ba0aa5a920c" type="tarbz2">mirrors://xorg/individual/proto/xorgproto-2018.4.tar.bz2</Archive>
+        <Archive sha1sum="b8495b2bd90d6d5c70c498e54c8e33600dbbc810" >https://github.com/freedesktop/xorg-proto-x11proto/archive/xproto-7.0.31.zip</Archive>
         <BuildDependencies>
             <Dependency>util-macros</Dependency>
             <Dependency>libxslt</Dependency>
@@ -26,8 +26,13 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib</Path>
         </Files>
+    </Package>
+    <Package>
+        <Name>xorg-proto-32bit</Name>
+        <BuildType>emul32</BuildType>
+       
     </Package>
     <Package>
         <Name>xorg-proto-docs</Name>
@@ -54,6 +59,13 @@
         </Files>
     </Package>
     <History>
+		<Update release="2">
+            <Date>2018-12-28</Date>
+            <Version>7.0.32</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>2018.4</Version>

@@ -14,7 +14,7 @@
         <PartOf>x11.server</PartOf>
         <Summary>X.Org X Server</Summary>
         <Description>X server is the main application that allows a graphical interface.</Description>
-        <Archive sha1sum="fea6fd34c7f48b3c69fbecd8fb294eaa1498e69c" type="tarbz2">mirrors://xorg/individual/xserver/xorg-server-1.20.5.tar.bz2</Archive>
+        <Archive sha1sum="11d048431dc7582898628149ca3a758008b7d50b" type="tarbz2">https://xorg.freedesktop.org/releases/individual/xserver/xorg-server-1.20.7.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>font-util</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
@@ -242,6 +242,13 @@
         </Files>
     </Package>
     <History>
+      <Update release="4">
+          <Date>2019-11-20</Date>
+          <Version>1.20.7</Version>
+          <Comment>Upstream</Comment>
+          <Name>Suleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
       <Update release="3">
           <Date>2019-11-20</Date>
           <Version>1.20.5</Version>
