@@ -20,20 +20,11 @@ if get.buildTYPE()=="emul32":
 
 
 def setup():
-    if get.buildTYPE()!="emul32":
-        mesontools.meson_configure('-D broadway_backend=true \
-		-D colord=no \
-		-D demos=true \
-		-D examples=false \
-		-D tests=false \
-		-D installed_tests=false')
-    else:
-        mesontools.meson_configure('-D broadway_backend=true \
-		-D colord=no \
-		-D demos=false \
-		-D examples=false \
-		-D tests=false \
-		-D installed_tests=false')
+    mesontools.meson_configure('--prefix=/usr     \
+      -Dcolord=yes      \
+      -Dgtk_doc=false   \
+      -Dman=true        \
+      -Dbroadway_backend=true')
 
 def build():
     mesontools.ninja_build()

@@ -11,50 +11,35 @@ from inary.actionsapi import get
 def setup():
 #    shelltools.chmod("hw/vnc/symlink-vnc.sh")
 #    autotools.autoreconf("-fi")
-
-    autotools.configure("--enable-install-libxf86config \
-                         --enable-aiglx \
-                         --enable-glx-tls \
-                         --enable-composite \
-                         --enable-xcsecurity \
-                         --enable-record \
-                         --enable-dri \
-                         --enable-dri2 \
-                         --enable-glamor \
-                         --enable-xwayland \
-                         --enable-config-udev \
-                         --enable-xfree86-utils \
-                         --enable-xorg \
-                         --enable-dmx \
-                         --enable-xvfb \
-                         --enable-xnest \
-                         --enable-kdrive \
-                         --enable-xfont \
-                         --enable-kdrive-evdev \
-                         --enable-kdrive-kbd \
-                         --enable-kdrive-mouse \
-                         --enable-xephyr \
-                         --enable-xfake \
-                         --enable-xfbdev \
-                         --enable-devel-docs \
-                         --disable-static \
-                         --without-doxygen \
-                         --with-pic \
-                         --with-int10=x86emu \
-                         --with-os-name=\"Sulin\" \
-                         --with-os-vendor=\"2019\" \
-                         --with-builderstring=\"Package: %s\" \
-                         --with-fontrootdir=/usr/share/fonts \
-                         --with-default-font-path=catalogue:/etc/X11/fontpath.d,built-ins \
-                         --with-xkb-output=/var/lib/xkb \
-                         --with-dri-driver-path=/usr/lib/xorg/modules/dri \
-                         --without-xmlto \
-                         --without-fop \
-                         --localstatedir=/var \
-                         PCI_TXT_IDS_DIR=/usr/share/X11/pci \
-                         " % get.srcTAG())
-
-    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+    #shelltools.export("CFLAGS","{} D_GNU_SOURCE -D__gid_t=gid_t -D__uid_t=uid_t".format(get.CFLAGS()))
+    shelltools.export("LDFLAGS","{} -Wl,-z,lazy".format(get.LDFLAGS()))
+    autotools.configure('--sysconfdir=/etc/X11 \
+		--localstatedir=/var \
+		--with-fontrootdir=$_fontroot \
+		--with-default-font-path=${0}/misc,${0}/100dpi:unscaled,${0}/75dpi:unscaled,${0}/TTF,${0}/Type1 \
+		--with-xkb-path=/usr/share/X11/xkb \
+		--with-xkb-output=/var/lib/xkb \
+		--without-systemd-daemon \
+		--enable-composite \
+		--enable-config-udev \
+		--enable-dri \
+		--enable-dri2 \
+		--enable-dri3 \
+		--enable-glamor \
+		--enable-ipv6 \
+		--enable-kdrive \
+		--enable-xace \
+		--enable-xcsecurity \
+		--enable-xephyr \
+		--enable-xnest \
+		--enable-xorg \
+		--enable-xres \
+		--enable-xv \
+		--enable-xwayland \
+		--disable-config-hal \
+		--disable-dmx \
+		--disable-systemd-logind \
+		--with-os-vendor="sulin"'.format("/usr/share/fonts"))
 
 def build():
     autotools.make()

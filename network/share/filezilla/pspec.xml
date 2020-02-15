@@ -1,0 +1,66 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>filezilla</Name>
+        <Homepage>http://filezilla-project.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>filezilla</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Simple FTP Client</Summary>
+        <Description>Easy-to-use FTP Client which also supports SFTP.</Description>
+        <Archive sha1sum="2b5b51e665b72b2d6e991c55b43339996baf8f9c">https://download.filezilla-project.org/client/FileZilla_3.46.3_src.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libidn-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>wxGTK30-devel</Dependency>
+            <Dependency>nettle-devel</Dependency>
+            <Dependency>libfilezilla-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>filezilla</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>wxGTK30</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>nettle</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>libfilezilla</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/filezilla</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/appdata/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-10</Date>
+            <Version>3.46.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

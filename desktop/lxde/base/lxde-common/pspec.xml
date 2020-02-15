@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxde-common</Name>
+        <Homepage>http://wiki.lxde.org/en/LXDE_Common</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.lxde.base</PartOf>
+        <Summary>LXDE Session default configuration files and nuoveXT2 iconset</Summary>
+        <Description>lxde-common provides LXDE Session default configuration files and nuoveXT2 iconset.</Description>
+        <Archive sha1sum="e54d80b64e6a89ff1f89ced7a826fa4e8bf453ec" type="tarxz">https://downloads.sourceforge.net/lxde/lxde-common-0.99.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxde-common</Name>
+        <RuntimeDependencies>
+          <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>lxpanel</Dependency>
+            <Dependency>lxsession</Dependency>
+            <Dependency>libfm</Dependency>
+            <Dependency>pcmanfm</Dependency>
+            <Dependency>openbox</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxde-lock-screen.desktop">data/lxde-lock-screen.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.99.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
