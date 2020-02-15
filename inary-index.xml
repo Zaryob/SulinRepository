@@ -45970,6 +45970,3506 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>xfwm4-themes</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.xfce.lookandfeel</PartOf>
+            <Summary xml:lang="en">Xfce window manager themes</Summary>
+            <Description xml:lang="en">Xfce4-themes is a set of additional themes for the Xfwm window manager.</Description>
+            <Archive type="tarbz2" sha1sum="6608cd2e615e0e058f25ccf2868f903b35b2115f">http://archive.xfce.org/src/art/xfwm4-themes/4.10/xfwm4-themes-4.10.0.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/lookandfeel/xfwm4-themes/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfwm4-themes</Name>
+            <RuntimeDependencies>
+                <Dependency>xfwm4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>4.10.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtk-style-xfce</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.lookandfeel</PartOf>
+            <Summary xml:lang="en">GTK+ Xfce theme engine</Summary>
+            <Description xml:lang="en">Gtk2-engines-xfce is a GTK+ engine for Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="39418dd5747f45834d9ec11fd628566f20294172">http://archive.xfce.org/src/xfce/gtk-xfce-engine/3.0/gtk-xfce-engine-3.0.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/lookandfeel/gtk-style-xfce/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtk-style-xfce</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>3.0.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>icon-theme-xfce4</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.xfce.lookandfeel</PartOf>
+            <Summary xml:lang="en">Xfce icon theme</Summary>
+            <Description xml:lang="en">Icon theme Rodent for the Xfce Desktop Environment.</Description>
+            <Archive type="tarbz2" sha1sum="0c0d0c45cd4a7f609310db8e9d17c1c4a131a6e7">http://archive.xfce.org/src/art/xfce4-icon-theme/4.4/xfce4-icon-theme-4.4.3.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/lookandfeel/icon-theme-xfce4/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>icon-theme-xfce4</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-10</Date>
+                <Version>4.4.3</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-dev-tools</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>desktop.xfce.admin</PartOf>
+            <Summary xml:lang="en">Xfce developer tools</Summary>
+            <Description xml:lang="en">Xfce4-dev-tools contains common tools required by Xfce developers and people that want to build Xfce from SVN. In addition, this package contains the Xfce developer&apos;s handbook.</Description>
+            <Archive type="tarbz2" sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384">http://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/admin/xfce4-dev-tools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-dev-tools</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>thunar-volman</Name>
+            <Homepage>http://archive.xfce.org/xfce/4.10/src</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">A extension for the Xfce Thunar File Manager</Summary>
+            <Description xml:lang="en">thunar-volman is an extension for the Thunar File Manager, which enables automatic management of removable drives and media. For example, if
+thunar-volman is installed and configured properly, and you plug in your digical camera, it will automatically spawn your preferred photo application and import the new pictures from your camera.</Description>
+            <Archive type="tarbz2" sha1sum="04efe6610c376d2541eac4e6615a9ffef720f872">http://archive.xfce.org/src/xfce/thunar-volman/0.9/thunar-volman-0.9.5.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>Thunar-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/thunar-volman/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>thunar-volman</Name>
+            <RuntimeDependencies>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>Thunar</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>libnotify</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>0.9.5</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-settings</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce settings plugins</Summary>
+            <Description xml:lang="en">Xfce4-settings is a configuration manager for Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="4d3bb70993902c68ef5f0585e683274ce6e1895f">http://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>libxklavier-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfce4-settings/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-settings</Name>
+            <RuntimeDependencies>
+                <Dependency>libXi</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>garcon</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>upower</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/lib/xfce4/settings</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>Terminal</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/terminal</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Terminal for Xfce</Summary>
+            <Description xml:lang="en">Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.</Description>
+            <Icon>terminal</Icon>
+            <Archive type="tarbz2" sha1sum="11117241f5891ea1fd831e86b0db57ed37a60ee2">http://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libpcre2-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>vte3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/Terminal/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>Terminal</Name>
+            <RuntimeDependencies>
+                <Dependency>libpcre2</Dependency>
+                <Dependency>vte3</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/Terminal/colorschemes</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/gnome-control-center</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>0.8.3</Version>
+                <Comment>Cleanup.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>Thunar</Name>
+            <Homepage>http://thunar.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce file manager</Summary>
+            <Description xml:lang="en">Thunar has been designed from the ground up to be fast and easy-to-use. Its user interface is clean and intuitive, and does not include any confusing or useless options. Thunar is fast and responsive with a good start up time and directory load time. Thunar is accessible using Assistive Technologies and is fully standarts compliant.</Description>
+            <Icon>Thunar</Icon>
+            <Archive type="tarbz2" sha1sum="7a9f00320c4046da868e6c37f0f5f8d8b7b0fba8">mirrors://xfce/src/xfce/thunar/1.8/Thunar-1.8.9.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libexif-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/Thunar/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>Thunar</Name>
+            <RuntimeDependencies>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>xfconf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/Thunar</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/thumbnailers</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>Thunar-devel</Name>
+            <Summary xml:lang="en">Thunar development files</Summary>
+            <IsA>library</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">Thunar</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>Thunar-docs</Name>
+            <Summary xml:lang="en">Thunar reference documents</Summary>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">Thunar</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/Thunar/html</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>1.8.9</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libxfcegui4</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce GUI library</Summary>
+            <Description xml:lang="en">Libxfcegui4 is a various GTK+ widgets for Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="6d6f24a7f69dfee359b96bd2867fbe9e3262549f">http://archive.xfce.org/src/xfce/libxfcegui4/4.10/libxfcegui4-4.10.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/libxfcegui4/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libxfcegui4</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libglade</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libxfcegui4-devel</Name>
+            <Summary xml:lang="en">Development files for libxfcegui4</Summary>
+            <IsA>library</IsA>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">libxfcegui4</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.10.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-power-manager</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">A power manager for the Xfce desktop</Summary>
+            <Description xml:lang="en">This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption.
+(such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
+            <Archive type="tarbz2" sha1sum="d50e77401b81f5118d4db424546b7b712dd71beb">http://archive.xfce.org/src/xfce/xfce4-power-manager/1.6/xfce4-power-manager-1.6.5.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>upower-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>ConsoleKit-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfce4-power-manager/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-power-manager</Name>
+            <RuntimeDependencies>
+                <Dependency>cairo</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>upower</Dependency>
+                <Dependency>udisks</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>1.6.5</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-taskmanager</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/xfce4-taskmanager</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Simple taskmanager for the Xfce</Summary>
+            <Description xml:lang="en">Xfce-taskmanager is a small taskmanager based on the Xfce libraries.</Description>
+            <Icon>xfce4_xicon</Icon>
+            <Archive type="tarbz2" sha1sum="7e65f0d77ec6f5f7a82bacd89b9cf089d9ef355c">http://archive.xfce.org/src/apps/xfce4-taskmanager/1.2/xfce4-taskmanager-1.2.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libXmu-devel</Dependency>
+                <Dependency>xorg-app</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfcegui4-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfce4-taskmanager/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-taskmanager</Name>
+            <RuntimeDependencies>
+                <Dependency>libXmu-devel</Dependency>
+                <Dependency>xorg-app</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libwnck3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>1.2.2</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libxfce4util</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce basic utility library</Summary>
+            <Description xml:lang="en">Libxfce4util is a basic utility non-GUI functions for Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="8aafc9765102f104e9366f341e9eabf38bd71a16">http://archive.xfce.org/src/xfce/libxfce4util/4.14/libxfce4util-4.14.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xdg-user-dirs</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/libxfce4util/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libxfce4util</Name>
+            <RuntimeDependencies>
+                <Dependency>xdg-user-dirs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libxfce4util-devel</Name>
+            <Summary xml:lang="en">Libxfce4util development files</Summary>
+            <IsA>library</IsA>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-appfinder</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce application finder</Summary>
+            <Description xml:lang="en">Xfce4-appfinder is a useful software that permits you to find every application in the system supporting desktop entry format.</Description>
+            <Icon>xfce4-appfinder</Icon>
+            <Archive type="tarbz2" sha1sum="d0ceed5c05b6e411d1538d9727c818a52f441cf2">http://archive.xfce.org/src/xfce/xfce4-appfinder/4.14/xfce4-appfinder-4.14.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>Thunar-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfce4-appfinder/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-appfinder</Name>
+            <RuntimeDependencies>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>garcon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-dev-tools</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce developer tools</Summary>
+            <Description xml:lang="en">Xfce4-dev-tools contains common tools required by Xfce developers and people that want to build Xfce from SVN. In addition, this package contains the Xfce developer&apos;s handbook.</Description>
+            <Archive type="tarbz2" sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384">http://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/base/xfce4-dev-tools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-dev-tools</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>garcon</Name>
+            <Homepage>http://xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Menu library for Xfce</Summary>
+            <Description xml:lang="en">garcon is an implementation of the freedesktop.org menu specification replacing the former Xfce menu library libxfce4menu. It is based on GLib/GIO only and aims at covering the entire specification except for legacy menus.</Description>
+            <Archive type="tarbz2" sha1sum="014f0b1699a56c1a0738238a07008a5b487892ad">http://archive.xfce.org/src/xfce/garcon/0.6/garcon-0.6.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/garcon/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>garcon</Name>
+            <RuntimeDependencies>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>garcon-devel</Name>
+            <Summary xml:lang="en">garcon development files</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">garcon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>garcon-docs</Name>
+            <Summary xml:lang="en">garcon documentation files</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">garcon</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>0.6.4</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfconf</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce multi channel setting library</Summary>
+            <Description xml:lang="en">Xfconf is a hirerchical (tree-like) configuration system for the Xfce graphical desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="edfa24dd862bc39d6002f40f6b9b3974c59fa250">http://archive.xfce.org/xfce/4.14/src/xfconf-4.14.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>perl-ExtUtils-Depends</Dependency>
+                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+                <Dependency>perl-Glib</Dependency>
+                <Dependency>gtk-doc</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfconf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfconf</Name>
+            <RuntimeDependencies>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>perl-Glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>xfconf-devel</Name>
+            <Summary xml:lang="en">Xfconf development files</Summary>
+            <IsA>library</IsA>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">xfconf</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tumbler</Name>
+            <Homepage>http://www.xfce.org/projects/thunar/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">A thumbnail service</Summary>
+            <Description xml:lang="en">Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="f45f6e7fe1a7c38072bead3b5f18514671a18908">http://archive.xfce.org/src/xfce/tumbler/0.2/tumbler-0.2.7.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>poppler-glib-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/tumbler/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tumbler</Name>
+            <RuntimeDependencies>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>poppler-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="configure">/etc/xdg/tumbler/tumbler.rc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>tumbler-devel</Name>
+            <Summary xml:lang="en">Development files for tumbler</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">tumbler</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>0.2.7</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libxfce4ui</Name>
+            <Homepage>http://xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce gui library</Summary>
+            <Description xml:lang="en">libxfce4ui is a various GTK+ widgets for Xfce desktop environment.</Description>
+            <Archive type="tarbz2" sha1sum="5f8f80879de493f0478a5108be890cb869fb89d6">http://archive.xfce.org/src/xfce/libxfce4ui/4.14/libxfce4ui-4.14.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/libxfce4ui/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libxfce4ui</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libxfce4ui-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">libxfce4ui</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-panel</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce panel</Summary>
+            <Description xml:lang="en">The Xfce4 panel supports multiple panels, with many options for their position, appearance, transparency and behavior. There are many items available by default to full fit a panel, like application launchers with detachable menus, a graphical pager, a tasklist, a clock, a system tray, a show / hide desktop switcher, and even more. It offers an easy way to add items using a dialog, and to move items accross different panels.</Description>
+            <Icon>xfce4-panel</Icon>
+            <Archive type="tarbz2" sha1sum="400b499b2c4d02302e2e6df2885c1dc4e0c53509">http://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>docbook-xsl</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>libwnck2-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfce4-panel/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-panel</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>garcon</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libwnck2</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>xfce4-panel-devel</Name>
+            <Summary xml:lang="en">Development files for Xfce4 Panel</Summary>
+            <IsA>library</IsA>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">xfce4-panel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>Cleanup, rebuild.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>exo</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce extension library</Summary>
+            <Description xml:lang="en">exo is an extension library to Xfce, developed by os-cillation. While Xfce comes with quite a few libraries that are targeted at desktop development, exo is targeted at application development.</Description>
+            <Archive type="tarbz2" sha1sum="46c8c05cc87546750ab81c690bae58a37e7a1953">mirrors://xfce/src/xfce/exo/0.12/exo-0.12.8.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>perl-URI</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/exo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>exo</Name>
+            <RuntimeDependencies>
+                <Dependency>perl-URI</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/pygtk</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>exo-devel</Name>
+            <Summary xml:lang="en">Development files for exo</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">exo</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>exo-docs</Name>
+            <Summary xml:lang="en">Documentation for exo library</Summary>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">exo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+                <Path fileType="doc">/usr/share/doc/exo/html</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>0.12.8</Version>
+                <Comment>First release.</Comment>
+                <Name>Ali Rıza Keskin</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-session</Name>
+            <Homepage>http://www.xfce.org/projects/xfce4-session</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce session manager</Summary>
+            <Description xml:lang="en">The session manager allows the user to save sessions and restore them after login. It is capable of saving several different sessions. It comes with three splash screen engines. And at last it helps you to log out, reboot, and shutdown the system.</Description>
+            <Archive type="tarbz2" sha1sum="8f3e224c1bd82c172f59f58bbe89aea347f99d7a">http://archive.xfce.org/src/xfce/xfce4-session/4.14/xfce4-session-4.14.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xorg-app</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfce4-session/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-session</Name>
+            <RuntimeDependencies>
+                <Dependency>xorg-app</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>polkit-gnome</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>fontconfig</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="data">/usr/share/xsessions</Path>
+                <Path fileType="data">/usr/share/polkit-1/actions/org.xfce.session.policy</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>xfce4-session-devel</Name>
+            <Summary xml:lang="en">Xfce4 Session development files</Summary>
+            <IsA>library</IsA>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency release="1">xfce4-session</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfdesktop</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce desktop manager</Summary>
+            <Description xml:lang="en">The desktop manager sets the background image, provides a right-click menu to launch applications and can optionally show files (including application launchers) or iconified windows. It includes gradient support for background color, saturation support for background image, real multiscreen and xinerama support, and it provides a desktop menu editor.</Description>
+            <Icon>xfce4_xicon1</Icon>
+            <Archive type="tarbz2" sha1sum="2332b02c131d5ced61bf6276deef23d69bf852c6">http://archive.xfce.org/src/xfce/xfdesktop/4.14/xfdesktop-4.14.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>Thunar-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>xfce4-dev-tools</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfdesktop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfdesktop</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>Thunar</Dependency>
+                <Dependency>garcon</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/backgrounds</Path>
+                <Path fileType="data">/usr/share/desktop-directories</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfwm4</Name>
+            <Homepage>http://www.xfce.org</Homepage>
+            <Packager>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.base</PartOf>
+            <Summary xml:lang="en">Xfce window manager</Summary>
+            <Description xml:lang="en">The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.</Description>
+            <Icon>xfwm4</Icon>
+            <Archive type="tarbz2" sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc">http://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/base/xfwm4/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfwm4</Name>
+            <RuntimeDependencies>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libXdamage</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/xfwm4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-14</Date>
+                <Version>4.14.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-embed-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-embed-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">Embedding Arbitrary Application plugin for Xfce4</Summary>
+            <Description xml:lang="en">A plug-in for embedding arbitrary application windows into the Xfce panel.</Description>
+            <Archive type="tarbz2" sha1sum="9beeecfff2b55e2e64a3ac9ff296490abfe1187a">http://archive.xfce.org/src/panel-plugins/xfce4-embed-plugin/1.6/xfce4-embed-plugin-1.6.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-embed-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-embed-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libembed.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.6.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-eyes-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-eyes-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">Xeyes like plugin for Xfce4</Summary>
+            <Description xml:lang="en">A panel plug-in which adds classic eyes to your every step.</Description>
+            <Archive type="tarbz2" sha1sum="1cb1dfd3144a2096a02b1fd06dd5ad24a1242e52">http://archive.xfce.org/src/panel-plugins/xfce4-eyes-plugin/4.5/xfce4-eyes-plugin-4.5.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-eyes-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-eyes-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libeyes.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>4.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-notifyd</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/xfce4-notifyd</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">A notification deamon</Summary>
+            <Description xml:lang="en">The Xfce Notify Daemon (xfce4-notifyd for short) is a smallish program that implements the “server-side” portion of the Freedesktop desktop notifications specification.</Description>
+            <Archive type="tarbz2" sha1sum="4ff6270b95960540f34e66af76145ed3c874a282">http://archive.xfce.org/src/apps/xfce4-notifyd/0.4/xfce4-notifyd-0.4.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-notifyd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-notifyd</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>xfconf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.4.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-genmon-plugin</Name>
+            <Homepage>http://www.xfce.org/projects/xfce4-genmon-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Cyclically spawned executable output on the panel.</Summary>
+            <Description xml:lang="en">Cyclically spawned executable output on the panel.</Description>
+            <Archive type="tarbz2" sha1sum="cffc57ae3bce3ac0b3d5a6a055ef533907bb398c">https://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/4.0/xfce4-genmon-plugin-4.0.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-genmon-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-genmon-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libgenmon.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>4.0.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>thunar-shares-plugin</Name>
+            <Homepage>http://thunar.xfce.org/pwiki/projects/es/thunar-shares-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A plugin which allows you to quickly share a folder using Samba</Summary>
+            <Description xml:lang="en">thunar-shares-plugin allows you to quickly share a folder using Samba from Thunar (the XFCE file manager) without requiring root access.</Description>
+            <Archive type="tarbz2" sha1sum="0f68bdfad6f2f4729891fbead594ed6712987de0">http://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.3/thunar-shares-plugin-0.3.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>Thunar-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/thunar-shares-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>thunar-shares-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>Thunar</Dependency>
+                <Dependency>gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-quicklauncher-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-quicklauncher-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Xfce quicklauncher plugin</Summary>
+            <Description xml:lang="en">xfce4-quicklauncher-plugin is a plugin which allow you to start apps quickly.</Description>
+            <Archive type="tarbz2" sha1sum="ad2b7b344ddb611cee25ee130c1f2d4765072fa1">http://archive.xfce.org/src/panel-plugins/xfce4-quicklauncher-plugin/1.9/xfce4-quicklauncher-plugin-1.9.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-quicklauncher-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-quicklauncher-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.9.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-sensors-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-sensors-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>editor.emacs</PartOf>
+            <Summary xml:lang="en">Sensors plugin for Xfce4 Panel</Summary>
+            <Description xml:lang="en">Reads your hardware sensor values and displays them in your panel</Description>
+            <Archive type="tarbz2" sha1sum="4b0668dffc91ed4a3c0cc96d72d8ad5d8dc73290">http://archive.xfce.org/src/panel-plugins/xfce4-sensors-plugin/1.3/xfce4-sensors-plugin-1.3.92.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-sensors-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-sensors-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>xfce4-sensors-plugin-devel</Name>
+            <Summary xml:lang="en">xfce4-sensors-plugin için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">xfce4-sensors-plugin</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.3.92</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-volumed-pulse</Name>
+            <Homepage>http://git.xfce.org/apps/xfce4-volumed-pulse/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A volume keys control daemon for Xfce</Summary>
+            <Description xml:lang="en">Basic daemon enabling the XF86 Volume keys and supporting synchronous volume notifications</Description>
+            <Archive type="tarbz2" sha1sum="ee28e49fff77b26e9297a442d502602e33619e28">http://archive.xfce.org/src/apps/xfce4-volumed-pulse/0.2/xfce4-volumed-pulse-0.2.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>keybinder3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-volumed-pulse/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-volumed-pulse</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>keybinder3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg/autostart/</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.2.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-equake-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-equake-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">Earthquake plugin for Xfce4</Summary>
+            <Description xml:lang="en">Panel plug-in that displays information about earthquakes at regular intervals.</Description>
+            <Archive type="tarbz2" sha1sum="0ca3ee17fdf3cc18208dba48ff2c8f40d9c5503f">http://archive.xfce.org/src/panel-plugins/xfce4-equake-plugin/1.3/xfce4-equake-plugin-1.3.8.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-equake-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-equake-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel-plugins/xfce4-equake-plugin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-mount-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-mount-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A mount/umount utility</Summary>
+            <Description xml:lang="en">xfce4-mount-plugin is a mount/umount utility for the panel.</Description>
+            <Archive type="tarbz2" sha1sum="afc62365d4a2c773060f7044e4231be263ef78ed">http://archive.xfce.org/src/panel-plugins/xfce4-mount-plugin/1.1/xfce4-mount-plugin-1.1.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-mount-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-mount-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.1.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>thunar-media-tags-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-media-tags-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Thunar media tags plugin</Summary>
+            <Description xml:lang="en">The Thunar Media Tags Plugin (thunar-media-tags-plugin) adds special features for media files to the Thunar File Manager.</Description>
+            <Icon>Thunar</Icon>
+            <Archive type="tarbz2" sha1sum="93beb24d8b3ba2b7da22c18e6b23512d45516e38">http://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin/0.3/thunar-media-tags-plugin-0.3.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>Thunar-devel</Dependency>
+                <Dependency>taglib-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/thunar-media-tags-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>thunar-media-tags-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>Thunar</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>atk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-timer-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Timer plugin for Xfce4 panel</Summary>
+            <Description xml:lang="en">With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.</Description>
+            <Icon>xfce4-panel</Icon>
+            <Archive type="tarbz2" sha1sum="f8f502eaee45843652ec869b730a92064d42e483">http://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-timer-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-timer-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libxfcetimer.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.7.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-composite-editor</Name>
+            <Homepage>http://keithhedger.hostingsiteforfree.com/pages/apps.html#fbpic</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">simple GUI to control the various Xfce4 WM tweaks that are not available via the &quot;Window Manager Tweaks&quot; control panel.</Summary>
+            <Description xml:lang="en">These settings are available via the xconf settings editor but that is one of the most awkward GUI&apos;s I  have ever used as you have to select the xfwm4 channel, expand the tree, scroll to the option you want, select it, click edit, change the setting and click save, then the tree gets collapsed and you have to start again!
+So this nice simple GUI to control the composite manager, the settings are self explanatory.</Description>
+            <Archive type="targz" sha1sum="2f7b547689568ba9fb31fdd0e4edc717dc540cf9">https://github.com/SulinOS/xfce4-composite-editor/archive/0.2.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libxfce4ui-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-composite-editor/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-composite-editor</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="application">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/Xfwm4CompositeEditor/docs/gpl-3.0.txt</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-21</Date>
+                <Version>0.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-notes-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Notes plugin provides you a quick way you had do with Post-It&apos;s</Summary>
+            <Description xml:lang="en">The notes plugin provides you a quick way to paste text, to write down a list of things, to leave a note to your friend, or whatever you had do with Post-It&apos;s.</Description>
+            <Archive type="tarbz2" sha1sum="37d1a497ea26e796336feb4b0a247b7c4c7a66cd">http://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.8/xfce4-notes-plugin-1.8.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libunique1-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-notes-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-notes-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libunique1</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.8.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-wavelan-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-wavelan-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">This plugin is used to display stats from a wireless lan interface</Summary>
+            <Description xml:lang="en">xfce4-wavelan-plugin shows signal quality as percentage.This plugin is quite easy to use.</Description>
+            <Archive type="tarbz2" sha1sum="a2a703bd073ad39d5c1da270feca06120794e433">http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.6/xfce4-wavelan-plugin-0.6.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-wavelan-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-wavelan-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.6.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-screenshooter</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/xfce4-screenshooter</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">A plugin allows you to capture the entire screen</Summary>
+            <Description xml:lang="en">This application allows you to capture the entire screen, the active window or a selected region.</Description>
+            <Archive type="tarbz2" sha1sum="e7a0b34fadd82d84d4197706d5b8fd383f312747">http://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.6.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfcegui4-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-screenshooter/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-screenshooter</Name>
+            <RuntimeDependencies>
+                <Dependency>exo</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.9.6</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-mailwatch-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A mailbox plugin for Xfce4</Summary>
+            <Description xml:lang="en">A mailbox watch/check plugin for the Xfce4 panel</Description>
+            <Archive type="tarbz2" sha1sum="d0ab5e543211b951e01242efeb4ab3145db5c4c4">http://archive.xfce.org/src/panel-plugins/xfce4-mailwatch-plugin/1.2/xfce4-mailwatch-plugin-1.2.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gnutls-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-mailwatch-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-mailwatch-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>exo</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gnutls</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-battery-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-battery-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Battery monitor panel plugin for Xfce4</Summary>
+            <Description xml:lang="en">A battery monitor panel plugin for Xfce4, compatible with APM and ACPI, for Linux and *BSD.</Description>
+            <Archive type="tarbz2" sha1sum="e3796a6cc3921d8b52a4d6fd5bb83fd4806af091">http://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.1/xfce4-battery-plugin-1.1.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-battery-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-battery-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.1.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-datetime-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">This plugin shows the date and time in the panel</Summary>
+            <Description xml:lang="en">xfce4-datetime-plugin shows the date and time in the panel, and a calendar appears when you left-click on it.</Description>
+            <Archive type="tarbz2" sha1sum="2d7ed667d6c2f5e8b9f4eb80cb001d2473ae2a60">http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.8/xfce4-datetime-plugin-0.8.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-datetime-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-datetime-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.8.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-xkb-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-xkb-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD-2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A plugin to switch keyboard layouts for the Xfce4 panel</Summary>
+            <Description xml:lang="en">A plugin for the Xfce4 panel displaying keyboard layout. The plugin may be used as an indicator for the current layout and to switch layouts.</Description>
+            <Icon>gnome-dev-keyboard</Icon>
+            <Archive type="tarbz2" sha1sum="bac2c00a167465424e1f424b61f0c4322a319f90">http://archive.xfce.org/src/panel-plugins/xfce4-xkb-plugin/0.8/xfce4-xkb-plugin-0.8.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libxfcegui4-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxklavier-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-xkb-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-xkb-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>garcon</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libxkb.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.8.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-diskperf-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD-2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A disk usage and performance panel plugin for Xfce</Summary>
+            <Description xml:lang="en">A disk usage and performance panel plugin for Xfce.</Description>
+            <Icon>xfce4-panel</Icon>
+            <Archive type="tarbz2" sha1sum="997e484f2d05767b9318eb07443fac6a779cb33c">http://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.6/xfce4-diskperf-plugin-2.6.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-diskperf-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-diskperf-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>2.6.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>thunar-vcs-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">An SVN integration and GIT integration to Thunar</Summary>
+            <Description xml:lang="en">The Thunar VCS Plugin adds Subversion and GIT actions to the context menu of thunar. This gives a SVN integration and GIT integration to Thunar.</Description>
+            <Archive type="tarbz2" sha1sum="bf94601c450165e63267343f9460367883b84c5a">http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.2/thunar-vcs-plugin-0.2.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>Thunar-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/thunar-vcs-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>thunar-vcs-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>Thunar</Dependency>
+                <Dependency>git</Dependency>
+                <Dependency>subversion</Dependency>
+                <Dependency>apr</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/xfce4/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-time-out-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-time-out-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A module allows to take periodical breaks from the computer</Summary>
+            <Description xml:lang="en">This plugin makes it possible to take periodical breaks from the computer every X minutes. During breaks it locks your screen. It optionally allows you to postpone breaks for a certain time.</Description>
+            <Archive type="tarbz2" sha1sum="280ad845069e83aee986f0cc59b1060666afe992">http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-time-out-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-time-out-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.0.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-dict</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/xfce4-dict</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">A client program to query different dictionaries</Summary>
+            <Description xml:lang="en">xfce4-dict allows you to search different kinds of dictionary services for words or phrases and shows you the result.</Description>
+            <Archive type="tarbz2" sha1sum="ece031bc1855a204333ada180bdc17a4ae87d619">http://archive.xfce.org/src/apps/xfce4-dict/0.8/xfce4-dict-0.8.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libxfcegui4-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-dict/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-dict</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libxfce4dict.so</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.8.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-alsa-plugin</Name>
+            <Homepage>https://github.com/equeim/xfce4-alsa-plugin/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Simple ALSA volume control for xfce4-panel</Summary>
+            <Description xml:lang="en">Alsa sound manager panel plugin for xfce for Linux and *BSD.</Description>
+            <Archive type="targz" sha1sum="7bde0df79dcae54d0d5c8eb9315b768f5722f235">https://github.com/equeim/xfce4-alsa-plugin/archive/0.2.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-alsa-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-alsa-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-pulseaudio-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-pulseaudio-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Xfce pulseaudio plugin</Summary>
+            <Description xml:lang="en">Xfce4-pulseaudio-plugin is a panel plugin for controlling an audio output volume of the PulseAudio mixer</Description>
+            <Archive type="tarbz2" sha1sum="512aeeaaf78e93c53695d9e43328d6e5b76f5b17">http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-pulseaudio-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-pulseaudio-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>pavucontrol</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.4.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-clipman-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A clipboard plugin for the Xfce4 panel</Summary>
+            <Description xml:lang="en">A clipboard plugin for the Xfce4 panel</Description>
+            <Archive type="tarbz2" sha1sum="4ac0cb95cd6082ec598f5ba42c757eb5f48502a3">http://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.4/xfce4-clipman-plugin-1.4.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-clipman-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-clipman-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc/xdg</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>xfce4-clipman-plugin-devel</Name>
+            <Summary xml:lang="en">xfce4-sensors-plugin için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">xfce4-clipman-plugin</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.4.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>thunar-archive-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A plugin allows you to create and extract archive files</Summary>
+            <Description xml:lang="en">The Thunar Archive Plugin allows you to create and extract archive files using the file context menus in the Thunar file manager.</Description>
+            <Archive type="tarbz2" sha1sum="a5f2e9c57b2439364b089eeccd1a7d0e926a0cc2">http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.4/thunar-archive-plugin-0.4.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>Thunar-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/thunar-archive-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>thunar-archive-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>Thunar</Dependency>
+                <Dependency>exo</Dependency>
+                <Dependency>gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-cpufreq-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-cpufreq-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">CPU Frequency plugin for Xfce4</Summary>
+            <Description xml:lang="en">xfce4-cpufreq-plugin shows CPU frequency in the Xfce Panel.</Description>
+            <Archive type="tarbz2" sha1sum="d16aba9c4d7b4752a4437fb097d755d59e8aa1fd">http://archive.xfce.org/src/panel-plugins/xfce4-cpufreq-plugin/1.2/xfce4-cpufreq-plugin-1.2.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-cpufreq-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-cpufreq-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libcpufreq.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-21</Date>
+                <Version>1.2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-fsguard-plugin</Name>
+            <Homepage>http://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.0/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">File system usage monitor plugin for Xfce4</Summary>
+            <Description xml:lang="en">File system usage monitor plugin for the Xfce4 panel.</Description>
+            <Archive type="tarbz2" sha1sum="89caa7e8081f4b7645c65e24175ae26452918e6d">http://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.1/xfce4-fsguard-plugin-1.1.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-fsguard-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-fsguard-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/lib/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.1.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-systemload-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>BSD-2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">Xfce4 system load plugin</Summary>
+            <Description xml:lang="en">Xfce4-systemload-plugin is a plugin which displays the current CPU load, the memory in use, the swap space and the system uptime in the Xfce panel.</Description>
+            <Icon>xfce4-panel</Icon>
+            <Archive type="tarbz2" sha1sum="bab853f85b8654b08902f4c724abb06c0fa6a90c">http://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/1.2/xfce4-systemload-plugin-1.2.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-systemload-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-systemload-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>upower</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.2.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-smartbookmark-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-smartbookmark-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.plugin</PartOf>
+            <Summary xml:lang="en">A plugin allows you to send requests directly to your browser to make search</Summary>
+            <Description xml:lang="en">xfce4-smartbookmark-plugin is a plugin allows you to send requests directly to your browser and perform a custom search.</Description>
+            <Archive type="tarbz2" sha1sum="0b806fb1ecade453a44b3bc8d1b7bec29026dab0">http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.5/xfce4-smartbookmark-plugin-0.5.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-smartbookmark-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-smartbookmark-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.5.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>xfce4-cpugraph-plugin</Name>
+            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-cpugraph-plugin</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">CPU Frequency Graphic plugin for Xfce4</Summary>
+            <Description xml:lang="en">xfce4-cupgraph-plugin shows CPU frequency into a graph in the Xfce Panel.</Description>
+            <Archive type="tarbz2" sha1sum="4f712fe055d259ced8d279bad631743a065653d1">http://archive.xfce.org/src/panel-plugins/xfce4-cpugraph-plugin/1.1/xfce4-cpugraph-plugin-1.1.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-panel-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/plugin/xfce4-cpugraph-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-cpugraph-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/libcpugraph.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.1.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gigolo</Name>
+            <Homepage>http://www.uvena.de/gigolo/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">A frontend to easily manage connections to remote filesystems using GIO/GVfs</Summary>
+            <Description xml:lang="en">Gigolo allows you to quickly connect/mount local and remote filesystems and manage bookmarks of such.</Description>
+            <Archive type="tarbz2" sha1sum="2663bc0ad0a81e73cc8238231ebbfef63ab3b196">http://archive.xfce.org/src/apps/gigolo/0.5/gigolo-0.5.0.tar.bz2</Archive>
+            <SourceURI>desktop/xfce/addon/gigolo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gigolo</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>parole</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/parole</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">A modern simple media player</Summary>
+            <Description xml:lang="en">Parole is a modern simple media player based on the GStreamer framework and written to fit well in the Xfce desktop. Parole is designed with simplicity, speed and resource usage in mind.</Description>
+            <Archive type="tarbz2" sha1sum="190e09b77f04076f2e7279b0fd3142628a4caf35">http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>orc-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/addon/parole/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>parole</Name>
+            <RuntimeDependencies>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>orc</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>xfconf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>parole-devel</Name>
+            <Summary xml:lang="en">Development files for parole</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">parole</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>1.0.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>orage</Name>
+            <Homepage>http://www.kolumbus.fi/~w408237/orage/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">A calendar for Xfce</Summary>
+            <Description xml:lang="en">Orage is a time-managing application for the Xfce desktop environment.</Description>
+            <Icon>xfcalendar</Icon>
+            <Archive type="tarbz2" sha1sum="c856ad30f7a17a732d5cc794ef90aedf98575699">http://archive.xfce.org/src/apps/orage/4.12/orage-4.12.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libxfcegui4-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libical-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>libical3.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/xfce/addon/orage/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>orage</Name>
+            <RuntimeDependencies>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfcegui4</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libical</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/xfce4/panel/plugins/liborageclock.so</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/orage/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/orage</Path>
+                <Path fileType="data">/usr/share/xfce4</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>4.12.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>eatmonkey</Name>
+            <Homepage>http://goodies.xfce.org/projects/applications/eatmonkey</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">a download manager</Summary>
+            <Description xml:lang="en">Eatmonkey is a download manager that works exclusively with aria2, the ultra fast download utility.</Description>
+            <Archive type="tarbz2" sha1sum="463c4d0fac612d82be4d9297c41639730902fdea">http://archive.xfce.org/src/apps/eatmonkey/0.1/eatmonkey-0.1.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>ruby-gtk2</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/addon/eatmonkey/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>eatmonkey</Name>
+            <RuntimeDependencies>
+                <Dependency>libnotify</Dependency>
+                <Dependency>ruby-gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-21</Date>
+                <Version>0.1.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mousepad</Name>
+            <Homepage>http://www.xfce.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">Small text editor for Xfce</Summary>
+            <Description xml:lang="en">Mousepad is a text editor for Xfce.</Description>
+            <Archive type="tarbz2" sha1sum="26f0a2860973c4acd425dc8b5e7736ba6cb9a459">http://archive.xfce.org/src/apps/mousepad/0.4/mousepad-0.4.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/addon/mousepad/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mousepad</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-23</Date>
+                <Version>0.4.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libfm-extra</Name>
             <Homepage>http://pcmanfm.sourceforge.net</Homepage>
             <Packager>
