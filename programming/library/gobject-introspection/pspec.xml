@@ -23,13 +23,18 @@
 
     <Package>
         <Name>gobject-introspection</Name>
-        <RuntimeDependencies>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/lib*.so*</Path>
             <Path fileType="data">/usr/lib/girepository-1.0/*.typelib</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+	<Package>
+        <Name>gobject-introspection-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
         </Files>
     </Package>
 
@@ -52,6 +57,13 @@
     </Package>
 
     <History>
+   <Update release="4">
+        <Date>2019-12-12</Date>
+        <Version>1.63.1</Version>
+        <Comment>Create 32bit package</Comment>
+        <Name>Ali Rıza KESKİN</Name>
+        <Email>parduscix@yandex.ru</Email>
+    </Update>
     <Update release="3">
         <Date>2019-12-12</Date>
         <Version>1.63.1</Version>
