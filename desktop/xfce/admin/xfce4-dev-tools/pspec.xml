@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xfce4-dev-tools</Name>
+        <Homepage>http://www.xfce.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Xfce developer tools</Summary>
+        <Description>Xfce4-dev-tools contains common tools required by Xfce developers and people that want to build Xfce from SVN. In addition, this package contains the Xfce developer's handbook.</Description>
+        <Archive sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384" type="tarbz2">http://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>xfce4-dev-tools</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>4.14.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

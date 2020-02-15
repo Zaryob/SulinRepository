@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xfce4-wavelan-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-wavelan-plugin</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>This plugin is used to display stats from a wireless lan interface</Summary>
+        <Description>xfce4-wavelan-plugin shows signal quality as percentage.This plugin is quite easy to use.</Description>
+        <Archive sha1sum="a2a703bd073ad39d5c1da270feca06120794e433" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.6/xfce4-wavelan-plugin-0.6.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xfce4-panel-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfce4-wavelan-plugin</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+            <Dependency>xfce4-panel</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxfcegui4</Dependency>
+            <Dependency>libxfce4util</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/xfce4</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        <Path fileType="data">/usr/lib/xfce4</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-23</Date>
+            <Version>0.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
