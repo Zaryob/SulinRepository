@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxterminal</Name>
+        <Homepage>http://wiki.lxde.org/en/LXTerminal</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>lxterminal</Icon>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.lxde.base</PartOf>
+        <Summary>Lightweight terminal emulator</Summary>
+        <Description>Lxterminal is a Lightweight vte-based tabbed terminal emulator for LXDE.</Description>
+        <Archive sha1sum="896c32c065e065d62591f4484ff1dca8ac6f7ce7" type="tarxz">https://downloads.sourceforge.net/lxde/lxterminal-0.3.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>vte3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxterminal</Name>
+        <RuntimeDependencies>
+            <Dependency>vte3</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/lxterminal</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.3.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

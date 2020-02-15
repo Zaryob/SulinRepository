@@ -14,7 +14,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>The GIMP Toolkit version 3</Summary>
         <Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-        <Archive sha1sum="07fa59482de0ab5974f0a776932ba1ff71dc0d44">http://ftp.gnome.org/pub/gnome/sources/gtk+/3.24/gtk+-3.24.10.tar.xz</Archive>
+        <Archive sha1sum="728a64ef5ff8061b86db7f78db62f597b820c870" type="tarbz2">https://gitlab.gnome.org/GNOME/gtk/-/archive/3.24.13/gtk-3.24.13.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>at-spi2-atk-devel</Dependency>
@@ -42,9 +42,6 @@
             <Dependency>graphite2-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-			<Patch>10-Revert-gdkseatdefault-Grab-touch-events-where-applic.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>gtk3</Name>
@@ -86,6 +83,9 @@
             <AdditionalFile owner="root" permission="0755" target="/usr/share/gtk-3.0/settings.ini">settings.ini</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/usr/share/libalpm/hooks/gtk-query-immodules-3.0.hook">gtk-query-immodules-3.0.hook</AdditionalFile>
         </AdditionalFiles>
+        <Provides>
+            <SCOM script="pakhandler.py">System.PackageHandler</SCOM>
+        </Provides>
     </Package>
     <Package>
         <Name>gtk3-demo</Name>
@@ -143,7 +143,7 @@
             <Path fileType="data">/usr/share/gir-1.0</Path>
         </Files>
     </Package>
-    <!--Package>
+    <Package>
         <Name>gtk3-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for gtk3</Summary>
@@ -177,6 +177,7 @@
             <Dependency>glib2-32bit</Dependency>
             <Dependency>cairo-32bit</Dependency>
             <Dependency>pango-32bit</Dependency>
+            <!--Dependency>librest-32bit</Dependency-->
             <Dependency>json-glib-32bit</Dependency>
             <Dependency>libXi-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
@@ -196,8 +197,15 @@
             <Path fileType="executable">/usr/bin/*-32bit</Path>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
-    </Package-->
+    </Package>
     <History>
+	<Update release="4">
+            <Date>2020-01-18</Date>
+            <Version>3.24.13</Version>
+            <Comment>Package is rebuilded.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="3">
             <Date>2020-01-09</Date>
             <Version>3.24.13</Version>
