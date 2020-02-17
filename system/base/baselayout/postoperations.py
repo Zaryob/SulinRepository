@@ -1,41 +1,38 @@
 #!/usr/bin/env python3
 
 import os
-import grp
-import pwd
-import shutil
 
+def create_dir(name):
+    if os.path.exists(name)==False:
+        os.system("mkdir -p "+name)
+def copy_file(source,target,perm):
+	os.system("cp -prf '"+source"' '"+target"'")
+	os.chmod(target,perm)
 
 def postInstall():
-    # We don't want to overwrite an existing file during upgrade
-    os.mkdir("/etc/bash/")
-    os.mkdir("/etc/bashrc.d/")
-    specialFiles = ["passwd", "locale.conf", "group", "fstab", "ld.so.conf", "resolv.conf","bash/bashrc"]
-    for rcfile in os.listdir("/usr/share/baselayout/bash/bashrc.d"):
-        specialFiles.append("bash/bashrc.d/"+rcfile)
-
+	"""base config"""
+	create_dir("/etc/bash/")
+    create_dir("/etc/bash/bashrc.d")
+    create_dir("/usr/share/icons/hicolor/")
+    specialFiles = ["passwd", "locale.conf", "group", "fstab", "ld.so.conf", "resolv.conf"]
 
     for specialFile in specialFiles:
-        if not os.path.exists("/etc/%s" % specialFile):
-            os.chmod("/usr/share/baselayout/{}".format(specialFile),0o755)
-            shutil.copy("/usr/share/baselayout/{}".format(specialFile), "/etc{}".format(specialFile))
+        copy_file("/usr/share/baselayout/{}".format(specialFile), "/etc/{}".format(specialFile),0o755)
+
     
     
-    shutil.copy("/usr/share/baselayout/inittab.openrc", "/etc/inittab")
-    shutil.copy("/usr/share/baselayout/shadow", "/etc/shadow")
-    shutil.copy("/usr/share/baselayout/index.theme", "/usr/share/icons/hicolor/index.theme")
+    copy_file("/usr/share/baselayout/inittab.openrc", "/etc/inittab",0o700)
+    copy_file("/usr/share/baselayout/bash/bashrc","/etc/bash/bashrc",0o755)
+    for i in os.listdir("/usr/share/baselayout/bash/bashrc.d"):
+	    copy_file("/usr/share/baselayout/bash/bashrc.d/"+i, "/etc/bash/bashrc.d"+i,0o755)
+    copy_file("/usr/share/baselayout/shadow", "/etc/shadow",0o700)
+    copy_file("/usr/share/baselayout/index.theme", "/usr/share/icons/hicolor/index.theme",0o755)
     os.chmod("/usr/share/icons/hicolor/index.theme",0o755)
 
 
     # We should only install empty files if these files don't already exist.
     if not os.path.exists("/var/log/lastlog"):
         os.system("/bin/touch /var/log/lastlog")
-
-    if not os.path.exists("/run/utmp"):
-        os.system("/usr/bin/install -m 0664 -g utmp /dev/null /run/utmp")
-
-    if not os.path.exists("/var/log/wtmp"):
-        os.system("/usr/bin/install -m 0664 -g utmp /dev/null /var/log/wtmp")
 
 
     # Create /root if not exists

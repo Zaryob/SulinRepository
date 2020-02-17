@@ -77,4 +77,6 @@ def install():
         inarytools.dosym("lib", "/lib64")
         inarytools.dosym("lib", "/usr/lib64")
         inarytools.dosym("lib", "/usr/local/lib64")
+        
+    shelltools.system("chmod 755 -R {}/".format(get.installDIR()))
 
