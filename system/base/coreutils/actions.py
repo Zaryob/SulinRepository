@@ -13,9 +13,9 @@ from inary.actionsapi import shelltools
 movetobin = ["arch", "basename", "cat", "chgrp", "chmod", "chown", "cp", "cut", "date", "dd", "df",
              "dir", "echo", "env", "false", "link", "ln", "ls", "mkdir", "mknod", "mktemp", "mv",
              "nice", "pwd", "readlink", "rm", "rmdir", "sleep", "sort", "stty", "sync", "touch",
-             "true", "uname", "unlink", "vdir"]
+             "true", "uname", "unlink", "vdir","coreutils"]
 
-symtousrbin = ["env", "cut", "readlink"]
+symtousrbin = ["env", "cut", "readlink","coreutils"]
 
 def setup():
     inarytools.cflags.add("-fno-strict-aliasing -fPIC -D_GNU_SOURCE=1")
@@ -29,15 +29,18 @@ def setup():
 
     # Fedora also installs su and hostname
     autotools.configure("""--with-packager="Sulin" \
-                         --with-packager-version="coreutils-8.28" \
+                         --with-packager-version="coreutils-8.31" \
+                         --without-selinux \
                          --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
                          --enable-largefile \
+                         --enable-single-binary=symlinks \
                          --enable-install-program=arch \
+                         --with-openssl \
                          --enable-no-install-program=faillog,hostname,login,lastlog,uptime \
                          --libexecdir=/usr/lib""")
 
 def build():
-    autotools.make()
+    autotools.make("SHARED=0 CFLAGS='-Ofast'")
 
 
 def install():
@@ -54,5 +57,6 @@ def install():
 
     for f in symtousrbin:
         inarytools.dosym("../../bin/%s" % f, "/usr/bin/%s" % f)
+    
 
     inarytools.dodoc("AUTHORS", "ChangeLog*", "NEWS", "README*", "THANKS", "TODO")
