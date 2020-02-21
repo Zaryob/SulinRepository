@@ -9800,6 +9800,9 @@
                 <Dependency>gtk-doc</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch>multilib.patch</Patch>
+            </Patches>
             <SourceURI>multimedia/graphics/librsvg/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -9827,6 +9830,19 @@
                 <Path fileType="data">/usr/share/gir-1.0/Rsvg-2.0.gir</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="locale">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>librsvg-32bit</Name>
+            <BuildType>emul32</BuildType>
+            <RuntimeDependencies>
+                <Dependency>libcroco-32bit</Dependency>
+                <Dependency>gtk3-32bit</Dependency>
+                <Dependency>pango-32bit</Dependency>
+                <Dependency>gdk-pixbuf-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib32</Path>
             </Files>
         </Package>
         <Package>
@@ -27020,6 +27036,320 @@
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>7u_121.2.6.19</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>java8-openjdk</Name>
+            <Homepage>http://icedtea.classpath.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>programming.language.java</PartOf>
+            <Summary xml:lang="en">Open Java Development Kit</Summary>
+            <Description xml:lang="en">OpenJDK (Open Java Development Kit) is a free and open source implementation of the Java Platform, Standard Edition (Java SE).</Description>
+            <Archive sha1sum="fb3729becd467abc67919dd169688f4db27618fd">https://github.com/AdoptOpenJDK/openjdk-jdk8u/archive/jdk8u242-b08.zip</Archive>
+            <BuildDependencies>
+                <Dependency>wget</Dependency>
+                <Dependency>nss-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>cups-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>openjpeg</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/java/java8-openjdk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>jre8-openjdk-headless</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 8.0 with IcedTea8 replacing binary plugs - Minimal Java runtime - needed for executing non GUI Java programs</Summary>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>openjpeg</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/orbd</Path>
+                <Path fileType="executable">/usr/bin/rmid</Path>
+                <Path fileType="executable">/usr/bin/java</Path>
+                <Path fileType="data">/etc/env.d/20java_jre.csh</Path>
+                <Path fileType="data">/etc/env.d/20java_jre</Path>
+                <Path fileType="config">/etc/java-8-openjdk/</Path>
+                <Path fileType="executable">/usr/bin/pack200</Path>
+                <Path fileType="executable">/usr/bin/keytool</Path>
+                <Path fileType="executable">/usr/bin/tnameserv</Path>
+                <Path fileType="executable">/usr/bin/unpack200</Path>
+                <Path fileType="man">/usr/share/man/man1/rmid.1</Path>
+                <Path fileType="man">/usr/share/man/man1/orbd.1</Path>
+                <Path fileType="man">/usr/share/man/man1/java.1</Path>
+                <Path fileType="executable">/usr/bin/servertool</Path>
+                <Path fileType="executable">/usr/bin/rmiregistry</Path>
+                <Path fileType="doc">/usr/share/doc/java8-openjdk/</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/rmid.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/java.1</Path>
+                <Path fileType="man">/usr/share/man/man1/pack200.1</Path>
+                <Path fileType="man">/usr/share/man/man1/keytool.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/orbd.1</Path>
+                <Path fileType="man">/usr/share/man/man1/tnameserv.1</Path>
+                <Path fileType="man">/usr/share/man/man1/unpack200.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/pack200.1</Path>
+                <Path fileType="man">/usr/share/man/man1/servertool.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/keytool.1</Path>
+                <Path fileType="man">/usr/share/man/man1/rmiregistry.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/tnameserv.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/unpack200.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/servertool.1</Path>
+                <Path fileType="doc">/usr/share/doc/jre8-openjdk-headless</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/rmiregistry.1</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/java</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/orbd</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/rmid</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/keytool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/pack200</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/orbd</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/java</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/rmid</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/tnameserv</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/unpack200</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/servertool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/policytool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/rmiregistry</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/keytool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/pack200</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/*/jli/libjli.so</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/tnameserv</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/unpack200</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/servertool</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/rmiregistry</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/amd64/libjawt.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/xawt/libmawt.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/headless/libmawt.so</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/env.d/20java_jre" permission="0644" owner="root">20java_jre</AdditionalFile>
+                <AdditionalFile target="/etc/env.d/20java_jre.csh" permission="0644" owner="root">20java_jre.csh</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>jre8-openjdk</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 8.0 with IcedTea8 replacing binary plugs - Full Java runtime environment - needed for executing Java GUI and Webstart programs</Summary>
+            <RuntimeDependencies>
+                <Dependency>giflib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>openjpeg</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>jre8-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/openjdk</Path>
+                <Path fileType="executable">/usr/bin/policytool</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/</Path>
+                <Path fileType="man">/usr/share/man/man1/policytool.1</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/policytool.1</Path>
+                <Path fileType="data">/usr/share/applications/policytool.desktop</Path>
+                <Path fileType="executable">/usr/lib/jvm/java-8-openjdk/jre/bin/policytool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/*/libjsoundalsa.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/*/libpulse-java.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/*/libsplashscreen.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjsoundalsa.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libpulse-java.so</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libsplashscreen.so</Path>
+            </Files>
+            <Conflicts>
+                <Package>sun-jre</Package>
+            </Conflicts>
+            <Replaces>
+                <Package>sun-jre</Package>
+            </Replaces>
+        </Package>
+        <Package>
+            <Name>jdk8-openjdk</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 8.0 with IcedTea8 replacing binary plugs - SDK</Summary>
+            <RuntimeDependencies>
+                <Dependency>libX11</Dependency>
+                <Dependency>jre8-openjdk-headless</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc/env.d/21java_jdk.csh</Path>
+                <Path fileType="data">/etc/env.d/21java_jdk</Path>
+                <Path fileType="man">/usr/share/man/man1/</Path>
+                <Path fileType="man">/usr/share/man/ja/man1/</Path>
+                <Path fileType="executable">/usr/bin/jar</Path>
+                <Path fileType="executable">/usr/bin/xjc</Path>
+                <Path fileType="executable">/usr/bin/apt</Path>
+                <Path fileType="executable">/usr/bin/jdeps</Path>
+                <Path fileType="executable">/usr/bin/jjs</Path>
+                <Path fileType="executable">/usr/bin/clhsdb</Path>
+                <Path fileType="executable">/usr/bin/hsdb</Path>
+                <Path fileType="executable">/usr/bin/jdb</Path>
+                <Path fileType="executable">/usr/bin/jps</Path>
+                <Path fileType="executable">/usr/bin/jmap</Path>
+                <Path fileType="executable">/usr/bin/idlj</Path>
+                <Path fileType="executable">/usr/bin/jcmd</Path>
+                <Path fileType="executable">/usr/bin/jhat</Path>
+                <Path fileType="executable">/usr/bin/rmic</Path>
+                <Path fileType="executable">/usr/bin/javac</Path>
+                <Path fileType="executable">/usr/bin/javah</Path>
+                <Path fileType="executable">/usr/bin/javap</Path>
+                <Path fileType="executable">/usr/bin/jinfo</Path>
+                <Path fileType="executable">/usr/bin/wsgen</Path>
+                <Path fileType="executable">/usr/bin/jstat</Path>
+                <Path fileType="executable">/usr/bin/jstack</Path>
+                <Path fileType="executable">/usr/bin/jstatd</Path>
+                <Path fileType="executable">/usr/bin/javadoc</Path>
+                <Path fileType="executable">/usr/bin/extcheck</Path>
+                <Path fileType="executable">/usr/bin/jconsole</Path>
+                <Path fileType="executable">/usr/bin/wsimport</Path>
+                <Path fileType="executable">/usr/bin/jarsigner</Path>
+                <Path fileType="executable">/usr/bin/jsadebugd</Path>
+                <Path fileType="executable">/usr/bin/schemagen</Path>
+                <Path fileType="executable">/usr/bin/serialver</Path>
+                <Path fileType="executable">/usr/bin/jrunscript</Path>
+                <Path fileType="executable">/usr/bin/appletviewer</Path>
+                <Path fileType="executable">/usr/bin/native2ascii</Path>
+                <Path fileType="data">/usr/share/applications/jconsole.desktop</Path>
+                <Path fileType="header">/usr/lib/jvm/java-8-openjdk/include</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/apt</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jdb</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jps</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jjs</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jdeps</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/hsdb</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/clhsdb</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/xjc</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/rmic</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/rmid</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/idlj</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/orbd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/java</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jhat</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jmap</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jcmd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/javac</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/javah</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/javap</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jinfo</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jstat</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/wsgen</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jstatd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jstack</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/pack200</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/javadoc</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/keytool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/wsimport</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/extcheck</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jconsole</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/tnameserv</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/unpack200</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/schemagen</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/serialver</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jarsigner</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jsadebugd</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/jrunscript</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/policytool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/servertool</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/rmiregistry</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/java-rmi.cgi</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/native2ascii</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/bin/appletviewer</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/jexec</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/ct.sym</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/dt.jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/ir.idl</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/orb.idl</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/tools.jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/sa-jdi.jar</Path>
+                <Path fileType="library">/usr/lib/jvm/java-8-openjdk/lib/jconsole.jar</Path>
+            </Files>
+            <Conflicts>
+                <Package>sun-jdk</Package>
+            </Conflicts>
+            <Replaces>
+                <Package>sun-jdk</Package>
+            </Replaces>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/env.d/21java_jdk.csh" permission="0644" owner="root">21java_jdk.csh</AdditionalFile>
+                <AdditionalFile target="/etc/env.d/21java_jdk" permission="0644" owner="root">21java_jdk</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>openjdk8-src</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 8.0 with IcedTea8 replacing binary plugs - sources</Summary>
+            <RuntimeDependencies>
+                <Dependency>jdk8-openjdk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/jvm/java-8-openjdk/src.zip</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>openjdk8-doc</Name>
+            <Summary xml:lang="en">Free Java environment based on OpenJDK 8.0 with IcedTea8 replacing binary plugs - documentation</Summary>
+            <RuntimeDependencies>
+                <Dependency>jdk8-openjdk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/openjdk8-doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>8u_121.2.6.19</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -51806,8 +52136,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="data">/usr/share</Path>
             </Files>
         </Package>
         <History>
@@ -52693,43 +53022,6 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
-        <Package>
-            <Name>pango-32bit</Name>
-            <Summary xml:lang="en">32-bit shared libraries for pango</Summary>
-            <PartOf>emul32</PartOf>
-            <BuildType>emul32</BuildType>
-            <BuildDependencies>
-                <Dependency>cairo-32bit</Dependency>
-                <Dependency>glib2-32bit</Dependency>
-                <Dependency>libX11-32bit</Dependency>
-                <Dependency>libXft-32bit</Dependency>
-                <Dependency>freetype-32bit</Dependency>
-                <Dependency>libXrender-32bit</Dependency>
-                <Dependency>fontconfig-32bit</Dependency>
-                <Dependency>libffi-32bit</Dependency>
-                <Dependency>harfbuzz-32bit</Dependency>
-                <Dependency>fridibi-32bit</Dependency>
-            </BuildDependencies>
-            <RuntimeDependencies>
-                <Dependency release="4">pango</Dependency>
-                <Dependency>cairo-32bit</Dependency>
-                <Dependency>glib2-32bit</Dependency>
-                <Dependency>libX11-32bit</Dependency>
-                <Dependency>libXft-32bit</Dependency>
-                <Dependency>freetype-32bit</Dependency>
-                <Dependency>libXrender-32bit</Dependency>
-                <Dependency>fontconfig-32bit</Dependency>
-                <Dependency>libffi-32bit</Dependency>
-                <Dependency>harfbuzz-32bit</Dependency>
-                <Dependency>fridibi-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/pango-querymodules-32</Path>
-                <Path fileType="library">/usr/lib32/libpango*</Path>
-                <Path fileType="library">/usr/lib32/girepository-1.0</Path>
-                <Path fileType="library">/usr/lib32/pango</Path>
-            </Files>
-        </Package>
         <History>
             <Update release="4">
                 <Date>2020-02-01</Date>
@@ -52911,11 +53203,11 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">C++ binding for Cairo</Summary>
             <Description xml:lang="en">cairomm package is the C++ binding for Cairo (it makes possible using Cairo in C++).</Description>
-            <Archive type="targz" sha1sum="63cd9eab40686f368a8edd3e6912ac18b3048ecf">https://www.cairographics.org/releases/cairomm-1.13.1.tar.gz</Archive>
+            <Archive sha1sum="f95ae92551ea4d0a9214e45834ae9806dfee9e3d">https://cairographics.org/releases/cairomm-1.15.5.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>doxygen</Dependency>
                 <Dependency>cairo-devel</Dependency>
-                <Dependency versionTo="2.99">libsigc++-devel</Dependency>
+                <Dependency>libsigc2++-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/cairomm/pspec.xml</SourceURI>
         </Source>
@@ -52923,7 +53215,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>cairomm</Name>
             <RuntimeDependencies>
                 <Dependency>cairo</Dependency>
-                <Dependency versionTo="2.99">libsigc++</Dependency>
+                <Dependency>libsigc2++</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -52934,7 +53226,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Name>cairomm-devel</Name>
             <Summary xml:lang="en">Development files for cairomm</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">cairomm</Dependency>
+                <Dependency release="3">cairomm</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>libsigc++-devel</Dependency>
             </RuntimeDependencies>
@@ -52952,6 +53244,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-01-09</Date>
+                <Version>1.15.5</Version>
+                <Comment>Version bump to 1.15.5</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-09</Date>
                 <Version>1.13.1</Version>
@@ -66183,7 +66482,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>system.base</PartOf>
             <Summary xml:lang="en">Filesystem baselayout</Summary>
             <Description xml:lang="en">baselayout creates the Sulin Linux main filesystem hierarchy.</Description>
-            <Archive sha1sum="cfd81a74b29a8041af4384c2f55291e7a71c47d0">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0/baselayout-3.0.zip</Archive>
+            <Archive sha1sum="c37d1cc73b03b4e30b3f80ee374328178cd6e2b2">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0.1/baselayout-3.0.1.zip</Archive>
             <SourceURI>system/base/baselayout/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -66218,6 +66517,20 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2019-10-10</Date>
+                <Version>3.0.1</Version>
+                <Comment>Fix permissions</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
+            <Update release="4">
+                <Date>2019-10-10</Date>
+                <Version>3.0.1</Version>
+                <Comment>s20 started.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-10-10</Date>
                 <Version>2.14</Version>
@@ -71971,7 +72284,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">coreutils</Dependency>
+                <Dependency release="3">coreutils</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -71983,13 +72296,20 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <IsA>data:doc</IsA>
             <PartOf>system.doc</PartOf>
             <RuntimeDependencies>
-                <Dependency release="2">coreutils</Dependency>
+                <Dependency release="3">coreutils</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="man">/usr/share/man/</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-09-17</Date>
+                <Version>8.31</Version>
+                <Comment>Fix compile bug and remove selinux</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-09-17</Date>
                 <Version>8.31</Version>

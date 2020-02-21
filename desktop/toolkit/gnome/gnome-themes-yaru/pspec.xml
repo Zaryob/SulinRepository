@@ -31,8 +31,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/themes</Path>
+            <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>
 
