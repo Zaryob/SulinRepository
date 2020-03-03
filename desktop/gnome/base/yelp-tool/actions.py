@@ -10,18 +10,8 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    # thanks alpine linux
-    shelltools.system("sed 's|/usr/bin/sh|/bin/sh|' \
-		-i build-aux/compile \
-		-i build-aux/missing \
-		-i build-aux/install-sh \
-		-i build-aux/depcomp \
-		-i build-aux/config.sub \
-		-i build-aux/config.guess")
-    shelltools.system("./configure --prefix=/usr \
-		--sysconfdir=/etc \
-		--mandir=/usr/share/man \
-		--localstatedir=/var")
+    shelltools.system("NOCONFIGURE=1  ./autogen.sh")
+    shelltools.system("./configure --prefix=/usr")
 
 def build():
     autotools.make()

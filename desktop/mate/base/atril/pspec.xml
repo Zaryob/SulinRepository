@@ -32,6 +32,7 @@
             <Dependency>intltool</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>libxml2</Dependency>
+            <Dependency>yelp-tool</Dependency>
             <Dependency>itstool</Dependency>
             <Dependency>webkit2gtk</Dependency>
         </BuildDependencies>

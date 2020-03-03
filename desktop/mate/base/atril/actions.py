@@ -11,12 +11,13 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    shelltools.system("./autogen.sh")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
     autotools.configure("--prefix=/usr \
                          --sysconfdir=/etc \
                          --localstatedir=/var \
                          --disable-static \
                          --disable-rpath \
+                         --disable-caja \
                          --enable-pdf \
                          --enable-tiff \
                          --enable-djvu \
