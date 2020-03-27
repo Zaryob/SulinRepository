@@ -11,10 +11,10 @@ from inary.actionsapi import get
 #WorkDir = "pkg-config-%s" % get.srcVERSION()
 
 def setup():
-    autotools.configure("--with-pc-path=/usr/lib/pkgconfig:/usr/share/pkgconfig")
+    autotools.configure("--with-pc-path=/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/x86_64-pc-linux-gnu/pkgconfig:/usr/local/lib/pkgconfig:/lib/pkgconfig")
 
-def check():
-    autotools.make("check")
+#def check():
+#    autotools.make("check")
 
 def build():
     autotools.make()

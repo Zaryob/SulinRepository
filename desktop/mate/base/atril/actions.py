@@ -14,20 +14,9 @@ def setup():
     shelltools.system("NOCONFIGURE=1 ./autogen.sh")
     autotools.configure("--prefix=/usr \
                          --sysconfdir=/etc \
-                         --localstatedir=/var \
-                         --disable-static \
-                         --disable-rpath \
                          --disable-caja \
-                         --enable-pdf \
-                         --enable-tiff \
-                         --enable-djvu \
-                         --enable-dvi \
-                         --enable-xps \
-                         --enable-t1lib \
-                         --enable-comics \
-                         --enable-pixbuf \
-                         --enable-impress \
-                         --with-gtk=3.0 ")
+                         --localstatedir=/var \
+                         --with-gtk=3.0")
     
     # for fix unused dependency
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")

@@ -1,0 +1,83 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>texlive</Name>
+        <Homepage>http://www.tug.org/texlive</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data:doc</IsA>
+        <Summary>Tex Live binaries</Summary>
+        <Description>Texlive is an essential part of TeXLive component.</Description>
+        <Archive sha1sum="e9936a6f6577e64283aa8484de01878736702016" >https://github.com/TeX-Live/texlive-source/archive/svn54456.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>poppler-devel</Dependency>
+            <Dependency>zziplib-devel</Dependency>
+            <Dependency>gd-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>t1lib-devel</Dependency>
+            <Dependency>ffcall-devel</Dependency>
+            <Dependency>libXaw-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libsigsegv-devel</Dependency>
+            <Dependency>clisp-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch>poppler-84.patch</Patch-->
+            <Patch>poppler-86.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>texlive</Name>
+        <RuntimeDependencies>
+            <Dependency>zziplib</Dependency>
+            <Dependency>gd</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>t1lib</Dependency>
+            <Dependency>ffcall</Dependency>
+            <Dependency>libXaw</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libsigsegv</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <!--Change this after after next upgrade to config-->
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/info</Path>
+            <Path fileType="data">/usr/share/texmf-dist</Path>
+            <Path fileType="data">/usr/share/tlpkg</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="sysconfdir">/etc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>texlive-devel</Name>
+        <Summary>Development files for texlive-bin</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">texlive</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2019.0605</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
