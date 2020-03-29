@@ -1,0 +1,61 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>caja-extensions</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Mate file manager eklentileri</Summary>
+        <Description>caja-extensions, Mate file manager eklentileri.</Description>
+        <Archive sha1sum="5e764db7b55f9af985e4b097e9d9a5af0bb85189">http://pub.mate-desktop.org/releases/1.24/caja-extensions-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+             <Dependency>caja</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>gupnp</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>caja-extensions</Name>
+        <RuntimeDependencies>
+             <Dependency>caja</Dependency> 
+            <Dependency>gtk3</Dependency>
+            <Dependency>gupnp</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/MateConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0/</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	    <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
