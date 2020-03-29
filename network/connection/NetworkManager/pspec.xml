@@ -28,7 +28,7 @@
             <Dependency>libndp-devel</Dependency>
             <Dependency>libmm-glib-devel</Dependency>
             <Dependency>ConsoleKit-devel</Dependency>
-            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>pygobject3</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -101,7 +101,7 @@
     </Package>
 
     <History>
-		<Update release="3">
+	<Update release="3">
             <Date>2020-01-20</Date>
             <Version>1.22.4</Version>
             <Comment>Rebuild.</Comment>

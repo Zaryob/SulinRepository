@@ -1,0 +1,57 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mozo</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>mozo</Icon>
+        <IsA>library</IsA>
+        <Summary>Mozo menu editor for MATE</Summary>
+        <Description>Easy MATE menu editing tool.</Description>
+        <Archive sha1sum="c111723dce1c2c2cb3908a02483598fa62688246" >http://pub.mate-desktop.org/releases/1.24/mozo-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mate-panel</Dependency>
+            <Dependency>pygobject3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mozo</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mate-panel</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>mate-menu-editor</Package>
+        </Replaces>
+        <Conflicts>
+            <Package>mate-menu-editor</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+            <Path fileType="data">/usr/share/mozo</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

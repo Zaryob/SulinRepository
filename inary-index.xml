@@ -22803,6 +22803,74 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libgtop</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">System monitoring library</Summary>
+            <Summary xml:lang="tr">Sistem izleme kitaplığı</Summary>
+            <Description xml:lang="en">libgtop is a library to get system specific data such as CPU and Memory Usage and information about running processes.</Description>
+            <Description xml:lang="tr">libgtop, çalışan süreçler hakkında CPU ve bellek kullanımı gibi sistem bilgisini almak için bir kitaplığıdır.</Description>
+            <Archive sha1sum="5e0cdf1d986ec5d4ce0b244bdcded7de1a93149a">http://ftp.acc.umu.se/pub/gnome/sources/libgtop/2.40/libgtop-2.40.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/libgtop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libgtop</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgtop-docs</Name>
+            <Summary xml:lang="en">libgtop reference documents</Summary>
+            <Summary xml:lang="tr">libgtop başvuru belgeleri</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgtop-devel</Name>
+            <Summary xml:lang="en">Development files for libgtop</Summary>
+            <Summary xml:lang="tr">libgtop için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency release="1">libgtop</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="info">/usr/share/info</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.40.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>glm</Name>
             <Homepage>http://glm.g-truc.net/</Homepage>
             <Packager>
@@ -34794,7 +34862,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <Package>
-            <Name>pygobject3</Name>
+            <Name>python3-pygobject</Name>
             <BuildType>rebuild_python</BuildType>
             <RuntimeDependencies>
                 <Dependency>gobject-introspection</Dependency>
@@ -34809,7 +34877,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>pygobject-devel</Name>
             <Summary xml:lang="en">pygobject development files</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">python-pygobject</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -34998,101 +35065,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2020-02-01</Date>
                 <Version>2.19</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>pygtk2</Name>
-            <Homepage>http://www.pygtk.org</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">GTK+ bindings for Python</Summary>
-            <Description xml:lang="en">python-gtk lets you to easily create programs with a graphical user interface using the Python programming language and GTK+ library.</Description>
-            <Archive sha1sum="95fce378c45e8d5aceb9640bd75ec2c7f4132880">http://ftp.acc.umu.se/pub/gnome/sources/pygtk/2.24/pygtk-2.24.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>pygobject-devel</Dependency>
-                <Dependency>python-numpy</Dependency>
-                <Dependency>python-cairo-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch>fix-leaks-of-pango-objects.patch</Patch>
-                <Patch>python27.patch</Patch>
-            </Patches>
-            <SourceURI>programming/language/python/pygtk2/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>pygtk2</Name>
-            <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>pygtk2-demo</Name>
-            <Summary xml:lang="en">Demo applications for python-gtk</Summary>
-            <IsA>app:gui</IsA>
-            <RuntimeDependencies>
-                <Dependency releaseFrom="1">python-gtk2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/pygtk-demo</Path>
-                <Path fileType="library">/usr/lib/pygtk/2.0/pygtk-demo.py</Path>
-                <Path fileType="data">/usr/lib/pygtk/2.0/demos</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>pygtk2-docs</Name>
-            <Summary xml:lang="en">Reference documents for python-gtk</Summary>
-            <IsA>data:doc</IsA>
-            <RuntimeDependencies>
-                <Dependency releaseFrom="1">python-gtk2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/gtk-doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>pygtk2-devel</Name>
-            <Summary xml:lang="en">Development files for python-gtk</Summary>
-            <RuntimeDependencies>
-                <Dependency release="1">python-gtk2</Dependency>
-                <Dependency>python-pygobject-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/pygtk-codegen-2.0</Path>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/share/pygtk</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-09-15</Date>
-                <Version>2.24.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -35480,7 +35452,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Glib bindings for Python</Summary>
             <Description xml:lang="en">pygobject is GLib&apos;s GObject library bindings for Python.</Description>
-            <Archive type="tarxz" sha1sum="637c131fb54ff0633a92d7f4a8a66612398642ff">http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.34/pygobject-3.34.0.tar.xz</Archive>
+            <Archive sha1sum="637c131fb54ff0633a92d7f4a8a66612398642ff">http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.34/pygobject-3.34.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>python-cairo-devel</Dependency>
                 <Dependency>python3-cairo-devel</Dependency>
@@ -35489,7 +35461,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <SourceURI>programming/language/python/pygobject3/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python-pygobject3</Name>
+            <Name>pygobject3</Name>
             <Summary xml:lang="en">python2 için pygobject3</Summary>
             <RuntimeDependencies>
                 <Dependency>cairo</Dependency>
@@ -35519,8 +35491,6 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>pygobject3-devel</Name>
             <Summary xml:lang="en">pygobject development files</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">python3-pygobject3</Dependency>
-                <Dependency release="1">python-pygobject3</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -35573,7 +35543,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>gst-python3</Name>
             <BuildType>rebuild_python</BuildType>
             <RuntimeDependencies>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>gstreamer</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
             </RuntimeDependencies>
@@ -35586,7 +35556,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Name>gst-python</Name>
             <RuntimeDependencies>
                 <Dependency>python</Dependency>
-                <Dependency>python-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>gstreamer</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
             </RuntimeDependencies>
@@ -35596,6 +35566,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-09</Date>
                 <Version>1.16.2</Version>
@@ -36187,6 +36164,84 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Update release="1">
                 <Date>2020-01-31</Date>
                 <Version>3.0.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>texlive</Name>
+            <Homepage>http://www.tug.org/texlive</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data:doc</IsA>
+            <PartOf>programming</PartOf>
+            <Summary xml:lang="en">Tex Live binaries</Summary>
+            <Description xml:lang="en">Texlive is an essential part of TeXLive component.</Description>
+            <Archive sha1sum="e9936a6f6577e64283aa8484de01878736702016">https://github.com/TeX-Live/texlive-source/archive/svn54456.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>poppler-devel</Dependency>
+                <Dependency>zziplib-devel</Dependency>
+                <Dependency>gd-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>t1lib-devel</Dependency>
+                <Dependency>ffcall-devel</Dependency>
+                <Dependency>libXaw-devel</Dependency>
+                <Dependency>libXmu-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
+                <Dependency>libsigsegv-devel</Dependency>
+                <Dependency>clisp-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>poppler-86.patch</Patch>
+            </Patches>
+            <SourceURI>programming/texlive/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>texlive</Name>
+            <RuntimeDependencies>
+                <Dependency>zziplib</Dependency>
+                <Dependency>gd</Dependency>
+                <Dependency>icu4c</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>t1lib</Dependency>
+                <Dependency>ffcall</Dependency>
+                <Dependency>libXaw</Dependency>
+                <Dependency>libXmu</Dependency>
+                <Dependency>libXpm</Dependency>
+                <Dependency>libsigsegv</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/info</Path>
+                <Path fileType="data">/usr/share/texmf-dist</Path>
+                <Path fileType="data">/usr/share/tlpkg</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="sysconfdir">/etc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>texlive-devel</Name>
+            <Summary xml:lang="en">Development files for texlive-bin</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">texlive</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2019.0605</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -36914,7 +36969,8 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <BuildDependencies>
                 <Dependency>gupnp-devel</Dependency>
                 <Dependency>gssdp-devel</Dependency>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
+                <Dependency>gupnp-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
             <SourceURI>network/analyzer/gupnp-igd/pspec.xml</SourceURI>
@@ -36924,7 +36980,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <RuntimeDependencies>
                 <Dependency>gupnp</Dependency>
                 <Dependency>gssdp</Dependency>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>gobject-introspection</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -36939,7 +36995,7 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             <Summary xml:lang="en">Development files for gupnp-igd</Summary>
             <Summary xml:lang="tr">gupnp-igd için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">gupnp-igd</Dependency>
+                <Dependency release="2">gupnp-igd</Dependency>
                 <Dependency>gupnp-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -36948,6 +37004,13 @@ with perl 5.001, so now is a good time to upgrade if you haven&apos;t already.).
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-09</Date>
+                <Version>0.2.5</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-09</Date>
                 <Version>0.2.5</Version>
@@ -41028,7 +41091,7 @@ functionality to build high-performing, platform-independent programs.</Descript
                 <Dependency>libndp-devel</Dependency>
                 <Dependency>libmm-glib-devel</Dependency>
                 <Dependency>ConsoleKit-devel</Dependency>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
             </BuildDependencies>
             <SourceURI>network/connection/NetworkManager/pspec.xml</SourceURI>
         </Source>
@@ -42136,7 +42199,7 @@ functionality to build high-performing, platform-independent programs.</Descript
                 <Dependency>libusb</Dependency>
                 <Dependency>libgnome-keyring</Dependency>
                 <Dependency>dbus-python3</Dependency>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>cups</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -42166,7 +42229,7 @@ functionality to build high-performing, platform-independent programs.</Descript
             <Name>system-config-printer-gtk</Name>
             <Summary xml:lang="en">GTK+ frontend of system-config-printer</Summary>
             <RuntimeDependencies>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>system-config-printer</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -42179,6 +42242,13 @@ functionality to build high-performing, platform-independent programs.</Descript
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-09</Date>
+                <Version>1.5.12</Version>
+                <Comment>Depndency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2020-01-09</Date>
                 <Version>1.5.12</Version>
@@ -46571,6 +46641,57 @@ functionality to build high-performing, platform-independent programs.</Descript
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>3.34.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>zenity</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome3.base</PartOf>
+            <Summary xml:lang="en">A rewrite of gdialog</Summary>
+            <Summary xml:lang="tr">Gdialog&apos;un yeniden yazılmış hali</Summary>
+            <Description xml:lang="en">Zenity is the GNOME port of dialog which allows you to display dialog boxes from the commandline and shell scripts.</Description>
+            <Description xml:lang="tr">Zenity, komut satırından ve betiklerle iletişim kutuları oluşturmanıza imkan verir. Dialog&apos;un Gnome 3 için yeniden yazılmış halidir.</Description>
+            <Archive sha1sum="cb210b751b513fe800ffd7ab61d473476561ea36">http://ftp.gnome.org/pub/gnome/sources/zenity/3.32/zenity-3.32.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/zenity/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>zenity</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg/menus</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.32.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -52045,6 +52166,425 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mate-sensors-applet</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.extras</PartOf>
+            <Summary xml:lang="en">Display readings from hardware sensors in your MATE panel.</Summary>
+            <Description xml:lang="en">MATE Sensors Applet is an applet for the MATE Panel to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings under Linux.on.</Description>
+            <Archive sha1sum="909a462908abb0b0943be2046d935396a59d65a6">http://pub.mate-desktop.org/releases/1.24/mate-sensors-applet-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>lm_sensors</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/extras/mate-sensors-applet/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-sensors-applet</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>lm_sensors</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libatasmart</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/mate</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="executable">/usr/libexec/</Path>
+                <Path fileType="data">/usr/share/mate-panel</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/mate-sensors-applet</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-icon-theme</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.mate.extras</PartOf>
+            <Summary xml:lang="en">Mate icon theme</Summary>
+            <Summary xml:lang="tr">Mate simge teması</Summary>
+            <Description xml:lang="en">mate-icon-theme package contains the default icon theme used by the Mate desktop.</Description>
+            <Description xml:lang="tr">mate-icon-theme paketi, Mate masaüstü tarafından kullanılan öntanımlı simge temasını içerir.</Description>
+            <Archive sha1sum="41f3ffb47740ff81889dfa523d98eeb76a7ef039">http://pub.mate-desktop.org/releases/1.24/mate-icon-theme-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>mate-common</Dependency>
+                <Dependency>icon-naming-utils</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/extras/mate-icon-theme/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-icon-theme</Name>
+            <RuntimeDependencies>
+                <Dependency>mate-common</Dependency>
+                <Dependency>icon-naming-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/pkgconfig/mate-icon-theme.pc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-screensaver</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.extras</PartOf>
+            <Summary xml:lang="en">Replaces xscreensaver, integrating with the MATE desktop.</Summary>
+            <Summary xml:lang="tr">Replaces xscreensaver, integrating with the MATE desktop.</Summary>
+            <Description xml:lang="en">mate-screensaver, Mate masaüstü için ekrankoruyucu uygulamasıdır.</Description>
+            <Icon>preferences-desktop-screensaver</Icon>
+            <Archive sha1sum="a922ec0731385d5efd3667a7cbbcd8aef9cfc05a">http://pub.mate-desktop.org/releases/1.24/mate-screensaver-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>mate-menus</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libmatekbd</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libXxf86misc</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/extras/mate-screensaver/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-screensaver</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>mate-menus</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libmatekbd</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libXxf86misc</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>dbus-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/</Path>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="executable">/usr/libexec/</Path>
+                <Path fileType="data">/usr/share/backgrounds</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/mate-screensaver</Path>
+                <Path fileType="data">/usr/share/desktop-directories</Path>
+                <Path fileType="data">/usr/share/mate-background-properties</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-themes</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.mate.extras</PartOf>
+            <Summary xml:lang="en">MATE Desktop themes</Summary>
+            <Summary xml:lang="tr">Mate temaları</Summary>
+            <Description xml:lang="en">mate-themes, mate masaüstü temalarını barındırır.</Description>
+            <Description xml:lang="tr">mate-themes, mate masaüstü temalarını barındırır.</Description>
+            <Archive sha1sum="a64ef00f8cc739a2ca519f45bf337a7c75cabb21">http://pub.mate-desktop.org/releases/themes/3.22/mate-themes-3.22.21.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>mate-common</Dependency>
+                <Dependency>gtk-engines</Dependency>
+                <Dependency>mate-icon-theme</Dependency>
+                <Dependency>icon-naming-utils</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gtk2-engines-murrine</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/extras/mate-themes/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-themes</Name>
+            <RuntimeDependencies>
+                <Dependency>mate-common</Dependency>
+                <Dependency>gtk-engines</Dependency>
+                <Dependency>mate-icon-theme</Dependency>
+                <Dependency>icon-naming-utils</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gtk2-engines-murrine</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.22.21</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-backgrounds</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.mate.extras</PartOf>
+            <Summary xml:lang="en">Default wallpapers for the Mate desktop</Summary>
+            <Summary xml:lang="tr">Mate masaüstü için öntanımlı duvar kağıtları</Summary>
+            <Description xml:lang="en">gnome-backgrounds contains default wallpapers for the Mate desktop.</Description>
+            <Description xml:lang="tr">mate-backgrounds, Mate masaüstü için öntanımlı duvar kağıtlarını içerir.</Description>
+            <Archive sha1sum="23b7135ee3fe40a0f1f95dc886d3a8f8e37d9061">http://pub.mate-desktop.org/releases/1.24/mate-backgrounds-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>mate-common</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/extras/mate-backgrounds/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-backgrounds</Name>
+            <RuntimeDependencies>
+                <Dependency>mate-common</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/backgrounds</Path>
+                <Path fileType="doc">/usr/share/mate-background-properties</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-media</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3.0</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">MATE media programs</Summary>
+            <Description xml:lang="en">This package contains a few media utilities for the MATE desktop, including a volume control.</Description>
+            <Icon>multimedia-volume-control</Icon>
+            <Archive sha1sum="f34e2666600260031d04a907de4ca7ddbbe1a61d">http://pub.mate-desktop.org/releases/1.24/mate-media-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>libmatemixer</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-media/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-media</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libmatemixer</Dependency>
+                <Dependency>mate-desktop</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/mate</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/sounds</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/mate-2.0</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/mate-media</Path>
+                <Path fileType="data">/usr/share/mate-panel</Path>
+                <Path fileType="config">/etc/xdg/autostart/</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-menus</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mate Menus</Summary>
+            <Summary xml:lang="tr">Mate menüleri</Summary>
+            <Description xml:lang="en">mate-menus has got desktop-directories, Mate menus library and its python bindings.</Description>
+            <Description xml:lang="tr">mate-menus, Mate masaüstü dizinlerini, kitaplıklarını ve python bağlayıcılarını içerir.</Description>
+            <Archive sha1sum="ae98a05bf3233ceb0abe13f38955d179da7887fe">http://pub.mate-desktop.org/releases/1.24/mate-menus-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>mate-common</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-menus/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-menus</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>python</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/etc/xdg/menus</Path>
+                <Path fileType="data">/usr/share/mate</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/mate-menus</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>mate-common</Name>
             <Homepage>http://www.mate-desktop.org</Homepage>
             <Packager>
@@ -52074,6 +52614,1457 @@ So this nice simple GUI to control the composite manager, the settings are self 
         <History>
             <Update release="1">
                 <Date>2020-03-03</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-polkit</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>app:gui</IsA>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Authentication agent for polkit</Summary>
+            <Summary xml:lang="tr">polkit için kimlik denetim yardımcısı</Summary>
+            <Description xml:lang="en">mate-polkit package provides an authentication agent for polkit that integrates well with the Mate desktop environment.</Description>
+            <Description xml:lang="tr">mate-polkit paketi Mate masaüstü ortamı ile bütünleşmiş bir kimlik denetim yardımcısı sağlar.</Description>
+            <Archive sha1sum="8e5a6dbb7de917e7383c778036acc3e9d7699e00">http://pub.mate-desktop.org/releases/1.24/mate-polkit-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-polkit/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-polkit</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="config">/etc/xdg/autostart</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-user-share</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">User level public file sharing via WebDAV or ObexFTP</Summary>
+            <Description xml:lang="en">mate-user-share is a small package that binds together various free software projects to bring easy to use user-level file sharing to the masses.</Description>
+            <Icon>mate-file-share-properties</Icon>
+            <Archive sha1sum="e77bafdc7ace525ae0af4c1b9c2ebeb8761bc12d">http://pub.mate-desktop.org/releases/1.24/mate-user-share-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>caja</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libcanberra</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-user-share/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-user-share</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>caja</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="config">/etc/xdg/autostart</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-settings-daemon</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>service</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">System settings daemon for MATE desktop</Summary>
+            <Description xml:lang="en">gnome-settings-daemon shares MATE specific settings with other applications via DBus connection.</Description>
+            <Archive sha1sum="8b9e18c1760c64b23cfaeb3e766b7a5428b7159b">http://pub.mate-desktop.org/releases/1.24/mate-settings-daemon-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libmatekbd</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libXxf86misc</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libmatemixer</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-settings-daemon/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-settings-daemon</Name>
+            <RuntimeDependencies>
+                <Dependency>nss</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libmatekbd</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libXxf86misc</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libmatemixer</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libXau</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>nspr</Dependency>
+                <Dependency>polkit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man/</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>eye-of-mate</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Eye of MATE, an image viewer for MATE</Summary>
+            <Description xml:lang="en">This is the Eye of MATE, an image viewer program.  It is meant to be a fast and functional image viewer.</Description>
+            <Icon>eyeofmate</Icon>
+            <Archive sha1sum="01e9d07377580f29494c7bbd3376e7351eb8b0eb">http://pub.mate-desktop.org/releases/1.24/eom-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>yelp-tool</Dependency>
+                <Dependency>libpeas-devel</Dependency>
+                <Dependency>libexif-devel</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/eye-of-mate/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>eye-of-mate</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libpeas</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="header">/usr/include/</Path>
+                <Path fileType="library">/usr/lib/pkgconfig/</Path>
+                <Path fileType="data">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-desktop</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Basic Mate libraries and dialogs</Summary>
+            <Summary xml:lang="tr">Mate masaüstü</Summary>
+            <Description xml:lang="en">mate-desktop contains basic Mate libraries and information applications.</Description>
+            <Description xml:lang="tr">mate-desktop, Mate kullanıcı ortamının paylaşımlı bileşenlerini içeren temel pakettir.</Description>
+            <Icon>desktop</Icon>
+            <Archive sha1sum="2adce91cd287c8b6adca93184f48b700a9102551 ">http://pub.mate-desktop.org/releases/1.24/mate-desktop-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>docbook-xsl</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libxslt</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-desktop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-desktop</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/mate-about</Path>
+                <Path fileType="data">/usr/share/backgrounds</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.18.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>caja</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Default file manager for the Mate desktop.</Summary>
+            <Summary xml:lang="tr">Mate masasütü için öntanımlı dosya yöneticisi</Summary>
+            <Description xml:lang="en">Caja is a file manager that allows to browse directories, preview files and launch applications.</Description>
+            <Description xml:lang="tr">Caja; dizinlerde gezinmeyi, dosyaları gözatmayı ve uygulamalar başlatmayı sağlayan bir dosya yöneticisidir.</Description>
+            <Icon>system-file-manager</Icon>
+            <Archive sha1sum="10c7776813e7fc2ec64c5e7b4cb2dc0c0caecfca">http://pub.mate-desktop.org/releases/1.24/caja-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>shared-mime-info</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libnotify</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/caja/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>caja</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>libXt</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="data">/usr/share/caja</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libmatekbd</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">GNOME keybord configration library</Summary>
+            <Summary xml:lang="tr">Mate klavye kontrol kütüphanesi</Summary>
+            <Description xml:lang="en">libgnomekbd contains a GNOME library that manages keyboard layout settings and its panel applet.</Description>
+            <Description xml:lang="tr">Bu paket klavye ayarlarını yöneten bir Mate kütüphanesi ve onun panel programcığını içerir.</Description>
+            <Archive sha1sum="8783c1ad9ce67ab659b98be25f9e3054be323c73">http://pub.mate-desktop.org/releases/1.24/libmatekbd-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxklavier-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/libmatekbd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libmatekbd</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/libmatekbd</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="config">/etc/mateconf/schemas/</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/libmatekbd</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-control-center</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">The MATE Desktop configuration tool</Summary>
+            <Summary xml:lang="tr">Mate yapılandırma araçları</Summary>
+            <Description xml:lang="en">mate-control-center is Mate&apos;s main interface for configuration of various aspects of your Mate desktop.</Description>
+            <Description xml:lang="tr">mate-control-center Mate masaüstünüzün çeşitli ayarlarını değiştiren, Mate&apos;in ana arayüzüdür.</Description>
+            <Icon>preferences-desktop</Icon>
+            <Archive sha1sum="2858d4c306aa286f90ff9235e4f223b29e28dea8">http://pub.mate-desktop.org/releases/1.24/mate-control-center-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>marco</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libXft</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>mate-menus</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libmatekbd</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libXScrnSaver-devel</Dependency>
+                <Dependency>mate-settings-daemon</Dependency>
+                <Dependency>itstool</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-control-center/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-control-center</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>marco</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>mate-menus</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libmatekbd</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>dbus-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="data">/usr/share/mate</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="config">/etc/xdg/menus</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-power-manager</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mate için güç yöneticisi</Summary>
+            <Summary xml:lang="tr">Mate için güç yöneticisi</Summary>
+            <Description xml:lang="en">Power management tool for the MATE desktop.</Description>
+            <Icon>mate-power-manager</Icon>
+            <Archive sha1sum="2751c86fb687379594e9a3c78c270ac348f7a8e8">http://pub.mate-desktop.org/releases/1.24/mate-power-manager-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>upower</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libgnome-keyring</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-power-manager/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-power-manager</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>upower</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libgnome-keyring</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>dbus-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="data">/usr/share/mate*</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="config">/etc/xdg/autostart/</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libmateweather</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">libmateweather</Summary>
+            <Summary xml:lang="tr">libmateweather</Summary>
+            <Description xml:lang="en">libmateweather is a collection of documentation utilities for the Mate project.</Description>
+            <Description xml:lang="tr">libmateweather Mate Projesi&apos;nin bir parçasıdır.</Description>
+            <Archive sha1sum="5611060b5f9b9d2f3152df9dff1b0ed1e5920084">http://pub.mate-desktop.org/releases/1.24/libmateweather-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/libmateweather/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libmateweather</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libxml2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/libmateweather</Path>
+                <Path fileType="library">/usr/lib/libmateweather*</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/libmateweather/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-notification-daemon</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mate notification daemon</Summary>
+            <Summary xml:lang="tr">Mate masaüstü bilgilendirme hizmeti</Summary>
+            <Description xml:lang="en">mate-notification-daemon is the server implementation of the Mate desktop notification specification.</Description>
+            <Description xml:lang="tr">mate-notification-daemon Mate projesinin masaüstü bilgilendirme hizmeti uygulamasını içerir.</Description>
+            <Icon>mate-notification-properties</Icon>
+            <Archive sha1sum="c4db46e013375fb6d2a9144637b59281cdd8d7be">http://pub.mate-desktop.org/releases/1.24/mate-notification-daemon-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libwnck2</Dependency>
+                <Dependency>libwnck2</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>mate-desktop</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-notification-daemon/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-notification-daemon</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libwnck2</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>dbus-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man/</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-session-manager</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">MATE Session Manager</Summary>
+            <Description xml:lang="en">MATE session manager, as well as a configuration program to choose applications starting on login.</Description>
+            <Icon>mate-session-properties</Icon>
+            <Archive sha1sum="1dbe592fb0cf89bb40d2ae37a43bd87293da8700">http://pub.mate-desktop.org/releases/1.24/mate-session-manager-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>upower-devel</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>mate-polkit</Dependency>
+                <Dependency>mate-control-center</Dependency>
+                <Dependency>mate-settings-daemon</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-session-manager/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-session-manager</Name>
+            <RuntimeDependencies>
+                <Dependency>dbus</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libXau</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/xsessions</Path>
+                <Path fileType="data">/usr/share/glib-2.0/</Path>
+                <Path fileType="data">/usr/share/mate-session</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/mate-session-manager/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>marco</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">GTK+ based window manager</Summary>
+            <Summary xml:lang="tr">GTK+ tabanlı pencere yöneticisi</Summary>
+            <Description xml:lang="en">Marco is a small window manager, using GTK+ to do everything.</Description>
+            <Description xml:lang="tr">Marco herşeyi yapmak için GTK+ kullanan, küçük bir pencere yöneticisidir.</Description>
+            <Archive sha1sum="f1516aec99aebba177a5fc223e6816015eea18d9">http://pub.mate-desktop.org/releases/1.24/marco-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>itstool</Dependency>
+                <Dependency>zenity</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/marco/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>marco</Name>
+            <RuntimeDependencies>
+                <Dependency>zenity</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/mate</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/marco</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/mate-control-center</Path>
+                <Path fileType="data">/usr/share/applications/marco.desktop</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>engrampa</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Engrampa is an archive manager for the MATE environment.</Summary>
+            <Description xml:lang="en">Engrampa is an archive manager for the MATE environment.  This means that you can create and modify archives; view the content of an archive; view and modify a file contained in the archive; extract files from the archive.</Description>
+            <Icon>engrampa</Icon>
+            <Archive sha1sum="280ea32001e31b16d968ddc84d26f7cf26ec7880">http://pub.mate-desktop.org/releases/1.24/engrampa-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>caja</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>caja</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>json-glib</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/engrampa/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>engrampa</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>caja</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>json-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/mate</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-netbook</Name>
+            <Homepage>http://mate-desktop.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Basit bir pencere yönetim aracı</Summary>
+            <Summary xml:lang="tr">Basit bir pencere yönetim aracı</Summary>
+            <Description xml:lang="en">A simple window management tool.</Description>
+            <Description xml:lang="tr">Basit bir pencere yönetim aracı uygulaması.</Description>
+            <Icon>mate-netbook</Icon>
+            <Archive sha1sum="de13d9637fa77d53e4a6783ca13296bde1135c0c">http://pub.mate-desktop.org/releases/1.24/mate-netbook-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libfakekey</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>libfakekey-devel</Dependency>
+                <Dependency>perl-XML-Parser</Dependency>
+                <Dependency>mate-desktop</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-netbook/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-netbook</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libfakekey</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="excutable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/MateConf</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="config">/etc/xdg/autostart</Path>
+                <Path fileType="data">/usr/share/mate-panel</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="excutable">/usr/lib/mate-netbook</Path>
+                <Path fileType="data">/usr/libexec/mate-window-picker-applet</Path>
+                <Path fileType="man">/usr/share/man/man1/mate-maximus.1</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-calc</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <License>GPLv2+</License>
+            <License>LGPLv2+</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Calculator for the Mate desktop environment</Summary>
+            <Description xml:lang="en">mate-calc, Mate masaüstü için hesap makinesi.</Description>
+            <Icon>desktop</Icon>
+            <Archive sha1sum="1e6f3dcd35af785d598230e4bc4908f4b5d80890">http://pub.mate-desktop.org/releases/1.24/mate-calc-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libxslt</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-calc/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-calc</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="bin">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/mate-calc</Path>
+                <Path fileType="data">/usr/share/appdata/</Path>
+                <Path fileType="data">/usr/share/metainfo/</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pluma</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mate metin editörü</Summary>
+            <Description xml:lang="en">mate masaüstü için metin editörü.</Description>
+            <Icon>accessories-text-editor</Icon>
+            <Archive sha1sum="29c15838e1d64930527f7234c75cb2ecd1af854e">http://pub.mate-desktop.org/releases/1.24/pluma-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>enchant-devel</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtksourceview</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/pluma/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pluma</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>enchant</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+                <Dependency>libpeas</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="executable">/usr/libexec/</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="header">/usr/include/pluma</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/gtk-doc/html/pluma/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-applets</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Applets for MATE panel (GTK3 version</Summary>
+            <Description xml:lang="en">Applets for MATE panel (GTK3 version</Description>
+            <Archive sha1sum="e825765a4a9087b9e36fd8c564838e052f05d495">http://pub.mate-desktop.org/releases/1.24/mate-applets-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtksourceview</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>mate-common</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-applets/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-applets</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>upower</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>gtksourceview3</Dependency>
+                <Dependency>libmateweather</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc/</Path>
+                <Path fileType="exectuable">/usr/bin/</Path>
+                <Path fileType="library">/usr/lib/</Path>
+                <Path fileType="data">/usr/share/*</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>caja-extensions</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mate file manager eklentileri</Summary>
+            <Summary xml:lang="tr">Caja eklentileri</Summary>
+            <Description xml:lang="en">caja-extensions, Mate file manager eklentileri.</Description>
+            <Description xml:lang="tr">caja-extensions, Caja eklentileri.</Description>
+            <Archive sha1sum="5e764db7b55f9af985e4b097e9d9a5af0bb85189">http://pub.mate-desktop.org/releases/1.24/caja-extensions-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>caja</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>gupnp</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/caja-extensions/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>caja-extensions</Name>
+            <RuntimeDependencies>
+                <Dependency>caja</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gupnp</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/usr/share/MateConf</Path>
+                <Path fileType="data">/usr/share/glib-2.0/</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/gtk-doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libmatemixer</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPL</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mixer library for MATE Desktop</Summary>
+            <Description xml:lang="en">Mixer library for MATE Desktop</Description>
+            <Archive sha1sum="e972bc0101ad299a264abb810035de275b415962">http://pub.mate-desktop.org/releases/1.24/libmatemixer-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxklavier</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/libmatemixer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libmatemixer</Name>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/libmatekbd</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="config">/etc/mateconf/schemas/</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mozo</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mozo menu editor for MATE</Summary>
+            <Description xml:lang="en">Easy MATE menu editing tool.</Description>
+            <Icon>mozo</Icon>
+            <Archive sha1sum="c111723dce1c2c2cb3908a02483598fa62688246">http://pub.mate-desktop.org/releases/1.24/mozo-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mate-panel</Dependency>
+                <Dependency>pygobject3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mozo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mozo</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mate-panel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man/</Path>
+                <Path fileType="data">/usr/share/mozo</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+            </Files>
+            <Conflicts>
+                <Package>mate-menu-editor</Package>
+            </Conflicts>
+            <Replaces>
+                <Package>mate-menu-editor</Package>
+            </Replaces>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
                 <Version>1.24.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
@@ -52117,6 +54108,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>yelp-tool</Dependency>
                 <Dependency>itstool</Dependency>
                 <Dependency>webkit2gtk</Dependency>
+                <Dependency>poppler-glib-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/mate/base/atril/pspec.xml</SourceURI>
         </Source>
@@ -52142,6 +54134,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>libxml2</Dependency>
                 <Dependency>libX11</Dependency>
                 <Dependency>webkit2gtk</Dependency>
+                <Dependency>poppler-glib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -52155,6 +54148,271 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="config">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-terminal</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">MATE terminal emulator application</Summary>
+            <Description xml:lang="en">mate-terminal, masaüstü için terminal uygulaması.</Description>
+            <Description xml:lang="tr">mate-terminal, masaüstü için terminal uygulaması.</Description>
+            <Icon>utilities-terminal</Icon>
+            <Archive sha1sum="1d9c6dadd385f47029fecd54c46c866bbd9ea38e">http://pub.mate-desktop.org/releases/1.24/mate-terminal-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>vte3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-terminal/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-terminal</Name>
+            <RuntimeDependencies>
+                <Dependency>libX11</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>vte3</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/mate-terminal</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-system-monitor</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Process and resource monitor</Summary>
+            <Description xml:lang="en">Process viewer and system resource monitor for MATE</Description>
+            <Icon>utilities-system-monitor</Icon>
+            <Archive sha1sum="0b3d620de4272228a2f5bdb781634516d4b26b7b">http://pub.mate-desktop.org/releases/1.24/mate-system-monitor-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>atkmm</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libsigc2++</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtkmm3</Dependency>
+                <Dependency>libgtop</Dependency>
+                <Dependency>libwnck3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-system-monitor/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-system-monitor</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libgtop</Dependency>
+                <Dependency>libsigc2++</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtkmm3</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="lib">/usr/libexec/mate-system-monitor/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>caja-dropbox</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">Mate file manager eklentileri</Summary>
+            <Description xml:lang="en">caja-extensions, Mate file manager eklentileri.</Description>
+            <Archive sha1sum="d677c20e7188c27494b4adf0031fa3dc9d944842">http://pub.mate-desktop.org/releases/1.24/caja-dropbox-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>caja</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>gupnp</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/caja-dropbox/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>caja-dropbox</Name>
+            <RuntimeDependencies>
+                <Dependency>caja</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/usr/share/MateConf</Path>
+                <Path fileType="data">/usr/share/glib-2.0/</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="doc">/usr/share/gtk-doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mate-panel</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.mate.base</PartOf>
+            <Summary xml:lang="en">GNOME panel</Summary>
+            <Summary xml:lang="tr">Mate paneli</Summary>
+            <Description xml:lang="en">GNOME panel is located in the edge of screen that provides contains widgets such as application launcher, cpu monitor and workspace switcher.</Description>
+            <Description xml:lang="tr">Mate paneli ekranın kenarlarında bulunur ve  programcıkları (işlemci yükü, program başlatıcısı, çalışma alanı değiştiricisi gibi) barındırmayı sağlar.</Description>
+            <Icon>mate-panel</Icon>
+            <Archive sha1sum="17db32d5a2d56eebd32360ec9fa21a62b554c7fc">http://pub.mate-desktop.org/releases/1.24/mate-panel-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>mate-common</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>mate-menus</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libmateweather</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/mate/base/mate-panel/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mate-panel</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>mate-menus</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>mate-desktop</Dependency>
+                <Dependency>libmateweather</Dependency>
+                <Dependency>dbus-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="executable">/usr/libexec/</Path>
+                <Path fileType="data">/usr/share/mate-panel</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
                 <Path fileType="data">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
@@ -52757,7 +55015,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>gnome-common</Dependency>
                 <Dependency>pango-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>docbook-xml</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/glade/pspec.xml</SourceURI>
@@ -52768,7 +55026,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>gtk3</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>gobject-introspection</Dependency>
-                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>pygobject3</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>cairo</Dependency>
             </RuntimeDependencies>
@@ -52788,7 +55046,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Glade development files</Summary>
             <IsA>library</IsA>
             <RuntimeDependencies>
-                <Dependency releaseFrom="1">glade</Dependency>
+                <Dependency releaseFrom="2">glade</Dependency>
                 <Dependency>gtk3-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -52801,7 +55059,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Glade reference documents</Summary>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency releaseFrom="1">glade</Dependency>
+                <Dependency releaseFrom="2">glade</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/help</Path>
@@ -52810,6 +55068,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-09-14</Date>
+                <Version>3.8.6</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-09-14</Date>
                 <Version>3.8.6</Version>
@@ -54044,6 +56309,80 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>2.20.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libpeas</Name>
+            <Homepage>https://live.gnome.org/Libpeas</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">A gobject-based plugins engine</Summary>
+            <Summary xml:lang="tr">Gobject tabanlı eklenti motoru</Summary>
+            <Description xml:lang="en">libpeas is a gobject-based plugins engine, and is targetted at giving every application the chance to assume its own extensibility.</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Archive sha1sum="076daf5334f344a81b4c6e98751cbb61195eabc3">https://download.gnome.org/sources/libpeas/1.26/libpeas-1.26.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>pygobject-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/libpeas/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libpeas</Name>
+            <RuntimeDependencies>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>fontconfig</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libpeas-devel</Name>
+            <RuntimeDependencies>
+                <Dependency versionFrom="1.26.0">libpeas</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.26.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -60472,6 +62811,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Files>
         </Package>
         <History>
+            <Update release="1">
+                <Date>2020-03-27</Date>
+                <Version>0.29.2</Version>
+                <Comment>local support added.</Comment>
+                <Name>Süleyman POYRAZ</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2018-12-28</Date>
                 <Version>0.29.2</Version>
@@ -75830,6 +78176,458 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Update>
         </History>
     </SpecFile>
+    <Package>
+        <Name>engrampa</Name>
+        <Summary xml:lang="en">Engrampa is an archive manager for the MATE environment.</Summary>
+        <Description xml:lang="en">Engrampa is an archive manager for the MATE environment.  This means that you can create and modify archives; view the content of an archive; view and modify a file contained in the archive; extract files from the archive.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.mate.base</PartOf>
+        <License>GPLv3</License>
+        <Icon>engrampa</Icon>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>caja</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>json-glib</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>13646443</InstalledSize>
+        <PackageSize>1104936</PackageSize>
+        <PackageHash>dec5726b20ec082b7b2c37333150ce293cff7787</PackageHash>
+        <InstallTarHash>b7d55bb44bc03a2be468d75e1871b1f980788e2e</InstallTarHash>
+        <PackageURI>desktop/mate/base/engrampa/engrampa-1.24.0-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>engrampa</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>engrampa-dbginfo</Name>
+        <Summary xml:lang="en">Debug files for engrampa</Summary>
+        <Description xml:lang="en">Debug files for engrampa</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>dbginfo</PartOf>
+        <License>GPLv3</License>
+        <Icon>engrampa</Icon>
+        <RuntimeDependencies>
+            <Dependency release="1">engrampa</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>41600</InstalledSize>
+        <PackageSize>15951</PackageSize>
+        <PackageHash>63436299726a8dbc163004dd15f0a9203e74362d</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>desktop/mate/base/engrampa/engrampa-dbginfo-1.24.0-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>engrampa</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mate-panel</Name>
+        <Summary xml:lang="en">GNOME panel</Summary>
+        <Summary xml:lang="tr">Mate paneli</Summary>
+        <Description xml:lang="en">GNOME panel is located in the edge of screen that provides contains widgets such as application launcher, cpu monitor and workspace switcher.</Description>
+        <Description xml:lang="tr">Mate paneli ekranın kenarlarında bulunur ve  programcıkları (işlemci yükü, program başlatıcısı, çalışma alanı değiştiricisi gibi) barındırmayı sağlar.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.mate.base</PartOf>
+        <License>GPLv2</License>
+        <Icon>mate-panel</Icon>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>mate-menus</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libmateweather</Dependency>
+            <Dependency>dbus-glib</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>14680006</InstalledSize>
+        <PackageSize>1762026</PackageSize>
+        <PackageHash>16b213af1b4d964924ca655642613673305d2e46</PackageHash>
+        <InstallTarHash>58c723a3a1f7f65297845adfa5fe3f444a4de4b8</InstallTarHash>
+        <PackageURI>desktop/mate/base/mate-panel/mate-panel-1.24.0-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mate-panel</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mate-panel-dbginfo</Name>
+        <Summary xml:lang="en">Debug files for mate-panel</Summary>
+        <Description xml:lang="en">Debug files for mate-panel</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>dbginfo</PartOf>
+        <License>GPLv2</License>
+        <Icon>mate-panel</Icon>
+        <RuntimeDependencies>
+            <Dependency release="1">mate-panel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.24.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>255048</InstalledSize>
+        <PackageSize>75168</PackageSize>
+        <PackageHash>78a008bf35988b663b5cd12fad89fcc50bf056ba</PackageHash>
+        <InstallTarHash>4e1ad912f8e0baeff82787a17eaacf7e6abfc55b</InstallTarHash>
+        <PackageURI>desktop/mate/base/mate-panel/mate-panel-dbginfo-1.24.0-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mate-panel</Name>
+            <Homepage>http://www.mate-desktop.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gst-python3</Name>
+        <Summary xml:lang="en">GStreamer Python3 bindings</Summary>
+        <Summary xml:lang="tr">GStreamer Python bağlayıcıları</Summary>
+        <Description xml:lang="en">gst-python3 is a Python frontend to GStreamer.</Description>
+        <Description xml:lang="tr">gst-python3 GStreamer için Python arabirimidir.</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>pygobject3</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>73172</InstalledSize>
+        <PackageSize>17242</PackageSize>
+        <PackageHash>e1318f8a0ec6171666571b7099a128739c1174a6</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/python/gst-python/gst-python3-1.16.2-2-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gst-python3</Name>
+            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gst-python3-dbginfo</Name>
+        <Summary xml:lang="en">Debug files for gst-python3</Summary>
+        <Description xml:lang="en">Debug files for gst-python3</Description>
+        <IsA>library</IsA>
+        <PartOf>dbginfo</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency release="2">gst-python3</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>87256</InstalledSize>
+        <PackageSize>31209</PackageSize>
+        <PackageHash>985bd211ce71cc5548a342922c3c39b02fedb157</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/python/gst-python/gst-python3-dbginfo-1.16.2-2-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gst-python3</Name>
+            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gst-python</Name>
+        <Summary xml:lang="en">GStreamer Python3 bindings</Summary>
+        <Summary xml:lang="tr">GStreamer Python bağlayıcıları</Summary>
+        <Description xml:lang="en">gst-python3 is a Python frontend to GStreamer.</Description>
+        <Description xml:lang="tr">gst-python3 GStreamer için Python arabirimidir.</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>pygobject3</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>72796</InstalledSize>
+        <PackageSize>17127</PackageSize>
+        <PackageHash>fed3db52a040ce499fedf2b85855d807e2c046fb</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/python/gst-python/gst-python-1.16.2-2-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gst-python3</Name>
+            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gst-python-dbginfo</Name>
+        <Summary xml:lang="en">Debug files for gst-python</Summary>
+        <Description xml:lang="en">Debug files for gst-python</Description>
+        <IsA>library</IsA>
+        <PartOf>dbginfo</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency release="2">gst-python</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>Dependency fix</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-12-09</Date>
+                <Version>1.16.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>77320</InstalledSize>
+        <PackageSize>27908</PackageSize>
+        <PackageHash>61a85ebb57a0ba69a1978d06762a06b6fa8f089e</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/language/python/gst-python/gst-python-dbginfo-1.16.2-2-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gst-python3</Name>
+            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>texlive-devel</Name>
+        <Summary xml:lang="en">Development files for texlive-bin</Summary>
+        <Description xml:lang="en">Texlive is an essential part of TeXLive component.</Description>
+        <IsA>data:doc</IsA>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency release="1">texlive</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2019.0605</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>252042</InstalledSize>
+        <PackageSize>54055</PackageSize>
+        <PackageHash>4832c900b8dc112220d67da6c039746067e17c8b</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>programming/texlive/texlive-devel-2019.0605-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>texlive</Name>
+            <Homepage>http://www.tug.org/texlive</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>texlive</Name>
+        <Summary xml:lang="en">Tex Live binaries</Summary>
+        <Description xml:lang="en">Texlive is an essential part of TeXLive component.</Description>
+        <IsA>data:doc</IsA>
+        <PartOf>programming</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>zziplib</Dependency>
+            <Dependency>gd</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>t1lib</Dependency>
+            <Dependency>ffcall</Dependency>
+            <Dependency>libXaw</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libsigsegv</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2019.0605</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>Sulin</Distribution>
+        <DistributionRelease>2019</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>170482853</InstalledSize>
+        <PackageSize>28411771</PackageSize>
+        <PackageHash>a2a1db96116a04e56083643e97f7f90f647b36b6</PackageHash>
+        <InstallTarHash>18715e40fbd99357fbe565692f6b41f9c8c3a37f</InstallTarHash>
+        <PackageURI>programming/texlive/texlive-2019.0605-1-s19-x86_64.inary</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>texlive</Name>
+            <Homepage>http://www.tug.org/texlive</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
     <Component>
         <Name>system</Name>
         <LocalName xml:lang="en">system</LocalName>
