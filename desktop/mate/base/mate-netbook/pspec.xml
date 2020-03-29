@@ -1,0 +1,72 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-netbook</Name>
+        <Homepage>http://mate-desktop.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>mate-netbook</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Basit bir pencere yönetim aracı</Summary>
+        <Description>Basit bir pencere yönetim aracı uygulaması.</Description>
+        <Archive sha1sum="de13d9637fa77d53e4a6783ca13296bde1135c0c" >http://pub.mate-desktop.org/releases/1.24/mate-netbook-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>mate-common</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>libfakekey</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-panel</Dependency>
+            <Dependency>libfakekey-devel</Dependency>
+            <Dependency>perl-XML-Parser</Dependency>
+            <Dependency>mate-desktop</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-netbook</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libfakekey</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-panel</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="excutable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/MateConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="config">/etc/xdg/autostart</Path>
+            <Path fileType="data">/usr/share/mate-panel</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="excutable">/usr/lib/mate-netbook</Path>
+            <Path fileType="data">/usr/libexec/mate-window-picker-applet</Path>
+            <Path fileType="man">/usr/share/man/man1/mate-maximus.1</Path>
+        </Files>
+    </Package>
+
+    <History>
+         <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

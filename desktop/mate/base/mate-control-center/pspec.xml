@@ -1,0 +1,98 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-control-center</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <Icon>preferences-desktop</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>The MATE Desktop configuration tool</Summary>
+        <Description>mate-control-center is Mate's main interface for configuration of various aspects of your Mate desktop.</Description>
+        <Archive sha1sum="2858d4c306aa286f90ff9235e4f223b29e28dea8">http://pub.mate-desktop.org/releases/1.24/mate-control-center-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>marco</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>mate-menus</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libmatekbd</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>mate-settings-daemon</Dependency>
+            <Dependency>itstool</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-control-center</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>marco</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>mate-menus</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libmatekbd</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>dbus-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/mate</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="config">/etc/xdg/menus</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	   <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

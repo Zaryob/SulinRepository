@@ -12,9 +12,17 @@ from inary.actionsapi import get
 
 def setup():
     shelltools.system("NOCONFIGURE=1 ./autogen.sh")
-    shelltools.system(" ./configure --prefix=/usr --sysconfdir=/etc \
+    if get.buildTYPE != "emul32":
+        shelltools.system(" ./configure --prefix=/usr --sysconfdir=/etc \
                           --libdir=/usr/lib \
                           --enable-svgz --disable-gtk-doc")
+    else:
+        shelltools.export("PKG_CONFIG","i686-pc-linux-gnu-pkg-config")
+        shelltools.export("RUST_TARGET","i686-unknown-linux-gnu")
+        shelltools.system(" ./configure --prefix=/usr --sysconfdir=/etc \
+                          --libdir=/usr/lib32 \
+                          --enable-svgz --disable-gtk-doc\
+                          --build=i686-pc-linux-gnu --host=i686-pc-linux-gnu")
        
 def build():
     autotools.make()

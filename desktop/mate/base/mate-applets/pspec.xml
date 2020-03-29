@@ -1,0 +1,61 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-applets</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>data</IsA>
+        <Summary>Applets for MATE panel (GTK3 version</Summary>
+        <Description>Applets for MATE panel (GTK3 version</Description>
+	<Archive sha1sum="e825765a4a9087b9e36fd8c564838e052f05d495">http://pub.mate-desktop.org/releases/1.24/mate-applets-1.24.0.tar.xz</Archive>
+	    <BuildDependencies>
+             <Dependency>gtksourceview</Dependency>
+             <Dependency>mate-panel</Dependency>
+             <Dependency>mate-common</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-applets</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-panel</Dependency>
+            <Dependency>gtksourceview3</Dependency>
+            <Dependency>libmateweather</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc/</Path>
+            <Path fileType="exectuable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/*</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+        </Files>
+    </Package>
+
+    <History>
+	   <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

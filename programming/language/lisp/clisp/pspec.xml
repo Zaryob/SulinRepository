@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>clisp</Name>
+        <Homepage>http://clisp.cons.org/</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>An ANSI Common Lisp Implementation</Summary>
+        <Description>ANSI Common Lisp is a high-level, general-purpose programming language.</Description>
+        <Archive sha1sum="1743e7917013162400c955af441e991db43b3323" >https://ftp.gnu.org/pub/gnu/clisp/latest/clisp-2.49.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libsigsegv</Dependency>
+            <Dependency>ffcall-devel</Dependency>
+        </BuildDependencies>
+    <Patches>
+        <Patch>fix-bug688.diff</Patch>
+    </Patches>
+    </Source>
+
+    <Package>
+        <Name>clisp</Name>
+        <RuntimeDependencies>
+            <Dependency>libsigsegv</Dependency>
+            <Dependency>ffcall</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/vim</Path>
+            <Path fileType="data">/usr/share/emacs</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>clisp-devel</Name>
+        <Summary>Development files for clisp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">clisp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2020-03-16</Date>
+            <Version>2.49</Version>
+            <Comment>First release.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</PISI>

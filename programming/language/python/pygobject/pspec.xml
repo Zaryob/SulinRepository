@@ -37,7 +37,7 @@
         </Files>
     </Package>
     <Package>
-        <Name>pygobject3</Name>
+        <Name>python3-pygobject</Name>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
             <Dependency>gobject-introspection</Dependency>
@@ -52,7 +52,6 @@
         <Name>pygobject-devel</Name>
         <Summary>pygobject development files</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">python-pygobject</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -74,7 +73,7 @@
     </Package>
 
     <History>
-		<Update release="2">
+	<Update release="2">
             <Date>2020-02-01</Date>
             <Version>2.28.6</Version>
             <Comment>fix package name</Comment>

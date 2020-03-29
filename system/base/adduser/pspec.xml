@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>adduser script</Summary>
         <Description>adduser for SulinOS.</Description>
-        <Archive sha1sum="29893ef0cdfcc6abe9bea7c5823b487b7b1d4d02" type="binary" >https://gitlab.com/sulinos/devel/sulin-tools/-/raw/master/adduser</Archive>
+        <Archive sha1sum="e6a052b915d03c48d4016f1e1a9b79d070a1ca3f" type="binary" >https://gitlab.com/sulinos/devel/sulin-tools/-/raw/master/adduser</Archive>
     </Source>
 
     <Package>
@@ -24,7 +24,13 @@
     </Package>
 
     <History>
-
+        <Update release="2">
+            <Date>2020-01-28</Date>
+            <Version>1.1</Version>
+            <Comment>Rewrite script</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-28</Date>
             <Version>1.0</Version>

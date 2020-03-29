@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Glib bindings for Python</Summary>
         <Description>pygobject is GLib's GObject library bindings for Python.</Description>
-        <Archive sha1sum="637c131fb54ff0633a92d7f4a8a66612398642ff" type="tarxz">http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.34/pygobject-3.34.0.tar.xz</Archive>
+        <Archive sha1sum="637c131fb54ff0633a92d7f4a8a66612398642ff">http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.34/pygobject-3.34.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>python-cairo-devel</Dependency>
             <Dependency>python3-cairo-devel</Dependency>
@@ -21,7 +21,7 @@
     </Source>
 
     <Package>
-        <Name>python-pygobject3</Name>
+        <Name>pygobject3</Name>
         <Summary>python2 için pygobject3</Summary>
         <RuntimeDependencies>
             <Dependency>cairo</Dependency>
@@ -51,8 +51,6 @@
         <Name>pygobject3-devel</Name>
         <Summary>pygobject development files</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">python3-pygobject3</Dependency>
-            <Dependency release="current">python-pygobject3</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </RuntimeDependencies>
         <Files>

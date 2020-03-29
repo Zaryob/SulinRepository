@@ -1,0 +1,34 @@
+ Makefile.am  | 2 --
+ configure.ac | 4 +---
+ 2 files changed, 1 insertion(+), 5 deletions(-)
+
+diff --git c/Makefile.am i/Makefile.am
+index acf51182..8fd9eb8f 100644
+--- c/Makefile.am
++++ i/Makefile.am
+@@ -133,9 +133,7 @@ else
+ CARGO_RELEASE_ARGS=--release
+ endif
+ 
+-if CROSS_COMPILING
+ CARGO_TARGET_ARGS=--target=$(RUST_TARGET)
+-endif
+ 
+ CARGO_VERBOSE = $(cargo_verbose_$(V))
+ cargo_verbose_ = $(cargo_verbose_$(AM_DEFAULT_VERBOSITY))
+diff --git c/configure.ac i/configure.ac
+index d566ab49..456394ff 100644
+--- c/configure.ac
++++ i/configure.ac
+@@ -292,9 +292,7 @@ if test "x$RUST_TARGET" == x; then
+ fi
+ 
+ AM_CONDITIONAL(CROSS_COMPILING, test $cross_compiling = yes)
+-if test "x$cross_compiling" = "xyes" ; then
+-	RUST_TARGET_SUBDIR="$RUST_TARGET/$RUST_TARGET_SUBDIR"
+-fi
++RUST_TARGET_SUBDIR="$RUST_TARGET/$RUST_TARGET_SUBDIR"
+ AC_SUBST([RUST_TARGET_SUBDIR])
+ 
+ dnl ===========================================================================
+

@@ -1,0 +1,79 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>eye-of-mate</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>eyeofmate</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Eye of MATE, an image viewer for MATE</Summary>
+        <Description>This is the Eye of MATE, an image viewer program.  It is meant to be a fast and functional image viewer.</Description>
+        <Archive sha1sum="01e9d07377580f29494c7bbd3376e7351eb8b0eb">http://pub.mate-desktop.org/releases/1.24/eom-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>mate-common</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>yelp-tool</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>gtksourceview3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>eye-of-mate</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	    <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

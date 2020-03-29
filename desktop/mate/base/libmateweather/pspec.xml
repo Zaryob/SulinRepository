@@ -1,0 +1,57 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libmateweather</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>libmateweather</Summary>
+        <Description>libmateweather is a collection of documentation utilities for the Mate project.</Description>
+        <Archive sha1sum="5611060b5f9b9d2f3152df9dff1b0ed1e5920084" >http://pub.mate-desktop.org/releases/1.24/libmateweather-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mate-common</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libmateweather</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/libmateweather</Path>
+            <Path fileType="library">/usr/lib/libmateweather*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/libmateweather/</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	    <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

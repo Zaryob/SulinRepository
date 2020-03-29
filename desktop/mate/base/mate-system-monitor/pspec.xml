@@ -1,0 +1,67 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-system-monitor</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>utilities-system-monitor</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Process and resource monitor</Summary>
+        <Description>Process viewer and system resource monitor for MATE</Description>
+        <Archive sha1sum="0b3d620de4272228a2f5bdb781634516d4b26b7b" >http://pub.mate-desktop.org/releases/1.24/mate-system-monitor-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libsigc2++</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libwnck3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-system-monitor</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libsigc2++</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="lib">/usr/libexec/mate-system-monitor/</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

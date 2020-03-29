@@ -77,7 +77,7 @@
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>
     </Package>
-    <Package>
+    <!--Package>
         <Name>pango-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for pango</Summary>
@@ -113,9 +113,9 @@
             <Path fileType="library">/usr/lib32/girepository-1.0</Path>
             <Path fileType="library">/usr/lib32/pango</Path>
         </Files>
-    </Package>
+    </Package-->
     <History>
-		<Update release="4">
+	<Update release="4">
             <Date>2020-02-01</Date>
             <Version>1.44.7</Version>
             <Comment>Package is rebuilded and released up.</Comment>

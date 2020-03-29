@@ -1,0 +1,37 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-common</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>library</IsA>
+        <Summary>Common files for development of Mate packages</Summary>
+        <Description>maate-common package contains aclocal macros, makefile headers and documents tools in order to build Mate sources.</Description>
+        <Archive sha1sum="62ac8d359ca83ded4d26d424d317e9f24e5991a9">https://github.com/mate-desktop/mate-common/releases/download/v1.24.0/mate-common-1.24.0.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>mate-common</Name>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/mate-common</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="1">
+            <Date>2020-03-03</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

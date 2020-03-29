@@ -1,0 +1,85 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-screensaver</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>preferences-desktop-screensaver</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Replaces xscreensaver, integrating with the MATE desktop.</Summary>
+        <Description>mate-screensaver, Mate masaüstü için ekrankoruyucu uygulamasıdır.</Description>
+        <Archive sha1sum="a922ec0731385d5efd3667a7cbbcd8aef9cfc05a" >http://pub.mate-desktop.org/releases/1.24/mate-screensaver-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>mate-menus</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libmatekbd</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libXxf86misc</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-screensaver</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>mate-menus</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libmatekbd</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>libXxf86misc</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>dbus-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="executable">/usr/libexec/</Path>
+            <Path fileType="data">/usr/share/backgrounds</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/mate-screensaver</Path>
+            <Path fileType="data">/usr/share/desktop-directories</Path>
+            <Path fileType="data">/usr/share/mate-background-properties</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>atril</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>atril</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Atril is a document viewer for the MATE desktop</Summary>
+        <Description>Atril is a document viewer capable of displaying multiple and single page document formats like PDF and Postscript.</Description>
+        <Archive sha1sum="0f243b3b40b2c4b945eca7959a6d2c5d87aa784b">https://github.com/mate-desktop/atril/archive/v1.24.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>djvu</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>mate-common</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>t1lib</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libgxps</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libspectre</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>yelp-tool</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>poppler-glib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>atril</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>djvu</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>t1lib</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libgxps</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libspectre</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>poppler-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/libexec/</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	    <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -24,6 +24,9 @@
             <Dependency>gtk-doc</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>multilib.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -53,7 +56,7 @@
             <Path fileType="locale">/usr/share/locale</Path>
         </Files>
     </Package>
-        <!--Package>
+        <Package>
         <Name>librsvg-32bit</Name>
         <BuildType>emul32</BuildType>
         <RuntimeDependencies>
@@ -65,7 +68,7 @@
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
-    </Package-->
+    </Package>
     <Package>
       <Name>librsvg-devel</Name>
       <RuntimeDependencies>
