@@ -1,0 +1,46 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-icon-theme</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <IsA>data</IsA>
+        <Summary>Mate icon theme</Summary>
+        <Description>mate-icon-theme package contains the default icon theme used by the Mate desktop.</Description>
+        <Archive sha1sum="41f3ffb47740ff81889dfa523d98eeb76a7ef039">http://pub.mate-desktop.org/releases/1.24/mate-icon-theme-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>mate-common</Dependency>
+            <Dependency>icon-naming-utils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-icon-theme</Name>
+        <RuntimeDependencies>
+            <Dependency>mate-common</Dependency>
+            <Dependency>icon-naming-utils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/pkgconfig/mate-icon-theme.pc</Path>
+        </Files>
+    </Package>
+
+    <History>
+	   <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

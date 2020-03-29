@@ -1,0 +1,47 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-backgrounds</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>data</IsA>
+        <Summary>Default wallpapers for the Mate desktop</Summary>
+        <Description>gnome-backgrounds contains default wallpapers for the Mate desktop.</Description>
+	<Archive sha1sum="23b7135ee3fe40a0f1f95dc886d3a8f8e37d9061" >http://pub.mate-desktop.org/releases/1.24/mate-backgrounds-1.24.0.tar.xz</Archive>
+	    <BuildDependencies>
+             <Dependency>mate-common</Dependency>
+             <Dependency>intltool</Dependency>
+             <Dependency>gtksourceview3</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>mate-backgrounds</Name>
+        <RuntimeDependencies>
+             <Dependency>mate-common</Dependency>
+             <Dependency>intltool</Dependency>
+             <Dependency>gtksourceview3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/backgrounds</Path>
+            <Path fileType="doc">/usr/share/mate-background-properties</Path>
+        </Files>
+    </Package>
+
+    <History>
+         <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mate-calc</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <Icon>desktop</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Calculator for the Mate desktop environment</Summary>
+        <Description>mate-calc, Mate masaüstü için hesap makinesi.</Description>
+        <Archive sha1sum="1e6f3dcd35af785d598230e4bc4908f4b5d80890" >http://pub.mate-desktop.org/releases/1.24/mate-calc-1.24.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libxslt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-calc</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency> 
+            <Dependency>pango</Dependency>           
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="bin">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/mate-calc</Path>
+            <Path fileType="data">/usr/share/appdata/</Path>
+            <Path fileType="data">/usr/share/metainfo/</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
