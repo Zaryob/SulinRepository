@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-menus</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Gnome Menus</Summary>
+        <Description>gnome-menus has got desktop-directories, GNOME menus library and its python bindings.</Description>
+        <Archive sha1sum="f846a26031e75abbc46a7cc6e0fe129ad3072b36" type="tarxz">mirrors://gnome/gnome-menus/3.32/gnome-menus-3.32.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-menus</Name>
+        <Files>
+            <Path fileType="config">/etc/xdg/menus</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>gnome-menus-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-menus</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-24</Date>
+            <Version>3.32.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

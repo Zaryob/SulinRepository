@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-video-effects</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Gnome video-effects</Summary>
+        <Description>The GNOME Video Effects package contains a collection of GStreamer effects.</Description>
+        <Archive sha1sum="40a729136da028ffea343d57fd7810c0dfb35d28" type="tarxz">mirrors://gnome/gnome-video-effects/0.5/gnome-video-effects-0.5.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-video-effects</Name>
+        <Files>
+            <Path fileType="config">/etc/xdg/video-effects</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-24</Date>
+            <Version>3.32.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

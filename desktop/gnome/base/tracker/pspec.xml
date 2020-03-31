@@ -1,0 +1,68 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tracker</Name>
+        <Homepage>http://projects.gnome.org/gexiv2/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Gnome tracker library</Summary>
+        <Description>Tracker is the file indexing and search provider used in the GNOME desktop environment. </Description>
+        <Archive sha1sum="eb881dd305e24e51eac8644ba7262bd2f1dc9cbc" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/tracker/2.2/tracker-2.2.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libseccomp-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tracker</Name>
+        <RuntimeDependencies>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libseccomp</Dependency>
+            <Dependency>libsoup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tracker-devel</Name>
+        <Summary>Development files for nautilus</Summary>
+        <RuntimeDependencies>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libseccomp-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.2.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

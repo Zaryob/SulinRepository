@@ -1,0 +1,106 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>nautilus</Name>
+        <Homepage>http://projects.gnome.org/nautilus/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <Icon>nautilus</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Default file manager for the GNOME desktop</Summary>
+        <Description>Nautilus is a file manager that allows to browse directories, preview files and launch applications.</Description>
+        <Archive sha1sum="edc5b7d9a2693527969b3d04d38260e37f448b46" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/nautilus/3.35/nautilus-3.35.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>gnome-autoar-devel</Dependency>
+            <Dependency>xkeyboard-config</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>tracker-devel</Dependency>
+            <Dependency>tracker-miners</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>nautilus</Name>
+        <RuntimeDependencies>
+            <Dependency>tracker-miners</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>gvfs</Dependency>
+            <Dependency>gnome-themes</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>tracker</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/nautilus</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/gnome-shell</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+        </Files>
+        <Provides>
+            <SCOM script="package.py">System.Package</SCOM>
+        </Provides>
+    </Package>
+
+
+    <Package>
+        <Name>nautilus-devel</Name>
+        <Summary>Development files for nautilus</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">nautilus</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.35.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

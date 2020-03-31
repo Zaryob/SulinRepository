@@ -1,0 +1,54 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tracker-miners</Name>
+        <Homepage>http://projects.gnome.org/gexiv2/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Gnome tracker library</Summary>
+        <Description>Tracker is an efficient search engine and triplestore for desktop, embedded and mobile.</Description>
+        <Archive sha1sum="351ceb9ea160b8e61b750b92589f1b5b361923cb" >https://gitlab.gnome.org/GNOME/tracker-miners/-/archive/2.3.3/tracker-miners-2.3.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libseccomp-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tracker-miners</Name>
+        <RuntimeDependencies>
+            <Dependency>json-glib</Dependency>
+            <Dependency>tracker</Dependency>
+            <Dependency>libseccomp</Dependency>
+            <Dependency>libsoup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.3.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

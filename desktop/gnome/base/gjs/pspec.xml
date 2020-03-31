@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gjs</Name>
+        <Homepage>http://live.gnome.org/Gjs</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>JavaScript bindings based on gobject-introspection and Mozilla</Summary>
+        <Description>Gjs contains JavaScript bindings based on gobject-introspection and the Mozilla SpiderMonkey JavaScript engine.</Description>
+        <Archive sha1sum="cf4f885d2d41a5c9fb85bd90df46bb67a93f4f07" type="tarxz">mirrors://gnome/gjs/1.56/gjs-1.56.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>mozjs60</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gjs</Name>
+        <RuntimeDependencies>
+            <Dependency>nspr</Dependency>
+            <Dependency>mozjs60</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gjs-devel</Name>
+        <Summary>Development files for gjs</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gjs</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-10-24</Date>
+            <Version>1.56.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

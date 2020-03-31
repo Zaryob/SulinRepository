@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-autoar</Name>
+        <Homepage>http://live.gnome.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Archive framework for GNOME</Summary>
+        <Description>The gnome-autoar package provides a framework for automatic archive extraction, compression, and management.</Description>
+        <Archive sha1sum="d052d50644b8e389ec4cd4c668cddd8cd1ab6766" >https://gitlab.gnome.org/GNOME/gnome-autoar/-/archive/0.2.4/gnome-autoar-0.2.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libarchive-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-autoar</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libarchive</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/share/vala</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="doc">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gnome-autoar-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-autoar</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig/gnome-autoar-0.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/gnome-autoar-gtk-0.pc</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+    <History>
+       <Update release="2">
+            <Date>2019-10-24</Date>
+            <Version>0.2.4</Version>
+            <Comment>UPdate 0.2.4</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-10-24</Date>
+            <Version>0.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
