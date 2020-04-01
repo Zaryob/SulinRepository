@@ -1,0 +1,83 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-terminal</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Terminal emulation application for the GNOME desktop.</Summary>
+        <Description>GNOME terminal is a emulation application that designed to run xterm, VT102 and VT220</Description>
+        <Archive sha1sum="2f354c5d987f87b144236874d614a49a71632a7e" >https://gitlab.gnome.org/GNOME/gnome-terminal/-/archive/3.36.1.1/gnome-terminal-3.36.1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>vte3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>dconf-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-terminal</Name>
+        <RuntimeDependencies>
+            <Dependency>vte3</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libpcre2</Dependency>
+        </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/xdg/autostart/gnome-terminal-daemon.desktop">gnome-terminal-daemon.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/gnome-terminal-daemon">gnome-terminal-daemon</AdditionalFile>
+        </AdditionalFiles>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="data">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gnome-terminal</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

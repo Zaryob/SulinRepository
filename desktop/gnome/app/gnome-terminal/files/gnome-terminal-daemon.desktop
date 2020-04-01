@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=gnome-terminal-daemon
+Comment=Daemon of gnome-terminal
+Icon=gnome-terminal
+Exec=/usr/bin/gnome-terminal-daemon
+Terminal=false
+Type=Application
+NoDisplay=true

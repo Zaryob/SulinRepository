@@ -1,0 +1,78 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gedit</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Default text editor for GNOME</Summary>
+        <Description>gedit is a small and lightweight text editor for the GNOME environment.</Description>
+        <Archive sha1sum="60f0213d09e443042f8dfb43a71ae646cc4360bd" >http://deb.debian.org/debian/pool/main/g/gedit/gedit_3.36.1.orig.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>enchant-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtksourceview-devel</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gedit</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>enchant</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtksourceview</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gedit-2</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
