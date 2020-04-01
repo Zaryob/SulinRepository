@@ -11,7 +11,7 @@ from inary.actionsapi import get
 
 def install():
     for i in {"/bin", "/sbin", "/lib", "/lib32","/data/srv","/kernel","/kernel/boot",
-              "/etc","/tmp","/data/misc","/data/media/system","/kernel/dev","/kernel/sys","/kernel/proc",
+              "/etc","/tmp","/data/misc","/data/media/system",
               "/data","/data/user","/data/app","/data/app/system","/data/user/root",
               "/tmp", "/usr", "/usr/bin","/kernel/modules","/data/media",
               "/usr/lib", "/usr/lib32", "/usr/libexec", "/usr/share","/kernel/firmware",
@@ -21,10 +21,6 @@ def install():
 
     autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
 
-# Adjust permissions
-    shelltools.chmod("{}/tmp".format(get.installDIR()), 0o1777)
-    shelltools.chmod("{}/usr/share/baselayout/shadow".format(get.installDIR()), 0o600)
-    shelltools.chmod("{}/data/user/root".format(get.installDIR()), 0o600)
 
 # SulinOS GNU/Linux filesystem architecture (like android and LFS)
 #
@@ -61,9 +57,9 @@ def install():
     inarytools.dosym("../data/log", "/var/log")
     inarytools.dosym("../data/lock", "/var/lock")
 
-    inarytools.dosym("kernel/dev", "/dev")
-    inarytools.dosym("kernel/sys", "/sys")
-    inarytools.dosym("kernel/proc", "/proc")
+    inarytools.dosym("../dev","/kernel/dev")
+    inarytools.dosym("../sys","/kernel/sys")
+    inarytools.dosym("./proc","kernel/proc")
     inarytools.dosym("kernel/boot", "/boot")
     inarytools.dosym("../kernel/modules", "/lib/modules")
     inarytools.dosym("../kernel/firmware", "/lib/firmware")
@@ -72,11 +68,16 @@ def install():
         # Directories for 32bit libraries
         inarytools.dodir("/lib32")
         inarytools.dodir("/usr/lib32")
+        inarytools.dodir("/usr/local/lib32")
 
         # Hack for binary blobs built on multi-lib systems
         inarytools.dosym("lib", "/lib64")
         inarytools.dosym("lib", "/usr/lib64")
         inarytools.dosym("lib", "/usr/local/lib64")
-        
+
+    # Adjust permissions
     shelltools.system("chmod 755 -R {}/".format(get.installDIR()))
+    shelltools.chmod("{}/tmp".format(get.installDIR()), 0o1777)
+    shelltools.chmod("{}/usr/share/baselayout/shadow".format(get.installDIR()), 0o600)
+    shelltools.chmod("{}/data/user/root".format(get.installDIR()), 0o600)
 

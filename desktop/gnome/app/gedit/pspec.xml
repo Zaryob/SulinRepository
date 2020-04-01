@@ -28,6 +28,8 @@
             <Dependency>gnome-common</Dependency>
             <Dependency>gnome-doc-utils</Dependency>
             <Dependency>docbook-xml</Dependency>
+            <Dependency>tepl</Dependency>
+            <Dependency>gspell-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -37,6 +39,7 @@
             <Dependency>atk</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>enchant</Dependency>
+            <Dependency>tepl</Dependency>
             <Dependency>gconf</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>gnome-doc-utils</Dependency>
@@ -46,23 +49,30 @@
             <Dependency>libICE</Dependency>
             <Dependency>libSM</Dependency>
             <Dependency>pango</Dependency>
+            <Dependency>gspell</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/gconf</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/share/vala</Path>
+            <Path fileType="library">/usr/share/dbus-1</Path>
+            <Path fileType="library">/usr/share/glib-2.0</Path>
             <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
             <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/gedit-2</Path>
+            <Path fileType="data">/usr/share/gedit</Path>
             <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
             <Path fileType="data">/usr/share/omf</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
         </Files>
     </Package>
 
