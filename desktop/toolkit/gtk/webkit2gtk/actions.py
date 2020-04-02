@@ -15,7 +15,7 @@ docs = ["AUTHORS", "COPYING.LIB", "THANKS", \
         "LICENSE-LGPL-2", "LICENSE-LGPL-2.1", "LICENSE"]
 
 def setup():
-    cmaketools.configure("-DCMAKE_BUILD_TYPE=Release  \
+    shelltools.system(" cmake -DCMAKE_BUILD_TYPE=Release  \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_SKIP_RPATH=ON       \
       -DPORT=GTK                  \
@@ -25,7 +25,7 @@ def setup():
       -DUSE_WOFF2=OFF             \
       -DUSE_WPE_RENDERER=OFF      \
       -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
-      -Wno-dev -G Ninja")
+      -Wno-dev -G Ninja ..")
 
 def build():
     mesontools.ninja_build()
