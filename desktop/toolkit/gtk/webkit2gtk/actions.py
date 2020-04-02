@@ -15,6 +15,8 @@ docs = ["AUTHORS", "COPYING.LIB", "THANKS", \
         "LICENSE-LGPL-2", "LICENSE-LGPL-2.1", "LICENSE"]
 
 def setup():
+    shelltools.system("mkdir build")
+    shelltools.cd("build")
     shelltools.system(" cmake -DCMAKE_BUILD_TYPE=Release  \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DCMAKE_SKIP_RPATH=ON       \
@@ -25,13 +27,13 @@ def setup():
       -DUSE_WOFF2=OFF             \
       -DUSE_WPE_RENDERER=OFF      \
       -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
-      -Wno-dev -G Ninja .")
+      -Wno-dev -G Ninja ..")
 
 def build():
-    mesontools.ninja_build()
+    shelltools.system("ninja")
 
 def install():
-    mesontools.ninja_nstall("DESTDIR=%s" % get.installDIR())
+    shelltools.system("ninja installDESTDIR=%s" % get.installDIR())
 
     inarytools.dodoc("NEWS")
     shelltools.cd("Source")
