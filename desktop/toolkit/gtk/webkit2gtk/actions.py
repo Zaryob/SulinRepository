@@ -31,7 +31,7 @@ def setup():
 
 def build():
     shelltools.cd("build")
-    shelltools.system("ninja")
+    shelltools.system("ninja -j32")
 
 def install():
     shelltools.cd("build")
