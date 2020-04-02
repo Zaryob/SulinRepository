@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>JavaScript bindings based on gobject-introspection and Mozilla</Summary>
         <Description>Gjs contains JavaScript bindings based on gobject-introspection and the Mozilla SpiderMonkey JavaScript engine.</Description>
-        <Archive sha1sum="cf4f885d2d41a5c9fb85bd90df46bb67a93f4f07" type="tarxz">mirrors://gnome/gjs/1.56/gjs-1.56.2.tar.xz</Archive>
+        <Archive sha1sum="fa232adca5c5b3fb9ea2a3ed0ccdae82280af4bc">http://ftp.gnome.org/pub/gnome/sources/gjs/1.65/gjs-1.65.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>mozjs60</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
@@ -48,6 +48,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-10-24</Date>
+            <Version>1.65.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-24</Date>
             <Version>1.56.2</Version>

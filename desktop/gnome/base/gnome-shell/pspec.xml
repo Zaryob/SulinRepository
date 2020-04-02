@@ -1,0 +1,97 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-shell</Name>
+        <Homepage>http://live.gnome.org/GnomeShell</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>GNOME Shell is the defining technology of the GNOME 3 user experience</Summary>
+        <Description>GNOME Shell is the defining technology of the GNOME 3 user experience. It provides core interface functions like switching to windows and launching applications.</Description>
+        <Archive sha1sum="21e02f5fba5a051018f3d1dc7500259c6d4b779b" >https://download.gnome.org/sources/gnome-shell/3.36/gnome-shell-3.36.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>mutter-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libcroco-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gjs-devel</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>libical-devel</Dependency>
+            <Dependency>evolution-data-server-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-shell</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mutter</Dependency>
+            <Dependency>gjs</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>clutter</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>gnome-menus</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>mesa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome-about</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/gnome-shell</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/xdg-desktop-portal</Path>
+            <Path fileType="data">/usr/share/gnome-control-center</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/libgnome-desktop-3.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
