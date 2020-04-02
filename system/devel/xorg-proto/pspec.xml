@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>X.Org Protocol Headers</Summary>
         <Description>This package includes the protocol headers needed for X11 development.</Description>
-        <Archive sha1sum="b8495b2bd90d6d5c70c498e54c8e33600dbbc810" >https://github.com/freedesktop/xorg-proto-x11proto/archive/xproto-7.0.31.zip</Archive>
+        <Archive sha1sum="59b055dae3d556153b65ddf929db4d35bf9cb17d" >https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2019.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>util-macros</Dependency>
             <Dependency>libxslt</Dependency>
@@ -27,6 +27,7 @@
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>
     <Package>
@@ -61,6 +62,13 @@
         </Files>
     </Package>
     <History>
+    		<Update release="3">
+            <Date>2018-12-28</Date>
+            <Version>2019.2</Version>
+            <Comment>Sülonun mallıklarına son</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
 		<Update release="2">
             <Date>2018-12-28</Date>
             <Version>7.0.32</Version>
