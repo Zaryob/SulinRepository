@@ -28,7 +28,7 @@ def setup():
       -Wno-dev -G Ninja")
 
 def build():
-    mesontools.meson_build()
+    mesontools.ninja_build()
 
 def install():
     mesontools.ninja_nstall("DESTDIR=%s" % get.installDIR())
