@@ -25,7 +25,7 @@ def setup():
       -DUSE_WOFF2=OFF             \
       -DUSE_WPE_RENDERER=OFF      \
       -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
-      -Wno-dev -G Ninja ..")
+      -Wno-dev -G Ninja .")
 
 def build():
     mesontools.ninja_build()
