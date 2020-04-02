@@ -30,9 +30,11 @@ def setup():
       -Wno-dev -G Ninja ..")
 
 def build():
+    shelltools.cd("build")
     shelltools.system("ninja")
 
 def install():
+    shelltools.cd("build")
     shelltools.system("ninja installDESTDIR=%s" % get.installDIR())
 
     inarytools.dodoc("NEWS")
