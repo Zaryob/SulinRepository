@@ -32,7 +32,9 @@
     <Package>
         <Name>xorg-proto-32bit</Name>
         <BuildType>emul32</BuildType>
-       
+               <Files>
+            <Path fileType="data">/usr/lib32</Path>
+        </Files>
     </Package>
     <Package>
         <Name>xorg-proto-docs</Name>
