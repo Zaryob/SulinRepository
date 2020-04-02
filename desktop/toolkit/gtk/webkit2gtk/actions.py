@@ -14,14 +14,17 @@ docs = ["AUTHORS", "COPYING.LIB", "THANKS", \
         "LICENSE-LGPL-2", "LICENSE-LGPL-2.1", "LICENSE"]
 
 def setup():
-    cmaketools.configure("-DPORT=GTK \
-	    -DCMAKE_BUILD_TYPE=Release \
-	    -DCMAKE_INSTALL_PREFIX=/usr \
-	    -DCMAKE_SKIP_RPATH=ON \
-	    -DENABLE_GTKDOC=ON \
-	    -DENABLE_MINIBROWSER=ON \
-	    -DLIBEXEC_INSTALL_DIR=/usr/lib \
-	    -DLIB_INSTALL_DIR=/usr/lib")
+    cmaketools.configure("-DCMAKE_BUILD_TYPE=Release  \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_SKIP_RPATH=ON       \
+      -DPORT=GTK                  \
+      -DLIB_INSTALL_DIR=/usr/lib  \
+      -DUSE_LIBHYPHEN=OFF         \
+      -DENABLE_MINIBROWSER=ON     \
+      -DUSE_WOFF2=OFF             \
+      -DUSE_WPE_RENDERER=OFF      \
+      -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
+      -Wno-dev)
 
 def build():
     cmaketools.make()
