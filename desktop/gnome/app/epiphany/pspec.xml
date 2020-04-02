@@ -1,0 +1,111 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>epiphany</Name>
+        <Homepage>http://live.gnome.org/Epiphany</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>epiphany</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A simple web browser</Summary>
+        <Description>Epiphany is a simple web browser for Gnome.</Description>
+        <Archive sha1sum="30dc5e8565e1194a14d0bef785d26071a43f3568">https://gitlab.gnome.org/GNOME/epiphany/-/archive/3.36.1/epiphany-3.36.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>avahi-glib-devel</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>NetworkManager-devel</Dependency>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libdazzle-devel</Dependency>
+            <Dependency>libhandy-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>epiphany</Name>
+        <RuntimeDependencies>
+            <Dependency>libdazzle</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libgnomeui</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>avahi-glib</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libsoup-gnome</Dependency>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>avahi-libs</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+       </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/epiphany</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/python-gtk</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>epiphany-devel</Name>
+        <Summary>Development files for epiphany</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">epiphany</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency versionFrom="1.4.0">webkit-gtk-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

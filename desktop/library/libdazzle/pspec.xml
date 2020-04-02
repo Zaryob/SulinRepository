@@ -1,0 +1,85 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libdazzle</Name>
+        <Homepage>https://live.gnome.org/libdazzle</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>A GPLv3-based library to delight your users with fancy features.</Summary>
+        <Description>A GPLv3-based library to delight your users with fancy features.</Description>
+        <Archive sha1sum="c126d7b0b8280d740e7e3a17e2161bde39c5caca" >https://gitlab.gnome.org/GNOME/libdazzle/-/archive/3.36.0/libdazzle-3.36.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>geocode-glib-devel</Dependency>
+            <Dependency>libproxy-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libdazzle</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libsoup-gnome</Dependency>
+            <Dependency>libproxy</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/libdazzle</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdazzle-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>libdazzle reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdazzle-devel</Name>
+        <Summary>Development files for libdazzle</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libdazzle</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.26.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>wpebackend-fdo</Name>
+        <Homepage>https://live.gnome.org/wpebackend-fdo</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A WebKit port optimized for embedded devices </Summary>
+        <Description>A WebKit port optimized for embedded devices </Description>
+        <Archive sha1sum="4ac2ac0c4df81a1811db5086fd9f14926ec8ec0d" >https://github.com/Igalia/WPEBackend-fdo/archive/1.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>geocode-glib-devel</Dependency>
+            <Dependency>libproxy-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wpebackend-fdo</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libsoup-gnome</Dependency>
+            <Dependency>libproxy</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/wpebackend-fdo</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wpebackend-fdo-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>wpebackend-fdo reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wpebackend-fdo-devel</Name>
+        <Summary>Development files for wpebackend-fdo</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">wpebackend-fdo</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -14,21 +14,14 @@ docs = ["AUTHORS", "COPYING.LIB", "THANKS", \
         "LICENSE-LGPL-2", "LICENSE-LGPL-2.1", "LICENSE"]
 
 def setup():
-    shelltools.system("rm -r Source/ThirdParty/gtest/")
     cmaketools.configure("-DPORT=GTK \
-                          -DCMAKE_BUILD_TYPE=Release \
-                          -DCMAKE_SKIP_RPATH=ON \
-                          -DCMAKE_INSTALL_PREFIX=/usr \
-                          -DLIB_INSTALL_DIR=/usr/lib \
-                          -DLIBEXEC_INSTALL_DIR=/usr/lib/webkit2gtk-4.0 \
-                          -DENABLE_CREDENTIAL_STORAGE=ON \
-                          -DENABLE_GEOLOCATION=ON \
-                          -DENABLE_VIDEO=ON \
-                          -DENABLE_WEB_AUDIO=ON \
-                          -DENABLE_WEBGL=ON \
-                          -DSHOULD_INSTALL_JS_SHELL=ON \
-                          -DENABLE_MINIBROWSER=ON \
-                          -DENABLE_BUBBLEWRAP_SANDBOX=OFF")
+	    -DCMAKE_BUILD_TYPE=Release \
+	    -DCMAKE_INSTALL_PREFIX=/usr \
+	    -DCMAKE_SKIP_RPATH=ON \
+	    -DENABLE_GTKDOC=ON \
+	    -DENABLE_MINIBROWSER=ON \
+	    -DLIBEXEC_INSTALL_DIR=/usr/lib \
+	    -DLIB_INSTALL_DIR=/usr/lib")
 
 def build():
     cmaketools.make()
