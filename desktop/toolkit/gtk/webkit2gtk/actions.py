@@ -30,8 +30,8 @@ def setup():
 
 def build():
     shelltools.cd("build")
-    shelltools.system("ninja JavaScriptCore-4-gir -j32")
-    shelltools.system("ninja -j32")
+    shelltools.system("ninja JavaScriptCore-4-gir")
+    shelltools.system("ninja")
 
 def install():
     shelltools.cd("build")
