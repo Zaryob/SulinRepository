@@ -10,13 +10,17 @@ from inary.actionsapi import get
 from inary.actionsapi import shelltools
 
 def setup():
-    shelltools.export("SYSTEMD_LIBD","-lelogind")
+    shelltools.export("SYSTEMD_LIBS","-lelogind")
     shelltools.export("SYSTEMD_CFLAGS","-I/usr/include/elogind")
-    autotools.autogen()
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
     autotools.configure("--without-plymouth    \
             --disable-static      \
             --enable-gdm-xsession \
             --with-pam-mod-dir=/lib/security\
+            --without-xevie\
+            --without-plymouth \
+            --without-tcp-wrappers\
+            --enable-authentication-scheme=pam\
             --with-systemdsystemunitdir=no")
 
 def build():
@@ -25,12 +29,3 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.chown("%s/var/lib/gdm" % get.installDIR(), "gdm", "gdm")
-
-    for d in ["/var/gdm", "/var/lib/gdm/.gconf*"]:
-        inarytools.removeDir(d)
-
-    for f in ["/var/lib/gdm/.gconf*", "/usr/sbin/gdm"]:
-        inarytools.remove(f)
-
-    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README")

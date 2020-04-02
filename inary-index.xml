@@ -19954,7 +19954,7 @@
             <PartOf>x11.misc</PartOf>
             <Summary xml:lang="en">X Window System session initializer</Summary>
             <Description xml:lang="en">xinit initializes X Window System server and runs the first client application.</Description>
-            <Archive type="tarbz2" sha1sum="d874a2eecf2c30291e327851b151fdab8183260c">mirrors://xorg/individual/app/xinit-1.4.1.tar.bz2</Archive>
+            <Archive sha1sum="32f092505dc4576fcf814025933d0785c2f9e6dd">https://www.x.org/releases/individual/app/xinit-1.4.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libX11-devel</Dependency>
             </BuildDependencies>
@@ -19980,12 +19980,12 @@
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
             <AdditionalFiles>
-                <AdditionalFile target="/usr/lib/X11/xinit/Xsession" permission="0755" owner="root">Xsession</AdditionalFile>
-                <AdditionalFile target="/usr/lib/X11/xinit/xinitrc" permission="0644" owner="root">xinitrc</AdditionalFile>
-                <AdditionalFile target="/etc/X11/xinit/xserverrc" permission="0644" owner="root">xserverrc</AdditionalFile>
-                <AdditionalFile target="/usr/lib/X11/xinit/xserverrc" permission="0644" owner="root">xserverrc</AdditionalFile>
-                <AdditionalFile target="/etc/X11/Xresources" permission="0644" owner="root">Xresources</AdditionalFile>
-                <AdditionalFile target="/etc/X11/Xdefaults" permission="0644" owner="root">Xdefaults</AdditionalFile>
+                <AdditionalFile target="/etc/X11/xinit/Xsession" permission="0755" owner="root">Xsession</AdditionalFile>
+                <AdditionalFile target="/etc/X11/xinit/xinitrc" permission="0755" owner="root">xinitrc</AdditionalFile>
+                <AdditionalFile target="/etc/X11/xinit/xserverrc" permission="0755" owner="root">xserverrc</AdditionalFile>
+                <AdditionalFile target="/etc/X11/xinit/xserverrc" permission="0755" owner="root">xserverrc</AdditionalFile>
+                <AdditionalFile target="/etc/X11/Xresources" permission="0755" owner="root">Xresources</AdditionalFile>
+                <AdditionalFile target="/etc/X11/Xdefaults" permission="0755" owner="root">Xdefaults</AdditionalFile>
                 <AdditionalFile target="/etc/X11/xinit/xinitrc.d/10-localuser.sh" permission="0755" owner="root">xinitrc.d/localuser.sh</AdditionalFile>
                 <AdditionalFile target="/etc/X11/xinit/xinitrc.d/10-xdg-runtime-dir.sh" permission="0755" owner="root">xinitrc.d/xdg-runtime-dir.sh</AdditionalFile>
                 <AdditionalFile target="/etc/X11/xinit/xinitrc.d/10-Xresources.sh" permission="0755" owner="root">xinitrc.d/Xresources.sh</AdditionalFile>
@@ -19998,6 +19998,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-11-18</Date>
+                <Version>1.4.1</Version>
+                <Comment>More improvement</Comment>
+                <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-11-18</Date>
                 <Version>1.4.1</Version>
@@ -20245,7 +20252,7 @@
             <PartOf>x11.terminal</PartOf>
             <Summary xml:lang="en">Xft powered terminal widget</Summary>
             <Description xml:lang="en">The VTE package contains a termcap file implementation for terminal emulators.</Description>
-            <Archive sha1sum="50f10d22c42fe73cdabccfbd30d89a4853575374">http://ftp.gnome.org/pub/gnome/sources/vte/0.59/vte-0.59.0.tar.xz</Archive>
+            <Archive sha1sum="b286d5e8f0cb1f7c0773609a35b242604f079fcd">https://gitlab.gnome.org/GNOME/vte/-/archive/0.60.1/vte-0.60.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>atk</Dependency>
                 <Dependency>gtk3</Dependency>
@@ -20279,12 +20286,19 @@
                 <Path fileType="data">/usr/share/vte</Path>
                 <Path fileType="data">/usr/share/pygtk</Path>
                 <Path fileType="data">/usr/share</Path>
-                <Path fileType="config">/etc/profile.d/vte.sh</Path>
+                <Path fileType="config">/etc/profile.d/</Path>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="library">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-12-12</Date>
+                <Version>0.60.1</Version>
+                <Comment>Version upgrade.</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-12</Date>
                 <Version>0.59.0</Version>
@@ -23149,6 +23163,52 @@
             <Update release="1">
                 <Date>2019-12-11</Date>
                 <Version>1.16</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>uchardet</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Encoding detector library ported from Mozilla</Summary>
+            <Description xml:lang="en">Encoding detector library ported from Mozilla</Description>
+            <Archive sha1sum="c04257ee7fb5ebbae144311d70b42c1d7efe41b9">https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz</Archive>
+            <SourceURI>programming/library/uchardet/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>uchardet</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>uchardet-devel</Name>
+            <Summary xml:lang="en">Development files for uchardet</Summary>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="info">/usr/share/info</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.40.0</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -26875,6 +26935,41 @@
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>5.1.5</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>nodejs</Name>
+            <Homepage>https://nodejs.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.java</PartOf>
+            <Summary xml:lang="en">Node.js is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine</Summary>
+            <Description xml:lang="en">Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. The Node.js package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</Description>
+            <Archive type="tarxz" sha1sum="4f1bc82594d4825b79f6b93df02b5d4798b57193">https://nodejs.org/dist/v12.13.1/node-v12.13.1-linux-x64.tar.xz</Archive>
+            <SourceURI>programming/language/java/nodejs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>nodejs</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="executable">/usr/bin/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-23</Date>
+                <Version>12.13.1</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -43767,6 +43862,68 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libplist</Name>
+            <Homepage>http://matt.colyer.name/projects/iphone-linux</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.library</PartOf>
+            <Summary xml:lang="en">Library for manipulating Apple Binary and XML Property Lists</Summary>
+            <Summary xml:lang="tr">Apple ikili dosyaları ve XML özellik listeleri üzerindeki işlemler için kütüphane</Summary>
+            <Description xml:lang="en">libplist is a library for manipulating Apple Binary and XML Property Lists.</Description>
+            <Description xml:lang="tr">libplist, Apple ikili dosyaları ve XML özellik listeleri üzerindeki işlemler için gerekli bir kütüphanedir.</Description>
+            <Archive sha1sum="48f071c723387637ef2cc2980d4ca0627aab067b">http://www.libimobiledevice.org/downloads/libplist-1.12.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>cython</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/library/libplist/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libplist</Name>
+            <RuntimeDependencies>
+                <Dependency>libxml2</Dependency>
+                <Dependency>python</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libplist-devel</Name>
+            <Summary xml:lang="en">Development files for libplist</Summary>
+            <Summary xml:lang="tr">libplist için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libplist</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="header">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.12</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libwacom</Name>
             <Homepage>http://sourceforge.net/projects/linuxwacom/</Homepage>
             <Packager>
@@ -43883,6 +44040,76 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libimobiledevice</Name>
+            <Homepage>http://www.libimobiledevice.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.library</PartOf>
+            <Summary xml:lang="en">Library for connecting to mobile devices</Summary>
+            <Description xml:lang="en">libimobiledevice is a library for connecting to mobile devices including phones and music players</Description>
+            <Archive sha1sum="a8e3f21180b1d6df754d04a4080a29cf6891e701">http://www.libimobiledevice.org/downloads/libimobiledevice-1.2.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gnutls-devel</Dependency>
+                <Dependency>libusbmuxd-devel</Dependency>
+                <Dependency>libplist-devel</Dependency>
+                <Dependency>libtasn1-devel</Dependency>
+                <Dependency>libgcrypt-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>gnutls-3.4.patch</Patch>
+            </Patches>
+            <SourceURI>hardware/library/libimobiledevice/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libimobiledevice</Name>
+            <RuntimeDependencies>
+                <Dependency>gnutls</Dependency>
+                <Dependency>libusbmuxd</Dependency>
+                <Dependency>libplist</Dependency>
+                <Dependency>libtasn1</Dependency>
+                <Dependency>libgcrypt</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="doc">/usr/share/doc/libimobiledevice</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libimobiledevice-devel</Name>
+            <Summary xml:lang="en">Development files for libimobiledevice</Summary>
+            <RuntimeDependencies>
+                <Dependency>gnutls-devel</Dependency>
+                <Dependency>libusbmuxd-devel</Dependency>
+                <Dependency>libplist-devel</Dependency>
+                <Dependency>libtasn1-devel</Dependency>
+                <Dependency>libgcrypt-devel</Dependency>
+                <Dependency release="1">libimobiledevice</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>aufs-headers</Name>
             <Homepage>http://aufs.sourceforge.ne</Homepage>
             <Packager>
@@ -43907,6 +44134,63 @@ functionality to build high-performing, platform-independent programs.</Descript
             <Update release="1">
                 <Date>2020-01-09</Date>
                 <Version>20190603</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libusbmuxd</Name>
+            <Homepage>http://marcansoft.com/blog/iphonelinux/libusbmuxd</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>service</IsA>
+            <IsA>library</IsA>
+            <PartOf>hardware.library</PartOf>
+            <Summary xml:lang="en">Daemon for communicating with Apple&apos;s iPod Touch and iPhone</Summary>
+            <Description xml:lang="en">libusbmuxd is a daemon used for communicating with Apple&apos;s iPod Touch and iPhone devices. It allows multiple services on the device to be accessed simultaneously.</Description>
+            <Archive type="tarbz2" sha1sum="9d4ce8ac058cfea66e6785d2bad5bb9c93681b16">http://www.libimobiledevice.org/downloads/libusbmuxd-1.0.10.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libplist-devel</Dependency>
+                <Dependency>libusb-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/library/libusbmuxd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libusbmuxd</Name>
+            <RuntimeDependencies>
+                <Dependency>libplist</Dependency>
+                <Dependency>libusb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="data">/lib/udev/rules.d</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libusbmuxd-devel</Name>
+            <Summary xml:lang="en">Development files for libusbmuxd</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libusbmuxd</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.0.10</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -45179,6 +45463,97 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gdm</Name>
+            <Homepage>http://projects.gnome.org/gdm/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.dm</PartOf>
+            <Summary xml:lang="en">GNOME display manager</Summary>
+            <Summary xml:lang="tr">GNOME ekran yöneticisi</Summary>
+            <Description xml:lang="en">GDM provides log into different sessions on local or remote machines.</Description>
+            <Description xml:lang="tr">GDM, yerel veya uzak makinelerde farklı oturumlar açmayı sağlar.</Description>
+            <Archive sha1sum="f72448b9273758f9396867d930e30f89ca51c21e">https://gitlab.gnome.org/GNOME/gdm/-/archive/3.34.1/gdm-3.34.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>upower-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>docbook-xml</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libxklavier-devel</Dependency>
+                <Dependency>accountsservice-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/dm/gdm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gdm</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>upower</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libcanberra-gtk</Dependency>
+                <Dependency>accountsservice</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxklavier</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/dbus-1</Path>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="config">/etc/gdm</Path>
+                <Path fileType="config">/etc/pam.d</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="library">/usr/include</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/gnome-session</Path>
+                <Path fileType="data">/usr/share/dconf</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/display-managers</Path>
+                <Path fileType="data">/usr/share/gdm</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/gnome-2.0</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="data">/usr/share/xsessions</Path>
+                <Path fileType="data">/var/lib</Path>
+                <Path fileType="data">/var/log</Path>
+                <Path fileType="data">/var/run</Path>
+                <Path fileType="data">/var/cache/gdm</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.34.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>slim</Name>
             <Homepage>http://slim.berlios.de</Homepage>
             <Packager>
@@ -45202,9 +45577,7 @@ functionality to build high-performing, platform-independent programs.</Descript
                 <Dependency>freetype-devel</Dependency>
             </BuildDependencies>
             <Patches>
-                <Patch>slim-1.3.6-add-sessiondir.patch</Patch>
-                <Patch>slim-1.3.6-fix-libslim-libraries.patch</Patch>
-                <Patch>slim-1.3.6-default-path.patch</Patch>
+                <Patch>slim-1.3.6-fix-libslim-libraries.patch.diff</Patch>
             </Patches>
             <SourceURI>desktop/dm/slim/pspec.xml</SourceURI>
         </Source>
@@ -45234,6 +45607,13 @@ functionality to build high-performing, platform-independent programs.</Descript
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-21</Date>
+                <Version>1.3.6</Version>
+                <Comment>Openrc relations</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-11-21</Date>
                 <Version>1.3.6</Version>
@@ -46524,6 +46904,450 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>tepl</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>app:library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">A library based on sourceview4</Summary>
+            <Description xml:lang="en">Library that eases the development of GtkSourceView-based text editors and IDEs</Description>
+            <Archive sha1sum="433bf28ff60109d94f0b140c076c7fb14a4278d6">https://download.gnome.org/sources/tepl/4.4/tepl-4.4.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtksourceview4</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/tepl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tepl</Name>
+            <RuntimeDependencies>
+                <Dependency>gtksourceview4</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg/menus</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/include</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>4.4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>metacity</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">GTK+ based window manager</Summary>
+            <Summary xml:lang="tr">GTK+ tabanlı pencere yöneticisi</Summary>
+            <Description xml:lang="en">Metacity is a GTK+ baded window manager that controls placement of windows.</Description>
+            <Description xml:lang="tr">Metacity, pencere yerleşimlerini kontol eden, gtk+ tabanlı bir pencere yöneticisidir.</Description>
+            <Archive sha1sum="c4145d9bb77d7e586626be4590b16e65a3c12025">https://gitlab.gnome.org/GNOME/metacity/-/archive/3.36.1/metacity-3.36.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/metacity/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>metacity</Name>
+            <RuntimeDependencies>
+                <Dependency>gconf</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libXft</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libcanberra-gtk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/gnome/wm-properties</Path>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="data">/usr/share/metacity</Path>
+                <Path fileType="data">/usr/share/gnome-control-center</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>metacity-devel</Name>
+            <Summary xml:lang="en">Development files for metacity</Summary>
+            <Summary xml:lang="tr">metacity için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">metacity</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.36.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gexiv2</Name>
+            <Homepage>http://projects.gnome.org/gexiv2/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">GObject-based wrapper</Summary>
+            <Description xml:lang="en">gexiv2 is a GObject-based wrapper around the Exiv2 library.</Description>
+            <Archive type="tarxz" sha1sum="2d8894d307363726b345d0535d5fe5b7153a7ea9">https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>exiv2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gexiv2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gexiv2</Name>
+            <RuntimeDependencies>
+                <Dependency>exiv2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gexiv2-devel</Name>
+            <Summary xml:lang="en">Development files for nautilus</Summary>
+            <RuntimeDependencies>
+                <Dependency>exiv2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>0.12.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tracker</Name>
+            <Homepage>http://projects.gnome.org/gexiv2/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Gnome tracker library</Summary>
+            <Description xml:lang="en">Tracker is the file indexing and search provider used in the GNOME desktop environment.</Description>
+            <Archive type="tarxz" sha1sum="eb881dd305e24e51eac8644ba7262bd2f1dc9cbc">http://ftp.gnome.org/pub/gnome/sources/tracker/2.2/tracker-2.2.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>libseccomp-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/tracker/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tracker</Name>
+            <RuntimeDependencies>
+                <Dependency>json-glib</Dependency>
+                <Dependency>libseccomp</Dependency>
+                <Dependency>libsoup</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>tracker-devel</Name>
+            <Summary xml:lang="en">Development files for nautilus</Summary>
+            <RuntimeDependencies>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>libseccomp-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.2.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-menus</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Gnome Menus</Summary>
+            <Description xml:lang="en">gnome-menus has got desktop-directories, GNOME menus library and its python bindings.</Description>
+            <Archive type="tarxz" sha1sum="f846a26031e75abbc46a7cc6e0fe129ad3072b36">mirrors://gnome/gnome-menus/3.32/gnome-menus-3.32.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gnome-menus/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-menus</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg/menus</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gnome-menus-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">gnome-menus</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-24</Date>
+                <Version>3.32.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-autoar</Name>
+            <Homepage>http://live.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Archive framework for GNOME</Summary>
+            <Description xml:lang="en">The gnome-autoar package provides a framework for automatic archive extraction, compression, and management.</Description>
+            <Archive sha1sum="d052d50644b8e389ec4cd4c668cddd8cd1ab6766">https://gitlab.gnome.org/GNOME/gnome-autoar/-/archive/0.2.4/gnome-autoar-0.2.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libarchive-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gnome-autoar/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-autoar</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>libarchive</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/share/vala</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+                <Path fileType="doc">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gnome-autoar-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="2">gnome-autoar</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/pkgconfig/gnome-autoar-0.pc</Path>
+                <Path fileType="data">/usr/lib/pkgconfig/gnome-autoar-gtk-0.pc</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2019-10-24</Date>
+                <Version>0.2.4</Version>
+                <Comment>UPdate 0.2.4</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-10-24</Date>
+                <Version>0.2.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gjs</Name>
+            <Homepage>http://live.gnome.org/Gjs</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">JavaScript bindings based on gobject-introspection and Mozilla</Summary>
+            <Description xml:lang="en">Gjs contains JavaScript bindings based on gobject-introspection and the Mozilla SpiderMonkey JavaScript engine.</Description>
+            <Archive type="tarxz" sha1sum="cf4f885d2d41a5c9fb85bd90df46bb67a93f4f07">mirrors://gnome/gjs/1.56/gjs-1.56.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>mozjs60</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gjs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gjs</Name>
+            <RuntimeDependencies>
+                <Dependency>nspr</Dependency>
+                <Dependency>mozjs60</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gjs-devel</Name>
+            <Summary xml:lang="en">Development files for gjs</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gjs</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-24</Date>
+                <Version>1.56.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>yelp</Name>
             <Homepage>http:/live.gnome.org/Yelp</Homepage>
             <Packager>
@@ -46532,7 +47356,7 @@ functionality to build high-performing, platform-independent programs.</Descript
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
-            <PartOf>desktop.gnome3.base</PartOf>
+            <PartOf>desktop.gnome.base</PartOf>
             <Summary xml:lang="en">Help viewer for GNOME desktop</Summary>
             <Summary xml:lang="tr">Gnome için Yardım görüntüleyici</Summary>
             <Description xml:lang="en">Yelp is a help viewer which serves as a DocBook viewer, a man page viewer, and an info page viewer.</Description>
@@ -46602,6 +47426,550 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mutter</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">A window manager which is replacing Metacity</Summary>
+            <Summary xml:lang="tr">Metacity&apos;nin yerine geçen bir pencere yöneticisi</Summary>
+            <Description xml:lang="en">Mutter is the window manager for which GNOME Shell is a plugin in GNOME 3, replacing Metacity.</Description>
+            <Description xml:lang="tr">Mutter, Gnome 3&apos;de Metacity&apos;nin yerine geçen bir pencere yöneticisidir.</Description>
+            <Archive sha1sum="b5cc3efb701aa32101ae019a12a3574b250a87e9">https://gitlab.gnome.org/GNOME/mutter/-/archive/3.36.1/mutter-3.36.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>clutter</Dependency>
+                <Dependency>zenity</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/mutter/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mutter</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>clutter</Dependency>
+                <Dependency>zenity</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libcanberra-gtk3</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+                <Dependency>clutter-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg/menus</Path>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>mutter-devel</Name>
+            <Summary xml:lang="tr">mutter için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">mutter</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.36.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gvfs</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">New generation gnome-virtual-file-system</Summary>
+            <Summary xml:lang="tr">Yeni nesil GNOME sanal dosya sistemi</Summary>
+            <Description xml:lang="en">GVFS is a userspace virtual filesystem designed to work with the I/O abstractions, especially HAL. It supports fuse for directly access for GVFS mounts. It installs several modules and backends that are automatically used by applications.</Description>
+            <Description xml:lang="tr">GVFS I/O soyutlamaları, özellikle HAL, için geliştirilmiş, sistem tabanlı bir sanal dosya sistemidir. Doğrudan fuse ile birlikle kendi bağlamlarına erişmesini destekler. GVFS, birçok modül ve sitem servisini uygulamaların otomatik kullanması için yükler.</Description>
+            <Archive sha1sum="b79b5d98caf088987884b9d4f076a2afd4bf9181">mirrors://gnome/gvfs/1.42/gvfs-1.42.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>elogind-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+                <Dependency>libarchive-devel</Dependency>
+                <Dependency>libcdio-devel</Dependency>
+                <Dependency>libimobiledevice-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>udisks</Dependency>
+                <Dependency>gcr-devel</Dependency>
+                <Dependency>openssh</Dependency>
+                <Dependency>libcdio-paranoia-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gvfs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gvfs</Name>
+            <Summary xml:lang="en">gvfs package contains all GVFS backends and translations files</Summary>
+            <RuntimeDependencies>
+                <Dependency>libimobiledevice</Dependency>
+                <Dependency>libcdio-paranoia</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>elogind</Dependency>
+                <Dependency>gcr</Dependency>
+                <Dependency>libarchive</Dependency>
+                <Dependency>gsettings-desktop-schemas</Dependency>
+                <Dependency>libcdio</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>udisks</Dependency>
+                <Dependency>openssh</Dependency>
+                <Dependency>gsettings-desktop-schemas</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/profile.d</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gvfs-devel</Name>
+            <Summary xml:lang="en">Development files for gvfs</Summary>
+            <Summary xml:lang="tr">gvfs için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gvfs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>1.42.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-panel</Name>
+            <Homepage>https://live.gnome.org/GnomePanel</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">GNOME panel</Summary>
+            <Summary xml:lang="tr">GNOME paneli</Summary>
+            <Description xml:lang="en">GNOME panel is located in the edge of screen that provides contains widgets such as application launcher, cpu monitor and workspace switcher.</Description>
+            <Description xml:lang="tr">GNOME paneli ekranın kenarlarında bulunur ve  programcıkları (işlemci yükü, program başlatıcısı, çalışma alanı değiştiricisi gibi) barındırmayı sağlar.</Description>
+            <Archive sha1sum="8d8c2a7d8f02c65d9b63e3b468bc16924e8e853b">https://gitlab.gnome.org/GNOME/gnome-panel/-/archive/3.36.1/gnome-panel-3.36.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>dconf-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gnome-menus-devel</Dependency>
+                <Dependency>libgweather-devel</Dependency>
+                <Dependency>gnome-desktop-devel</Dependency>
+                <Dependency>docbook-xml</Dependency>
+                <Dependency>gnome-common</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>gnome-panel-3.32.0-support-elogind.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/gnome/base/gnome-panel/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-panel</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libical</Dependency>
+                <Dependency>gnome-menus</Dependency>
+                <Dependency>libgweather</Dependency>
+                <Dependency>gnome-desktop</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/gnome-2.0</Path>
+                <Path fileType="data">/usr/share/gnome-panel</Path>
+                <Path fileType="data">/usr/share/gnome-panelrc</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/idl</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gnome-panel-docs</Name>
+            <Summary xml:lang="en">Reference documents for gnome-panel</Summary>
+            <Summary xml:lang="tr">gnome-panel için başvuru belgeleri</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gnome-panel-devel</Name>
+            <Summary xml:lang="en">Development files for gnome-panel</Summary>
+            <Summary xml:lang="tr">gnome-panel için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gnome-panel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="header">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.36.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gconf</Name>
+            <Homepage>http://projects.gnome.org/gconf</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Gnome Configuration System</Summary>
+            <Description xml:lang="en">gconf is a Gnome Configuration System.</Description>
+            <Archive type="tarxz" sha1sum="a90d3ac08dc454f927c8d3024f52d4d57e3ff613">mirrors://gnome/GConf/3.2/GConf-3.2.6.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>openldap-client</Dependency>
+                <Dependency>orbit2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">GConf-2.18.0.1-reload.patch</Patch>
+                <Patch level="1">fedora/GConf-gettext.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/gnome/base/gconf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gconf</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>openldap-client</Dependency>
+                <Dependency>orbit2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/sgml</Path>
+                <Path fileType="data">/usr/share/polkit-1/actions</Path>
+                <Path fileType="data">/usr/share/GConf</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/gconf/2/path" permission="0644" owner="root">gconf2.path</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>gconf-docs</Name>
+            <Summary xml:lang="en">GConf reference documents</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gconf-devel</Name>
+            <Summary xml:lang="en">Development files for gconf</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gconf</Dependency>
+                <Dependency>orbit2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-15</Date>
+                <Version>2.32.4</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tracker-miners</Name>
+            <Homepage>http://projects.gnome.org/gexiv2/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Gnome tracker library</Summary>
+            <Description xml:lang="en">Tracker is an efficient search engine and triplestore for desktop, embedded and mobile.</Description>
+            <Archive sha1sum="351ceb9ea160b8e61b750b92589f1b5b361923cb">https://gitlab.gnome.org/GNOME/tracker-miners/-/archive/2.3.3/tracker-miners-2.3.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>libseccomp-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/tracker-miners/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tracker-miners</Name>
+            <RuntimeDependencies>
+                <Dependency>json-glib</Dependency>
+                <Dependency>tracker</Dependency>
+                <Dependency>libseccomp</Dependency>
+                <Dependency>libsoup</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>2.3.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gsettings-desktop-schemas</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Collection of GSettings schemas for GNOME desktop</Summary>
+            <Description xml:lang="en">Gsettings-desktop-schemas contains a collection of GSettings schemas for settings shared by various components of a desktop.</Description>
+            <Archive type="zip" sha1sum="5a958efc366bbc9b5279681e7106945f043a2983">https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/archive/3.34.0/gsettings-desktop-schemas-3.34.0.zip</Archive>
+            <SourceURI>desktop/gnome/base/gsettings-desktop-schemas/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gsettings-desktop-schemas</Name>
+            <Files>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gsettings-desktop-schemas-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">gsettings-desktop-schemas</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share/pkgconfig/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.0.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>orbit2</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">High-performance CORBA ORB</Summary>
+            <Description xml:lang="en">Orbit2 allows to communication between two programs objects.</Description>
+            <Archive type="tarbz2" sha1sum="76074570d3fc08d4e62d37f02023fe1af3b7be3f">mirrors://gnome/ORBit2/2.14/ORBit2-2.14.18.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libIDL-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/orbit2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>orbit2</Name>
+            <RuntimeDependencies>
+                <Dependency>libIDL</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/idl</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>orbit2-devel</Name>
+            <Summary xml:lang="en">Development files for orbit2</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">orbit2</Dependency>
+                <Dependency>libIDL-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/orbit2-config</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/*.a</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>orbit2-docs</Name>
+            <Summary xml:lang="en">ORBit2 reference documents</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-15</Date>
+                <Version>2.14.18</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>yelp-tool</Name>
             <Homepage>http:/live.gnome.org/Yelp</Homepage>
             <Packager>
@@ -46610,7 +47978,7 @@ functionality to build high-performing, platform-independent programs.</Descript
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
-            <PartOf>desktop.gnome3.base</PartOf>
+            <PartOf>desktop.gnome.base</PartOf>
             <Summary xml:lang="en">Help viewer for GNOME desktop</Summary>
             <Description xml:lang="en">Yelp is a help viewer which serves as a DocBook viewer, a man page viewer, and an info page viewer.</Description>
             <Archive sha1sum="a756401f7859bb1fdf809743ef999d9b3b365a1c">https://github.com/GNOME/yelp-tools/archive/3.32.2.tar.gz</Archive>
@@ -46649,6 +48017,92 @@ functionality to build high-performing, platform-independent programs.</Descript
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gnome-desktop</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Basic GNOME libraries and dialogs</Summary>
+            <Description xml:lang="en">gnome-desktop contains basic GNOME libraries and information applications.</Description>
+            <Archive type="tarxz" sha1sum="8faf1084c976cccc2e973a48ef0fa314d6606323">mirrors://gnome/gnome-desktop/3.32/gnome-desktop-3.32.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gnome-doc-utils</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>xkeyboard-config</Dependency>
+                <Dependency>iso-codes</Dependency>
+                <Dependency>docbook-xml</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gnome-desktop/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-desktop</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>libXrandr</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/gnome-about</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/libgnome-desktop-3.0</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gnome-desktop-docs</Name>
+            <Summary xml:lang="en">Documentary files for gnome-desktop</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gnome-desktop-devel</Name>
+            <Summary xml:lang="en">Development files for gnome-desktop</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gnome-desktop</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-24</Date>
+                <Version>3.32.2</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>zenity</Name>
             <Homepage>http://www.gnome.org</Homepage>
             <Packager>
@@ -46657,7 +48111,7 @@ functionality to build high-performing, platform-independent programs.</Descript
             </Packager>
             <License>LGPLv2</License>
             <IsA>app:gui</IsA>
-            <PartOf>desktop.gnome3.base</PartOf>
+            <PartOf>desktop.gnome.base</PartOf>
             <Summary xml:lang="en">A rewrite of gdialog</Summary>
             <Summary xml:lang="tr">Gdialog&apos;un yeniden yazılmış hali</Summary>
             <Description xml:lang="en">Zenity is the GNOME port of dialog which allows you to display dialog boxes from the commandline and shell scripts.</Description>
@@ -46692,6 +48146,442 @@ functionality to build high-performing, platform-independent programs.</Descript
             <Update release="1">
                 <Date>2019-09-18</Date>
                 <Version>2.32.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>totem-pl-parser</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Totem playlist parser</Summary>
+            <Description xml:lang="en">Totem is a library that parse and save playlists, as used in music and movie players.</Description>
+            <Archive type="tarbz2" sha1sum="d3616c1c56cb51708c620ffd822f38e8663bd088">https://gitlab.gnome.org/GNOME/totem-pl-parser/-/archive/V_3_26_3/totem-pl-parser-V_3_26_3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gmime-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>libsoup-gnome</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/totem-pl-parser/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>totem-pl-parser</Name>
+            <RuntimeDependencies>
+                <Dependency>gmime</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libsoup-gnome</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>totem-pl-parser-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">totem-pl-parser</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-15</Date>
+                <Version>3.26.3</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-video-effects</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">Gnome video-effects</Summary>
+            <Description xml:lang="en">The GNOME Video Effects package contains a collection of GStreamer effects.</Description>
+            <Archive type="tarxz" sha1sum="40a729136da028ffea343d57fd7810c0dfb35d28">mirrors://gnome/gnome-video-effects/0.5/gnome-video-effects-0.5.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/base/gnome-video-effect/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-video-effects</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg/video-effects</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-24</Date>
+                <Version>3.32.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gedit</Name>
+            <Homepage>http://www.gnome.org</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.app</PartOf>
+            <Summary xml:lang="en">Default text editor for GNOME</Summary>
+            <Summary xml:lang="tr">GNOME için öntanımlı metin editörü</Summary>
+            <Description xml:lang="en">gedit is a small and lightweight text editor for the GNOME environment.</Description>
+            <Description xml:lang="tr">gedit, GNOME ortamı için küçük ve hafif bir metin editörüdür.</Description>
+            <Archive sha1sum="60f0213d09e443042f8dfb43a71ae646cc4360bd">http://deb.debian.org/debian/pool/main/g/gedit/gedit_3.36.1.orig.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>enchant-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtksourceview-devel</Dependency>
+                <Dependency>iso-codes</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gnome-common</Dependency>
+                <Dependency>gnome-doc-utils</Dependency>
+                <Dependency>docbook-xml</Dependency>
+                <Dependency>tepl</Dependency>
+                <Dependency>gspell-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/app/gedit/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gedit</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>enchant</Dependency>
+                <Dependency>tepl</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gnome-doc-utils</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtksourceview</Dependency>
+                <Dependency>iso-codes</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gspell</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/share/vala</Path>
+                <Path fileType="library">/usr/share/dbus-1</Path>
+                <Path fileType="library">/usr/share/glib-2.0</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/gedit</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/gtk-doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.36.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>file-roller</Name>
+            <Homepage>http://fileroller.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.app</PartOf>
+            <Summary xml:lang="en">GNOME archive manager</Summary>
+            <Summary xml:lang="tr">GNOME arşiv yöneticisi</Summary>
+            <Description xml:lang="en">File-manager is a archive manager that create, modify and extract various archive formats with compression support</Description>
+            <Description xml:lang="tr">File-roller çeşitli arşiv dosyalarını sıkıştırma desteği ile oluşturan, açan, düzenleyen bir arşiv yönetim uygulamasıdır.</Description>
+            <Archive sha1sum="b51e32c0b8fc020232947771886ed0d998fa4ff8">https://gitlab.gnome.org/GNOME/file-roller/-/archive/3.36.1/file-roller-3.36.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>nautilus-devel</Dependency>
+                <Dependency>gnome-doc-utils</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/app/file-roller/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>file-roller</Name>
+            <RuntimeDependencies>
+                <Dependency>gconf</Dependency>
+                <Dependency>nautilus</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/file-roller</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+                <Path fileType="data">/usr/share/GConf</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/dbus-1/services</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.36.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gnome-terminal</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.app</PartOf>
+            <Summary xml:lang="en">Terminal emulation application for the GNOME desktop.</Summary>
+            <Summary xml:lang="tr">GNOME masaüstü için terminal emülasyon uygulaması</Summary>
+            <Description xml:lang="en">GNOME terminal is a emulation application that designed to run xterm, VT102 and VT220</Description>
+            <Description xml:lang="tr">GNOME terminal; xterm, VT102 xterm ile çalışacak şekilde tasarlanan bir terminal emülasyon uygulamasıdır.</Description>
+            <Archive sha1sum="2f354c5d987f87b144236874d614a49a71632a7e">https://gitlab.gnome.org/GNOME/gnome-terminal/-/archive/3.36.1.1/gnome-terminal-3.36.1.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>vte3</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>gnome-doc-utils</Dependency>
+                <Dependency>docbook-xml</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>dconf-devel</Dependency>
+                <Dependency>gnome-common</Dependency>
+                <Dependency>libpcre2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/app/gnome-terminal/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gnome-terminal</Name>
+            <RuntimeDependencies>
+                <Dependency>vte3</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>startup-notification</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>dconf</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libpcre2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="data">/etc/xdg</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/gnome-terminal</Path>
+                <Path fileType="data">/usr/share/gnome</Path>
+                <Path fileType="data">/usr/share/omf</Path>
+                <Path fileType="data">/usr/share/help</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/xdg/autostart/gnome-terminal-daemon.desktop" permission="0755" owner="root">gnome-terminal-daemon.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/bin/gnome-terminal-daemon" permission="0755" owner="root">gnome-terminal-daemon</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.36.1</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>nautilus</Name>
+            <Homepage>http://projects.gnome.org/nautilus/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.gnome.app</PartOf>
+            <Summary xml:lang="en">Default file manager for the GNOME desktop</Summary>
+            <Summary xml:lang="tr">GNOME masasütü için öntanımlı dosya yöneticisi</Summary>
+            <Description xml:lang="en">Nautilus is a file manager that allows to browse directories, preview files and launch applications.</Description>
+            <Description xml:lang="tr">Nautilus; dizinlerde gezinmeyi, dosyaları gözatmayı ve uygulamalar başlatmayı sağlayan bir dosya yöneticisidir.</Description>
+            <Icon>nautilus</Icon>
+            <Archive type="tarxz" sha1sum="edc5b7d9a2693527969b3d04d38260e37f448b46">http://ftp.gnome.org/pub/gnome/sources/nautilus/3.35/nautilus-3.35.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gnome-desktop-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>orc-devel</Dependency>
+                <Dependency>gnome-autoar-devel</Dependency>
+                <Dependency>xkeyboard-config</Dependency>
+                <Dependency>iso-codes</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>tracker-devel</Dependency>
+                <Dependency>tracker-miners</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/gnome/app/nautilus/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>nautilus</Name>
+            <RuntimeDependencies>
+                <Dependency>tracker-miners</Dependency>
+                <Dependency>gnome-desktop</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>gvfs</Dependency>
+                <Dependency>gnome-themes</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>tracker</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="data">/usr/share/nautilus</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/GConf</Path>
+                <Path fileType="data">/usr/share/gnome-shell</Path>
+                <Path fileType="data">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>nautilus-devel</Name>
+            <Summary xml:lang="en">Development files for nautilus</Summary>
+            <Summary xml:lang="tr">Nautilus için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">nautilus</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="man">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.35.2</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -50708,6 +52598,89 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libgweather</Name>
+            <Homepage>https://live.gnome.org/LibGWeather</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.library</PartOf>
+            <Summary xml:lang="en">GNOME weather library</Summary>
+            <Summary xml:lang="tr">GNOME hava durumu kütüphanesi</Summary>
+            <Description xml:lang="en">libgweather is a library to access weather information from online services for numerous locations.</Description>
+            <Archive sha1sum="9aa24fe549c4c99dcf88474a3b654b04621d1290">https://gitlab.gnome.org/GNOME/libgweather/-/archive/3.36.0/libgweather-3.36.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>geocode-glib-devel</Dependency>
+                <Dependency>libproxy-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/library/libgweather/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libgweather</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>geocode-glib</Dependency>
+                <Dependency>gconf</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libsoup-gnome</Dependency>
+                <Dependency>libproxy</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/gconf</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/libgweather</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/vala</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgweather-docs</Name>
+            <Summary xml:lang="en">libgweather reference documents</Summary>
+            <Summary xml:lang="tr">libgweather referans dokümanları</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgweather-devel</Name>
+            <Summary xml:lang="en">Development files for libgweather</Summary>
+            <Summary xml:lang="tr">libgweather için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">libgweather</Dependency>
+                <Dependency>gconf-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>3.26.0</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>polkit-gnome</Name>
             <Homepage>http://hal.freedesktop.org/docs/polkit</Homepage>
             <Packager>
@@ -51764,6 +53737,53 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Version>2.32.0</Version>
                 <Comment>First release</Comment>
                 <Name>Suleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>accountsservice</Name>
+            <Homepage>http://www.freedesktop.org/</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.misc</PartOf>
+            <Summary xml:lang="en">D-Bus Service to Manipulate User Account Information</Summary>
+            <Description xml:lang="en">accountsservice server provides a set of D-Bus interfaces for querying and manipulating user account information.</Description>
+            <Archive sha1sum="bab4f37144196d8ba06195bc72b4a9937c62b9fd">http://www.freedesktop.org/software/accountsservice/accountsservice-0.6.55.tar.xz</Archive>
+            <SourceURI>desktop/misc/accountsservice/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>accountsservice</Name>
+            <Files>
+                <Path fileType="config">/etc/dbus-1</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/var/lib/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>accountsservice-devel</Name>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-18</Date>
+                <Version>0.6.55</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
             </Update>
         </History>
@@ -56199,6 +58219,61 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gspell</Name>
+            <Homepage>http://gtkspell.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">a flexible API to implement the spell checking in a GTK+ application</Summary>
+            <Description xml:lang="en">a flexible API to implement the spell checking in a GTK+ application</Description>
+            <Archive sha1sum="b66df305440428417e1e23f05ab3937e445c7f28">https://gitlab.gnome.org/GNOME/gspell/-/archive/1.8.3/gspell-1.8.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/gspell/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gspell</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="data">/usr/share/vala/vapi</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gspell-devel</Name>
+            <Summary xml:lang="en">Development files for gtkspell</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-11</Date>
+                <Version>1.8.13</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>pangomm</Name>
             <Homepage>http://www.gtkmm.org/</Homepage>
             <Packager>
@@ -57423,6 +59498,57 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Update release="1">
                 <Date>2020-01-08</Date>
                 <Version>2.6.7</Version>
+                <Comment>First release</Comment>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>amtk</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/amtk</Homepage>
+            <Packager>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">Actions, Menus and Toolbars Kit for GTK+ applications</Summary>
+            <Description xml:lang="en">gActions, Menus and Toolbars Kit for GTK+ applications</Description>
+            <Archive sha1sum="d147bf0d6ed2f0f6a1abcfc87a1eb73837a2cc73">https://gitlab.gnome.org/GNOME/amtk/-/archive/5.0.2/amtk-5.0.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/amtk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>amtk</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>amtk-devel</Name>
+            <Summary xml:lang="en">Development files for gtkmm2</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-09</Date>
+                <Version>5.0.2</Version>
                 <Comment>First release</Comment>
                 <Name>Süleyman Poyraz</Name>
                 <Email>zaryob.dev@gmail.com</Email>
@@ -69267,6 +71393,13 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2019-10-10</Date>
+                <Version>3.0.1</Version>
+                <Comment>Fix dev sys proc</Comment>
+                <Name>Ali Rıza KESKİN</Name>
+                <Email>parduscix@yandex.ru</Email>
+            </Update>
             <Update release="5">
                 <Date>2019-10-10</Date>
                 <Version>3.0.1</Version>
@@ -78176,458 +80309,6 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Update>
         </History>
     </SpecFile>
-    <Package>
-        <Name>engrampa</Name>
-        <Summary xml:lang="en">Engrampa is an archive manager for the MATE environment.</Summary>
-        <Description xml:lang="en">Engrampa is an archive manager for the MATE environment.  This means that you can create and modify archives; view the content of an archive; view and modify a file contained in the archive; extract files from the archive.</Description>
-        <IsA>app:gui</IsA>
-        <PartOf>desktop.mate.base</PartOf>
-        <License>GPLv3</License>
-        <Icon>engrampa</Icon>
-        <RuntimeDependencies>
-            <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>caja</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>json-glib</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2019-09-18</Date>
-                <Version>1.24.0</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>13646443</InstalledSize>
-        <PackageSize>1104936</PackageSize>
-        <PackageHash>dec5726b20ec082b7b2c37333150ce293cff7787</PackageHash>
-        <InstallTarHash>b7d55bb44bc03a2be468d75e1871b1f980788e2e</InstallTarHash>
-        <PackageURI>desktop/mate/base/engrampa/engrampa-1.24.0-1-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>engrampa</Name>
-            <Homepage>http://www.mate-desktop.org</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>engrampa-dbginfo</Name>
-        <Summary xml:lang="en">Debug files for engrampa</Summary>
-        <Description xml:lang="en">Debug files for engrampa</Description>
-        <IsA>app:gui</IsA>
-        <PartOf>dbginfo</PartOf>
-        <License>GPLv3</License>
-        <Icon>engrampa</Icon>
-        <RuntimeDependencies>
-            <Dependency release="1">engrampa</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2019-09-18</Date>
-                <Version>1.24.0</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>41600</InstalledSize>
-        <PackageSize>15951</PackageSize>
-        <PackageHash>63436299726a8dbc163004dd15f0a9203e74362d</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>desktop/mate/base/engrampa/engrampa-dbginfo-1.24.0-1-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>engrampa</Name>
-            <Homepage>http://www.mate-desktop.org</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>mate-panel</Name>
-        <Summary xml:lang="en">GNOME panel</Summary>
-        <Summary xml:lang="tr">Mate paneli</Summary>
-        <Description xml:lang="en">GNOME panel is located in the edge of screen that provides contains widgets such as application launcher, cpu monitor and workspace switcher.</Description>
-        <Description xml:lang="tr">Mate paneli ekranın kenarlarında bulunur ve  programcıkları (işlemci yükü, program başlatıcısı, çalışma alanı değiştiricisi gibi) barındırmayı sağlar.</Description>
-        <IsA>app:gui</IsA>
-        <PartOf>desktop.mate.base</PartOf>
-        <License>GPLv2</License>
-        <Icon>mate-panel</Icon>
-        <RuntimeDependencies>
-            <Dependency>atk</Dependency>
-            <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libSM</Dependency>
-            <Dependency>libICE</Dependency>
-            <Dependency>librsvg</Dependency>
-            <Dependency>libwnck3</Dependency>
-            <Dependency>libXrandr</Dependency>
-            <Dependency>mate-menus</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>mate-desktop</Dependency>
-            <Dependency>libmateweather</Dependency>
-            <Dependency>dbus-glib</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2019-09-18</Date>
-                <Version>1.24.0</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>14680006</InstalledSize>
-        <PackageSize>1762026</PackageSize>
-        <PackageHash>16b213af1b4d964924ca655642613673305d2e46</PackageHash>
-        <InstallTarHash>58c723a3a1f7f65297845adfa5fe3f444a4de4b8</InstallTarHash>
-        <PackageURI>desktop/mate/base/mate-panel/mate-panel-1.24.0-1-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>mate-panel</Name>
-            <Homepage>http://www.mate-desktop.org</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>mate-panel-dbginfo</Name>
-        <Summary xml:lang="en">Debug files for mate-panel</Summary>
-        <Description xml:lang="en">Debug files for mate-panel</Description>
-        <IsA>app:gui</IsA>
-        <PartOf>dbginfo</PartOf>
-        <License>GPLv2</License>
-        <Icon>mate-panel</Icon>
-        <RuntimeDependencies>
-            <Dependency release="1">mate-panel</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2019-09-18</Date>
-                <Version>1.24.0</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>255048</InstalledSize>
-        <PackageSize>75168</PackageSize>
-        <PackageHash>78a008bf35988b663b5cd12fad89fcc50bf056ba</PackageHash>
-        <InstallTarHash>4e1ad912f8e0baeff82787a17eaacf7e6abfc55b</InstallTarHash>
-        <PackageURI>desktop/mate/base/mate-panel/mate-panel-dbginfo-1.24.0-1-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>mate-panel</Name>
-            <Homepage>http://www.mate-desktop.org</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>gst-python3</Name>
-        <Summary xml:lang="en">GStreamer Python3 bindings</Summary>
-        <Summary xml:lang="tr">GStreamer Python bağlayıcıları</Summary>
-        <Description xml:lang="en">gst-python3 is a Python frontend to GStreamer.</Description>
-        <Description xml:lang="tr">gst-python3 GStreamer için Python arabirimidir.</Description>
-        <IsA>library</IsA>
-        <PartOf>programming.language.python</PartOf>
-        <License>LGPLv2.1</License>
-        <RuntimeDependencies>
-            <Dependency>pygobject3</Dependency>
-            <Dependency>gstreamer</Dependency>
-            <Dependency>gst-plugins-base</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>Dependency fix</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>73172</InstalledSize>
-        <PackageSize>17242</PackageSize>
-        <PackageHash>e1318f8a0ec6171666571b7099a128739c1174a6</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>programming/language/python/gst-python/gst-python3-1.16.2-2-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>gst-python3</Name>
-            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>gst-python3-dbginfo</Name>
-        <Summary xml:lang="en">Debug files for gst-python3</Summary>
-        <Description xml:lang="en">Debug files for gst-python3</Description>
-        <IsA>library</IsA>
-        <PartOf>dbginfo</PartOf>
-        <License>LGPLv2.1</License>
-        <RuntimeDependencies>
-            <Dependency release="2">gst-python3</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>Dependency fix</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>87256</InstalledSize>
-        <PackageSize>31209</PackageSize>
-        <PackageHash>985bd211ce71cc5548a342922c3c39b02fedb157</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>programming/language/python/gst-python/gst-python3-dbginfo-1.16.2-2-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>gst-python3</Name>
-            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>gst-python</Name>
-        <Summary xml:lang="en">GStreamer Python3 bindings</Summary>
-        <Summary xml:lang="tr">GStreamer Python bağlayıcıları</Summary>
-        <Description xml:lang="en">gst-python3 is a Python frontend to GStreamer.</Description>
-        <Description xml:lang="tr">gst-python3 GStreamer için Python arabirimidir.</Description>
-        <IsA>library</IsA>
-        <PartOf>programming.language.python</PartOf>
-        <License>LGPLv2.1</License>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-            <Dependency>pygobject3</Dependency>
-            <Dependency>gstreamer</Dependency>
-            <Dependency>gst-plugins-base</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>Dependency fix</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>72796</InstalledSize>
-        <PackageSize>17127</PackageSize>
-        <PackageHash>fed3db52a040ce499fedf2b85855d807e2c046fb</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>programming/language/python/gst-python/gst-python-1.16.2-2-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>gst-python3</Name>
-            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>gst-python-dbginfo</Name>
-        <Summary xml:lang="en">Debug files for gst-python</Summary>
-        <Description xml:lang="en">Debug files for gst-python</Description>
-        <IsA>library</IsA>
-        <PartOf>dbginfo</PartOf>
-        <License>LGPLv2.1</License>
-        <RuntimeDependencies>
-            <Dependency release="2">gst-python</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>Dependency fix</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-09</Date>
-                <Version>1.16.2</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>77320</InstalledSize>
-        <PackageSize>27908</PackageSize>
-        <PackageHash>61a85ebb57a0ba69a1978d06762a06b6fa8f089e</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>programming/language/python/gst-python/gst-python-dbginfo-1.16.2-2-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>gst-python3</Name>
-            <Homepage>http://gstreamer.freedesktop.org/modules/gst-python.html</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>texlive-devel</Name>
-        <Summary xml:lang="en">Development files for texlive-bin</Summary>
-        <Description xml:lang="en">Texlive is an essential part of TeXLive component.</Description>
-        <IsA>data:doc</IsA>
-        <PartOf>programming.devel</PartOf>
-        <License>GPLv2</License>
-        <RuntimeDependencies>
-            <Dependency release="1">texlive</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2019-09-18</Date>
-                <Version>2019.0605</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>252042</InstalledSize>
-        <PackageSize>54055</PackageSize>
-        <PackageHash>4832c900b8dc112220d67da6c039746067e17c8b</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>programming/texlive/texlive-devel-2019.0605-1-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>texlive</Name>
-            <Homepage>http://www.tug.org/texlive</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>texlive</Name>
-        <Summary xml:lang="en">Tex Live binaries</Summary>
-        <Description xml:lang="en">Texlive is an essential part of TeXLive component.</Description>
-        <IsA>data:doc</IsA>
-        <PartOf>programming</PartOf>
-        <License>GPLv2</License>
-        <RuntimeDependencies>
-            <Dependency>zziplib</Dependency>
-            <Dependency>gd</Dependency>
-            <Dependency>icu4c</Dependency>
-            <Dependency>libXt</Dependency>
-            <Dependency>t1lib</Dependency>
-            <Dependency>ffcall</Dependency>
-            <Dependency>libXaw</Dependency>
-            <Dependency>libXmu</Dependency>
-            <Dependency>libXpm</Dependency>
-            <Dependency>libsigsegv</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="1">
-                <Date>2019-09-18</Date>
-                <Version>2019.0605</Version>
-                <Comment>First release</Comment>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>localhost</BuildHost>
-        <Distribution>Sulin</Distribution>
-        <DistributionRelease>2019</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>170482853</InstalledSize>
-        <PackageSize>28411771</PackageSize>
-        <PackageHash>a2a1db96116a04e56083643e97f7f90f647b36b6</PackageHash>
-        <InstallTarHash>18715e40fbd99357fbe565692f6b41f9c8c3a37f</InstallTarHash>
-        <PackageURI>programming/texlive/texlive-2019.0605-1-s19-x86_64.inary</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>texlive</Name>
-            <Homepage>http://www.tug.org/texlive</Homepage>
-            <Packager>
-                <Name>Süleyman Poyraz</Name>
-                <Email>zaryob.dev@gmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
     <Component>
         <Name>system</Name>
         <LocalName xml:lang="en">system</LocalName>

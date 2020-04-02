@@ -12,8 +12,11 @@ from inary.actionsapi import shelltools
 shelltools.export("HOME", get.workDIR())
 
 def setup():
-    autotools.autogen()
-    autotools.configure(" --disable-schemas-compile --enable-compile-warnings=minimum ")
+    shelltools.export("SYSTEMD_LIBS","-lelogind")
+    shelltools.export("SYSTEMD_CFLAGS","-I/usr/include/elogind")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure(" --disable-schemas-compile --enable-compile-warnings=minimum \
+	--without-systemd")
 
 def build():
     autotools.make()

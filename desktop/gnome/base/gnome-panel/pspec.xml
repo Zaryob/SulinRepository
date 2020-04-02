@@ -32,6 +32,9 @@
             <Dependency>docbook-xml</Dependency>
             <Dependency>gnome-common</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>gnome-panel-3.32.0-support-elogind.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -46,12 +49,12 @@
             <Dependency>libSM</Dependency>
             <Dependency>libICE</Dependency>
             <Dependency>librsvg</Dependency>
-            <Dependency>libwnck</Dependency>
+            <Dependency>libwnck3</Dependency>
             <Dependency>libXrandr</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libical</Dependency>
-            <Dependency>telepathy-glib</Dependency>
-            <Dependency>evolution-data-server</Dependency>
+            <!--Dependency>telepathy-glib</Dependency>
+            <Dependency>evolution-data-server</Dependency-->
             <Dependency>gnome-menus</Dependency>
             <Dependency>libgweather</Dependency>
             <Dependency>gnome-desktop</Dependency>
@@ -64,6 +67,7 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/gnome-2.0</Path>
