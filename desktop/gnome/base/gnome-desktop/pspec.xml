@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Basic GNOME libraries and dialogs</Summary>
         <Description>gnome-desktop contains basic GNOME libraries and information applications.</Description>
-        <Archive sha1sum="8faf1084c976cccc2e973a48ef0fa314d6606323" type="tarxz">mirrors://gnome/gnome-desktop/3.32/gnome-desktop-3.32.2.tar.xz</Archive>
+        <Archive sha1sum="d929441088446f421142dd9165734d8811578773" >https://gitlab.gnome.org/GNOME/gnome-desktop/-/archive/3.36.1/gnome-desktop-3.36.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
@@ -79,6 +79,13 @@
     </Package>
 
     <History>
+            <Update release="2">
+            <Date>2019-10-24</Date>
+            <Version>3.36.1</Version>
+            <Comment>Update</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-24</Date>
             <Version>3.32.2</Version>

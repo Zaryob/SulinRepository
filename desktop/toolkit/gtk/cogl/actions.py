@@ -14,17 +14,16 @@ from inary.actionsapi import get
 # NoStrip = "/"
 
 def setup():
-    autotools.configure(" --enable-introspection \
-    --enable-egl-backend \
-    --enable-gdk-backend \
-    --enable-wayland-backend \
-    --enable-x11-backend \
-    --enable-evdev-input \
-    --enable-wayland-compositor \
-    --enable-gtk-doc ")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure("--enable-egl-backend        \
+            --enable-evdev-input        \
+            --enable-wayland-backend    \
+            --enable-wayland-composito\
+            --disable-gtk-doc --disable-docs --disable-gtk-doc-html")
 
 def build():
     autotools.make()
 
 def install():
     autotools.rawInstall('DESTDIR=%s INSTALL="install -p -c"' % get.installDIR())
+

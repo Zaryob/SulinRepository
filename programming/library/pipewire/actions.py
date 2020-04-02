@@ -11,12 +11,9 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("-Dselinux=false  \
-    -Dprofiler=false \
-    -D egl_device=true \
-    -D wayland_eglstream=true \
-    -D xwayland_initfd=disabled \
-    -D installed_tests=false")
+    mesontools.meson_configure(" -Djack=false            \
+      -Dpipewire-jack=false   \
+      -Dvulkan=false ")
 
 def build():
     mesontools.ninja_build()

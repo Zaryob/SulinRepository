@@ -1,0 +1,14 @@
+
+<INARY>
+    <Source>
+        <Name>gnome-settins-daemon</Name>
+        <Summary xml:lang="tr">GNOME masaüstü için sistem ayar yöneticisi</Summary>
+        <Description xml:lang="tr">gnome-settings-daemon GNOME'a özgü ayarları diğer programlara DBus bağlantısı aracılığıyla paylaştırır.</Description>
+    </Source>
+
+    <Package>
+        <Name>gnome-settings-daemon-devel</Name>
+        <Summary xml:lang="tr">gnome-settings-daemon için geliştirme dosyaları</Summary>
+    </Package>
+</INARY>
+

@@ -1,0 +1,97 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-settings-daemon</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <Summary>System settings daemon for GNOME desktop</Summary>
+        <Description>gnome-settings-daemon shares GNOME specific settings with other applications via DBus connection.</Description>
+        <Archive sha1sum="b68a31c9baf1ca2940b06739cac81dcb1050f59c" >http://ftp.acc.umu.se/pub/gnome/sources/gnome-settings-daemon/3.36/gnome-settings-daemon-3.36.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>nspr-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-settings-daemon</Name>
+        <RuntimeDependencies>
+            <Dependency>libwacom</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+            <Package>gtk-qt-engine</Package>
+            <Package>gtk-qt-engine-kde4</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="config">/lib/udev</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gnome-control-center</Path>
+            <Path fileType="data">/usr/share/gnome-settings-daemon</Path>
+            <Path fileType="data">/usr/share/gnome-settings-daemon-3.0</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-settings-daemon-devel</Name>
+        <Summary>Development files for gnome-settings-daemon</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-settings-daemon</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

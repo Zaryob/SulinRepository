@@ -12,7 +12,7 @@
         <Isa>data</Isa>
         <Summary>Collection of GSettings schemas for GNOME desktop</Summary>
         <Description>Gsettings-desktop-schemas contains a collection of GSettings schemas for settings shared by various components of a desktop.</Description>
-        <Archive sha1sum="5a958efc366bbc9b5279681e7106945f043a2983" type="zip">https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/archive/3.34.0/gsettings-desktop-schemas-3.34.0.zip</Archive>
+        <Archive sha1sum="47480919add20e527a9cb8d9cb7a70f0f71ca5b1">https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas/-/archive/3.36.0/gsettings-desktop-schemas-3.36.0.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -37,6 +37,13 @@
     </Package>
 
     <History>
+            <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.0.1</Version>

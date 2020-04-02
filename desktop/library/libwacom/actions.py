@@ -12,11 +12,7 @@ from inary.actionsapi import get
 
 def setup():
     mesontools.meson_configure("-Dselinux=false  \
-    -Dprofiler=false \
-    -D egl_device=true \
-    -D wayland_eglstream=true \
-    -D xwayland_initfd=disabled \
-    -D installed_tests=false")
+    -D packagekit=false")
 
 def build():
     mesontools.ninja_build()

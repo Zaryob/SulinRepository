@@ -23,6 +23,7 @@
             <Dependency>pango-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>clutter</Dependency>
+            <Dependency>graphene-devel</Dependency>
             <Dependency>zenity</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
@@ -44,6 +45,7 @@
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
             <Dependency>mesa</Dependency>
+            <Dependency>graphene</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>libSM</Dependency>
