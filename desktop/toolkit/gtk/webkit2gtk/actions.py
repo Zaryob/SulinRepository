@@ -6,6 +6,7 @@
 
 from inary.actionsapi import get
 from inary.actionsapi import cmaketools
+from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
@@ -24,13 +25,13 @@ def setup():
       -DUSE_WOFF2=OFF             \
       -DUSE_WPE_RENDERER=OFF      \
       -DENABLE_BUBBLEWRAP_SANDBOX=OFF \
-      -Wno-dev")
+      -Wno-dev -G Ninja")
 
 def build():
-    cmaketools.make()
+    mesontools.meson_build()
 
 def install():
-    cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
+    mesontools.ninja_nstall("DESTDIR=%s" % get.installDIR())
 
     inarytools.dodoc("NEWS")
     shelltools.cd("Source")
