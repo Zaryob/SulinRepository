@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>Default file manager for the GNOME desktop</Summary>
         <Description>Nautilus is a file manager that allows to browse directories, preview files and launch applications.</Description>
-        <Archive sha1sum="edc5b7d9a2693527969b3d04d38260e37f448b46" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/nautilus/3.35/nautilus-3.35.2.tar.xz</Archive>
+        <Archive sha1sum="d8aeab07e2ab45a42c522e858d6b7c0799cf727b" >https://download.gnome.org/sources/nautilus/3.37/nautilus-3.37.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gnome-desktop-devel</Dependency>
             <Dependency>librsvg-devel</Dependency>
@@ -95,6 +95,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.37.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.35.2</Version>
