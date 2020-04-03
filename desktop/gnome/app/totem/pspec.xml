@@ -1,0 +1,122 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>totem</Name>
+        <Homepage>https://live.gnome.org/Totem</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Video player for the GNOME desktop</Summary>
+        <Description>Totem is default video player for the GNOME desktop.</Description>
+        <Archive sha1sum="c8ec27f81c6163b86a84e466275342fb52a2f9e3">https://download.gnome.org/sources/totem/3.34/totem-3.34.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>totem-pl-parser</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+            <Dependency>nautilus-devel</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>clutter-gst-devel</Dependency>
+            <Dependency>clutter-gtk-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>totem</Name>
+        <RuntimeDependencies>
+            <Dependency>gconf</Dependency>
+            <Dependency>totem-pl-parser</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+            <Dependency>nautilus</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>bluez-libs</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>clutter-gst</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+            <Dependency>clutter</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/totem</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>totem-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development files for totem</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">totem</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>totem-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>totem reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.34.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -10,8 +10,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
-# WorkDir = ""
-# NoStrip = "/"
+# WorkDir = ""
+# NoStrip = "/"
 
 def setup():
     autotools.configure(" --enable-introspection \
@@ -28,3 +28,4 @@ def build():
 
 def install():
     autotools.rawInstall('DESTDIR=%s INSTALL="install -p -c"' % get.installDIR())
+

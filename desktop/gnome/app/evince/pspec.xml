@@ -1,0 +1,102 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>evince</Name>
+        <Homepage>http://www.gnome.org/projects/evince</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>evince</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Simple document viewer for GNOME</Summary>
+        <Description>Evince is a simple document viewer for GNOME.</Description>
+        <Archive sha1sum="572bbf2faa36061ac450f099c93751fc5d7e99a1" >http://ftp.acc.umu.se/pub/gnome/sources/evince/3.36/evince-3.36.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>djvu-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>t1lib-devel</Dependency>
+            <Dependency>ghostscript-devel</Dependency>
+            <Dependency>libspectre-devel</Dependency>
+            <Dependency>poppler-glib-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>nautilus-devel</Dependency>
+            <Dependency>texlive-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>evince</Name>
+        <RuntimeDependencies>
+            <Dependency>texlive</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>djvu</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+            <Dependency>t1lib</Dependency>
+            <Dependency>ghostscript</Dependency>
+            <Dependency>libspectre</Dependency>
+            <Dependency>poppler-glib</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>nautilus</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/evince</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+   </Package>
+
+    <Package>
+        <Name>evince-devel</Name>
+        <Summary>Development files for evince</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">evince</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+   <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

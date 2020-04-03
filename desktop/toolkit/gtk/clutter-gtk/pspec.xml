@@ -1,0 +1,61 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>clutter-gtk</Name>
+        <Homepage>http://www.clutter-project.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Clutter GTK support</Summary>
+        <Description>clutter-gtk provides GTK support for clutter.</Description>
+        <Archive sha1sum="417cb1b9aa7cf26253c4791e9361a63543405394" type="targz">https://github.com/GNOME/clutter-gtk/archive/1.8.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>clutter-gtk</Name>
+        <RuntimeDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/clutter-gtk</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>clutter-gtk-devel</Name>
+        <Summary>Development files for clutter-gtk</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">clutter-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
