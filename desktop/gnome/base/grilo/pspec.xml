@@ -1,0 +1,65 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>grilo</Name>
+        <Homepage>https://wiki.gnome.org/Projects/Grilo</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Grilo is a framework focused on making media discovery and browsing easy for applications and application developers. </Summary>
+        <Description>Grilo is a framework focused on making media discovery and browsing easy for applications and application developers. </Description>
+        <Archive sha1sum="d2d251c7fa073eaea4abd854bbbf70f672b58022">http://ftp.gnome.org/pub/gnome/sources/grilo/0.3/grilo-0.3.12.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>grilo</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/share/vala</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/grilo</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>grilo-devel</Name>
+        <Summary>Development files for grilo</Summary>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>grilo-doc</Name>
+        <Summary>Documents for grilo</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">grilo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.34.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
