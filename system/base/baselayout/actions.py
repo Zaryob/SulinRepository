@@ -59,7 +59,7 @@ def install():
 
     inarytools.dosym("../dev","/kernel/dev")
     inarytools.dosym("../sys","/kernel/sys")
-    inarytools.dosym("./proc","kernel/proc")
+    inarytools.dosym("../proc","kernel/proc")
     inarytools.dosym("kernel/boot", "/boot")
     inarytools.dosym("../kernel/modules", "/lib/modules")
     inarytools.dosym("../kernel/firmware", "/lib/firmware")
