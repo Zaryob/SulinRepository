@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>A simple web browser</Summary>
         <Description>Epiphany is a simple web browser for Gnome.</Description>
-        <Archive sha1sum="30dc5e8565e1194a14d0bef785d26071a43f3568">https://gitlab.gnome.org/GNOME/epiphany/-/archive/3.36.1/epiphany-3.36.1.tar.gz</Archive>
+        <Archive sha1sum="534a3a18f5ad0ea00953865edffa3062a0ec2541">https://gitlab.gnome.org/GNOME/epiphany/-/archive/3.34.4/epiphany-3.34.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gnome-desktop-devel</Dependency>
             <Dependency>libnotify-devel</Dependency>
@@ -42,7 +42,6 @@
         <RuntimeDependencies>
             <Dependency>libdazzle</Dependency>
             <Dependency>libhandy</Dependency>
-            <Dependency>libgnomeui</Dependency>
             <Dependency>gnome-desktop</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>libcanberra</Dependency>
@@ -72,7 +71,10 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome-shell</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
             <Path fileType="data">/usr/share/dbus-1</Path>
             <Path fileType="data">/usr/share/epiphany</Path>
             <Path fileType="data">/usr/share/gnome</Path>
@@ -84,25 +86,11 @@
         </Files>
     </Package>
 
-    <Package>
-        <Name>epiphany-devel</Name>
-        <Summary>Development files for epiphany</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">epiphany</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency versionFrom="1.4.0">webkit-gtk-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/share/aclocal</Path>
-        </Files>
-    </Package>
 
     <History>
         <Update release="1">
             <Date>2019-09-18</Date>
-            <Version>3.36.1</Version>
+            <Version>3.34.4</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

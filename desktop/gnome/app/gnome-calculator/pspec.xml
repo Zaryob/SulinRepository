@@ -1,0 +1,65 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-calcutalor</Name>
+        <Homepage>https://live.gnome.org/gnome-calcutalor</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>calcutalor application for the GNOME desktop</Summary>
+        <Description>Gnome-calcutalor is default calcutalor application for the GNOME desktop.</Description>
+        <Archive sha1sum="5584421113b89e6f965649f3b3f8a529dc222e6b">http://ftp.gnome.org/pub/gnome/sources/gnome-calculator/3.36/gnome-calculator-3.36.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>libcanberra-gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-calcutalor</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/gnome-calcutalor</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/gnome-shell</Path>
+            <Path fileType="data">/usr/include</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

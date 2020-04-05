@@ -14,7 +14,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Toolkit for SSL v2/v3 and TLS v1</Summary>
         <Description>OpenSSL is a cryptography toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) network protocols and related cryptography standards required by them.</Description>
-        <Archive sha1sum="056057782325134b76d1931c48f2c7e6595d7ef4" type="targz">https://www.openssl.org/source/openssl-1.1.1d.tar.gz</Archive>
+        <Archive sha1sum="62603b581260c8031aadb544548de2b6691cbbe6">https://github.com/openssl/openssl/archive/OpenSSL_1_1_1f.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>xorg-util</Dependency>
@@ -97,7 +97,14 @@
         </Files>
     </Package>
     <History>
-		 <Update release="3">
+     <Update release="4">
+            <Date>2020-04-05</Date>
+            <Version>1.1.1f</Version>
+            <Comment>libssl.so.1.0.0 hatası giderildi.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    <Update release="3">
             <Date>2019-09-18</Date>
             <Version>1.1.1d</Version>
             <Comment>postOps uyumluluğu</Comment>

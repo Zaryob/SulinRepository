@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>A high performance build system</Summary>
         <Description>A high performance build system</Description>
-        <Archive sha1sum="7c3bdc62056263b210a210b62d52b37bf1613e1e">https://github.com/mesonbuild/meson/archive/0.53.1.tar.gz</Archive>
+        <Archive sha1sum="557bef3b58917af04d4ac58eb3d0dad595317d08">https://github.com/mesonbuild/meson/archive/0.54.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3</Dependency>
             <Dependency>python3-setuptools</Dependency>
@@ -25,6 +25,9 @@
             <Dependency>python3-setuptools</Dependency>
             <Dependency>ninja</Dependency>
         </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/bin/arch-meson" owner="root" permission="0755" >arch-meson</AdditionalFile>
+        </AdditionalFiles>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
@@ -34,6 +37,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="5">
+            <Date>2020-02-15</Date>
+            <Version>0.54.0</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="4">
             <Date>2020-02-15</Date>
             <Version>0.53.1</Version>

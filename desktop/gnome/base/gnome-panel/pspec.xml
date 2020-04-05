@@ -53,8 +53,9 @@
             <Dependency>libXrandr</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libical</Dependency>
-            <!--Dependency>telepathy-glib</Dependency>
-            <Dependency>evolution-data-server</Dependency-->
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>gdm</Dependency>
             <Dependency>gnome-menus</Dependency>
             <Dependency>libgweather</Dependency>
             <Dependency>gnome-desktop</Dependency>
@@ -107,6 +108,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>Bağımlılık sorunu halloldu.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>

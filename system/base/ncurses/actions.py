@@ -13,23 +13,10 @@ WorkDir = "."
 WORKDIR = "%s/%s-%s" % (get.workDIR(), get.srcNAME(), get.srcVERSION())
 NCURSES = "ncurses-build"
 NCURSESW = "ncursesw-build"
-CONFIGPARAMS = "--without-debug \
-                --with-shared \
-                --with-normal \
-                --without-profile \
-                --disable-rpath \
-                --enable-const \
-                --enable-largefile \
-                --with-terminfo-dirs='/etc/terminfo:/usr/share/terminfo' \
-                --disable-termcap \
-                --enable-hard-tabs \
-                --enable-xmc-glitch \
-                --enable-colorfgbg \
-                --with-rcs-ids \
-                --with-mmask-t='long' \
-                --without-ada \
-                --enable-symlinks \
-                --without-gpm"
+CONFIGPARAMS = "--with-shared       \
+            --without-debug         \
+            --without-normal        \
+            --enable-pc-files       "
 
 def setup():
     shelltools.makedirs(NCURSES)
@@ -93,6 +80,7 @@ def install():
     #for fix
     inarytools.dosym("libncursesw.so.6.1", "%s/libncursesw.so.5" % LIB)
     inarytools.dosym("libncurses.so.6.1", "%s/libncurses.so.5" % LIB)
+    inarytools.dosym("libncurses.so.6.1", "%s/libtinfo.so.5" % LIB)
     inarytools.dosym("libpanelw.so.6.1", "%s/libpanelw.so.5" % LIB)
     inarytools.dosym("libformw.so.6.1", "%s/libformw.so.5" % LIB)
     inarytools.dosym("libmenuw.so.6.1", "%s/libmenuw.so.5" % LIB)

@@ -28,6 +28,10 @@
             <Dependency>libical-devel</Dependency>
             <Dependency>evolution-data-server-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
+            <Dependency>pipewire-devel</Dependency>
+            <Dependency>mozjs68</Dependency>
+            <Dependency>libgtop-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -35,8 +39,13 @@
         <Name>gnome-shell</Name>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>mozjs68</Dependency>
+            <Dependency>network-manager-applet</Dependency>
             <Dependency>mutter</Dependency>
             <Dependency>gjs</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>pipewire</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
@@ -86,6 +95,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.0.2</Version>
+            <Comment>eksik bağımlılık sorunu çözüldü</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.0.2</Version>

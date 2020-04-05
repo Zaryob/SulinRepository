@@ -50,41 +50,11 @@ def build():
     #shelltools.system("patch -p1 < openssl-1.0.0-beta4-ca-dir.patch")
 
 def install():
-    shelltools.system("sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile")
-    if get.buildTYPE() == "emul32":
-        autotools.make(" install_sw DESTDIR=%s MANDIR=/usr/share/man" % get.installDIR())
+    if get.buildTYPE()=="emul32":
+        shelltools.system("mkdir -p {}/usr/lib32".format(get.installDIR()))
+        shelltools.system("install libssl.so.1.0.0 {}/usr/lib32/libssl.so.1.0.0".format(get.installDIR()))
+        shelltools.system("install libcrypto.so.1.0.0 {}/usr/lib32/libcrypto.so.1.0.0".format(get.installDIR()))
     else:
-        autotools.rawInstall("DESTDIR=%s MANDIR=/usr/share/man" % get.installDIR())
-
-    if get.buildTYPE() == "emul32":
-        #from distutils.dir_util import copy_tree
-        shelltools.copytree("%s/emul32/lib32/" % get.installDIR(), "%s/usr/lib32" % get.installDIR())
-        path = "%s/usr/lib32/pkgconfig" % get.installDIR()
-        inarytools.dodir("/usr/lib32/openssl")
-        inarytools.domove("/usr/lib32/engines-1.1", "/usr/lib32/openssl")
-        for f in shelltools.ls(path): inarytools.dosed("%s/%s" % (path, f), "^(prefix=\/)_emul32", r"\1usr")
-        inarytools.removeDir("/emul32")
-        return
-
-    # Rename conflicting manpages
-    inarytools.rename("/usr/share/man/man1/passwd.1", "ssl-passwd.1")
-    inarytools.remove("/usr/share/man/man1/openssl-passwd.1")
-    inarytools.dosym("ssl-passwd.1", "/usr/share/man/man1/openssl-passwd.1")
-    inarytools.rename("/usr/share/man/man1/rand.1", "ssl-rand.1")
-    inarytools.remove("/usr/share/man/man1/openssl-rand.1")
-    inarytools.dosym("ssl-passwd.1", "/usr/share/man/man1/openssl-rand.1")
-
-
-    # Move engines to /usr/lib/openssl/engines
-    inarytools.dodir("/usr/lib/openssl")
-
-    # Certificate stuff
-    inarytools.dobin("tools/c_rehash")
-
-
-    # Create needed dirs
-    for cadir in ["misc", "private"]:
-        inarytools.dodir("/etc/ssl/%s" % cadir)
-
-    inarytools.dohtml("doc/*")
-    inarytools.dodoc("CHANGES*", "FAQ", "LICENSE", "NEWS", "README", "doc/*.txt")
+        shelltools.system("mkdir -p {}/usr/lib/".format(get.installDIR()))
+        shelltools.system("install libssl.so.1.0.0 {}/usr/lib/libssl.so.1.0.0".format(get.installDIR()))
+        shelltools.system("install libcrypto.so.1.0.0 {}/usr/lib/libcrypto.so.1.0.0".format(get.installDIR()))
