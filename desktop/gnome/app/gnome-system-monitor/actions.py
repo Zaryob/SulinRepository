@@ -5,14 +5,16 @@
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
 from inary.actionsapi import autotools
+from inary.actionsapi import mesontools
+from inary.actionsapi import cmaketools
 from inary.actionsapi import inarytools
+from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--enable-lua --with-system-lua")
+    mesontools.meson_configure("-Dsystemd=false")
 
 def build():
-    autotools.make()
+    mesontools.ninja_build()
 
 def install():
-    autotools.install()
-    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README")
+    mesontools.ninja_install()

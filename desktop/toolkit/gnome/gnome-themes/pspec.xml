@@ -12,10 +12,11 @@
         <IsA>data</IsA>
         <Summary>Default themes for the GNOME desktop</Summary>
         <Description>gnome-themes allows to change appearance of window frames, cursors, icon and gtk themes.</Description>
-        <Archive sha1sum="492f3c6433bec3405340fe644f1d7552a71f293d" type="targz">http://deb.debian.org/debian/pool/main/g/gnome-themes/gnome-themes_2.30.2.orig.tar.gz</Archive>
+        <Archive sha1sum="8069577504f57f86884fbb4af54b3ad7dd848333" >https://download.gnome.org/sources/gnome-themes/2.91/gnome-themes-2.91.90.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>icon-naming-utils</Dependency>
             <Dependency>gtk-engines</Dependency>
+            <Dependency>gtk-engines3</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,6 +25,7 @@
         <RuntimeDependencies>
             <Dependency>icon-naming-utils</Dependency>
             <Dependency>gtk-engines</Dependency>
+            <Dependency>gtk-engines3</Dependency>
             <Dependency>icon-theme-gnome</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -35,6 +37,13 @@
     </Package>
 
     <History>
+            <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>2.91.90</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>2.30.2</Version>
