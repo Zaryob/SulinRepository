@@ -14,16 +14,18 @@ suffix = "32" if get.buildTYPE() == "emul32" else ""
 
 def setup():
     autotools.autoreconf("--install")
-    autotools.configure("--prefix=/usr           \
-                         --bindir=/bin          \
-                         --sbindir=/sbin         \
-                         --libdir=/usr/{0}       \
-                         --sysconfdir=/etc       \
-                         --libexecdir=/{0}       \
-                         --with-rootprefix=      \
-                         --with-rootlibdir=/{0}  \
-                         --enable-static         \
-                         --disable-manpages ".format("lib{}".format("32" if get.buildTYPE() == "emul32" else "")))
+    #lfs udev rules
+    autotools.configure("--sysconfdir=/etc \
+		--with-rootprefix= \
+		--with-rootrundir=/run \
+		--with-rootlibexecdir=/lib/udev \
+		--libdir=/usr/{} \
+		--enable-split-usr \
+		--enable-manpages \
+		--disable-hwdb \
+		--enable-kmod \
+		--exec-prefix=/ \
+		--bindir=/bin".format("lib{}".format("32" if get.buildTYPE() == "emul32" else "")))
 
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
@@ -32,19 +34,13 @@ def build():
 
 def install():
     autotools.rawInstall("-j1 DESTDIR=%s%s" % (get.installDIR(), suffix))
-    #autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
     # emul32 stop here
     if get.buildTYPE() == "emul32":
-        shelltools.move("%s%s/lib32" % (get.installDIR(), suffix), "%s/lib32" % (get.installDIR()))
         shelltools.move("%s%s/usr/lib32" % (get.installDIR(), suffix), "%s/usr/lib32" % (get.installDIR()))
         for f in shelltools.ls("%s/usr/lib32/pkgconfig" % get.installDIR()):
             inarytools.dosed("%s/usr/lib32/pkgconfig/%s" % (get.installDIR(), f), "emul32", "usr")
     else:
 
-
-        # Create /sbin/systemd-udevd -> /sbin/udevd sysmlink, we need it for MUDUR, do not touch this sysmlink.
-        # inarytools.dosym("/lib/systemd/systemd-udevd", "/sbin/systemd-udevd")
 
         # Create /etc/udev/rules.d for backward compatibility
         inarytools.dodir("/etc/udev/rules.d")

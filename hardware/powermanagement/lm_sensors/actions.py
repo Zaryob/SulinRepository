@@ -12,6 +12,10 @@ def build():
     autotools.make("PREFIX=/usr")
 
 def install():
-    autotools.rawInstall("PREFIX=/usr BUILD_STATIC_LIB=0 MANDIR=/%s PROG_EXTRA=sensord DESTDIR=%s user_install" % (get.manDIR(), get.installDIR()))
+    if get.buildTYPE() == "emul32":
+        options="LIBDIR=/usr/lib32"
+    else:
+        options="LIBDIR=/usr/lib"
+    autotools.rawInstall("PREFIX=/usr BUILD_STATIC_LIB=0 MANDIR=/%s PROG_EXTRA=sensord DESTDIR=%s %s user_install" % (get.manDIR(), get.installDIR(),options))
 
     inarytools.dodoc("CHANGES", "CONTRIBUTORS", "README")

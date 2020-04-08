@@ -33,6 +33,17 @@
     </Package>
 
     <Package>
+        <Name>lm_sensors-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency>rrdtool</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <Package>
         <Name>lm_sensors-devel</Name>
         <Summary>Development files for lm_sensors</Summary>
         <RuntimeDependencies>

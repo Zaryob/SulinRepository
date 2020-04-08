@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>the GL Vendor-Neutral Dispatch library</Summary>
         <Description>This is a work-in-progress implementation of the vendor-neutral dispatch layer for arbitrating OpenGL API calls between multiple vendors on a per-screen basis, as described by Andy Ritger's OpenGL ABI proposal</Description>
-        <Archive sha1sum="7432129787cee16dba4c1c4d25cdfd4c8da571ee" type="targz">https://github.com/NVIDIA/libglvnd/archive/v1.1.1.tar.gz</Archive>
+        <Archive sha1sum="719e1001e235f84d104a2c6ae922f145f3276d20" type="targz">https://github.com/NVIDIA/libglvnd/archive/v1.2.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>mesa</Dependency>
             <Dependency>python</Dependency>
@@ -31,6 +31,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-04-12</Date>
+            <Version>1.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>  
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.1.1</Version>
