@@ -1,0 +1,59 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>transmission</Name>
+        <Homepage>http://www.transmissionbt.com</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>GPLv2</License>
+        <Icon>transmission</Icon>
+        <IsA>service</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A fast, easy, and free BitTorrent client</Summary>
+        <Description>Transmission is a free, lightweight Bittorrent client. It features a simple, intuitive interface on top of an efficient backend. This package provides only daemon, web interface and command line client. If you want use Transmission with graphical interface, you should install transmission-gtk or transmission-qt.</Description>
+        <Archive sha1sum="5f1b41090764bb2150eb0440fce671a3825ef265">https://raw.githubusercontent.com/transmission/transmission-releases/master/transmission-2.94.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libevent-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>transmission</Name>
+        <Summary>Transmission's cli tools, web interface and daemon</Summary>
+        <RuntimeDependencies>
+            <Dependency>libevent</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libevent</Dependency>
+            <Dependency>libnotify</Dependency>       
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/transmission</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.94</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
