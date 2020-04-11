@@ -1,0 +1,56 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mypaint-brushes</Name>
+        <Homepage>http://mypaint.intilinux.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>mypaint</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Painting application</Summary>
+        <Description>The mypaint-brushes package contains brushes used by packages which use libmypaint. </Description>
+        <Archive sha1sum="809e085b9920891c0f42a92ce2950a2aa5cf236e">https://github.com/Jehan/mypaint-brushes/archive/v1.3.0/mypaint-brushes-v1.3.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-numpy</Dependency>
+            <Dependency>protobuf-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>mypaint-brushes-1.3.0-automake_1.16-1.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>mypaint-brushes</Name>
+        <RuntimeDependencies>
+            <Dependency>python-numpy</Dependency>
+            <Dependency>protobuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/mypaint-data</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

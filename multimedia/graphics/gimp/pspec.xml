@@ -1,0 +1,127 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gimp</Name>
+        <Homepage>http://www.gimp.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>GNU Image Manipulation Program</Summary>
+        <Description>GIMP is a mature image editor with many advanced features and plugin support.</Description>
+        <Archive sha1sum="9dd171ca05c60816d641ca2edf4806639eda99a4">https://download.gimp.org/pub/gimp/v2.10/gimp-2.10.18.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>mypaint-brushes</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>pygobject-devel</Dependency>
+            <Dependency>python-cairo-devel</Dependency>
+            <Dependency>libwmf</Dependency>
+            <Dependency>jasper-devel</Dependency>
+            <Dependency>libmng-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>mypaint</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gegl</Dependency>
+            <Dependency>babl</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gexiv2-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>poppler-glib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gimp-devel</Name>
+        <IsA>data</IsA>
+        <IsA>data:doc</IsA>
+        <Summary>Development header and documents for GIMP</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gimp</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+   <Package>
+        <Name>gimp</Name>
+        <IsA>app:gui</IsA>
+        <RuntimeDependencies>
+            <Dependency>mypaint</Dependency>
+            <Dependency>mypaint-brushes</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>libwmf</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libmng</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>jasper</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>gegl</Dependency>
+            <Dependency>babl</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>poppler-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/application-registry</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gimp</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/mime-info</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.10.18</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
