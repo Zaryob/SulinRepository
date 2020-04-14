@@ -14,7 +14,7 @@
         <Summary>pipeline manipulation library</Summary>
         <Description>libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way.</Description>
         <!-- @savannah libpipeline -->
-        <Archive sha1sum="b27b69d52bb67ad64587736f6496754795f62803" type="targz">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.1.tar.gz</Archive>
+        <Archive sha1sum="fa296e37495d1874c736b7182770baaf390ad9de">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.2.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -60,7 +60,14 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    <History>
+<History>
+	<Update release="4">
+	<Date>2020-04-14</Date>
+	<Version>1.5.2</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="3">
             <Date>2019-12-13</Date>
             <Version>1.5.1</Version>

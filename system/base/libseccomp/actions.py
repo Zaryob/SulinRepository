@@ -10,7 +10,7 @@ from inary.actionsapi import shelltools
 
 
 def setup():
-    shelltools.system("sh ./autogen.sh")
+# shelltools.system("sh ./autogen.sh")
     autotools.configure()
 
 def build():
