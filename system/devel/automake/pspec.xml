@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>A tool for automatically generating Makefile.in files compliant with the GNU Coding Standards</Summary>
         <Description>Automake is a tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.</Description>
-        <Archive sha1sum="1012bc79956013d53da0890f8493388a6cb20831" type="tarxz">mirrors://gnu/automake/automake-1.16.1.tar.xz</Archive>
+        <Archive sha1sum="f87fd355c6142e4e87d7a69702697f3a30c922d8" >https://ftp.gnu.org/gnu/automake/automake-1.16.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>perl</Dependency>
             <Dependency>autoconf</Dependency>
@@ -61,6 +61,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="3">
+	<Date>2020-04-14</Date>
+	<Version>1.16.2</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>1.16.1</Version>

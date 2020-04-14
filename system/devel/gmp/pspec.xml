@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Arbitrary precision arithmetic library</Summary>
         <Description>GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating point numbers. There is no practical limit to the precision except the ones implied by the available memory in the machine GMP runs on. GMP has a rich set of functions, and the functions have a regular interface.</Description>
-        <Archive sha1sum="9dc6981197a7d92f339192eea974f5eca48fcffe" type="tarxz">mirrors://gnu/gmp/gmp-6.1.2.tar.xz</Archive>
+        <Archive sha1sum="052a5411dc74054240eec58132d2cf41211d0ff6" >https://ftp.gnu.org/gnu/gmp/gmp-6.2.0.tar.xz</Archive>
     </Source>
 
     <Package>
@@ -35,6 +35,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="library">/usr/lib/*.a</Path>
         </Files>
     </Package>
@@ -65,6 +66,13 @@
           </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-14</Date>
+	<Version>6.2.0</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>6.1.2</Version>

@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Multi-platform support library with a focus on asynchronous I/O</Summary>
         <Description>libuv is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node.js, but it's also used by Luvit, Julia, pyuv, and others.</Description>
-        <Archive sha1sum="900a086dc3bcbe3409d51975c9e07cb70418cde0" type="targz">https://github.com/libuv/libuv/archive/v1.34.0.tar.gz</Archive>
+        <Archive sha1sum="9dabf6f90bbd328cf4e8f832f92943b1d99dfda5" >https://github.com/libuv/libuv/archive/v1.35.0.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +48,13 @@
     </Package>
 
     <History>
+	<Update release="3">
+	<Date>2020-04-14</Date>
+	<Version>1.35.0</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2019-12-13</Date>
             <Version>1.34.0</Version>

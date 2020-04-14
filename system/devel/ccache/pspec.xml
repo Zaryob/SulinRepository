@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Compiler cache that speeds up</Summary>
         <Description>Compiler cache that speeds up recompilation by caching previous compilations</Description>
-        <Archive sha1sum="8e7cf0b53c5cd912d23da3dff66fb8fb91321eef">https://github.com/ccache/ccache/releases/download/v3.7.7/ccache-3.7.7.tar.gz</Archive>
+        <Archive sha1sum="98f45b8070fb45d27671c2d9b840ab9742b99f5f" >https://github.com/ccache/ccache/releases/download/v3.7.9/ccache-3.7.9.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
@@ -30,6 +30,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-14</Date>
+	<Version>3.7.9</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2020-01-28</Date>
             <Version>3.7.7</Version>

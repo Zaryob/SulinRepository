@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>A unit test framework for C</Summary>
         <Description>check is a unit testing framework for C. It features a simple interface for defining unit tests, putting little in the way of the developer. Tests are run in a separate address space, so Check can catch both assertion failures and code errors that cause segmentation faults or other signals. The output from unit tests can be used within source code editors and IDEs.</Description>
-        <Archive sha1sum="6c865bbc1330aae9b1c07520a83f2db51a3df3dc" type="targz">https://github.com/libcheck/check/archive/0.13.0.tar.gz</Archive>
+        <Archive sha1sum="e32940bcd809bd2c9728bb87d2fa3a6a684a017d" type="targz">https://github.com/libcheck/check/archive/0.14.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>texinfo</Dependency>
         </BuildDependencies>
@@ -63,6 +63,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-04-14</Date>
+            <Version>0.14</Version>
+            <Comment>Automatic version bump.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2019-12-13</Date>
             <Version>0.13</Version>

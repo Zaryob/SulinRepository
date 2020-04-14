@@ -17,7 +17,7 @@
             <Dependency>lzo-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="1ec676b842fc96fd8a95b03c12758935e7f257b0" type="targz">https://github.com/google/snappy/archive/1.1.7.tar.gz</Archive>
+        <Archive sha1sum="1eeb144e7b564dd726136c97f869b453d2fb7924" >https://github.com/google/snappy/archive/1.1.8.tar.gz</Archive>
     </Source>
     <Package>
         <Name>snappy</Name>
@@ -52,6 +52,13 @@
     </Package>
 
     <History>
+	<Update release="3">
+	<Date>2020-04-14</Date>
+	<Version>1.1.8</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2019-12-13</Date>
             <Version>1.1.7</Version>

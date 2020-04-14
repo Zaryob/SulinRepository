@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>A terminal multiplexer</Summary>
         <Description>Tmux is a terminal multiplexer. It's similar to GNU Screen.</Description>
-        <Archive sha1sum="c65f320245bcf265313d84ac680ca86d228d2e44" >https://github.com/tmux/tmux/releases/download/3.1/tmux-3.1-rc4.tar.gz</Archive>
+        <Archive sha1sum="0cc951b9ff545b429c101eb562e0be9c5aba5ed4" type="targz">https://github.com/tmux/tmux/releases/download/3.0a/tmux-3.0a.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libevent-devel</Dependency>
         </BuildDependencies>
@@ -35,13 +35,6 @@
     </Package>
 
     <History>
-	<Update release="3">
-	<Date>2020-04-14</Date>
-	<Version>3.1</Version>
-	<Comment>Automatic version upgrade.</Comment>
-	<Name>Ali Rıza KESKİN</Name>
-	<Email>parduscix@yandex.ru</Email>
-	</Update>
         <Update release="2">
             <Date>2019-12-12</Date>
             <Version>3.0a</Version>

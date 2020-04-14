@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Terminal file manager</Summary>
         <Description>The missing terminal file manager for X. </Description>
-        <Archive sha1sum="17f41def0cde1485eb2b3ebdeee65d0457c5f0e7">https://github.com/jarun/nnn/archive/v2.9.tar.gz</Archive>
+        <Archive sha1sum="70e40acc2e2a9cd330e75ea8641751d69089597d" >https://github.com/jarun/nnn/archive/v3.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -24,6 +24,13 @@
     </Package>
 
     <History>
+	<Update release="2">
+	<Date>2020-04-14</Date>
+	<Version>3.1</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
 
         <Update release="1">
             <Date>2020-01-28</Date>

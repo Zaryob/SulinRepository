@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Library for reading and writing streaming archives</Summary>
         <Description>libarchive includes a library and command-line tools for reading and writing tar, cpio, zip, ISO, and other archive formats.</Description>
-        <Archive sha1sum="e185d3cd101314234fc897c021535c735b3a3f98">https://github.com/libarchive/libarchive/releases/download/v3.4.1/libarchive-3.4.1.tar.xz</Archive>
+        <Archive sha1sum="47804d0dc164edb43b6184949b3d8a3687e1cddd" >https://github.com/libarchive/libarchive/releases/download/v3.4.2/libarchive-3.4.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>
             <Dependency>nettle-devel</Dependency>
@@ -83,6 +83,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="3">
+	<Date>2020-04-14</Date>
+	<Version>3.4.2</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2020-01-31</Date>
             <Version>3.4.1</Version>

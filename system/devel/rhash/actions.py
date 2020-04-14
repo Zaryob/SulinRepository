@@ -10,15 +10,14 @@ from inary.actionsapi import get
 
 
 def setup():
-    shelltools.system("./configure --prefix=/usr \
-                                   --sysconfdir=/etc \
-                                   --enable-lib-shared \
-                                   --enable-gettext ")
+    shelltools.system("./configure --prefix=/usr --sysconfdir=/etc")
+    
+def build():
+    autotools.make()
     
 def install():
-    autotools.make("PREFIX=/usr DESTDIR=%s build-shared install-gmo install-lib-shared" % get.installDIR())
-    autotools.make("PREFIX=/usr DESTDIR=%s -C librhash install-lib-headers install-so-link" % get.installDIR())
     autotools.rawInstall("PREFIX=/usr DESTDIR=%s" % get.installDIR())
+    autotools.make("PREFIX=/usr DESTDIR=%s -C librhash install-lib-headers install-so-link" % get.installDIR())
     
     inarytools.dodoc("ChangeLog", "INSTALL*", "README*", "COPYING*")
 
