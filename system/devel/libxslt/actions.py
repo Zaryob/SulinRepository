@@ -6,25 +6,22 @@
 
 from inary.actionsapi import get
 from inary.actionsapi import autotools
+from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
 
 def setup():
-    python = "--without-python" if get.buildTYPE() == "emul32" else "--with-python=/usr/bin/python3.7 "
-    # don't remove --with-debugger as it is needed for reverse dependencies
-    autotools.configure("%s \
-                         --with-crypto \
-                         --with-debugger \
-                         --disable-static \
-                         --with-xz \
-                         --with-zlib \
-                         --disable-silent-rules \
-                        " % python)
-
-    inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
-    inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
-    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+    if get.buildTYPE() == "emul32":
+        shelltools.export("CC","gcc -m32")
+        shelltools.export("CXX","g++ -m32")
+        shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure("--disable-static --without-python --without-threads")
 
 def build():
+    if get.buildTYPE() == "emul32":
+        shelltools.export("CC","gcc -m32")
+        shelltools.export("CXX","g++ -m32")
+        shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
     autotools.make()
 
 #def check():
