@@ -10,28 +10,22 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    #autotools.autoreconf("-fi")
-    
-    autotools.configure("--with-pam-module-dir=/lib/security/ \
-                         --with-os-type=Sulin \
-                         --with-mozjs=mozjs-17.0 \
-                         --with-dbus \
-                         --enable-examples \
-                         --enable-introspection \
-                         --enable-libsystemd-login=no \
-                         --with-systemdsystemunitdir=no \
-                         --disable-man-pages \
-                         --disable-gtk-doc \
-                         --disable-static")
-    
-    inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ") 
+    autotools.configure("--disable-static \
+		--disable-gtk-doc \
+		--disable-gtk-doc-html \
+		--disable-gtk-doc-pdf \
+		--disable-libelogind \
+		--disable-systemd \
+		--disable-libsystemd-login")
 
 def build():
-    shelltools.export('HOME', get.workDIR())
     autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s/" % get.installDIR())
-
-    inarytools.dodir("/var/lib/polkit-1")
-    inarytools.dodoc("AUTHORS", "NEWS", "README", "HACKING", "COPYING")
+    #remove all unused polkit stuff
+    shelltools.system("rm -rf {}/etc".format(get.installDIR()))
+    shelltools.system("rm -rf {}/usr/bin".format(get.installDIR()))
+    shelltools.system("rm -rf {}/usr/lib/polkit-1".format(get.installDIR()))
+    shelltools.system("rm -rf {}/usr/share/dbus-1".format(get.installDIR()))
+    shelltools.system("rm -rf {}/usr/share/polkit-1".format(get.installDIR()))

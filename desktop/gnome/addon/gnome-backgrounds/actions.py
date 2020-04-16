@@ -11,7 +11,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("-Dextension_set=all -D classic_mode=true")
+    mesontools.meson_configure()
 
 def build():
     mesontools.ninja_build()

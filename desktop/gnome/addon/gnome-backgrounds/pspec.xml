@@ -1,0 +1,38 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-backgrounds</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>Default wallpapers for the GNOME desktop</Summary>
+        <Description>gnome-backgrounds contains default wallpapers for the GNOME desktop.</Description>
+        <Archive sha1sum="8c2995d67a5e026a4c4ef48f51d42317e1d4cda7" type="tarxz">mirrors://gnome/gnome-backgrounds/3.36/gnome-backgrounds-3.36.0.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>gnome-backgrounds</Name>
+        <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/backgrounds</Path>
+            <Path fileType="doc">/usr/share/gnome-background-properties</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
