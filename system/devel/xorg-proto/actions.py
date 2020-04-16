@@ -11,7 +11,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure()
+    mesontools.meson_configure("-Dlegacy=true")
 
 def build():
     mesontools.ninja_build()

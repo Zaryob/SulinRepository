@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org Xrandr library</Summary>
         <Description>Xrandr is a simple library designed to interface the X Resize and Rotate Extension. This allows clients to change the size and rotation of the root window of a screen, along with the ability to reflect the screen about either axis.</Description>
-        <Archive sha1sum="7232fe2648b96fed531208c3ad2ba0be61990041" type="tarbz2">mirrors://xorg/individual/lib/libXrandr-1.5.1.tar.bz2</Archive>
+        <Archive sha1sum="7a1f6df239341b76fd59ebbe101d6f180adb43bb" >https://www.x.org/releases//individual/lib/libXrandr-1.5.2.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libXext-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
@@ -71,6 +71,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.5.2</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.5.1</Version>

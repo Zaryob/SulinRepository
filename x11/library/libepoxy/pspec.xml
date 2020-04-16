@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>OpenGL function pointer management library</Summary>
         <Description>Epoxy is a library for handling OpenGL function pointer management for you.</Description>
-        <Archive sha1sum="e390e2b1e20938be0cfb171afa51116663e8db26" type="tarxz">https://github.com/anholt/libepoxy/releases/download/v1.4/libepoxy-1.4.0.tar.xz</Archive>
+        <Archive sha1sum="353d74a17bfa441720735757ccdca55a0ba2a99c" >https://github.com/anholt/libepoxy/archive/1.5.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
@@ -63,6 +63,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.5.4</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.4</Version>

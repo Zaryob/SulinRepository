@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org Xcursor library</Summary>
         <Description>libXcursor is the X Cursor management library. It allows using different mouse skins and modifying of the text cursor.</Description>
-        <Archive sha1sum="89870756758439f9216ddf5f2d3dca56570fc6b7" type="tarbz2">mirrors://xorg/individual/lib/libXcursor-1.1.14.tar.bz2</Archive>
+        <Archive sha1sum="cca0b34955d3c2f657f05a2a2c40f75353ddd912" >https://www.x.org/releases//individual/lib/libXcursor-1.2.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXfixes-devel</Dependency>
@@ -70,6 +70,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.2.0</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.1.14</Version>

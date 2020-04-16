@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org composite library</Summary>
         <Description>libXcomposite is the X Composite library. Compositing allows modification of the window system's base elements like window borders, window buttons and window titlebars.</Description>
-        <Archive sha1sum="75fd0b996e56e12db1d84e9b63549c5c3f2631ca" type="tarbz2">mirrors://xorg/individual/lib/libXcomposite-0.4.4.tar.bz2</Archive>
+        <Archive sha1sum="902631efb55a798c81086e5ff90b60349839db40" >https://www.x.org/releases//individual/lib/libXcomposite-0.4.5.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXfixes-devel</Dependency>
@@ -62,6 +62,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>0.4.5</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>0.4.4</Version>

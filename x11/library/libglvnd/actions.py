@@ -19,3 +19,6 @@ def build():
 
 def install():
     mesontools.ninja_install()
+    #fix conflict with mesa
+    for file in ["libGL.so","libGLESv2.so.2","libEGL.so.1","libGL.so.1","libEGL.so","libGLESv2.so"]:
+        inarytools.remove("/usr/lib/{}".format(file))

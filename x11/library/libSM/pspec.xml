@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org SM library</Summary>
         <Description>libSM is the X Session Management library.</Description>
-        <Archive sha1sum="e6d5dab6828dfd296e564518d2ed0a349a25a714" type="tarbz2">mirrors://xorg/individual/lib/libSM-1.2.2.tar.bz2</Archive>
+        <Archive sha1sum="437d7b13fa2eba325df3a106f177df46ccec6546" >https://www.x.org/releases//individual/lib/libSM-1.2.3.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libICE-devel</Dependency>
         </BuildDependencies>
@@ -65,6 +65,13 @@ libomxil-bellagio:rebuild
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.2.3</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.2.2</Version>

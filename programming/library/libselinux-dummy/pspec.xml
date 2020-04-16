@@ -10,20 +10,13 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>library</IsA>
-        <PartOf>system.devel</PartOf>
         <Summary>Dummy libselinux. Provide dummy libselinux.so</Summary>
         <Description>This is dummy version of selinux. We can compile any source without libselinux. This source provide dummy libselinux.so</Description>
-        <Archive sha1sum="1e6c34a09c974a1eb9057f90d4302f8c8b33a086">https://gitlab.com/sulinos/devel/libselinux-dummy/-/archive/0.0.1/libselinux-dummy-0.0.1.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>elogind-devel</Dependency>
-        </BuildDependencies>
+        <Archive sha1sum="4bac10e0fd29c03160df3140943dd46b1f2cfe6c">https://gitlab.com/sulinos/devel/libselinux-dummy/-/archive/0.0.3/libselinux-dummy-0.0.3.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>libselinux-dummy</Name>
-        <RuntimeDependencies>
-            <Dependency>elogind</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/lib/</Path>
             <Path fileType="executable">/sbin/</Path>
@@ -33,6 +26,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2018-12-28</Date>
+            <Version>0.0.3</Version>
+            <Comment>libsemanage libsepol added.</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2018-12-28</Date>
             <Version>0.0.1</Version>
