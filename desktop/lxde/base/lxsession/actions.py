@@ -17,6 +17,6 @@ def build():
 def install():
     autotools.install()
     inarytools.removeDir("/etc")
-    inarytools.removeDir("/usr/bin/lxpolkit")
+    inarytools.remove("/usr/bin/lxpolkit")
     inarytools.remove("/usr/share/lxsession/ui/lxpolkit.ui")
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
