@@ -1,0 +1,52 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lightdm-gtk-greeter</Name>
+        <Homepage>http://www.sharpley.org.uk</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Login screen using the LightDM framework.</Summary>
+        <Description>Login screen using the LightDM framework.</Description>
+        <Archive sha1sum="b61c73216a1491c752b468fda168910375c65e26" type="targz">https://launchpad.net/lightdm-gtk-greeter/2.0/2.0.7/+download/lightdm-gtk-greeter-2.0.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>exo-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lightdm-gtk-greeter</Name>
+        <RuntimeDependencies>
+            <Dependency>lightdm</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>exo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin/lightdm-gtk-greeter</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.0.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
