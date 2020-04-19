@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>appstream-glib</Name>
+        <Homepage>http://www.oligarchy.co.uk/xapian</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Objects and methods for reading and writing AppStream metadata</Summary>
+        <Description>Objects and methods for reading and writing AppStream metadata</Description>
+        <Archive sha1sum="d4fa25c47812377d031e1a66521f0fb83b784273" >https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_17.tar.gz</Archive>
+        <BuildDependencies>
+        <Dependency>stemmer</Dependency>
+        <Dependency>libyaml-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>appstream-glib</Name>
+        <RuntimeDependencies>
+                <Dependency>stemmer</Dependency>
+                <Dependency>libyaml</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>appstream-glib-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development headers for appstream-glib</Summary>
+        <Description>appstream-glib-devel provides development headers for appstream-glib.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">appstream-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/xapian-config*</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/cmake/xapian</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>appstream-glib-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation files for appstream-glib</Summary>
+        <Description>appstream-glib-docs provides documentation files for appstream-glib.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">appstream-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/appstream-glib/*html</Path>
+            <Path fileType="doc">/usr/share/doc/appstream-glib/apidoc.pdf</Path>
+            <Path fileType="doc">/usr/share/doc/appstream-glib/apidoc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-30</Date>
+            <Version>0.7.17</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

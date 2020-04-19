@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>flatpak</Name>
+        <Homepage>http://kaizer.se/wiki/keybinder/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>app:console</IsA>
+        <Summary>Application deployment framework for desktop apps</Summary>
+        <Description>Application deployment framework for desktop apps</Description>
+        <Archive sha1sum="e565cd317e29a84305822c7eac973e15e658e4b9">https://github.com/flatpak/flatpak/releases/download/1.7.2/flatpak-1.7.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>appstream-glib-devel</Dependency>
+            <Dependency>ostree-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>flatpak</Name>
+        <RuntimeDependencies>
+            <Dependency>appstream-glib</Dependency>
+            <Dependency>ostree</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="library">/usr/libexec/</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/flatpak</Path>
+            <Path fileType="data">/usr/share/gdm</Path>
+            <Path fileType="data">/usr/share/fish</Path>
+            <Path fileType="data">/usr/share/zsh</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>flatpak-devel</Name>
+        <Summary>Development files for keybinder</Summary>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="current">flatpak</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>1.7.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
