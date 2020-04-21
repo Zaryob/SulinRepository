@@ -1,0 +1,87 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-disk-utility</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>Disk Utility for GNOME using devicekit-disks</Summary>
+        <Description>gnome-disk-utility is a disk utility for GNOME using devicekit-disks.</Description>
+        <Archive sha1sum="7e4a4bfc7f48abca5beb653e90e8ca8f3cd7e72b">https://download.gnome.org/sources/gnome-disk-utility/3.36/gnome-disk-utility-3.36.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>udisks</Dependency>
+            <Dependency>libatasmart-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>nautilus-devel</Dependency>
+            <Dependency>avahi-ui-devel</Dependency>
+            <Dependency>libdvdread-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-disk-utility</Name>
+        <RuntimeDependencies>
+            <Dependency>libdvdread</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>udisks</Dependency>
+            <Dependency>libatasmart</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>nautilus</Dependency>
+            <Dependency>avahi-ui</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/etc/xdg/autostart</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gnome/help</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-disk-utility-devel</Name>
+        <Summary>Development files for gnome-disk-utility</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-disk-utility</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

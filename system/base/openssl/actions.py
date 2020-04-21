@@ -10,7 +10,6 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    inarytools.dosed("Configure", " $prefix/$libdir/engines ", " /%{_lib}/engines ")
 
     options = " --prefix=/usr \
                 --libdir=lib \
@@ -52,7 +51,20 @@ def build():
 
 def install():
     shelltools.system("sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile")
-    autotools.rawInstall("DESTDIR=%s MANDIR=/usr/share/man" % get.installDIR())
+    if get.buildTYPE() == "emul32":
+        autotools.make(" install_sw DESTDIR=%s MANDIR=/usr/share/man" % get.installDIR())
+    else:
+        autotools.rawInstall("DESTDIR=%s MANDIR=/usr/share/man" % get.installDIR())
+
+    if get.buildTYPE() == "emul32":
+        #from distutils.dir_util import copy_tree
+        shelltools.copytree("%s/emul32/lib32/" % get.installDIR(), "%s/usr/lib32" % get.installDIR())
+        path = "%s/usr/lib32/pkgconfig" % get.installDIR()
+        inarytools.dodir("/usr/lib32/openssl")
+        inarytools.domove("/usr/lib32/engines-1.1", "/usr/lib32/openssl")
+        for f in shelltools.ls(path): inarytools.dosed("%s/%s" % (path, f), "^(prefix=\/)_emul32", r"\1usr")
+        inarytools.removeDir("/emul32")
+        return
 
     # Rename conflicting manpages
     inarytools.rename("/usr/share/man/man1/passwd.1", "ssl-passwd.1")
@@ -61,16 +73,7 @@ def install():
     inarytools.rename("/usr/share/man/man1/rand.1", "ssl-rand.1")
     inarytools.remove("/usr/share/man/man1/openssl-rand.1")
     inarytools.dosym("ssl-passwd.1", "/usr/share/man/man1/openssl-rand.1")
-    #inarytools.rename("/usr/share/man/man3/err.3", "ssl-err.3")
 
-    if get.buildTYPE() == "_emul32":
-        #from distutils.dir_util import copy_tree
-        shelltools.copytree("%s/_emul32/lib32/" % get.installDIR(), "%s/usr/lib32" % get.installDIR())
-        inarytools.removeDir("/_emul32")
-        path = "%s/usr/lib32/pkgconfig" % get.installDIR()
-        inarytools.domove("/usr/lib32/engines-1.1", "/usr/lib32/openssl")
-        for f in shelltools.ls(path): inarytools.dosed("%s/%s" % (path, f), "^(prefix=\/)_emul32", r"\1usr")
-        return
 
     # Move engines to /usr/lib/openssl/engines
     inarytools.dodir("/usr/lib/openssl")

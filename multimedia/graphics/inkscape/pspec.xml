@@ -1,0 +1,105 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>inkscape</Name>
+        <Homepage>http://www.inkscape.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>app:gui</IsA>
+        <Summary>SVG vector graphics application</Summary>
+        <Description>Inkscape is an application to create, edit, and convert SVG vector graphics images that can also import from and export to bitmap image files.</Description>
+        <Archive sha1sum="bb78cff7f07424529f13189be07ad96a2bb74f2e" >https://inkscape.org/gallery/item/18051/inkscape-0.92.5.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtkmm2-devel</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gc</Dependency>
+            <Dependency>perl-XML-Parser</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>popt</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>aspell</Dependency>
+            <Dependency>imagemagick</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>libart_lgpl</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>liblqr</Dependency>
+            <Dependency>cairomm-devel</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>gtkspell</Dependency>
+            <Dependency>libsigc2++-devel</Dependency>
+            <Dependency>gsl-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>inkscape</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gc</Dependency>
+            <Dependency>perl-XML-Parser</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>popt</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>poppler</Dependency>
+            <Dependency>aspell</Dependency>
+            <Dependency>gsl</Dependency>
+            <Dependency>imagemagick</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>aalib</Dependency>
+            <Dependency>libart_lgpl</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libsigc2++</Dependency>
+            <Dependency>liblqr</Dependency>
+            <Dependency>cairomm</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>gtkspell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/inkscape</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/appdata/inkscape.appdata.xml</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.92.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -16,4 +16,4 @@ def build():
 def install():
     autotools.install()
 
-    inarytools.dodoc("ChangeLog", "COPYING", "README")
+    inarytools.dodoc("ChangeLog", "COPYING")

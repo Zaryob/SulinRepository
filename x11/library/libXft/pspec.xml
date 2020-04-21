@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org Xft library</Summary>
         <Description>libXft is the X FreeType interface library.</Description>
-        <Archive sha1sum="e025d790a7b6c4d283a78d8df06615cb10278e2d" type="tarbz2">mirrors://xorg/individual/lib/libXft-2.3.2.tar.bz2</Archive>
+        <Archive sha1sum="48f543fe495f545df1794fa36a0a708558ae298c" >https://www.x.org/releases//individual/lib/libXft-2.3.3.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>freetype-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
@@ -77,6 +77,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>2.3.3</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>2.3.2</Version>

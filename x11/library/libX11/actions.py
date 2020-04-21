@@ -23,4 +23,5 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     if get.buildTYPE() == "emul32": return
 
-    inarytools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
+    inarytools.dodoc("AUTHORS", "COPYING", "NEWS")
+    inarytools.remove("/usr/include/X11/extensions/XKBgeom.h")

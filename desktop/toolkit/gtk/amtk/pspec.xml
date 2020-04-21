@@ -1,0 +1,52 @@
+<INARY>
+    <Source>
+        <Name>amtk</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/amtk</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Actions, Menus and Toolbars Kit for GTK+ applications</Summary>
+        <Description>gActions, Menus and Toolbars Kit for GTK+ applications</Description>
+        <Archive sha1sum="d147bf0d6ed2f0f6a1abcfc87a1eb73837a2cc73" >https://gitlab.gnome.org/GNOME/amtk/-/archive/5.0.2/amtk-5.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>amtk</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>amtk-devel</Name>
+        <Summary>Development files for gtkmm2</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>5.0.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -17,4 +17,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.dodoc("ChangeLog", "COPYING", "README")
+    inarytools.dodoc("ChangeLog", "COPYING")

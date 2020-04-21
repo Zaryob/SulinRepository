@@ -1,0 +1,14 @@
+
+<INARY>
+    <Source>
+        <Name>epiphany</Name>
+        <Summary xml:lang="tr">Basit bir web tarayıcısı</Summary>
+        <Description xml:lang="tr">epiphany Gnome için basit bir web tarayıcısıdır.</Description>
+    </Source>
+
+    <Package>
+        <Name>epiphany-devel</Name>
+        <Summary xml:lang="tr">epiphany için geliştirme dosyaları</Summary>
+    </Package>
+</INARY>
+

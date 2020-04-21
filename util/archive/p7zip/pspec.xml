@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Port of 7-Zip archiver for *nix</Summary>
         <Description>p7zip is a port of 7-Zip archiver for Unix. Supports packing-unpacking 7z, ZIP, GZIP, BZIP2 and TAR archives and unpacking RAR, CAB, ISO, ARJ, LZH, CHM, Z, CPIO, RPM, DEB and NSIS arhives.</Description>
-        <Archive sha1sum="e8819907132811aa1afe5ef296181d3a15cc8f22" type="tarbz2">https://netcologne.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2</Archive>
+        <Archive sha1sum="e8819907132811aa1afe5ef296181d3a15cc8f22" >https://netcologne.dl.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>
@@ -28,13 +28,16 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0755" target="/usr/bin/7z">7z</AdditionalFile>
-            <AdditionalFile owner="root" permission="0755" target="/usr/bin/7za">7za</AdditionalFile>
-        </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-11-19</Date>
+            <Version>16.02</Version>
+            <Comment>Engrampa backend fixed</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-19</Date>
             <Version>16.02</Version>

@@ -1,0 +1,94 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>eye-of-gnome</Name>
+        <Homepage>http://projects.gnome.org/eye-of-gnome</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Eye of GNOME image viewer</Summary>
+        <Description>eye-of-gnome (Eye of GNOME) is the offical image viewer for the GNOME desktop.</Description>
+        <Archive sha1sum="fa49f1f7e2e44c30b8ae91f16927bc9f1668108f" type="tarxz">http://ftp.acc.umu.se/pub/gnome/sources/eog/3.36/eog-3.36.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>exempi-devel</Dependency>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>eye-of-gnome</Name>
+        <RuntimeDependencies>
+            <Dependency>gconf</Dependency>
+            <Dependency>libart_lgpl</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>icon-theme-gnome</Dependency>
+            <Dependency>exempi</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/eye-of-gnome</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>eye-of-gnome-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>eye-of-gnome reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>eye-of-gnome-devel</Name>
+        <Summary>Development files for eye-of-gnome</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">eye-of-gnome</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

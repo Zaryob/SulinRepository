@@ -14,13 +14,14 @@
         <IsA>library</IsA>
         <Summary>An opensource web browser engine for GTK+ applications</Summary>
         <Description>The GTK+ port of WebKit is intended to provide a browser component primarily for users of the portable GTK+ UI toolkit on platforms like Linux.</Description>
-        <Archive sha1sum="bd0432281c0463147ec06587c25f226a67acbb2d" type="tarxz">http://www.webkitgtk.org/releases/webkitgtk-2.26.1.tar.xz</Archive>
+        <Archive sha1sum="927d0922b986fd06567015ce4425ed05d9fca209">https://www.webkitgtk.org/releases/webkitgtk-2.28.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
+            <Dependency>libwpe-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
@@ -56,12 +57,16 @@
             <Dependency>gst-plugins-good</Dependency>
             <Dependency>gst-plugins-ugly</Dependency>
             <Dependency>gst-plugins-bad-devel</Dependency>
+            <Dependency>wpebackend-fdo-devel</Dependency>
+            <Dependency>xdg-dbus-proxy</Dependency>
+            <Dependency>bubblewrap</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>webkit2gtk</Name>
         <RuntimeDependencies>
+            <Dependency>xdg-dbus-proxy</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>gtk3</Dependency>
@@ -93,6 +98,9 @@
             <Dependency>gst-plugins-ugly</Dependency>
             <Dependency>gst-plugins-good</Dependency>
             <Dependency>gst-plugins-bad</Dependency>
+            <Dependency>libwpe</Dependency>
+            <Dependency>bubblewrap</Dependency>
+            <Dependency>wpebackend-fdo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -125,6 +133,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-10-10</Date>
+            <Version>2.28.0</Version>
+            <Comment>Upstream</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-10-10</Date>
             <Version>2.26.1</Version>

@@ -10,6 +10,7 @@ udevmonitor_pid=/run/udevmonitor.pid
 depend()
 {
 	need udev
+	before checkfs fsck
 	provide dev
 	keyword -lxc -systemd-nspawn -vserver
 }

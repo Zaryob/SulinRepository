@@ -1,0 +1,40 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>icon-theme-adwaita</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>Adwaita icon theme</Summary>
+        <Description>icon-theme-adwaita package contains the default icon theme used by the GNOME desktop.</Description>
+        <Archive sha1sum="af31f39f0a8e3a2ea55d606cd03b2924d004836e">http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/3.36/adwaita-icon-theme-3.36.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>icon-naming-utils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>icon-theme-adwaita</Name>
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

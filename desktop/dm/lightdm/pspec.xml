@@ -1,0 +1,74 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lightdm</Name>
+        <Homepage>http://www.lxde.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app</IsA>
+        <Summary>LightDM Qt client library</Summary>
+        <Description>LightDM Qt client library</Description>
+        <Archive sha1sum="72e2e34f644d2dec174c2e36dcbca6d26da5d6bc" >https://github.com/canonical/lightdm/archive/1.30.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>itstool</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>xorg-server</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>yelp-tool</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>lightdm-default-config.patch</Patch>
+        </Patches>
+    </Source>
+
+
+    <Package>
+        <Name>lightdm</Name>
+        <RuntimeDependencies>
+            <Dependency>lightdm-gtk-greeter</Dependency>
+            <Dependency>pam</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libXdmcp</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libxklavier</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="sysdir">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/sbin</Path>
+            <Path fileType="data">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/lightdm/Xsession">Xsession</AdditionalFile>
+        </AdditionalFiles>
+
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.30.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

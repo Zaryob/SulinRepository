@@ -1,0 +1,19 @@
+
+<INARY>
+    <Source>
+        <Name>clutter-gst</Name>
+        <Summary xml:lang="tr">Clutter GStreamer arabirimi</Summary>
+        <Description xml:lang="tr">clutter-gst clutter için GStreamer arabirimi sunar.</Description>
+    </Source>
+
+    <Package>
+        <Name>clutter-gst-devel</Name>
+        <Summary xml:lang="tr">clutter-gst için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>clutter-gst-docs</Name>
+        <Summary xml:lang="tr">clutter-gst için referans dosyaları</Summary>
+    </Package>
+
+</INARY>

@@ -13,11 +13,13 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org Xt library</Summary>
         <Description>LibXt provides the X Toolkit Intrinsics, an abstract widget library upon which other toolkits are based. Xt is the basis for many toolkits, including the Athena widgets (Xaw), and LessTif.</Description>
-        <Archive sha1sum="c79e2c4f7de5259a2ade458817a139b66a043d59" type="tarbz2">mirrors://xorg/individual/lib/libXt-1.1.5.tar.bz2</Archive>
+        <Archive sha1sum="27d004db631bee3a82155d3caf961d9584207d36" >https://www.x.org/releases//individual/lib/libXtst-1.2.3.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
+            <Dependency>libXi-32bit</Dependency>
+            <Dependency>libXi</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -72,6 +74,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.2.3</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.1.5</Version>

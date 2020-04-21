@@ -1,0 +1,46 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libclc</Name>
+        <Homepage>http://libclc.llvm.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>AFL-2.1</License>
+        <IsA>library</IsA>
+        <Summary>Library requirements of the OpenCL C programming language</Summary>
+        <Description>Library requirements of the OpenCL C programming language</Description>
+        <Archive sha1sum="a4b5410418bb7c601ea0deb28f7435d307b1acf1">https://github.com/llvm-mirror/libclc/archive/master.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>llvm</Dependency>
+            <Dependency>git</Dependency>
+        </BuildDependencies>
+    </Source>
+
+ <Package>
+        <Name>libclc</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

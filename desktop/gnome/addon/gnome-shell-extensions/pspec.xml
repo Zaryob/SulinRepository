@@ -1,0 +1,54 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-shell-extensions</Name>
+        <Homepage>http://live.gnome.org/GnomeShell/Extensions</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>A collection of extensions providing additional and optional functionality to GNOME Shell</Summary>
+        <Description>gnome-shell-extensions is a collection of extensions providing additional and optional functionality to GNOME Shell.</Description>
+        <Archive sha1sum="1f1c57a630d66e755fb91cfe984e573f8f5478f5" >https://download.gnome.org/sources/gnome-shell-extensions/3.36/gnome-shell-extensions-3.36.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>sassc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-shell-extensions</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gnome-shell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gnome-shell/</Path>
+            <Path fileType="data">/usr/share/gnome-session/</Path>
+            <Path fileType="data">/usr/share/xsessions/</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>Unutulan eklentiler eklendi</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

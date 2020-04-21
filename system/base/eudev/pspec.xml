@@ -18,6 +18,7 @@
         <Archive sha1sum="0648c6e104057fc074a80a742d316cd0b6bee949" type="targz">https://github.com/gentoo/eudev/archive/v3.2.9.tar.gz</Archive>
         <AdditionalFiles>
              <AdditionalFile target="config.cache">config.cache</AdditionalFile>
+             <AdditionalFile target="udev-lfs-20171102.tar.xz">udev-lfs-20171102.tar.xz</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>glibc-devel</Dependency>
@@ -42,7 +43,7 @@
             <Path fileType="executable">/sbin</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/sbin</Path>
-            <Path fileType="executable">/lib/udev</Path>
+            <Path fileType="executable">/usr/lib/udev</Path>
             <Path fileType="library">/lib</Path>
             <Path fileType="library">/usr/lib/libudev.so*</Path>
             <Path fileType="library">/usr/lib/libudev.a*</Path>
@@ -57,6 +58,7 @@
             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev">init.d/udev</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev-settle">init.d/udev-settle</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev-trigger">init.d/udev-trigger</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/udev-postmount">init.d/udev-postmount</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/udev">conf.d/udev</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/udev-settle">conf.d/udev-settle</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/udev-trigger">conf.d/udev-trigger</AdditionalFile>
@@ -118,7 +120,14 @@
     </Package>
 
     <History>
-		<Update release="6">
+    	<Update release="7">
+            <Date>2019-12-13</Date>
+            <Version>3.2.9</Version>
+            <Comment>Udev bugları çözüldü ve lfs kuralları eklendi.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+       <Update release="6">
             <Date>2019-12-13</Date>
             <Version>3.2.9</Version>
             <Comment>inary yeni sürüme uyumluluk</Comment>

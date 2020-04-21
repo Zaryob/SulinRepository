@@ -1,0 +1,82 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gvfs</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>New generation gnome-virtual-file-system</Summary>
+        <Description>GVFS is a userspace virtual filesystem designed to work with the I/O abstractions, especially HAL. It supports fuse for directly access for GVFS mounts. It installs several modules and backends that are automatically used by applications.</Description>
+        <Archive sha1sum="b79b5d98caf088987884b9d4f076a2afd4bf9181" >mirrors://gnome/gvfs/1.42/gvfs-1.42.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>elogind-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            <Dependency>libarchive-devel</Dependency>
+            <Dependency>libcdio-devel</Dependency>
+            <Dependency>libimobiledevice-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>udisks</Dependency>
+            <Dependency>gcr-devel</Dependency>
+            <Dependency>openssh</Dependency>
+            <Dependency>libcdio-paranoia-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gvfs</Name>
+        <Summary>gvfs package contains all GVFS backends and translations files</Summary>
+        <RuntimeDependencies>
+            <Dependency>libimobiledevice</Dependency>
+            <Dependency>libcdio-paranoia</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>elogind</Dependency>
+            <Dependency>gcr</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>gsettings-desktop-schemas</Dependency>
+            <Dependency>libcdio</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>udisks</Dependency>
+            <Dependency>openssh</Dependency>
+            <Dependency>gsettings-desktop-schemas</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/profile.d</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gvfs-devel</Name>
+        <Summary>Development files for gvfs</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gvfs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.42.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

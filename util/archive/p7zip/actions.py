@@ -11,29 +11,11 @@ from inary.actionsapi import get
 
 WorkDir = "p7zip_%s" % get.srcVERSION()
 
-makefiles = {
-             'i686'     : "makefile.linux_x86_asm_gcc_4.X",
-             'x86_64'   : "makefile.linux_amd64_asm"
-            }
-
-def setup():
-    shelltools.copy(makefiles[get.ARCH()], "makefile.machine")
-
-    for i in shelltools.ls("makefile.*"):
-        inarytools.dosed(i, "^CC=gcc ", "CC=%s " % get.CC())
-        inarytools.dosed(i, "^CXX=g\+\+ ", "CXX=%s " % get.CXX())
 
 def build():
-    # do not force CC and CXX here since asm build fails
-    autotools.make('OPTFLAGS="%s -DHAVE_GCCVISIBILITYPATCH -fvisibility=hidden -fvisibility-inlines-hidden" \
-                    all3' % get.CFLAGS())
+    autotools.make('all3')
 
 def install():
-    inarytools.insinto("/usr/lib/p7zip","bin/*")
-
-    # p7zip wrapper
-    inarytools.dobin("contrib/gzip-like_CLI_wrapper_for_7z/p7zip")
-    inarytools.doman("contrib/gzip-like_CLI_wrapper_for_7z/man1/p7zip.1")
-
-    inarytools.dohtml("DOC/MANUAL/*")
-    inarytools.dodoc("ChangeLog", "README", "TODO", "DOC/*.txt")
+    autotools.install('DEST_DIR="{0}" DEST_HOME="/usr" \
+		DEST_MAN="/usr/share/man" \
+		DEST_SHARE_DOC="/usr/share/doc/p7zip"'.format(get.installDIR()))

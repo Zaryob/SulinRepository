@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>A bison-compatible parser generator</Summary>
         <Description>A bison-compatible parser generator. Once you are proficient with Bison, you can use it to develop a wide range of language parsers, from those used in simple desk calculators to complex programming languages</Description>
-        <Archive sha1sum="39f962869f16ee2dafba7cec194b67342af3544f" type="tarxz">mirrors://gnu/bison/bison-3.5.tar.xz</Archive>
+        <Archive sha1sum="67279a74698e60093f57e1dec8e6236e0b194bb2" >https://ftp.gnu.org/gnu/bison/bison-3.5.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>m4</Dependency>
             <Dependency>gettext</Dependency>
@@ -61,6 +61,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="4">
+	<Date>2020-04-14</Date>
+	<Version>3.5.4</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="3">
             <Date>2019-12-13</Date>
             <Version>3.5</Version>

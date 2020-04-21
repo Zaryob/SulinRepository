@@ -6,6 +6,7 @@
 
 from inary.actionsapi import get
 from inary.actionsapi import cmaketools
+from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
@@ -14,27 +15,27 @@ docs = ["AUTHORS", "COPYING.LIB", "THANKS", \
         "LICENSE-LGPL-2", "LICENSE-LGPL-2.1", "LICENSE"]
 
 def setup():
-    shelltools.system("rm -r Source/ThirdParty/gtest/")
-    cmaketools.configure("-DPORT=GTK \
-                          -DCMAKE_BUILD_TYPE=Release \
-                          -DCMAKE_SKIP_RPATH=ON \
-                          -DCMAKE_INSTALL_PREFIX=/usr \
-                          -DLIB_INSTALL_DIR=/usr/lib \
-                          -DLIBEXEC_INSTALL_DIR=/usr/lib/webkit2gtk-4.0 \
-                          -DENABLE_CREDENTIAL_STORAGE=ON \
-                          -DENABLE_GEOLOCATION=ON \
-                          -DENABLE_VIDEO=ON \
-                          -DENABLE_WEB_AUDIO=ON \
-                          -DENABLE_WEBGL=ON \
-                          -DSHOULD_INSTALL_JS_SHELL=ON \
-                          -DENABLE_MINIBROWSER=ON \
-                          -DENABLE_BUBBLEWRAP_SANDBOX=OFF")
+    shelltools.system("mkdir build")
+    shelltools.cd("build")
+    shelltools.system(" cmake \
+    -DPORT=GTK \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_SKIP_RPATH=ON \
+    -DENABLE_GTKDOC=ON \
+    -DENABLE_MINIBROWSER=ON \
+    -DLIBEXEC_INSTALL_DIR=/usr/lib \
+    -DLIB_INSTALL_DIR=/usr/lib\
+    -G Ninja ..")
 
 def build():
-    cmaketools.make()
+    shelltools.cd("build")
+    shelltools.system("ninja JavaScriptCore-4-gir")
+    shelltools.system("ninja")
 
 def install():
-    cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
+    shelltools.cd("build")
+    shelltools.system("ninja installDESTDIR=%s" % get.installDIR())
 
     inarytools.dodoc("NEWS")
     shelltools.cd("Source")

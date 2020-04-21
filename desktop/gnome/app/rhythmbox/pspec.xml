@@ -1,0 +1,81 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rhythmbox</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A music player</Summary>
+        <Description>Rhythmbox is an integrated music management application, originally inspired by Apple's iTunes. GStreamer media framework.</Description>
+        <Archive sha1sum="39c9b76803306bf15bdfc9ac92efe2ad97a5625b" >https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>totem-pl-parser</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libtdb-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>totem-pl-parser-devel</Dependency>
+            <Dependency>orc-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>rhythmbox</Name>
+        <RuntimeDependencies>
+            <Dependency>libsoup</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libtdb</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>totem-pl-parser</Dependency>
+            <Dependency>orc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/rhythmbox</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>rhythmbox-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>rhythmbox reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

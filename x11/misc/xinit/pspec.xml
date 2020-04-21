@@ -13,7 +13,7 @@
         <PartOf>x11.misc</PartOf>
         <Summary>X Window System session initializer</Summary>
         <Description>xinit initializes X Window System server and runs the first client application.</Description>
-        <Archive sha1sum="d874a2eecf2c30291e327851b151fdab8183260c" type="tarbz2">mirrors://xorg/individual/app/xinit-1.4.1.tar.bz2</Archive>
+        <Archive sha1sum="32f092505dc4576fcf814025933d0785c2f9e6dd" >https://www.x.org/releases/individual/app/xinit-1.4.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
         </BuildDependencies>
@@ -38,12 +38,12 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0755" target="/usr/lib/X11/xinit/Xsession">Xsession</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/lib/X11/xinit/xinitrc">xinitrc</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/X11/xinit/xserverrc">xserverrc</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/lib/X11/xinit/xserverrc">xserverrc</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/X11/Xresources" >Xresources</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/etc/X11/Xdefaults" >Xdefaults</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/Xsession">Xsession</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/xinitrc">xinitrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/xserverrc">xserverrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/xserverrc">xserverrc</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/X11/Xresources" >Xresources</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/X11/Xdefaults" >Xdefaults</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/xinitrc.d/10-localuser.sh">xinitrc.d/localuser.sh</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/xinitrc.d/10-xdg-runtime-dir.sh">xinitrc.d/xdg-runtime-dir.sh</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/X11/xinit/xinitrc.d/10-Xresources.sh">xinitrc.d/Xresources.sh</AdditionalFile>
@@ -56,6 +56,20 @@
         </AdditionalFiles>
     </Package>
     <History>
+      <Update release="4">
+            <Date>2019-11-18</Date>
+            <Version>1.4.1</Version>
+            <Comment>Moooore improvement</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+      <Update release="3">
+            <Date>2019-11-18</Date>
+            <Version>1.4.1</Version>
+            <Comment>More improvement</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
       <Update release="2">
             <Date>2019-11-18</Date>
             <Version>1.4.1</Version>

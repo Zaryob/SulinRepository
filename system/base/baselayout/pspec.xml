@@ -52,6 +52,13 @@
     </Package>
 
     <History>
+      <Update release="6">
+          <Date>2019-10-10</Date>
+          <Version>3.0.1</Version>
+          <Comment>Fix dev sys proc</Comment>
+          <Name>Ali Rıza KESKİN</Name>
+          <Email>parduscix@yandex.ru</Email>
+      </Update>
       <Update release="5">
           <Date>2019-10-10</Date>
           <Version>3.0.1</Version>

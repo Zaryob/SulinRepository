@@ -10,7 +10,11 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
-    cmaketools.configure("-DENABLE_GTK_DOC=OFF")
+    cmaketools.configure(" -DCMAKE_BUILD_TYPE=Release   \
+      -DSHARED_ONLY=yes            \
+      -DICAL_BUILD_DOCS=false      \
+      -DGOBJECT_INTROSPECTION=true \
+      -DICAL_GLIB_VAPI=true  ")
 
 def build():
     cmaketools.make()

@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>ostree</Name>
+        <Homepage>http://www.oligarchy.co.uk/xapian</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Operating system and container binary deployment and upgrades</Summary>
+        <Description>Operating system and container binary deployment and upgrades</Description>
+        <Archive sha1sum="68a3ca414ddb14596ab92d170f43dabfa78f100e" type="tarxz">https://github.com/ostreedev/ostree/releases/download/v2020.3/libostree-2020.3.tar.xz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>ostree</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ostree-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development headers for ostree</Summary>
+        <Description>ostree-devel provides development headers for ostree.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">ostree</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/xapian-config*</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/cmake/xapian</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>ostree-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation files for ostree</Summary>
+        <Description>ostree-docs provides documentation files for ostree.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">ostree</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/ostree/*html</Path>
+            <Path fileType="doc">/usr/share/doc/ostree/apidoc.pdf</Path>
+            <Path fileType="doc">/usr/share/doc/ostree/apidoc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-30</Date>
+            <Version>2020.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

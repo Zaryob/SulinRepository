@@ -10,7 +10,6 @@ from inary.actionsapi import get
 from inary.actionsapi import inarytools
 
 def setup():
-    shelltools.system("sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c")
     autotools.configure("--enable-nls \
                          --program-prefix=g")
 

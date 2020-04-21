@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org X11 library</Summary>
         <Description>Core X11 protocol client library.</Description>
-        <Archive sha1sum="94f375f28e592a599594d3d6ce982516afdc212c" type="tarbz2">mirrors://xorg/individual/lib/libX11-1.6.4.tar.bz2</Archive>
+        <Archive sha1sum="62456536411f2540fbd4a3f59ed8af94967124c2" >https://www.x.org/releases//individual/lib/libX11-1.6.9.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libxcb-devel</Dependency>
         </BuildDependencies>
@@ -66,6 +66,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.6.9</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.6.4</Version>

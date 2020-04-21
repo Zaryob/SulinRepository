@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>An open source reference implementation of the icalendar data type and serialization format</Summary>
         <Description>libical is an Open Source implementation of the IETF's iCalendar Calendaring and Scheduling protocols. (RFC 2445, 2446, and 2447). It parses iCal components and provides a C API for manipulating the component properties, parameters, and subcomponents.</Description>
-        <Archive sha1sum="bbcb0d60f396b247b952c22e9c1d9e41fc4c4d6e" type="targz">https://github.com/libical/libical/releases/download/v3.0.6/libical-3.0.6.tar.gz</Archive>
+        <Archive sha1sum="d2a9cecb9b8d825d5b6989e44b424235a27173a7" type="targz">https://github.com/libical/libical/archive/v3.0.8.tar.gz</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>
@@ -22,7 +22,7 @@
         <Name>libical</Name>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share/libical/zoneinfo</Path>
+            <Path fileType="data">/usr/share/</Path>
         </Files>
     </Package>
 
@@ -40,6 +40,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-26</Date>
+            <Version>3.0.8</Version>
+            <Comment>Update</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-26</Date>
             <Version>3.0.6</Version>

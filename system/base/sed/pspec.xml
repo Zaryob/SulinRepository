@@ -14,7 +14,7 @@
         <Summary>GNU Stream Editor</Summary>
         <Description>Sed is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).</Description>
         <!-- @@@gnu sed -->
-        <Archive sha1sum="dbc842f6fdf538f366d97e7c4b4f241eaefd14a5" type="tarxz">mirrors://gnu/sed/sed-4.7.tar.xz</Archive>
+        <Archive sha1sum="61bd770062d49cdab3f0f45df473e2bf950ba266" >https://ftp.gnu.org/gnu/sed/sed-4.8.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>attr-devel</Dependency>
@@ -58,7 +58,14 @@
                 <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
-    <History>
+<History>
+	<Update release="3">
+	<Date>2020-04-14</Date>
+	<Version>4.8</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2019-09-19</Date>
             <Version>4.7</Version>

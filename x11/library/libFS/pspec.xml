@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>X.Org FS library</Summary>
         <Description>libFS is the interface library to the X Font Server.</Description>
-        <Archive sha1sum="6af3035d9cbca31562e42a1060f6ce7b86a5d1d3" type="tarbz2">mirrors://xorg/individual/lib/libFS-1.0.7.tar.bz2</Archive>
+        <Archive sha1sum="70173cc15a7a55defb7b22b00a9387901acad634" >https://www.x.org/releases//individual/lib/libFS-1.0.8.tar.bz2</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>
@@ -36,6 +36,13 @@
         </Files>
     </Package>
     <History>
+	<Update release="2">
+	<Date>2020-04-16</Date>
+	<Version>1.0.8</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.0.7</Version>

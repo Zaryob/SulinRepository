@@ -1,0 +1,19 @@
+
+<INARY>
+    <Source>
+        <Name>totem</Name>
+        <Summary xml:lang="tr">Gnome masaüstü için vidyo oynatıcı</Summary>
+        <Description xml:lang="tr">Totem, Gnome masaüstü için vidyo oynatıcısıdır.</Description>
+    </Source>
+
+    <Package>
+        <Name>totem-devel</Name>
+        <Summary xml:lang="tr">totem için geliştirme dosyaları</Summary>
+    </Package>
+
+    <Package>
+        <Name>totem-docs</Name>
+        <Summary xml:lang="tr">totem için belgelendirme dosyaları</Summary>
+    </Package>
+</INARY>
+

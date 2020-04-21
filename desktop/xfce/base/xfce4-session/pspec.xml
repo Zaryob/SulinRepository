@@ -50,7 +50,6 @@
             <Dependency>cairo</Dependency>
             <Dependency>xfconf</Dependency>
             <Dependency>gconf</Dependency>
-            <Dependency>polkit-gnome</Dependency>
             <Dependency>libglade</Dependency>
             <Dependency>fontconfig</Dependency>
         </RuntimeDependencies>
@@ -89,6 +88,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-14</Date>
+            <Version>4.14.0</Version>
+            <Comment>bağımlılık temizliği</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-14</Date>
             <Version>4.14.0</Version>

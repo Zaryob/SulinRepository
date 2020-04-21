@@ -15,8 +15,6 @@ def setup():
     shelltools.export("LDFLAGS","{} -Wl,-z,lazy".format(get.LDFLAGS()))
     autotools.configure('--sysconfdir=/etc/X11 \
 		--localstatedir=/var \
-		--with-fontrootdir=$_fontroot \
-		--with-default-font-path=${0}/misc,${0}/100dpi:unscaled,${0}/75dpi:unscaled,${0}/TTF,${0}/Type1 \
 		--with-xkb-path=/usr/share/X11/xkb \
 		--with-xkb-output=/var/lib/xkb \
 		--without-systemd-daemon \
@@ -39,7 +37,7 @@ def setup():
 		--disable-config-hal \
 		--disable-dmx \
 		--disable-systemd-logind \
-		--with-os-vendor="sulin"'.format("/usr/share/fonts"))
+		--with-os-vendor="sulin"')
 
 def build():
     autotools.make()
@@ -56,3 +54,4 @@ def install():
     inarytools.removeDir("/var/log")
 
     inarytools.dodoc("COPYING", "README.md")
+

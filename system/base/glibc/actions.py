@@ -47,7 +47,7 @@ def setup():
                --enable-multi-arch \
                --enable-static-pie\
                --enable-stack-protector=all \
-               --enable-kernel=5.4.0 \
+               --enable-kernel=4.19.217 \
                --with-headers=/usr/include \
                --enable-stackguard-randomization \
                --disable-werror"

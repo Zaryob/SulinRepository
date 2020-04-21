@@ -12,7 +12,7 @@
         <IsA>app</IsA>
         <Summary>Intelligent Input Bus for Linux / Unix OS</Summary>
         <Description>IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface.</Description>
-        <Archive sha1sum="3073a6bde235e8f9e80272b7e3fc7804fde82b15" type="targz">https://github.com/ibus/ibus/releases/download/1.5.21/ibus-1.5.21.tar.gz</Archive>
+        <Archive sha1sum="355cd1902ebe9f446a112bad7e380b14689eb7ba" >https://github.com/ibus/ibus/releases/download/1.5.22/ibus-1.5.22.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>unicode-ucd</Dependency>
@@ -97,6 +97,13 @@
     </Package>
 
     <History>
+	<Update release="3">
+	<Date>2020-04-14</Date>
+	<Version>1.5.22</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2020-03-16</Date>
             <Version>1.5.21</Version>
