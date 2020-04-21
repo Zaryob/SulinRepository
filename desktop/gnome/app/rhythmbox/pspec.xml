@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>A music player</Summary>
         <Description>Rhythmbox is an integrated music management application, originally inspired by Apple's iTunes. GStreamer media framework.</Description>
-        <Archive sha1sum="267990365decf1302188d0e987ab2157ab61fb3c" >https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.tar.xz</Archive>
+        <Archive sha1sum="39c9b76803306bf15bdfc9ac92efe2ad97a5625b" >https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>totem-pl-parser</Dependency>
             <Dependency>libsoup-devel</Dependency>
@@ -29,19 +29,14 @@
     <Package>
         <Name>rhythmbox</Name>
         <RuntimeDependencies>
-            <Dependency>libgpod</Dependency>
-            <Dependency>totem-pl-parser</Dependency>
-            <Dependency>gnome-media</Dependency>
-            <Dependency>libgnome-keyring</Dependency>
-            <Dependency>libsoup-gnome</Dependency>
+            <Dependency>libsoup</Dependency>
             <Dependency>gst-plugins-base</Dependency>
-            <Dependency>gst-python</Dependency>
-            <Dependency>musicbrainz</Dependency>
-            <Dependency>python-gtk</Dependency>
-            <Dependency>gnome-python</Dependency>
-            <Dependency>libsoup-gnome</Dependency>
-            <Dependency>avahi-glib</Dependency>
-            <Dependency>avahi-libs</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libtdb</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>totem-pl-parser</Dependency>
+            <Dependency>orc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/gconf</Path>
@@ -57,6 +52,10 @@
             <Path fileType="data">/usr/share/gnome</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/share/rhythmbox</Path>
         </Files>
     </Package>

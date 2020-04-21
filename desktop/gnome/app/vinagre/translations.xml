@@ -1,0 +1,14 @@
+
+<INARY>
+    <Source>
+        <Name>vinagre</Name>
+        <Summary xml:lang="tr">Bir VNC ve SSH istemcisi</Summary>
+        <Description xml:lang="tr">Vinagre, GNOME masaüstü için uzak masaüstü görüntüleyicisi ve SSH istemcisidir.</Description>
+    </Source>
+
+    <Package>
+        <Name>vinagre-devel</Name>
+        <Summary xml:lang="tr">vinagre için geliştirme dosyaları</Summary>
+    </Package>
+</INARY>
+

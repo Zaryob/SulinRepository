@@ -1,0 +1,75 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vinagre</Name>
+        <Homepage>http://projects.gnome.org/vinagre</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>vinagre</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A VNC and SSH client</Summary>
+        <Description>Vinagre is a remote desktop viewer and SSH client for the GNOME Desktop.</Description>
+        <Archive sha1sum="5c1d5e9bb082fac1f6d0199cebd2984df629314c" >http://ftp.gnome.org/pub/gnome/sources/vinagre/3.22/vinagre-3.22.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency >gtk-vnc-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vinagre</Name>
+        <RuntimeDependencies>
+            <Dependency>gconf</Dependency>
+            <Dependency >gtk-vnc</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/vinagre</Path>
+            <Path fileType="data">/usr/share/vinagre-1</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+ 
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.22.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
