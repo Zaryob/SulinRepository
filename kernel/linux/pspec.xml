@@ -41,7 +41,6 @@
     </Package>
 
     <Package>
-        <BuildType>headers</BuildType>
         <Name>linux-module-headers</Name>
         <Summary>Kernel header files for external module building</Summary>
         <Description>kernel-module-headers includes the C header files and the necessary Kbuild files for being able to build external kernel modules.</Description>
