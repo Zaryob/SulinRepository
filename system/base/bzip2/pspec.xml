@@ -66,25 +66,11 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2019-09-17</Date>
-            <Version>1.0.8</Version>
-            <Comment>Bzip 1.0.8 version up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-09-10</Date>
-            <Version>1.0.6</Version>
-            <Comment>Emul32 package added for bzip2.</Comment>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2018-12-22</Date>
-            <Version>1.0.6</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Date>2020-04-24</Date>
+            <Version>1.0.8</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

@@ -52,47 +52,12 @@
     </Package>
 
     <History>
-      <Update release="6">
-          <Date>2019-10-10</Date>
+      <Update release="1">
+            <Date>2020-04-24</Date>
           <Version>3.0.1</Version>
-          <Comment>Fix dev sys proc</Comment>
-          <Name>Ali Rıza KESKİN</Name>
-          <Email>parduscix@yandex.ru</Email>
-      </Update>
-      <Update release="5">
-          <Date>2019-10-10</Date>
-          <Version>3.0.1</Version>
-          <Comment>Fix permissions</Comment>
-          <Name>Ali Rıza KESKİN</Name>
-          <Email>parduscix@yandex.ru</Email>
-      </Update>
-      <Update release="4">
-          <Date>2019-10-10</Date>
-          <Version>3.0.1</Version>
-          <Comment>s20 started.</Comment>
-          <Name>Ali Rıza KESKİN</Name>
-          <Email>parduscix@yandex.ru</Email>
-      </Update>
-      <Update release="3">
-          <Date>2019-10-10</Date>
-          <Version>2.14</Version>
-          <Comment>s19 finished.</Comment>
-          <Name>Ali Rıza KESKİN</Name>
-          <Email>parduscix@yandex.ru</Email>
-      </Update>
-      <Update release="2">
-          <Date>2019-10-10</Date>
-          <Version>2.13</Version>
-          <Comment>Fixed etc files and baselayout script.</Comment>
-          <Name>Süleyman Poyraz</Name>
-          <Email>zaryob.dev@gmail.com</Email>
-      </Update>
-        <Update release="1">
-            <Date>2019-09-04</Date>
-            <Version>2.12</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
-        </Update>
+      </Update>
     </History>
 </INARY>

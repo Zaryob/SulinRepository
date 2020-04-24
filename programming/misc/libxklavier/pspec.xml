@@ -52,9 +52,9 @@ type="zip">http://cgit.freedesktop.org/libxklavier/snapshot/libxklavier-5.4.zip<
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-04-16</Date>
+            <Date>2020-04-24</Date>
             <Version>5.4</Version>
-            <Comment>First release</Comment>
+            <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

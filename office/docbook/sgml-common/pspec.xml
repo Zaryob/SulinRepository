@@ -30,32 +30,11 @@
         <IsA>postOps</IsA>
     </Package>
     <History>
-	    <Update release="4">
-            <Date>2018-12-28</Date>
+	    <Update release="1">
+            <Date>2020-04-24</Date>
             <Version>0.6.3</Version>
-            <Comment>postOps uyumluluğu</Comment>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="3">
-            <Date>2018-12-28</Date>
-            <Version>0.6.3</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2018-12-28</Date>
-            <Version>0.6.3</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2018-12-28</Date>
-            <Version>0.6.3</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

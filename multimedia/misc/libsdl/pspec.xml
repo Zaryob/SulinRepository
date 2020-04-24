@@ -100,10 +100,10 @@
 
     <History>
         <Update release="1">
-            <Date>2019-09-14</Date>
+            <Date>2020-04-24</Date>
             <Version>1.2.15</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

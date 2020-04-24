@@ -28,8 +28,8 @@ def build():
 def install():
     if get.buildTYPE()=="rebuild_python":
         autotools.rawInstall("DESTDIR={}/python2".format(get.installDIR()))
-        shelltools.move("{}/python2/usr/lib/python2*".format(get.installDIR()),
-         "{}/usr/lib/".format(get.installDIR()))
+        shelltools.move("{}/python2/usr/lib/python2.7".format(get.installDIR()),
+         "{}/usr/lib/python2.7".format(get.installDIR()))
         shelltools.unlinkDir("{}/python2/".format(get.installDIR()))
         return
 

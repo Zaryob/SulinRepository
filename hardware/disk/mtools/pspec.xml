@@ -27,18 +27,11 @@
     </Package>
 
     <History>
-        <Update release="2">
-            <Date>2019-12-14</Date>
-            <Version>4.0.23</Version>
-            <Comment>Version bump to 4.0.23</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-09-18</Date>
-            <Version>4.0.18</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Date>2020-04-24</Date>
+            <Version>4.0.23</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

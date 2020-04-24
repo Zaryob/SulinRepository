@@ -72,31 +72,10 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2019-11-26</Date>
-            <Version>2.6.4</Version>
-            <Comment>Package is rebuilded with 32bit source and released up.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="3">
-            <Date>2019-11-19</Date>
-            <Version>2.6.4</Version>
-            <Comment>Version 2.6.4 compiled succesfully.</Comment>
-            <Name>Süleyman Poyra</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-10-25</Date>
-            <Version>2.6.2</Version>
-            <Comment>harfbuzz new release for qt5.</Comment>
-            <Name>Süleyman Poyra</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-04-12</Date>
-            <Version>1.4.2</Version>
-            <Comment>First release</Comment>
+            <Date>2020-04-24</Date>
+            <Version>2.6.4</Version>
+            <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

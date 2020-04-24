@@ -8,7 +8,7 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import get
-
+WorkDir="sqlite-src-3290000"
     # Use secure delete. Even if the data is deleted with sqlite query, the traces of the deleted data still remains in the file
     # but cannot be seen with sqlite query. However, it can be seen by opening the file with a text editor.
     # SQLITE_SECURE_DELETE overwrites written data with zeros.
@@ -31,6 +31,7 @@ def setup():
                          "-DSQLITE_ENABLE_API_ARMOR")
 
     inarytools.cflags.sub("-O[s\d]", "-O3")
+    shelltools.system("chmod 755 configure")
 
     autotools.configure("--disable-static \
                          --disable-editline \

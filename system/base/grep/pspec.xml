@@ -58,10 +58,10 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2019-01-19</Date>
+            <Date>2020-04-24</Date>
             <Version>3.3</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

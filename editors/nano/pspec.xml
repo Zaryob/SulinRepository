@@ -34,18 +34,11 @@
     </Package>
 
     <History>
-		<Update release="2">
-            <Date>2020-01-19</Date>
+		<Update release="1">
+            <Date>2020-04-24</Date>
             <Version>4.7</Version>
-            <Comment>Update and rebuild.</Comment>
-            <Name>Ali Rıza KESKİN</Name>
-            <Email>parduscix@yandex.ru</Email>
-        </Update>
-        <Update release="1">
-            <Date>2019-01-16</Date>
-            <Version>2.7.5</Version>
-            <Comment>First release</Comment>
-            <Name>Suleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

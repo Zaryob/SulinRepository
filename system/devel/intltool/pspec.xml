@@ -61,18 +61,11 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2019-09-26</Date>
-            <Version>0.51.0</Version>
-            <Comment>Package is rebuiled because of perl version upgrade and released up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2018-12-28</Date>
+            <Date>2020-04-24</Date>
             <Version>0.51.0</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

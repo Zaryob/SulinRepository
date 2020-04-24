@@ -97,32 +97,11 @@
         </Files>
     </Package>
     <History>
-     <Update release="4">
-            <Date>2020-04-05</Date>
+     <Update release="1">
+            <Date>2020-04-24</Date>
             <Version>1.1.1f</Version>
-            <Comment>libssl.so.1.0.0 hatası giderildi.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-    <Update release="3">
-            <Date>2019-09-18</Date>
-            <Version>1.1.1d</Version>
-            <Comment>postOps uyumluluğu</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-09-18</Date>
-            <Version>1.1.1d</Version>
-            <Comment>Version bump to 1.1.1d</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2018-12-24</Date>
-            <Version>1.1.1a</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

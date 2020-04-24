@@ -37,17 +37,10 @@
 
     <History>
         <Update release="1">
-            <Date>2020-03-27</Date>
+            <Date>2020-04-24</Date>
             <Version>0.29.2</Version>
-            <Comment>local support added.</Comment>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2018-12-28</Date>
-            <Version>0.29.2</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

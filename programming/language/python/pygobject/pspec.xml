@@ -73,18 +73,11 @@
     </Package>
 
     <History>
-	<Update release="2">
-            <Date>2020-02-01</Date>
+	<Update release="1">
+            <Date>2020-04-24</Date>
             <Version>2.28.6</Version>
-            <Comment>fix package name</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>parduscix@yandex.ru</Email>
-        </Update>
-        <Update release="1">
-            <Date>2017-02-06</Date>
-            <Version>2.28.6</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

@@ -111,38 +111,10 @@
         </Files>
     </Package-->
     <History>
-        <Update release="5">
-            <Date>2019-11-26</Date>
-            <Version>1.16.0</Version>
-            <Comment>downgrade stable branch</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="4">
-            <Date>2019-11-26</Date>
-            <Version>1.17.3</Version>
-            <Comment>cairo version bumped to compability.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-      <Update release="3">
-          <Date>2019-10-10</Date>
-          <Version>1.16.0</Version>
-          <Comment>Fixed not founded library "./cairo/libcairo-trace.so: libbfd-2.31.1.so => not found."</Comment>
-          <Name>Suleyman Poyraz</Name>
-          <Email>zaryob.dev@gmail.com</Email>
-      </Update>
-      <Update release="2">
-          <Date>2019-09-19</Date>
-          <Version>1.16.0</Version>
-          <Comment>Version bumped to 1.16.0 for librsvg package.</Comment>
-          <Name>Suleyman Poyraz</Name>
-          <Email>zaryob.dev@gmail.com</Email>
-      </Update>
         <Update release="1">
-            <Date>2019-04-12</Date>
-            <Version>1.14.8</Version>
-            <Comment>First release</Comment>
+            <Date>2020-04-24</Date>
+            <Version>1.16.0</Version>
+            <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

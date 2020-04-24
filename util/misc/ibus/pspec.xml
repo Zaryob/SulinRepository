@@ -97,26 +97,12 @@
     </Package>
 
     <History>
-	<Update release="3">
-	<Date>2020-04-14</Date>
+	<Update release="1">
+            <Date>2020-04-24</Date>
 	<Version>1.5.22</Version>
-	<Comment>Automatic version upgrade.</Comment>
-	<Name>Ali Rıza KESKİN</Name>
-	<Email>parduscix@yandex.ru</Email>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
 	</Update>
-        <Update release="2">
-            <Date>2020-03-16</Date>
-            <Version>1.5.21</Version>
-            <Comment>Gereksiz bağımlılık temizliği</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2019-11-23</Date>
-            <Version>1.5.21</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
     </History>
 </INARY>

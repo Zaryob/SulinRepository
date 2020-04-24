@@ -83,26 +83,12 @@
         </Files>
     </Package>
     <History>
-	<Update release="3">
-	<Date>2020-04-14</Date>
+	<Update release="1">
+            <Date>2020-04-24</Date>
 	<Version>3.4.2</Version>
-	<Comment>Automatic version upgrade.</Comment>
-	<Name>Ali Rıza KESKİN</Name>
-	<Email>parduscix@yandex.ru</Email>
-	</Update>
-        <Update release="2">
-            <Date>2020-01-31</Date>
-            <Version>3.4.1</Version>
-            <Comment>First release</Comment>
-            <Name>Upstream</Name>
-            <Email>parduscix@yandex.ru</Email>
-        </Update>
-        <Update release="1">
-            <Date>2018-12-28</Date>
-            <Version>3.3.2</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
-        </Update>
+	</Update>
     </History>
 </INARY>

@@ -45,18 +45,11 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2019-11-21</Date>
-            <Version>2.4.0</Version>
-            <Comment>Archive uri changed.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-04-12</Date>
+            <Date>2020-04-24</Date>
             <Version>2.4.0</Version>
-            <Comment>First release</Comment>
-            <Name>Sulin Community</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

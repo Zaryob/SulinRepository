@@ -47,19 +47,12 @@
     </Package>
 
     <History>
-    <Update release="2">
-        <Date>2019-12-12</Date>
+    <Update release="1">
+            <Date>2020-04-24</Date>
         <Version>2.7.1</Version>
-        <Comment>Automatic version upgrade.</Comment>
-        <Name>Ali Rıza KESKİN</Name>
-        <Email>parduscix@yandex.ru</Email>
-    </Update>
-        <Update release="1">
-            <Date>2019-09-16</Date>
-            <Version>2.6.0</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
-        </Update>
+    </Update>
     </History>
 </INARY>

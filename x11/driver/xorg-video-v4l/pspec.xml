@@ -32,18 +32,11 @@
     </Package>
 
     <History>
-        <Update release="2">
-            <Date>2019-11-17</Date>
-            <Version>0.3.0</Version>
-            <Comment>Package version is bumped to new upstream version.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-09-13</Date>
-            <Version>0.2.0</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Date>2020-04-24</Date>
+            <Version>0.3.0</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

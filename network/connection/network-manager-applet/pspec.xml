@@ -82,25 +82,11 @@
     </Package>
 
     <History>
-		<Update release="3">
-            <Date>2019-12-15</Date>
+		<Update release="1">
+            <Date>2020-04-24</Date>
             <Version>1.8.24</Version>
-            <Comment>postOps uyumluluğu</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-12-15</Date>
-            <Version>1.8.24</Version>
-            <Comment>Added needed scom script.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2019-11-28</Date>
-            <Version>1.8.24</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

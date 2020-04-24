@@ -51,18 +51,11 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2019-09-28</Date>
-            <Version>2.14.02</Version>
-            <Comment>Upgraded version to 2.14.02</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2018-12-28</Date>
-            <Version>2.12.02</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Date>2020-04-24</Date>
+            <Version>2.14.02</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

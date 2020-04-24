@@ -82,18 +82,11 @@
     </Package>
 
     <History>
-        <Update release="2">
-            <Date>2019-09-14</Date>
-            <Version>3.8.6</Version>
-            <Comment>Dependency fix</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-09-14</Date>
+            <Date>2020-04-24</Date>
             <Version>3.8.6</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman Poyraz</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

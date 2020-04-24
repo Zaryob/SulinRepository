@@ -10,13 +10,13 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    shelltools.system("./autogen.sh --help") # nasıl olduğunu bilmiyorum ama böyle çözülüyo
     autotools.configure('--prefix=/usr \
 		--sysconfdir=/etc \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--localstatedir=/var \
 		--disable-nls \
+		--enable-man \
 		--with-libpam \
 		--with-audit \
 		--without-selinux \
@@ -24,8 +24,8 @@ def setup():
 		--without-attr \
 		--without-tcb \
 		--without-nscd \
-                --enable-man \
-		--without-group-name-max-length')
+		--with-group-name-max-length=32')
+
 def build():
     # Rebuild gmo catalogs
     autotools.make("-C po update-gmo")

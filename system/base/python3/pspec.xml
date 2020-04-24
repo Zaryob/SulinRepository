@@ -168,17 +168,10 @@
         </AdditionalFiles>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2019-09-09</Date>
-            <Version>3.7.4</Version>
-            <Comment>Python3 have upgraded minor releaseç</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-01-18</Date>
-            <Version>3.7.2</Version>
-            <Comment>First release</Comment>
+            <Date>2020-04-24</Date>
+            <Version>3.7.4</Version>
+            <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

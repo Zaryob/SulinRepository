@@ -64,25 +64,11 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2019-12-13</Date>
-            <Version>6.7</Version>
-            <Comment>Automatic version bump.</Comment>
-            <Name>Ali Rıza KESKİN</Name>
-            <Email>parduscix@yandex.ru</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-09-17</Date>
-            <Version>6.6</Version>
-            <Comment>Updated version to 6.6</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2018-12-22</Date>
-            <Version>6.5</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Date>2020-04-24</Date>
+            <Version>6.7</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

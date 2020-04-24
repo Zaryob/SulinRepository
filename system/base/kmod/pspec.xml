@@ -122,32 +122,11 @@
     </Package>
 
     <History>
-        <Update release="4">
-            <Date>2019-11-19</Date>
-            <Version>26</Version>
-            <Comment>kmod init script added.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="3">
-            <Date>2019-11-18</Date>
-            <Version>26</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Suleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-09-17</Date>
-            <Version>26</Version>
-            <Comment>Version bump to 26</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2018-12-22</Date>
-            <Version>25</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Date>2020-04-24</Date>
+            <Version>26</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

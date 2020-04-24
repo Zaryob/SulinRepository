@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Utilities to deal with user accounts</Summary>
         <Description>The Shadow password file utilities package includes programs necessary to convert traditional V7 *NIX password files to the SVR4 shadow password format, and additional tools to maintain password and group files (that work with both shadow and non-shadow passwords).</Description>
-        <Archive sha1sum="368773f0258f8f1fbaed3eb44c20b9be82c7e995">https://github.com/shadow-maint/shadow/archive/4.8.1.tar.gz</Archive>
+        <Archive sha1sum="63457a0ba58dc4e81b2663b839dc6c89d3343f12">https://github.com/shadow-maint/shadow/releases/download/4.8.1/shadow-4.8.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>pam-devel</Dependency>
             <Dependency>audit-devel</Dependency>
@@ -95,46 +95,11 @@
             </Files>
         </Package>
     <History>
-	<Update release="6">
-            <Date>2020-01-10</Date>
+	<Update release="1">
+            <Date>2020-04-24</Date>
             <Version>4.8.1</Version>
-            <Comment>New baselayout relations.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="5">
-            <Date>2020-01-10</Date>
-            <Version>4.8</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-      <Update release="4">
-          <Date>2019-12-08</Date>
-          <Version>4.8</Version>
-          <Comment>Version bumped to 4.8 and shadow pam.d files fixed.</Comment>
-          <Name>Süleyman Poyraz</Name>
-          <Email>zaryob.dev@gmail.com</Email>
-      </Update>
-      <Update release="3">
-            <Date>2019-11-11</Date>
-            <Version>4.7</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-09-18</Date>
-            <Version>4.7</Version>
-            <Comment>Version bump to 4.7</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2018-12-22</Date>
-            <Version>4.6</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>

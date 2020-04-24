@@ -38,17 +38,10 @@
     </Package>
 
     <History>
-        <Update release="2">
-            <Date>2019-09-25</Date>
-            <Version>4.09.0</Version>
-            <Comment>Version of ocaml have been upgraded to 4.09.0</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2019-09-09</Date>
-            <Version>4.04.0</Version>
-            <Comment>First release</Comment>
+            <Date>2020-04-24</Date>
+            <Version>4.09.0</Version>
+            <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

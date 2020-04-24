@@ -14,10 +14,10 @@
         <Summary>Another uncompressor for compatibility</Summary>
         <Description>The ncompress package contains the compress and uncompress file compression and decompression utilities, which are compatible with the original UNIX compress utility (.Z file extensions). These utilities can't handle gzipped (.gz file extensions) files, but gzip can handle compressed files.</Description>
         <!-- @@@github vapier ncompress -->
-        <Archive sha1sum="5f43cc6cfe5f70a8a58fdcf0fc40f4ab2168ee2f" type="targz">mirrors://sourceforge/ncompress/ncompress-4.2.4.4.tar.gz</Archive>
+        <Archive sha1sum="6ef38fdb6505060f6797d56cb5923704ba09eb14">https://github.com/vapier/ncompress/archive/v4.2.4.6.tar.gz</Archive>
         <Patches>
-            <Patch level="1">ncompress-4.2.4-make.patch</Patch>
-            <Patch level="1">ncompress-4.2.4-lfs2.patch</Patch>
+            <!--Patch level="1">ncompress-4.2.4-make.patch</Patch-->
+            <!--Patch level="1">ncompress-4.2.4-lfs2.patch</Patch-->
             <Patch level="1">ncompress-2GB.patch</Patch>
             <Patch level="1">ncompress-4.2.4-endians.patch</Patch>
         </Patches>
@@ -32,18 +32,11 @@
     </Package>
 
     <History>
-        <Update release="2">
-            <Date>2019-09-19</Date>
-            <Version>4.2.4.4</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2018-12-24</Date>
-            <Version>4.2.4.4</Version>
-            <Comment>First release</Comment>
-            <Name>Süleyman POYRAZ</Name>
+            <Date>2020-04-24</Date>
+            <Version>4.2.4.6</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
