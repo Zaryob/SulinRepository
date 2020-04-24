@@ -16,7 +16,6 @@
         <Archive sha1sum="63457a0ba58dc4e81b2663b839dc6c89d3343f12">https://github.com/shadow-maint/shadow/releases/download/4.8.1/shadow-4.8.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>pam-devel</Dependency>
-            <Dependency>audit-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
             <Dependency>acl-devel</Dependency>
             <Dependency>attr-devel</Dependency>
@@ -27,7 +26,6 @@
         <Name>shadow</Name>
         <RuntimeDependencies>
             <Dependency>acl</Dependency>
-            <Dependency>audit</Dependency>
             <Dependency>attr</Dependency>
             <Dependency>pam</Dependency>
         </RuntimeDependencies>

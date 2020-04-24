@@ -8,11 +8,12 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
+    autotools.autoconf()
     autotools.configure("--prefix=/usr \
                          --sysconfdir=/etc")
 
-def build():
-    autotools.make()
+#def build():
+#    autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s install-sh" % get.installDIR())
@@ -28,5 +29,5 @@ def install():
     # Vim syntax and filetype plugins
     inarytools.insinto("/usr/share/vim/vimfiles/syntax/" , "vim/syntax/asciidoc.vim")
 
-    inarytools.dodoc("BUGS", "CHANGELOG", "COPYING", "README")
+    inarytools.dodoc("BUGS.txt","COPYRIGHT","COPYING")
     inarytools.dodoc("docbook-xsl/asciidoc-docbook-xsl.txt", "filters/code/code-filter-readme.txt")

@@ -18,7 +18,7 @@ def setup():
 		--disable-nls \
 		--enable-man \
 		--with-libpam \
-		--with-audit \
+		--without-audit \
 		--without-selinux \
 		--without-acl \
 		--without-attr \

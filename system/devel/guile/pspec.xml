@@ -15,7 +15,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>GNU Scheme interpreter and library</Summary>
         <Description>GUILE (GNU's Ubiquitous Intelligent Language for Extension) is a library implementation of the Scheme programming language, written in C. GUILE provides a machine-independent execution platform that can be linked in as a library during the building of extensible programs.</Description>
-        <Archive sha1sum="c25d93c18dd43a3d9364f19bfb76e95fe5058f5f" >https://ftp.gnu.org/gnu/guile/guile-3.0.2.tar.gz</Archive>
+        <Archive sha1sum="6a90d47244952af062996286cf9b8d609b7d0d75">https://ftp.gnu.org/gnu/guile/guile-2.2.7.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gc-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
@@ -74,7 +74,7 @@
     <History>
 	<Update release="1">
             <Date>2020-04-24</Date>
-	<Version>3.0.2</Version>
+            <Version>2.2.7</Version>
             <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

@@ -23,7 +23,6 @@
             <Dependency>perl</Dependency>
             <Dependency>gettext</Dependency>
             <Dependency>cracklib-devel</Dependency>
-            <Dependency>audit-devel</Dependency>
             <Dependency>libxslt-devel</Dependency>
             <Dependency>docbook-xsl</Dependency>
         </BuildDependencies>
@@ -33,7 +32,6 @@
         <Name>pam</Name>
         <RuntimeDependencies>
             <Dependency>cracklib</Dependency>
-            <Dependency>audit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

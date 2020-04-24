@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>force-elogind</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/force-elogind/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>Use force libelogind</Summary>
+        <Description>Force replace libsystemd with libelogind</Description>
+        <Archive sha1sum="1be63e37d4fe1ece2abd4a5d48ea460dd6cd9130">https://gitlab.com/sulinos/devel/force-elogind/-/archive/0.0.1/force-elogind-0.0.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>elogind-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>force-elogind</Name>
+        <RuntimeDependencies>
+            <Dependency>elogind</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/lib/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-04-24</Date>
+            <Version>0.0.1</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

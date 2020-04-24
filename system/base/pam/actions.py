@@ -15,7 +15,7 @@ def setup():
     autotools.autoreconf("-fi")
     autotools.configure("--libdir=/usr/lib{0} \
                          --enable-nls \
-                         --enable-audit \
+                         --disable-audit \
                          --enable-securedir=/lib{0}/security \
                          --enable-isadir='.'".format("32" if get.buildTYPE()=="emul32" else ""))
 

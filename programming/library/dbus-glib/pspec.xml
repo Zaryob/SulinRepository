@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dbus-glib</Name>
+        <Homepage>http://dbus.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>AFL-2.1</License>
+        <IsA>library</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Glib bindings for D-Bus</Summary>
+        <Description>dbus-glib is an add-on library to integrate the standard D-Bus library with the GLib thread abstraction and main loop.</Description>
+        <Archive sha1sum="998b7c762c8f18c906f19fc393bb8712eabe8c97" type="targz">http://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.110.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>dbus-glib</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <!-- New dbus uses GVariant data structure. We need glib2 >= 2.24 -->
+            <Dependency>glib2</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec/dbus-bash-completion-helper</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/etc/bash_completion.d</Path>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="data">/usr/libexec</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>dbus-glib-devel</Name>
+        <IsA>header</IsA>
+        <PartOf>programming.library</PartOf>
+        <Summary>Development files for dbus-glib</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">dbus-glib</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/dbus-1.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>dbus-glib-docs</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Documentation for dbus-glib package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">dbus-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>dbus-glib-pages</Name>
+        <IsA>data:doc</IsA>
+        <PartOf>system.doc</PartOf>
+        <Summary>Man pages for dbus-glib package.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">dbus-glib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-04-24</Date>
+            <Version>0.110</Version>
+            <Comment>First release for SulinOS 2021</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

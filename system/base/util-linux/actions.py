@@ -58,7 +58,7 @@ def setup():
                      --enable-libmount \
                      --enable-pylibmount \
                      --enable-runuser \
-                     --with-audit \
+                     --with-audit=no \
                      --with-udev \
                      --with-python=3 \
                      --without-utempter \

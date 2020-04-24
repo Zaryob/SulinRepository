@@ -35,7 +35,7 @@ def install():
     if get.buildTYPE()=="rebuild_python":
         autotools.rawInstall("DESTDIR='%s/python2'" % get.installDIR())
         shelltools.move("%s/python2/usr/lib/python2.7" % get.installDIR(),
-                        "%s/usr/lib/" % get.installDIR())
+                        "%s/usr/lib/python2.7" % get.installDIR())
         shelltools.unlinkDir("%s/python2" % get.installDIR())
         return
 
