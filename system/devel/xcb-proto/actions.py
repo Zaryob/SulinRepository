@@ -51,7 +51,7 @@ def install():
     shelltools.cd("build-python2")
     autotools.rawInstall("DESTDIR=%s/python2" % get.installDIR())
     shelltools.move("%s/python2/usr/lib/python2.7" % get.installDIR(),
-                    "%s/usr/lib/" % get.installDIR())
+                    "%s/usr/lib/python2.7" % get.installDIR())
     shelltools.unlinkDir("%s/python2" % get.installDIR())
     shelltools.cd("..")
-    inarytools.dodoc("doc/*.txt", "COPYING", "NEWS", "README", "TODO")
+    inarytools.dodoc("doc/*.txt", "COPYING", "NEWS", "README.md", "TODO")

@@ -13,16 +13,13 @@
         <PartOf>x11.library</PartOf>
         <Summary>The X protocol C-language Binding (XCB)</Summary>
         <Description>The X protocol C-language Binding (XCB) is a replacement for Xlib featuring a small footprint, latency hiding, direct access to the protocol, improved threading support, and extensibility.</Description>
-        <Archive sha1sum="2ab17a1bb2a44e0a9cb0b26bcf899689ba1bbb3b" type="tarbz2">https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.bz2</Archive>
+        <Archive sha1sum="e218be6043162d2f758643dbda8caccd53107388" type="tarxz">https://xcb.freedesktop.org/dist/libxcb-1.14.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libXau-devel</Dependency>
             <Dependency>libXdmcp-devel</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
             <Dependency versionFrom="1.12">xcb-proto</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">libxcb-1.1-no-pthread-stubs.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>libxcb</Name>
@@ -76,7 +73,7 @@
     <History>
         <Update release="1">
             <Date>2020-04-24</Date>
-            <Version>1.13.1</Version>
+            <Version>1.14</Version>
             <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

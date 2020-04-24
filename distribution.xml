@@ -1,11 +1,11 @@
 <INARY>
     <SourceName>Sulin</SourceName>
-    <Version>2019</Version>
-    <Description xml:lang="tr">Sulin 2019 Deposu</Description>
-    <Description xml:lang="az">Sulin 2019 Anbari</Description>
-    <Description xml:lang="en">Sulin 2019 Repository</Description>
-    <Description xml:lang="es">Sulin 2019 Repositorio</Description>
-    <Description xml:lang="nl">Sulin 2019 Opslagplaats</Description>
+    <Version>2021</Version>
+    <Description xml:lang="tr">Sulin 2021 Deposu</Description>
+    <Description xml:lang="az">Sulin 2021 Anbari</Description>
+    <Description xml:lang="en">Sulin 2021 Repository</Description>
+    <Description xml:lang="es">Sulin 2021 Repositorio</Description>
+    <Description xml:lang="nl">Sulin 2021 Opslagplaats</Description>
     <Type>Main</Type>
     <BinaryName>Sulin</BinaryName>
 </INARY>

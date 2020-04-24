@@ -14,8 +14,8 @@
         <Description>Python is a dynamic object-oriented programming language that can be used for many kinds of software development. It offers strong support for integration with other languages and tools, comes with extensive standard libraries, and can be learned in a few days.</Description>
         <Archive sha1sum="f99348a095ec4a6411c84c0d15343d11920c9724" type="tarxz">http://www.python.org/ftp/python/2.7.15/Python-2.7.15.tar.xz</Archive>
         <BuildDependencies>
-            <!--<Dependency>tcl-devel</Dependency>-->
-            <!--<Dependency>tcltk-devel</Dependency>-->
+            <Dependency>tcl-devel</Dependency>
+            <Dependency>tcltk-devel</Dependency>
             <!-- Bootstrap -->
             <!-- Comment these deps when bootstrapping -->
         </BuildDependencies>
