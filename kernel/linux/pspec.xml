@@ -13,10 +13,10 @@
         <PartOf>kernel.linux</PartOf>
         <Summary>The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="04a78eff1a4eafdcc4d5493068ed5a7c313e93e4">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.5.1.tar.xz</Archive>
+        <Archive sha1sum="86a6d1fa2ba6707b676246f7d6a5d842c5622fd2">https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.6.4.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
-            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.5.1</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.6.4</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>
@@ -60,6 +60,13 @@
     </Package>
 
     <History>
+        <Update release="8">
+	    <Date>2020-04-24</Date>
+            <Version>5.6.4</Version>
+            <Comment>Imsakin ilk kerneli derlendi.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="7">
             <Date>2020-04-23</Date>
             <Version>5.5.1</Version>
