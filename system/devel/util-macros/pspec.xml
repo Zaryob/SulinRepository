@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>X.Org X11 Autotools macros</Summary>
         <Description>X.Org X11 autotools macros are required for building the various packages that comprise the X Window System.</Description>
-        <Archive sha1sum="386e993ba339e561aa6d93073a4dcbab24e30bad" type="tarbz2">mirrors://xorg/individual/util/util-macros-1.19.1.tar.bz2</Archive>
+        <Archive sha1sum="e8b3a6f2bfde22440fca0974da53da18821a4ee6">mirrors://xorg/individual/util/util-macros-1.19.2.tar.bz2</Archive>
         <Patches>
             <Patch level="1">doc.patch</Patch>
         </Patches>
@@ -42,7 +42,7 @@
     <History>
         <Update release="1">
             <Date>2020-04-24</Date>
-            <Version>1.19.1</Version>
+            <Version>1.19.2</Version>
             <Comment>First release for SulinOS 2021</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
