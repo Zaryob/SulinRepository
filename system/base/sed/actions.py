@@ -9,7 +9,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure()
+    autotools.configure("--disable-dependency-tracking")
 
 def build():
     autotools.make("LDFLAGS=%s" % get.LDFLAGS())

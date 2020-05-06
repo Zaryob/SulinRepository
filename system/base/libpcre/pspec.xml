@@ -14,7 +14,7 @@
         <Summary>Perl-compatible regular expression library</Summary>
         <Description>The PCRE (Perl Compatible Regular Expressions) library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.</Description>
         <!-- @@@blfs general pcre -->
-        <Archive sha1sum="0d4585ee6426ab0db9c0c8f1c8c6da968170174d" type="tarbz2">https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.bz2</Archive>
+        <Archive sha1sum="c9e3f514e2710fd894339436d0b61100a779cf92" >https://ftp.pcre.org/pub/pcre/pcre-8.44.zip</Archive>
         <BuildDependencies>
             <Dependency>readline-devel</Dependency>
         </BuildDependencies>
@@ -91,6 +91,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="4">
+            <Date>2019-09-19</Date>
+            <Version>8.44</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2019-09-19</Date>
             <Version>8.43</Version>

@@ -27,10 +27,17 @@ def build():
 
 def install():
     kerneltools.install()
-    kerneltools.installHeaders()    
-
+    kerneltools.installHeaders()
+    kerneltools.installLibcHeaders()
+    #fix libre kernel suffix bug
+    shelltools.system("mv {0}/boot/linux-5.6.4 {0}/boot/linux-5.6.4-libre-sulinos".format(get.installDIR()))
+    shelltools.system("mv {0}/usr/src/libre-headers-5.6.4-sulinos {0}/usr/src/linux-headers-5.6.4-libre-sulinos".format(get.installDIR()))
+    shelltools.system("mv {0}/lib/modules/5.6.4-sulinos {0}/lib/modules/5.6.4-libre-sulinos".format(get.installDIR()))
     # add objtool for external module building and enabled VALIDATION_STACK option
-    inarytools.insinto("/usr/src/libre-headers-%s-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
+    inarytools.insinto("/usr/src/linux-headers-%s-libre-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 
     # Generate some module lists to use within mkinitramfs
-    shelltools.system("./generate-module-list %s/lib/modules/%s-sulinos" % (get.installDIR(), kerneltools.__getSuffix()))
+    shelltools.system("./generate-module-list %s/lib/modules/%s-libre-sulinos" % (get.installDIR(), kerneltools.__getSuffix()))
+    #kernel include dirs from linux
+    shelltools.system("rm -rf  {0}/usr/include".format(get.installDIR()))
+

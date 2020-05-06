@@ -11,6 +11,9 @@ from inary.actionsapi import get
 
 def setup():
     autotools.configure("--disable-static \
+		--enable-introspection \
+		--with-authfw=pam \
+		--with-os-type=sulin \
 		--disable-gtk-doc \
 		--disable-gtk-doc-html \
 		--disable-gtk-doc-pdf \
@@ -23,9 +26,3 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s/" % get.installDIR())
-    #remove all unused polkit stuff
-    shelltools.system("rm -rf {}/etc".format(get.installDIR()))
-    shelltools.system("rm -rf {}/usr/bin".format(get.installDIR()))
-    shelltools.system("rm -rf {}/usr/lib/polkit-1".format(get.installDIR()))
-    shelltools.system("rm -rf {}/usr/share/dbus-1".format(get.installDIR()))
-    shelltools.system("rm -rf {}/usr/share/polkit-1".format(get.installDIR()))

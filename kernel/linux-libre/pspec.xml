@@ -2,11 +2,11 @@
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>linux-libre</Name>
+        <Name>libre</Name>
         <Homepage>http://www.kernel.org</Homepage>
         <Packager>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
         </Packager>
         <License>GPLv2</License>
         <IsA>kernel</IsA>
@@ -52,34 +52,12 @@
     </Package>
 
     <History>
-        <Update release="4">
+        <Update release="1">
             <Date>2020-04-24</Date>
             <Version>5.6.4</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="3">
-            <Date>2020-02-02</Date>
-            <Version>5.5.1</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Ali Rıza KESKİN</Name>
+            <Comment>2021 have been detected.</Comment>
+            <Name>Ali Rıza Keskin</Name>
             <Email>parduscix@yandex.ru</Email>
-        </Update>
-        <Update release="2">
-            <Date>2019-12-15</Date>
-            <Version>5.4.0</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
-            <Name>Süleyman Poyraz</Name>
-            <Email>zaryob.dev@gmail.com</Email>
-        </Update>
-        <Update release="1">
-            <Date>2019-12-08</Date>
-            <Version>5.4.0</Version>
-            <Comment>First release of libre kernel.</Comment>
-            <Type package="kernel">security</Type>
-            <Name>Süleyman POYRAZ</Name>
-            <Email>zaryob.dev@gmail.com</Email>
         </Update>
     </History>
 </INARY>
