@@ -26,7 +26,13 @@ def build():
 
 
 def install():
+    #empity dir for buggy kerneltools
+    inarytools.dodir("/lib/modules/5.6.4-sulinos/source")
+    inarytools.dodir("/lib/modules/5.6.4-sulinos/build")
     kerneltools.install()
+    inarytools.removeDir("/lib/modules/5.6.4-sulinos/source")
+    inarytools.removeDir("/lib/modules/5.6.4-sulinos/build")
+    inarytools.removeDir("/usr/bin")
     kerneltools.installHeaders()
     kerneltools.installLibcHeaders()
     #fix libre kernel suffix bug
