@@ -50,8 +50,6 @@
             <Path fileType="header">/tmp-headers*</Path>
         </Files>
     </Package>
-
-    <History>
         
     <History>
         <Update release="4">
