@@ -12,7 +12,7 @@ from inary.actionsapi import get
 
 def setup():
     shelltools.export("CFLAGS", "{} -DG_DISABLE_CAST_CHECKS".format(get.CFLAGS()))
-    options=""
+    options="-Dselinux=disabled -Dman=true"
     if get.buildTYPE()=="emul32":
         shelltools.export("CC", "gcc -m32")
         shelltools.export("CXX", "g++ -m32")

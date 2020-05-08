@@ -2,7 +2,7 @@
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>libXt</Name>
+        <Name>libXaw3d</Name>
         <Homepage>http://www.x.org/</Homepage>
         <Packager>
             <Name>Suleyman Poyraz</Name>
@@ -11,38 +11,42 @@
         <License>MIT</License>
         <IsA>library</IsA>
         <PartOf>x11.library</PartOf>
-        <Summary>X.Org Xt library</Summary>
-        <Description>LibXt provides the X Toolkit Intrinsics, an abstract widget library upon which other toolkits are based. Xt is the basis for many toolkits, including the Athena widgets (Xaw), and LessTif.</Description>
-        <Archive sha1sum="dbec5dece934d7aa1e594247a5e511db26efb614" >https://www.x.org/releases/individual/lib/libXt-1.2.0.tar.gz</Archive>
+        <Summary>X Athena Widgets Library</Summary>
+        <Description>Xaw is a widget set based on the X Toolkit Intrinsics (Xt) Library.</Description>
+        <Archive sha1sum="5d8c47059dabc85368f01fd6b2509c1dec97a911" >https://www.x.org/releases/individual/lib/libXaw3d-1.6.3.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libXi-32bit</Dependency>
-            <Dependency>libXi</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
-        <Name>libXt</Name>
+        <Name>libXaw3d</Name>
         <RuntimeDependencies>
-            <Dependency>libICE</Dependency>
-            <Dependency>libSM</Dependency>
             <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libXpm</Dependency>
+            <Dependency>libXt</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share/X11</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     <Package>
-        <Name>libXt-devel</Name>
-        <Summary>Development files for libXt</Summary>
+        <Name>libXaw3d-devel</Name>
+        <Summary>Development files for libXaw</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">libXt</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
+            <Dependency>libXaw3d</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXpm-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -53,44 +57,36 @@
         </Files>
     </Package>
     <Package>
-        <Name>libXt-32bit</Name>
+        <Name>libXaw3d-32bit</Name>
         <PartOf>emul32</PartOf>
-        <Summary>32-bit shared libraries for libXt</Summary>
+        <Summary>32-bit shared libraries for libSM</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-            
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXmu-32bit</Dependency>
+            <Dependency>libXpm-32bit</Dependency>
+            <Dependency>libXt-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
-            <Dependency>libSM-32bit</Dependency>
+            
         </BuildDependencies>
         <RuntimeDependencies>
-            
-            <Dependency release="current">libXt</Dependency>
+            <Dependency >libXaw3d</Dependency>
+            <Dependency>libXext-32bit</Dependency>
+            <Dependency>libXmu-32bit</Dependency>
+            <Dependency>libXpm-32bit</Dependency>
+            <Dependency>libXt-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
-            <Dependency>libSM-32bit</Dependency>
-            <Dependency>libICE-32bit</Dependency>
+            
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
     </Package>
     <History>
-    <Update release="3">
-	<Date>2020-04-16</Date>
-	<Version>1.2.0</Version>
-	<Comment>Fix library</Comment>
-	<Name>Ali Rıza KESKİN</Name>
-	<Email>parduscix@yandex.ru</Email>
-	</Update>
-	<Update release="2">
-	<Date>2020-04-16</Date>
-	<Version>1.2.3</Version>
-	<Comment>Automatic version upgrade.</Comment>
-	<Name>Ali Rıza KESKİN</Name>
-	<Email>parduscix@yandex.ru</Email>
-	</Update>
+
         <Update release="1">
             <Date>2019-04-12</Date>
-            <Version>1.1.5</Version>
+            <Version>1.6.3</Version>
             <Comment>First release</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
