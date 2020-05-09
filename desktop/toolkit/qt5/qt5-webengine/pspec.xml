@@ -13,13 +13,6 @@
         <License>LGPLv2.1-linking-exception</License>
         <Archive sha1sum="f4f33db2b62529399156b95d2737b103ebd5bba3" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtwebengine-everywhere-src-5.14.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>qt5-xmlpatterns-devel</Dependency>
-            <Dependency>qt5-location-devel</Dependency>
-            <Dependency>qt5-sensors-devel</Dependency>
-            <Dependency>qt5-webchannel-devel</Dependency>
             <Dependency>re2c</Dependency>
             <Dependency>ninja</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
