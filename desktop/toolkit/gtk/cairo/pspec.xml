@@ -73,7 +73,7 @@
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
         </Files>
     </Package>
-    <!--Package>
+    <Package>
         <Name>cairo-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for cairo</Summary>
@@ -109,7 +109,7 @@
             <Path fileType="library">/usr/lib32/lib*</Path>
             <Path fileType="library">/usr/lib32/cairo</Path>
         </Files>
-    </Package-->
+    </Package>
     <History>
         <Update release="5">
             <Date>2019-11-26</Date>
