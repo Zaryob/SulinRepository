@@ -1,0 +1,29 @@
+OPENSSL_LIBS='-L/usr/lib -lssl -lcrypto'  ../configure -confirm-license -opensource \
+		    -prefix /usr \
+		    -docdir /usr/share/doc/qt5 \
+	 	    -plugindir /usr/lib/qt5/plugins \
+		    -importdir /usr/lib/qt5/imports \
+                    -qmldir /usr/lib/qt5/qml \
+		    -datadir /usr/share/qt5 \
+		    -translationdir /usr/share/qt5/translations \
+		    -sysconfdir /etc \
+		    -examplesdir /usr/share/doc/qt5/examples \
+		    -system-sqlite \
+		    -system-zlib \
+		    -icu \
+                    -ccache \
+                    -webengine-icu \
+                    -gstreamer 1.0 \
+		    -system-libpng \
+		    -system-ffmpeg \
+		    -system-libjpeg \
+                    -no-sql-mysql \
+		    -no-rpath \
+		    -openssl-linked \
+		    -silent \
+		    -optimized-qmake \
+		    -dbus \
+		    -reduce-relocations \
+		    -no-separate-debug-info \
+		    -opengl \
+		    -glib
