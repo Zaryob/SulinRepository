@@ -12,8 +12,9 @@ from inary.actionsapi import shelltools
 def setup():
     # fix sandbox violations when attempt to read "/missing.xml"
     inarytools.dosed("testapi.c", "\/missing.xml", "missing.xml")
-
+    shelltools.export('ICU_CPPFLAGS', 'icu-config --cppflags')
     options = "--with-zlib \
+               --with-icu \
                --with-readline \
                --enable-ipv6 \
                --disable-static \
@@ -40,7 +41,7 @@ def install():
     if get.buildTYPE()=="rebuild_python":
         autotools.rawInstall("DESTDIR='%s/python2'" % get.installDIR())
         shelltools.move("%s/python2/usr/lib/python2.7" % get.installDIR(),
-                        "%s/usr/lib/" % get.installDIR())
+                        "%s/usr/lib/python2.7" % get.installDIR())
         shelltools.unlinkDir("%s/python2" % get.installDIR())
         return
 
