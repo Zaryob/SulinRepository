@@ -11,9 +11,8 @@ from inary.actionsapi import get
 
 def install():
     for i in {"/bin", "/sbin", "/lib", "/lib32","/data/srv","/kernel","/kernel/boot",
-              "/etc","/tmp","/data/misc","/data/media/system",
-              "/data","/data/user","/data/app","/data/app/system","/data/user/root",
-              "/tmp", "/usr", "/usr/bin","/kernel/modules","/data/media",
+              "/etc","/tmp","/data/misc","/data","/data/user","/data/app","/data/user/root",
+              "/tmp", "/usr", "/usr/bin","/kernel/modules","/data/app/system",
               "/usr/lib", "/usr/lib32", "/usr/libexec", "/usr/share","/kernel/firmware",
               "/run", "/usr/local", "/usr/local/bin", "/usr/local/lib", "/usr/local/libexec",
               "/usr/local/lib32","/data/log","/data/lock","/var"}:
@@ -28,8 +27,7 @@ def install():
 #        ->app          = Userspace application directory
 #            ->system   = Userspace optional system application
 #        ->data         = Infinitive loop directory ( /data linked here )
-#        ->media        = userspace mounted volumes ( linked /var/run/mount )
-#            ->system   = Root mounted volumes
+#        ->media        = userspace mounted volumes ( /var/run/mount linked here )
 #        ->user         = User's home directory
 #            ->root     = The root home ( /root linked here )
 #        ->misc         = Is an unused directory
@@ -56,10 +54,11 @@ def install():
     inarytools.dosym("../data", "/data/data")
     inarytools.dosym("../data/log", "/var/log")
     inarytools.dosym("../data/lock", "/var/lock")
+    inarytools.dosym("../run/media", "/data/media")
 
     inarytools.dosym("../dev","/kernel/dev")
     inarytools.dosym("../sys","/kernel/sys")
-    inarytools.dosym("../proc","kernel/proc")
+    inarytools.dosym("../proc","/kernel/proc")
     inarytools.dosym("kernel/boot", "/boot")
     inarytools.dosym("../kernel/modules", "/lib/modules")
     inarytools.dosym("../kernel/firmware", "/lib/firmware")
@@ -72,8 +71,11 @@ def install():
 
         # Hack for binary blobs built on multi-lib systems
         inarytools.dosym("lib", "/lib64")
+        inarytools.dosym("lib32", "/libx32")
         inarytools.dosym("lib", "/usr/lib64")
+        inarytools.dosym("lib32", "/usr/libx32")
         inarytools.dosym("lib", "/usr/local/lib64")
+        inarytools.dosym("lib32", "/usr/local/libx32")
 
     # Adjust permissions
     shelltools.system("chmod 755 -R {}/".format(get.installDIR()))

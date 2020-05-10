@@ -6,8 +6,9 @@ def create_dir(name):
     if os.path.exists(name)==False:
         os.system("mkdir -p "+name)
 def copy_file(source,target,perm):
-	os.system("cp -prf '"+source+"' '"+target+"'")
-	os.chmod(target,perm)
+    if not os.path.exists(target):
+        os.system("cp -prf '"+source+"' '"+target+"'")
+    os.chmod(target,perm)
 
 def postInstall():
     """base config"""
