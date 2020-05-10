@@ -16,13 +16,11 @@ def setup():
         inarytools.dosed(f, "\$\(localstatedir\)(\/run\/dbus)", "\\1")
     options = "PYTHON=/usr/bin/python3 \
                --disable-selinux \
-               --disable-static \
                --disable-tests \
                --disable-asserts \
                --disable-checks \
                --disable-embedded-tests \
                --disable-modular-tests \
-               --disable-doxygen-docs \
                --disable-systemd \
                --disable-libaudit \
                --disable-silent-rules \
@@ -34,8 +32,10 @@ def setup():
                --with-console-auth-dir=/var/run/console/ \
                --with-session-socket-dir=/tmp \
                --with-dbus-user=dbus \
-               --enable-abstract-sockets=auto \
-               --disable-xml-docs"
+               --enable-containers \
+               --with-x \
+               --enable-abstract-sockets=auto"
+
 
     if get.buildTYPE() == "emul32":
         options += "\
