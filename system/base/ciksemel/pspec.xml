@@ -13,7 +13,7 @@
         <Summary>Ciksemel is iksemel based xml library.</Summary>
         <Description>.</Description>
         <!-- @@@github Zaryob iksemel -->
-        <Archive sha1sum="2b01de612361346de16a5eace92df746cd0fc72a" type="targz">https://github.com/Zaryob/iksemel/archive/ciksemel-1.tar.gz</Archive>
+        <Archive sha1sum="78c89be10d3c00df8f0db296ddd5e32338e96af0" >https://gitlab.com/sulinos/devel/ciksemel/-/archive/ciklemel-1.1/ciksemel-ciklemel-1.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
         </BuildDependencies>
@@ -31,7 +31,14 @@
     </Package>
 
     <History>
-        <Update release="2">
+        <Update release="3">
+            <Date>2019-09-17</Date>
+            <Version>1.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+                <Update release="2">
             <Date>2019-09-17</Date>
             <Version>1</Version>
             <Comment>Package is rebuilded and released up.</Comment>
