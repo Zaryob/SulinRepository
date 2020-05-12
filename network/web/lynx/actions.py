@@ -24,6 +24,8 @@ def setup():
                          --with-zlib \
                          --enable-nls \
                          --enable-ipv6 \
+                         --with-gnutls \
+                         --with-gnutls-openssl \
                          --mandir=/usr/share/man")
 
 def build():
