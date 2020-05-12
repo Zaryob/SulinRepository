@@ -21,7 +21,6 @@ def setup():
            -Dsession_tracking_consolekit=false    \
            -Dmodify_system=true      \
            -Dpolkit_agent=true       \
-           -Dselinux=false           \
            -Dconfig_plugins_default=keyfile \
            -Diwd=true                \
            -Dnm_cloud_setup=true     \

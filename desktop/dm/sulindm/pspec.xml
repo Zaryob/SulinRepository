@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dm-service</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/start-dm</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Generic display manager service</Summary>
+        <Description>A gerenic display manager service for sulinos</Description>
+        <Archive sha1sum="fd4f55f7694418b5ae1302f939868d81fe99225c" >https://gitlab.com/sulinos/devel/start-dm/-/archive/1.0/start-dm-1.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>dm-service</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

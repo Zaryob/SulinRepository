@@ -571,6 +571,422 @@
                 <Email>zaryob.dev@gmail.com</Email>
             </Maintainer>
         </Component>
+        <Component>
+            <Name>desktop.kde</Name>
+            <LocalName xml:lang="en">kde component</LocalName>
+            <LocalName xml:lang="tr">kde bileşeni</LocalName>
+            <LocalName xml:lang="az">kde komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент kde</LocalName>
+            <LocalName xml:lang="de">kde-Komponente</LocalName>
+            <LocalName xml:lang="fr">composant de bureu kde</LocalName>
+            <Summary xml:lang="en">This is the root component that contains the kde  desktop environment.</Summary>
+            <Summary xml:lang="tr">kde masaüstü ortamını içeren kök bileşendir.</Summary>
+            <Summary xml:lang="az">kde masa üstü mühitini ehtiva edən bir kök komponentdir</Summary>
+            <Summary xml:lang="ru">kde-это корневой компонент, содержащий среду рабочего стола</Summary>
+            <Summary xml:lang="de">desktop.kde ist die root-Komponente, die kde desktop-Umgebung enthält</Summary>
+            <Summary xml:lang="fr">desktop.kde  est le composant racine qui contient l'environnement de kde bureau</Summary>
+            <Description xml:lang="en">The KDE desktop environment is the largest desktop environment ever built for operating systems like linux and unix. in itself includes network tools, video editor, design applications, even training applications.</Description>
+            <Description xml:lang="tr">KDE masaüstü ortamı linux ve unix benzeri işletim sistemleri için yapılmış en büyük masaüstü ortamıdır. kendi içerisinde network araçları, video editörü, dizayn uygulamaları hatta eğitim uygulamaları içerir.</Description>
+            <Description xml:lang="az">KDE masa üstü mühiti linux və unix-like əməliyyat sistemləri üçün yaradılmış ən böyük masa üstü mühitidir. şəbəkə alətləri, video redaktoru, hazırlanmış proqramlar və ya hətta təhsil proqramları daxildir.</Description>
+            <Description xml:lang="ru">Среда рабочего стола KDE-самая большая среда рабочего стола, созданная для операционных систем linux и unix like. он включает в себя сетевые инструменты, видеоредактор, разработанные приложения или даже образовательные приложения.</Description>
+            <Description xml:lang="de">Die KDE-desktop-Umgebung ist die größte desktop-Umgebung, die je für Betriebssysteme wie linux und unix gebaut wurde. an sich umfasst Netzwerk-tools, video-editor, design-Anwendungen, sogar trainingsanwendungen.</Description>
+            <Description xml:lang="fr">L'environnement de bureau KDE est le plus grand environnement de bureau jamais construit pour les systèmes d'exploitation comme linux et unix. en lui-même inclut des outils de réseau, un éditeur vidéo, des applications de conception, même des applications de formation.</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.accessibility</Name>
+            <LocalName xml:lang="en">accessibility component of kde</LocalName>
+            <LocalName xml:lang="tr">kde'nin erişilebilirlik bileşeni</LocalName>
+            <LocalName xml:lang="az">KDE Erişilebilirlik komponenti</LocalName>
+            <LocalName xml:lang="ru">компонент специальных возможностей kde</LocalName>
+            <LocalName xml:lang="de">accessibility-Komponente von kde</LocalName>
+            <LocalName xml:lang="fr">l'accessibilité de kde</LocalName>
+            <Summary xml:lang="en">Includes applications used for accessibility</Summary>
+            <Summary xml:lang="tr">Erişilebilirlik için kullanılan uygulamaları içerir</Summary>
+            <Summary xml:lang="az">Erişilebilirlik üçün istifadə olunan tətbiqləri ehtiva edir</Summary>
+            <Summary xml:lang="ru">Включает приложения, используемые для доступности</Summary>
+            <Summary xml:lang="de">Enthält Anwendungen für die Zugänglichkeit</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">kde brings with it some accessibility programs. That programs are located under the desktop.kde.accesibility component.</Description>
+            <Description xml:lang="tr">kde beraberinde bazı erişilebilirlik programlarını getirir. bu program desktop.kde.accesibility bileşeni altında yer almaktadır.</Description>
+            <Description xml:lang="az">KDE bəzi Erişilebilirlik proqramları gətirir. Bu proqramlar desktop.kde.accesibility komponentinin altındadır.</Description>
+            <Description xml:lang="ru">kde приносит с собой некоторые специальные программы. Что программы расположены под рабочим desktop.kde.accesibility доступности</Description>
+            <Description xml:lang="de">kde bringt einige accessibility-Programme. dieses Programm ist desktop.kde.accesibility befindet sich unter der accesibility-Komponente.</Description>
+            <Description xml:lang="fr">kde apporte avec elle quelques programmes d'accessibilité. Que les programmes sont situés sous le desktop.kde.accesibility composante.</Description>
+            <Group>accessibility</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.addon</Name>
+            <LocalName xml:lang="en">addon component for kde</LocalName>
+            <LocalName xml:lang="tr">kde için addon bileşeni</LocalName>
+            <LocalName xml:lang="az">KDE üçün addon komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент аддона для kde</LocalName>
+            <LocalName xml:lang="de">addon-Komponente für kde</LocalName>
+            <LocalName xml:lang="fr">composant addon pour kde</LocalName>
+            <Summary xml:lang="en">Component that includes extra programs (addons) desktop software and desktop environments</Summary>
+            <Summary xml:lang="tr">kde ek paketler içeren bileşendir</Summary>
+            <Summary xml:lang="az">Bu kde üçün ek paketler olan komponentdir.</Summary>
+            <Summary xml:lang="ru">компонент, содержащий Плагины kde.</Summary>
+            <Summary xml:lang="de">Komponente, die kde-addons enthält.</Summary>
+            <Summary xml:lang="fr">composant contenant kde addons.</Summary>
+            <Description xml:lang="en">That is the component that contains plug-in packages for the kde panel and some other kde applications.</Description>
+            <Description xml:lang="tr">kde panel ve diğer bazı uygulamalar için eklenti paketlerini içeren bileşendir.</Description>
+            <Description xml:lang="az">kde panel üçün və bəzi digər tətbiqlər üçün plugin paketlərini ehtiva edən bir komponentdir.</Description>
+            <Description xml:lang="ru">Это компонент, который содержит пакеты плагинов для панели kde и некоторых других приложений kde.</Description>
+            <Description xml:lang="de">Das ist die Komponente, die plug-in-Pakete für das kde-panel und einige andere kde-Anwendungen enthält.</Description>
+            <Description xml:lang="fr">C'est le composant qui contient les paquets plug-in pour le panneau kde et d'autres applications kde.</Description>
+            <Group>accessories</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.admin</Name>
+            <LocalName xml:lang="en">kde admin tool component</LocalName>
+            <LocalName xml:lang="tr">kde yönetici aracı bileşeni</LocalName>
+            <LocalName xml:lang="az">kde idarə aləti komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент инструмента администрирования kde</LocalName>
+            <LocalName xml:lang="de">kde-admin-tool-Komponente</LocalName>
+            <LocalName xml:lang="fr">composante de l'outil d'administration kde</LocalName>
+            <Summary xml:lang="en">That component includes kde administration tools.</Summary>
+            <Summary xml:lang="tr">kde yönetici araçlarını içeren paket bileşeni.</Summary>
+            <Summary xml:lang="az">Bu masa üstü kompüter üçün proqram olan komponentdir.</Summary>
+            <Summary xml:lang="ru">этот компонент включает в себя средства администрирования kde.</Summary>
+            <Summary xml:lang="de">Komponente, enthält Xfce-Verwaltungstools.</Summary>
+            <Summary xml:lang="fr">cette composante comprend des outils d'administration kde.</Summary>
+            <Description xml:lang="en">That component includes kde administration tools.</Description>
+            <Description xml:lang="tr">kde yönetici araçlarını içeren paket bileşeni.</Description>
+            <Description xml:lang="az">Bu masa üstü kompüter üçün proqram olan komponentdir.</Description>
+            <Description xml:lang="ru">этот компонент включает в себя средства администрирования kde.</Description>
+            <Description xml:lang="de">Komponente, enthält Xfce-Verwaltungstools.</Description>
+            <Description xml:lang="fr">cette composante comprend des outils d'administration kde.</Description>
+            <Group>admin.tools</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.bindings</Name>
+            <LocalName xml:lang="en">binding component for kde</LocalName>
+            <LocalName xml:lang="tr">kde için bağlayıcılık bileşeni</LocalName>
+            <LocalName xml:lang="az">KDE üçün binding komponentiy</LocalName>
+            <LocalName xml:lang="ru">компонент обязательный для kde</LocalName>
+            <LocalName xml:lang="de">binding-Komponente für kde</LocalName>
+            <LocalName xml:lang="fr">composant binding pour kde</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.edu</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>education</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.font</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>font</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.frameworks</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.games</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>games</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.graphics</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>graphics</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.multimedia</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>multimedia</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.network</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>network</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.phonon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.plasma</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.sdk</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>programming</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.kde.utils</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <LocalName xml:lang="tr">FIXME</LocalName>
+            <LocalName xml:lang="az">FIXME</LocalName>
+            <LocalName xml:lang="ru">FIXME</LocalName>
+            <LocalName xml:lang="de">FIXME</LocalName>
+            <LocalName xml:lang="fr">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Summary xml:lang="tr">FIXME</Summary>
+            <Summary xml:lang="az">FIXME</Summary>
+            <Summary xml:lang="ru">FIXME</Summary>
+            <Summary xml:lang="de">FIXME</Summary>
+            <Summary xml:lang="fr">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Description xml:lang="tr">FIXME</Description>
+            <Description xml:lang="az">FIXME</Description>
+            <Description xml:lang="ru">FIXME</Description>
+            <Description xml:lang="de">FIXME</Description>
+            <Description xml:lang="fr">FIXME</Description>
+            <Group>kde.desktop</Group>
+            <Maintainer>
+                <Name>Süleyman Poyraz</Name>
+                <Email>zaryob.dev@gmail.com</Email>
+            </Maintainer>
+        </Component>
         <!--Complated to here.-->
         
         <Component>
