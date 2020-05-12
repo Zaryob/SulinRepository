@@ -14,36 +14,41 @@
         <License>LGPL3</License>
         <License>FDL</License>
         <License>custom</License>
-        <Archive sha1sum="bd1b54cb5cc38bea4a84e18ac1e304b2a8f7fd55" type="tarxz">https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz</Archive>
+        <Archive sha1sum="109dd41023c5df59b1aaf6d04211b473dea970ea" type="tarxz">https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>ccache</Dependency>
             <Dependency>cups-devel</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>fontconfig-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>harfbuzz-devel</Dependency>
             <Dependency>leveldb-devel</Dependency>
             <Dependency>firebird-superserver</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>libopus-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
-	          <Dependency>flite-devel</Dependency>
+            <Dependency>flite-devel</Dependency>
             <Dependency>libmtdev-devel</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>postgresql-server</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>DirectFB-devel</Dependency>
             <Dependency>libinput</Dependency>
+            <Dependency>lcms2-devel</Dependency>
             <Dependency>xcb-util-devel</Dependency>
             <Dependency>xcb-util-image-devel</Dependency>
             <Dependency>xcb-util-keysyms-devel</Dependency>
             <Dependency>xcb-util-wm-devel</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>libdrm-devel</Dependency>
+            <Dependency>orc-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
@@ -63,9 +68,11 @@
             <Dependency>gst-plugins-good</Dependency>
             <Dependency>gst-plugins-ugly</Dependency>
             <Dependency>gst-libav</Dependency>
+            <Dependency>gst-python3</Dependency>
             <Dependency>gst-plugins-bad-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
             <Dependency>zstd-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
             <Dependency>minizip-devel</Dependency>
             <Dependency>libpcre2-devel</Dependency>
             <Dependency>re2c</Dependency>
@@ -81,6 +88,9 @@
 
     <Package>
         <Name>qt5-3d</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>C++ and QML APIs for easy inclusion of 3D graphics</Summary>
         <Description>C++ and QML APIs for easy inclusion of 3D graphics</Description>
         <RuntimeDependencies>
@@ -127,6 +137,9 @@
 
     <Package>
         <Name>qt5-3d-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-3d</Summary>
         <Description>C++ and QML APIs for easy inclusion of 3D graphics</Description>
         <RuntimeDependencies>
@@ -135,18 +148,18 @@
             <Dependency release="current">qt5-3d</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/qt5/Qt3DAnimation/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DCore/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DExtras/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DInput/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DLogic/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DQuick/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DQuickAnimation/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DQuickExtras/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DQuickInput/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DQuickRender/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DQuickScene2D/</Path>
-            <Path fileType="header">/usr/include/qt5/Qt3DRender/</Path>
+            <Path fileType="header">/usr/include/Qt3DAnimation/</Path>
+            <Path fileType="header">/usr/include/Qt3DCore/</Path>
+            <Path fileType="header">/usr/include/Qt3DExtras/</Path>
+            <Path fileType="header">/usr/include/Qt3DInput/</Path>
+            <Path fileType="header">/usr/include/Qt3DLogic/</Path>
+            <Path fileType="header">/usr/include/Qt3DQuick/</Path>
+            <Path fileType="header">/usr/include/Qt3DQuickAnimation/</Path>
+            <Path fileType="header">/usr/include/Qt3DQuickExtras/</Path>
+            <Path fileType="header">/usr/include/Qt3DQuickInput/</Path>
+            <Path fileType="header">/usr/include/Qt3DQuickRender/</Path>
+            <Path fileType="header">/usr/include/Qt3DQuickScene2D/</Path>
+            <Path fileType="header">/usr/include/Qt3DRender/</Path>
             <Path fileType="data">/usr/lib/libQt53DAnimation.prl</Path>
             <Path fileType="data">/usr/lib/libQt53DCore.prl</Path>
             <Path fileType="data">/usr/lib/libQt53DExtras.prl</Path>
@@ -159,30 +172,30 @@
             <Path fileType="data">/usr/lib/libQt53DQuickRender.prl</Path>
             <Path fileType="data">/usr/lib/libQt53DQuickScene2D.prl</Path>
             <Path fileType="data">/usr/lib/libQt53DRender.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3danimation.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3danimation_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dcore.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dcore_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dextras.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dextras_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dinput.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dinput_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dlogic.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dlogic_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquick.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquick_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickanimation.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickanimation_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickextras.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickextras_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickinput.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickinput_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickrender.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickrender_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickscene2d.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3dquickscene2d_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3drender.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_3drender_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3danimation.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3danimation_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dcore.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dcore_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dextras.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dextras_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dinput.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dinput_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dlogic.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dlogic_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquick.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquick_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickanimation.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickanimation_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickextras.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickextras_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickinput.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickinput_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickrender.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickrender_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickscene2d.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3dquickscene2d_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3drender.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_3drender_private.pri</Path>
             <Path fileType="data">/usr/lib/cmake/Qt53DAnimation/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt53DCore/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt53DExtras/</Path>
@@ -226,8 +239,8 @@
             <Path fileType="library">/usr/lib/libQt5Help.so.*</Path>
             <Path fileType="library">/usr/lib/libQt5CLucene.so</Path>
             <Path fileType="library">/usr/lib/libQt5CLucene.so.*</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_clucene_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_help*</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_clucene_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_help*</Path>
             <Path fileType="data">/usr/share/applications/assistant5.desktop</Path>
             <Path fileType="data">/usr/share/qt5/translations/assistant_tr.qm</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/128x128/apps/assistant.png</Path>
@@ -236,11 +249,6 @@
             <Path fileType="executable">/usr/lib/qt5/bin/qcollectiongenerator</Path>
             <Path fileType="executable">/usr/bin/qcollectiongenerator-qt5</Path>
         </Files>
-         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/qt5/translations/assistant_tr.qm">assistant_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/assistant5.desktop">assistant.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/assistant5.png">assistant.png</AdditionalFile>
-        </AdditionalFiles>
     </Package>
 
     <Package>
@@ -256,8 +264,8 @@
             <Path fileType="data">/usr/lib/cmake/Qt5Help/Qt5HelpConfig.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Help/Qt5HelpConfigExtras.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Help/Qt5HelpConfigVersion.cmake</Path>
-            <Path fileType="data">/usr/include/qt5/QtHelp</Path>
-            <Path fileType="data">/usr/include/qt5/QtCLucene</Path>
+            <Path fileType="data">/usr/include/QtHelp</Path>
+            <Path fileType="data">/usr/include/QtCLucene</Path>
             <Path fileType="data">/usr/lib/libQt5Help.prl</Path>
             <Path fileType="data">/usr/lib/libQt5CLucene.prl</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Help.pc</Path>
@@ -275,6 +283,13 @@
             <Dependency>pango</Dependency>
             <Dependency>cups</Dependency>
             <Dependency>mesa</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>flite</Dependency>
+            <Dependency>minizip</Dependency>
+            <Dependency>libpcre2</Dependency>
+            <Dependency>re2c</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>dbus-x11</Dependency>
             <Dependency>icu4c</Dependency>
             <Dependency>libSM</Dependency>
             <Dependency>firebird-client</Dependency>
@@ -289,6 +304,8 @@
             <Dependency>freetype</Dependency>
             <Dependency>harfbuzz</Dependency>
             <Dependency>libinput</Dependency>
+            <Dependency>webp</Dependency>
+            <Dependency>zstd</Dependency>
             <Dependency>libmtdev</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>libXrender</Dependency>
@@ -403,7 +420,7 @@
             <Path fileType="executable">/usr/lib/qt5/bin</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs</Path>
+            <Path fileType="data">/usr/mkspecs</Path>
         </Files>
     </Package>
     <Package>
@@ -411,33 +428,35 @@
         <Summary>Development files for qt5-base</Summary>
         <Description>Base development files for Qt 5</Description>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtAccessibilitySupport/</Path>
-            <Path fileType="header">/usr/include/qt5/QtConcurrent</Path>
-            <Path fileType="header">/usr/include/qt5/QtCore</Path>
-            <Path fileType="header">/usr/include/qt5/QtDBus</Path>
-            <Path fileType="header">/usr/include/qt5/QtDeviceDiscoverySupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtEdidSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtEglFSDeviceIntegration</Path>
-            <Path fileType="header">/usr/include/qt5/QtEglSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtEventDispatcherSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtFbSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtFontDatabaseSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtGlxSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtGui</Path>
-            <Path fileType="header">/usr/include/qt5/QtInputSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtKmsSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtNetwork</Path>
-            <Path fileType="header">/usr/include/qt5/QtOpenGL</Path>
-            <Path fileType="header">/usr/include/qt5/QtPlatformCompositorSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtPlatformHeaders</Path>
-            <Path fileType="header">/usr/include/qt5/QtPrintSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtServiceSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtSql</Path>
-            <Path fileType="header">/usr/include/qt5/QtTest</Path>
-            <Path fileType="header">/usr/include/qt5/QtThemeSupport/</Path>
-            <Path fileType="header">/usr/include/qt5/QtWidgets</Path>
-            <Path fileType="header">/usr/include/qt5/QtXkbCommonSupport</Path>
-            <Path fileType="header">/usr/include/qt5/QtXml</Path>
+            <Path fileType="header">/usr/include/QtAccessibilitySupport/</Path>
+            <Path fileType="header">/usr/include/QtConcurrent</Path>
+            <Path fileType="header">/usr/include/QtCore</Path>
+            <Path fileType="header">/usr/include/QtDBus</Path>
+            <Path fileType="header">/usr/include/QtDeviceDiscoverySupport</Path>
+            <Path fileType="header">/usr/include/QtEdidSupport</Path>
+            <Path fileType="header">/usr/include/QtEglFSDeviceIntegration</Path>
+            <Path fileType="header">/usr/include/QtEglSupport</Path>
+            <Path fileType="header">/usr/include/QtEventDispatcherSupport</Path>
+            <Path fileType="header">/usr/include/QtFbSupport</Path>
+            <Path fileType="header">/usr/include/QtFontDatabaseSupport</Path>
+            <Path fileType="header">/usr/include/QtLinuxAccessibilitySupport/</Path>
+            <Path fileType="header">/usr/include/QtGlxSupport</Path>
+            <Path fileType="header">/usr/include/QtGui</Path>
+            <Path fileType="header">/usr/include/QtInputSupport</Path>
+            <Path fileType="header">/usr/include/QtKmsSupport</Path>
+            <Path fileType="header">/usr/include/QtNetwork</Path>
+            <Path fileType="header">/usr/include/QtOpenGL</Path>
+            <Path fileType="header">/usr/include/QtOpenGLExtensions</Path>
+            <Path fileType="header">/usr/include/QtPlatformCompositorSupport</Path>
+            <Path fileType="header">/usr/include/QtPlatformHeaders</Path>
+            <Path fileType="header">/usr/include/QtPrintSupport</Path>
+            <Path fileType="header">/usr/include/QtServiceSupport</Path>
+            <Path fileType="header">/usr/include/QtSql</Path>
+            <Path fileType="header">/usr/include/QtTest</Path>
+            <Path fileType="header">/usr/include/QtThemeSupport/</Path>
+            <Path fileType="header">/usr/include/QtWidgets</Path>
+            <Path fileType="header">/usr/include/QtXkbCommonSupport</Path>
+            <Path fileType="header">/usr/include/QtXml</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5/Qt5Config.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake</Path>
@@ -512,554 +531,554 @@
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Test.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Widgets.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Xml.pc</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/aix-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/android-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/aix/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/android/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/bsd/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/c89/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/qnx/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/integrity/qplatformdefs.h</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/aix-g++-64/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/aix-g++-64/qplatformdefs.</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/aix-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/android-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/angle.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/bsd/bsd.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/clang-mac.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/clang.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/g++-base.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/g++-macx.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/g++-unix.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/g++-win32.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/g++.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/gcc-base-mac.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/gcc-base-unix.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/gcc-base.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/ghs-base.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/ghs-integrity-armv7.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/ghs-integrity-armv8.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/ghs-integrity-x86.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/icc-base-unix.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/ios.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/linux.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/llvm.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/mac.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/mac/qplatformdefs.h</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/macx.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/msvc-based-version.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/msvc-desktop.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/msvc-version.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/nacl/g++-nacl32.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/nacl/g++-nacl64.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/nacl/nacl-base.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/nacl/qplatformdefs.h</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/posix/qplatformdefs.h</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/qcc-base-qnx-aarch64le.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/qcc-base-qnx-armle-v7.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/qcc-base-qnx-x86-64.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/qcc-base-qnx-x86.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/qcc-base-qnx.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/qcc-base.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/rtems-base.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/rtems/qplatformdefs.h</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/sanitize.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/shell-unix.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/shell-win32.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/solaris.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/tvos.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/uikit.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/uikit/GLES2/gl2.h</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/uikit/clang.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/uikit/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/unix.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/watchos.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/windows-desktop.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/windows-vulkan.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/common/winrt_winphone/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/cygwin-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/darwin-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/common/freebsd_device_post.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/common/freebsd_device_pre.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/common/linux_arm_device_post.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/common/linux_device_post.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/common/linux_device_pre.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/freebsd-generic-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/freebsd-rasp-pi-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/integrity-armv8-drive-cx/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/integrity-armv8-msm8996au/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-archos-gen8-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-arm-amlogic-8726M-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-arm-generic-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-arm-hisilicon-hix5hd2-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-arm-trident-pnx8473-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-beagleboard-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-colibri-vf-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-drive-cx-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-emu-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-generic-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-imx53qsb-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-imx6-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-imx7-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-imx8-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-jetson-tk1-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-jetson-tk1-pro-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-jetson-tx1-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-mipsel-broadcom-97425-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-mipsel-ci20-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-nuc-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-odroid-xu3-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi2-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi3-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi3-vc4-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi4-v3d-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rcar-h2-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-rcar-m3-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-sh4-stmicro-ST7108-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-sh4-stmicro-ST7540-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-snowball-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-tegra2-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/devices/linux-tinkerboard-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/dummy/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/macx-xcode/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/netbsd-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/openbsd-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/qnx-aarch64le-qcc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/qnx-armle-v7-qcc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/qnx-x86-64-qcc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/qnx-x86-qcc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/solaris-cc-64-stlport/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/solaris-cc-64/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/solaris-cc-stlport/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/solaris-cc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/solaris-g++-64/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/solaris-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/linux-host-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/linux-scratchbox2-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/nacl-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/nacl64-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/qnx-X11-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/vxworks-ppc-dcc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/vxworks-ppc-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/vxworks-simpentium-dcc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/unsupported/vxworks-simpentium-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/wasm-emscripten/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-arm64-msvc2017/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-clang-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-clang-msvc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-icc-k1om/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-icc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/win32-msvc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-arm-msvc2015/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-arm-msvc2017/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-arm-msvc2019/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-arm64-msvc2017/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-arm64-msvc2019/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-x64-msvc2015/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-x64-msvc2017/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-x64-msvc2019/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-x86-msvc2015/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-x86-msvc2017/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/winrt-x86-msvc2019/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/freebsd-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/freebsd-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/haiku-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/hpuxi-g++-64/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/hurd-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/integrity-armv7-imx6/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/integrity-armv7/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/integrity-armv8-rcar/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/integrity-x86/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-aarch64-gnu-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-arm-gnueabi-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-clang-32/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-clang-libc++-32/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-clang-libc++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-g++-32/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-g++-64/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-icc-32/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-icc-64/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-icc-k1om/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-icc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-llvm/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/linux-lsb-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/lynxos-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/macx-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/macx-g++/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/macx-icc/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/macx-ios-clang/qmake.conf</Path>
-            <Path fileType="config">/usr/lib/qt5/mkspecs/macx-watchos-clang/qmake.conf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_150x150.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_30x30.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_310x150.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_310x310.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_44x44.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_480x800.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_620x300.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_70x70.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_71x71.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/assets/logo_store.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/android.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/android_deployment_settings.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/default_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/resolve_config.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/resolve_target.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/sdk.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/android/spec_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/benchmark.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/build_pass.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/cmake_functions.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/cmdline.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/configure.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/configure_base.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/coverage.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/create_cmake.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/ctest_testcase.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/ctest_testcase_common.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/ctest_testcase_installed.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/common/winrt_winphone/manifests/10.0/AppxManifest.xml.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/cmake/ExtraSourceIncludes.cmake.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/cmake/Qt5BasicConfig.cmake.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/cmake/Qt5ConfigVersion.cmake.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/cmake/Qt5ImportPlugin.cpp.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/cmake/Qt5PluginTarget.cmake.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/configure.json</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/dummy.cpp</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/dumpvcvars.bat</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/mac/objc_namespace.sh</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/macros.cpp</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/testserver/Dockerfile</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/testserver/docker-compose-common.yml</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/data/unix/findclasslist.pl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/dbusadaptors.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/dbuscommon.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/dbusinterfaces.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/declarative_debug.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/default_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/default_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/designer_defines.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/device_config.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/egl.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/exceptions.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/exceptions_off.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/exclusive_builds.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/exclusive_builds_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/file_copies.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/gc_binaries.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/gcov.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/include_source_dir.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/incredibuild_xge.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/java.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/lex.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/link_ltcg.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/link_pkgconfig.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/lrelease.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/ltcg.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/asset_catalogs.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/default_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/default_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/mac.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/no_warn_empty_obj_files.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/objective_c.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/rez.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/sdk.mk</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/sdk.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/toolchain.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/mac/unsupported/objc_namespace.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/moc.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/no_debug_info.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/plugin_bundle.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/precompile_header.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qgltf.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qlalr.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qmake_use.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qml_debug.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qml_module.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qml_plugin.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qmltestcase.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_android_deps.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_app.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_build_config.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_build_extra.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_build_paths.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_clear_installs.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_common.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_config.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_configure.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_docs.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_docs_targets.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_example_installs.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_functions.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_helper_lib.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_installs.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_module.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_module_headers.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_module_pris.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_parts.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_plugin.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_prefix_build_check.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_targets.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_test_helper.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_tool.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qt_tracepoints.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/resolve_config.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/resolve_target.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/resources.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/resources_functions.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/rtti.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/rtti_off.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/sanitizer.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/silent.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/simd.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/spec_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/spec_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/static_runtime.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/testcase.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/testcase_targets.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/testcocoon.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/testlib_defines.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/toolchain.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uic.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/bitcode.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/default_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/default_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/device_destinations.sh</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/devices.py</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/exclusive_builds_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/gc_binaries.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/qt.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/qt_parts.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/resolve_config.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/sdk.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/testcase.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/testcase_targets.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/watchos_coretext.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/xcodebuild.mk</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/uikit/xcodebuild.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/bsymbolic_functions.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/ccache.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/hide_symbols.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/largefile.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/opengl.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/separate_debug_info.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/thread.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/x11.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/x11inc.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/x11lib.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unix/x11sm.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/unsupported/testserver.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/use_c_linker.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/vxworks.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/warn_off.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/warn_on.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/wasm/wasm.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/wayland-scanner.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/console.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/default_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/dumpcpp.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/idcidl.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/msvc_mp.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/opengl.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/qt_dll.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/separate_debug_info.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/stl.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/stl_off.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/windeployqt.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/windows.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/win32/windows_vulkan_sdk.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/winrt/console.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/winrt/default_pre.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/winrt/package_manifest.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/xctest.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/yacc.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-clang/Info.plist.app</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-clang/Info.plist.dSYM.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-clang/Info.plist.disable_highdpi</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-clang/Info.plist.lib</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-g++/Info.plist.app</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-g++/Info.plist.dSYM.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-g++/Info.plist.lib</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-icc/Info.plist.app</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-icc/Info.plist.dSYM.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-icc/Info.plist.lib</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-ios-clang/Default-568h@2x.png</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-ios-clang/Info.plist.app</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-ios-clang/Info.plist.dSYM.in</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-ios-clang/Info.plist.lib</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-ios-clang/LaunchScreen.xib</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-ios-clang/features/default_post.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-tvos-clang/Info.plist.app</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-tvos-clang/qmake.conf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-watchos-clang/Info.plist.app</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-watchos-clang/Info.plist.lib</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-xcode/QtTest.plist</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-xcode/WorkspaceSettings.xcsettings</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/macx-xcode/default.xcscheme</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_accessibility_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_concurrent.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_concurrent_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_core.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_core_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_dbus.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_dbus_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_devicediscovery_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_edid_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_egl_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_fb_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_fontdatabase_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_glx_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_gui.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_gui_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_input_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_kms_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_network.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_network_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_opengl.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_opengl_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_openglextensions.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_openglextensions_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_platformcompositor_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_printsupport.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_printsupport_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_service_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_sql.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_sql_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_testlib.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_testlib_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_theme_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_widgets.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_widgets_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_xkbcommon_support_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_xml.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_xml_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/qconfig.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/qdevice.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/qmodule.pri</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/common/winrt_winphone/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/cygwin-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/darwin-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/freebsd-generic-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/freebsd-rasp-pi-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/integrity-armv8-drive-cx/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/integrity-armv8-msm8996au/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-archos-gen8-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-arm-amlogic-8726M-g++/qeglfshooks_8726m.cpp</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-arm-amlogic-8726M-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-arm-generic-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-arm-hisilicon-hix5hd2-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-arm-trident-pnx8473-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-beagleboard-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-colibri-vf-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-drive-cx-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-emu-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-generic-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-imx53qsb-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-imx6-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-imx7-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-imx8-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-jetson-tk1-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-jetson-tk1-pro-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-jetson-tx1-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-mipsel-broadcom-97425-g++/qdirectfbeglhooks_bcm97425.cpp</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-mipsel-broadcom-97425-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-mipsel-ci20-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-nuc-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-odroid-xu3-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi2-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi3-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi3-vc4-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rasp-pi4-v3d-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rcar-h2-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-rcar-m3-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-sh4-stmicro-ST7108-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-sh4-stmicro-ST7540-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-snowball-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-tegra2-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/devices/linux-tinkerboard-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/freebsd-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/freebsd-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/haiku-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/hpuxi-g++-64/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/hurd-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/integrity-armv7-imx6/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/integrity-armv7/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/integrity-armv8-rcar/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/integrity-x86/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-aarch64-gnu-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-arm-gnueabi-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-clang-32/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-clang-libc++-32/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-clang-libc++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-g++-32/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-g++-64/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-icc-32/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-icc-64/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-icc-k1om/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-icc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-llvm/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/linux-lsb-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/lynxos-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-icc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-ios-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-tvos-clang/Info.plist.lib</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-tvos-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-watchos-clang/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/macx-xcode/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/netbsd-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/openbsd-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/qnx-aarch64le-qcc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/qnx-armle-v7-qcc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/qnx-x86-64-qcc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/qnx-x86-qcc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/solaris-cc-64-stlport/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/solaris-cc-64/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/solaris-cc-stlport/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/solaris-cc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/solaris-g++-64/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/solaris-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/linux-host-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/linux-scratchbox2-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/nacl-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/nacl64-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/qnx-X11-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/vxworks-ppc-dcc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/vxworks-ppc-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/vxworks-simpentium-dcc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/unsupported/vxworks-simpentium-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/wasm-emscripten/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-arm64-msvc2017/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-clang-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-clang-msvc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-g++/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-icc-k1om/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-icc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/win32-msvc/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-arm-msvc2015/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-arm-msvc2017/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-arm-msvc2019/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-arm64-msvc2017/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-arm64-msvc2019/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-x64-msvc2015/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-x64-msvc2017/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-x64-msvc2019/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-x86-msvc2015/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-x86-msvc2017/qplatformdefs.h</Path>
-            <Path fileType="header">/usr/lib/qt5/mkspecs/winrt-x86-msvc2019/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/aix-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/android-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/common/aix/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/common/android/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/common/bsd/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/common/c89/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/common/qnx/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/common/integrity/qplatformdefs.h</Path>
+            <Path fileType="config">/usr/mkspecs/aix-g++-64/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/aix-g++-64/qplatformdefs.</Path>
+            <Path fileType="config">/usr/mkspecs/aix-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/android-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/angle.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/bsd/bsd.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/clang-mac.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/clang.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/g++-base.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/g++-macx.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/g++-unix.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/g++-win32.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/g++.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/gcc-base-mac.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/gcc-base-unix.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/gcc-base.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/ghs-base.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/ghs-integrity-armv7.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/ghs-integrity-armv8.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/ghs-integrity-x86.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/icc-base-unix.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/ios.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/linux.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/llvm.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/mac.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/mac/qplatformdefs.h</Path>
+            <Path fileType="config">/usr/mkspecs/common/macx.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/msvc-based-version.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/msvc-desktop.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/msvc-version.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/nacl/g++-nacl32.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/nacl/g++-nacl64.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/nacl/nacl-base.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/nacl/qplatformdefs.h</Path>
+            <Path fileType="config">/usr/mkspecs/common/posix/qplatformdefs.h</Path>
+            <Path fileType="config">/usr/mkspecs/common/qcc-base-qnx-aarch64le.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/qcc-base-qnx-armle-v7.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/qcc-base-qnx-x86-64.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/qcc-base-qnx-x86.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/qcc-base-qnx.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/qcc-base.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/rtems-base.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/rtems/qplatformdefs.h</Path>
+            <Path fileType="config">/usr/mkspecs/common/sanitize.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/shell-unix.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/shell-win32.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/solaris.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/tvos.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/uikit.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/uikit/GLES2/gl2.h</Path>
+            <Path fileType="config">/usr/mkspecs/common/uikit/clang.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/uikit/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/unix.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/watchos.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/windows-desktop.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/windows-vulkan.conf</Path>
+            <Path fileType="config">/usr/mkspecs/common/winrt_winphone/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/cygwin-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/darwin-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/common/freebsd_device_post.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/common/freebsd_device_pre.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/common/linux_arm_device_post.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/common/linux_device_post.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/common/linux_device_pre.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/freebsd-generic-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/freebsd-rasp-pi-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/integrity-armv8-drive-cx/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/integrity-armv8-msm8996au/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-archos-gen8-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-arm-amlogic-8726M-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-arm-generic-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-arm-hisilicon-hix5hd2-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-arm-trident-pnx8473-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-beagleboard-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-colibri-vf-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-drive-cx-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-emu-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-generic-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-imx53qsb-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-imx6-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-imx7-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-imx8-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-jetson-tk1-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-jetson-tk1-pro-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-jetson-tx1-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-mipsel-broadcom-97425-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-mipsel-ci20-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-nuc-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-odroid-xu3-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rasp-pi-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rasp-pi2-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rasp-pi3-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rasp-pi3-vc4-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rasp-pi4-v3d-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rcar-h2-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-rcar-m3-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-sh4-stmicro-ST7108-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-sh4-stmicro-ST7540-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-snowball-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-tegra2-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/devices/linux-tinkerboard-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/dummy/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/macx-xcode/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/netbsd-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/openbsd-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/qnx-aarch64le-qcc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/qnx-armle-v7-qcc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/qnx-x86-64-qcc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/qnx-x86-qcc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/solaris-cc-64-stlport/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/solaris-cc-64/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/solaris-cc-stlport/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/solaris-cc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/solaris-g++-64/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/solaris-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/linux-host-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/linux-scratchbox2-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/nacl-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/nacl64-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/qnx-X11-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/vxworks-ppc-dcc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/vxworks-ppc-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/vxworks-simpentium-dcc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/unsupported/vxworks-simpentium-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/wasm-emscripten/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-arm64-msvc2017/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-clang-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-clang-msvc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-icc-k1om/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-icc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/win32-msvc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-arm-msvc2015/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-arm-msvc2017/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-arm-msvc2019/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-arm64-msvc2017/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-arm64-msvc2019/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-x64-msvc2015/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-x64-msvc2017/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-x64-msvc2019/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-x86-msvc2015/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-x86-msvc2017/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/winrt-x86-msvc2019/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/freebsd-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/freebsd-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/haiku-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/hpuxi-g++-64/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/hurd-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/integrity-armv7-imx6/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/integrity-armv7/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/integrity-armv8-rcar/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/integrity-x86/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-aarch64-gnu-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-arm-gnueabi-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-clang-32/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-clang-libc++-32/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-clang-libc++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-g++-32/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-g++-64/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-icc-32/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-icc-64/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-icc-k1om/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-icc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-llvm/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/linux-lsb-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/lynxos-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/macx-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/macx-g++/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/macx-icc/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/macx-ios-clang/qmake.conf</Path>
+            <Path fileType="config">/usr/mkspecs/macx-watchos-clang/qmake.conf</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_150x150.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_30x30.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_310x150.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_310x310.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_44x44.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_480x800.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_620x300.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_70x70.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_71x71.png</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/assets/logo_store.png</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/android.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/android_deployment_settings.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/default_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/resolve_config.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/resolve_target.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/sdk.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/android/spec_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/benchmark.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/build_pass.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/cmake_functions.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/cmdline.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/configure.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/configure_base.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/coverage.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/create_cmake.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/ctest_testcase.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/ctest_testcase_common.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/ctest_testcase_installed.prf</Path>
+            <Path fileType="data">/usr/mkspecs/common/winrt_winphone/manifests/10.0/AppxManifest.xml.in</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/cmake/ExtraSourceIncludes.cmake.in</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/cmake/Qt5BasicConfig.cmake.in</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/cmake/Qt5ConfigVersion.cmake.in</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/cmake/Qt5ImportPlugin.cpp.in</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/cmake/Qt5PluginTarget.cmake.in</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/configure.json</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/dummy.cpp</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/dumpvcvars.bat</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/mac/objc_namespace.sh</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/macros.cpp</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/testserver/Dockerfile</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/testserver/docker-compose-common.yml</Path>
+            <Path fileType="data">/usr/mkspecs/features/data/unix/findclasslist.pl</Path>
+            <Path fileType="data">/usr/mkspecs/features/dbusadaptors.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/dbuscommon.pri</Path>
+            <Path fileType="data">/usr/mkspecs/features/dbusinterfaces.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/declarative_debug.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/default_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/default_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/designer_defines.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/device_config.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/egl.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/exceptions.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/exceptions_off.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/exclusive_builds.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/exclusive_builds_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/file_copies.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/gc_binaries.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/gcov.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/include_source_dir.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/incredibuild_xge.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/java.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/lex.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/link_ltcg.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/link_pkgconfig.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/lrelease.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/ltcg.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/asset_catalogs.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/default_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/default_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/mac.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/no_warn_empty_obj_files.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/objective_c.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/rez.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/sdk.mk</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/sdk.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/toolchain.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/mac/unsupported/objc_namespace.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/moc.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/no_debug_info.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/plugin_bundle.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/precompile_header.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qgltf.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qlalr.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qmake_use.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qml_debug.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qml_module.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qml_plugin.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qmltestcase.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_android_deps.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_app.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_build_config.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_build_extra.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_build_paths.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_clear_installs.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_common.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_config.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_configure.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_docs.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_docs_targets.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_example_installs.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_functions.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_helper_lib.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_installs.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_module.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_module_headers.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_module_pris.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_parts.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_plugin.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_prefix_build_check.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_targets.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_test_helper.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_tool.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/qt_tracepoints.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/resolve_config.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/resolve_target.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/resources.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/resources_functions.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/rtti.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/rtti_off.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/sanitizer.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/silent.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/simd.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/spec_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/spec_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/static_runtime.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/testcase.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/testcase_targets.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/testcocoon.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/testlib_defines.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/toolchain.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uic.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/bitcode.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/default_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/default_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/device_destinations.sh</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/devices.py</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/exclusive_builds_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/gc_binaries.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/qt.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/qt_parts.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/resolve_config.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/sdk.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/testcase.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/testcase_targets.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/watchos_coretext.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/xcodebuild.mk</Path>
+            <Path fileType="data">/usr/mkspecs/features/uikit/xcodebuild.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/bsymbolic_functions.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/ccache.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/hide_symbols.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/largefile.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/opengl.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/separate_debug_info.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/thread.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/x11.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/x11inc.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/x11lib.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unix/x11sm.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/unsupported/testserver.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/use_c_linker.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/vxworks.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/warn_off.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/warn_on.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/wasm/wasm.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/wayland-scanner.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/console.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/default_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/dumpcpp.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/idcidl.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/msvc_mp.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/opengl.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/qt_dll.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/separate_debug_info.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/stl.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/stl_off.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/windeployqt.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/windows.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/win32/windows_vulkan_sdk.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/winrt/console.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/winrt/default_pre.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/winrt/package_manifest.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/xctest.prf</Path>
+            <Path fileType="data">/usr/mkspecs/features/yacc.prf</Path>
+            <Path fileType="data">/usr/mkspecs/macx-clang/Info.plist.app</Path>
+            <Path fileType="data">/usr/mkspecs/macx-clang/Info.plist.dSYM.in</Path>
+            <Path fileType="data">/usr/mkspecs/macx-clang/Info.plist.disable_highdpi</Path>
+            <Path fileType="data">/usr/mkspecs/macx-clang/Info.plist.lib</Path>
+            <Path fileType="data">/usr/mkspecs/macx-g++/Info.plist.app</Path>
+            <Path fileType="data">/usr/mkspecs/macx-g++/Info.plist.dSYM.in</Path>
+            <Path fileType="data">/usr/mkspecs/macx-g++/Info.plist.lib</Path>
+            <Path fileType="data">/usr/mkspecs/macx-icc/Info.plist.app</Path>
+            <Path fileType="data">/usr/mkspecs/macx-icc/Info.plist.dSYM.in</Path>
+            <Path fileType="data">/usr/mkspecs/macx-icc/Info.plist.lib</Path>
+            <Path fileType="data">/usr/mkspecs/macx-ios-clang/Default-568h@2x.png</Path>
+            <Path fileType="data">/usr/mkspecs/macx-ios-clang/Info.plist.app</Path>
+            <Path fileType="data">/usr/mkspecs/macx-ios-clang/Info.plist.dSYM.in</Path>
+            <Path fileType="data">/usr/mkspecs/macx-ios-clang/Info.plist.lib</Path>
+            <Path fileType="data">/usr/mkspecs/macx-ios-clang/LaunchScreen.xib</Path>
+            <Path fileType="data">/usr/mkspecs/macx-ios-clang/features/default_post.prf</Path>
+            <Path fileType="data">/usr/mkspecs/macx-tvos-clang/Info.plist.app</Path>
+            <Path fileType="data">/usr/mkspecs/macx-tvos-clang/qmake.conf</Path>
+            <Path fileType="data">/usr/mkspecs/macx-watchos-clang/Info.plist.app</Path>
+            <Path fileType="data">/usr/mkspecs/macx-watchos-clang/Info.plist.lib</Path>
+            <Path fileType="data">/usr/mkspecs/macx-xcode/QtTest.plist</Path>
+            <Path fileType="data">/usr/mkspecs/macx-xcode/WorkspaceSettings.xcsettings</Path>
+            <Path fileType="data">/usr/mkspecs/macx-xcode/default.xcscheme</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_accessibility_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_bootstrap_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_concurrent.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_concurrent_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_core.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_core_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_dbus.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_dbus_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_devicediscovery_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_edid_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_egl_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_eglfs_kms_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_eglfsdeviceintegration_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_fb_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_fontdatabase_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_glx_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_gui.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_gui_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_input_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_kms_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_network.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_network_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_opengl.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_opengl_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_openglextensions.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_openglextensions_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_platformcompositor_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_printsupport.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_printsupport_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_service_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_sql.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_sql_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_testlib.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_testlib_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_theme_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_widgets.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_widgets_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_xkbcommon_support_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_xml.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_xml_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/qconfig.pri</Path>
+            <Path fileType="data">/usr/mkspecs/qdevice.pri</Path>
+            <Path fileType="data">/usr/mkspecs/qmodule.pri</Path>
+            <Path fileType="header">/usr/mkspecs/common/winrt_winphone/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/cygwin-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/darwin-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/freebsd-generic-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/freebsd-rasp-pi-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/integrity-armv8-drive-cx/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/integrity-armv8-msm8996au/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-archos-gen8-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-arm-amlogic-8726M-g++/qeglfshooks_8726m.cpp</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-arm-amlogic-8726M-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-arm-generic-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-arm-hisilicon-hix5hd2-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-arm-trident-pnx8473-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-beagleboard-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-colibri-vf-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-drive-cx-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-emu-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-generic-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-imx53qsb-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-imx6-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-imx7-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-imx8-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-jetson-tk1-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-jetson-tk1-pro-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-jetson-tx1-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-mipsel-broadcom-97425-g++/qdirectfbeglhooks_bcm97425.cpp</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-mipsel-broadcom-97425-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-mipsel-ci20-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-nuc-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-odroid-xu3-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rasp-pi-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rasp-pi2-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rasp-pi3-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rasp-pi3-vc4-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rasp-pi4-v3d-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rcar-h2-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-rcar-m3-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-sh4-stmicro-ST7108-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-sh4-stmicro-ST7540-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-snowball-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-tegra2-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/devices/linux-tinkerboard-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/freebsd-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/freebsd-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/haiku-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/hpuxi-g++-64/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/hurd-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/integrity-armv7-imx6/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/integrity-armv7/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/integrity-armv8-rcar/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/integrity-x86/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-aarch64-gnu-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-arm-gnueabi-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-clang-32/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-clang-libc++-32/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-clang-libc++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-g++-32/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-g++-64/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-icc-32/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-icc-64/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-icc-k1om/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-icc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-llvm/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/linux-lsb-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/lynxos-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-icc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-ios-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-tvos-clang/Info.plist.lib</Path>
+            <Path fileType="header">/usr/mkspecs/macx-tvos-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-watchos-clang/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/macx-xcode/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/netbsd-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/openbsd-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/qnx-aarch64le-qcc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/qnx-armle-v7-qcc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/qnx-x86-64-qcc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/qnx-x86-qcc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/solaris-cc-64-stlport/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/solaris-cc-64/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/solaris-cc-stlport/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/solaris-cc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/solaris-g++-64/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/solaris-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/linux-host-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/linux-scratchbox2-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/nacl-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/nacl64-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/qnx-X11-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/vxworks-ppc-dcc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/vxworks-ppc-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/vxworks-simpentium-dcc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/unsupported/vxworks-simpentium-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/wasm-emscripten/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-arm64-msvc2017/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-clang-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-clang-msvc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-g++/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-icc-k1om/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-icc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/win32-msvc/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-arm-msvc2015/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-arm-msvc2017/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-arm-msvc2019/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-arm64-msvc2017/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-arm64-msvc2019/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-x64-msvc2015/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-x64-msvc2017/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-x64-msvc2019/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-x86-msvc2015/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-x86-msvc2017/qplatformdefs.h</Path>
+            <Path fileType="header">/usr/mkspecs/winrt-x86-msvc2019/qplatformdefs.h</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-base</Dependency>
@@ -1080,8 +1099,8 @@
             <Path fileType="data">/usr/lib/libQt5Charts.prl</Path>
             <Path fileType="library">/usr/lib/libQt5Charts.so</Path>
             <Path fileType="library">/usr/lib/libQt5Charts.so.*</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_charts.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_charts_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_charts.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_charts_private.pri</Path>
             <Path fileType="library">/usr/lib/qt5/qmldir/QtCharts</Path>
           </Files>
     </Package>
@@ -1094,7 +1113,7 @@
             <Dependency release="current">qt5-charts</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtCharts/</Path>
+            <Path fileType="header">/usr/include/QtCharts/</Path>
             <Path fileType="config">/usr/lib/cmake/Qt5Charts/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Charts.pc</Path>
         </Files>
@@ -1126,18 +1145,18 @@
         <Files>
             <Path fileType="data">/usr/lib/libQt5Bluetooth.prl</Path>
             <Path fileType="data">/usr/lib/libQt5Nfc.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtBluetooth/</Path>
-            <Path fileType="header">/usr/include/qt5/QtNfc/</Path>
+            <Path fileType="header">/usr/include/QtBluetooth/</Path>
+            <Path fileType="header">/usr/include/QtNfc/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Nfc.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Bluetooth.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Bluetooth</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Nfc</Path>
             <Path fileType="data">/usr/lib/qt5/qmldir/Qt5Bluetooth</Path>
             <Path fileType="data">/usr/lib/qt5/qmldir/Qt5Nfc</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_bluetooth.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_bluetooth_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_nfc.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_nfc_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_bluetooth.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_bluetooth_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_nfc.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_nfc_private.pri</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-connectivity</Dependency>
@@ -1170,12 +1189,12 @@
             <Dependency release="current">qt5-datavis3d</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtDataVisualization/</Path>
+            <Path fileType="header">/usr/include/QtDataVisualization/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5DataVisualization/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5DataVisualization.pc</Path>
             <Path fileType="data">/usr/lib/libQt5DataVisualization.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_datavisualization_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_datavisualization.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_datavisualization_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_datavisualization.pri</Path>
         </Files>
     </Package>
 
@@ -1241,25 +1260,25 @@
             <Path fileType="library">/usr/lib/libQt5QuickWidgets.prl</Path>
             <Path fileType="library">/usr/lib/libQt5QuickWidgets.so</Path>
             <Path fileType="library">/usr/lib/libQt5QuickWidgets.so.*</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/features/qmlcache.prf</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/features/qtquickcompiler.prf</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_packetprotocol_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qml.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qml_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmldebug_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmldevtools_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmlmodels.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmlmodels_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmltest.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmltest_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmlworkerscript.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_qmlworkerscript_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_quick.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_quick_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_quickparticles_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_quickshapes_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_quickwidgets.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_quickwidgets_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/features/qmlcache.prf</Path>
+            <Path fileType="library">/usr/mkspecs/features/qtquickcompiler.prf</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_packetprotocol_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qml.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qml_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmldebug_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmldevtools_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmlmodels.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmlmodels_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmltest.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmltest_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmlworkerscript.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_qmlworkerscript_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_quick.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_quick_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_quickparticles_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_quickshapes_private.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_quickwidgets.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_quickwidgets_private.pri</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/qmltooling/libqmldbg_debugger.so</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/qmltooling/libqmldbg_inspector.so</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/qmltooling/libqmldbg_local.so</Path>
@@ -1311,16 +1330,16 @@
         <Summary>Development files for qt5-declarative</Summary>
         <Description>Classes for QML and JavaScript languages. Qt5 declarative framework for dynamic user interfaces</Description>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtPacketProtocol</Path>
-            <Path fileType="header">/usr/include/qt5/QtQml</Path>
-            <Path fileType="header">/usr/include/qt5/QtQmlDebug</Path>
-            <Path fileType="header">/usr/include/qt5/QtQmlModels</Path>
-            <Path fileType="header">/usr/include/qt5/QtQmlWorkerScript</Path>
-            <Path fileType="header">/usr/include/qt5/QtQuick/</Path>
-            <Path fileType="header">/usr/include/qt5/QtQuickParticles</Path>
-            <Path fileType="header">/usr/include/qt5/QtQuickShapes</Path>
-            <Path fileType="header">/usr/include/qt5/QtQuickWidgets</Path>
-            <Path fileType="header">/usr/include/qt5/QtQuickTest</Path>
+            <Path fileType="header">/usr/include/QtPacketProtocol</Path>
+            <Path fileType="header">/usr/include/QtQml</Path>
+            <Path fileType="header">/usr/include/QtQmlDebug</Path>
+            <Path fileType="header">/usr/include/QtQmlModels</Path>
+            <Path fileType="header">/usr/include/QtQmlWorkerScript</Path>
+            <Path fileType="header">/usr/include/QtQuick/</Path>
+            <Path fileType="header">/usr/include/QtQuickParticles</Path>
+            <Path fileType="header">/usr/include/QtQuickShapes</Path>
+            <Path fileType="header">/usr/include/QtQuickWidgets</Path>
+            <Path fileType="header">/usr/include/QtQuickTest</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Qml.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5QmlModels.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5QmlWorkerScript.pc</Path>
@@ -1401,15 +1420,10 @@
             <Path fileType="icon">/usr/share/pixmaps/designer5.png</Path>
             <Path fileType="library">/usr/lib/libQt5Designer*</Path>
             <Path fileType="library">/usr/lib/libQt5UiTools*</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_designer*</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_uitools*</Path>
-            <Path fileType="library">/usr/lib/qt5/mkspecs/modules/qt_lib_uiplugin.pri</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_designer*</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_uitools*</Path>
+            <Path fileType="library">/usr/mkspecs/modules/qt_lib_uiplugin.pri</Path>
         </Files>
-         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/designer5.desktop">designer.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/qt5/translations/designer_tr.qm">designer_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/designer5.png">designer.png</AdditionalFile>
-        </AdditionalFiles>
     </Package>
     <Package>
         <Name>qt5-designer-devel</Name>
@@ -1420,8 +1434,10 @@
         <Files>
             <Path fileType="library">/usr/lib/pkgconfig/Qt5UiTools.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Designer.pc</Path>
-            <Path fileType="header">/usr/include/qt5/QtUiPlugin/</Path>
-            <Path fileType="header">/usr/include/qt5/QtUiTools/</Path>
+            <Path fileType="header">/usr/include/QtDesigner/</Path>
+            <Path fileType="header">/usr/include/QtDesignerComponents/</Path>
+            <Path fileType="header">/usr/include/QtUiPlugin/</Path>
+            <Path fileType="header">/usr/include/QtUiTools/</Path>
         </Files>
     </Package>
 
@@ -1466,7 +1482,7 @@
             <Dependency release="current">qt5-gamepad</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtGamepad/</Path>
+            <Path fileType="header">/usr/include/QtGamepad/</Path>
             <Path fileType="data">/usr/lib/libQt5Gamepad.prl</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Gamepad/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Gamepad.pc</Path>
@@ -1530,9 +1546,9 @@
             <Dependency release="current">qt5-keychain</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_Qt5Keychain.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_Qt5Keychain.pri</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Keychain</Path>
-            <Path fileType="data">/usr/include/qt5keychain</Path>
+            <Path fileType="data">/usr/includekeychain</Path>
         </Files>
     </Package>
 
@@ -1582,11 +1598,6 @@
             <Path fileType="data">/usr/share/qt5/phrasebooks/swedish.qph</Path>
             <Path fileType="data">/usr/share/qt5/translations/linguist_tr.qm</Path>
         </Files>
-         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/linguist5.desktop">linguist.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/linguist5.png">linguist.png</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/qt5/translations/linguist_tr.qm">linguist_tr.qm</AdditionalFile>
-        </AdditionalFiles>
     </Package>
     <Package>
         <Name>qt5-location</Name>
@@ -1626,15 +1637,15 @@
             <Path fileType="data">/usr/lib/libQt5Location.prl</Path>
             <Path fileType="data">/usr/lib/libQt5Positioning.prl</Path>
             <Path fileType="data">/usr/lib/libQt5PositioningQuick.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_location.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_location_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_positioning.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_positioning_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_positioningquick.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_positioningquick_private.pri</Path>
-            <Path fileType="data">/usr/include/Qt5Location/</Path>
-            <Path fileType="data">/usr/include/Qt5Positioning/</Path>
-            <Path fileType="data">/usr/include/Qt5PositioningQuick/</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_location.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_location_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_positioning.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_positioning_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_positioningquick.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_positioningquick_private.pri</Path>
+            <Path fileType="data">/usr/include/QtLocation/</Path>
+            <Path fileType="data">/usr/include/QtPositioning/</Path>
+            <Path fileType="data">/usr/include/QtPositioningQuick/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Location/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Positioning/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5PositioningQuick/</Path>
@@ -1646,6 +1657,78 @@
             <Dependency release="current">qt5-location</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-lottie</Name>
+        <Summary>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Summary>
+        <Description>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Description>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+        <Files>
+          <Path fileType="data">/usr/lib/qt5/qmldir/Qt/labs/lottieqt</Path>
+          <Path fileType="library">/usr/lib/libQt5Bodymovin.so</Path>
+          <Path fileType="library">/usr/lib/libQt5Bodymovin.so.*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-lottie-devel</Name>
+        <Summary>Development support for qt5-lottie</Summary>
+        <Description>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Description>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5BodyMovin.pc</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_bodymovin_private.pri</Path>
+            <Path fileType="data">/usr/lib/libQt5BodyMovin.prl</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Bodymovin/Qt5BodymovinConfig.cmake</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Bodymovin/Qt5BodymovinConfigVersion.cmake</Path>
+            <Path fileType="header">/usr/include/QtBodymovin</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-lottie</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-remoteobject</Name>
+        <Summary>Inter-process communication (IPC) module developed for Qt</Summary>
+        <Description>Inter-process communication (IPC) module developed for Qt</Description>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libQt5RemoteObjects.so</Path>
+            <Path fileType="library">/usr/lib/libQt5RemoteObjects.so.*</Path>
+            <Path fileType="library">/usr/lib/libQt5RepParser.so</Path>
+            <Path fileType="library">/usr/lib/libQt5RepParser.so.*</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtRemoteObjects/</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtQml/RemoteObjects/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-remoteobject-devel</Name>
+        <Summary>Development support for qt5-remoteobject</Summary>
+        <Description>Inter-process communication (IPC) module developed for Qt</Description>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5RemoteObjects.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5RepParser.pc</Path>
+            <Path fileType="data">/usr/mkspecs/features/repc*</Path>
+            <Path fileType="data">/usr/mkspecs/features/remoteobjects*</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_remoteobjects*</Path>
+            <Path fileType="data">/usr/lib/libQt5RemoteObjects.prl</Path>
+            <Path fileType="data">/usr/lib/libQt5RepParser.prl</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5RemoteObjects</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5RepParser</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects</Path>
+            <Path fileType="header">/usr/include/QtRepParser</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-remoteobject</Dependency>
         </RuntimeDependencies>
     </Package>
     <Package>
@@ -1661,6 +1744,9 @@
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>qt5-declarative</Dependency>
             <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-plugins-ugly</Dependency>
+            <Dependency>gst-python3</Dependency>
             <Dependency>gst-plugins-bad</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -1686,17 +1772,17 @@
         <Files>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Multimedia.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5MultimediaWidgets.pc</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_multimedia.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_multimedia_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_multimediawidgets.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_multimedia.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_multimedia_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_multimediawidgets.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_multimediawidgets_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri</Path>
             <Path fileType="data">/usr/lib/libQt5Multimedia.prl</Path>
             <Path fileType="data">/usr/lib/libQt5MultimediaQuick.prl</Path>
             <Path fileType="data">/usr/lib/libQt5MultimediaWidgets.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtMultimedia</Path>
-            <Path fileType="header">/usr/include/qt5/QtMultimediaQuick</Path>
-            <Path fileType="header">/usr/include/qt5/QtMultimediaWidgets</Path>
+            <Path fileType="header">/usr/include/QtMultimedia</Path>
+            <Path fileType="header">/usr/include/QtMultimediaQuick</Path>
+            <Path fileType="header">/usr/include/QtMultimediaWidgets</Path>
             <Path fileType="header">/usr/lib/cmake/Qt5Multimedia</Path>
             <Path fileType="header">/usr/lib/cmake/Qt5MultimediaQuick</Path>
             <Path fileType="header">/usr/lib/cmake/Qt5MultimediaWidgets</Path>
@@ -1713,8 +1799,8 @@
         <Summary>Classes for audio, video, radio and camera functionality</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <Files>
-          <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_networkauth.pri</Path>
-          <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_networkauth_private.pri</Path>
+          <Path fileType="data">/usr/mkspecs/modules/qt_lib_networkauth.pri</Path>
+          <Path fileType="data">/usr/mkspecs/modules/qt_lib_networkauth_private.pri</Path>
           <Path fileType="library">/usr/lib/libQt5NetworkAuth.prl</Path>
           <Path fileType="library">/usr/lib/libQt5NetworkAuth.so</Path>
           <Path fileType="library">/usr/lib/libQt5NetworkAuth.so.5*</Path>
@@ -1731,7 +1817,7 @@
         <Description>Development files of qt5-networkauth. qt5-networkauth includes classes for audio, video, radio and camera functionality</Description>
         <Files>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5NetworkAuth.pc</Path>
-            <Path fileType="header">/usr/include/qt5/QtNetworkAuth/</Path>
+            <Path fileType="header">/usr/include/QtNetworkAuth/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5NetworkAuth/Qt5NetworkAuthConfig.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5NetworkAuth/Qt5NetworkAuthConfigVersion.cmake</Path>
         </Files>
@@ -1739,6 +1825,38 @@
             <Dependency release="current">qt5-networkauth</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-purchasing</Name>
+        <Summary>Qt In-App Purchasing API</Summary>
+        <Description>Qt In-App Purchasing API</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt5Purchasing/</Path>
+            <Path fileType="library">/usr/lib/libQt5Purchasing.so</Path>
+            <Path fileType="library">/usr/lib/libQt5Purchasing.so.*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-purchasing-devel</Name>
+        <Summary>Qt In-App Purchasing API</Summary>
+        <Description>Qt In-App Purchasing API</Description>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5Purchasing.pc</Path>
+            <Path fileType="data">/usr/lib/libQt5Purchasing.prl</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Purchasing</Path>
+            <Path fileType="header">/usr/include/QtPurchasing</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_purchasing_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_purchasing.pri</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-purchasing</Dependency>
         </RuntimeDependencies>
     </Package>
 
@@ -1758,11 +1876,73 @@
             <Path fileType="icon">/usr/share/icons/hicolor/32x32/apps/qdbusviewer.png</Path>
             <Path fileType="icon">/usr/share/pixmaps/qdbusviewer5.png</Path>
         </Files>
-         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/qdbusviewer5.desktop">qdbusviewer.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/qdbusviewer5.png">assistant.png</AdditionalFile>
-        </AdditionalFiles>
     </Package>
+    <Package>
+        <Name>qt5-quick3d</Name>
+        <Summary>Qt module and API for defining 3D content in Qt Quick</Summary>
+        <RuntimeDependencies>
+            <Dependency>flite</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>speech-dispatcher</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/meshdebug</Path>
+            <Path fileType="executable">/usr/bin/balsam</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3D.so</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3D.so.*</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DAssetImport.so</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DAssetImport.so.*</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DRender.so</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DRender.so.*</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DRuntimeRender.so</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DRuntimeRender.so.*</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DUtils.so</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DUtils.so.*</Path>
+            <Path fileType="library">/usr/lib/qt5/plugins/assetimporters/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick3D</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-quick3d-devel</Name>
+        <Summary>Development headers for qt5-quick3d</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-quick3d</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libQt5Quick3D.prl</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DAssetImport.prl</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DRender.prl</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DRuntimeRender.prl</Path>
+            <Path fileType="library">/usr/lib/libQt5Quick3DUtils.prl</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5Quick3D.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5Quick3DAssetImport.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5Quick3DRender.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5Quick3DRuntimeRender.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5Quick3DUtils.pc</Path>
+            <Path fileType="data">/usr/include/QtQuick3D</Path>
+            <Path fileType="data">/usr/include/QtQuick3DAssetImport</Path>
+            <Path fileType="data">/usr/include/QtQuick3DRender</Path>
+            <Path fileType="data">/usr/include/QtQuick3DRuntimeRender</Path>
+            <Path fileType="data">/usr/include/QtQuick3DUtils</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Quick3D</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Quick3DAssetImport</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Quick3DRender</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Quick3DRuntimeRender</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5Quick3DUtils</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3d.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3d_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3dassetimport.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3dassetimport_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3drender.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3drender_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3druntimerender.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3druntimerender_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3dutils.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quick3dutils_private.pri</Path>
+        </Files>
+    </Package>
+
     <Package>
         <Name>qt5-quickcontrols</Name>
         <Summary>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Summary>
@@ -1819,18 +1999,18 @@
             <Dependency>qt5-base-devel</Dependency>
         </RuntimeDependencies>
         <Files>
-          <Path fileType="header">/usr/include/qt5/QtQuickControls2/</Path>
-            <Path fileType="header">/usr/include/qt5/QtQuickTemplates2/</Path>
+          <Path fileType="header">/usr/include/QtQuickControls2/</Path>
+            <Path fileType="header">/usr/include/QtQuickTemplates2/</Path>
             <Path fileType="data">/usr/lib/libQt5QuickControls2.prl</Path>
             <Path fileType="data">/usr/lib/libQt5QuickTemplates2.prl</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5QuickControls2</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5QuickTemplates2</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5QuickControls2.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5QuickTemplates2.pc</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_quickcontrols2.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_quickcontrols2_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_quicktemplates2.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_quicktemplates2_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quickcontrols2.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quickcontrols2_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quicktemplates2.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_quicktemplates2_private.pri</Path>
         </Files>
     </Package>
 
@@ -1858,17 +2038,17 @@
             <Dependency release="current">qt5-script</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_script.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_script_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_scripttools.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_scripttools_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_script.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_script_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_scripttools.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_scripttools_private.pri</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Script/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Script.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5ScriptTools.pc</Path>
             <Path fileType="data">/usr/lib/libQt5Script.prl</Path>
             <Path fileType="data">/usr/lib/libQt5ScriptTools.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtScript/</Path>
-            <Path fileType="header">/usr/include/qt5/QtScriptTools/</Path>
+            <Path fileType="header">/usr/include/QtScript/</Path>
+            <Path fileType="header">/usr/include/QtScriptTools/</Path>
         </Files>
     </Package>
 
@@ -1900,11 +2080,11 @@
             <Dependency release="current">qt5-scxml</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/features/qscxmlc.prf</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_scxml.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_scxml_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/features/qscxmlc.prf</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_scxml.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_scxml_private.pri</Path>
             <Path fileType="data">/usr/lib/libQt5Scxml.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtScxml/</Path>
+            <Path fileType="header">/usr/include/QtScxml/</Path>
             <Path fileType="config">/usr/lib/cmake/Qt5Scxml/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Scxml.pc</Path>
         </Files>
@@ -1934,9 +2114,9 @@
             <Dependency>qt5-base-devel</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtSensors</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_sensors.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_sensors_private.pri</Path>
+            <Path fileType="header">/usr/include/QtSensors</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_sensors.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_sensors_private.pri</Path>
             <Path fileType="data">/usr/lib/libQt5Sensors.prl</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Sensors.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Sensors</Path>
@@ -1972,10 +2152,10 @@
             <Dependency release="current">qt5-serialbus</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_serialbus.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_serialbus_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_serialbus.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_serialbus_private.pri</Path>
             <Path fileType="data">/usr/lib/libQt5SerialBus.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtSerialBus/</Path>
+            <Path fileType="header">/usr/include/QtSerialBus/</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5SerialBus/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5SerialBus.pc</Path>
         </Files>
@@ -2005,10 +2185,10 @@
        <Files>
             <Path fileType="data">/usr/lib/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake</Path>
             <Path fileType="data">/usr/lib/libQt5SerialPort.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_serialport.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_serialport_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_serialport.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_serialport_private.pri</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5SerialPort.pc</Path>
-            <Path fileType="header">/usr/include/qt5/QtSerialPort/</Path>
+            <Path fileType="header">/usr/include/QtSerialPort/</Path>
         </Files>
     </Package>
 
@@ -2036,7 +2216,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/lib/libQt5TextToSpeech.prl</Path>
-            <Path fileType="data">/usr/include/qt5/QtTextToSpeech</Path>
+            <Path fileType="data">/usr/include/QtTextToSpeech</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5TextToSpeech</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5TextToSpeech.pc</Path>
         </Files>
@@ -2068,15 +2248,15 @@
             <Dependency release="current">qt5-svg</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/qt5/QtSvg/</Path>
+            <Path fileType="header">/usr/include/QtSvg/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Svg.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Svg/Qt5SvgConfig.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Svg/Qt5SvgConfigVersion.cmake</Path>
             <Path fileType="data">/usr/lib/libQt5Svg.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_svg.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_svg_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_svg.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_svg_private.pri</Path>
         </Files>
     </Package>
 
@@ -2085,7 +2265,6 @@
         <Summary>A cross-platform application and UI framework (Translations)</Summary>
         <Description>A cross-platform application and UI framework (Translations)</Description>
         <Files>
-            <Path fileType="library">/usr/share/qt5/translations/*</Path>
             <Path fileType="library">/usr/share/qt5/translations/assistant_*.qm</Path>
             <Path fileType="library">/usr/share/qt5/translations/designer_*.qm</Path>
             <Path fileType="library">/usr/share/qt5/translations/linguist_*.qm</Path>
@@ -2118,12 +2297,12 @@
         <Summary>Development files for qt5-virtualkeyboard</Summary>
         <Summary>Qt module for general purpose serial bus access</Summary>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_virtualkeyboard.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_virtualkeyboard_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_virtualkeyboard.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_virtualkeyboard_private.pri</Path>
             <Path fileType="data">/usr/lib/libQt5VirtualKeyboard.prl</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5VirtualKeyboard/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5VirtualKeyboard.pc</Path>
-            <Path fileType="header">/usr/include/qt5/QtVirtualKeyboard/</Path>
+            <Path fileType="header">/usr/include/QtVirtualKeyboard/</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-virtualkeyboard</Dependency>
@@ -2174,16 +2353,16 @@
         <Files>
             <Path fileType="library">/usr/lib/libQt5WaylandCompositor.prl</Path>
             <Path fileType="library">/usr/lib/libQt5WaylandClient.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_waylandclient.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_waylandclient_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_waylandcompositor.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_waylandcompositor_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_waylandclient.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_waylandclient_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_waylandcompositor.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_waylandcompositor_private.pri</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WaylandClient.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WaylandCompositor.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5WaylandClient</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5WaylandCompositor</Path>
-            <Path fileType="headers">/usr/include/qt5/QtWaylandClient/</Path>
-            <Path fileType="headers">/usr/include/qt5/QtWaylandCompositor</Path>
+            <Path fileType="headers">/usr/include/QtWaylandClient/</Path>
+            <Path fileType="headers">/usr/include/QtWaylandCompositor</Path>
         </Files>
     </Package>
 
@@ -2208,11 +2387,11 @@
         <Description>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
         <Files>
             <Path fileType="data">/usr/lib/libQt5WebChannel.prl</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webchannel.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webchannel_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webchannel.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webchannel_private.pri</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WebChannel.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5WebChannel</Path>
-            <Path fileType="header">/usr/include/qt5/QtWebChannel</Path>
+            <Path fileType="header">/usr/include/QtWebChannel</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-webchannel</Dependency>
@@ -2276,9 +2455,9 @@
         <Files>
             <Path fileType="library">/usr/lib/libQt5WebEngine.prl</Path>
             <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtWebEngine</Path>
-            <Path fileType="header">/usr/include/qt5/QtWebEngineCore</Path>
-            <Path fileType="header">/usr/include/qt5/QtWebEngineWidgets</Path>
+            <Path fileType="header">/usr/include/QtWebEngine</Path>
+            <Path fileType="header">/usr/include/QtWebEngineCore</Path>
+            <Path fileType="header">/usr/include/QtWebEngineWidgets</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Designer/Qt5Designer_QWebEngineViewPlugin.cmake</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5WebEngine</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5WebEngineCore</Path>
@@ -2286,13 +2465,13 @@
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WebEngine.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WebEngineCore.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WebEngineWidgets.pc</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webengine.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webengine_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webenginecore.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webenginecore_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webenginewidgets.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_webenginewidgets_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webengine.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webengine_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginecore.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginecore_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginewidgets.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginewidgets_private.pri</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-webengine</Dependency>
@@ -2326,8 +2505,9 @@
             <Path fileType="data">/usr/lib/pkgconfig/Qt5WebSockets.pc</Path>
             <Path fileType="data">/usr/lib/libQt5WebSockets.prl</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5WebSockets</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_websockets_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_websockets.pri</Path>
+            <Path fileType="header">/usr/include/QtWebSockets</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_websockets_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_websockets.pri</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-websockets</Dependency>
@@ -2335,6 +2515,40 @@
         </RuntimeDependencies>
     </Package>
 
+    <Package>
+        <Name>qt5-webview</Name>
+        <Summary>Provides a way to display web content in a QML application</Summary>
+        <Description>Provides a way to display web content in a QML application</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtWebView/</Path>
+            <Path fileType="library">/usr/lib/libQt5WebView.so</Path>
+            <Path fileType="library">/usr/lib/libQt5WebView.so.*</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-webengine</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-webview-devel</Name>
+        <Summary>Provides a way to display web content in a QML application</Summary>
+        <Description>Provides a way to display web content in a QML application</Description>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig/Qt5WebView.pc</Path>
+            <Path fileType="data">/usr/lib/libQt5WebView.prl</Path>
+            <Path fileType="data">/usr/lib/cmake/Qt5WebView</Path>
+            <Path fileType="header">/usr/include/QtWebView</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webview_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webview.pri</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-webview</Dependency>
+            <Dependency release="current">qt5-webengine-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
+    </Package>
     <Package>
         <Name>qt5-x11extras</Name>
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
@@ -2353,11 +2567,11 @@
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
         <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_x11extras_private.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_x11extras.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_x11extras_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_x11extras.pri</Path>
             <Path fileType="data">/usr/lib/libQt5X11Extras.prl</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5X11Extras/</Path>
-            <Path fileType="data">/usr/include/qt5/QtX11Extras/</Path>
+            <Path fileType="data">/usr/include/QtX11Extras/</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5X11Extras.pc</Path>
         </Files>
         <RuntimeDependencies>
@@ -2385,10 +2599,10 @@
         <Name>qt5-xmlpatterns-devel</Name>
         <Files>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.prl</Path>
-            <Path fileType="header">/usr/include/qt5/QtXmlPatterns/</Path>
+            <Path fileType="header">/usr/include/QtXmlPatterns/</Path>
             <Path fileType="data">/usr/lib/qt5/qmldir/QtXmlPatterns/</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_xmlpatterns.pri</Path>
-            <Path fileType="data">/usr/lib/qt5/mkspecs/modules/qt_lib_xmlpatterns_private.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_xmlpatterns.pri</Path>
+            <Path fileType="data">/usr/mkspecs/modules/qt_lib_xmlpatterns_private.pri</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5XmlPatterns.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5XmlPatterns</Path>
         </Files>
