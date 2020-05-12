@@ -11,18 +11,12 @@ def setup():
     filteredCFLAGS = get.CFLAGS().replace("-g3", "-g")
     filteredCXXFLAGS = get.CXXFLAGS().replace("-g3", "-g")
 
-    vars = {"SULIN_CC" :       get.CC(),
-            "SULIN_CXX":       get.CXX(),
-            "SULIN_CFLAGS":    filteredCFLAGS,
-            "SULIN_LDFLAGS":   get.LDFLAGS()}
-
-    for k, v in vars.items():
-        inarytools.dosed("mkspecs/common/g++.conf", k, v)
-
+    shelltools.makedirs("build")
+    shelltools.cd("build")
     shelltools.export("CFLAGS", filteredCFLAGS)
     shelltools.export("CXXFLAGS", filteredCXXFLAGS)
     shelltools.system('parameters=\"QMAKE_CFLAGS_ISYSTEM= \"')
-    autotools.rawConfigure("OPENSSL_LIBS=\'-L/usr/lib -lssl -lcrypto\'  ../configure -confirm-license -opensource \
+    shelltools.system("OPENSSL_LIBS=\'-L/usr/lib -lssl -lcrypto\'  ../configure -confirm-license -opensource \
                             -prefix /usr \
                             -docdir /usr/share/doc/qt5 \
                             -plugindir /usr/lib/qt5/plugins \
@@ -52,7 +46,9 @@ def setup():
                             -opengl \
                             -glib ")
 def build():
+    shelltools.cd("build")
     autotools.make()
 
 def install():
+    shelltools.cd("build")
     autotools.rawInstall("INSTALL_ROOT=%s" % get.installDIR())
