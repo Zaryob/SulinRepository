@@ -21,7 +21,7 @@ def setup():
                             -docdir /usr/share/doc/qt5 \
                             -plugindir /usr/lib/qt5/plugins \
                             -importdir /usr/lib/qt5/imports \
-                            -qmldir /usr/lib/qt5/qmldir \
+                            -qmldir /usr/lib/qt5/qml \
                             -datadir /usr/share/qt5 \
                             -translationdir /usr/share/qt5/translations \
                             -sysconfdir /etc \
