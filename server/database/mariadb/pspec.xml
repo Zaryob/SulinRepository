@@ -16,7 +16,7 @@
         <Archive sha1sum="983bb09f395b2d4f5c46ebaddd7d69cf9800e898" type="targz">https://downloads.mariadb.org/interstitial/mariadb-10.5.3/source/mariadb-10.5.3.tar.gz</Archive>
         <!--SHA1SUM alread calculated by mariadb team. you can use checksum button and you can confirm your archives it-->
         <Patches>
-            <Patch>disable_failing_Tests.patch</Patch>
+            <Patch>disable_failing_test.patch</Patch>
             <Patch>ppc-remove-glibc-dep.patch</Patch>
         </Patches>
 

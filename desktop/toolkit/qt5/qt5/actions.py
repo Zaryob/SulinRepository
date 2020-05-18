@@ -21,27 +21,16 @@ def setup():
                             -libdir {} \
                             -docdir {} \
                             -examplesdir {} \
-                            -demosdir {}\
                             -plugindir {} \
                             -translationdir {} \
                             -sysconfdir {} \
                             -datadir {} \
                             -importdir {} \
                             -headerdir {} \
-                            -moduledir {} \
                             -confirm-license \
-                            -prefix /usr \
-                            -docdir /usr/share/doc/qt5 \
-                            -plugindir /usr/lib/qt5/plugins \
-                            -importdir /usr/lib/qt5/imports \
-                            -qmldir /usr/lib/qt5/qml \
-                            -datadir /usr/share/qt5 \
-                            -translationdir /usr/share/qt5/translations \
-                            -sysconfdir /etc \
-                            -examplesdir /usr/lib/qt5/examples \
                             -system-sqlite \
                             -system-zlib \
-                            -plugin-sql-{psql,mysql,sqlite,odbc,ibase} \
+                            -plugin-sql-{{psql,mysql,sqlite,odbc}} \
                             -icu \
                             -ccache \
                             -webengine-icu \
@@ -49,7 +38,6 @@ def setup():
                             -system-libpng \
                             -system-ffmpeg \
                             -system-libjpeg \
-                            -no-sql-mysql \
                             -no-rpath \
                             -openssl-linked \
                             -silent \
@@ -62,14 +50,12 @@ def setup():
                                            qt.libdir,
                                            qt.docdir,
                                            qt.examplesdir,
-                                           qt.demosdir,
                                            qt.plugindir,
                                            qt.sysconfdir,
                                            qt.translationdir,
                                            qt.datadir,
                                            qt.importdir,
-                                           qt.includedir,
-                                           qt.moduledir))
+                                           qt.includedir))
 def build():
     shelltools.cd("build")
     autotools.make()
