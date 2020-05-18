@@ -163,6 +163,7 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/mysql/my.cnf">my.cnf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mariadb">mariadb.initrd</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/mariadb.conf">tmpfiles.conf</AdditionalFile>
         </AdditionalFiles>
         <IsA>postOps</IsA>
