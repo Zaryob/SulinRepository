@@ -16,7 +16,7 @@
         <Archive sha1sum="983bb09f395b2d4f5c46ebaddd7d69cf9800e898" type="targz">https://downloads.mariadb.org/interstitial/mariadb-10.5.3/source/mariadb-10.5.3.tar.gz</Archive>
         <!--SHA1SUM alread calculated by mariadb team. you can use checksum button and you can confirm your archives it-->
         <Patches>
-            <Patch>disable_failing_test.patch</Patch>
+            <Patch>disable-failing-test.patch</Patch>
             <Patch>ppc-remove-glibc-dep.patch</Patch>
         </Patches>
 
@@ -29,7 +29,7 @@
     </Source>
 
     <Package>
-        <Name>mariadb-lib</Name>
+        <Name>mariadb-bin-lib</Name>
         <IsA>app:console</IsA>
         <IsA>library</IsA>
         <Summary>The shared libraries required for MariaDB clients</Summary>
@@ -39,33 +39,21 @@
             <Dependency>unixODBC</Dependency>
         </RuntimeDependencies>
         <Replaces>
-            <Package>mariadb-bin-lib</Package>
             <Package>mysql-lib</Package>
         </Replaces>
-        <Conflits>
-            <Package>mariadb-bin-lib</Package>
-        </Conflits>
         <Files>
             <Path fileType="executable">/usr/bin/mysql_config</Path>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient.so</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient.so.18</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient.so.18.0.0</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient_r.so</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient_r.so.18</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient_r.so.18.0.0</Path>
-            <Path fileType="library">/usr/lib/libmysqld.a</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient_r.a</Path>
-            <Path fileType="library">/usr/lib/libmysqlclient.a</Path>
-            <Path fileType="library">/usr/lib/libmysqld.so</Path>
-            <Path fileType="library">/usr/lib/libmysqld.so.18</Path>
-            <Path fileType="library">/usr/lib/libmysqlservices.a</Path>
+            <Path fileType="library">/usr/lib/libmysqlclient.*</Path>
+            <Path fileType="library">/usr/lib/libmysqlclient_r.*</Path>
+            <Path fileType="library">/usr/lib/libmysqld.*</Path>
+            <Path fileType="library">/usr/lib/libmysqlservices.*</Path>
             <Path fileType="library">/usr/bin/mysqld_safe_helper</Path>
         </Files>
     </Package>
 
     <Package>
-        <Name>mariadb-client</Name>
+        <Name>mariadb-bin-client</Name>
         <IsA>app:console</IsA>
         <Summary>MariaDB client programs</Summary>
         <RuntimeDependencies>
@@ -73,7 +61,6 @@
             <Dependency>libaio</Dependency>
         </RuntimeDependencies>
         <Replaces>
-            <Package>mariadb-bin-client</Package>
             <Package>mysql-client</Package>
         </Replaces>
         <Files>
@@ -88,7 +75,7 @@
     </Package>
 
     <Package>
-        <Name>mariadb-server</Name>
+        <Name>mariadb-bin-server</Name>
         <IsA>service</IsA>
         <Summary>The MariaDB server and related files</Summary>
         <RuntimeDependencies>
@@ -97,64 +84,14 @@
             <Dependency>unixODBC</Dependency>
         </RuntimeDependencies>
         <Replaces>
-            <Package>mariadb-bin-server</Package>
             <Package>mysql-server</Package>
         </Replaces>
-        <Conflits>
-            <Package>mariadb-bin-server</Package>
-        </Conflits>
         <Files>
             <Path fileType="config">/etc</Path>
-            <Path fileType="executable">/usr/bin/aria_chk</Path>
-            <Path fileType="executable">/usr/bin/aria_dump_log</Path>
-            <Path fileType="executable">/usr/bin/aria_ftdump</Path>
-            <Path fileType="executable">/usr/bin/aria_pack</Path>
-            <Path fileType="executable">/usr/bin/aria_read_log</Path>
-            <Path fileType="executable">/usr/bin/innochecksum</Path>
-            <Path fileType="executable">/usr/bin/msql2mysql</Path>
-            <Path fileType="executable">/usr/bin/my_print_defaults</Path>
-            <Path fileType="executable">/usr/bin/myisam_ftdump</Path>
-            <Path fileType="executable">/usr/bin/myisamchk</Path>
-            <Path fileType="executable">/usr/bin/myisamlog</Path>
-            <Path fileType="executable">/usr/bin/myisampack</Path>
-            <Path fileType="executable">/usr/bin/mysql_client_test</Path>
-            <Path fileType="executable">/usr/bin/mysql_convert_table_format</Path>
-            <Path fileType="executable">/usr/bin/mysql_embedded</Path>
-            <Path fileType="executable">/usr/bin/mysql_client_test_embedded</Path>
-            <Path fileType="executable">/usr/bin/mysqltest_embedded</Path>
-            <Path fileType="executable">/usr/bin/mysql_find_rows</Path>
-            <Path fileType="executable">/usr/bin/mysql_fix_extensions</Path>
-            <Path fileType="executable">/usr/bin/mysql_install_db</Path>
-            <Path fileType="executable">/usr/bin/mysql_plugin</Path>
-            <Path fileType="executable">/usr/bin/mysql_secure_installation</Path>
-            <Path fileType="executable">/usr/bin/mysql_setpermission</Path>
-            <Path fileType="executable">/usr/bin/mysql_tzinfo_to_sql</Path>
-            <Path fileType="executable">/usr/bin/mysql_upgrade</Path>
-            <Path fileType="executable">/usr/bin/mysql_waitpid</Path>
-            <Path fileType="executable">/usr/bin/mysql_zap</Path>
-            <Path fileType="executable">/usr/bin/mysqlaccess</Path>
-            <Path fileType="executable">/usr/bin/mysqlbinlog</Path>
-            <Path fileType="executable">/usr/bin/mysqlbug</Path>
-            <Path fileType="executable">/usr/bin/mysqld</Path>
-            <Path fileType="executable">/usr/bin/mysqld-post</Path>
-            <Path fileType="executable">/usr/bin/mysqld_multi</Path>
-            <Path fileType="executable">/usr/bin/mysqld_safe</Path>
-            <Path fileType="executable">/usr/bin/mysqldumpslow</Path>
-            <Path fileType="executable">/usr/bin/mysqlhotcopy</Path>
-            <Path fileType="executable">/usr/bin/mysqltest</Path>
-            <Path fileType="executable">/usr/bin/perror</Path>
-            <Path fileType="executable">/usr/bin/replace</Path>
-            <Path fileType="executable">/usr/bin/resolve_stack_dump</Path>
-            <Path fileType="executable">/usr/bin/resolveip</Path>
-            <Path fileType="executable">/usr/bin/tokuft_logprint</Path>
-            <Path fileType="executable">/usr/bin/tokuftdump</Path>
-            <Path fileType="executable">/usr/bin/wsrep_sst_common</Path>
-            <Path fileType="executable">/usr/bin/wsrep_sst_mysqldump</Path>
-            <Path fileType="executable">/usr/bin/wsrep_sst_rsync</Path>
-            <Path fileType="executable">/usr/bin/wsrep_sst_xtrabackup</Path>
-            <Path fileType="executable">/usr/bin/wsrep_sst_xtrabackup-v2</Path>
-            <Path fileType="executable">/usr/bin/mytop</Path>
-            <Path fileType="library">/usr/lib/mysql/plugin</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="data">/usr/mysql-test</Path>
+            <Path fileType="data">/usr/sql-bench</Path>
+            <Path fileType="library">/usr/lib/plugin</Path>
             <Path fileType="data">/usr/share/mysql</Path>
             <Path fileType="data">/var</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -163,22 +100,19 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/etc/mysql/my.cnf">my.cnf</AdditionalFile>
-            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mariadb">mariadb.initrd</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/mariadb">mariadb.initd</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/mariadb.conf">tmpfiles.conf</AdditionalFile>
         </AdditionalFiles>
         <IsA>postOps</IsA>
     </Package>
 
     <Package>
-        <Name>mariadb-man-pages</Name>
+        <Name>mariadb-bin-man-pages</Name>
         <IsA>data</IsA>
         <Summary>Man pages for MariaDB server and client</Summary>
         <Replaces>
             <Package>mysql-man-pages</Package>
         </Replaces>
-        <Conflits>
-            <Package>mariadb-bin-man-pages</Package>
-        </Conflits>
         <Files>
             <Path fileType="man">/usr/share/man</Path>
         </Files>

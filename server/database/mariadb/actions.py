@@ -9,11 +9,6 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import cmaketools
 
-
-#inarytools.flags.add("-fno-strict-aliasing -DBIG_JOINS=1")
-#inarytools.cflags.add("-fomit-frame-pointer")
-#inarytools.cxxflags.add("-felide-constructors -fno-rtti -fno-delete-null-pointer-checks")
-
 def setup():
     #inarytools.dosed("storage/tokudb/ft-index/ft/ft-ops.cc", "LEAFENTRY leaf_entry;", "LEAFENTRY leaf_entry = 0;")
     shelltools.export("CFLAGS", get.CFLAGS())
@@ -30,13 +25,13 @@ def setup():
                             -DENABLED_LOCAL_INFILE=ON \
                             -DINSTALL_INFODIR=share/info \
                             -DINSTALL_MANDIR=share/man \
-                            -DINSTALL_PLUGINDIR=lib/$pkgname/plugin \
+                            -DINSTALL_PLUGINDIR=lib/mysql/plugin \
                             -DINSTALL_SCRIPTDIR=bin \
                             -DINSTALL_INCLUDEDIR=include/mysql \
-                            -DINSTALL_DOCREADMEDIR=share/doc/$pkgname \
-                            -DINSTALL_SUPPORTFILESDIR=share/$pkgname \
-                            -DINSTALL_MYSQLSHAREDIR=share/$pkgname \
-                            -DINSTALL_DOCDIR=share/doc/$pkgname \
+                            -DINSTALL_DOCREADMEDIR=share/doc/mariadb \
+                            -DINSTALL_SUPPORTFILESDIR=share/mysql \
+                            -DINSTALL_MYSQLSHAREDIR=share/mysql \
+                            -DINSTALL_DOCDIR=share/doc/mariadb \
                             -DTMPDIR=/var/tmp \
                             -DCONNECT_WITH_MYSQL=ON \
                             -DCONNECT_WITH_LIBXML2=system \
@@ -87,24 +82,16 @@ def build():
     cmaketools.make()
 
 def install():
-    cmaketools.install("DESTDIR=%s benchdir_root=\"/usr/share/mysql\"" % get.installDIR())
+    cmaketools.install("DESTDIR={} benchdir_root=\"/usr/share/mysql\"".format(get.installDIR()))
 
     # Config
-    inarytools.insinto("/etc/mysql", "%s/usr/share/mysql/my-medium.cnf" % get.installDIR(), "my.cnf")
-    inarytools.insinto("/etc/mysql", "%s/%s/scripts/mysqlaccess.conf" % (get.workDIR(), get.srcDIR()))
-    inarytools.insinto("/usr/bin", "%s/%s/scripts/mysql_config" % (get.workDIR(), get.srcDIR()))
+    inarytools.insinto("/usr/bin", "{}/mariadb-10.5.3/scripts/mysql_config".format(get.workDIR()))
     # Data dir
     inarytools.dodir("/var/lib/mysql")
 
     # Documents
-    inarytools.dodoc("%s/%s/support-files/my-*.cnf" % (get.workDIR(), get.srcDIR()))
-    inarytools.dodoc("COPYING", "INSTALL-SOURCE", "README", "VERSION")
+    inarytools.dodoc("COPYING", "INSTALL-SOURCE", "README.md", "VERSION")
 
     # Remove not needed files
-    inarytools.removeDir("/usr/data")
-    inarytools.removeDir("/usr/mysql-test")
-    inarytools.removeDir("/usr/sql-bench")
     inarytools.remove("/usr/share/man/man1/mysql-test-run.pl.1")
 
-    # Remove -lprobes_mysql
-    #inarytools.dosed("%s/usr/bin/mysql_config" % get.installDIR(), "-lprobes_mysql")
