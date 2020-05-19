@@ -8,6 +8,7 @@ from inary.actionsapi import get
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+import os
 
 
 movetobin = ["arch", "basename", "cat", "chgrp", "chmod", "chown", "cp", "cut", "date", "dd", "df",
@@ -29,22 +30,24 @@ def setup():
 
     # Fedora also installs su and hostname
     autotools.configure("""--with-packager="Sulin" \
-                         --with-packager-version="coreutils-8.31" \
+                         --with-packager-version="coreutils-8.32" \
                          --without-selinux \
                          --with-packager-bug-reports="https://gitlab.com/sulinos/main/issues" \
                          --enable-largefile \
                          --enable-single-binary=symlinks \
                          --enable-install-program=arch \
                          --with-openssl \
-                         --enable-no-install-program=faillog,hostname,login,lastlog,uptime \
                          --libexecdir=/usr/lib""")
 
 def build():
-    autotools.make("SHARED=0 CFLAGS='-Ofast'")
+    autotools.make("CFLAGS='-Ofast -O3 -s'")
 
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    for prog in [ "faillog", "hostname", "login", "lastlog", "uptime" ]:
+        if os.path.isfile("{}/usr/bin/{}".format(get.installDIR(),prog)):
+            os.unlink("{}/usr/bin/{}".format(get.installDIR(),prog))
     autotools.make("mandir=%s/%s install-man" % (get.installDIR(), get.manDIR()))
     #~ autotools.install("mandir=%s/%s" % (get.installDIR(), get.manDIR()))
 
