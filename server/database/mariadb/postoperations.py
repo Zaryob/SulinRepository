@@ -10,7 +10,7 @@ OUR_DESC = "mysql"
 DATADIR = "/var/lib/mysql"
 DATADIRMODE = 0o755
 
-def postInstall(fromVersion, fromRelease, toVersion, toRelease):
+def postInstall():
     try:
         os.system ("groupadd -g %d %s" % (OUR_ID, OUR_NAME))
         os.system ("useradd -m -d /var/lib/mysql -r -s /bin/false -u %d -g %d %s -c %s" % (OUR_ID, OUR_ID, OUR_NAME, OUR_DESC))
