@@ -2383,6 +2383,63 @@
             <Path fileType="data">/usr/lib/pkgconfig/Qt5TextToSpeech.pc</Path>
         </Files>
     </Package>
+
+    <Package>
+        <Name>qt5-sql-mysql</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlmysql.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-postgresql</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlpsql.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-sqlite</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlite.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-odbc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>unixODBC</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlodbc.so</Path>
+        </Files>
+    </Package>
+
     <Package>
         <Name>qt5-svg</Name>
         <BuildFlags>
