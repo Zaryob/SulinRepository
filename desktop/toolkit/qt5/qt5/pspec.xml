@@ -3,9 +3,15 @@
 <INARY>
     <Source>
         <Name>qt5</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Homepage>http://qt.io/</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <Summary>Cross platform application and UI framework</Summary>
@@ -223,6 +229,9 @@
 
     <Package>
         <Name>qt5-assistant</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
@@ -253,6 +262,9 @@
 
     <Package>
         <Name>qt5-assistant-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency release="current">qt5-assistant</Dependency>
@@ -275,6 +287,9 @@
     </Package>
     <Package>
         <Name>qt5-base</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Base development commands and files for Qt 5</Summary>
         <Description>Base development commands and files for Qt 5</Description>
         <RuntimeDependencies>
@@ -425,6 +440,9 @@
     </Package>
     <Package>
         <Name>qt5-base-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-base</Summary>
         <Description>Base development files for Qt 5</Description>
         <Files>
@@ -1089,6 +1107,9 @@
 
     <Package>
         <Name>qt5-charts</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a set of easy to use chart components</Summary>
         <Description>Provides a set of easy to use chart components</Description>
         <RuntimeDependencies>
@@ -1106,6 +1127,9 @@
     </Package>
     <Package>
         <Name>qt5-charts-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-charts</Summary>
         <Description>Provides a set of easy to use chart components</Description>
         <RuntimeDependencies>
@@ -1121,6 +1145,9 @@
 
     <Package>
         <Name>qt5-connectivity</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to Bluetooth and Nfc hardware</Summary>
         <Description>Qt5 frameworks to connect Bluetooth and Nfc hardware</Description>
         <RuntimeDependencies>
@@ -1140,6 +1167,9 @@
 
     <Package>
         <Name>qt5-connectivity-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-connectivity</Summary>
         <Description>Qt5 frameworks to connect Bluetooth and Nfc hardware</Description>
         <Files>
@@ -1166,6 +1196,9 @@
 
     <Package>
         <Name>qt5-datavis3d</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt5 Data Visualization module</Summary>
         <Description>Qt5 Data Visualization module</Description>
         <RuntimeDependencies>
@@ -1181,6 +1214,9 @@
 
     <Package>
         <Name>qt5-datavis3d-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-datavis3d</Summary>
         <Description>Qt5 Data Visualization module</Description>
         <RuntimeDependencies>
@@ -1200,6 +1236,9 @@
 
     <Package>
         <Name>qt5-declarative</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for QML and JavaScript languages</Summary>
         <Description>Qt5 declarative framework for dynamic user interfaces</Description>
         <RuntimeDependencies>
@@ -1327,6 +1366,9 @@
 
     <Package>
         <Name>qt5-declarative-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-declarative</Summary>
         <Description>Classes for QML and JavaScript languages. Qt5 declarative framework for dynamic user interfaces</Description>
         <Files>
@@ -1393,6 +1435,9 @@
 
     <Package>
         <Name>qt5-designer</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
@@ -1427,6 +1472,9 @@
     </Package>
     <Package>
         <Name>qt5-designer-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency release="current">qt5-designer</Dependency>
@@ -1443,6 +1491,9 @@
 
     <Package>
         <Name>qt5-doc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-script</Dependency>
@@ -1459,6 +1510,9 @@
 
     <Package>
         <Name>qt5-gamepad</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>A JavaScript 3D rendering API for Qt Quick</Summary>
         <Description>Adds support for getting events from gamepad devices</Description>
         <RuntimeDependencies>
@@ -1475,6 +1529,9 @@
 
     <Package>
         <Name>qt5-gamepad-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-gamepad</Summary>
         <Description>A JavaScript 3D rendering API for Qt Quick. Adds support for getting events from gamepad devices</Description>
         <RuntimeDependencies>
@@ -1491,6 +1548,9 @@
 
     <Package>
         <Name>qt5-graphicaleffects</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Graphical effects for use with Qt Quick 2</Summary>
         <Description>This package contains qml files that used to generate graphical effects for use with Qt Quick 2</Description>
         <RuntimeDependencies>
@@ -1504,6 +1564,9 @@
 
     <Package>
         <Name>qt5-imageformats</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Summary>
         <Description>Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Description>
         <RuntimeDependencies>
@@ -1527,6 +1590,9 @@
 
     <Package>
         <Name>qt5-keychain</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides support for secure credentials storage</Summary>
         <Description>Qt5-Keychain is a Qt API to store passwords and other secret data securely. How the data is stored depends on the platform</Description>
         <RuntimeDependencies>
@@ -1540,6 +1606,9 @@
 
     <Package>
         <Name>qt5-keychain-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-keychain</Summary>
         <Description>Qt5-Keychain is a Qt API to store passwords and other secret data securely. How the data is stored depends on the platform</Description>
         <RuntimeDependencies>
@@ -1554,6 +1623,9 @@
 
     <Package>
         <Name>qt5-linguist</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
@@ -1601,6 +1673,9 @@
     </Package>
     <Package>
         <Name>qt5-location</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to position, satellite and area monitoring classes</Summary>
         <Description>Provides access to position, satellite and area monitoring classes</Description>
         <RuntimeDependencies>
@@ -1631,6 +1706,9 @@
 
     <Package>
         <Name>qt5-location-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-location</Summary>
         <Description>Provides access to position, satellite and area monitoring classes</Description>
         <Files>
@@ -1662,6 +1740,9 @@
 
     <Package>
         <Name>qt5-lottie</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Summary>
         <Description>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Description>
         <RuntimeDependencies>
@@ -1677,6 +1758,9 @@
 
     <Package>
         <Name>qt5-lottie-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-lottie</Summary>
         <Description>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Description>
         <Files>
@@ -1694,6 +1778,9 @@
 
     <Package>
         <Name>qt5-remoteobject</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Inter-process communication (IPC) module developed for Qt</Summary>
         <Description>Inter-process communication (IPC) module developed for Qt</Description>
         <RuntimeDependencies>
@@ -1712,6 +1799,9 @@
 
     <Package>
         <Name>qt5-remoteobject-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-remoteobject</Summary>
         <Description>Inter-process communication (IPC) module developed for Qt</Description>
         <Files>
@@ -1733,6 +1823,9 @@
     </Package>
     <Package>
         <Name>qt5-multimedia</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for audio, video, radio and camera functionality</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <RuntimeDependencies>
@@ -1767,6 +1860,9 @@
 
     <Package>
         <Name>qt5-multimedia-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-multimedia</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <Files>
@@ -1796,6 +1892,9 @@
 
     <Package>
         <Name>qt5-networkauth</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for audio, video, radio and camera functionality</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <Files>
@@ -1813,6 +1912,9 @@
 
     <Package>
         <Name>qt5-networkauth-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files of qt5-networkauth</Summary>
         <Description>Development files of qt5-networkauth. qt5-networkauth includes classes for audio, video, radio and camera functionality</Description>
         <Files>
@@ -1830,6 +1932,9 @@
 
     <Package>
         <Name>qt5-purchasing</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt In-App Purchasing API</Summary>
         <Description>Qt In-App Purchasing API</Description>
         <Files>
@@ -1845,6 +1950,9 @@
 
     <Package>
         <Name>qt5-purchasing-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt In-App Purchasing API</Summary>
         <Description>Qt In-App Purchasing API</Description>
         <Files>
@@ -1862,6 +1970,9 @@
 
     <Package>
         <Name>qt5-qdbusviewer</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
@@ -1879,6 +1990,9 @@
     </Package>
     <Package>
         <Name>qt5-quick3d</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt module and API for defining 3D content in Qt Quick</Summary>
         <RuntimeDependencies>
             <Dependency>flite</Dependency>
@@ -1905,6 +2019,9 @@
 
     <Package>
         <Name>qt5-quick3d-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development headers for qt5-quick3d</Summary>
         <RuntimeDependencies>
             <Dependency release="current">qt5-quick3d</Dependency>
@@ -1945,6 +2062,9 @@
 
     <Package>
         <Name>qt5-quickcontrols</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Summary>
 
         <Description>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Description>
@@ -1963,6 +2083,9 @@
 
     <Package>
         <Name>qt5-quickcontrols2</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Next generation user interface controls based on Qt Quick</Summary>
         <Description>Next generation user interface controls based on Qt Quick</Description>
         <RuntimeDependencies>
@@ -1992,6 +2115,9 @@
     </Package>
     <Package>
         <Name>qt5-quickcontrols2-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files of qt5-quickcontrols2</Summary>
         <Description>Next generation user interface controls based on Qt Quick</Description>
         <RuntimeDependencies>
@@ -2016,6 +2142,9 @@
 
     <Package>
         <Name>qt5-script</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Summary>
         <Description>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Description>
         <RuntimeDependencies>
@@ -2031,6 +2160,9 @@
 
     <Package>
         <Name>qt5-script-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files of qt5-script</Summary>
         <Description>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Description>
         <RuntimeDependencies>
@@ -2054,6 +2186,9 @@
 
     <Package>
         <Name>qt5-scxml</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a set of easy to use chart components</Summary>
         <Description>Provides a set of easy to use chart components</Description>
 
@@ -2071,6 +2206,9 @@
 
     <Package>
         <Name>qt5-scxml-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-scxml</Summary>
         <Description>Provides a set of easy to use chart components</Description>
 
@@ -2091,6 +2229,9 @@
     </Package>
     <Package>
         <Name>qt5-sensors</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
@@ -2109,6 +2250,9 @@
 
     <Package>
         <Name>qt5-sensors-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency release="current">qt5-sensors</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -2125,6 +2269,9 @@
 
     <Package>
         <Name>qt5-serialbus</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt module for general purpose serial bus access</Summary>
         <Description>Qt module for general purpose serial bus access</Description>
         <RuntimeDependencies>
@@ -2145,6 +2292,9 @@
 
     <Package>
         <Name>qt5-serialbus-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-serialbus</Summary>
         <Description>Qt module for general purpose serial bus access</Description>
         <RuntimeDependencies>
@@ -2163,6 +2313,9 @@
 
     <Package>
         <Name>qt5-serialport</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to hardware and virtual serial ports</Summary>
         <Description>Provides access to hardware and virtual serial ports</Description>
         <RuntimeDependencies>
@@ -2176,6 +2329,9 @@
 
     <Package>
         <Name>qt5-serialport-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-serialbus</Summary>
         <Description>Provides access to hardware and virtual serial ports</Description>
         <RuntimeDependencies>
@@ -2195,6 +2351,9 @@
 
     <Package>
         <Name>qt5-speech</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt module to make text to speech and speech recognition easy</Summary>
         <RuntimeDependencies>
             <Dependency>flite</Dependency>
@@ -2210,6 +2369,9 @@
 
     <Package>
         <Name>qt5-speech-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development headers for qt5-speech</Summary>
         <RuntimeDependencies>
             <Dependency release="current">qt5-speech</Dependency>
@@ -2223,6 +2385,9 @@
     </Package>
     <Package>
         <Name>qt5-svg</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for displaying the contents of SVG files</Summary>
 
         <Description>Classes for displaying the contents of SVG files</Description>
@@ -2241,6 +2406,9 @@
 
     <Package>
         <Name>qt5-svg-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-svg</Summary>
         <Description>Classes for displaying the contents of SVG files</Description>
         <RuntimeDependencies>
@@ -2262,6 +2430,9 @@
 
     <Package>
         <Name>qt5-translations</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>A cross-platform application and UI framework (Translations)</Summary>
         <Description>A cross-platform application and UI framework (Translations)</Description>
         <Files>
@@ -2276,6 +2447,9 @@
     </Package>
     <Package>
         <Name>qt5-virtualkeyboard</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Virtual keyboard framework of qt5</Summary>
         <Summary>Qt module for general purpose serial bus access</Summary>
 
@@ -2294,6 +2468,9 @@
     </Package>
     <Package>
         <Name>qt5-virtualkeyboard-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-virtualkeyboard</Summary>
         <Summary>Qt module for general purpose serial bus access</Summary>
         <Files>
@@ -2311,6 +2488,9 @@
     </Package>
     <Package>
         <Name>qt5-wayland</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides APIs for Wayland</Summary>
         <Description>Provides APIs for Wayland</Description>
         <RuntimeDependencies>
@@ -2344,6 +2524,9 @@
 
     <Package>
         <Name>qt5-wayland-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-wayland</Summary>
         <Description>Provides APIs for Wayland</Description>
         <RuntimeDependencies>
@@ -2368,6 +2551,9 @@
 
     <Package>
         <Name>qt5-webchannel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Summary>
         <Description>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
         <Files>
@@ -2383,6 +2569,9 @@
 
     <Package>
         <Name>qt5-webchannel-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Summary>
         <Description>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
         <Files>
@@ -2402,6 +2591,9 @@
 
     <Package>
         <Name>qt5-webengine</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Files>
             <Path fileType="executable">/usr/bin/qwebengine_convert_dict-qt5</Path>
             <Path fileType="library">/usr/lib/libQt5WebEngine.so</Path>
@@ -2452,6 +2644,9 @@
 
     <Package>
         <Name>qt5-webengine-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Files>
             <Path fileType="library">/usr/lib/libQt5WebEngine.prl</Path>
             <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.prl</Path>
@@ -2484,6 +2679,9 @@
 
     <Package>
         <Name>qt5-websockets</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides WebSocket communication compliant with RFC 6455</Summary>
         <Description>Provides WebSocket communication compliant with RFC 6455</Description>
         <Files>
@@ -2499,6 +2697,9 @@
 
     <Package>
         <Name>qt5-websockets-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides WebSocket communication compliant with RFC 6455</Summary>
         <Description>Provides WebSocket communication compliant with RFC 6455</Description>
         <Files>
@@ -2517,6 +2718,9 @@
 
     <Package>
         <Name>qt5-webview</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a way to display web content in a QML application</Summary>
         <Description>Provides a way to display web content in a QML application</Description>
         <Files>
@@ -2533,6 +2737,9 @@
 
     <Package>
         <Name>qt5-webview-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a way to display web content in a QML application</Summary>
         <Description>Provides a way to display web content in a QML application</Description>
         <Files>
@@ -2551,6 +2758,9 @@
     </Package>
     <Package>
         <Name>qt5-x11extras</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
         <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
         <RuntimeDependencies>
@@ -2564,6 +2774,9 @@
 
     <Package>
         <Name>qt5-x11extras-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
         <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
         <Files>
@@ -2582,6 +2795,9 @@
 
     <Package>
         <Name>qt5-xmlpatterns</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
@@ -2597,6 +2813,9 @@
 
     <Package>
         <Name>qt5-xmlpatterns-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Files>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.prl</Path>
             <Path fileType="header">/usr/include/QtXmlPatterns/</Path>
