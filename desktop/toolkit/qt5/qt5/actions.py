@@ -17,16 +17,16 @@ def setup():
     shelltools.export("CXXFLAGS", filteredCXXFLAGS)
     shelltools.system('parameters=\"QMAKE_CFLAGS_ISYSTEM= \"')
     shelltools.system("OPENSSL_LIBS=\'-L/usr/lib -lssl -lcrypto\'  ../configure -confirm-license -opensource \
-                            -prefix {} \
-                            -libdir {} \
-                            -docdir {} \
-                            -examplesdir {} \
-                            -plugindir {} \
-                            -translationdir {} \
-                            -sysconfdir {} \
-                            -datadir {} \
-                            -importdir {} \
-                            -headerdir {} \
+                            -prefix {0} \
+                            -libdir {1} \
+                            -docdir {2} \
+                            -examplesdir {3} \
+                            -plugindir {4} \
+                            -translationdir {5} \
+                            -sysconfdir {6} \
+                            -datadir {7} \
+                            -importdir {8} \
+                            -headerdir {9} \
                             -confirm-license \
                             -system-sqlite \
                             -system-zlib \
@@ -51,8 +51,8 @@ def setup():
                                            qt.docdir,
                                            qt.examplesdir,
                                            qt.plugindir,
-                                           qt.sysconfdir,
                                            qt.translationdir,
+                                           qt.sysconfdir,
                                            qt.datadir,
                                            qt.importdir,
                                            qt.includedir))
