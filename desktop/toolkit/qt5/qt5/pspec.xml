@@ -100,8 +100,8 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/lib/qt5/bin/qgltf</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt3D</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt3D</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick</Path>
             <Path fileType="library">/usr/lib/libQt53DAnimation.so</Path>
             <Path fileType="library">/usr/lib/libQt53DAnimation.so.*</Path>
             <Path fileType="library">/usr/lib/libQt53DCore.so</Path>
@@ -1101,7 +1101,7 @@
             <Path fileType="library">/usr/lib/libQt5Charts.so.*</Path>
             <Path fileType="library">/usr/mkspecs/modules/qt_lib_charts.pri</Path>
             <Path fileType="library">/usr/mkspecs/modules/qt_lib_charts_private.pri</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtCharts</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtCharts</Path>
           </Files>
     </Package>
     <Package>
@@ -1151,8 +1151,8 @@
             <Path fileType="data">/usr/lib/pkgconfig/Qt5Bluetooth.pc</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Bluetooth</Path>
             <Path fileType="data">/usr/lib/cmake/Qt5Nfc</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/Qt5Bluetooth</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/Qt5Nfc</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/Qt5Bluetooth</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/Qt5Nfc</Path>
             <Path fileType="data">/usr/mkspecs/modules/qt_lib_bluetooth.pri</Path>
             <Path fileType="data">/usr/mkspecs/modules/qt_lib_bluetooth_private.pri</Path>
             <Path fileType="data">/usr/mkspecs/modules/qt_lib_nfc.pri</Path>
@@ -1173,7 +1173,7 @@
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/usr/lib/qt5/qml/QtDataVisualization/</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtDataVisualization/</Path>
             <Path fileType="library">/usr/lib/libQt5DataVisualization.so</Path>
             <Path fileType="library">/usr/lib/libQt5DataVisualization.so.*</Path>
         </Files>
@@ -1290,38 +1290,38 @@
             <Path fileType="library">/usr/lib/qt5/plugins/qmltooling/libqmldbg_quickprofiler.so</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/qmltooling/libqmldbg_server.so</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/qmltooling/libqmldbg_tcp.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/animation/liblabsanimationplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/animation/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/animation/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/folderlistmodel/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/folderlistmodel/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/qmlmodels/liblabsmodelsplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/qmlmodels/plugins.qmltypes,</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/qmlmodels/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/settings/libqmlsettingsplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/settings/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/settings/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/sharedimage/libsharedimageplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/sharedimage/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/sharedimage/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/wavefrontmesh/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/wavefrontmesh/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQml/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick.2/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Layouts</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/LocalStorage</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Particles.2</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Shapes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Window.2</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtTest/SignalSpy.qml</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtTest/TestCase.qml</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtTest/libqmltestplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtTest/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtTest/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtTest/testlogger.js</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/builtins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/animation/liblabsanimationplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/animation/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/animation/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/folderlistmodel/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/folderlistmodel/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/qmlmodels/liblabsmodelsplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/qmlmodels/plugins.qmltypes,</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/qmlmodels/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/settings/libqmlsettingsplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/settings/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/settings/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/sharedimage/libsharedimageplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/sharedimage/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/sharedimage/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/wavefrontmesh/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/wavefrontmesh/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQml/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick.2/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Layouts</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/LocalStorage</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Particles.2</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Shapes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Window.2</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtTest/SignalSpy.qml</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtTest/TestCase.qml</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtTest/libqmltestplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtTest/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtTest/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtTest/testlogger.js</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/builtins.qmltypes</Path>
         </Files>
     </Package>
 
@@ -1469,7 +1469,7 @@
             <Path fileType="library">/usr/lib/libQt5Gamepad.so</Path>
             <Path fileType="library">/usr/lib/libQt5Gamepad.so.*</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/gamepads/libevdevgamepad.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtGamepad</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtGamepad</Path>
         </Files>
     </Package>
 
@@ -1498,7 +1498,7 @@
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/qt5/qml/QtGraphicalEffects</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtGraphicalEffects</Path>
         </Files>
     </Package>
 
@@ -1617,15 +1617,15 @@
             <Path fileType="library">/usr/lib/libQt5PositioningQuick.so.*</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/geoservices/</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/position/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/location/liblocationlabsplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/location/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/location/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtLocation/libdeclarative_location.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtLocation/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtLocation/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtPositioning/libdeclarative_positioning.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtPositioning/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtPositioning/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/location/liblocationlabsplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/location/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/location/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtLocation/libdeclarative_location.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtLocation/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtLocation/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtPositioning/libdeclarative_positioning.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtPositioning/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtPositioning/qmldir</Path>
         </Files>
     </Package>
 
@@ -1669,7 +1669,7 @@
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
-          <Path fileType="data">/usr/lib/qt5/qml/Qt/labs/lottieqt</Path>
+          <Path fileType="data">/usr/lib/qt5/qmldir/Qt/labs/lottieqt</Path>
           <Path fileType="library">/usr/lib/libQt5Bodymovin.so</Path>
           <Path fileType="library">/usr/lib/libQt5Bodymovin.so.*</Path>
         </Files>
@@ -1705,8 +1705,8 @@
             <Path fileType="library">/usr/lib/libQt5RemoteObjects.so.*</Path>
             <Path fileType="library">/usr/lib/libQt5RepParser.so</Path>
             <Path fileType="library">/usr/lib/libQt5RepParser.so.*</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/QtRemoteObjects/</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/QtQml/RemoteObjects/</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtRemoteObjects/</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtQml/RemoteObjects/</Path>
         </Files>
     </Package>
 
@@ -1750,8 +1750,8 @@
             <Dependency>gst-plugins-bad</Dependency>
         </RuntimeDependencies>
         <Files>
-          <Path fileType="data">/usr/lib/qt5/qml/QtAudioEngine</Path>
-          <Path fileType="data">/usr/lib/qt5/qml/QtMultimedia</Path>
+          <Path fileType="data">/usr/lib/qt5/qmldir/QtAudioEngine</Path>
+          <Path fileType="data">/usr/lib/qt5/qmldir/QtMultimedia</Path>
           <Path fileType="library">/usr/lib/libQt5Multimedia.so</Path>
           <Path fileType="library">/usr/lib/libQt5Multimedia.so.*</Path>
           <Path fileType="library">/usr/lib/libQt5MultimediaQuick.so</Path>
@@ -1833,7 +1833,7 @@
         <Summary>Qt In-App Purchasing API</Summary>
         <Description>Qt In-App Purchasing API</Description>
         <Files>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt5Purchasing/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt5Purchasing/</Path>
             <Path fileType="library">/usr/lib/libQt5Purchasing.so</Path>
             <Path fileType="library">/usr/lib/libQt5Purchasing.so.*</Path>
         </Files>
@@ -1899,7 +1899,7 @@
             <Path fileType="library">/usr/lib/libQt5Quick3DUtils.so</Path>
             <Path fileType="library">/usr/lib/libQt5Quick3DUtils.so.*</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/assetimporters/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick3D</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick3D</Path>
         </Files>
     </Package>
 
@@ -1954,10 +1954,10 @@
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Controls/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Dialogs/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/Extras/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/PrivateWidgets/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Controls/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Dialogs/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/Extras/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/PrivateWidgets/</Path>
         </Files>
     </Package>
 
@@ -1970,24 +1970,24 @@
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/qt5/qml/Controls.2/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Templates.2/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Controls.2/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Templates.2/</Path>
             <Path fileType="library">/usr/lib/libQt5QuickControls2.so</Path>
             <Path fileType="library">/usr/lib/libQt5QuickControls2.so.*</Path>
             <Path fileType="library">/usr/lib/libQt5QuickTemplates2.so</Path>
             <Path fileType="library">/usr/lib/libQt5QuickTemplates2.so.*</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/DayOfWeekRow.qml</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/DayOfWeekRow.qmlc</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/MonthGrid.qml</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/MonthGrid.qmlc</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/WeekNumberColumn.qml</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/WeekNumberColumn.qmlc</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/libqtlabscalendarplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/plugins.qmltypes</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/calendar/qmldir</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/platform/libqtlabsplatformplugin.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/Qt/labs/platform/plugins.qmltypes</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/Qt/labs/platform/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/DayOfWeekRow.qml</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/DayOfWeekRow.qmlc</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/MonthGrid.qml</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/MonthGrid.qmlc</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/WeekNumberColumn.qml</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/WeekNumberColumn.qmlc</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/libqtlabscalendarplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/plugins.qmltypes</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/calendar/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/platform/libqtlabsplatformplugin.so</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/Qt/labs/platform/plugins.qmltypes</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/Qt/labs/platform/qmldir</Path>
         </Files>
     </Package>
     <Package>
@@ -2065,7 +2065,7 @@
           <Path fileType="executable">/usr/lib/qt5/bin/qscxmlc</Path>
           <Path fileType="library">/usr/lib/libQt5Scxml.so</Path>
           <Path fileType="library">/usr/lib/libQt5Scxml.so.*</Path>
-          <Path fileType="library">/usr/lib/qt5/qml/QtScxml/</Path>
+          <Path fileType="library">/usr/lib/qt5/qmldir/QtScxml/</Path>
         </Files>
     </Package>
 
@@ -2103,7 +2103,7 @@
             <Path fileType="library">/usr/lib/qt5/plugins/sensors/libqtsensors_generic.so</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/sensors/libqtsensors_iio-sensor-proxy.so</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/sensors/libqtsensors_linuxsys.so</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/QtSensors</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtSensors</Path>
         </Files>
     </Package>
 
@@ -2289,7 +2289,7 @@
             <Path fileType="data">/usr/lib/libQt5VirtualKeyboard.so</Path>
             <Path fileType="data">/usr/lib/libQt5VirtualKeyboard.so.*</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/virtualkeyboard/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtQuick/VirtualKeyboard/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick/VirtualKeyboard/</Path>
         </Files>
     </Package>
     <Package>
@@ -2332,7 +2332,7 @@
             <Path fileType="library">/usr/lib/qt5/plugins/wayland-decoration-client/</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/wayland-graphics-integration-client/</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/wayland-shell-integration/</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtWayland</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtWayland</Path>
             <Path fileType="library">/usr/lib/libQt5WaylandCompositor.so</Path>
             <Path fileType="library">/usr/lib/libQt5WaylandCompositor.so.*</Path>
             <Path fileType="library">/usr/lib/libQt5WaylandClient.so</Path>
@@ -2373,7 +2373,7 @@
         <Files>
             <Path fileType="library">/usr/lib/libQt5WebChannel.so</Path>
             <Path fileType="library">/usr/lib/libQt5WebChannel.so.*</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtWebChannel/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtWebChannel/</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
@@ -2409,7 +2409,7 @@
             <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.so</Path>
             <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.so.*</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/designer/libqwebengineview.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qml/QtWebEngine/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtWebEngine/</Path>
             <Path fileType="executable">/usr/lib/qt5/libexec/QtWebEngineProcess</Path>
             <Path fileType="executable">/usr/lib/qt5/bin/qwebengine_convert_dict</Path>
             <Path fileType="localedata">/usr/share/qt5/resources/icudtl.dat</Path>
@@ -2487,7 +2487,7 @@
         <Summary>Provides WebSocket communication compliant with RFC 6455</Summary>
         <Description>Provides WebSocket communication compliant with RFC 6455</Description>
         <Files>
-            <Path fileType="library">/usr/lib/qt5/qml/QtWebSockets/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtWebSockets/</Path>
             <Path fileType="library">/usr/lib/libQt5WebSockets.so</Path>
             <Path fileType="library">/usr/lib/libQt5WebSockets.so.*</Path>
         </Files>
@@ -2520,7 +2520,7 @@
         <Summary>Provides a way to display web content in a QML application</Summary>
         <Description>Provides a way to display web content in a QML application</Description>
         <Files>
-            <Path fileType="library">/usr/lib/qt5/qml/QtWebView/</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir/QtWebView/</Path>
             <Path fileType="library">/usr/lib/libQt5WebView.so</Path>
             <Path fileType="library">/usr/lib/libQt5WebView.so.*</Path>
         </Files>
@@ -2600,7 +2600,7 @@
         <Files>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.prl</Path>
             <Path fileType="header">/usr/include/QtXmlPatterns/</Path>
-            <Path fileType="data">/usr/lib/qt5/qml/QtXmlPatterns/</Path>
+            <Path fileType="data">/usr/lib/qt5/qmldir/QtXmlPatterns/</Path>
             <Path fileType="data">/usr/mkspecs/modules/qt_lib_xmlpatterns.pri</Path>
             <Path fileType="data">/usr/mkspecs/modules/qt_lib_xmlpatterns_private.pri</Path>
             <Path fileType="data">/usr/lib/pkgconfig/Qt5XmlPatterns.pc</Path>
