@@ -29,6 +29,7 @@
         <RuntimeDependencies>
             <Dependency>gc</Dependency>
             <Dependency>guile</Dependency>
+            <Dependency>guile2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -41,6 +42,13 @@
     </Package>
 
     <History>
+    	<Update release="5">
+	<Date>2020-04-14</Date>
+	<Version>4.3</Version>
+	<Comment>Fix depends issue</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
 	<Update release="4">
 	<Date>2020-04-14</Date>
 	<Version>4.3</Version>
