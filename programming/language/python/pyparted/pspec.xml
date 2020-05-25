@@ -1,0 +1,43 @@
+
+<!DOCTYPE INARY SYSTEM "www.sulin.com/standard/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pyparted</Name>
+        <Homepage>http://people.redhat.com/dcantrel/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <Summary>Python bindings for parted</Summary>
+        <Description>pyparted is the python module which enables to use GNU Parted package from python. Using python with this module, programmers can create, destroy, resize, check and copy partitions, and the file systems on them.</Description>
+        <Archive sha1sum="647ae24b857045c0786387983261b588c38ace1c" >https://github.com/dcantrell/pyparted/archive/v3.11.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>parted-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pyparted</Name>
+        <RuntimeDependencies>
+            <Dependency>parted</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.11.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
