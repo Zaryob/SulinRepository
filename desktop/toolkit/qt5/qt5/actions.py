@@ -35,10 +35,8 @@ def setup():
                             -plugin-sql-{{psql,mysql,sqlite,odbc}} \
                             -icu \
                             -ccache \
-                            -webengine-icu \
                             -gstreamer 1.0 \
                             -system-libpng \
-                            -system-ffmpeg \
                             -system-libjpeg \
                             -no-rpath \
                             -openssl-linked \
@@ -49,7 +47,7 @@ def setup():
                             -no-separate-debug-info \
                             -opengl \
                             -glib  \
-                            -skip qt-webengine".format(qt.prefix,
+                            -skip qtwebengine".format(qt.prefix,
                                            qt.libdir,
                                            qt.docdir,
                                            qt.examplesdir,

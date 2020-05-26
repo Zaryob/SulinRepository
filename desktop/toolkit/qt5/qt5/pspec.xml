@@ -1442,18 +1442,12 @@
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="executable">/usr/bin/qdistancefieldgenerator</Path>
             <Path fileType="executable">/usr/bin/designer</Path>
             <Path fileType="executable">/usr/bin/qtdiag</Path>
-            <Path fileType="executable">/usr/bin/qdistancefieldgenerator</Path>
-            <Path fileType="executable">/usr/bin/qdistancefieldgenerator</Path>
-            <Path fileType="executable">/usr/bin/qtpaths</Path>
-            <Path fileType="executable">/usr/bin/pixeltool</Path>
-            <Path fileType="executable">/usr/bin/designer-qt5</Path>
-            <Path fileType="executable">/usr/bin/qtdiag-qt5</Path>
             <Path fileType="executable">/usr/bin/qtpaths*</Path>
-            <Path fileType="executable">/usr/bin/pixeltool-qt5</Path>
+            <Path fileType="executable">/usr/bin/pixeltool</Path>
             <Path fileType="executable">/usr/bin/qtplugininfo</Path>
-            <Path fileType="executable">/usr/bin/qtplugininfo-qt5</Path>
             <Path fileType="library">/usr/lib/cmake/Qt5Designer</Path>
             <Path fileType="library">/usr/lib/cmake/Qt5UiTools</Path>
             <Path fileType="library">/usr/lib/cmake/Qt5UiPlugin</Path>
@@ -1631,8 +1625,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/lprodump</Path>
-            <Path fileType="executable">/usr/bin/lprodump</Path>
-            <Path fileType="executable">/usr/bin/qtattributionsscanner</Path>
             <Path fileType="executable">/usr/bin/qtattributionsscanner</Path>
             <Path fileType="executable">/usr/bin/linguist</Path>
             <Path fileType="executable">/usr/bin/lconvert</Path>
@@ -1640,14 +1632,6 @@
             <Path fileType="executable">/usr/bin/lrelease-pro</Path>
             <Path fileType="executable">/usr/bin/lupdate</Path>
             <Path fileType="executable">/usr/bin/lupdate-pro</Path>
-            <Path fileType="executable">/usr/bin/lrelease</Path>
-            <Path fileType="executable">/usr/bin/lrelease-pro</Path>
-            <Path fileType="executable">/usr/bin/linguist</Path>
-            <Path fileType="executable">/usr/bin/linguist-pro</Path>
-            <Path fileType="executable">/usr/bin/lconvert</Path>
-            <Path fileType="executable">/usr/bin/lupdate</Path>
-            <Path fileType="executable">/usr/bin/lupdate-pro</Path>
-            <Path fileType="library">/usr/lib/cmake/Qt5LinguistTools</Path>
             <Path fileType="data">/usr/share/applications/linguist5.desktop</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/128x128/apps/linguist.png</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/16x16/apps/linguist.png</Path>
@@ -1877,6 +1861,7 @@
             <Path fileType="data">/usr/lib/libQt5MultimediaQuick.prl</Path>
             <Path fileType="data">/usr/lib/libQt5MultimediaWidgets.prl</Path>
             <Path fileType="header">/usr/include/QtMultimedia</Path>
+            <Path fileType="header">/usr/include/QtMultimediaGstTools</Path>
             <Path fileType="header">/usr/include/QtMultimediaQuick</Path>
             <Path fileType="header">/usr/include/QtMultimediaWidgets</Path>
             <Path fileType="header">/usr/lib/cmake/Qt5Multimedia</Path>
@@ -1977,8 +1962,6 @@
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin/qdbusviewer</Path>
-            <Path fileType="executable">/usr/bin/qdbus</Path>
             <Path fileType="executable">/usr/bin/qdbusviewer</Path>
             <Path fileType="executable">/usr/bin/qdbus</Path>
             <Path fileType="data">/usr/share/applications/qdbusviewer5.desktop</Path>
@@ -2770,7 +2753,6 @@
         <Files>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.so</Path>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.so.*</Path>
-            <Path fileType="executable">/usr/bin/xmlpatternsvalidator</Path>
             <Path fileType="executable">/usr/bin/xmlpatternsvalidator</Path>
             <Path fileType="executable">/usr/bin/xmlpatterns-qt5</Path>
             <Path fileType="executable">/usr/bin/xmlpatterns</Path>
