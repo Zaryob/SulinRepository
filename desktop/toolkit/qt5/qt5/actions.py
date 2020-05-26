@@ -27,6 +27,8 @@ def setup():
                             -datadir {7} \
                             -importdir {8} \
                             -headerdir {9} \
+                            -qmldir {10} \
+                            -bindir {11} \
                             -confirm-license \
                             -system-sqlite \
                             -system-zlib \
@@ -46,7 +48,8 @@ def setup():
                             -reduce-relocations \
                             -no-separate-debug-info \
                             -opengl \
-                            -glib ".format(qt.prefix,
+                            -glib  \
+                            -skip qt-webengine".format(qt.prefix,
                                            qt.libdir,
                                            qt.docdir,
                                            qt.examplesdir,
@@ -55,7 +58,9 @@ def setup():
                                            qt.sysconfdir,
                                            qt.datadir,
                                            qt.importdir,
-                                           qt.includedir))
+                                           qt.includedir,
+                                           qt.qmldir,
+                                           qt.bindir))
 def build():
     shelltools.cd("build")
     autotools.make()
