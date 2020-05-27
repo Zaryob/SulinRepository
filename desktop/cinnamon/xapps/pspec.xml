@@ -1,0 +1,91 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xapps</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>The xapps package contains an internal library (libxapps) used to implement some portions of the CINNAMON desktop</Summary>
+        <Description>The xapps package contains an internal library (libxapps) used to implement some portions of the CINNAMON desktop, and also some data files and other shared components of the CINNAMON user environment.</Description>
+        <Archive sha1sum="ac26e0f5a187cd6c62b2b10bb47cc32ab85b724b" >https://github.com/linuxmint/xapps/archive/1.8.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>libdbusmenu-devel</Dependency>
+            <Dependency>xkeyboard-config</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xapps</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>libdbusmenu-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="binary">/usr/bin</Path>
+            <Path fileType="binary">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="data">/etc/</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xapps-devel</Name>
+        <Summary>xapps için geliştirm dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xapps</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.8.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

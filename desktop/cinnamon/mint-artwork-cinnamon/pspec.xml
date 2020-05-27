@@ -1,0 +1,36 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>mint-artwork-cinnamon</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Cinnamon desktop sounds</Summary>
+        <Description>Cinnamon desktop sounds</Description>
+        <Archive sha1sum="93aedcb32fa359d441e1bb841668df70af4031da" >https://ftp.fau.de/mint/packages/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.7.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>mint-artwork-cinnamon</Name>
+        <Files>
+            <Path fileType="data">/usr/</Path>
+            <Path fileType="data">/etc/</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,34 @@
+
+<INARY>
+    <Source>
+        <Name>cinnamon-themes</Name>
+        <Homepage>https://github.com/linuxmint/cinnamon-themes</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <IsA>app:gui</IsA>
+        <Summary>Cinnamon themes
+ A collection of the best themes available for Cinnamon.</Summary>
+        <Description>Cinnamon themes A collection of the best themes available for Cinnamon.</Description>
+        <Archive sha1sum="d1f9cf549b90eb6b75a68ad255cac1bf61bd36a2" >https://github.com/linuxmint/mint-themes/archive/1.8.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>cinnamon-themes</Name>
+        <Summary>Cinnamon themes
+ A collection of the best themes available for Cinnamon.</Summary>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

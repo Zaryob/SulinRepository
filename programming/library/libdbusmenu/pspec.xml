@@ -1,0 +1,97 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libdbusmenu</Name>
+        <Homepage>https://launchpad.net/dbusmenu</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Library for applications to pass a menu scructure accross DBus</Summary>
+        <Description>libdbusmenu is a small little library that was created by pulling out some common code out of indicator-applet. It passes a menu structure across DBus so that a program can create a menu simply without worrying about how it is displayed on the other side of the bus.</Description>
+        <Archive sha1sum="f88fc666609ed486a968fd6c8b739dff07d50bdd" >https://launchpad.net/libdbusmenu/16.04/16.04.0/+download/libdbusmenu-16.04.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libdbusmenu-glib</Name>
+        <Summary>GLIB bindings for libdbusmenu</Summary>
+        <RuntimeDependencies>
+            <Dependency>libdbusmenu-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libdbusmenu-glib*</Path>
+            <Path fileType="library">/usr/lib/libdbusmenu-json*</Path>
+            <Path fileType="data">/usr/share/libdbusmenu</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-common</Name>
+        <Summary>Common files for libdbusmenu libraries</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-gtk</Name>
+        <Summary>GTK libraries for libdbusmenu</Summary>
+        <RuntimeDependencies>
+            <Dependency>libdbusmenu-glib</Dependency>
+            <Dependency>libdbusmenu-common</Dependency>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/libdbusmenu-gtk*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-tools</Name>
+        <Summary>Some examples for testing libdbusmenu</Summary>
+        <RuntimeDependencies>
+            <Dependency>libdbusmenu-glib</Dependency>
+            <Dependency>libdbusmenu-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc/libdbusmenu/*dbusmenu-bench*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libdbusmenu-devel</Name>
+        <Summary>Development files for libdbusmenu</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libdbusmenu-glib</Dependency>
+            <Dependency release="current">libdbusmenu-gtk</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>16.04.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,54 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-pam</Name>
+        <Homepage>http://atlee.ca/software/pam/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>Pure Python interface to the Pluggable Authentication Modules system on Linux</Summary>
+        <Description>Module that provides an authenticate function that allows the caller to authenticate a given username / password against the PAM system on Linux.</Description>
+        <Archive sha1sum="a3c3aae71bc8def7e276123e2c312b94c4621e5b" type="targz">https://github.com/FirefighterBlu3/python-pam/archive/v1.8.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>python-pam</Name>
+        <RuntimeDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-pam</Name>
+        <RuntimeDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.8.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

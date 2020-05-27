@@ -1,0 +1,93 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cinnamon-screensaver</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Cinnamon Screensaver</Summary>
+        <Description>cinnamon-screensaver is a screen saver and locker.</Description>
+        <Archive sha1sum="f37fcba46559f89f12968fb54f75dd93b10d66f2" type="targz">https://github.com/linuxmint/cinnamon-screensaver/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>cinnamon-desktop-devel</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>xorg-proto</Dependency>
+            <Dependency>libXxf86misc-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-screensaver</Name>
+        <RuntimeDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>cinnamon-desktop</Dependency>            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/cinnamon-screensaver</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib/cinnamon-screensaver</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/pam.d/cinnamon-screensaver" permission="0644" owner="root">cinnamon-screensaver.pam</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-27</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

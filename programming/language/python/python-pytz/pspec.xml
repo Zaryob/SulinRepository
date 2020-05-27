@@ -1,0 +1,43 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pytz</Name>
+        <Homepage>http://pytz.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>ZPL</License>
+        <IsA>library</IsA>
+        <Summary>World Timezone Definitions for Python</Summary>
+        <Description>python-pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python. It also solves the issue of ambiguous times at the end of daylight savings, which you can read more about in the Python Library Reference (datetime.tzinfo).Almost all (over 540) of the Olson timezones are supported.</Description>
+        <Archive sha1sum="60f6db35e92688c4701c16bd3d2b9cbfac1fd604">https://files.pythonhosted.org/packages/f4/f6/94fee50f4d54f58637d4b9987a1b862aeb6cd969e73623e02c5c00755577/pytz-2020.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>pytz</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>pytz3</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2020.01</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

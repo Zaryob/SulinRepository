@@ -1,0 +1,147 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cinnamon</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Gnome Shell çatallaması gnome2 görünümlü Cinnamon masaüstü</Summary>
+        <Description>Cinnamon, Gnome Shell çatallaması gnome2 görünümlü Cinnamon masaüstü.</Description>
+        <Archive sha1sum="29289fe71ba9e0f123ea9abff03f81aebc4eafd4" >https://github.com/linuxmint/cinnamon/archive/4.6.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gvfs</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cjs-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gnome-bluetooth-devel</Dependency>
+            <Dependency>cinnamon-desktop-devel</Dependency>
+            <Dependency>caribou-devel</Dependency>
+            <Dependency>libcroco-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>cinnamon-menus-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>NetworkManager-devel</Dependency>
+            <Dependency>network-manager-applet-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>muffin-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cogl</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>wayland-client</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>muffin</Dependency>
+            <Dependency>clutter</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libcroco</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>at-spi2-atk</Dependency>
+            <Dependency>cjs</Dependency>
+            <Dependency>cinnamon-menus</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>cinnamon-desktop</Dependency>
+            <Dependency>cinnamon-session</Dependency>
+            <Dependency>cinnamon-settings-daemon</Dependency>
+            <Dependency>caribou</Dependency>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency>network-manager-applet</Dependency>
+            <Dependency>gnome-bluetooth</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>dbus-python</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>python-cairo</Dependency>
+            <Dependency>pygobject</Dependency>
+            <Dependency>python-pam</Dependency>
+            <Dependency>python-pytsz</Dependency>
+            <Dependency>timezonemap</Dependency>
+            <Dependency>python-pexpect</Dependency>
+            <Dependency>python-ptyprocess</Dependency>
+            <Dependency>pyinotify</Dependency>
+            <Dependency>python-setproctitle</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/xdg/menus</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/cinnamon/*.typelib</Path>
+            <Path fileType="library">/usr/lib/cinnamon/*.so</Path>
+            <Path fileType="library">/usr/lib/cinnamon/cinnamon</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/cinnamon</Path>
+            <Path fileType="data">/usr/share/cinnamon-session</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/desktop-directories</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+            <Path fileType="data">/usr/share/xsessions</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

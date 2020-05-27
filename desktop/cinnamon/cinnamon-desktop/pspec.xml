@@ -1,0 +1,91 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cinnamon-desktop</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>The cinnamon-desktop package contains an internal library (libcinnamondesktop) used to implement some portions of the CINNAMON desktop</Summary>
+        <Description>The cinnamon-desktop package contains an internal library (libcinnamondesktop) used to implement some portions of the CINNAMON desktop, and also some data files and other shared components of the CINNAMON user environment.</Description>
+        <Archive sha1sum="cbd13c4f3faadf68ebd83bd63f7f1072db3cf621" >https://github.com/linuxmint/cinnamon-desktop/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>xkeyboard-config</Dependency>
+            <Dependency>at-spi2-atk-devel</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-desktop</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="binary">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0</Path>
+            <Path fileType="library">/usr/lib/libcinnamon-desktop*</Path>
+            <Path fileType="library">/usr/lib/cinnamon-rr-debug</Path>
+            <Path fileType="library">/usr/lib/libcvc*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/libcinnamon-desktop</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cinnamon-desktop-devel</Name>
+        <Summary>cinnamon-desktop için geliştirm dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cinnamon-desktop</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
