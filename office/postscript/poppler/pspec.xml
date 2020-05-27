@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>PDF rendering library</Summary>
         <Description>poppler is a PDF rendering library based on xpdf.</Description>
-        <Archive sha1sum="0adea752e5c9573eb4018b979cc5a9d7f0c2fec8" type="tarxz">http://poppler.freedesktop.org/poppler-0.80.0.tar.xz</Archive>
+        <Archive sha1sum="bb7fa227bfff5954e532e373a3df03b84ec1cf6d" type="tarxz">http://poppler.freedesktop.org/poppler-0.88.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>lcms2-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
@@ -204,6 +204,13 @@
     </Package-->
 
     <History>
+        <Update release="3">
+            <Date>2020-05-27</Date>
+            <Version>0.88.0</Version>
+            <Comment>=Upgraded version 0.88.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-23</Date>
             <Version>0.80.0</Version>
