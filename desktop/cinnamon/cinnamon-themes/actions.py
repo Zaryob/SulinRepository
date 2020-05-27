@@ -7,6 +7,9 @@
 from inary.actionsapi import get
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+from inary.actionsapi import autotools
 
+def build():
+    autotools.make()
 def install():
-    shelltools.system("cp -prfv {}/mint-themes-1.8.0/files/ {}/".format(get.workDIR(),get.installDIR()))
+    shelltools.system("cp -prfv {}/mint-themes/usr/ {}/".format(get.workDIR(),get.installDIR()))

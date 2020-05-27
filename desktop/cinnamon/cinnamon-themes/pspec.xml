@@ -12,7 +12,10 @@
         <Summary>Cinnamon themes
  A collection of the best themes available for Cinnamon.</Summary>
         <Description>Cinnamon themes A collection of the best themes available for Cinnamon.</Description>
-        <Archive sha1sum="d1f9cf549b90eb6b75a68ad255cac1bf61bd36a2" >https://github.com/linuxmint/mint-themes/archive/1.8.0.tar.gz</Archive>
+        <Archive sha1sum="fd1c9a9862682709f2d1e063210c489623dd04a8" >http://packages.linuxmint.com/pool/main/m/mint-themes/mint-themes_1.8.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>sassc</Dependency>
+        </BuildDependencies>
     </Source>
     <Package>
         <Name>cinnamon-themes</Name>
@@ -25,7 +28,7 @@
     <History>
         <Update release="1">
             <Date>2019-09-18</Date>
-            <Version>1.8</Version>
+            <Version>1.8.4</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

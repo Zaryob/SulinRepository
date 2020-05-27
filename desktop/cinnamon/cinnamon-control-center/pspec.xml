@@ -1,0 +1,63 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>cinnamon-control-center</Name>
+        <Homepage>http://cinnamon.linuxmint.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>The Control Center for Cinnamon</Summary>
+        <Description>The Control Center for Cinnamon</Description>
+        <Archive sha1sum="eb89b9768369adf262b1a7d4bbba337a1c46e89a" >https://github.com/linuxmint/cinnamon-control-center/archive/4.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-online-accounts-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cinnamon-control-center</Name>
+        <RuntimeDependencies>
+            <Dependency>gnome-online-accounts</Dependency>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="binary">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>cinnamon-control-center-devel</Name>
+        <Summary>cinnamon-desktop için geliştirm dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">cinnamon-control-center</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>4.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

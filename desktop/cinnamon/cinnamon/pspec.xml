@@ -106,10 +106,11 @@
             <Dependency>python-cairo</Dependency>
             <Dependency>pygobject</Dependency>
             <Dependency>python-pam</Dependency>
-            <Dependency>python-pytsz</Dependency>
+            <Dependency>pytz</Dependency>
             <Dependency>timezonemap</Dependency>
             <Dependency>python-pexpect</Dependency>
             <Dependency>python-ptyprocess</Dependency>
+            <Dependency>python-distro</Dependency>
             <Dependency>pyinotify</Dependency>
             <Dependency>python-setproctitle</Dependency>
         </RuntimeDependencies>

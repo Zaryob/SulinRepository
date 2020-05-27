@@ -11,13 +11,9 @@ from inary.actionsapi import get
 
 def setup():
     shelltools.system("NOCONFIGURE=1 ./autogen.sh")
-    autotools.configure("--localstatedir=/var \
-                         --libexecdir=/usr/lib/cinnamon \
-                         --prefix=/usr \
-                         --sysconfdir=/etc \
-                         --disable-schemas-install \
-                         --enable-compile-warnings=yes \
-                         --enable-gtk-doc")
+    autotools.autoreconf("-fi")
+    autotools.configure("--prefix=/usr \
+                         --libexecdir=/usr/lib")
     
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
@@ -26,4 +22,4 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    
+

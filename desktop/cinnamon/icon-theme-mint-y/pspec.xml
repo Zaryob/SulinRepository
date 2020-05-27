@@ -1,0 +1,36 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>icon-theme-mint-y</Name>
+        <Homepage>http://packages.linuxmint.com/pool/main/m/mint-x-icons</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Mint-X Icon themes. A mint/metal theme based on mintified versions of Clearlooks Revamp, Elementary and Faenza.</Summary>
+        <Description>Mint-X Icon themes. A mint/metal theme based on mintified versions of Clearlooks Revamp, Elementary and Faenza.</Description>
+        <Archive sha1sum="110f6996fc9552a6ac3a7970473ef4bfb7bab9c7">http://packages.linuxmint.com/pool/main/m/mint-y-icons/mint-y-icons_1.4.1.tar.xz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>icon-theme-mint-y</Name>
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2020-05-27</Date>
+            <Version>1.5.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
