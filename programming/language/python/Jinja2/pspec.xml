@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>Jinja2</Name>
+        <Homepage>http://jinja.pocoo.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>A small but fast and easy to use stand-alone template engine written in pure python</Summary>
+        <Description>Jinja2 is the rewritten version of Jinja, sandboxed template engine written in pure Python. It provides a Django like non-XML syntax and compiles templates into executable python code. It's basically a combination of Django templates and python code.</Description>
+        <Archive sha1sum="a3129c140d34ae565a556e48db40772df3536b23" type="targz">https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-MarkupSafe</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-MarkupSafe</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>python-Jinja2</Name>
+        <Summary>A small but fast and easy to use stand-alone template engine written in pure python2</Summary>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-Jinja2</Name>
+        <Summary>A small but fast and easy to use stand-alone template engine written in pure python2</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>Jinja2-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/Jinja2</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-27</Date>
+            <Version>2.11.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

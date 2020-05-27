@@ -31,10 +31,6 @@
     <Package>
         <Name>python3-colorama</Name>
         <Summary>Cross-platform colored terminal text.</Summary>
-        <BuildDependencies>
-        </BuildDependencies>
-        <RuntimeDependencies>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
         </Files>
