@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>LXQt power management daemon.</Summary>
         <Description>Daemon use for power management and auto-suspend.</Description>
-        <Archive sha1sum="02509b20b8f166f742966b3aee9271c23c63dfe4" type="tarxz">https://downloads.lxqt.org/downloads/lxqt-powermanagement/0.14.1/lxqt-powermanagement-0.14.1.tar.xz</Archive>
+        <Archive sha1sum="6f9f239923a7cc32d8c6d9a8e9f5cecd57b6eec8" type="tarxz">https://github.com/lxqt/lxqt-powermanagement/releases/download/0.15.0/lxqt-powermanagement-0.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -39,6 +39,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-28</Date>
             <Version>0.14.1</Version>

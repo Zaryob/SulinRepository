@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>QT5-based multitab terminal emulator.</Summary>
         <Description>QT5-based multitab terminal emulator.</Description>
-        <Archive sha1sum="5ca08bc1267c65a813926d330036811e6965505b" type="tarxz">https://downloads.lxqt.org/downloads/qterminal/0.14.1/qterminal-0.14.1.tar.xz</Archive>
+        <Archive sha1sum="2decd6952da91b9b9e930af2b9045e79d9a27fe5" type="tarxz">https://github.com/lxqt/qterminal/releases/download/0.15.0/qterminal-0.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -44,6 +44,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-28</Date>
             <Version>0.14.1</Version>

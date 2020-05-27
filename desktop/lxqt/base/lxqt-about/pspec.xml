@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>LXQt about dialog.</Summary>
         <Description>About dialog of LXDE-Qt</Description>
-        <Archive sha1sum="29ce53eea2057927cd370df9be781eb50f61b444" type="tarxz">https://downloads.lxqt.org/downloads/lxqt-about/0.14.1/lxqt-about-0.14.1.tar.xz</Archive>
+        <Archive sha1sum="20ab10f1b1c5904bb2d27cbce01e4b808dd6c979" type="tarxz">https://github.com/lxqt/lxqt-about/releases/download/0.15.0/lxqt-about-0.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>liblxqt-devel</Dependency>
         </BuildDependencies>
@@ -30,6 +30,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-28</Date>
             <Version>0.14.1</Version>

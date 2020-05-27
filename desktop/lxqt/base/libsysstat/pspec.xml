@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="50c186183db34091303885695df776b8a6878bd8" type="tarxz">https://downloads.lxqt.org/downloads/libsysstat/0.4.2/libsysstat-0.4.2.tar.xz</Archive>
+        <Archive sha1sum="7f1c03aed5c5dff2333bf9fab1c124c865530f21" type="tarxz">https://github.com/lxqt/libsysstat/releases/download/0.4.3/libsysstat-0.4.3.tar.xz</Archive>
     </Source>
     <Package>
         <Name>libsysstat</Name>
@@ -41,6 +41,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.4.3</Version>
+            <Comment>Version bump to 0.4.3</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-28</Date>
             <Version>0.4.2</Version>
