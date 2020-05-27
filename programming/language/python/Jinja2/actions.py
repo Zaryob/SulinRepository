@@ -14,4 +14,4 @@ def build():
 def install():
     pythonmodules.install()
     pythonmodules.install(pyVer = "3")
-    inarytools.dodoc("CHANGELOG*", "LICENSE*", "MANIFEST*", "PKG-INFO", "README*")
+    inarytools.dodoc("LICENSE*", "MANIFEST*", "PKG-INFO", "README*")

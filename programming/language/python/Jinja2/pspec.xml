@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>A small but fast and easy to use stand-alone template engine written in pure python</Summary>
         <Description>Jinja2 is the rewritten version of Jinja, sandboxed template engine written in pure Python. It provides a Django like non-XML syntax and compiles templates into executable python code. It's basically a combination of Django templates and python code.</Description>
-        <Archive sha1sum="a3129c140d34ae565a556e48db40772df3536b23" type="targz">https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz</Archive>
+        <Archive sha1sum="1017138fd4cb627204d3109b75c107c3d6f3f7fb" type="targz">https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python-MarkupSafe</Dependency>
