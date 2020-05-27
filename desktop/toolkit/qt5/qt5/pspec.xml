@@ -20,7 +20,7 @@
         <License>LGPL3</License>
         <License>FDL</License>
         <License>custom</License>
-        <Archive sha1sum="109dd41023c5df59b1aaf6d04211b473dea970ea" type="tarxz">https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz</Archive>
+        <Archive sha1sum="518083ff315c6fc20dd0235a0ed2036baa0ef898" type="tarxz">https://download.qt.io/official_releases/qt/5.15/5.15.0/single/qt-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
             <Dependency>ccache</Dependency>
@@ -2780,6 +2780,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2020-05-27</Date>
+            <Version>5.15.0</Version>
+            <Comment>qt5.15.0 has been compiled.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
       <Update release="6">
           <Date>2020-05-10</Date>
           <Version>5.14.2</Version>
