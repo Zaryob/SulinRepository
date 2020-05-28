@@ -11,7 +11,7 @@
         <Summary>Provides support for web applications using the Chromium browser project</Summary>
         <Description>Provides support for web applications using the Chromium browser project</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="f4f33db2b62529399156b95d2737b103ebd5bba3" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtwebengine-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="45ee6c4e16d9da41ec627d8eb221fbd21ff8b951" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtwebengine-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
@@ -62,9 +62,12 @@
         <Name>qt5-webengine</Name>
         <Files>
             <Path fileType="executable">/usr/lib/qt5/bin/</Path>
-            <Path fileType="executable">/usr/bin</Path>            
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="library">/usr/lib/libQt5WebEngine*</Path>
+            <Path fileType="library">/usr/lib/libQt5Pdf*</Path>
             <Path fileType="library">/usr/lib/libQt5WebEngineWidgets*</Path>
+            <Path fileType="library">/usr/lib/libQt5PdfWidgets*</Path>
             <Path fileType="library">/usr/lib/qt5</Path>
             <Path fileType="data">/usr/share/qt5</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -119,6 +122,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-05-27</Date>
+            <Version>5.15.0</Version>
+            <Comment>Webengine belası 5.15.0 a yükseltildi.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2020-05-22</Date>
             <Version>5.14.2</Version>
