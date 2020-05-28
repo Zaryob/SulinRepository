@@ -1,0 +1,54 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxqt-runner</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>app</IsA>
+        <Summary>The LXQt application launcher</Summary>
+        <Description>Tool used to launch programs quickly by typing their names</Description>
+        <Archive sha1sum="f8a4613f4250ccac2e891b1f927c809330afaa23" type="tarxz">https://github.com/lxqt/lxqt-runner/releases/download/0.15.0/lxqt-runner-0.15.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>muparser-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>lxqt-globalkeys-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>lxqt-runner</Name>
+        <RuntimeDependencies>
+            <Dependency>libqtxdg</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libXext</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="data">/etc/autostart/lxqt-runner.desktop</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

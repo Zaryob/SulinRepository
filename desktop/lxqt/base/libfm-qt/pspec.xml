@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libfm-qt</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>library</IsA>
+        <Summary>Core library of PCManFM file manager</Summary>
+        <Description>libfm is a Core library of PCManFM file manager</Description>
+        <Archive sha1sum="8c957bb06b77dc43f40bcb610fb0108a4d089876" type="tarxz">https://github.com/lxqt/libfm-qt/releases/download/0.15.1/libfm-qt-0.15.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libfm-devel</Dependency>
+            <Dependency>lxde-menu-cache-devel</Dependency>
+      	    <Dependency>libexif-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libfm-qt</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="sysdir">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libfm</Dependency>
+            <Dependency>lxde-menu-cache</Dependency>
+            <Dependency>libexif</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <Package>
+        <Name>libfm-qt-devel</Name>
+        <Summary>Development headers for libfm-qt</Summary>
+        <RuntimeDependencies>
+            <Dependency>libfm-devel</Dependency>
+            <Dependency>libfm-qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.15.1</Version>
+            <Comment>Updated to 0.15.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
