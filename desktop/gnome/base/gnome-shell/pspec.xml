@@ -30,7 +30,13 @@
             <Dependency>pipewire-devel</Dependency>
             <Dependency>mozjs68</Dependency>
             <Dependency>libgtop-devel</Dependency>
+            <Dependency>gcr-devel</Dependency>
+            <Dependency>graphene-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>ibus-devel</Dependency>
+            <Dependency>gnome-autoar-devel</Dependency>
             <Dependency>upower-devel</Dependency>
+            <Dependency>asciidoc</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -66,6 +72,8 @@
             <Dependency>libical</Dependency>
             <Dependency>evolution-data-server</Dependency>
             <Dependency>mesa</Dependency>
+            <Dependency>ibus</Dependency>
+            <Dependency>hyphen</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -94,13 +102,21 @@
     </Package>
 
     <History>
-        <Update release="2">
+        <Update release="3">
             <Date>2019-09-18</Date>
-            <Version>3.0.2</Version>
+            <Version>3.36.1</Version>
             <Comment>eksik bağımlılık sorunu çözüldü</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.36.1</Version>
+            <Comment>eksik bağımlılık sorunu çözüldü</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.0.2</Version>

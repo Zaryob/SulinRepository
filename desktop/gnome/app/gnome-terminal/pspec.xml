@@ -27,6 +27,8 @@
             <Dependency>dconf-devel</Dependency>
             <Dependency>gnome-common</Dependency>
             <Dependency>libpcre2-devel</Dependency>
+            <Dependency>nautilus-devel</Dependency>
+            <Dependency>yelp-tool</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -68,6 +68,8 @@
         <RuntimeDependencies>
             <Dependency release="current">gnome-desktop</Dependency>
             <Dependency>gtk3-devel</Dependency>
+            <Dependency>xkeyboard-config</Dependency>
+            <Dependency>iso-codes</Dependency>
             <Dependency>gsettings-desktop-schemas-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
         </RuntimeDependencies>
