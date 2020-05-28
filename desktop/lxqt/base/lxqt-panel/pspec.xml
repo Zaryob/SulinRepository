@@ -39,7 +39,6 @@
         <RuntimeDependencies>
             <Dependency>liblxqt</Dependency>
             <Dependency>libqtxdg</Dependency>
-            <Dependency>liblxqt-mount</Dependency>
             <Dependency>lxqt-globalkeys</Dependency>
             <Dependency>libsysstat</Dependency>
             <Dependency>alsa-lib</Dependency>
