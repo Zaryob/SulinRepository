@@ -26,7 +26,6 @@
         <Name>lxqt-runner</Name>
         <RuntimeDependencies>
             <Dependency>libqtxdg</Dependency>
-            <Dependency>lxqt-menu-cache</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>libXext</Dependency>
         </RuntimeDependencies>

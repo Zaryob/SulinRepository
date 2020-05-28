@@ -25,7 +25,7 @@
     <Package>
         <Name>compton-conf</Name>
         <RuntimeDependencies>
-            <Dependency>qt</Dependency>
+            <Dependency>qt5-base</Dependency>
 	          <Dependency>libconfig</Dependency>
         </RuntimeDependencies>
         <Files>
