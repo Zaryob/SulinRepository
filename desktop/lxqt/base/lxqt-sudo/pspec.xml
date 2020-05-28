@@ -1,0 +1,42 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxqt-sudo</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>app</IsA>
+        <Summary>LXQt su window</Summary>
+        <Description>LXQt su window</Description>
+        <Archive sha1sum="47b88b0ed5664241c466677efcbaa460c69d1273" type="tarxz">https://github.com/lxqt/lxqt-sudo/releases/download/0.15.0/lxqt-sudo-0.15.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>lxqt-sudo</Name>
+        <RuntimeDependencies>
+            <Dependency>liblxqt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
