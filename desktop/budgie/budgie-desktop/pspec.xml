@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>budgie-desktop</Name>
+        <Homepage>http://evolve-os.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Budgie desktop environment</Summary>
+        <Description>Budgie desktop environment is gnome based desktop environment that developed by Solus Linux.</Description>
+	<Archive sha1sum="d5568f7cfb7f8c524929df45a0547d8accdbd874" type="binary">https://raw.githubusercontent.com/solus-project/budgie-desktop/master/README.md</Archive>
+	<BuildDependencies>
+	     <Dependency>git</Dependency>
+	     <Dependency>vala-devel</Dependency>
+	     <Dependency>gnome-desktop-devel</Dependency>
+	     <Dependency>gnome-settings-daemon-devel</Dependency>
+	     <Dependency>xorg-input-libinput-devel</Dependency>
+	     <Dependency>libinput</Dependency>
+	     <Dependency>libpeas-devel</Dependency>
+	     <Dependency>libnotify-devel</Dependency>
+	     <Dependency>gtk3-devel</Dependency>
+	     <Dependency>geoclue-devel</Dependency>
+	     <Dependency>gtk-doc</Dependency>
+	     <Dependency>ibus-gtk3</Dependency>
+	     <Dependency>sassc</Dependency>
+	     <Dependency>polkit-devel</Dependency>
+	     <Dependency>mutter-devel</Dependency>
+	     <Dependency>ibus-devel</Dependency>
+	     <Dependency>pipewire-devel</Dependency>
+	     <Dependency>upower-devel</Dependency>
+	     <Dependency>gnome-menus-devel</Dependency>
+	     <Dependency>gnome-bluetooth-devel</Dependency>
+	     <Dependency>graphene-devel</Dependency>
+	     <Dependency>alsa-lib-devel</Dependency>
+	     <Dependency>accountsservice-devel</Dependency>
+	     <Dependency>libwnck3-devel</Dependency>
+             <Dependency>pulseaudio-libs-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+        
+	<Package>
+        <Name>buggie-desktop</Name>
+        <RuntimeDependencies>
+	     <Dependency>gnome-desktop</Dependency>
+	    <Dependency>vala</Dependency>
+	     <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>libpeas</Dependency>
+	     <Dependency>xorg-input-libinput</Dependency>
+	     <Dependency>libinput</Dependency>
+	     <Dependency>libsass</Dependency>
+	     <Dependency>libnotify</Dependency>
+	     <Dependency>geoclue</Dependency>
+	    <Dependency>gtk3</Dependency>
+	     <Dependency>gnome-menus</Dependency>
+	     <Dependency>polkit</Dependency>
+	     <Dependency>mutter</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>     
+	     <Dependency>gnome-bluetooth</Dependency>
+	     <Dependency>pipewire</Dependency>
+	     <Dependency>ibus-gtk3</Dependency>
+	     <Dependency>libwnck3</Dependency>
+	     <Dependency>upower</Dependency>
+	     <Dependency>ibus</Dependency>
+	     <Dependency>alsa-lib</Dependency>
+	     <Dependency>alsa</Dependency>
+	     <Dependency>accountsservice</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/budgie-desktop/</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/etc/xdg</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/budgie-desktop</Path>
+            <Path fileType="library">/usr/lib/budgie-desktop/Gvc-1.0.typelib</Path>
+            <Path fileType="library">/usr/lib/budgie-desktop/lib*.so</Path>
+            <Path fileType="library">/usr/lib/budgie-desktop/*.plugin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/xsessions/budgie-desktop.desktop</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome-session</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>budgie-desktop-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/lib*.so</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/vala/vapi</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">budgie-desktop</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-28</Date>
+            <Version>10.5.1p</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
