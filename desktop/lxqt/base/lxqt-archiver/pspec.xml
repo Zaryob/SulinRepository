@@ -1,0 +1,47 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>lxqt-archiver</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>desktop.lxqt.base</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>LXQt's ligtweigth archive tool.</Summary>
+        <Description>LXQT's lightweigth archive tool.</Description>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>pcmanfm-qt</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="d4b31bdaf5fd20599965b9f429d71137a7b21d42" type="tarxz">https://github.com/lxqt/lxqt-archiver/releases/download/0.2.0/lxqt-archiver-0.2.0.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>lxqt-archiver</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <RuntimeDependency>
+          <Dependency>pcmanfm-qt</Dependency>
+          <Dependency>libXfixes</Dependency>
+          <Dependency>json-glib</Dependency>
+        </RuntimeDependency>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-05-27</Date>
+            <Version>0.2.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

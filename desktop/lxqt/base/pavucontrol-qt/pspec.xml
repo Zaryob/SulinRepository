@@ -1,0 +1,58 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pavucontrol-qt</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Qt port of volume control pavucontrol.</Summary>
+        <Description>Qt port of volume control pavucontrol</Description>
+        <Archive sha1sum="cb7a877b1da9d6bf063b34d005054263c5ed4773" type="tarxz">https://github.com/lxqt/pavucontrol-qt/releases/download/0.15.0/pavucontrol-qt-0.15.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>xdg-user-dirs</Dependency>
+            <Dependency>lxqt-build-tools</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>pavucontrol-qt</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localdata">/usr/share/pavucontrol-qt/translations</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-11-28</Date>
+            <Version>0.14.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

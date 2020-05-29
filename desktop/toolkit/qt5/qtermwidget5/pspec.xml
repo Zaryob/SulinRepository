@@ -16,7 +16,7 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>lxqt-build-tools</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="07d99b8f4a673fa1f965716f0db89a4ba9e3f9b5" type="tarxz">https://github.com/lxqt/qtermwidget/releases/download/0.14.1/qtermwidget-0.14.1.tar.xz</Archive>
+        <Archive sha1sum="25671ac9b32732464b2488c0a4a8640427cab080" type="tarxz">https://github.com/lxqt/qtermwidget/releases/download/0.15.0/qtermwidget-0.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qtermwidget5</Name>
@@ -36,6 +36,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-05-27</Date>
+            <Version>0.15.0</Version>
+            <Comment>Version bump to 0.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-28</Date>
             <Version>0.14.1</Version>

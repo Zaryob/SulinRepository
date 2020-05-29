@@ -3,9 +3,15 @@
 <INARY>
     <Source>
         <Name>qt5</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Homepage>http://qt.io/</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
             <Email>zaryob.dev@gmail.com</Email>
         </Packager>
         <Summary>Cross platform application and UI framework</Summary>
@@ -14,7 +20,7 @@
         <License>LGPL3</License>
         <License>FDL</License>
         <License>custom</License>
-        <Archive sha1sum="109dd41023c5df59b1aaf6d04211b473dea970ea" type="tarxz">https://download.qt.io/official_releases/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz</Archive>
+        <Archive sha1sum="518083ff315c6fc20dd0235a0ed2036baa0ef898" type="tarxz">https://download.qt.io/official_releases/qt/5.15/5.15.0/single/qt-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
             <Dependency>ccache</Dependency>
@@ -99,7 +105,7 @@
             <Dependency>assimp</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/lib/qt5/bin/qgltf</Path>
+            <Path fileType="executable">/usr/bin/qgltf</Path>
             <Path fileType="library">/usr/lib/qt5/qmldir/Qt3D</Path>
             <Path fileType="library">/usr/lib/qt5/qmldir/QtQuick</Path>
             <Path fileType="library">/usr/lib/libQt53DAnimation.so</Path>
@@ -223,17 +229,20 @@
 
     <Package>
         <Name>qt5-assistant</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/lib/qt5/bin/assistant</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qhelpconverter</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qhelpgenerator</Path>
+            <Path fileType="executable">/usr/bin/assistant</Path>
+            <Path fileType="executable">/usr/bin/qhelpconverter</Path>
+            <Path fileType="executable">/usr/bin/qhelpgenerator</Path>
             <Path fileType="executable">/usr/bin/assistant-qt5</Path>
             <Path fileType="executable">/usr/bin/qhelpgenerator-qt5</Path>
             <Path fileType="executable">/usr/bin/qhelpconverter-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qdoc</Path>
+            <Path fileType="executable">/usr/bin/qdoc</Path>
             <Path fileType="executable">/usr/bin/qdoc-qt5</Path>
             <Path fileType="library">/usr/lib/libQt5Help.so</Path>
             <Path fileType="library">/usr/lib/libQt5Help.so.*</Path>
@@ -246,13 +255,16 @@
             <Path fileType="icon">/usr/share/icons/hicolor/128x128/apps/assistant.png</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/32x32/apps/assistant.png</Path>
             <Path fileType="icon">/usr/share/pixmaps/assistant5.png</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qcollectiongenerator</Path>
+            <Path fileType="executable">/usr/bin/qcollectiongenerator</Path>
             <Path fileType="executable">/usr/bin/qcollectiongenerator-qt5</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>qt5-assistant-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency release="current">qt5-assistant</Dependency>
@@ -275,6 +287,9 @@
     </Package>
     <Package>
         <Name>qt5-base</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Base development commands and files for Qt 5</Summary>
         <Description>Base development commands and files for Qt 5</Description>
         <RuntimeDependencies>
@@ -328,17 +343,17 @@
             <Path fileType="executable">/usr/bin/syncqt.pl-qt5</Path>
             <Path fileType="executable">/usr/bin/tracegen-qt5</Path>
             <Path fileType="executable">/usr/bin/uic-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/fixqt4headers.pl</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/moc</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qdbuscpp2xml</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qdbusxml2cpp</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qlalr</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmake</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qvkgen</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/rcc</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/syncqt.pl</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/tracegen</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/uic</Path>
+            <Path fileType="executable">/usr/bin/fixqt4headers.pl</Path>
+            <Path fileType="executable">/usr/bin/moc</Path>
+            <Path fileType="executable">/usr/bin/qdbuscpp2xml</Path>
+            <Path fileType="executable">/usr/bin/qdbusxml2cpp</Path>
+            <Path fileType="executable">/usr/bin/qlalr</Path>
+            <Path fileType="executable">/usr/bin/qmake</Path>
+            <Path fileType="executable">/usr/bin/qvkgen</Path>
+            <Path fileType="executable">/usr/bin/rcc</Path>
+            <Path fileType="executable">/usr/bin/syncqt.pl</Path>
+            <Path fileType="executable">/usr/bin/tracegen</Path>
+            <Path fileType="executable">/usr/bin/uic</Path>
             <Path fileType="library">/usr/lib/libQt5AccessibilitySupport.a</Path>
             <Path fileType="library">/usr/lib/libQt5Bootstrap.a</Path>
             <Path fileType="library">/usr/lib/libQt5Concurrent.so</Path>
@@ -425,6 +440,9 @@
     </Package>
     <Package>
         <Name>qt5-base-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-base</Summary>
         <Description>Base development files for Qt 5</Description>
         <Files>
@@ -1089,6 +1107,9 @@
 
     <Package>
         <Name>qt5-charts</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a set of easy to use chart components</Summary>
         <Description>Provides a set of easy to use chart components</Description>
         <RuntimeDependencies>
@@ -1106,6 +1127,9 @@
     </Package>
     <Package>
         <Name>qt5-charts-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-charts</Summary>
         <Description>Provides a set of easy to use chart components</Description>
         <RuntimeDependencies>
@@ -1121,6 +1145,9 @@
 
     <Package>
         <Name>qt5-connectivity</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to Bluetooth and Nfc hardware</Summary>
         <Description>Qt5 frameworks to connect Bluetooth and Nfc hardware</Description>
         <RuntimeDependencies>
@@ -1130,7 +1157,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/sdpscanner-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/sdpscanner</Path>
+            <Path fileType="executable">/usr/bin/sdpscanner</Path>
             <Path fileType="library">/usr/lib/libQt5Bluetooth.so</Path>
             <Path fileType="library">/usr/lib/libQt5Bluetooth.so.*</Path>
             <Path fileType="library">/usr/lib/libQt5Nfc.so</Path>
@@ -1140,6 +1167,9 @@
 
     <Package>
         <Name>qt5-connectivity-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-connectivity</Summary>
         <Description>Qt5 frameworks to connect Bluetooth and Nfc hardware</Description>
         <Files>
@@ -1166,6 +1196,9 @@
 
     <Package>
         <Name>qt5-datavis3d</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt5 Data Visualization module</Summary>
         <Description>Qt5 Data Visualization module</Description>
         <RuntimeDependencies>
@@ -1181,6 +1214,9 @@
 
     <Package>
         <Name>qt5-datavis3d-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-datavis3d</Summary>
         <Description>Qt5 Data Visualization module</Description>
         <RuntimeDependencies>
@@ -1200,6 +1236,9 @@
 
     <Package>
         <Name>qt5-declarative</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for QML and JavaScript languages</Summary>
         <Description>Qt5 declarative framework for dynamic user interfaces</Description>
         <RuntimeDependencies>
@@ -1219,17 +1258,17 @@
             <Path fileType="executable">/usr/bin/qmlprofiler-qt5</Path>
             <Path fileType="executable">/usr/bin/qmlscene-qt5</Path>
             <Path fileType="executable">/usr/bin/qmltestrunner-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qml</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlcachegen</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmleasing</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlimportscanner</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmllint</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlmin</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlplugindump</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlpreview</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlprofiler</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmlscene</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qmltestrunner</Path>
+            <Path fileType="executable">/usr/bin/qml</Path>
+            <Path fileType="executable">/usr/bin/qmlcachegen</Path>
+            <Path fileType="executable">/usr/bin/qmleasing</Path>
+            <Path fileType="executable">/usr/bin/qmlimportscanner</Path>
+            <Path fileType="executable">/usr/bin/qmllint</Path>
+            <Path fileType="executable">/usr/bin/qmlmin</Path>
+            <Path fileType="executable">/usr/bin/qmlplugindump</Path>
+            <Path fileType="executable">/usr/bin/qmlpreview</Path>
+            <Path fileType="executable">/usr/bin/qmlprofiler</Path>
+            <Path fileType="executable">/usr/bin/qmlscene</Path>
+            <Path fileType="executable">/usr/bin/qmltestrunner</Path>
             <Path fileType="library">/usr/lib/libQt5PacketProtocol.a</Path>
             <Path fileType="library">/usr/lib/libQt5PacketProtocol.prl</Path>
             <Path fileType="library">/usr/lib/libQt5Qml.prl</Path>
@@ -1327,6 +1366,9 @@
 
     <Package>
         <Name>qt5-declarative-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-declarative</Summary>
         <Description>Classes for QML and JavaScript languages. Qt5 declarative framework for dynamic user interfaces</Description>
         <Files>
@@ -1393,22 +1435,19 @@
 
     <Package>
         <Name>qt5-designer</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/lib/qt5/bin/designer</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qtdiag</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qdistancefieldgenerator</Path>
-            <Path fileType="executable">/usr/bin/qdistancefieldgenerator-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qtpaths</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/pixeltool</Path>
-            <Path fileType="executable">/usr/bin/designer-qt5</Path>
-            <Path fileType="executable">/usr/bin/qtdiag-qt5</Path>
+            <Path fileType="executable">/usr/bin/qdistancefieldgenerator</Path>
+            <Path fileType="executable">/usr/bin/designer</Path>
+            <Path fileType="executable">/usr/bin/qtdiag</Path>
             <Path fileType="executable">/usr/bin/qtpaths*</Path>
-            <Path fileType="executable">/usr/bin/pixeltool-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qtplugininfo</Path>
-            <Path fileType="executable">/usr/bin/qtplugininfo-qt5</Path>
+            <Path fileType="executable">/usr/bin/pixeltool</Path>
+            <Path fileType="executable">/usr/bin/qtplugininfo</Path>
             <Path fileType="library">/usr/lib/cmake/Qt5Designer</Path>
             <Path fileType="library">/usr/lib/cmake/Qt5UiTools</Path>
             <Path fileType="library">/usr/lib/cmake/Qt5UiPlugin</Path>
@@ -1427,6 +1466,9 @@
     </Package>
     <Package>
         <Name>qt5-designer-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency release="current">qt5-designer</Dependency>
@@ -1443,6 +1485,9 @@
 
     <Package>
         <Name>qt5-doc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-script</Dependency>
@@ -1459,6 +1504,9 @@
 
     <Package>
         <Name>qt5-gamepad</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>A JavaScript 3D rendering API for Qt Quick</Summary>
         <Description>Adds support for getting events from gamepad devices</Description>
         <RuntimeDependencies>
@@ -1475,6 +1523,9 @@
 
     <Package>
         <Name>qt5-gamepad-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-gamepad</Summary>
         <Description>A JavaScript 3D rendering API for Qt Quick. Adds support for getting events from gamepad devices</Description>
         <RuntimeDependencies>
@@ -1491,6 +1542,9 @@
 
     <Package>
         <Name>qt5-graphicaleffects</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Graphical effects for use with Qt Quick 2</Summary>
         <Description>This package contains qml files that used to generate graphical effects for use with Qt Quick 2</Description>
         <RuntimeDependencies>
@@ -1504,6 +1558,9 @@
 
     <Package>
         <Name>qt5-imageformats</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Summary>
         <Description>Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Description>
         <RuntimeDependencies>
@@ -1527,6 +1584,9 @@
 
     <Package>
         <Name>qt5-keychain</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides support for secure credentials storage</Summary>
         <Description>Qt5-Keychain is a Qt API to store passwords and other secret data securely. How the data is stored depends on the platform</Description>
         <RuntimeDependencies>
@@ -1540,6 +1600,9 @@
 
     <Package>
         <Name>qt5-keychain-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-keychain</Summary>
         <Description>Qt5-Keychain is a Qt API to store passwords and other secret data securely. How the data is stored depends on the platform</Description>
         <RuntimeDependencies>
@@ -1554,28 +1617,21 @@
 
     <Package>
         <Name>qt5-linguist</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin/lprodump-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/lprodump</Path>
-            <Path fileType="executable">/usr/bin/qtattributionsscanner-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qtattributionsscanner</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/linguist</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/lconvert</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/lrelease</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/lrelease-pro</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/lupdate</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/lupdate-pro</Path>
-            <Path fileType="executable">/usr/bin/lrelease-qt5</Path>
-            <Path fileType="executable">/usr/bin/lrelease-pro-qt5</Path>
-            <Path fileType="executable">/usr/bin/linguist-qt5</Path>
-            <Path fileType="executable">/usr/bin/linguist-pro</Path>
-            <Path fileType="executable">/usr/bin/lconvert-qt5</Path>
-            <Path fileType="executable">/usr/bin/lupdate-qt5</Path>
-            <Path fileType="executable">/usr/bin/lupdate-pro-qt5</Path>
-            <Path fileType="library">/usr/lib/cmake/Qt5LinguistTools</Path>
+            <Path fileType="executable">/usr/bin/lprodump</Path>
+            <Path fileType="executable">/usr/bin/qtattributionsscanner</Path>
+            <Path fileType="executable">/usr/bin/linguist</Path>
+            <Path fileType="executable">/usr/bin/lconvert</Path>
+            <Path fileType="executable">/usr/bin/lrelease</Path>
+            <Path fileType="executable">/usr/bin/lrelease-pro</Path>
+            <Path fileType="executable">/usr/bin/lupdate</Path>
+            <Path fileType="executable">/usr/bin/lupdate-pro</Path>
             <Path fileType="data">/usr/share/applications/linguist5.desktop</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/128x128/apps/linguist.png</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/16x16/apps/linguist.png</Path>
@@ -1601,6 +1657,9 @@
     </Package>
     <Package>
         <Name>qt5-location</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to position, satellite and area monitoring classes</Summary>
         <Description>Provides access to position, satellite and area monitoring classes</Description>
         <RuntimeDependencies>
@@ -1631,6 +1690,9 @@
 
     <Package>
         <Name>qt5-location-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-location</Summary>
         <Description>Provides access to position, satellite and area monitoring classes</Description>
         <Files>
@@ -1662,6 +1724,9 @@
 
     <Package>
         <Name>qt5-lottie</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Summary>
         <Description>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Description>
         <RuntimeDependencies>
@@ -1677,6 +1742,9 @@
 
     <Package>
         <Name>qt5-lottie-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-lottie</Summary>
         <Description>A family of player software for a certain json-based file format for describing 2d vector graphics animations</Description>
         <Files>
@@ -1694,6 +1762,9 @@
 
     <Package>
         <Name>qt5-remoteobject</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Inter-process communication (IPC) module developed for Qt</Summary>
         <Description>Inter-process communication (IPC) module developed for Qt</Description>
         <RuntimeDependencies>
@@ -1712,6 +1783,9 @@
 
     <Package>
         <Name>qt5-remoteobject-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-remoteobject</Summary>
         <Description>Inter-process communication (IPC) module developed for Qt</Description>
         <Files>
@@ -1733,6 +1807,9 @@
     </Package>
     <Package>
         <Name>qt5-multimedia</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for audio, video, radio and camera functionality</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <RuntimeDependencies>
@@ -1767,6 +1844,9 @@
 
     <Package>
         <Name>qt5-multimedia-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development support for qt5-multimedia</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <Files>
@@ -1781,6 +1861,7 @@
             <Path fileType="data">/usr/lib/libQt5MultimediaQuick.prl</Path>
             <Path fileType="data">/usr/lib/libQt5MultimediaWidgets.prl</Path>
             <Path fileType="header">/usr/include/QtMultimedia</Path>
+            <Path fileType="header">/usr/include/QtMultimediaGstTools</Path>
             <Path fileType="header">/usr/include/QtMultimediaQuick</Path>
             <Path fileType="header">/usr/include/QtMultimediaWidgets</Path>
             <Path fileType="header">/usr/lib/cmake/Qt5Multimedia</Path>
@@ -1796,6 +1877,9 @@
 
     <Package>
         <Name>qt5-networkauth</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for audio, video, radio and camera functionality</Summary>
         <Description>Classes for audio, video, radio and camera functionality</Description>
         <Files>
@@ -1813,6 +1897,9 @@
 
     <Package>
         <Name>qt5-networkauth-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files of qt5-networkauth</Summary>
         <Description>Development files of qt5-networkauth. qt5-networkauth includes classes for audio, video, radio and camera functionality</Description>
         <Files>
@@ -1830,6 +1917,9 @@
 
     <Package>
         <Name>qt5-purchasing</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt In-App Purchasing API</Summary>
         <Description>Qt In-App Purchasing API</Description>
         <Files>
@@ -1845,6 +1935,9 @@
 
     <Package>
         <Name>qt5-purchasing-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt In-App Purchasing API</Summary>
         <Description>Qt In-App Purchasing API</Description>
         <Files>
@@ -1862,14 +1955,14 @@
 
     <Package>
         <Name>qt5-qdbusviewer</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/lib/qt5/bin/qdbusviewer</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qdbus</Path>
-            <Path fileType="executable">/usr/bin/qdbusviewer-qt5</Path>
-            <Path fileType="executable">/usr/bin/qdbus-qt5</Path>
+            <Path fileType="executable">/usr/bin/qdbusviewer</Path>
             <Path fileType="executable">/usr/bin/qdbus</Path>
             <Path fileType="data">/usr/share/applications/qdbusviewer5.desktop</Path>
             <Path fileType="icon">/usr/share/icons/hicolor/128x128/apps/qdbusviewer.png</Path>
@@ -1879,6 +1972,9 @@
     </Package>
     <Package>
         <Name>qt5-quick3d</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt module and API for defining 3D content in Qt Quick</Summary>
         <RuntimeDependencies>
             <Dependency>flite</Dependency>
@@ -1905,6 +2001,9 @@
 
     <Package>
         <Name>qt5-quick3d-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development headers for qt5-quick3d</Summary>
         <RuntimeDependencies>
             <Dependency release="current">qt5-quick3d</Dependency>
@@ -1945,6 +2044,9 @@
 
     <Package>
         <Name>qt5-quickcontrols</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Summary>
 
         <Description>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Description>
@@ -1963,6 +2065,9 @@
 
     <Package>
         <Name>qt5-quickcontrols2</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Next generation user interface controls based on Qt Quick</Summary>
         <Description>Next generation user interface controls based on Qt Quick</Description>
         <RuntimeDependencies>
@@ -1992,6 +2097,9 @@
     </Package>
     <Package>
         <Name>qt5-quickcontrols2-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files of qt5-quickcontrols2</Summary>
         <Description>Next generation user interface controls based on Qt Quick</Description>
         <RuntimeDependencies>
@@ -2016,6 +2124,9 @@
 
     <Package>
         <Name>qt5-script</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Summary>
         <Description>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Description>
         <RuntimeDependencies>
@@ -2031,6 +2142,9 @@
 
     <Package>
         <Name>qt5-script-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files of qt5-script</Summary>
         <Description>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Description>
         <RuntimeDependencies>
@@ -2054,6 +2168,9 @@
 
     <Package>
         <Name>qt5-scxml</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a set of easy to use chart components</Summary>
         <Description>Provides a set of easy to use chart components</Description>
 
@@ -2062,7 +2179,7 @@
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
-          <Path fileType="executable">/usr/lib/qt5/bin/qscxmlc</Path>
+          <Path fileType="executable">/usr/bin/qscxmlc</Path>
           <Path fileType="library">/usr/lib/libQt5Scxml.so</Path>
           <Path fileType="library">/usr/lib/libQt5Scxml.so.*</Path>
           <Path fileType="library">/usr/lib/qt5/qmldir/QtScxml/</Path>
@@ -2071,6 +2188,9 @@
 
     <Package>
         <Name>qt5-scxml-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-scxml</Summary>
         <Description>Provides a set of easy to use chart components</Description>
 
@@ -2091,6 +2211,9 @@
     </Package>
     <Package>
         <Name>qt5-sensors</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-declarative</Dependency>
@@ -2109,6 +2232,9 @@
 
     <Package>
         <Name>qt5-sensors-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency release="current">qt5-sensors</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -2125,6 +2251,9 @@
 
     <Package>
         <Name>qt5-serialbus</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt module for general purpose serial bus access</Summary>
         <Description>Qt module for general purpose serial bus access</Description>
         <RuntimeDependencies>
@@ -2132,7 +2261,7 @@
             <Dependency>qt5-serialport</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/lib/qt5/bin/canbusutil</Path>
+            <Path fileType="executable">/usr/bin/canbusutil</Path>
             <Path fileType="library">/usr/lib/libQt5SerialBus.so</Path>
             <Path fileType="library">/usr/lib/libQt5SerialBus.so.*</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/canbus/libqtpassthrucanbus.so</Path>
@@ -2145,6 +2274,9 @@
 
     <Package>
         <Name>qt5-serialbus-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-serialbus</Summary>
         <Description>Qt module for general purpose serial bus access</Description>
         <RuntimeDependencies>
@@ -2163,6 +2295,9 @@
 
     <Package>
         <Name>qt5-serialport</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to hardware and virtual serial ports</Summary>
         <Description>Provides access to hardware and virtual serial ports</Description>
         <RuntimeDependencies>
@@ -2176,6 +2311,9 @@
 
     <Package>
         <Name>qt5-serialport-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-serialbus</Summary>
         <Description>Provides access to hardware and virtual serial ports</Description>
         <RuntimeDependencies>
@@ -2195,6 +2333,9 @@
 
     <Package>
         <Name>qt5-speech</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Qt module to make text to speech and speech recognition easy</Summary>
         <RuntimeDependencies>
             <Dependency>flite</Dependency>
@@ -2210,6 +2351,9 @@
 
     <Package>
         <Name>qt5-speech-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development headers for qt5-speech</Summary>
         <RuntimeDependencies>
             <Dependency release="current">qt5-speech</Dependency>
@@ -2221,8 +2365,68 @@
             <Path fileType="data">/usr/lib/pkgconfig/Qt5TextToSpeech.pc</Path>
         </Files>
     </Package>
+
+    <Package>
+        <Name>qt5-sql-mysql</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlmysql.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-postgresql</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlpsql.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-sqlite</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlite.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-odbc</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>unixODBC</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlodbc.so</Path>
+        </Files>
+    </Package>
+
     <Package>
         <Name>qt5-svg</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Classes for displaying the contents of SVG files</Summary>
 
         <Description>Classes for displaying the contents of SVG files</Description>
@@ -2241,6 +2445,9 @@
 
     <Package>
         <Name>qt5-svg-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-svg</Summary>
         <Description>Classes for displaying the contents of SVG files</Description>
         <RuntimeDependencies>
@@ -2262,6 +2469,9 @@
 
     <Package>
         <Name>qt5-translations</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>A cross-platform application and UI framework (Translations)</Summary>
         <Description>A cross-platform application and UI framework (Translations)</Description>
         <Files>
@@ -2276,6 +2486,9 @@
     </Package>
     <Package>
         <Name>qt5-virtualkeyboard</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Virtual keyboard framework of qt5</Summary>
         <Summary>Qt module for general purpose serial bus access</Summary>
 
@@ -2294,6 +2507,9 @@
     </Package>
     <Package>
         <Name>qt5-virtualkeyboard-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-virtualkeyboard</Summary>
         <Summary>Qt module for general purpose serial bus access</Summary>
         <Files>
@@ -2311,6 +2527,9 @@
     </Package>
     <Package>
         <Name>qt5-wayland</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides APIs for Wayland</Summary>
         <Description>Provides APIs for Wayland</Description>
         <RuntimeDependencies>
@@ -2337,13 +2556,16 @@
             <Path fileType="library">/usr/lib/libQt5WaylandCompositor.so.*</Path>
             <Path fileType="library">/usr/lib/libQt5WaylandClient.so</Path>
             <Path fileType="library">/usr/lib/libQt5WaylandClient.so.*</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qtwaylandscanner</Path>
+            <Path fileType="executable">/usr/bin/qtwaylandscanner</Path>
             <Path fileType="executable">/usr/bin/qtwaylandscanner-qt5</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>qt5-wayland-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Development files for qt5-wayland</Summary>
         <Description>Provides APIs for Wayland</Description>
         <RuntimeDependencies>
@@ -2368,6 +2590,9 @@
 
     <Package>
         <Name>qt5-webchannel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Summary>
         <Description>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
         <Files>
@@ -2383,6 +2608,9 @@
 
     <Package>
         <Name>qt5-webchannel-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Summary>
         <Description>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
         <Files>
@@ -2401,89 +2629,10 @@
     </Package>
 
     <Package>
-        <Name>qt5-webengine</Name>
-        <Files>
-            <Path fileType="executable">/usr/bin/qwebengine_convert_dict-qt5</Path>
-            <Path fileType="library">/usr/lib/libQt5WebEngine.so</Path>
-            <Path fileType="library">/usr/lib/libQt5WebEngine.so.*</Path>
-            <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.so</Path>
-            <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.so.*</Path>
-            <Path fileType="library">/usr/lib/qt5/plugins/designer/libqwebengineview.so</Path>
-            <Path fileType="library">/usr/lib/qt5/qmldir/QtWebEngine/</Path>
-            <Path fileType="executable">/usr/lib/qt5/libexec/QtWebEngineProcess</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/qwebengine_convert_dict</Path>
-            <Path fileType="localedata">/usr/share/qt5/resources/icudtl.dat</Path>
-            <Path fileType="localedata">/usr/share/qt5/resources/qtwebengine_devtools_resources.pak</Path>
-            <Path fileType="localedata">/usr/share/qt5/resources/qtwebengine_resources.pak</Path>
-            <Path fileType="localedata">/usr/share/qt5/resources/qtwebengine_resources_100p.pak</Path>
-            <Path fileType="localedata">/usr/share/qt5/resources/qtwebengine_resources_200p.pak</Path>
-            <Path fileType="localedata">/usr/share/qt5/translations/qtwebengine_locales/</Path>
-        </Files>
-        <RuntimeDependencies>
-            <Dependency>nss</Dependency>
-            <Dependency>lcms2</Dependency>
-            <Dependency>webp</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>freetype</Dependency>
-            <Dependency>libXi</Dependency>
-            <Dependency>libXext</Dependency>
-            <Dependency>libXtst</Dependency>
-            <Dependency>libopus</Dependency>
-            <Dependency>libvpx</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>harfbuzz</Dependency>
-            <Dependency>libevent</Dependency>
-            <Dependency>libXfixes</Dependency>
-            <Dependency>fontconfig</Dependency>
-            <Dependency>libXcursor</Dependency>
-            <Dependency>libXdamage</Dependency>
-            <Dependency>libXrender</Dependency>
-            <Dependency>qt5-location</Dependency>
-            <Dependency>libXcomposite</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
-            <Dependency>qt5-webchannel</Dependency>
-            <Dependency>qt5-declarative</Dependency>
-            <Dependency>minizip</Dependency>
-            <Dependency>protobuf</Dependency>
-        </RuntimeDependencies>
-    </Package>
-
-    <Package>
-        <Name>qt5-webengine-devel</Name>
-        <Files>
-            <Path fileType="library">/usr/lib/libQt5WebEngine.prl</Path>
-            <Path fileType="library">/usr/lib/libQt5WebEngineWidgets.prl</Path>
-            <Path fileType="header">/usr/include/QtWebEngine</Path>
-            <Path fileType="header">/usr/include/QtWebEngineCore</Path>
-            <Path fileType="header">/usr/include/QtWebEngineWidgets</Path>
-            <Path fileType="data">/usr/lib/cmake/Qt5Designer/Qt5Designer_QWebEngineViewPlugin.cmake</Path>
-            <Path fileType="data">/usr/lib/cmake/Qt5WebEngine</Path>
-            <Path fileType="data">/usr/lib/cmake/Qt5WebEngineCore</Path>
-            <Path fileType="data">/usr/lib/cmake/Qt5WebEngineWidgets</Path>
-            <Path fileType="data">/usr/lib/pkgconfig/Qt5WebEngine.pc</Path>
-            <Path fileType="data">/usr/lib/pkgconfig/Qt5WebEngineCore.pc</Path>
-            <Path fileType="data">/usr/lib/pkgconfig/Qt5WebEngineWidgets.pc</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webengine.pri</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webengine_private.pri</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginecore.pri</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginecore_private.pri</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginewidgets.pri</Path>
-            <Path fileType="data">/usr/mkspecs/modules/qt_lib_webenginewidgets_private.pri</Path>
-        </Files>
-        <RuntimeDependencies>
-            <Dependency release="current">qt5-webengine</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>
-            <Dependency>qt5-location-devel</Dependency>
-            <Dependency>qt5-webchannel-devel</Dependency>
-        </RuntimeDependencies>
-    </Package>
-
-    <Package>
         <Name>qt5-websockets</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides WebSocket communication compliant with RFC 6455</Summary>
         <Description>Provides WebSocket communication compliant with RFC 6455</Description>
         <Files>
@@ -2499,6 +2648,9 @@
 
     <Package>
         <Name>qt5-websockets-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides WebSocket communication compliant with RFC 6455</Summary>
         <Description>Provides WebSocket communication compliant with RFC 6455</Description>
         <Files>
@@ -2517,6 +2669,9 @@
 
     <Package>
         <Name>qt5-webview</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a way to display web content in a QML application</Summary>
         <Description>Provides a way to display web content in a QML application</Description>
         <Files>
@@ -2526,13 +2681,15 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>qt5-webengine</Dependency>
             <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <Package>
         <Name>qt5-webview-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Provides a way to display web content in a QML application</Summary>
         <Description>Provides a way to display web content in a QML application</Description>
         <Files>
@@ -2545,12 +2702,14 @@
         </Files>
         <RuntimeDependencies>
             <Dependency release="current">qt5-webview</Dependency>
-            <Dependency release="current">qt5-webengine-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
         </RuntimeDependencies>
     </Package>
     <Package>
         <Name>qt5-x11extras</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
         <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
         <RuntimeDependencies>
@@ -2564,6 +2723,9 @@
 
     <Package>
         <Name>qt5-x11extras-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
         <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
         <Files>
@@ -2582,21 +2744,26 @@
 
     <Package>
         <Name>qt5-xmlpatterns</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.so</Path>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.so.*</Path>
-            <Path fileType="executable">/usr/bin/xmlpatternsvalidator-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/xmlpatternsvalidator</Path>
+            <Path fileType="executable">/usr/bin/xmlpatternsvalidator</Path>
             <Path fileType="executable">/usr/bin/xmlpatterns-qt5</Path>
-            <Path fileType="executable">/usr/lib/qt5/bin/xmlpatterns</Path>
+            <Path fileType="executable">/usr/bin/xmlpatterns</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>qt5-xmlpatterns-devel</Name>
+        <BuildFlags>
+            <Flag>noDebug</Flag>
+        </BuildFlags>
         <Files>
             <Path fileType="library">/usr/lib/libQt5XmlPatterns.prl</Path>
             <Path fileType="header">/usr/include/QtXmlPatterns/</Path>
@@ -2613,6 +2780,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2020-05-27</Date>
+            <Version>5.15.0</Version>
+            <Comment>qt5.15.0 has been compiled.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
       <Update release="6">
           <Date>2020-05-10</Date>
           <Version>5.14.2</Version>
