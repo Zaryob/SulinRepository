@@ -1,0 +1,45 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>acct</Name>
+        <Homepage>http://savannah.gnu.org/projects/acct/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Utilities for monitoring process activities.</Summary>
+        <Description>The GNU Accounting Utilities provide login and process accounting utilities for GNU/Linux and other systems.</Description>
+        <Archive sha1sum="bf4bb9c138d325add34a8cd836e44a49bc64dfe9">http://ftp.gnu.org/gnu/acct/acct-6.6.4.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>acct</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/var/account</Path>
+        </Files>
+        <AdditionalFiles>
+             <AdditionalFile owner="root" permission="0755" target="/etc/logrotate.d/psacct">acct.logrotate-r1</AdditionalFile>
+             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/acct">acct.initd-r2</AdditionalFile>
+             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/acct">acct.confd-r1</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>6.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
