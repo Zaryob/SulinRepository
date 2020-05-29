@@ -1,0 +1,37 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>iotop</Name>
+        <Homepage>http://guichaz.free.fr/iotop/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Per process I/O bandwidth monitor</Summary>
+        <Description>A Python program with a top like UI used to show of behalf of which 14 process is the I/O going on.</Description>
+        <Archive sha1sum="71a0e7043d83673a40d7ddc57f5b50adab7fff2a" type="targz">http://guichaz.free.fr/iotop/files/iotop-0.6.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>iotop</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>0.6</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
