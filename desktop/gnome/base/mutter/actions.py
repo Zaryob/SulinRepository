@@ -11,8 +11,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("-Dselinux=false  \
-		-Degl_device=true \
+    mesontools.meson_configure("-Degl_device=true \
 		-Dudev=true \
 		-Dnative_backend=true \
 		-Dintrospection=true \

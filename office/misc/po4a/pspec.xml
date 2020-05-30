@@ -1,0 +1,40 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>po4a</Name>
+        <Homepage>http://anduin.linuxfromscratch.org/BLFS/iso-codes/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Tools for helping translation of documentation</Summary>
+        <Description>Tools for helping translation of documentation</Description>
+        <Archive sha1sum="e96a1e1b898f25e15b0a26afc1be3b5cc0a128ab">https://github.com/mquinson/po4a/archive/v0.59.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl-YAML-Tiny</Dependency>
+            <Dependency>perl-Locale-gettext</Dependency>
+            <Dependency>perl-Term-ReadKey</Dependency>
+            <Dependency>perl-Module-Build</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>po4a</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="man">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-15</Date>
+            <Version>0.59.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

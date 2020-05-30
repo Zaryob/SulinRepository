@@ -29,6 +29,7 @@
 	     <Dependency>sassc</Dependency>
 	     <Dependency>polkit-devel</Dependency>
 	     <Dependency>mutter-devel</Dependency>
+	     <Dependency>cogl-devel</Dependency>
 	     <Dependency>ibus-devel</Dependency>
 	     <Dependency>pipewire-devel</Dependency>
 	     <Dependency>upower-devel</Dependency>
@@ -43,7 +44,7 @@
     </Source>
         
 	<Package>
-        <Name>buggie-desktop</Name>
+        <Name>budgie-desktop</Name>
         <RuntimeDependencies>
 	     <Dependency>gnome-desktop</Dependency>
 	    <Dependency>vala</Dependency>
@@ -66,7 +67,7 @@
 	     <Dependency>upower</Dependency>
 	     <Dependency>ibus</Dependency>
 	     <Dependency>alsa-lib</Dependency>
-	     <Dependency>alsa</Dependency>
+	     <Dependency>alsa-firmware</Dependency>
 	     <Dependency>accountsservice</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -1,0 +1,36 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>isoquery</Name>
+        <Homepage>http://anduin.linuxfromscratch.org/BLFS/iso-codes/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Search and display ISO codes for countries, languages, currencies, and scripts.</Summary>
+        <Description>Search and display ISO codes for countries, languages, currencies, and scripts.</Description>
+        <Archive sha1sum="6ef712da85645999717233f7c2fa688ebd711289">https://github.com/toddy15/isoquery/archive/v3.2.3.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>isoquery</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/xml</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-15</Date>
+            <Version>3.2.3</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

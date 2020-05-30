@@ -22,7 +22,9 @@
             <Dependency>gtk3-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>pango-devel</Dependency>
+            <Dependency>gexiv2-devel</Dependency>
             <Dependency>libnotify-devel</Dependency>
+            <Dependency>elogind-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>orc-devel</Dependency>

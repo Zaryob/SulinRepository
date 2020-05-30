@@ -21,6 +21,7 @@
         <Name>gnome-tweak-tool</Name>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/gconf</Path>
