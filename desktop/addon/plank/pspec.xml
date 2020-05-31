@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>plank</Name>
+        <Homepage>http://kaizer.se/wiki/keybinder/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>app:gui</IsA>
+        <Summary>Elegant, simple, clean dock</Summary>
+        <Description>Elegant, simple, clean dock</Description>
+        <Archive sha1sum="baecfc133f9eccfe03037218af3b0acaf1a5f9ae">https://launchpad.net/plank/1.0/0.11.89/+download/plank-0.11.89.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>bamf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>plank</Name>
+        <RuntimeDependencies>
+            <Dependency>bamf</Dependency>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="library">/usr/libexec/</Path>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/plank</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>plank-devel</Name>
+        <Summary>Development files for plank</Summary>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="current">flatpak</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.11.89</Version>
+            <Comment>First release.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
