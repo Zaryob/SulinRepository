@@ -15,6 +15,7 @@
         <BuildDependencies>
             <Dependency>libgtop-devel</Dependency>
             <Dependency>libwnck3-devel</Dependency>
+            <Dependency>libdbusmenu-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>bamf-no-gtester2xunit.patch</Patch>
@@ -32,6 +33,7 @@
             <Path fileType="config">/etc/gconf</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/bamf</Path>

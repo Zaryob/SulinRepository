@@ -11,7 +11,8 @@ from inary.actionsapi import get
 
 def setup():
     shelltools.system("NOCONFIGURE=1 ./autogen.sh")
-    autotools.configure()
+    autotools.configure("--enable-gtk-doc  --enable-gtk-doc \
+        --enable-export-actions-menu=yes")
 
 def build():
     autotools.make()

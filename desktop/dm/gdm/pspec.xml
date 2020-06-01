@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>GNOME display manager</Summary>
         <Description>GDM provides log into different sessions on local or remote machines.</Description>
-        <Archive sha1sum="f72448b9273758f9396867d930e30f89ca51c21e" >https://gitlab.gnome.org/GNOME/gdm/-/archive/3.34.1/gdm-3.34.1.tar.gz</Archive>
+        <Archive sha1sum="700f4be33fa13d12419687eeae273498b4c56c66" >http://ftp.gnome.org/pub/gnome/sources/gdm/3.36/gdm-3.36.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>upower-devel</Dependency>
@@ -22,6 +22,9 @@
             <Dependency>pango-devel</Dependency>
             <Dependency>fontconfig-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>libcanberra-gtk3-devel</Dependency>
+            <Dependency>libcanberra-gtk-devel</Dependency>
             <Dependency>libxklavier-devel</Dependency>
             <Dependency>accountsservice-devel</Dependency>
         </BuildDependencies>
@@ -79,6 +82,13 @@
     </Package>
 
     <History>
+       <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.36.2</Version>
+            <Comment>Upgrade</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.34.1</Version>
