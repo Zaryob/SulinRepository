@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>compiz</Name>
+        <Homepage>https://launchpad.net/compiz</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Composite manager for Aiglx and Xgl, with plugins and CCSM</Summary>
+        <Description>Composite manager for Aiglx and Xgl, with plugins and CCSM</Description>
+        <Archive sha1sum="4a6fea78af88e3a9defb897bda0372255190a435" >https://launchpad.net/compiz/0.9.14/0.9.14.1/+download/compiz-0.9.14.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libwnck3-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>protobuf-devel</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>compiz</Name>
+        <RuntimeDependencies>
+            <Dependency>protobuf</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>mesa-glu</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>compiz-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>compiz</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-21</Date>
+            <Version>0.9.14</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

@@ -24,7 +24,7 @@ def build():
 
 def install():
     if get.buildTYPE() == "emul32":
-        autotools.rawInstall("GLEW_DEST=%s/usr/ \
+        autotools.make("install.all GLEW_DEST=%s/usr/ \
                               INCDIR=%s/emul32 \
                               BINDIR=%s/emul32 \
                               LIBDIR=%s/usr/lib32 \
@@ -32,9 +32,10 @@ def install():
 
         inarytools.remove("/usr/lib32/libGLEW.a")
         inarytools.dosed("%s/usr/lib32/pkgconfig/glew.pc" % get.installDIR(), "/usr/lib", "/usr/lib32")
+        inarytools.removeDir("/emul32")
         return
 
-    autotools.rawInstall("GLEW_DEST=%s/usr/ \
+    autotools.make("install.all GLEW_DEST=%s/usr/ \
                           INCDIR=%s/usr/include/GL \
                           BINDIR=%s/usr/bin \
                           LIBDIR=%s/usr/lib" % (get.installDIR() , get.installDIR(), get.installDIR(), get.installDIR()))

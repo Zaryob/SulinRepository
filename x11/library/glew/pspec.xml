@@ -16,7 +16,7 @@
         <IsA>library</IsA>
         <Summary>OpenGL Extension Wrangler Library</Summary>
         <Description>OpenGL Extension Wrangler Library (GLEW) is a cross-platform C/C++ extension loading library. GLEW provides efficient run-time mechanisms for determining which OpenGL extensions are supported on the target platform. OpenGL core and extension functionality is exposed in a single header file.</Description>
-        <Archive sha1sum="18eca05460d0b61709fc115e632b6fe320718b44" type="targz">mirrors://sourceforge/glew/2.1.0/glew-2.1.0.tgz</Archive>
+        <Archive sha1sum="18eca05460d0b61709fc115e632b6fe320718b44" type="targz">https://github.com/nigels-com/glew/releases/download/glew-2.1.0/glew-2.1.0.tgz</Archive>
         <BuildDependencies>
             <Dependency>mesa-glu-devel</Dependency>
         </BuildDependencies>

@@ -1,0 +1,67 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>zeitgeist</Name>
+        <Homepage>http://live.gnome.org/zeitgeist</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <Icon>zeitgeist</Icon>
+        <IsA>library</IsA>
+        <Summary>Service logging user activities and events</Summary>
+        <Description>Service logging user activities and events</Description>
+        <Archive sha1sum="85bd6a249941e29c5fbc681e3d5b35419434f69d">https://launchpad.net/zeitgeist/1.0/1.0.2/+download/zeitgeist-1.0.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>xapian-core-devel</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>zeitgeist</Name>
+        <RuntimeDependencies>
+            <Dependency>gnutls</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>libgpg-error</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>zeitgeist-devel</Name>
+        <Summary>Development files for zeitgeist</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">zeitgeist</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <!-- FIXME: Remove this if not necessary -->
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
