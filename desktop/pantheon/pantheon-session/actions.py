@@ -6,6 +6,7 @@
 
 from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def setup():
@@ -16,3 +17,4 @@ def build():
 
 def install():
     mesontools.ninja_install()
+    shelltools.system('sed -i "s|/usr/lib/gnome-settings-daemon/|/usr/libexec/|g" {}/etc/xdg/autostart/*'.format(get.installDIR()))
