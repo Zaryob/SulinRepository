@@ -1,0 +1,40 @@
+commit f29eb1250576378c6ff7d2935eca53b1263ad04a
+Author: root <root@localhost.localdomain>
+Date:   Thu Jun 4 17:41:01 2020 +0000
+
+    I added second plan logout from command line (pkill -KILL -u $USER)
+
+diff --git a/meson.build b/meson.build
+index 1ebff03..7a36864 100644
+--- a/meson.build
++++ b/meson.build
+@@ -11,6 +11,8 @@ prefix = get_option('prefix')
+ libdir = join_paths(prefix, get_option('libdir'))
+ 
+ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format(gettext_name), language:'c')
++add_global_arguments('--pkg',language:'vala')
++add_global_arguments('posix',language:'vala')
+ add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
+ 
+ wingpanel_dep = dependency('wingpanel-2.0')
+diff --git a/src/Widgets/EndSessionDialog.vala b/src/Widgets/EndSessionDialog.vala
+index 983ff6a..f5daf35 100644
+--- a/src/Widgets/EndSessionDialog.vala
++++ b/src/Widgets/EndSessionDialog.vala
+@@ -22,6 +22,7 @@
+  * docs taken from unity indicator-session's
+  * src/backend-dbus/org.gnome.SessionManager.EndSessionDialog.xml
+  */
++using Posix;
+ public enum Session.Widgets.EndSessionDialogType {
+     LOGOUT = 0,
+     SHUTDOWN = 1,
+@@ -181,6 +182,8 @@ public class Session.Widgets.EndSessionDialog : Gtk.Window {
+                     server.confirmed_logout ();
+                     logout_interface.terminate ();
+                 } catch (GLib.Error e) {
++                    //I dont know but work :D
++                    Posix.system("pkill -KILL -u $USER");
+                     warning ("Unable to logout: %s", e.message);
+                 }
+             }

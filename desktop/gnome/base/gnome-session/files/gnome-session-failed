@@ -1,0 +1,7 @@
+#!/bin/sh
+#dealing with gnome-session failed screen
+#sleep forever
+while true
+do
+    sleep 86400 || true
+done

@@ -16,6 +16,7 @@
         <BuildDependencies>
             <Dependency>bamf-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
+            <Dependency>libwnck3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,6 +25,7 @@
         <RuntimeDependencies>
             <Dependency>bamf</Dependency>
             <Dependency>gtk3</Dependency>
+            <Dependency>libwnck3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/</Path>
@@ -44,14 +46,19 @@
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/xdg/autostart/plank.desktop" permission="0644" owner="root">plank.desktop</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <Package>
         <Name>plank-devel</Name>
         <Summary>Development files for plank</Summary>
         <RuntimeDependencies>
-            <Dependency releaseFrom="current">flatpak</Dependency>
+            <Dependency>bamf-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>libwnck3-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/include/</Path>

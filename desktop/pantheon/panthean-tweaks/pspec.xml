@@ -1,7 +1,7 @@
 <!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>wingpanel-session</Name>
+        <Name>pantheon-tweaks</Name>
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>Stylish top panel that holds indicators and spawns an application launcher</Summary>
         <Description>Stylish top panel that holds indicators and spawns an application launcher</Description>
-        <Archive sha1sum="b4a7e50706d75c466b0935bc406fc6d149e3090b">https://github.com/elementary/wingpanel-indicator-session/archive/2.2.8.tar.gz</Archive>
+        <Archive sha1sum="78594e8610410110d85acfefa7e747f477ba05e3">https://github.com/elementary-tweaks/elementary-tweaks/archive/5e2e0e1d4ac8da72e616d126a85284902c324224.zip</Archive>
         <BuildDependencies>
             <Dependency>gconf-devel</Dependency>
             <Dependency>evolution-data-server-devel</Dependency>
@@ -36,13 +36,10 @@
             <Dependency>zeitgeist-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch>01-pkill-for-logout.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
-        <Name>wingpanel-session</Name>
+        <Name>pantheon-tweaks</Name>
          <RuntimeDependencies>
             <Dependency>gconf</Dependency>
             <Dependency>startup-notification</Dependency>
@@ -75,9 +72,12 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/themes</Path>
-            <Path fileType="data">/usr/share/wingpanel-session</Path>
+            <Path fileType="data">/usr/share/contractor</Path>
+            <Path fileType="data">/usr/share/pantheon-tweaks</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="data">/usr/share/metainfo</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
@@ -86,10 +86,10 @@
     </Package>
 
     <Package>
-        <Name>wingpanel-session-devel</Name>
-        <Summary>Development files for wingpanel-session</Summary>
+        <Name>pantheon-tweaks-devel</Name>
+        <Summary>Development files for pantheon-tweaks</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">wingpanel-session</Dependency>
+            <Dependency release="current">pantheon-tweaks</Dependency>
             <Dependency>gtk2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -101,7 +101,7 @@
     <History>
         <Update release="1">
             <Date>2019-09-18</Date>
-            <Version>2.1.5</Version>
+            <Version>0.0.1</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

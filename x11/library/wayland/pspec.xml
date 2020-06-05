@@ -13,7 +13,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>Wayland Compositor Infrastructure</Summary>
         <Description>Wayland is a protocol for a compositor to talk to its clients as well as a C library implementation of that protocol.</Description>
-        <Archive sha1sum="24c63a5045c653dcfa24efd10fa7c7de89aca9ef" type="tarxz">https://wayland.freedesktop.org/releases/wayland-1.16.0.tar.xz</Archive>
+        <Archive sha1sum="33e5292b32a115e829458ea627201ed1e4ad4f45" >https://wayland.freedesktop.org/releases/wayland-1.18.0.tar.xz</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>
@@ -95,6 +95,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-04-12</Date>
+            <Version>1.18.0</Version>
+            <Comment>Second release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>admins@inarylnux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>1.16.0</Version>

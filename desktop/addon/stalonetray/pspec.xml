@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>stalonetray</Name>
+        <Homepage>http://kaizer.se/wiki/keybinder/</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>app:gui</IsA>
+        <Summary>STAnd-aLONE sysTRAY. It has minimal build and run-time dependencies: the Xlib only.</Summary>
+        <Description>STAnd-aLONE sysTRAY. It has minimal build and run-time dependencies: the Xlib only.</Description>
+        <Archive sha1sum="3e7332b10877d9ae05cdb96341f3d1b95ce6f69e">https://master.dl.sourceforge.net/project/stalonetray/stalonetray/stalonetray-0.8.3/stalonetray-0.8.3.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libXpm-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>stalonetray</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="library">/usr/libexec/</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>0.8.3</Version>
+            <Comment>First release.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

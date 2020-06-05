@@ -2,7 +2,7 @@
 <!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>sconf</Name>
+        <Name>tekel</Name>
         <Homepage>https://gitlab.com/sulinos/devel/sulin-manager</Homepage>
         <Packager>
             <Name>Ali Rıza KESKİN</Name>
@@ -10,13 +10,13 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
-        <Summary>SulinOS config</Summary>
-        <Description>Sulin configure manager.</Description>
-        <Archive sha1sum="b86d08b46990298c990fe0fd2bd2401082dc213d">https://gitlab.com/sulinos/devel/sulin-manager/-/archive/1.0/sulin-manager-1.0.tar.gz</Archive>
+        <Summary>SulinOS userplace apps</Summary>
+        <Description>Sulin userspace app manager.</Description>
+        <Archive sha1sum="48eea3f0da53b912815cc9d9a56ee8e51374d045">https://gitlab.com/sulinos/devel/tekel/-/archive/1.0/tekel-1.0.tar.gz</Archive>
     </Source>
 
     <Package>
-        <Name>sconf</Name>
+        <Name>tekel</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
