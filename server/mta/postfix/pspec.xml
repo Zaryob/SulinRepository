@@ -1,0 +1,79 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>postfix</Name>
+        <Homepage>http://www.postfix.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>IPL-1</License>
+        <IsA>service</IsA>
+        <Summary>A fast and secure drop-in replacement for sendmail</Summary>
+        <Description>Postfix is Wietse Venema's mailer that started life as an alternative to the widely-used Sendmail program.</Description>
+        <Archive sha1sum="e83585d16d377056a87a6a7f4a04498d19031600">http://ftp.porcupine.org/mirrors/postfix-release/official/postfix-3.5.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>libtirpc-devel</Dependency>
+            <Dependency>rpcsvc-proto-devel</Dependency>
+            <Dependency>libnsl-devel</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>postfix</Name>
+        <RuntimeDependencies>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>rpcsvc-proto</Dependency>
+            <Dependency>libnsl</Dependency>
+            <Dependency>libtirpc</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/var</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/postfix/AAAREADME</Path>
+            <Path fileType="doc">/usr/share/doc/postfix/COMPATIBILITY</Path>
+            <Path fileType="doc">/usr/share/doc/postfix/HISTORY</Path>
+            <Path fileType="doc">/usr/share/doc/postfix/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/postfix/RELEASE_NOTES</Path>
+            <Path fileType="doc">/usr/share/doc/postfix/defaults</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/postfix">postfix.rc</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>postfix-docs</Name>
+        <Summary>Help files for postfix package</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">postfix</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1" type="security">
+            <Date>2020-06-06</Date>
+            <Version>3.5.2</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
