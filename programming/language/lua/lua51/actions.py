@@ -10,6 +10,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def build():
+    shelltools.system("sed -e 's:llua:llua5.1:' -e 's:/include:/include/lua5.1:' -i etc/lua.pc")
     shelltools.system("sed -r -e '/^LUA_(SO|A|T)=/ s/lua/lua5.1/' -e '/^LUAC_T=/ s/luac/luac5.1/' -i src/Makefile")
     autotools.make("MYCFLAGS=\"{}\" MYLDFLAGS=\"{}\" linux".format(get.CFLAGS(), get.LDFLAGS()))
 
@@ -30,5 +31,7 @@ def install():
     docs = [ "*.html", "*.png", "*.css", "*.gif" ]
     for d in docs:
         inarytools.insinto("/usr/share/doc/lua", "doc/%s" % d)
+    inarytools.insinto("/usr/lib/pkgconfig/", "etc/lua.pc")
+    inarytools.rename("/usr/lib/pkgconfig/lua.pc", "lua51.pc")
     inarytools.rename("/usr/share/man/man1/lua.1", "lua.5.1.1")
     inarytools.rename("/usr/share/man/man1/luac.1", "luac.5.1.1")
