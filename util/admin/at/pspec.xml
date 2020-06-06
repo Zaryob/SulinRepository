@@ -1,0 +1,53 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>at</Name>
+        <Homepage>http://blog.calhariz.com/tag/at</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Queues jobs for later execution</Summary>
+        <Description>Queues jobs for later execution</Description>
+        <Archive sha1sum="152f4ae45edb3635963fe9f358b4cecc0a41fffb" type="targz">http://software.calhariz.com/at/at_3.2.1.orig.tar.gz</Archive>
+        <Patches>
+            <Patch>at-3.1.8-more-deny.patch</Patch>
+            <Patch>at-3.1.14-Makefile.patch</Patch>
+            <Patch>at-3.1.13-configure.in-fix-PAM-automagick-dep.patch</Patch>
+            <Patch>at-3.1.10.2-Makefile.in-parallel-make-fix.patch</Patch>
+            <Patch>at-3.1.13-parallel-make-fix.patch</Patch>
+            <Patch>at-3.1.13-getloadavg.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>at</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/var/spool</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/pm-utils/sleep.d/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/atd">atd.rc8</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/atd">atd.pamd-3.1.13-r1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/atd">atd.confd</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-06</Date>
+            <Version>3.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
