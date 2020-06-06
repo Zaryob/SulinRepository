@@ -1,0 +1,48 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>logrotate</Name>
+        <Homepage>https://fedorahosted.org/releases/l/o/logrotate</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Rotates, compresses, removes and emails system log files</Summary>
+        <Description>logrotate is designed to ease administration of systems that generate large numbers of log files. It allows automatic rotation, compression, removal, and emailing of log files.</Description>
+        <Archive sha1sum="0dad4e7c3aefd18d9e29cff8c68884d45c98a472" type="targz">https://github.com/logrotate/logrotate/releases/download/3.16.0/logrotate-3.16.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>popt-devel</Dependency>
+            <Dependency>acl-devel</Dependency>
+        </BuildDependencies>
+        </Source>
+
+    <Package>
+        <Name>logrotate</Name>
+        <RuntimeDependencies>
+            <Dependency>popt</Dependency>
+            <Dependency>acl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+          <AdditionalFile owner="root" permission="0755" target="/etc/logrotate.conf">logrotate.conf</AdditionalFile>
+        </AdditionalFiles>
+
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-06</Date>
+            <Version>3.16.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
