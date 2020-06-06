@@ -1,0 +1,55 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-keyring</Name>
+        <Homepage>http://live.gnome.org/GnomeKeyring</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Compatibility library for accessing gnome-keyring</Summary>
+        <Description>gnome-keyring is a library that used by applications to integrate with the gnome-keyring system.</Description>
+        <Archive sha1sum="10a6a1c1c9ac66baadd96cb5ef5f3d18aee86f6a" >http://ftp.acc.umu.se/pub/gnome/sources/gnome-keyring/3.36/gnome-keyring-3.36.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gcr-devel</Dependency>
+        </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>gnome-keyring</Name>
+        <RuntimeDependencies>
+            <Dependency>gcr</Dependency>
+            <Dependency>libgcrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/xdg-desktop-portal</Path>
+            <Path fileType="man">/usr/share/man</Path>
+
+
+        </Files>
+    </Package>
+
+   
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+
+    </History>
+</INARY>

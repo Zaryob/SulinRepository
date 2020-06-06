@@ -1,0 +1,33 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>elementary-icons</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Library that extends Gtk+</Summary>
+        <Description>Library that extends Gtk+.</Description>
+        <Archive sha1sum="87a2528311979071b0162e8f2fe17876fa051956">https://github.com/elementary/icons/archive/5.3.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>elementary-icons</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

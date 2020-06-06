@@ -19,6 +19,8 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    #autotools.install()
+    inarytools.removeDir("/usr/share/locale")
+    for i in ["/usr/bin/wx-config","/usr/bin/wxrc","/usr/share/aclocal/wxwin.m4","/usr/share/bakefile/presets/wx_unix.bkl","/usr/share/bakefile/presets/wx.bkl","/usr/share/bakefile/presets/wx_presets.py","/usr/share/bakefile/presets/wx_xrc.bkl","/usr/share/bakefile/presets/wx_win32.bkl"]:
+        inarytools.remove(i)
 
     inarytools.dodoc("docs/*.txt", "docs/*.htm")

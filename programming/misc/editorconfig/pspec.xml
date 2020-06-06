@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>editorconfig</Name>
+        <Homepage>http://live.gnome.org/editorconfig</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>EditorConfig core code written in C (for use by plugins supporting EditorConfig parsing)</Summary>
+        <Description>EditorConfig core code written in C (for use by plugins supporting EditorConfig parsing)</Description>
+        <Archive sha1sum="69e54b664a990a630aeff6282f7294e5fadf712f">https://github.com/editorconfig/editorconfig-core-c/archive/v0.12.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libpcre2-devel</Dependency>
+         </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>editorconfig</Name>
+        <RuntimeDependencies>
+            <Dependency>libpcre2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="localedata">/usr/share/locale/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>editorconfig-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>editorconfig reference documents</Summary>
+        <RuntimeDependencies>
+            <Dependency>editorconfig</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>editorconfig-devel</Name>
+        <Summary>Development files for editorconfig</Summary>
+        <RuntimeDependencies>
+            <Dependency>libbrotli-devel</Dependency>
+            <Dependency>libpsl-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency release="current">editorconfig</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+ 
+        <Update release="1">
+            <Date>2019-09-28</Date>
+            <Version>0.12.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

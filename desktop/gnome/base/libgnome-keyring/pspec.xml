@@ -1,0 +1,67 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libgnome-keyring</Name>
+        <Homepage>http://live.gnome.org/GnomeKeyring</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Compatibility library for accessing gnome-keyring</Summary>
+        <Description>gnome-keyring is a library that used by applications to integrate with the gnome-keyring system.</Description>
+        <Archive sha1sum="69b21d77e0946911b2e71346d219bb19b74d05f8" >http://ftp.acc.umu.se/pub/gnome/sources/libgnome-keyring/3.12/libgnome-keyring-3.12.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gcr-devel</Dependency>
+        </BuildDependencies>
+
+    </Source>
+
+    <Package>
+        <Name>libgnome-keyring</Name>
+        <RuntimeDependencies>
+            <Dependency>gcr</Dependency>
+            <Dependency>libgcrypt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="locale">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/xdg-desktop-portal</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+
+        </Files>
+    </Package>
+    
+        <Package>
+        <Name>libgnome-keyring-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>libgnome-keyring</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/include</Path>
+
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.12.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+
+    </History>
+</INARY>

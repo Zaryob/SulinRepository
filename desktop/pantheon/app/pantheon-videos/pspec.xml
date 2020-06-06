@@ -1,7 +1,7 @@
 <!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
 <INARY>
     <Source>
-        <Name>gala</Name>
+        <Name>pantheon-videos</Name>
         <Homepage>http://www.gnome.org</Homepage>
         <Packager>
             <Name>Süleyman Poyraz</Name>
@@ -9,16 +9,12 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:gui</IsA>
-        <Summary>GTK+ based window manager</Summary>
-        <Description>gala is a GTK+ baded window manager that controls placement of windows.</Description>
-        <Archive sha1sum="65c97a14cab444506bfab063cd8585adf3e9734d">https://github.com/elementary/gala/archive/3.3.2.tar.gz</Archive>
+        <Summary>Pantheon videos</Summary>
+        <Description>pantheon videos app</Description>
+        <Archive sha1sum="878e59bee4dba262a230df2d1599e280974259ff">https://github.com/elementary/videos/archive/2.7.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>bamf-devel</Dependency>
-            <Dependency>plank-devel</Dependency>
-            <Dependency>libdbusmenu-glib</Dependency>
-            <Dependency>libdbusmenu-gtk</Dependency>
-            <Dependency>mutter-devel</Dependency>
-            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>clutter-gst-devel</Dependency>
+            <Dependency>libcloudproviders-devel</Dependency>
             <Dependency>gconf-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
@@ -37,20 +33,18 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libgit2-glib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>gala</Name>
+        <Name>pantheon-videos</Name>
          <RuntimeDependencies>
+            <Dependency>clutter-gst</Dependency>
             <Dependency>gconf</Dependency>
             <Dependency>startup-notification</Dependency>
-            <Dependency>bamf</Dependency>
-            <Dependency>gnome-desktop</Dependency>
-            <Dependency>libdbusmenu-glib</Dependency>
-            <Dependency>libdbusmenu-gtk</Dependency>
-            <Dependency>mutter</Dependency>
-            <Dependency>plank</Dependency>
+            <Dependency>libcloudproviders</Dependency>
+            <Dependency>libgit2-glib</Dependency>
             <Dependency>libXcomposite</Dependency>
             <Dependency>libXrandr</Dependency>
             <Dependency>libXinerama</Dependency>
@@ -79,20 +73,24 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/themes</Path>
-            <Path fileType="data">/usr/share/gala</Path>
+            <Path fileType="data">/usr/share/io*</Path>
+            <Path fileType="data">/usr/share/fish</Path>
             <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="data">/usr/share/metainfo</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
         </Files>
     </Package>
 
     <Package>
-        <Name>gala-devel</Name>
-        <Summary>Development files for gala</Summary>
+        <Name>pantheon-videos-devel</Name>
+        <Summary>Development videos for videos</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">gala</Dependency>
+            <Dependency release="current">pantheon-videos</Dependency>
             <Dependency>gtk2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -104,7 +102,7 @@
     <History>
         <Update release="1">
             <Date>2019-09-18</Date>
-            <Version>3.3.2</Version>
+            <Version>2.7.1</Version>
             <Comment>First release</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>

@@ -14,7 +14,7 @@
         <IsA>library</IsA>
         <Summary>GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit</Summary>
         <Description>wxWidgets/GTK2 is the GTK2 port of the C++ cross-platform wxWidgets GUI library, offering classes for all common GUI controls as well as a comprehensive set of helper classes for most common application tasks, ranging from networking to HTML display and image manipulation.</Description>
-        <Archive sha1sum="edb9f65d380b47b3d31455dd62d3315f24ffd715">https://github.com/wxWidgets/wxWidgets/archive/v3.0.4.zip</Archive>
+        <Archive sha1sum="1bf7c4f8e291e6574f7d894368bd46842c3bb7bd">https://github.com/wxWidgets/wxWidgets/archive/v3.0.5.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>tiff</Dependency>
@@ -56,7 +56,7 @@
             <Path fileType="library">/usr/lib/</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc/</Path>
-            <Path fileType="data">/usr/share/aclocal/</Path>
+            <Path fileType="data">/usr/share/</Path>
             <Path fileType="data">/usr/share/bakefile/</Path>
             <Path fileType="library">/usr/lib/wx/config</Path>
             <Path fileType="localedata">/usr/share/locale/</Path>
@@ -67,7 +67,7 @@
         <Name>wxGTK30-devel</Name>
         <Summary>wxGTK-devel is the development files for wxGTK</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">wxGTK</Dependency>
+            <Dependency release="current">wxGTK30</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -75,6 +75,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.0.5</Version>
+            <Comment>Upgrade</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.0.4</Version>

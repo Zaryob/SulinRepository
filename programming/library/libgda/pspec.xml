@@ -1,0 +1,75 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libgda</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Database access library</Summary>
+        <Description>Database access library</Description>
+        <Archive sha1sum="005d3be4448ae9faa5fe422f8479630793adf89e" >https://ftp.gnome.org/pub/GNOME/sources/libgda/5.2/libgda-5.2.9.tar.xz</Archive>
+         <BuildDependencies>
+           <Dependency>glib2-devel</Dependency>
+           <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgda</Name>
+        <RuntimeDependencies>
+           <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/libgda-5.0</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgda-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>libgda reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgda-devel</Name>
+        <Summary>Development files for libgda</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency release="current">libgda</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>5.2.9</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
