@@ -1,0 +1,35 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>rdate</Name>
+        <Homepage>http://www.freshmeat.net/projects/rdate/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Retrieve current date and time of another machine over the web and optionally set local date and time</Summary>
+        <Description>Rdate displays and sets the local date and time from the host name or address given as the argument.</Description>
+        <Archive sha1sum="d7212503907db741ab53c4dd13ed141702d1809b" type="targz">https://www.aelius.com/njh/rdate/rdate-1.5.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>rdate</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-06</Date>
+            <Version>1.5</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
