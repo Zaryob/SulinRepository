@@ -21,10 +21,16 @@
             <Patch>at-3.1.13-parallel-make-fix.patch</Patch>
             <Patch>at-3.1.13-getloadavg.patch</Patch>
         </Patches>
+        <BuildDependencies>
+            <Dependency>postfix</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>at</Name>
+        <RuntimeDependencies>
+            <Dependency>postfix</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/sbin</Path>
@@ -36,7 +42,7 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/etc/init.d/atd">atd.rc8</AdditionalFile>
-            <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/atd">atd.pamd-3.1.13-r1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/atd">at.pamd-3.1.13-r1</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/atd">atd.confd</AdditionalFile>
         </AdditionalFiles>
     </Package>
