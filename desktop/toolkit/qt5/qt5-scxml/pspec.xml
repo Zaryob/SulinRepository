@@ -18,7 +18,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="1c6e8b21eb57744548e8321fb026ef79653f216d" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtscxml-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="5f1c2c0db57e5af5bb49a3170fcc556972b7b63e" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtscxml-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-scxml</Name>
