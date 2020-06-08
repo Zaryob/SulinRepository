@@ -55,6 +55,7 @@
         </RuntimeDependencies>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/usr/share/gnome-session/sessions/gnome.session">gnome.session</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/startgnome">startgnome</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/usr/libexec/gnome-session-failed">gnome-session-failed</AdditionalFile>
         </AdditionalFiles>
         <Files>

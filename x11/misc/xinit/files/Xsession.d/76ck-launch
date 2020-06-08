@@ -1,0 +1,2 @@
+#Xsession with consolekit support
+which ck-launch-session && STARTUP="ck-launch-session $STARTUP"

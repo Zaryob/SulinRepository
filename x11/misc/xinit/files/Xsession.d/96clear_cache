@@ -1,0 +1,4 @@
+# vim:set ft=sh sw=2 sts=2 et:
+
+#clear cahce is exists
+[ -d $HOME/.cache ] && rm -rf $HOME/.cache/*

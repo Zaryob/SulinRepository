@@ -10,7 +10,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--with-elogind --without-systemd --disable-static --with-gtk3")
+    autotools.configure("--with-elogind --without-systemd --disable-static --with-gtk3 --disable-upower")
 
 def build():
     autotools.make()

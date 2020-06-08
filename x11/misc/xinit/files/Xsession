@@ -6,8 +6,6 @@
 
 # $Id: Xsession 967 2005-12-27 07:20:55Z dnusinow $
 
-set -e
-
 PROGNAME=Xsession
 
 message () {
@@ -79,13 +77,11 @@ exec >>"$ERRFILE" 2>&1
 echo "$PROGNAME: X session started for $LOGNAME at $(date)"
 
 # Load profile
-set +e
 for file in "/etc/profile" "$HOME/.profile"; do
   if [ -f "$file" ] && ! . "$file"; then
     echo "Error loading $file"
   fi
 done
-set -e
 
 # sanity check; is our session script directory present?
 if [ ! -d "$SYSSESSIONDIR" ]; then
@@ -97,7 +93,7 @@ fi
 # because they won't actually create a file with contents.  We also let standard
 # error from tempfile and echo go to the error file to aid the user in
 # determining what went wrong.
-WRITE_TEST=$(tempfile)
+WRITE_TEST=$(mktemp)
 if ! echo "*" >>"$WRITE_TEST"; then
   message "warning: unable to write to ${WRITE_TEST%/*}; X session may exit" \
           "with an error"
@@ -110,13 +106,10 @@ rm -f "$WRITE_TEST"
 # other
 SESSIONFILES=$(run-parts --list $SYSSESSIONDIR)
 if [ -n "$SESSIONFILES" ]; then
-  set +e
   for SESSIONFILE in $SESSIONFILES; do
     . $SESSIONFILE
   done
-  set -e
 fi
-
 exit 0
 
 # vim:set ai et sts=2 sw=2 tw=80:
