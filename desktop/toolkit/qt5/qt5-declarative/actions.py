@@ -25,8 +25,10 @@ def install():
     #inarytools.insinto("/usr/lib/qt5/qml", "qml/Qt")
     #inarytools.insinto("/usr/lib/qt5/qml", "qml/QtQuick")
     #inarytools.insinto("/usr/lib/qt5/qml", "qml/QtQuick.2")
-    #inarytools.insinto("/usr/lib/qt5/qml", "qml/QtTest")        
+    #inarytools.insinto("/usr/lib/qt5/qml", "qml/QtTest")
+    qt.install("INSTALL_ROOT=%s" % get.installDIR())
     qt.install("INSTALL_ROOT=%s install_docs" % get.installDIR())
+
 
     #I hope qtchooser will manage this issue
     for bin in shelltools.ls("%s/usr/lib/qt5/bin" % get.installDIR()):

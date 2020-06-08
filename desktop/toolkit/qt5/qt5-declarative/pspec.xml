@@ -11,7 +11,7 @@
         <Summary>Classes for QML and JavaScript languages</Summary>
         <Description>Classes for QML and JavaScript languages</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="2ea4a2ffe698987423f6ee63d58fbba433fe0910" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtdeclarative-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="4fe253e411c6e74bf032e6be76a3e04ed3008b9b" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtdeclarative-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
