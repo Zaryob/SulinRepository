@@ -11,7 +11,7 @@
         <Summary>Next generation user interface controls based on Qt Quick</Summary>
         <Description>Next generation user interface controls based on Qt Quick</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="cd92842b0357df6a2f5cde81e26ac6384dd74fbd" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtquickcontrols2-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="f3eba87fb2c212edfb2d1392dfd1d47fb864b411" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtquickcontrols2-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
