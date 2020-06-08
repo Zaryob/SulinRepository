@@ -11,7 +11,7 @@
         <Summary>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Summary>
         <Description>Classes for making Qt applications scriptable. Provided for Qt 5.x compatibility</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="dec3c458b27a88d8b50e853010c409bac520f177" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtscript-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="465b9677f4311566bcfb6133b1d1af7c39280e98" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtscript-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
