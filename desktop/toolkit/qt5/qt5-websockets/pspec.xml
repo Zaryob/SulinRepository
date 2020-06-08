@@ -11,7 +11,7 @@
         <Summary>Provides WebSocket communication compliant with RFC 6455</Summary>
         <Description>Provides WebSocket communication compliant with RFC 6455</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="755559ead6481cea9bb3a5e32b0f2c57eb621806" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtwebsockets-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="2171f91d0a184a1dbd000ea66fb7b2d9e731625a" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtwebsockets-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
