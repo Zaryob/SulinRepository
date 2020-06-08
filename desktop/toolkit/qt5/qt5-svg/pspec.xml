@@ -9,7 +9,7 @@
         <License>LGPLv2.1-linking-exception</License>
         <Summary>Classes for displaying the contents of SVG files</Summary>
         <Description>Classes for displaying the contents of SVG files</Description>
-        <Archive sha1sum="8f8acf97605c66935aa3cf26cea008ed565badc4" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtsvg-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="6da4345fcb676f8483c282dee1366db31370775b" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtsvg-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>mesa-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
