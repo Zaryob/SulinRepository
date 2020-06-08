@@ -15,7 +15,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="420eb7e444036483e531141257d0cf2186c538a3" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtcharts-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="b49720f37facc3b72ed29aafbbf25ac1bf257cd8" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtcharts-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-charts</Name>
