@@ -11,7 +11,7 @@
         <Summary>Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Summary>
         <Description>Plugins for additional image formats: TIFF, MNG, TGA, WBMP</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="bfcc484e606a5a520c9f0d4f65e6e29925a303e2" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtimageformats-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="e7c816cb8f06c8e88d4b59d084db29dc5fe45a26" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtimageformats-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
