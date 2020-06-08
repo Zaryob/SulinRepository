@@ -18,7 +18,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-serialport-devel</Dependency>
         </BuildDependencies>
-        <Archive type="tarxz" sha1sum="5889c02a1794fd6a7f4bba965de1ae426851f74f">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtserialbus-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive type="tarxz" sha1sum="39668c6b633afa92c20bf282d397637a6a1c6aa1">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtserialbus-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-serialbus</Name>
