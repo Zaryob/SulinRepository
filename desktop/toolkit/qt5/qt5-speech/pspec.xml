@@ -14,7 +14,7 @@
         <License>LGPL3</License>
         <Summary>Qt module to make text to speech and speech recognition easy</Summary>
         <Description>Qt module to make text to speech and speech recognition easy</Description>
-        <Archive sha1sum="2c469c10e32a41f1e581b663fa00f6b80376871d" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtspeech-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="051d64715c0a289f703ffc3f540d7c4c43558985" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtspeech-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>flite-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
