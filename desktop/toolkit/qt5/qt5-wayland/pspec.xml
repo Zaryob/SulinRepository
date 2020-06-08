@@ -11,7 +11,7 @@
         <Summary>Provides APIs for Wayland</Summary>
         <Description>Provides APIs for Wayland</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="6dcc620039f6b586c575a61181d2f47514c1f4b4" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtwayland-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="b4acd5f872228537b2b3f34ae53e2731cf59282c" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtwayland-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
