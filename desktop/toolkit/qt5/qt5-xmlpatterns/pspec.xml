@@ -11,7 +11,7 @@
         <Summary>Support for XPath, XQuery, XSLT and XML schema validation</Summary>
         <Description>Support for XPath, XQuery, XSLT and XML schema validation</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="7f1442dcfc82d29637afb279914f34a477b3f048" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtxmlpatterns-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="e4a401417b15ad59eb07c8a32805c975bff5edf4" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtxmlpatterns-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
