@@ -11,7 +11,7 @@
         <Summary>Provides access to sensor hardware and motion gesture recognition</Summary>
         <Description>Provides access to sensor hardware and motion gesture recognition</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="3b13d02d4d6abab1a6b7d75fe02e47d957e4d9a9" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtsensors-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="b954a47bf6bebd78e6a92654f8e0ad7802b3536d" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtsensors-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
