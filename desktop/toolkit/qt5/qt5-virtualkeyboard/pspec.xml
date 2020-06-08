@@ -17,7 +17,7 @@
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
         </BuildDependencies>
-        <Archive type="tarxz" sha1sum="9ee6c2f983edd91e12a0a350a70a04bd956dcb45">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtvirtualkeyboard-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive type="tarxz" sha1sum="36bbe7e30eae3967429f14c127e860148409b96b">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtvirtualkeyboard-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-virtualkeyboard</Name>
