@@ -11,7 +11,7 @@
         <Summary>Provides access to position, satellite and area monitoring classes</Summary>
         <Description>Provides access to position, satellite and area monitoring classes</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="3fc7cf7a1793e143c35ddadf4ea8cd2d9eb076de" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtlocation-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="662ddf62ac76d1d11c1356a969bdb9f04e0eca36" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtlocation-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>geoclue-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
