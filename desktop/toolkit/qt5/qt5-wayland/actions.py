@@ -18,7 +18,6 @@ def build():
 
 def install():
     qt.install("INSTALL_ROOT=%s" % get.installDIR())
-    qt.install("INSTALL_ROOT=%s install_docs" % get.installDIR())
 
 
     #I hope qtchooser will manage this issue
