@@ -16,7 +16,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="3a281730f62332d6ce83031a66390935ac783f10" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtdatavis3d-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="54b28b8a9c8b995d871422dc492231fec5c4e6df" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtdatavis3d-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-datavis3d</Name>
