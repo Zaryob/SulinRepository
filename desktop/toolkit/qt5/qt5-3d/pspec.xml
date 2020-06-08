@@ -20,7 +20,7 @@
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>assimp-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="5685ad49cee639289153fb834befb5553f39bb20" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qt3d-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="5c186b6de295fd2890103e5992bfd455722ad3eb" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qt3d-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-3d</Name>
