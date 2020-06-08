@@ -19,7 +19,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="21dd83890858b442a0c95b4981da4f28d21f255b" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtgamepad-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="d6f6061a34d3cf6cafd2e4b7dcf93fc5e83549af" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtgamepad-everywhere-src-5.15.0.tar.xz</Archive>
     </Source>
     <Package>
         <Name>qt5-gamepad</Name>
