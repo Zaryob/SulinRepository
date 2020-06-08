@@ -11,7 +11,7 @@
         <Summary>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Summary>
         <Description>Provides access to QObject or QML objects from HTML clients for seamless integration of Qt applications with HTML/JavaScript clients</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="6f5ae1a6cfa5f1f69f1caecb0c29eaadefab74e8" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtwebchannel-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="e8ee9d9b23ad23fa7247f00df26be7f268a178fe" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtwebchannel-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
