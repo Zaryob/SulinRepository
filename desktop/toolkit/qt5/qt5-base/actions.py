@@ -54,7 +54,7 @@ def setup():
                             -bindir %s \
                             -headerdir %s \
                             -archdatadir %s\
-                            -plugin-sql-{psql,sqlite,odbc} \
+                            -plugin-sql-{psql,mysql,sqlite,odbc} \
                             -docdir %s \
                             -plugindir %s \
                             -importdir %s \

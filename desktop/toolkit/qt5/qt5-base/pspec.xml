@@ -14,7 +14,7 @@
         <License>LGPL3</License>
         <License>FDL</License>
         <License>custom</License>
-        <Archive sha1sum="bd1b54cb5cc38bea4a84e18ac1e304b2a8f7fd55" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtbase-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="f5191757d1125aa7750a3f5d39321490477cfb65" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtbase-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
             <Dependency>ccache</Dependency>
@@ -129,7 +129,7 @@
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="library">/usr/lib/qt5/imports</Path>
-            <Path fileType="library">/usr/lib/qt5/qml</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir</Path>
             <Path fileType="library">/usr/lib/qt5/plugins</Path>
             <Path fileType="localdata">/usr/share/qt5/translations</Path>
             <Path fileType="executable">/usr/lib/qt5/bin</Path>
@@ -262,7 +262,7 @@
             <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlodbc.so</Path>
         </Files>
     </Package>
-    <Package>
+    <!--Package>
         <Name>qt5-base-32bit</Name>
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for qt5</Summary>
@@ -319,7 +319,7 @@
         <Files>
             <Path fileType="library">/usr/lib32</Path>
         </Files>
-    </Package>
+    </Package-->
 
     <History>
         <Update release="7">
