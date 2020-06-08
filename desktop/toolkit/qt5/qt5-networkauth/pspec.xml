@@ -13,7 +13,7 @@
         <License>FDL</License>
         <License>GPLv3</License>
         <License>LGPLv3</License>
-        <Archive sha1sum="ad0f1754b3c501c9c06282d8781d26f07af56e14" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtnetworkauth-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="fbf876cf5b64457fd8c45ff33d7242f2d391c664" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtnetworkauth-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
