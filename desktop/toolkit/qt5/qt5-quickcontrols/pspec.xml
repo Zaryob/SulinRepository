@@ -11,7 +11,7 @@
         <Summary>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Summary>
         <Description>Reusable Qt Quick based UI controls to create classic desktop-style user interfaces</Description>
         <License>LGPLv2.1-linking-exception</License>
-        <Archive sha1sum="0cfca95843d0684c90cf8f624d3dd9ef2ced8f0c" type="tarxz">http://download.qt.io/official_releases/qt/5.14/5.14.0/submodules/qtquickcontrols-everywhere-src-5.14.0.tar.xz</Archive>
+        <Archive sha1sum="d65442b321e532d690b59319917b29c2ee9ec3c6" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtquickcontrols-everywhere-src-5.15.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
