@@ -106,6 +106,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/libexec</Path>
             <Path fileType="library">/usr/lib/girepository-1.0</Path>
             <Path fileType="library">/usr/lib/webkit2gtk-4.0</Path>
             <Path fileType="library">/usr/lib/libwebkit2gtk*</Path>

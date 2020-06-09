@@ -5,7 +5,6 @@
 # See the file http://www.gnu.org/licenses/gpl.txt
 
 from inary.actionsapi import get
-from inary.actionsapi import cmaketools
 from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
@@ -15,29 +14,19 @@ docs = ["AUTHORS", "COPYING.LIB", "THANKS", \
         "LICENSE-LGPL-2", "LICENSE-LGPL-2.1", "LICENSE"]
 
 def setup():
-    shelltools.system("mkdir build")
-    shelltools.cd("build")
-    shelltools.system(" cmake \
-    -DPORT=GTK \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_SKIP_RPATH=ON \
-    -DENABLE_GTKDOC=ON \
-    -DUSE_LIBHYPHEN=OFF \
-    -DENABLE_MINIBROWSER=ON \
-    -DLIBEXEC_INSTALL_DIR=/usr/lib \
-    -DLIB_INSTALL_DIR=/usr/lib\
-    -G Ninja ..")
-
+    mesontools.cmake_configure("-DPORT=GTK \
+                                -DCMAKE_SKIP_RPATH=ON \
+                                -DENABLE_GTKDOC=OFF \
+                                -DUSE_LIBHYPHEN=OFF \
+                                -DENABLE_MINIBROWSER=ON")
 def build():
-    shelltools.cd("build")
-    shelltools.system("ninja JavaScriptCore-4-gir -j16")
-    shelltools.system("ninja -j16")
+    mesontools.ninja_build()
+    mesontools.ninja_build('JavaScriptCore-4-gir')
+
 
 def install():
-    shelltools.cd("build")
-    shelltools.system("ninja installDESTDIR=%s" % get.installDIR())
 
+    mesontools.ninja_install()
     inarytools.dodoc("NEWS")
     shelltools.cd("Source")
     for path in paths:
