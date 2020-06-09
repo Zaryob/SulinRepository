@@ -13,14 +13,14 @@
         <Description>gnome-settings-daemon shares MATE specific settings with other applications via DBus connection.</Description>
         <Archive sha1sum="8b9e18c1760c64b23cfaeb3e766b7a5428b7159b" >http://pub.mate-desktop.org/releases/1.24/mate-settings-daemon-1.24.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>nss</Dependency>
-            <Dependency>gtk2</Dependency>
-            <Dependency>dconf</Dependency>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>dconf-devel</Dependency>
             <Dependency>mate-common</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>libXi</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
             <Dependency>gstreamer</Dependency>
-            <Dependency>libnotify</Dependency>
+            <Dependency>libnotify-devel</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libmatekbd</Dependency>

@@ -10,11 +10,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("\
-                         --disable-static \
-			             --enable-pulse \
-                        --with-gtk3 \
-                         --enable-polkit")
+    autotools.configure("--enable-pulse --enable-compile-warnings=maximum \
+                        --with-gtk3")
     
     # for fix unused dependency
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
