@@ -60,6 +60,7 @@
             <Dependency>wpebackend-fdo-devel</Dependency>
             <Dependency>xdg-dbus-proxy</Dependency>
             <Dependency>bubblewrap</Dependency>
+            <Dependency>hyphen</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -99,6 +100,7 @@
             <Dependency>gst-plugins-good</Dependency>
             <Dependency>gst-plugins-bad</Dependency>
             <Dependency>libwpe</Dependency>
+            <Dependency>hyphen</Dependency>
             <Dependency>bubblewrap</Dependency>
             <Dependency>wpebackend-fdo</Dependency>
         </RuntimeDependencies>

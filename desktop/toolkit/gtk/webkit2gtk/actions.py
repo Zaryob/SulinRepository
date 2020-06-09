@@ -23,6 +23,7 @@ def setup():
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_SKIP_RPATH=ON \
     -DENABLE_GTKDOC=ON \
+    -DUSE_LIBHYPHEN=OFF \
     -DENABLE_MINIBROWSER=ON \
     -DLIBEXEC_INSTALL_DIR=/usr/lib \
     -DLIB_INSTALL_DIR=/usr/lib\
@@ -30,8 +31,8 @@ def setup():
 
 def build():
     shelltools.cd("build")
-    shelltools.system("ninja JavaScriptCore-4-gir")
-    shelltools.system("ninja")
+    shelltools.system("ninja JavaScriptCore-4-gir -j16")
+    shelltools.system("ninja -j16")
 
 def install():
     shelltools.cd("build")

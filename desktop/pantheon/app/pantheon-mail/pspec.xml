@@ -1,0 +1,109 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pantheon-mail</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Pantheon files</Summary>
+        <Description>pantheon files app</Description>
+        <Archive sha1sum="2957f4d2d1f3eb1767d5bb7a03a86344f2a7f396">https://github.com/elementary/mail/archive/a6c730c59394e6dc56d375caf5881bb994a3505e.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libcloudproviders-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libgit2-glib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pantheon-mail</Name>
+         <RuntimeDependencies>
+            <Dependency>gconf</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>libcloudproviders</Dependency>
+            <Dependency>libgit2-glib</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/themes</Path>
+            <Path fileType="data">/usr/share/io*</Path>
+            <Path fileType="data">/usr/share/fish</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>pantheon-mail-devel</Name>
+        <Summary>Development files for files</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">pantheon-mail</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.0.8</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
