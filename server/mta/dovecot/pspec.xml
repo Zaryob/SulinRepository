@@ -1,0 +1,68 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dovecot</Name>
+        <Homepage>http://www.dovecot.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>service</IsA>
+        <Summary>Secure POP3 and IMAP server</Summary>
+        <Description>An IMAP and POP3 server written with security primarily in mind.</Description>
+        <Archive sha1sum="cf0d572b640bec519c3c771716d0b32148dc2bd4">https://dovecot.org/releases/2.3/dovecot-2.3.10.tar.gz</Archive>
+        <Archive sha1sum="5be045df084dfffd6b0103bdb299c5b60c62bc7d">https://pigeonhole.dovecot.org/releases/2.3/dovecot-2.3-pigeonhole-0.5.10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>clucene-devel</Dependency>
+            <Dependency>lua51-devel</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>dovecot</Name>
+        <RuntimeDependencies>
+            <Dependency>clucene</Dependency>
+            <Dependency>lua51</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>cyrus-sasl</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>openldap-client</Dependency>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/var/run</Path>
+            <Path fileType="data">/usr/share/dovecot</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+          <AdditionalFile owner="root" permission="0755" target="/etc/init.d/dovecot">dovecot.init-r6</AdditionalFile>
+          <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/dovecot">dovecot.pam</AdditionalFile>
+          <AdditionalFile owner="root" permission="0755" target="/etc/ld.so.conf.d/dovecot.conf">ld.so.conf</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-06</Date>
+            <Version>2.3.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

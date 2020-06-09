@@ -1,0 +1,37 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>inxi</Name>
+        <Homepage>http://code.google.com/p/inxi/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>app:console</IsA>
+        <Summary>inxi is a full featured CLI system information tool.</Summary>
+        <Description>inxi is a full featured CLI system information tool. It is available in most Linux distribution repositories, and does its best to support the BSDs. http://smxi.org/docs/inxi.html</Description>
+        <Archive sha1sum="f3dcb1d2c4775280e725569d4b5d2af90e43ae41">https://github.com/smxi/inxi/archive/3.1.00-1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>inxi</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/kde4/apps/konversation/scripts/inxi</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>3.1.00</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

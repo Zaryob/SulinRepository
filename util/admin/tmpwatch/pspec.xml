@@ -1,0 +1,37 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org.tr/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tmpwatch</Name>
+        <Homepage>https://fedorahosted.org/tmpwatch</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Remove files based on their last access time</Summary>
+        <Description>Utility which recursively searches through specified directories and removes files which have not been accessed in a specified period of time.</Description>
+        <Archive sha1sum="c578dd98e5ea64ad987a95ae55926685a0df0659">https://releases.pagure.org/tmpwatch/tmpwatch-2.11.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>tmpwatch</Name>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-06</Date>
+            <Version>2.11</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

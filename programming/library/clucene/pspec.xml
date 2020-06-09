@@ -1,0 +1,58 @@
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>clucene</Name>
+        <Homepage>http://clucene.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <License>Apache-2.0</License>
+        <IsA>library</IsA>
+        <Summary>C++ port of the high-performance text search engine Lucene</Summary>
+        <Description>C++ port of the high-performance text search engine Lucene</Description>
+        <Archive sha1sum="76d6788e747e78abb5abf8eaad78d3342da5f2a4" type="targz">http://downloads.sourceforge.net/clucene/clucene-core-2.3.3.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>clucene-2.3.3.4-contrib.patch</Patch>
+            <Patch>clucene-2.3.3.4-gcc6.patch</Patch>
+            <Patch>clucene-2.3.3.4-gmtime.patch</Patch>
+            <Patch>clucene-2.3.3.4-pkgconfig.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>clucene</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>clucene-devel</Name>
+        <Summary>Development files for clucene</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">clucene</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>2.3.3.4</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

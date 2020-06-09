@@ -1,0 +1,34 @@
+
+<!DOCTYPE INARY SYSTEM "http://www.sulin.org/projeler/inary/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>patchelf</Name>
+        <Homepage>https://nixos.org/patchelf.html</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Small utility to modify the dynamic linker and RPATH of ELF executables</Summary>
+        <Description>Small utility to modify the dynamic linker and RPATH of ELF executables</Description>
+        <Archive sha1sum="e951ef509955c056ad70b863b51e2ee1f20ca3e1" type="targz">https://nixos.org/releases/patchelf/patchelf-0.10/patchelf-0.10.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>patchelf</Name>
+        <Summary>Small utility to modify the dynamic linker and RPATH of ELF executables</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>         
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>0.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
