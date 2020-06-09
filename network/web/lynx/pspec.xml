@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Lynx is the text web browser.</Summary>
         <Description>This is the top level page for the Lynx software distribution site hosted by the Internet Software Consortium.</Description>
-        <Archive sha1sum="98e327df323246c4d22f1cdd12fd6b87f9ec82eb" type="zip">http://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.0dev.4.zip</Archive>
+        <Archive sha1sum="96b11860826099eb906a0af8da80856ab3d3cf47" type="zip">http://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.0dev.5.zip</Archive>
         <BuildDependencies>
         </BuildDependencies>
         <Patches>
@@ -38,6 +38,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-05-12</Date>
+            <Version>2.9.0_rc5</Version>
+            <Comment>Second release</Comment>
+            <Name>Furkan Karcıoğlu</Name>
+            <Email>krc440002@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-27</Date>
             <Version>2.9.0_rc4</Version>

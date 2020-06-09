@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>links</Name>
+        <Homepage>http://links.twibright.com/</Homepage>
+        <Packager>
+            <Name>Furkan Karcıoğlu</Name>
+            <Email>krc440002@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>network.web</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>A text-based browser.</Summary>
+        <Description>A text WWW browser, similar to Lynx.</Description>
+        <Archive sha1sum="dbcd36c9b37ba6340ce63bb77b7e1c2dec0cfdee" type="tarbz2">http://links.twibright.com/download/links-2.20.2.tar.bz2</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+        <Patches>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>links</Name>
+        <RuntimeDependencies>
+            <Dependency>libevent</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libpcre2</Dependency>
+        </RuntimeDependencies>
+
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-27</Date>
+            <Version>2.20.2</Version>
+            <Comment>First release</Comment>
+            <Name>Furkan Karcıoğlu</Name>
+            <Email>krc440002@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
