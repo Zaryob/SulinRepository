@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>weston</Name>
+        <Homepage>http://weston.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>weston compositor</Summary>
+        <Description>Weston is the reference implementation of a Wayland compositor, and a useful compositor in its own right. It has various backends that lets it run on Linux kernel modesetting and evdev input as well as under X11. Weston also ships with a few example clients, from simple clients that demonstrate certain aspects of the protocol to more complete clients and a simplistic toolkit.</Description>
+        <Archive sha1sum="80200a9c677d34c2de52230be444bd03ecd84229" >http://wayland.freedesktop.org/releases/weston-8.0.0.tar.xz</Archive>
+        <BuildDependencies>
+        <Dependency>libmtdev-devel</Dependency>
+        <Dependency>libva-devel</Dependency>
+        <Dependency>pam-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>weston</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec/</Path>
+            <Path fileType="library">/usr/share/libweston*/</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/wayland-sessions</Path>
+            <Path fileType="data">/usr/share/weston</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>weston-devel</Name>
+        <Summary>Development files for weston</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">weston</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+    <!--Package>
+        <Name>weston-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for weston</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>libffi-32bit</Dependency>
+            <Dependency>expat-32bit</Dependency>
+            <Dependency>libxml2-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">weston</Dependency>
+            <Dependency>expat-32bit</Dependency>
+            <Dependency>libffi-32bit</Dependency>
+            <Dependency>libxml2-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+              <Path fileType="library">/usr/lib32/libweston*</Path>
+        </Files>
+    </Package-->
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>8.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>admins@inarylnux.org</Email>
+        </Update>
+    </History>
+</INARY>

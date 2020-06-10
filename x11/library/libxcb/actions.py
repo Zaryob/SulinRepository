@@ -8,17 +8,14 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    inarytools.flags.add("-DNDEBUG")
+    #inarytools.flags.add("-DNDEBUG")
 
     autotools.autoreconf("-vfi")
     autotools.configure("PYTHON=/usr/bin/python3 \
                          --disable-static \
-                         --enable-xevie \
-                         --enable-xprint \
-                         --enable-xinput \
                          --enable-xkb \
-                         --without-launchd \
-                         --without-doxygen")
+		                 --enable-xinput \
+		                 --disable-xprint")
 
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
