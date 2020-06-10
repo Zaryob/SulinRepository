@@ -8,7 +8,7 @@ OUR_NAME = "sddm"
 OUR_DESC = "sddm"
 
 DATADIR = "/var/lib/sddm"
-DATADIRMODE = 0755
+DATADIRMODE = 0o755
 
 def postInstall():
 
@@ -23,7 +23,6 @@ def postInstall():
         os.system("/bin/chown -R sddm:sddm {}".format(DATADIR))
     except:
         pass
-        
 
 def postRemove():
     try:
