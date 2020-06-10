@@ -19,6 +19,9 @@
             <Dependency>wayland-devel</Dependency>
             <Dependency>eglexternalplatform</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>glvnd.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>egl-wayland</Name>

@@ -10,10 +10,11 @@ from inary.actionsapi import get
 
 def setup():
     mesontools.meson_configure("--buildtype=plain \
+		-Db_lto=false \
 		-Dlauncher-logind=true \
-		-Dsystemd=false \
+		-Dpipewire=false \
 		-Dsimple-dmabuf-drm=auto \
-		-Dpipewire=false\
+		-Dsystemd=false \
 		-Dbackend-rdp=false")
 
 def build():
