@@ -13,7 +13,7 @@ import os
 
 
 arch = "x86-64" if get.ARCH() == "x86_64" and not get.buildTYPE() == "emul32" else "i686"
-defaultflags = "-Os -g -mno-tls-direct-seg-refs -mtune=generic -march=%s" % arch
+defaultflags = "-O3 -g -s -mno-tls-direct-seg-refs -mtune=generic -march=%s" % arch
 if get.buildTYPE() == "emul32": defaultflags += " -m32 -fasynchronous-unwind-tables"
 # this is getting ridiculous, also gdb3 breaks resulting binary
 sysflags = "-mtune=generic -march=x86-64" if get.ARCH() == "x86_64" else "-mtune=generic -march=i686"
