@@ -125,5 +125,5 @@ def install():
             #inarytools.remove("/usr/sbin/%s" % i)
 
     shelltools.cd("..")
-    inarytools.dodoc("ChangeLog", "NEWS", "README*", "LICENSES")
+    inarytools.dodoc("NEWS", "README*", "LICENSES")
 

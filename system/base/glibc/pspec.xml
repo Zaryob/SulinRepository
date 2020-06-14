@@ -15,7 +15,7 @@
         <Summary>GNU libc6 (also called glibc2) C library</Summary>
         <Description>The Glibc package contains the main C library. This library provides the basic routines for allocating memory, searching directories, opening and closing files, reading and writing files, string handling, pattern matching, arithmetic, and so on.</Description>
         <!-- @@@gnu glibc -->
-        <Archive sha1sum="4df7e4dbb92b5ced729d972b32e3b8683db4a689" >http://ftp.gnu.org/gnu/libc/glibc-2.31.tar.gz</Archive>
+        <Archive sha1sum="137aa0902c16fd7820de7b9b2fc9417d768c030c" >http://ftp.gnu.org/gnu/libc/glibc-2.31.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>linux-headers</Dependency>
             <Dependency>gettext</Dependency>
@@ -1258,6 +1258,7 @@
               <Path fileType="localedata">/usr/lib/locale/mn_*</Path>
               <Path fileType="localedata">/usr/share/locale/mn*</Path>
               <Path fileType="localedata">/usr/share/i18n/locales/mn_*</Path>
+              <Path fileType="localedata">/usr/share/i18n/locales/mnw*</Path>
         </Files>
     </Package>
 

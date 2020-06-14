@@ -13,7 +13,7 @@
         <PartOf>kernel.linux</PartOf>
         <Summary>The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="427aac3987544e32d400293060dec1433f36c5e6">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.2.tar.xz</Archive>
+        <Archive sha1sum="b565a7606d9d91eef1e331d96e46adb83c544a23">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.2.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
             <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.7.2</AdditionalFile>
