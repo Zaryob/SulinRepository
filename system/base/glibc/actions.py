@@ -57,7 +57,7 @@ def setup():
                     --enable-multi-arch i686-pc-linux-gnu \
                    "
 
-    shelltools.system("../configure %s" % options)
+    shelltools.system("../configure %s CFLAGS=\"-O3\"" % options)
 
 def build():
     shelltools.cd("build")
