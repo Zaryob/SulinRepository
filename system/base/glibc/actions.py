@@ -35,7 +35,7 @@ def setup():
 
     shelltools.makedirs("build")
     shelltools.cd("build")
-    options = "--prefix=/usr
+    options = "--prefix=/usr \
       --with-headers=/usr/include \
       --with-bugurl=http://gitlab.com/sulinos/main/issues \
       --enable-add-ons \
