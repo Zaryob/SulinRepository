@@ -35,20 +35,23 @@ def setup():
 
     shelltools.makedirs("build")
     shelltools.cd("build")
-    options = "--prefix=/usr \
-      --with-headers=/usr/include \
-      --with-bugurl=http://gitlab.com/sulinos/main/issues \
-      --enable-add-ons \
-      --enable-bind-now \
-      --enable-cet \
-      --enable-lock-elision \
-      --enable-multi-arch \
-      --enable-stack-protector=strong \
-      --enable-stackguard-randomization \
-      --enable-static-pie \
-      --enable-systemtap \
-      --disable-profile \
-      --disable-werror "
+    options = ""--prefix=/usr \
+               --libdir=/usr/lib \
+               --mandir=/usr/share/man \
+               --infodir=/usr/share/info \
+               --libexecdir=/usr/lib/misc \
+               --with-bugurl=http://gitlab.com/sulinos/main/issues \
+               --enable-add-ons \
+               --enable-bind-now \
+               --enable-lock-elision \
+               --enable-multi-arch \
+               --enable-static-pie\
+               --enable-stack-protector=all \
+               --enable-kernel=4.19.217 \
+               --with-headers=/usr/include \
+               --enable-stackguard-randomization \
+               --disable-werror"
+"
     if get.buildTYPE() == "emul32":
         options += "\
                     --libdir=/usr/lib32 \
