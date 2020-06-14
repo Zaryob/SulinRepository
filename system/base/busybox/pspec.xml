@@ -22,6 +22,9 @@
         <AdditionalFiles>
             <AdditionalFile target=".config">config</AdditionalFile>
         </AdditionalFiles>
+        <Patches>
+            <Patch>busybox-1.31.1-glibc-2.31.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
