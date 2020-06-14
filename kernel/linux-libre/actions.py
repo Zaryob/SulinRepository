@@ -27,18 +27,18 @@ def build():
 
 def install():
     #empity dir for buggy kerneltools
-    inarytools.dodir("/lib/modules/5.6.4-sulinos/source")
-    inarytools.dodir("/lib/modules/5.6.4-sulinos/build")
+    inarytools.dodir("/lib/modules/5.7.2-sulinos/source")
+    inarytools.dodir("/lib/modules/5.7.2-sulinos/build")
     kerneltools.install()
-    inarytools.removeDir("/lib/modules/5.6.4-sulinos/source")
-    inarytools.removeDir("/lib/modules/5.6.4-sulinos/build")
+    inarytools.removeDir("/lib/modules/5.7.2-sulinos/source")
+    inarytools.removeDir("/lib/modules/5.7.2-sulinos/build")
     inarytools.removeDir("/usr/bin")
     kerneltools.installHeaders()
     kerneltools.installLibcHeaders()
     #fix libre kernel suffix bug
-    shelltools.system("mv {0}/boot/linux-5.6.4 {0}/boot/linux-5.6.4-libre-sulinos".format(get.installDIR()))
-    shelltools.system("mv {0}/usr/src/libre-headers-5.6.4-sulinos {0}/usr/src/linux-headers-5.6.4-libre-sulinos".format(get.installDIR()))
-    shelltools.system("mv {0}/lib/modules/5.6.4-sulinos {0}/lib/modules/5.6.4-libre-sulinos".format(get.installDIR()))
+    shelltools.system("mv {0}/boot/linux-5.7.2 {0}/boot/linux-5.7.2-libre-sulinos".format(get.installDIR()))
+    shelltools.system("mv {0}/usr/src/libre-headers-5.7.2-sulinos {0}/usr/src/linux-headers-5.7.2-libre-sulinos".format(get.installDIR()))
+    shelltools.system("mv {0}/lib/modules/5.7.2-sulinos {0}/lib/modules/5.7.2-libre-sulinos".format(get.installDIR()))
     # add objtool for external module building and enabled VALIDATION_STACK option
     inarytools.insinto("/usr/src/linux-headers-%s-libre-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 
