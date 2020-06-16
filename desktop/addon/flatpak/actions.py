@@ -10,7 +10,14 @@ from inary.actionsapi import shelltools
 
 
 def setup():
-    autotools.configure("--with-priv-mode=setuid")
+    autotools.configure("--prefix=/usr \
+		--libexecdir=/usr/lib \
+		--sbindir=/usr/bin \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--with-dbus-config-dir=/usr/share/dbus-1/system.d \
+		--with-priv-mode=setuid \
+		--with-profile-dir=/etc/profile.d")
 
 
 def build():

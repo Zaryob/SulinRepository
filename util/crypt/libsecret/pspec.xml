@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>The libsecret package contains a GObject based library for accessing the Secret Service API.</Summary>
         <Description>The libsecret package contains a GObject based library for accessing the Secret Service API.</Description>
-        <Archive sha1sum="d0c0f20d7dcf81e1a82c9335489389136c346434" type="tarxz">ftp://ftp.gnome.org/pub/gnome/sources/libsecret/0.19/libsecret-0.19.1.tar.xz</Archive>
+        <Archive sha1sum="e61e5cb438127465063d03db002a6d51f7c2d4c3">https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.20.3/libsecret-0.20.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>vala-devel</Dependency>
@@ -30,7 +30,6 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
         <RuntimeDependencies>
-            <Dependency>valgrind</Dependency>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>vala</Dependency>
         </RuntimeDependencies>
@@ -58,6 +57,13 @@
         </RuntimeDependencies>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-09-15</Date>
+            <Version>0.20.3</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-15</Date>
             <Version>0.19.1</Version>

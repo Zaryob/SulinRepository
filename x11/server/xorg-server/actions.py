@@ -36,5 +36,5 @@ def build():
 
 def install():
     mesontools.ninja_install()
-    
+    inarytools.dosym("Xorg","/usr/bin/X")
     

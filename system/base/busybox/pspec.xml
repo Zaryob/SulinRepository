@@ -29,6 +29,7 @@
 
     <Package>
         <Name>busybox</Name>
+        <IsA>postOps</IsA>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/bin</Path>

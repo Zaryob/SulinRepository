@@ -3,7 +3,7 @@
 <INARY>
     <Source>
         <Name>flatpak</Name>
-        <Homepage>http://kaizer.se/wiki/keybinder/</Homepage>
+        <Homepage>http://kaizer.se/wiki/flatpak/</Homepage>
         <Packager>
             <Name>Ali Rıza Keskin</Name>
             <Email>parduscix@yandex.ru</Email>
@@ -12,10 +12,12 @@
         <IsA>app:console</IsA>
         <Summary>Application deployment framework for desktop apps</Summary>
         <Description>Application deployment framework for desktop apps</Description>
-        <Archive sha1sum="e565cd317e29a84305822c7eac973e15e658e4b9">https://github.com/flatpak/flatpak/releases/download/1.7.2/flatpak-1.7.2.tar.xz</Archive>
+        <Archive sha1sum="c6c2308e78d60b3ac39f42dfae721c9ab9929302">https://github.com/flatpak/flatpak/releases/download/1.7.3/flatpak-1.7.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>appstream-glib-devel</Dependency>
             <Dependency>ostree-devel</Dependency>
+            <Dependency>fuse2-devel</Dependency>
+            <Dependency>python3-pyparsing</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,6 +26,9 @@
         <RuntimeDependencies>
             <Dependency>appstream-glib</Dependency>
             <Dependency>ostree</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>fuse2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/</Path>
@@ -47,7 +52,7 @@
 
     <Package>
         <Name>flatpak-devel</Name>
-        <Summary>Development files for keybinder</Summary>
+        <Summary>Development files for flatpak</Summary>
         <RuntimeDependencies>
             <Dependency releaseFrom="current">flatpak</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -59,6 +64,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-10</Date>
+            <Version>1.7.3</Version>
+            <Comment>Update 1.7.3.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-10</Date>
             <Version>1.7.2</Version>

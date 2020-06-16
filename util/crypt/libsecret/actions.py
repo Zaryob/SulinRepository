@@ -9,7 +9,7 @@ from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 
 def setup():
-    mesontools.meson_configure()
+    mesontools.meson_configure("-Dgtk_doc=false")
 
 def build():
     mesontools.ninja_build()
@@ -17,4 +17,3 @@ def build():
 def install():
     mesontools.ninja_install()
 
-    inarytools.dodoc("AUTHORS", "COPYING", "README", "NEWS")

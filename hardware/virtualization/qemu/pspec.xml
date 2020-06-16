@@ -11,7 +11,7 @@
         <IsA>app:console</IsA>
         <Summary>Userspace virtual machine and processor emulator</Summary>
         <Description>QEMU emulates a full system (for example a PC), including a processor and various peripherials. It can be used to launch different operating systems without rebooting the PC or to debug system code. In user-mode emulation mode, QEMU can launch Linux processes compiled for one CPU on another CPU.</Description>
-        <Archive sha1sum="b27aa828a8457bd8551ae3c81b80cc365e1f6bfe" >https://download.qemu.org/qemu-4.2.0.tar.xz</Archive>
+        <Archive sha1sum="52d1c0e6025a212d4fde471e4d9b5913f2615f86" >https://download.qemu.org/qemu-5.0.0.tar.xz</Archive>
   
         <BuildDependencies>
             <Dependency>aalib</Dependency>
@@ -90,7 +90,14 @@
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2020-01-17</Date>
+            <Version>5.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+         <Update release="1">
             <Date>2020-01-17</Date>
             <Version>4.2.0.0</Version>
             <Comment>First release</Comment>
