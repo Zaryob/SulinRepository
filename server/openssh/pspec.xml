@@ -14,7 +14,7 @@
         <PartOf>server</PartOf>
         <Summary>Port of OpenBSD's free SSH release</Summary>
         <Description>OpenSSH is a FREE version of the SSH connectivity tools that technical users of the Internet rely on. Users of telnet, rlogin, and ftp may not realize that their password is transmitted across the Internet unencrypted, but it is. OpenSSH encrypts all traffic (including passwords) to effectively eliminate eavesdropping, connection hijacking, and other attacks.</Description>
-        <Archive sha1sum="756dbb99193f9541c9206a667eaa27b0fa184a4f" type="targz">https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.0p1.tar.gz</Archive>
+        <Archive sha1sum="04c7adb9986f16746588db8988b910530c589819">https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.3p1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libedit-devel</Dependency>
             <Dependency>mit-kerberos</Dependency>
@@ -43,12 +43,16 @@
             <AdditionalFile owner="root" permission="0755" target="/etc/confd.d/sshd">sshd-r1.confd</AdditionalFile>
            <AdditionalFile owner="root" permission="0755" target="/etc/pam.d/sshd">sshd.pam</AdditionalFile>
         </AdditionalFiles>
-        <Provides>
-            <SCOM script="service.py">System.Service</SCOM>
-        </Provides>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-16</Date>
+            <Version>8.3_p1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-16</Date>
             <Version>8.0_p1</Version>
