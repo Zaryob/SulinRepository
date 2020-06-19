@@ -11,21 +11,18 @@ from inary.actionsapi import qt
 from inary.actionsapi import get
 
 def setup():
-    shelltools.export("QT5LINK", "/usr/lib/qt5/bin")
-    shelltools.export("QT5DIR", "/usr/lib/qt5")
-    shelltools.export("PYTHON","/usr/bin/python3")
     qt.configure()
 
 def build():
-    qt.make()
+     qt.make()
 
 def install():
     qt.install("INSTALL_ROOT=%s" % get.installDIR())
-    qt.install("INSTALL_ROOT=%s install_docs" % get.installDIR())
-
 
     #I hope qtchooser will manage this issue
     for bin in shelltools.ls("%s/usr/lib/qt5/bin" % get.installDIR()):
-       inarytools.dosym("/usr/lib/qt5/bin/%s" % bin, "/usr/bin/%s-qt5" % bin)
+        inarytools.dosym("/usr/lib/qt5/bin/%s" % bin, "/usr/bin/%s-qt5" % bin)
 
-    inarytools.dodoc("LICENSE.LGPL3")
+    # kde5 need qdbus and qtpaths in /usr/bin
+    inarytools.dosym("/usr/bin/qdbus-qt5", "/usr/bin/qdbus")
+    inarytools.dosym("/usr/bin/qtpaths-qt5", "/usr/bin/qtpaths")

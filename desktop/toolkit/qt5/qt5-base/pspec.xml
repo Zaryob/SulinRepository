@@ -1,0 +1,375 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>qt5-base</Name>
+        <Homepage>http://qt.digia.com/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <Summary>Cross platform application and UI framework</Summary>
+        <Description>Cross platform application and UI development framework</Description>
+        <License>GPL3</License>
+        <License>LGPL3</License>
+        <License>FDL</License>
+        <License>custom</License>
+        <Archive sha1sum="f5191757d1125aa7750a3f5d39321490477cfb65" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtbase-everywhere-src-5.15.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>ccache</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>leveldb-devel</Dependency>
+            <Dependency>firebird-superserver</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>libopus-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>flite-devel</Dependency>
+            <Dependency>libmtdev-devel</Dependency>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>postgresql-server</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>DirectFB-devel</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>xcb-util-devel</Dependency>
+            <Dependency>xcb-util-image-devel</Dependency>
+            <Dependency>xcb-util-keysyms-devel</Dependency>
+            <Dependency>xcb-util-wm-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>firebird-devel</Dependency>
+            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>xcb-util-renderutil-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libproxy-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-plugins-ugly</Dependency>
+            <Dependency>gst-libav</Dependency>
+            <Dependency>gst-python3</Dependency>
+            <Dependency>gst-plugins-bad-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>zstd-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>minizip-devel</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
+            <Dependency>re2c</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>llvm-clang-analyzer</Dependency>
+            <Dependency>llvm-clang-devel</Dependency>
+            <Dependency>dbus-x11</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qt5-base</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>flite</Dependency>
+            <Dependency>minizip</Dependency>
+            <Dependency>libpcre2</Dependency>
+            <Dependency>re2c</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>dbus-x11</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>firebird-client</Dependency>
+            <Dependency>libproxy</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>DirectFB</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>webp</Dependency>
+            <Dependency>zstd</Dependency>
+            <Dependency>libmtdev</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>xcb-util-wm</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>xcb-util-image</Dependency>
+            <Dependency>xcb-util-keysyms</Dependency>
+            <Dependency>xcb-util-renderutil</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5/imports</Path>
+            <Path fileType="library">/usr/lib/qt5/qmldir</Path>
+            <Path fileType="library">/usr/lib/qt5/plugins</Path>
+            <Path fileType="localdata">/usr/share/qt5/translations</Path>
+            <Path fileType="executable">/usr/lib/qt5/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/qt5/mkspecs</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-base-devel</Name>
+        <Summary>Development files for Qt 5</Summary>
+        <Description>Development files for Qt 5</Description>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="data">/usr/lib/*.prl</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency release="current">qt5-base</Dependency>
+            <Dependency>at-spi2-core-devel</Dependency>
+            <Dependency>ccache</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>leveldb-devel</Dependency>
+            <Dependency>firebird-superserver</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+            <Dependency>libopus-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>flite-devel</Dependency>
+            <Dependency>libmtdev-devel</Dependency>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>postgresql-server</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>DirectFB-devel</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>lcms2-devel</Dependency>
+            <Dependency>xcb-util-devel</Dependency>
+            <Dependency>xcb-util-image-devel</Dependency>
+            <Dependency>xcb-util-keysyms-devel</Dependency>
+            <Dependency>xcb-util-wm-devel</Dependency>
+            <Dependency>tiff</Dependency>
+            <Dependency>libdrm-devel</Dependency>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>libpng-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>firebird-devel</Dependency>
+            <Dependency>unixODBC-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>xcb-util-renderutil-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>alsa-lib-devel</Dependency>
+            <Dependency>libproxy-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>gst-plugins-good</Dependency>
+            <Dependency>gst-plugins-ugly</Dependency>
+            <Dependency>gst-libav</Dependency>
+            <Dependency>gst-python3</Dependency>
+            <Dependency>gst-plugins-bad-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>zstd-devel</Dependency>
+            <Dependency>webp-devel</Dependency>
+            <Dependency>minizip-devel</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
+            <Dependency>re2c</Dependency>
+            <Dependency>icu4c</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>llvm-clang-analyzer</Dependency>
+            <Dependency>llvm-clang-devel</Dependency>
+            <Dependency>dbus-x11</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-mysql</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>mariadb-bin-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlmysql.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-postgresql</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlpsql.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-sqlite</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlite.so</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>qt5-sql-odbc</Name>
+        <RuntimeDependencies>
+            <Dependency version="current">qt5-base</Dependency>
+            <Dependency>unixODBC</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/qt5/plugins/sqldrivers/libqsqlodbc.so</Path>
+        </Files>
+    </Package>
+    <!--Package>
+        <Name>qt5-base-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for qt5</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>cups-32bit</Dependency>
+            <Dependency>dbus-32bit</Dependency>
+            <Dependency>gtk2-32bit</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+            <Dependency>libxcb-32bit</Dependency>
+            <Dependency>icu4c-32bit</Dependency>
+            <Dependency>pango-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libdrm-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+            <Dependency>sqlite-32bit</Dependency>
+            <Dependency>eudev-32bit</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>freetype-32bit</Dependency>
+            <Dependency>harfbuzz-32bit</Dependency>
+            <Dependency>libmtdev-32bit</Dependency>
+            <Dependency>fontconfig-32bit</Dependency>
+            <Dependency>libXrender-32bit</Dependency>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>cups-32bit</Dependency>
+            <Dependency>dbus-32bit</Dependency>
+            <Dependency>gtk2-32bit</Dependency>
+            <Dependency>mesa-32bit</Dependency>
+            <Dependency>zlib-32bit</Dependency>
+            <Dependency>glib2-32bit</Dependency>
+            <Dependency>libxcb-32bit</Dependency>
+            <Dependency>icu4c-32bit</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>pango-32bit</Dependency>
+            <Dependency>libX11-32bit</Dependency>
+            <Dependency>libdrm-32bit</Dependency>
+            <Dependency>libpng-32bit</Dependency>
+            <Dependency>sqlite-32bit</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>freetype-32bit</Dependency>
+            <Dependency>harfbuzz-32bit</Dependency>
+            <Dependency>libmtdev-32bit</Dependency>
+            <Dependency>fontconfig-32bit</Dependency>
+            <Dependency>libXrender-32bit</Dependency>
+            <Dependency>libjpeg-turbo-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package-->
+
+    <History>
+        <Update release="7">
+            <Date>2020-05-27</Date>
+            <Version>5.15.0</Version>
+            <Comment>qt5.15.0 has been compiled.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+      <Update release="6">
+          <Date>2020-05-10</Date>
+          <Version>5.14.2</Version>
+          <Comment>QT 5.14.2 upgraded. Built has been compiled with single source than splitted to subpackages.</Comment>
+          <Name>Süleyman Poyraz</Name>
+          <Email>zaryob.dev@gmail.com</Email>
+      </Update>
+        <Update release="5">
+            <Date>2019-12-14</Date>
+            <Version>5.14.0</Version>
+            <Comment>QT 5.14 upgraded</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2019-11-27</Date>
+            <Version>5.13.2</Version>
+            <Comment>QT version upgraded to version 5.13.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2019-11-26</Date>
+            <Version>5.13.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-11-23</Date>
+            <Version>5.13.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-10-25</Date>
+            <Version>5.13.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

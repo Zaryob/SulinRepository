@@ -11,13 +11,11 @@ from inary.actionsapi import qt
 from inary.actionsapi import get
 
 def setup():
-    shelltools.export("QT5LINK", "/usr/lib/qt5/bin")
-    shelltools.export("QT5DIR", "/usr/lib/qt5")
-    shelltools.export("PYTHON","/usr/bin/python3")
     qt.configure()
 
 def build():
     qt.make()
+    qt.make("docs")
 
 def install():
     qt.install("INSTALL_ROOT=%s" % get.installDIR())
@@ -26,6 +24,6 @@ def install():
 
     #I hope qtchooser will manage this issue
     for bin in shelltools.ls("%s/usr/lib/qt5/bin" % get.installDIR()):
-       inarytools.dosym("/usr/lib/qt5/bin/%s" % bin, "/usr/bin/%s-qt5" % bin)
+        inarytools.dosym("/usr/lib/qt5/bin/%s" % bin, "/usr/bin/%s-qt5" % bin)
 
-    inarytools.dodoc("LICENSE.LGPL3")
+    inarytools.insinto("/usr/share/licenses/qt5-imageformats/", "LICENSE*")
