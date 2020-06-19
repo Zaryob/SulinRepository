@@ -19,16 +19,26 @@ shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 shelltools.export("KBUILD_BUILD_TIMESTAMP", time.asctime())
 
 def setup():
+    if get.buildTYPE()=="libcheaders":
+        kerneltools.prepareLibcHeaders()
+        return
+
     kerneltools.configure()
 
 def build():
+    if get.buildTYPE()=="libcheaders":
+        return
+
     kerneltools.build(debugSymbols=False)
 
 
 def install():
-    kerneltools.install()
-    kerneltools.installHeaders()
-    kerneltools.installLibcHeaders()
+    if get.buildTYPE()=="libcheaders":
+        kerneltools.installLibcHeaders()
+        return
+
+    kerneltools.install(distro="sulinos")
+    kerneltools.installModuleHeaders(distro="sulinos")
     # add objtool for external module building and enabled VALIDATION_STACK option
     inarytools.insinto("/usr/src/linux-headers-%s-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 

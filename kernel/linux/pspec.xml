@@ -48,6 +48,10 @@
 
     <Package>
         <Name>linux-headers</Name>
+        <BuildType>libcheaders</BuildType>
+        <BuildDependencies>
+          <Dependency>rsync</Dependency>
+        </BuildDependencies>
         <PartOf>system.devel</PartOf>
         <Summary>Header files for the Linux kernel for use by glibc</Summary>
         <Description>kernel-headers includes the C header files that specify the interface between the Linux kernel and userspace libraries and programs. The header files define structures and constants that are needed for building most standard programs and are also needed for rebuilding the glibc package.</Description>
