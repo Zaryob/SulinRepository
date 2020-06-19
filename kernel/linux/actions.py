@@ -19,6 +19,10 @@ shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 shelltools.export("KBUILD_BUILD_TIMESTAMP", time.asctime())
 
 def setup():
+    if get.buildTYPE()=="libcheaders":
+        kerneltools.prepareLibcHeaders()
+        return
+
     kerneltools.configure()
 
 def build():
@@ -26,6 +30,10 @@ def build():
 
 
 def install():
+    if get.buildTYPE()=="libcheaders":
+        kerneltools.installLibcHeaders()
+        return
+
     kerneltools.install()
     kerneltools.installHeaders()
     kerneltools.installLibcHeaders()
