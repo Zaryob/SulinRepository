@@ -26,6 +26,9 @@ def setup():
     kerneltools.configure()
 
 def build():
+    if get.buildTYPE()=="libcheaders":
+        return
+
     kerneltools.build(debugSymbols=False)
 
 
@@ -35,8 +38,7 @@ def install():
         return
 
     kerneltools.install()
-    kerneltools.installHeaders()
-    kerneltools.installLibcHeaders()
+    kerneltools.installModuleHeaders()
     # add objtool for external module building and enabled VALIDATION_STACK option
     inarytools.insinto("/usr/src/linux-headers-%s-sulinos/tools/objtool" % get.srcVERSION(), "%s/tools/objtool/objtool" % get.curDIR())
 
