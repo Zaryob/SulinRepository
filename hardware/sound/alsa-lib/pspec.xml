@@ -14,7 +14,7 @@
         <PartOf>hardware.sound</PartOf>
         <Summary>The Advanced Linux Sound Architecture (ALSA) library</Summary>
         <Description>alsa-lib provides ALSA runtime libraries to simplify application programming and provide higher level functionality as well as support for the older OSS API, providing binary compatibility for most OSS programs.</Description>
-        <Archive sha1sum="b58599c1237b2525962ed190ef501d3b9aa6edf5" type="tarbz2">https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.1.2.tar.bz2</Archive>
+        <Archive sha1sum="9074927f55c4f17b5a3e5d7f6daa46b43ad3279d" type="tarbz2">https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.3.1.tar.bz2</Archive>
     </Source>
 
     <Package>
@@ -58,6 +58,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-06-19</Date>
+            <Version>1.2.3.1</Version>
+            <Comment>Version bump to 1.2.3.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-12-15</Date>
             <Version>1.2.1.2</Version>
