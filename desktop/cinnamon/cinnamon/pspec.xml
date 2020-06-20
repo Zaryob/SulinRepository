@@ -99,12 +99,12 @@
             <Dependency>upower</Dependency>
             <Dependency>libsoup</Dependency>
             <Dependency>webkit2gtk</Dependency>
-            <Dependency>dbus-python</Dependency>
+            <Dependency>dbus-python3</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>gconf</Dependency>
-            <Dependency>python-cairo</Dependency>
-            <Dependency>pygobject</Dependency>
-            <Dependency>python-pam</Dependency> <!-- ??? -->
+            <Dependency>python3-cairo</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>python3-pam</Dependency> <!-- ??? -->
             <Dependency>pytz3</Dependency>
             <Dependency>timezonemap</Dependency>
             <Dependency>python3-pexpect</Dependency>
