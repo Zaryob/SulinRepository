@@ -104,8 +104,8 @@
             <Dependency>gconf</Dependency>
             <Dependency>python-cairo</Dependency>
             <Dependency>pygobject</Dependency>
-            <Dependency>python-pam</Dependency>
-            <Dependency>pytz</Dependency>
+            <Dependency>python-pam</Dependency> <!-- ??? -->
+            <Dependency>pytz3</Dependency>
             <Dependency>timezonemap</Dependency>
             <Dependency>python3-pexpect</Dependency>
             <Dependency>python3-ptyprocess</Dependency>

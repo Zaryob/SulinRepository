@@ -75,6 +75,7 @@
             <Dependency>libXext</Dependency>
             <Dependency>libgudev</Dependency>
             <Dependency>libwacom</Dependency>
+            <Dependency>librsvg</Dependency>
             <Dependency>dbus-glib</Dependency>
             <Dependency>libXfixes</Dependency>
             <Dependency>libnotify</Dependency>
