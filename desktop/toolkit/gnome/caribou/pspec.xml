@@ -44,7 +44,7 @@
             <Dependency>clutter</Dependency>
             <Dependency>libxklavier</Dependency>
             <Dependency>dconf</Dependency>
-            <Dependency>dbus-python</Dependency>
+            <Dependency>dbus-python3</Dependency>
             <Dependency>at-spi2-core</Dependency>
         </RuntimeDependencies>
         <Files>
