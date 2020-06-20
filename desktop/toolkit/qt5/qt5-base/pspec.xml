@@ -71,7 +71,6 @@
             <Dependency>gst-python3</Dependency>
             <Dependency>gst-plugins-bad-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
-            <Dependency>zstd-devel</Dependency>
             <Dependency>webp-devel</Dependency>
             <Dependency>minizip-devel</Dependency>
             <Dependency>libpcre2-devel</Dependency>
@@ -115,7 +114,6 @@
             <Dependency>harfbuzz</Dependency>
             <Dependency>libinput</Dependency>
             <Dependency>webp</Dependency>
-            <Dependency>zstd</Dependency>
             <Dependency>libmtdev</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>libXrender</Dependency>
@@ -206,7 +204,6 @@
             <Dependency>gst-python3</Dependency>
             <Dependency>gst-plugins-bad-devel</Dependency>
             <Dependency>wayland-devel</Dependency>
-            <Dependency>zstd-devel</Dependency>
             <Dependency>webp-devel</Dependency>
             <Dependency>minizip-devel</Dependency>
             <Dependency>libpcre2-devel</Dependency>
