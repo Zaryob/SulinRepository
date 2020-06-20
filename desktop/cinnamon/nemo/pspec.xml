@@ -38,7 +38,6 @@
             <Dependency>shared-mime-info</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>python3-devel</Dependency>
-            <Dependency>pygobject-devel</Dependency>
             <Dependency>pygobject3-devel</Dependency>
             <Dependency>xapps-devel</Dependency>
         </BuildDependencies>
@@ -56,6 +55,7 @@
             <Dependency>exempi</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libexif</Dependency>
+            <Dependency>pygobject3</Dependency>
             <Dependency>libxml2</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
@@ -92,12 +92,12 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
         </RuntimeDependencies>
-        <Files>            
+        <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="1">
             <Date>2019-09-18</Date>
