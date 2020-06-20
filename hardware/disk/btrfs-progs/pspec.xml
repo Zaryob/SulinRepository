@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Userspace utilities for btrfs</Summary>
         <Description>btrfs-progs package provides all the userspace programs needed to create, check, modify and correct any inconsistencies in the btrfs filesystem.</Description>
-        <Archive sha1sum="26dc7c7617f7810d9ab9cba5e9d414c6e44c8321" type="tarxz">https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v5.3.1.tar.xz</Archive>
+        <Archive sha1sum="bde164bf300900a6ac420db45ab585d71563d495" type="tarxz">https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v5.6.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>xmlto</Dependency>
             <Dependency>asciidoc</Dependency>
@@ -43,8 +43,8 @@
     <History>
         <Update release="2">
             <Date>2020-06-21</Date>
-            <Version>5.3.1</Version>
-            <Comment>Package is rebuilded and released up.</Comment>
+            <Version>5.6.1</Version>
+            <Comment>Version bump to 5.6.1. Removed unnecessary zstd dependency.</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
