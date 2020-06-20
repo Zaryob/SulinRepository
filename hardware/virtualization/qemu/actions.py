@@ -21,6 +21,7 @@ def setup():
 		--smbd=/usr/bin/smbd \
 		--enable-modules \
 		--enable-sdl \
+                --enable-slirp=system \
 		--audio-drv-list="pa alsa sdl"')
 
 def build():

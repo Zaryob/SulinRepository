@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libslirp</Name>
+        <Homepage>http://gitlab.freedesktop.org/slirp/libslirp</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>General purpose TCP-IP emulator</Summary>
+        <Description>libslirp is a user-mode networking library used by virtual machines, containers or various tools.</Description>
+        <Archive sha1sum="c2a8bf3d7abe92014cca9803d0b3220df7c9fa85">https://gitlab.freedesktop.org/slirp/libslirp/-/archive/d877d74bea1b0c5680213ecd53fa630f6a8b1aba/libslirp-d877d74bea1b0c5680213ecd53fa630f6a8b1aba.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>libslirp</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libslirp-devel</Name>
+        <Summary>Development files for libslirp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libslirp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-20</Date>
+            <Version>4.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

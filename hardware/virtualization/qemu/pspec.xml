@@ -17,6 +17,7 @@
             <Dependency>aalib</Dependency>
             <Dependency>vte3</Dependency>
             <Dependency>libsdl2-devel</Dependency>
+            <Dependency>libslirp-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>nss-devel</Dependency>
@@ -35,6 +36,7 @@
             <Dependency>atk</Dependency>
             <Dependency>nss</Dependency>
             <Dependency>vte3</Dependency>
+            <Dependency>libslirp</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>nspr</Dependency>
