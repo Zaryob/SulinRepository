@@ -33,6 +33,19 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>swig-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for swig</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>boost-32bit</Dependency>
+        </BuildDependencies>
+        <Files>
+            <Path fileType="library">/lib32</Path>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
     <History>
         <Update release="2">
             <Date>2019-09-25</Date>

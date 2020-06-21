@@ -10,12 +10,12 @@ from inary.actionsapi import shelltools
 
 def setup():
     if get.buildTYPE()=="rebuild_python":
-        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python3.7 --prefix=%s/usr" % get.installDIR())
+        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python3.8 --prefix=%s/usr" % get.installDIR())
+        shelltools.echo("project-config.jam","using python : 3.8 : /usr/bin/python3 : /usr/include/python3.8 : /usr/lib ;")
     else:
         shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python2.7 --prefix=%s/usr" % get.installDIR())
-    
-    shelltools.echo("project-config.jam","using python : 3.6 : /usr/bin/python3 : /usr/include/python3.6m : /usr/lib ;")
-    #shelltools.echo("project-config.jam","--without-mpi ;")
+        shelltools.echo("project-config.jam","using python : 2.7 : /usr/bin/python2 : /usr/include/python2.7 : /usr/lib ;")
+    shelltools.echo("project-config.jam","--without-mpi ;")
 
 def build():
     if get.buildTYPE()=="rebuild_python":
@@ -26,7 +26,8 @@ def build():
                            runtime-link=shared \
                            link=shared,static \
                            toolset=gcc \
-                           python=3.7 \
+                           --with-python \
+                           python=3.8 \
                            cflags=-fno-strict-aliasing \
                            --layout=system")
 
@@ -38,6 +39,7 @@ def build():
                            runtime-link=shared \
                            link=shared,static \
                            toolset=gcc \
+                           --with-python \
                            python=2.7 \
                            cflags=-fno-strict-aliasing \
                            --layout=system")
