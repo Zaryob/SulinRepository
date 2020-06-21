@@ -26,6 +26,6 @@ def install():
 
     inarytools.insinto("/usr/share/bash-completion/completions", "misc/bash-completion", "ninja")
 
-    inarytools.dodoc("HACKING.md", "COPYING", "RELEASING", "README", "doc/manual.asciidoc")
+    inarytools.dodoc("CONTRIBUTING.md", "COPYING", "RELEASING", "README.md", "doc/manual.asciidoc")
 
     inarytools.dohtml("doc/manual.html")
