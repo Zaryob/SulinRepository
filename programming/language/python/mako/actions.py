@@ -11,13 +11,6 @@ from inary.actionsapi import shelltools
 
 shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
 
-WorkDir = "Mako-%s" % get.srcVERSION()
 
 def install():
-    pythonmodules.install(pyVer="2")
     pythonmodules.install(pyVer="3")
-
-    #inarytools.dodoc("doc/*.txt")
-    inarytools.dohtml("doc/*.html")
-    inarytools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), "doc/build")
-    inarytools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), "examples")
