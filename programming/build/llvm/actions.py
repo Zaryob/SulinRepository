@@ -16,8 +16,8 @@ lib = "lib32" if get.buildTYPE() == "emul32" else "lib"
 def setup():
     if get.buildTYPE() != "emul32":
             if not shelltools.can_access_directory("tools/clang"):
-                shelltools.system("tar xf ../cfe-%s.src.tar.xz -C tools" % get.srcVERSION())
-                shelltools.move("tools/cfe-%s.src" % get.srcVERSION(), "tools/clang")
+                shelltools.system("tar xf ../clang-%s.src.tar.xz -C tools" % get.srcVERSION())
+                shelltools.move("tools/clang-%s.src" % get.srcVERSION(), "tools/clang")
 
                 shelltools.system("tar xf ../clang-tools-extra-%s.src.tar.xz -C tools" % get.srcVERSION())
                 shelltools.move("tools/clang-tools-extra-*", "tools/clang/extra")
