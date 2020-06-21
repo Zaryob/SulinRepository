@@ -13,7 +13,7 @@
         <Summary>Next generation of the python high-level scripting language</Summary>
         <Description>Next generation of the python high-level scripting language</Description>
         <!-- @@@blfs general python3 -->
-        <Archive sha1sum="a862c5a58626fdad02d2047a57771ede2783fcef" type="tarxz">https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tar.xz</Archive>
+        <Archive sha1sum="3bafa40df1cd069c112761c388a9f2e94b5d33dd" type="tarxz">https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>tcltk-devel</Dependency>
             <Dependency>tcl-devel</Dependency>
@@ -30,7 +30,6 @@
         </BuildDependencies>
         <Patches>
             <Patch>sulin_path.patch</Patch>
-            <Patch level="1">dont-make-libpython-readonly.patch</Patch>
         </Patches>
     </Source>
     <Package>
@@ -50,70 +49,71 @@
             <Files>
             <Path fileType="executable" permanent="0">/usr/bin/p*</Path>
             <Path fileType="executable" permanent="0">/usr/bin/2to3*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/a*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/c*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/d*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/e*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/h*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/imp*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/j*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib2*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/log*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/m*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/p*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/s*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/te*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/u*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/v*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/w*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/x*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/*.py</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/*.txt</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_a*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/a*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/b*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_b*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/c*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_c*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_d*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/d*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_e*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/e*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/f*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_f*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/g*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_g*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_h*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/h*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/j*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_j*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_k*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/k*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/l*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_l*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/m*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_m*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/n*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_n*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/o*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_o*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_p*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/p*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/r*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_r*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/q*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_q*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_s*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/s*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/te*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/_te*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/ti*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/u*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/x*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/lib-dynload/z*</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/__pycache__</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/a*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/c*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/d*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/e*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/h*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/imp*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/j*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib2*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/log*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/m*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/p*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/s*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/te*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/u*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/v*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/w*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/x*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/*.py</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/*.txt</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_a*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/a*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/b*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_b*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/c*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_c*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_d*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/d*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_e*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/e*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/f*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_f*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/g*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_g*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_h*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/h*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/j*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_j*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_k*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/k*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/l*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_l*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/m*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_m*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/n*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_n*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/o*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_o*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_p*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/p*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/r*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_r*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/q*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_q*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_s*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/s*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/te*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/_te*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/ti*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/u*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/x*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/z*</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/__pycache__</Path>
             <Path fileType="library" permanent="0">/usr/lib/*.so</Path>
-            <Path fileType="library" permanent="0">/usr/lib/libpython3.7m.so.1.0</Path>
+            <Path fileType="library" permanent="0">/usr/lib/libpython3.8n.so.1.0</Path>
+            <Path fileType="library" permanent="0">/usr/lib/libpython3.8.so.1.0</Path>
             <Path fileType="man" permanent="0">/usr/share/man/man1/*</Path>
             <Path fileType="doc" permanent="0">/usr/share/doc</Path>
         </Files>
@@ -126,7 +126,8 @@
             <Dependency release="current">python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header" permanent="0">/usr/include/python3.7m/*</Path>
+            <Path fileType="header" permanent="0">/usr/include/python3.8m/*</Path>
+            <Path fileType="header" permanent="0">/usr/include/python3.8/*</Path>
             <Path fileType="library" permanent="0">/usr/lib/pkgconfig/*</Path>
         </Files>
     </Package>
@@ -143,7 +144,7 @@
         <Files>
             <Path fileType="library">/usr/lib/python3*/tkinter</Path>
             <Path fileType="library">/usr/lib/python3*/lib-dynload/_tkinter.cpython-*-x86_64-linux-gnu.so</Path>
-            <Path fileType="library" permanent="0">/usr/lib/python3.7/turtledemo</Path>
+            <Path fileType="library" permanent="0">/usr/lib/python3.8/turtledemo</Path>
         </Files>
     </Package>
     <Package>
