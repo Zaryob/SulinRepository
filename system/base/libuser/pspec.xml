@@ -105,6 +105,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-06-21</Date>
+            <Version>0.62</Version>
+            <Comment>Package is rebuilded and released up due to python3.8.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-19</Date>
             <Version>0.62</Version>

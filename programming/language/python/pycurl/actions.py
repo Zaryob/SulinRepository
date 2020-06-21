@@ -7,18 +7,21 @@
 from inary.actionsapi import pythonmodules
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+from inary.actionsapi import autotools
 from inary.actionsapi import get
 
 shelltools.export("PYCURL_SSL_LIBRARY", "openssl")
 
 def install():
+
     # no static libs
     inarytools.dosed("setup.py", ", \"--static-libs\"")
     if get.buildTYPE()=="rebuild_python":
         pyVer=3
     else:
         pyVer=2.7
-    pythonmodules.install("--curl-config=/usr/bin/curl-config --prefix=/usr --optimize=1", pyVer=pyVer)
 
+    autotools.make("PYTHON=python{}".format(pyVer))
+    pythonmodules.install("--curl-config=/usr/bin/curl-config --prefix=/usr --optimize=1", pyVer=pyVer)
 
     inarytools.dodoc("ChangeLog", "COPYING*")
