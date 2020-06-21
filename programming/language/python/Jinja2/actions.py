@@ -9,9 +9,7 @@ from inary.actionsapi import inarytools
 
 def build():
     pythonmodules.compile(pyVer = "3")
-    pythonmodules.compile()
 
 def install():
-    pythonmodules.install()
     pythonmodules.install(pyVer = "3")
     inarytools.dodoc("LICENSE*", "MANIFEST*", "PKG-INFO", "README*")
