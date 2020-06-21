@@ -69,6 +69,10 @@ def install():
         shelltools.system("mv %s/emul32/usr/lib %s/usr/lib32" %(get.installDIR(), get.installDIR()))
         shelltools.system("rm -rf  %s/emul32" % get.installDIR())
         return
+    if get.buildTYPE()=="rebuild_python":
+        shelltools.system("./b2 install --with-python threading=multi link=shared")
+        return
+    shelltools.system("./b2 install threading=multi link=shared")
     shelltools.system("./b2 install --with-python threading=multi link=shared")
     inarytools.dobin("b2")
     inarytools.dosym("b2", "/usr/bin/bjam")
