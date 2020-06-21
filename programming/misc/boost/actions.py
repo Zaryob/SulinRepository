@@ -12,16 +12,17 @@ def setup():
     if get.buildTYPE()=="emul32":
         shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --prefix=%s/emul32/usr" % get.installDIR())
     elif get.buildTYPE()=="rebuild_python":
-        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python3.8 --prefix=%s/usr" % get.installDIR())
-        shelltools.echo("project-config.jam","using python : 3.8 : /usr/bin/python3 : /usr/include/python3.8 : /usr/lib ;")
+        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=python3 --prefix=%s/usr" % get.installDIR())
     else:
-        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python2.7 --prefix=%s/usr" % get.installDIR())
-        shelltools.echo("project-config.jam","using python : 2.7 : /usr/bin/python2 : /usr/include/python2.7 : /usr/lib ;")
+        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=python2 --prefix=%s/usr" % get.installDIR())
+
 
 def build():
     if get.buildTYPE()=="emul32":
         shelltools.export("PKG_CONFIG_PATH", '/usr/lib32/pkgconfig')
         shelltools.system("./b2 \
+                           stage \
+                           -j 1\
                            variant=release \
                            debug-symbols=off \
                            threading=multi \
@@ -35,6 +36,8 @@ def build():
 
     elif get.buildTYPE()=="rebuild_python":
         shelltools.system("./b2 \
+                           stage \
+                           -j 1 \
                            variant=release \
                            debug-symbols=off \
                            threading=multi \
@@ -48,6 +51,8 @@ def build():
 
     else:
         shelltools.system("./b2 \
+                           stage \
+                           -j 1 \
                            variant=release \
                            debug-symbols=off \
                            threading=multi \
@@ -63,7 +68,7 @@ def install():
         shelltools.system("./b2 install threading=multi link=shared")
         shelltools.system("mv %s/emul32/usr/lib %s/usr/lib32" %(get.installDIR(), get.installDIR()))
         shelltools.system("rm -rf  %s/emul32" % get.installDIR())
-        return 
+        return
     shelltools.system("./b2 install --with-python threading=multi link=shared")
     inarytools.dobin("b2")
     inarytools.dosym("b2", "/usr/bin/bjam")
