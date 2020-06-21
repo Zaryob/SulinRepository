@@ -65,6 +65,22 @@
             <Path fileType="library">/usr/lib/libboost_python38.so*</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>boost-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for boost</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>icu4c-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency release="current">icu4c</Dependency>
+            <Dependency>icu4c-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
     <History>
         <Update release="3">
             <Date>2020-06-21</Date>

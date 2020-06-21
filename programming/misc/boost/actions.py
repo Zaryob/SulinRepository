@@ -9,16 +9,31 @@ from inary.actionsapi import shelltools
 
 
 def setup():
-    if get.buildTYPE()=="rebuild_python":
+    if get.buildTYPE()=="emul32":
+        shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --prefix=%s/emul32/usr" % get.installDIR())
+    elif get.buildTYPE()=="rebuild_python":
         shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python3.8 --prefix=%s/usr" % get.installDIR())
         shelltools.echo("project-config.jam","using python : 3.8 : /usr/bin/python3 : /usr/include/python3.8 : /usr/lib ;")
     else:
         shelltools.system("./bootstrap.sh --with-toolset=gcc --with-icu --with-python=/usr/bin/python2.7 --prefix=%s/usr" % get.installDIR())
         shelltools.echo("project-config.jam","using python : 2.7 : /usr/bin/python2 : /usr/include/python2.7 : /usr/lib ;")
-    shelltools.echo("project-config.jam","--without-mpi ;")
 
 def build():
-    if get.buildTYPE()=="rebuild_python":
+    if get.buildTYPE()=="emul32":
+        shelltools.export("PKG_CONFIG_PATH", '/usr/lib32/pkgconfig')
+        shelltools.system("./b2 \
+                           variant=release \
+                           debug-symbols=off \
+                           threading=multi \
+                           runtime-link=shared \
+                           link=shared,static \
+                           toolset=gcc \
+                           address-model=32 \
+                           --without-python \
+                           cflags=-fno-strict-aliasing \
+                           --layout=system")
+
+    elif get.buildTYPE()=="rebuild_python":
         shelltools.system("./b2 \
                            variant=release \
                            debug-symbols=off \
