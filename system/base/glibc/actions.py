@@ -35,7 +35,7 @@ def setup():
 
     shelltools.makedirs("build")
     shelltools.cd("build")
-    options = ""--prefix=/usr \
+    options = "--prefix=/usr \
                --libdir=/usr/lib \
                --mandir=/usr/share/man \
                --infodir=/usr/share/info \
@@ -51,7 +51,7 @@ def setup():
                --with-headers=/usr/include \
                --enable-stackguard-randomization \
                --disable-werror"
-"
+
     if get.buildTYPE() == "emul32":
         options += "\
                     --libdir=/usr/lib32 \
