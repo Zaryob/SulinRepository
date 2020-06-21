@@ -16,6 +16,7 @@
         <BuildDependencies>
             <Dependency>xmlto</Dependency>
             <Dependency>asciidoc</Dependency>
+            <Dependency>libgpg-error-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

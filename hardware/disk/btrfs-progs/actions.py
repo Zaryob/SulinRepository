@@ -11,7 +11,7 @@ from inary.actionsapi import shelltools
 
 def setup():
     shelltools.system("./autogen.sh")
-    autotools.configure("PYTHON=/usr/bin/python3 --with-python")
+    autotools.configure("PYTHON=/usr/bin/python3 --with-python --with-crypto=libgcrypt --disable-zstd")
 
 def build():
     autotools.make("CC=%s" % get.CC())
@@ -21,8 +21,5 @@ def build():
 def install():
     autotools.rawInstall("prefix=/usr DESTDIR=%s" % get.installDIR())
     inarytools.remove("/usr/lib/*.a")
-
-    inarytools.insinto("/usr/bin", "bcp", "btrfs-bcp")
-    inarytools.insinto("/usr/bin", "show-blocks", "btrfs-show-blocks")
 
     inarytools.dodoc("COPYING")
