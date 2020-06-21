@@ -13,11 +13,12 @@
         <PartOf>system.devel</PartOf>
         <Summary>XSLT libraries and tools</Summary>
         <Description>Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML.</Description>
-        <Archive sha1sum="7672386afa8a30b82e0a44f7a931d756358ed672">https://gitlab.gnome.org/GNOME/libxslt/-/archive/v1.1.34/libxslt-v1.1.34.tar.gz</Archive>
+        <Archive sha1sum="229b7d7330749e6e483c9f3a7d4f7d92a3477b2f">https://gitlab.gnome.org/Zaryob/libxslt/-/archive/a7841f326db2ae24adf1e0940ac25b64958302b0/libxslt-a7841f326db2ae24adf1e0940ac25b64958302b0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>libgcrypt-devel</Dependency>
             <Dependency>python-libxml2</Dependency>
+            <Dependency>python3-libxml2</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,6 +31,27 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-libxslt</Name>
+        <PartOf>programming.language.python</PartOf>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/lib/python3.8</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-libxslt</Name>
+        <BuildType>rebuild_python</BuildType>
+        <PartOf>programming.language.python</PartOf>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/lib/python2.7</Path>
         </Files>
     </Package>
     <Package>
