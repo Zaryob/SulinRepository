@@ -19,6 +19,10 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    if get.buildTYPE()=="emul32":
+        inarytools.remove("/usr/lib32/libedit.la")
+        return
+
 
     inarytools.dodoc("ChangeLog", "COPYING", "THANKS")
     inarytools.remove("/usr/lib/libedit.la")
