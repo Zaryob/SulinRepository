@@ -6,9 +6,12 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 def build():
+    if get.buildTYPE() == "emul32":
+        shelltools.system("  sed -i 's/CC := gcc/CC := gcc -m32/' Makefile")
     autotools.make("PREFIX=/usr")
 
 def install():

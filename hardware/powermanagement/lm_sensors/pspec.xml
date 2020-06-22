@@ -35,8 +35,11 @@
     <Package>
         <Name>lm_sensors-32bit</Name>
         <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>rrdtool-32bit</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
-            <Dependency>rrdtool</Dependency>
+            <Dependency>rrdtool-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32</Path>
@@ -57,6 +60,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-06-21</Date>
+            <Version>3.6.0</Version>
+            <Comment>Package is rebuilded and released up. Python3 rebuild.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-23</Date>
             <Version>3.6.0</Version>
