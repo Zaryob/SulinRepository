@@ -119,6 +119,18 @@
         </Files>
     </Package>
     <Package>
+        <Name>python3-32bit</Name>
+        <IsA>emul32</IsA>
+        <PartOf>emul32</PartOf>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library" permanent="0">/usr/lib32/</Path>
+        </Files>
+    </Package>
+    <Package>
         <Name>python3-devel</Name>
         <IsA>header</IsA>
         <PartOf>system.devel</PartOf>
