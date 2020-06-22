@@ -63,19 +63,28 @@
         </Files>
     </Package>
     <Package>
+        <Name>llvm-libs-32bit</Name>
+        <IsA>emul32</IsA>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-libs</Dependency>
+            <Dependency>libedit-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libLLVM.*</Path>
+            <Path fileType="library">/usr/lib32/LLVMgold.*</Path>
+            <Path fileType="library">/usr/lib32/libLTO.*</Path>
+            <Path fileType="library">/usr/lib32/bfd-plugins/LLVMgold.so</Path>
+        </Files>
+    </Package>
+    <Package>
         <Name>lldb</Name>
         <Summary>Next generation, high-performance debugger</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">llvm</Dependency>
-            <Dependency>libedit</Dependency>
-            <Dependency>python3</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/argdumper</Path>
             <Path fileType="executable">/usr/bin/lldb*</Path>
             <Path fileType="library">/usr/lib/liblldb</Path>
-            <Path fileType="library">/usr/lib/python3.7/site-packages/readline.so</Path>
-            <Path fileType="library">/usr/lib/python3.7/site-packages/lldb/*</Path>
+            <Path fileType="library">/usr/lib/python3*/site-packages/readline.so</Path>
+            <Path fileType="library">/usr/lib/python3*/site-packages/lldb/*</Path>
         </Files>
     </Package>
     <Package>
@@ -106,6 +115,24 @@
         </Files>
     </Package>
     <Package>
+        <Name>clang</Name>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>A LLVM c compiler</Summary>
+        <Description>The goal of the Clang project is to create a new C, C++, Objective C and Objective C++ front-end for the LLVM compiler.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-libs</Dependency>
+            <Dependency release="current">llvm-clang</Dependency>
+            <Dependency release="current">llvm-clang-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/clang*</Path>
+            <Path fileType="executable">/usr/bin/tblgen</Path>
+            <Path fileType="man">/usr/share/man/man1/clang.1</Path>
+            <Path fileType="data">/usr/share/clang</Path>
+        </Files>
+    </Package>
+    <Package>
         <Name>llvm-clang</Name>
         <IsA>app:console</IsA>
         <IsA>library</IsA>
@@ -115,12 +142,22 @@
             <Dependency release="current">llvm-libs</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin/clang*</Path>
-            <Path fileType="executable">/usr/bin/tblgen</Path>
             <Path fileType="library">/usr/lib/clang</Path>
             <Path fileType="library">/usr/lib/clang/libclang.so</Path>
-            <Path fileType="man">/usr/share/man/man1/clang.1</Path>
-            <Path fileType="data">/usr/share/clang</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>llvm-clang-32bit</Name>
+        <IsA>app:console</IsA>
+        <IsA>emul32</IsA>
+        <Summary>A C language family front-end for LLVM</Summary>
+        <Description>The goal of the Clang project is to create a new C, C++, Objective C and Objective C++ front-end for the LLVM compiler.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-libs-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/clang</Path>
+            <Path fileType="library">/usr/lib32/clang/libclang.so</Path>
         </Files>
     </Package>
     <Package>
@@ -158,7 +195,7 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">llvm</Dependency>
-            <Dependency>libedit</Dependency>
+            <Dependency>libedit-32bit</Dependency>
             <Dependency>ncurses-32bit</Dependency>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>libffi-32bit</Dependency>
