@@ -13,7 +13,7 @@
         <PartOf>programming.language.tcl</PartOf>
         <Summary>Tcl programming language</Summary>
         <Description>Tcl provides a powerful platform for creating integration applications that tie together diverse applications, protocols, devices, and frameworks.</Description>
-        <Archive sha1sum="861c5c8bbce9eda892c5e63b6035e09fad90a25f" type="targz">https://downloads.sourceforge.net/tcl/tcl8.6.9-src.tar.gz</Archive>
+        <Archive sha1sum="0ba1dcc40db79749c322258781879a3c17093295">https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>
@@ -27,6 +27,16 @@
             <Path fileType="data">/usr/lib/tcl8.6</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>tcl-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for tcl</Summary>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
 
     <Package>
         <Name>tcl-devel</Name>
@@ -79,6 +89,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-06-22</Date>
+            <Version>8.6.10</Version>
+            <Comment>Version bump to 8.6.10</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>8.6.9</Version>
