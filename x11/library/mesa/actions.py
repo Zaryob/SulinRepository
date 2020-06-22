@@ -45,6 +45,10 @@ def setup():
     if get.buildTYPE() == "emul32":
         shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
         options += " --libdir=/usr/lib32 --native-file crossfile.ini "
+    else:
+        shelltools.export("PKG_CONFIG_PATH","/usr/lib/pkgconfig")
+        options += " --libdir=/usr/lib"
+
 
     mesontools.meson_configure(options)
 
@@ -52,12 +56,10 @@ def build():
     mesontools.ninja_build()
 
 def install():
-    mesontools.ninja_install("DESTDIR=%s" % get.installDIR())
+    if get.buildTYPE() == "emul32":
+        shelltools.system("DESTDIR='{}' ninja -C inaryPackageBuild install".format(get.installDIR()))
+        return
+    mesontools.ninja_install()
 
     #inarytools.domove("%s/libGL.so.1.2.0" % Libdir, "%s/mesa" % Libdir)
     #inarytools.dosym("mesa/libGL.so.1.2.0", "%s/libGL.so.1.2" % Libdir)
-
-    if get.buildTYPE() == "emul32":
-        return
-
-
