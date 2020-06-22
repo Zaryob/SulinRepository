@@ -79,6 +79,11 @@
     <Package>
         <Name>lldb</Name>
         <Summary>Next generation, high-performance debugger</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">llvm-libs</Dependency>
+            <Dependency>libedit</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/argdumper</Path>
             <Path fileType="executable">/usr/bin/lldb*</Path>
