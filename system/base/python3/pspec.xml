@@ -112,22 +112,9 @@
             <Path fileType="library" permanent="0">/usr/lib/python3.8/lib-dynload/z*</Path>
             <Path fileType="library" permanent="0">/usr/lib/python3.8/__pycache__</Path>
             <Path fileType="library" permanent="0">/usr/lib/*.so</Path>
-            <Path fileType="library" permanent="0">/usr/lib/libpython3.8n.so.1.0</Path>
             <Path fileType="library" permanent="0">/usr/lib/libpython3.8.so.1.0</Path>
             <Path fileType="man" permanent="0">/usr/share/man/man1/*</Path>
             <Path fileType="doc" permanent="0">/usr/share/doc</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>python3-32bit</Name>
-        <IsA>emul32</IsA>
-        <PartOf>emul32</PartOf>
-        <BuildType>emul32</BuildType>
-        <RuntimeDependencies>
-            <Dependency release="current">python3</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library" permanent="0">/usr/lib32/</Path>
         </Files>
     </Package>
     <Package>

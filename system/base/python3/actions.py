@@ -15,7 +15,7 @@ def setup():
 
     options ="\
              --prefix=/usr \
-             --libdir=/usr/{} \
+             --libdir=/usr/lib \
              --enable-shared \
              --with-threads \
              --with-computed-gotos \
@@ -26,9 +26,7 @@ def setup():
              --with-system-libmpdec \
              --enable-loadable-sqlite-extensions \
              --without-ensurepip \
-             ".format("lib32" if get.buildTYPE()=="emul32" else "lib")
-    if get.buildTYPE=="emul32":
-        options+="--with-suffix='-32'"
+             "
 
     autotools.rawConfigure(options)
 
