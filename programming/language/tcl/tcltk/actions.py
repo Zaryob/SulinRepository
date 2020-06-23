@@ -44,4 +44,4 @@ def install():
 
     inarytools.dosym("wish8.6", "/usr/bin/wish")
 
-    inarytools.dodoc("ChangeLog", "changes", "license.terms", "README")
+    inarytools.dodoc("ChangeLog", "changes", "license.terms", "README.md")
