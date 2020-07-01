@@ -33,15 +33,21 @@
         <Name>python3-pam</Name>
         <RuntimeDependencies>
             <Dependency>pam</Dependency>
-            <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>1.8.4</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>1.8.4</Version>
