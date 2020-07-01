@@ -11,9 +11,12 @@
         <IsA>library</IsA>
         <Summary>C parser and AST generator written in Python</Summary>
         <Description>C parser and AST generator written in Python</Description>
-        <Archive sha1sum="3c8845142c9065ae4407c166964b57bd34dde88d">https://github.com/eliben/pycparser/archive/release_v2.19.zip</Archive>
+        <Archive sha1sum="be797bd889dbdfbdaffdf5d06484fc51cc6e01c3">https://github.com/eliben/pycparser/archive/release_v2.20.zip</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-ply</Dependency>
+            <Dependency>python3-ply</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,12 +27,27 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
-            <Path fileType="library">/usr/lib/python3.7/site-packages</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-pycparser</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-ply</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.8/site-packages</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>2.20</Version>
+            <Comment>Version bump to 2.20</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-02-01</Date>
             <Version>2.19</Version>
