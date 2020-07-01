@@ -11,10 +11,11 @@
         <IsA>library</IsA>
         <Summary>Foreign Function Interface for Python calling C code</Summary>
         <Description>Foreign Function Interface for Python calling C code</Description>
-        <Archive sha1sum="ad94c1b64570ec3016a945d4b226d527de81f9b9">https://files.pythonhosted.org/packages/2d/bf/960e5a422db3ac1a5e612cb35ca436c3fc985ed4b7ed13a1b4879006f450/cffi-1.13.2.tar.gz</Archive>
+        <Archive sha1sum="2a8f05a7d51d77ef1e641cb359a54e4d8fa019cb">https://files.pythonhosted.org/packages/05/54/3324b0c46340c31b909fcec598696aaec7ddc8c18a63f2db352562d3354c/cffi-1.14.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
-        </BuildDependencies>    
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
@@ -24,12 +25,27 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2.7</Path>
-            <Path fileType="library">/usr/lib/python3.7</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-cffi</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-pycparser</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>1.14.0</Version>
+            <Comment>Version bump to 1.14.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-02-01</Date>
             <Version>1.13.2</Version>
