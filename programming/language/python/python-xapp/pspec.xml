@@ -21,7 +21,6 @@
     <Package>
         <Name>python-xapp</Name>
         <RuntimeDependencies>
-            <Dependency>pam</Dependency>
             <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -31,17 +30,20 @@
 
     <Package>
         <Name>python3-xapp</Name>
-        <RuntimeDependencies>
-            <Dependency>pam</Dependency>
-            <Dependency>python</Dependency>
-        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     
     <History>
+        <Update release="1">
+            <Date>2020-07-01</Date>
+            <Version>2.0.1</Version>
+            <Comment>Version düzeltmesi</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>1.8.4</Version>
