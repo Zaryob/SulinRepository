@@ -4,23 +4,27 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from inary.actionsapi import pythonmodules
 from inary.actionsapi import shelltools
-from inary.actionsapi import autotools
+from inary.actionsapi import cmaketools
 from inary.actionsapi import inarytools
 from inary.actionsapi import libtools
 from inary.actionsapi import get
 
 def setup():
+    shelltools.makedirs("build")
+    shelltools.cd("build")
 
-    autotools.autoreconf("-vif")
-    autotools.configure()
+    cmaketools.configure("-DCMAKE_BUILD_TYPE=Release \
+                          -DCMAKE_INSTALL_PREFIX=/usr \
+                          -DENABLE_MAINTAINER_TOOLS=TRUE \
+                          -DENABLE_FONTFORGE_EXTRAS=TRUE \
+                          -DUNIX=TRUE ", sourceDir="..")
 
-    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
-    autotools.make()
+    shelltools.cd("build")
+    cmaketools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    inarytools.dodoc("AUTHORS", "LICENSE")
+    shelltools.cd("build")
+    cmaketools.install()
