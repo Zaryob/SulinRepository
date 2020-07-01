@@ -18,6 +18,11 @@ def build():
     autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
+    if get.buildTYPE()=="emul32":
+        shelltools.system("make install DESTDIR={}/emul32".format(get.installDIR()))
+        shelltools.system("mkdir {0}/usr && mv {0}/emul32/usr/lib32 {0}/usr/".format(get.installDIR()))
+        shelltools.system("rm -rf {0}/emul32/".format(get.installDIR()))
+        shelltools.system("sed -i 's|emul32|usr|' {0}/usr/lib32/pkgconfig/*.pc".format(get.installDIR()))
+        return
+    autotools.install()
     inarytools.dodoc("AUTHORS", "FAQ.txt", "NEWS", "README*")
