@@ -23,21 +23,28 @@
             <Dependency>tiff</Dependency>
             <Dependency>sane-backends-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-        </BuildDependencies>        
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>python-pillow</Name>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
+            <Dependency>lcms2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-pillow</Name>
+        <RuntimeDependencies>
             <Dependency>python3</Dependency>
             <Dependency>lcms2</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
         </Files>
     </Package>
 
