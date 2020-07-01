@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Python module for creating and executing simple grammars</Summary>
         <Description>pyparsing is a module that can be used to easily and directly configure syntax definitions for any number of text parsing applications.</Description>
-        <Archive sha1sum="0bcaf83e5efb5dbf268fe1cbb0a6771983394f9a" type="targz">https://files.pythonhosted.org/packages/00/32/8076fa13e832bb4dcff379f18f228e5a53412be0631808b9ca2610c0f566/pyparsing-2.4.5.tar.gz</Archive>
+        <Archive sha1sum="ca8d892c93fe2d54ea5e6f31c5798e40c58e8667" type="targz">https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210/pyparsing-2.4.7.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>2.4.7</Version>
+            <Comment>Version bump to 2.4.7</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>3.4.5</Version>
