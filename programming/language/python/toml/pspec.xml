@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>A Python library for parsing and creating TOML.</Summary>
         <Description>A Python library for parsing and creating TOML.</Description>
-        <Archive sha1sum="390d9cded8880a9211446f83713b380b1c4f368d" type="targz">https://github.com/uiri/toml/archive/0.10.0.tar.gz</Archive>
+        <Archive sha1sum="390d9cded8880a9211446f83713b380b1c4f368d">https://github.com/uiri/toml/archive/0.10.0.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +48,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>0.10.0</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>0.10.0</Version>
