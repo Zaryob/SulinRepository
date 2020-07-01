@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>The pysol-cards python modules allow the python developer to generate the initial deals of some PySol FC games</Summary>
         <Description>The pysol-cards python modules allow the python developer to generate the initial deals of some PySol FC games.  It also supports PySol legacy deals and Microsoft FreeCell / Freecell Pro deals.</Description>
-        <Archive sha1sum="587e32c67fa234d015dde02e135bab75a12a7a28" type="targz">https://pypi.io/packages/source/p/pysol_cards/pysol_cards-0.8.7.tar.gz</Archive>
+        <Archive sha1sum="65096b12cb5f10d7c3163dd9489f0359cf39eba2" type="targz">https://files.pythonhosted.org/packages/2a/d5/52713c749186b7728558fa8111c7f7f77e8e34eb252498c0ee148d15f9d0/pysol_cards-0.10.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +48,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>0.10.1</Version>
+            <Comment>Version bump to 0.10.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-11</Date>
             <Version>0.8.7</Version>
