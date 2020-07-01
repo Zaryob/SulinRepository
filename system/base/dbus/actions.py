@@ -53,8 +53,8 @@ def check():
     autotools.make("check")
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    if get.buildTYPE() == "emul32": return
+    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
+    if get.buildTYPE()=="emul32": return
 
     # needs to exist for the system socket
     inarytools.dodir("/var/run/dbus")

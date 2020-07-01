@@ -97,6 +97,7 @@
             <Dependency>expat-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
+            <Dependency>expat-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/cmake</Path>
