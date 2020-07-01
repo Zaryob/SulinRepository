@@ -31,6 +31,14 @@
         </Files>
     </Package>
     <Package>
+        <Name>libomxil-bellagio-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+    <Package>
         <Name>libomxil-bellagio-devel</Name>
         <Summary>Development files for mesa</Summary>
         <RuntimeDependencies>

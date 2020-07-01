@@ -13,18 +13,20 @@ Libdir = "/usr/lib32" if get.buildTYPE() == "emul32" else "/usr/lib"
 
 def setup():
     options ="\
-    -D b_lto=false \
+    -D b_lto=true \
     -D b_ndebug=true \
     -D platforms=x11,wayland,drm,surfaceless \
     -D dri-drivers=i915,i965,r100,r200,nouveau \
-    -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,iris \
+    -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,swr,iris \
     -D vulkan-drivers=amd,intel \
+    -D vulkan-overlay-layer=true \
+    -D vulkan-device-select-layer=true \
     -D swr-arches=avx,avx2 \
     -D dri3=true \
     -D egl=true \
     -D gallium-extra-hud=true \
     -D gallium-nine=true \
-    -D gallium-omx=disabled \
+    -D gallium-omx=bellagio \
     -D gallium-opencl=icd \
     -D gallium-va=true \
     -D gallium-vdpau=true \
@@ -35,12 +37,12 @@ def setup():
     -D gles2=true \
     -D glvnd=true \
     -D glx=dri \
-    -D libunwind=false \
+    -D libunwind=true \
     -D llvm=true \
     -D lmsensors=true \
     -D osmesa=gallium \
     -D shared-glapi=true \
-    -D valgrind=false"
+    -D valgrind=true"
 
     if get.buildTYPE() == "emul32":
         shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")

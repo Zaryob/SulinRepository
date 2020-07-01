@@ -12,12 +12,20 @@ from inary.actionsapi import get
 def setup():
     shelltools.system("sed -e 's/-Werror//' -i configure.ac")
     autotools.autoreconf("-fiv")
-    autotools.configure("--disable-static")
+    options="--disable-static"
+    if get.buildTYPE()=="emul32":
+        options+=" --prefix=/usr --libdir=/usr/lib32"
+    else:
+        options+=" --prefix=/usr --libdir=/usr/lib"
+    shelltools.system("CFLAGS='-fcommon' ./configure "+options)
 
 def build():
     autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
+    if get.buildTYPE()=="emul32":
+        return
+
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
