@@ -15,7 +15,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>Mesa graphics libraries and utilities</Summary>
         <Description>Mesa is an open-source implementation of the OpenGL specification - a system for rendering interactive 3D graphics.</Description>
-        <Archive sha1sum="44d474a9a66505f751374796be8f4d5e4785a2b3" >https://mesa.freedesktop.org/archive/mesa-20.1.1.tar.xz</Archive>
+        <Archive sha1sum="9f48d8f48499018fb685b592591db351324e983b" >https://mesa.freedesktop.org/archive/mesa-20.1.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libdrm-devel</Dependency>
             <Dependency>clang</Dependency>
@@ -165,7 +165,7 @@
     <History>
         <Update release="4">
             <Date>2020-06-21</Date>
-            <Version>20.1.1</Version>
+            <Version>20.1.2</Version>
             <Comment>Version bump to 20.1.1</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
