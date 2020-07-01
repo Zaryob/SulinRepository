@@ -17,3 +17,4 @@ def build():
 def install():
     pythonmodules.install()
     pythonmodules.install(pyVer="3")
+    inarytools.remove("/usr/LICENSE")
