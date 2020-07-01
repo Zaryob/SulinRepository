@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>Core utilities for Python packages.</Summary>
         <Description>The packaging project includes the following: version handling, specifiers, markers, requirements, tags, utilities.</Description>
-        <Archive sha1sum="ae4aeb07c330d623c3d8fa8414c6080d2c9a4192" type="targz">https://files.pythonhosted.org/packages/5a/2f/449ded84226d0e2fda8da9252e5ee7731bdf14cd338f622dfcd9934e0377/packaging-19.2.tar.gz</Archive>
+        <Archive sha1sum="b99fa7af153646722b2d1817bb09906cc5a94bc6" type="targz">https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +48,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>20.4</Version>
+            <Comment>Version bump to 20.4</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-15</Date>
             <Version>1.5.0.1</Version>
