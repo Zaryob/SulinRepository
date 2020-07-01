@@ -13,11 +13,11 @@
         <IsA>app:console</IsA>
         <Summary>Library for manipulating Apple Binary and XML Property Lists</Summary>
         <Description>libplist is a library for manipulating Apple Binary and XML Property Lists.</Description>
-        <Archive sha1sum="48f071c723387637ef2cc2980d4ca0627aab067b" >http://www.libimobiledevice.org/downloads/libplist-1.12.tar.bz2</Archive>
+        <Archive sha1sum="a92830a3286442f9ea2eac02db81fcfb149a0812" >https://github.com/libimobiledevice/libplist/releases/download/2.2.0/libplist-2.2.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libxml2-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>cython</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>cython3</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,12 +25,11 @@
         <Name>libplist</Name>
         <RuntimeDependencies>
             <Dependency>libxml2</Dependency>
-            <Dependency>python</Dependency>
-            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
     </Package>
@@ -50,6 +49,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>2.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>1.12</Version>
