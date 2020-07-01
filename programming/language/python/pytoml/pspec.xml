@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>A Python library for parsing and creating toml.</Summary>
         <Description>A Python library for parsing and creating toml.</Description>
-        <Archive sha1sum="41b2a728de66332e7bcce167ba096d9ae2392154" type="targz">https://files.pythonhosted.org/packages/f4/ba/98ee2054a2d7b8bebd367d442e089489250b6dc2aee558b000e961467212/pytoml-0.1.21.tar.gz</Archive>
+        <Archive sha1sum="41b2a728de66332e7bcce167ba096d9ae2392154" >https://files.pythonhosted.org/packages/f4/ba/98ee2054a2d7b8bebd367d442e089489250b6dc2aee558b000e961467212/pytoml-0.1.21.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +48,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>0.1.21</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>0.1.21</Version>
