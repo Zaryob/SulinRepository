@@ -15,7 +15,7 @@
 
         <Description>structlog makes logging in Python less painful and more powerful by adding structure to your log entries.</Description>
 
-        <Archive sha1sum="680046b43650724d9faa5b51b7ea528b458000b6" type="targz">https://files.pythonhosted.org/packages/86/64/2a7d6f2e55d627a50f5e50162ec73dbe8f9bb8ff3ded372813cd3d4eb067/structlog-19.2.0.tar.gz</Archive>
+        <Archive sha1sum="680046b43650724d9faa5b51b7ea528b458000b6">https://files.pythonhosted.org/packages/86/64/2a7d6f2e55d627a50f5e50162ec73dbe8f9bb8ff3ded372813cd3d4eb067/structlog-19.2.0.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -50,6 +50,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>19.2.0</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>19.2.0</Version>
