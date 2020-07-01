@@ -12,15 +12,11 @@
         <IsA>library</IsA>
         <Summary>A Library of Unicode names and annotation data</Summary>
         <Description>A library with a large (sparse) array mapping each unicode code point to the annotation data for it provided in http://www.unicode.org/Public/UNIDATA/NamesList.txt</Description>
-        <Archive sha1sum="7844cd47088f215d351f269b7c4475024be0f504" type="targz">https://github.com/fontforge/libuninameslist/releases/download/20190701/libuninameslist-dist-20190701.tar.gz</Archive>
+        <Archive sha1sum="f40453257c0aa597862bb7d5ab54f6c3caa0a3ba" type="targz">https://github.com/fontforge/libuninameslist/releases/download/20200413/libuninameslist-dist-20200413.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-wheel</Dependency>
             <Dependency>python3-pip</Dependency>
             <Dependency>python3-setuptools</Dependency>
-            <Dependency>python-wheel</Dependency>
-            <Dependency>python-pip</Dependency>
-            <Dependency>python-devel</Dependency>
-            <Dependency>python-setuptools</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,7 +25,6 @@
         <RuntimeDependencies>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>python</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>cairo</Dependency>
@@ -55,7 +50,6 @@
 
     <Package>
         <Name>libuninamelist-devel</Name>
-        <BuildType>rebuild_python</BuildType>
         <Summary>Development files for libuninamelist</Summary>
         <RuntimeDependencies>
             <Dependency>tiff</Dependency>
@@ -70,6 +64,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>20200413</Version>
+            <Comment>Version bump to 20200413</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>20190701</Version>

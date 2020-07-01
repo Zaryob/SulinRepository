@@ -14,7 +14,7 @@ from inary.actionsapi import get
 def setup():
 
     autotools.autoreconf("-vif")
-    autotools.configure("PYTHON=python{} --enable-pylib".format("3" if get.buildTYPE()=="rebuild_python" else "2"))
+    autotools.configure("PYTHON=python3 --enable-pylib")
 
     inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
