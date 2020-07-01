@@ -12,16 +12,14 @@ from inary.actionsapi import inarytools
 WorkDir="pip-%s" % get.srcVERSION()
 
 def setup():
-    pythonmodules.compile(pyVer = "3")
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 
 def install():
-    pythonmodules.install(pyVer = "3")
+    pythonmodules.install(pyVer="3")
     inarytools.rename("/usr/bin/pip", "pip3")
+    inarytools.dosym("pip3", "/usr/bin/pip")
 
-    pythonmodules.install()
-    inarytools.rename("/usr/bin/pip", "pip2")
 
 
     shelltools.system("sed -i 's|#!/usr/bin/env python$|#!/usr/bin/env python3|' %s/usr/lib/python3.*/site-packages/pip/__init__.py" % get.installDIR())
