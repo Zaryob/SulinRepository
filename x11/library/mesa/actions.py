@@ -21,7 +21,7 @@ def setup():
     #clangize()
 
     options ="\
-    -D b_lto=true \
+    -D b_lto=false \
     -D b_ndebug=true \
     -D platforms=x11,wayland,drm,surfaceless \
     -D dri-drivers=i915,i965,r100,r200,nouveau \
