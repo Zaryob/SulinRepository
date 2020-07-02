@@ -10,11 +10,12 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 #WorkDir = "flite-%s-current" % get.srcVERSION()
-   
-def setup(): 
+
+def setup():
+    autotools.autoreconf("-vif")
     autotools.configure("--prefix=/usr \
                          --with-audio=alsa \
-                         --with-vox=cmu_us_kal16")
+                         --with-vox=cmu_us_kal16 ")
 
 def build():
     autotools.make()

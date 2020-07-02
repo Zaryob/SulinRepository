@@ -18,6 +18,10 @@
             <Dependency>alsa-lib-devel</Dependency>
         </BuildDependencies>
         <Patches>
+            <Patch>flite-2.1-prototype.patch</Patch>
+            <Patch>flite-2.1-Only-write-audio-data-to-a-temporariy-file-in-debug-.patch</Patch>
+            <Patch>flite-2.1-Improve-internal-linking.patch</Patch>
+            <Patch>flite-1.4-audio-interface.patch</Patch>
         </Patches>
     </Source>
 
