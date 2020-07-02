@@ -94,6 +94,7 @@ def install():
         inarytools.insinto("/usr/bin/","%s/emul32/bin/llvm-config" % get.installDIR(),"llvm-config-32")
         inarytools.removeDir("/emul32")
         return
+    inarytools.remove("/usr/lib/python3.8/site-packages/six.py")
 
     shelltools.cd ("..")
 
