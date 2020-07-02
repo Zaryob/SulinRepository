@@ -5,18 +5,26 @@
 # See the file http://www.gnu.org/licenses/gpl.txt
 
 from inary.actionsapi import get
-from inary.actionsapi import autotools
+from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 
 def setup():
-    autotools.configure("--with-module-path=/usr/lib%s/pkcs11" % ("32" if get.buildTYPE() == "emul32" else ""))
+    mesontools.meson_configure(" --buildtype debugoptimized \
+    -D gtk_doc=false \
+    -D man=false \
+    -D trust_paths=/etc/ca-certificates/trust-source:/usr/share/ca-certificates/trust-source")
 
 def build():
-    autotools.make()
+    mesontools.ninja_build()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    mesontools.ninja_install()
 
-    if get.buildTYPE() == "emul32": return
+    if get.buildTYPE() == "emul32":
+        inarytools.domove("/usr/pkgconfig", "/usr/lib32/")
+        inarytools.domove("/usr/p11-kit-proxy.so", "/usr/lib32")
+        inarytools.domove("/usr/pkcs11", "/usr/lib32/")
+        inarytools.domove("/usr/*.so*", "/usr/lib32/")
+        return
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")
