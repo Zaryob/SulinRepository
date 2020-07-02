@@ -54,4 +54,4 @@ def install():
                     "%s/usr/lib/" % get.installDIR())
     shelltools.unlinkDir("%s/python2" % get.installDIR())
     shelltools.cd("..")
-    inarytools.dodoc("doc/*.txt", "COPYING", "NEWS", "README", "TODO")
+    inarytools.dodoc("doc/*.txt", "COPYING", "NEWS", "README.md", "TODO")
