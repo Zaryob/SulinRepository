@@ -40,7 +40,7 @@
         <RuntimeDependencies>
             <Dependency release="current">libplist</Dependency>
             <Dependency>libxml2-devel</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
