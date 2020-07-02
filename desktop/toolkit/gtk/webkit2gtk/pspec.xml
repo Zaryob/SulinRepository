@@ -137,15 +137,9 @@
 
     <History>
         <Update release="3">
-<<<<<<< HEAD
             <Date>2020-07-02</Date>
             <Version>2.28.0</Version>
             <Comment>Rebuilded.</Comment>
-=======
-            <Date>2019-10-10</Date>
-            <Version>2.28.0</Version>
-            <Comment>Upstream</Comment>
->>>>>>> c4661ac3fd3f8dcd698f7197e727be09f9a5ec72
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>

@@ -19,7 +19,3 @@ def build():
 
 def install():
     mesontools.ninja_install()
-<<<<<<< HEAD
-    #fix conflict with mesa
-=======
->>>>>>> c4661ac3fd3f8dcd698f7197e727be09f9a5ec72
