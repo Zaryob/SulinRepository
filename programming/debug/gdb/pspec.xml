@@ -12,16 +12,13 @@
         <Summary>GNU debugger</Summary>
         <PartOf>programming.debug</PartOf>
         <Description>GDB, the GNU Project debugger, allows you to see what is going on 'inside' another program while it executes -- or what another program was doing at the moment it crashed.</Description>
-        <Archive sha1sum="d403ba208945bbf04f8130ea4853730cdf0c8fc7" type="tarxz">mirrors://gnu/gdb/gdb-8.3.1.tar.xz</Archive>
+        <Archive sha1sum="356ee474a24bfb2f133894730916557dfea9da2e" type="tarxz">mirrors://gnu/gdb/gdb-9.2.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>gdb</Name>
-        <RunDependencies>
-            <Dependency>python</Dependency>
-        </RunDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
@@ -45,6 +42,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-07-02</Date>
+            <Version>9.2</Version>
+            <Comment>Version bump to 9.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-12-15</Date>
             <Version>8.3.1</Version>
