@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>The Oil Runtime Compiler</Summary>
         <Description>Optimized Inner Loop Runtime Compiler</Description>
-        <Archive sha1sum="b5a778b285e3d7fa75bcba32a0a7804207f7e2cf" type="tarxz">https://gstreamer.freedesktop.org/src/orc/orc-0.4.30.tar.xz</Archive>
+        <Archive sha1sum="84b96290f6f9ce848a3595ed1b4bc43bd8681d2a" >https://gitlab.freedesktop.org/gstreamer/orc/-/archive/0.4.31/orc-0.4.31.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>valgrind</Dependency>
         </BuildDependencies>
@@ -55,6 +55,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-02</Date>
+            <Version>0.4.31</Version>
+            <Comment>Version bump to 0.4.31</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-28</Date>
             <Version>0.4.30</Version>
