@@ -11,7 +11,7 @@
         <IsA>app:console</IsA>
         <Summary>Sulin initrd system</Summary>
         <Description>Sulin initramfs creation system with live boot support.</Description>
-        <Archive sha1sum="e51acf25f5eb4405fc4cd9deae12a1ff067bbaee">https://gitlab.com/sulinos/devel/initrd/-/archive/1.1/initrd-1.1.tar.gz</Archive>
+        <Archive sha1sum="fdeef23c504286f0914f25a9abdd1ca80f475f39">https://gitlab.com/sulinos/devel/initrd/-/archive/1.1.2/initrd-1.1.2.tar.gz</Archive>
     </Source>
     <Package>
         <Name>initrd</Name>
