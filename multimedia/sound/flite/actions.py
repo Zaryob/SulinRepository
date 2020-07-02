@@ -22,4 +22,4 @@ def build():
 def install():
     autotools.install()
 
-    inarytools.dodoc("COPYING", "README")
+    inarytools.dodoc("COPYING", "README*")
