@@ -11,7 +11,15 @@ from inary.actionsapi import shelltools
 
 Libdir = "/usr/lib32" if get.buildTYPE() == "emul32" else "/usr/lib"
 
+
+def clangize():
+    clang="{}".format("clang" if get.buildTYPE()!="emul32" else "clang -m32")
+    clangpp="{}".format("clang++" if get.buildTYPE()!="emul32" else "clang++ -m32")
+    shelltools.export("CC", clang)
+    shelltools.export("CXX", clangpp)
 def setup():
+    #clangize()
+
     options ="\
     -D b_lto=true \
     -D b_ndebug=true \
@@ -55,9 +63,12 @@ def setup():
     mesontools.meson_configure(options)
 
 def build():
-    mesontools.ninja_build()
+    #clangize()
+    mesontools.ninja_build("xmlpool-pot xmlpool-update-po xmlpool-gmo")
+    shelltools.system("meson compile -C inaryPackageBuild")
 
 def install():
+    #clangize()
     if get.buildTYPE() == "emul32":
         shelltools.system("DESTDIR='{}' ninja -C inaryPackageBuild install".format(get.installDIR()))
         return
