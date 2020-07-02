@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A set of good-quality plugins for GStreamer</Summary>
         <Description>gst-plugins-good contains a set of mature plugins and elements for GStreamer.</Description>
-        <Archive sha1sum="071f195359ff0b3b3329ad3ad2b89803a1e7d063" type="tarxz">https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.16.2.tar.xz</Archive>
+        <Archive sha1sum="cd382bc6f1df87b3d3218d2a82929cdffb39049f" type="tarxz">https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.17.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>orc-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -37,9 +37,9 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libiec61883-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency version="1.16.2">gstreamer-devel</Dependency>
+            <Dependency version="1.17.1">gstreamer-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
-            <Dependency version="1.16.2">gst-plugins-base-devel</Dependency>
+            <Dependency version="1.17.1">gst-plugins-base-devel</Dependency>
             <Dependency>jack-audio-connection-kit-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -69,9 +69,9 @@
             <Dependency>libraw1394</Dependency>
             <Dependency>libiec61883</Dependency>
             <Dependency>libjpeg-turbo</Dependency>
-            <Dependency version="1.16.2">gstreamer</Dependency>
+            <Dependency version="1.17.1">gstreamer</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
-            <Dependency version="1.16.2">gst-plugins-base</Dependency>
+            <Dependency version="1.17.1">gst-plugins-base</Dependency>
             <Dependency>jack-audio-connection-kit</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -87,6 +87,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2020-07-02</Date>
+            <Version>1.17.1</Version>
+            <Comment>Version bump to 1.17.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="4">
             <Date>2020-05-09</Date>
             <Version>1.16.2</Version>
