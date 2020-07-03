@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Mozo menu editor for MATE</Summary>
         <Description>Easy MATE menu editing tool.</Description>
-        <Archive sha1sum="c111723dce1c2c2cb3908a02483598fa62688246" >http://pub.mate-desktop.org/releases/1.24/mozo-1.24.0.tar.xz</Archive>
+        <Archive sha1sum="c111723dce1c2c2cb3908a02483598fa62688246">http://pub.mate-desktop.org/releases/1.24/mozo-1.24.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3</Dependency>
             <Dependency>mate-panel</Dependency>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-03</Date>
+            <Version>1.24.0</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
        <Update release="1">
             <Date>2019-09-18</Date>
             <Version>1.24.0</Version>
