@@ -75,10 +75,12 @@
             <Dependency>libXext</Dependency>
             <Dependency>libgudev</Dependency>
             <Dependency>libwacom</Dependency>
+            <Dependency>librsvg</Dependency>
             <Dependency>dbus-glib</Dependency>
             <Dependency>libXfixes</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>fontconfig</Dependency>
+            <Dependency>python3-xapp</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libgnomekbd</Dependency>
@@ -86,6 +88,7 @@
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>cinnamon-desktop</Dependency>
             <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -107,7 +110,7 @@
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="data">/usr/share/polkit-1/actions</Path>  
+            <Path fileType="data">/usr/share/polkit-1/actions</Path>
         </Files>
     </Package>
 

@@ -14,12 +14,17 @@
         <Description>Module that provides an authenticate function that allows the caller to authenticate a given username / password against the PAM system on Linux.</Description>
         <Archive sha1sum="a3c3aae71bc8def7e276123e2c312b94c4621e5b" type="targz">https://github.com/FirefighterBlu3/python-pam/archive/v1.8.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
+            <Dependency>pam-devel</Dependency>
+
         </BuildDependencies>
     </Source>
-    
+
     <Package>
         <Name>python-pam</Name>
+        <BuildDependencies>
+              <Dependency>python-setuptools</Dependency>
+              <Dependency>python-devel</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>pam</Dependency>
             <Dependency>python</Dependency>
@@ -31,6 +36,10 @@
 
     <Package>
         <Name>python3-pam</Name>
+        <BuildDependencies>
+              <Dependency>python3-setuptools</Dependency>
+              <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>pam</Dependency>
         </RuntimeDependencies>
@@ -39,7 +48,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
         <Update release="2">
             <Date>2020-07-01</Date>
