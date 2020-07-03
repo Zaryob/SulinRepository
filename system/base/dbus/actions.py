@@ -53,8 +53,8 @@ def check():
     autotools.make("check")
 
 def install():
-    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
-    if get.buildTYPE()=="emul32": return
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    if get.buildTYPE() == "emul32": return
 
     # needs to exist for the system socket
     inarytools.dodir("/var/run/dbus")
@@ -63,3 +63,4 @@ def install():
     os.system("/bin/chown root:dbus {}/usr/libexec/dbus-daemon-launch-helper".format(get.installDIR()))
     os.system("/bin/chmod -v 4750 {}/usr/libexec/dbus-daemon-launch-helper".format(get.installDIR()))
     inarytools.dohtml("doc/")
+    inarytools.dosym("/etc/machine-id","/var/lib/dbus/machine-id")

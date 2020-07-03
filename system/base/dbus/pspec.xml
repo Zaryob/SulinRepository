@@ -102,7 +102,8 @@
         <Files>
             <Path fileType="library">/usr/lib32/cmake</Path>
             <Path fileType="library">/usr/lib32/dbus-1.0</Path>
-            <Path fileType="library">/usr/lib32/libdbus-1.so*</Path>
+            <Path fileType="data">/usr/lib32/systemd</Path>
+            <Path fileType="library">/usr/lib32/libdbus-1*</Path>
         </Files>
     </Package>
     <Package>
