@@ -29,6 +29,7 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libXcursor</Dependency>
             <Dependency>libXrender</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
             <Dependency>libXdamage</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libXinerama</Dependency>
@@ -57,6 +58,7 @@
             <Dependency>libXdamage</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libXinerama</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
             <Dependency>libXcomposite</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>startup-notification</Dependency>
