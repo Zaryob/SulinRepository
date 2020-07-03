@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>perl-Parse-Yapp-Driver</Name>
+        <Homepage>https://metacpan.org/pod/Parse::Yapp::Driver</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Module Parse::Yapp::Driver.</Summary>
+        <Description>Module Parse::Yapp::Driver.</Description>
+        <Archive sha1sum="dad25e0e73a4873ef021308b23d51bb2ccdc7ce4">https://cpan.metacpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-1.21.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Parse-Yapp-Driver</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-07-02</Date>
+            <Version>1.21</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
