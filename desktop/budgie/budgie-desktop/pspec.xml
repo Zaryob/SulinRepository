@@ -47,19 +47,20 @@
         <Name>budgie-desktop</Name>
         <RuntimeDependencies>
 	     <Dependency>gnome-desktop</Dependency>
-	    <Dependency>vala</Dependency>
+	     <Dependency>gnome-session</Dependency>
+	     <Dependency>vala</Dependency>
 	     <Dependency>gnome-settings-daemon</Dependency>
-            <Dependency>libpeas</Dependency>
+         <Dependency>libpeas</Dependency>
 	     <Dependency>xorg-input-libinput</Dependency>
 	     <Dependency>libinput</Dependency>
 	     <Dependency>libsass</Dependency>
 	     <Dependency>libnotify</Dependency>
 	     <Dependency>geoclue</Dependency>
-	    <Dependency>gtk3</Dependency>
+	     <Dependency>gtk3</Dependency>
 	     <Dependency>gnome-menus</Dependency>
 	     <Dependency>polkit</Dependency>
 	     <Dependency>mutter</Dependency>
-            <Dependency>pulseaudio-libs</Dependency>     
+         <Dependency>pulseaudio-libs</Dependency>     
 	     <Dependency>gnome-bluetooth</Dependency>
 	     <Dependency>pipewire</Dependency>
 	     <Dependency>ibus-gtk3</Dependency>

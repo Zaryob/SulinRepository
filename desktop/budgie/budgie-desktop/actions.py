@@ -14,7 +14,6 @@ def setup():
     if not os.path.exists("budgie-desktop"):
         shelltools.system("git clone  --depth=1 https://github.com/solus-project/budgie-desktop")
     shelltools.cd("budgie-desktop")
-    shelltools.system("git checkout 7a402a86bfb7317ea648a13e0effd19cfce3fa91")
     shelltools.system("git submodule init")
     shelltools.system("git submodule update")
     mesontools.meson_configure("-Dselinux=false  \
