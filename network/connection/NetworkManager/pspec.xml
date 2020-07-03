@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Network connection manager powered by D-Bus and UDEV</Summary>
         <Description>NetworkManager attempts to keep an active network connection available at all times.</Description>
-        <Archive sha1sum="b1bf81a9c8ff1372757f33e2573ac0bc0462197c">http://ftp.acc.umu.se/pub/gnome/sources/NetworkManager/1.25/NetworkManager-1.25.1.tar.xz</Archive>
+        <Archive sha1sum="4992b225244173abe0129ea9dc6cdc3706682904">http://ftp.acc.umu.se/pub/gnome/sources/NetworkManager/1.27/NetworkManager-1.27.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libpsl-devel</Dependency>
             <Dependency>jansson-devel</Dependency>
@@ -102,14 +102,21 @@
     </Package>
 
     <History>
-    	<Update release="4">
+        <Update release="5">
+            <Date>2020-07-03</Date>
+            <Version>1.27.0</Version>
+            <Comment>Version bump to 1.27.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="4">
             <Date>2020-01-20</Date>
             <Version>1.24.1</Version>
             <Comment>Rebuild.</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-	<Update release="3">
+        <Update release="3">
             <Date>2020-01-20</Date>
             <Version>1.24.4</Version>
             <Comment>Rebuild.</Comment>
