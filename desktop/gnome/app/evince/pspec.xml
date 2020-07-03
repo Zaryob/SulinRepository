@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Simple document viewer for GNOME</Summary>
         <Description>Evince is a simple document viewer for GNOME.</Description>
-        <Archive sha1sum="572bbf2faa36061ac450f099c93751fc5d7e99a1" >http://ftp.acc.umu.se/pub/gnome/sources/evince/3.36/evince-3.36.0.tar.xz</Archive>
+        <Archive sha1sum="572bbf2faa36061ac450f099c93751fc5d7e99a1">http://ftp.acc.umu.se/pub/gnome/sources/evince/3.36/evince-3.36.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gconf-devel</Dependency>
             <Dependency>djvu-devel</Dependency>
@@ -26,6 +26,7 @@
             <Dependency>poppler-glib-devel</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>libSM-devel</Dependency>
+            <Dependency>libgxps-devel</Dependency>
             <Dependency>nautilus-devel</Dependency>
             <Dependency>texlive-devel</Dependency>
         </BuildDependencies>
@@ -42,6 +43,7 @@
             <Dependency>ghostscript</Dependency>
             <Dependency>libspectre</Dependency>
             <Dependency>poppler-glib</Dependency>
+            <Dependency>libgxps</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>libSM</Dependency>
             <Dependency>nautilus</Dependency>
@@ -90,6 +92,13 @@
     </Package>
 
    <History>
+        <Update release="2">
+            <Date>2020-07-03</Date>
+            <Version>3.36.0</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.0</Version>
