@@ -17,9 +17,6 @@
 
     <Package>
         <Name>crunch</Name>
-        <RuntimeDependencies>
-            <Dependency>glibc-32bit</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share</Path>
