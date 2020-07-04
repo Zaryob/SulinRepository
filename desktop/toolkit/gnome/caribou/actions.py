@@ -9,7 +9,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    autotools.configure("--prefix=/usr         \
+    autotools.configure("PYTHON=/usr/bin/python3 \
+                         --prefix=/usr         \
                          --sysconfdir=/etc     \
                          --libexecdir=/usr/lib/caribou \
                          --disable-static \

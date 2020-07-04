@@ -24,7 +24,7 @@ def build():
 
 def install():
     shelltools.cd("api")
-    pythonmodules.install(pyVer="3")
+    pythonmodules.install("--install-lib=/usr/lib/sulin", pyVer="3")
     shelltools.cd("../scom")
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     inarytools.dodir("/var/db")
