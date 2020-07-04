@@ -17,6 +17,7 @@
             <Dependency>boost</Dependency>
             <Dependency>python-Twisted</Dependency>
             <Dependency>python-chardet</Dependency>
+            <Dependency>python-setuptools</Dependency>
             <Dependency>libtorrent</Dependency>
 	    <Dependency>intltool</Dependency>
             <Dependency>librsvg</Dependency>
@@ -27,7 +28,6 @@
         <Name>deluge</Name>
         <RuntimeDependencies>
             <Dependency>librsvg</Dependency>
-            <Dependency>python-gtk2</Dependency>
             <Dependency>python-pyxdg</Dependency>
             <Dependency>python-Twisted</Dependency>
             <Dependency>python-chardet</Dependency>
