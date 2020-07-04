@@ -14,7 +14,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>2D graphics library with bindings of many programming languages</Summary>
         <Description>Cairo is a 2D graphics library with support for multiple output devices (and fileformats).</Description>
-        <Archive sha1sum="00e81842ae5e81bb0343108884eb5205be0eac14">https://cairographics.org/releases/cairo-1.16.0.tar.xz</Archive>
+        <Archive sha1sum="eb2130edccbe64d3d0e3d6f44ba448a83cf790d4">https://gitlab.freedesktop.org/cairo/cairo/-/archive/1.17.2/cairo-1.17.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
@@ -25,10 +25,12 @@
             <Dependency>pixman-devel</Dependency>
             <Dependency>xcb-util-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
-            <Dependency>mesa-devel</Dependency>
             <Dependency>DirectFB-devel</Dependency>
             <Dependency>valgrind</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>cairo-binutild-2.34.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>cairo</Name>
@@ -41,7 +43,6 @@
             <Dependency>libXrender</Dependency>
             <Dependency>pixman</Dependency>
             <Dependency>libXext</Dependency>
-            <Dependency>mesa</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -57,7 +58,6 @@
         <Summary>Development files for cairo</Summary>
         <RuntimeDependencies>
             <Dependency release="current">cairo</Dependency>
-            <Dependency>mesa-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
@@ -79,7 +79,6 @@
         <Summary>32-bit shared libraries for cairo</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-            <Dependency>mesa-32bit</Dependency>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>glib2-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
@@ -111,6 +110,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="6">
+            <Date>2020-07-04</Date>
+            <Version>1.17.2</Version>
+            <Comment>Version bump to 1.17.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="5">
             <Date>2019-11-26</Date>
             <Version>1.16.0</Version>
