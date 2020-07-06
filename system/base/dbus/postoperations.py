@@ -13,6 +13,7 @@ def postInstall():
         os.system("useradd -m -d /var/run/dbus -r -s /bin/false -u %d -g %d %s -c \"%s\"" % (OUR_ID, OUR_ID, OUR_NAME, OUR_DESC))
         os.system("dbus-uuidgen --ensure")
         os.system("ln -sv /var/lib/dbus/machine-id /etc")
+        os.system("chown -v root:dbus /usr/libexec/dbus-daemon-launch-helper && chmod -v 4750 /usr/libexec/dbus-daemon-launch-helper")
     except:
         pass
 

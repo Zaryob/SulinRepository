@@ -134,21 +134,28 @@
         </Files>
     </Package>
     <History>
+	<Update release="10">
+            <Date>2020-07-05</Date>
+            <Version>1.13.18</Version>
+            <Comment>Yeni sürüme göçürüldü. Eski sürümdeki postops ve diğer hatalar giderildi.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
 	<Update release="9">
             <Date>2019-12-16</Date>
-            <Version>1.13.18</Version>
+            <Version>1.13.14</Version>
             <Comment>Servis dosyasındaki hata giderildi</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-	<Update release="8">
+    	   <Update release="8">
             <Date>2019-12-16</Date>
             <Version>1.12.16</Version>
             <Comment>Yeni inary sürümü için uygun hale getirildi</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-		<Update release="7">
+    		<Update release="7">
             <Date>2020-02-08</Date>
             <Version>1.13.12</Version>
             <Comment>Openrc servisi çakılması giderildi. 1.13.12 sürümüne yükseltildi.</Comment>
