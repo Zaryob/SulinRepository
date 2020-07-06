@@ -11,6 +11,8 @@ def postInstall():
     try:
         os.system("groupadd -g %d %s" % (OUR_ID, OUR_NAME))
         os.system("useradd -m -d /var/run/dbus -r -s /bin/false -u %d -g %d %s -c \"%s\"" % (OUR_ID, OUR_ID, OUR_NAME, OUR_DESC))
+        os.system("dbus-uuidgen --ensure")
+        os.system("ln -sv /var/lib/dbus/machine-id /etc")
     except:
         pass
 

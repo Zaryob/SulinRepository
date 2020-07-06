@@ -27,6 +27,8 @@ def setup():
                --enable-inotify \
                --enable-user-session \
                --with-xml=expat \
+               --with-systemduserunitdir=no \
+               --with-systemdsystemunitdir=no \
                --with-system-pid-file=/var/run/dbus/pid \
                --with-system-socket=/var/run/dbus/system_bus_socket \
                --with-console-auth-dir=/var/run/console/ \
@@ -63,4 +65,3 @@ def install():
     os.system("/bin/chown root:dbus {}/usr/libexec/dbus-daemon-launch-helper".format(get.installDIR()))
     os.system("/bin/chmod -v 4750 {}/usr/libexec/dbus-daemon-launch-helper".format(get.installDIR()))
     inarytools.dohtml("doc/")
-    inarytools.dosym("/etc/machine-id","/var/lib/dbus/machine-id")
