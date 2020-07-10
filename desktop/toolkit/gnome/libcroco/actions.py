@@ -6,6 +6,7 @@
 # See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
 from inary.actionsapi import autotools
+from inary.actionsapi import get
 from inary.actionsapi import inarytools
 
 def setup():
@@ -19,6 +20,9 @@ def check():
     autotools.make("test")
 
 def install():
+    if get.buildTYPE()=="emul32":
+        autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
+        return
     autotools.install()
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "NEWS", "README")
