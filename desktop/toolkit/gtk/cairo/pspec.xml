@@ -14,7 +14,8 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>2D graphics library with bindings of many programming languages</Summary>
         <Description>Cairo is a 2D graphics library with support for multiple output devices (and fileformats).</Description>
-        <Archive sha1sum="eb2130edccbe64d3d0e3d6f44ba448a83cf790d4">https://gitlab.freedesktop.org/cairo/cairo/-/archive/1.17.2/cairo-1.17.2.tar.gz</Archive>
+        <!--Bura bakan insan evladını uyarıyorum. Şunun son sürümü 1.17.x diye körleme atlamayın. sıkıntılı çalışıyor. 1.16.x dursun-->
+        <Archive sha1sum="00e81842ae5e81bb0343108884eb5205be0eac14">https://www.cairographics.org/releases/cairo-1.16.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
@@ -114,8 +115,8 @@
     <History>
         <Update release="6">
             <Date>2020-07-04</Date>
-            <Version>1.17.2</Version>
-            <Comment>Version bump to 1.17.2</Comment>
+            <Version>1.16.0</Version>
+            <Comment>Rebuild and enable 32bit</Comment>
             <Name>Suleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
