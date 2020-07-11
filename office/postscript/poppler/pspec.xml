@@ -183,7 +183,19 @@
             <Path fileType="library">/usr/lib32/libpoppler.so*</Path>
         </Files>
     </Package>
-
+    <Package>
+        <Name>poppler-cpp-32bit</Name>
+        <Summary>Pure 32bit C++ wrapper for poppler</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">poppler</Dependency>
+            <Dependency release="current">poppler-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libpoppler-cpp.so*</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig/poppler-splash.pc</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig/poppler-cpp.pc</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>poppler-glib-32bit</Name>
         <PartOf>emul32</PartOf>
@@ -202,6 +214,8 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpoppler-glib.so*</Path>
+            <Path fileType="data">/usr/lib32/girepository-1.0/Poppler-0.18.typelib</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig/poppler-cairo.pc</Path>
         </Files>
     </Package>
 
