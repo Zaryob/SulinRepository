@@ -26,6 +26,8 @@
             <Dependency>xcb-util-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>DirectFB-devel</Dependency>
+            <Dependency>gtk2-32bit</Dependency>
+            <Dependency>gtk2-devel</Dependency>
             <Dependency>valgrind</Dependency>
         </BuildDependencies>
         <Patches>
