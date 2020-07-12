@@ -10,8 +10,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    shelltools.system("  sed -i 's/have_png/use_png/g' configure.ac")
-    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    #shelltools.system("  sed -i 's/have_png/use_png/g' configure.ac")
+    #shelltools.system("NOCONFIGURE=1 ./autogen.sh")
     autotools.configure("--prefix=/usr \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
