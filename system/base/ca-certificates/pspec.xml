@@ -28,9 +28,6 @@
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/usr/share/ca-certificates</Path>
         </Files>
-        <Provides>
-            <SCOM script="package.py">System.Package</SCOM>
-        </Provides>
     </Package>
     <Package>
         <Name>ca-certificates-pages</Name>

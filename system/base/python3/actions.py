@@ -13,18 +13,22 @@ def setup():
 
     inarytools.dosed("Lib/cgi.py","^#.* /usr/local/bin/python","#!/usr/bin/env python3")
 
-    autotools.rawConfigure("\
-                            --prefix=/usr \
-                            --enable-shared \
-                            --with-threads \
-                            --with-computed-gotos \
-                            --enable-ipv6 \
-                            --with-system-expat \
-                            --with-dbmliborder=gdbm:ndbm \
-                            --with-system-ffi \
-                            --with-system-libmpdec \
-                            --enable-loadable-sqlite-extensions \
-                            --without-ensurepip")
+    options ="\
+             --prefix=/usr \
+             --libdir=/usr/lib \
+             --enable-shared \
+             --with-threads \
+             --with-computed-gotos \
+             --enable-ipv6 \
+             --with-system-expat \
+             --with-dbmliborder=gdbm:ndbm \
+             --with-system-ffi \
+             --with-system-libmpdec \
+             --enable-loadable-sqlite-extensions \
+             --without-ensurepip \
+             "
+
+    autotools.rawConfigure(options)
 
 def build():
     autotools.make()
@@ -34,5 +38,7 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    if get.buildTYPE()=="emul32":
+        return
     inarytools.remove("/usr/bin/2to3")
     inarytools.dodoc("LICENSE", "README*")

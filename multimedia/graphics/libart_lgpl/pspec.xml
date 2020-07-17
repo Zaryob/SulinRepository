@@ -28,8 +28,24 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>libart_lgpl-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libart_lgpl</Summary>
+       <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-06-22</Date>
+            <Version>2.3.21</Version>
+            <Comment>Package is rebuilded and released up. emul32 rebuild.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-23</Date>
             <Version>2.3.21</Version>

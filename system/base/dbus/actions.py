@@ -27,6 +27,8 @@ def setup():
                --enable-inotify \
                --enable-user-session \
                --with-xml=expat \
+               --with-systemduserunitdir=no \
+               --with-systemdsystemunitdir=no \
                --with-system-pid-file=/var/run/dbus/pid \
                --with-system-socket=/var/run/dbus/system_bus_socket \
                --with-console-auth-dir=/var/run/console/ \

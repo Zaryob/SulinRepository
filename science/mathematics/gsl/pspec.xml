@@ -25,6 +25,14 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>gsl-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <PartOf>emul32</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
 
     <Package>
         <Name>gsl-devel</Name>
@@ -41,6 +49,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-02</Date>
+            <Version>2.6</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-27</Date>
             <Version>2.6</Version>

@@ -40,7 +40,16 @@
             <AdditionalFile owner="root" target="/etc/pki/nssdb/secmod.db" permission="0644">nssdb/secmod.db</AdditionalFile>
         </AdditionalFiles>
     </Package>
-
+    <Package>
+        <Name>nss-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for nss</Summary>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32/</Path>
+        </Files>
+    </Package>
+    
     <Package>
         <Name>nss-devel</Name>
         <Summary>Development files for nss</Summary>

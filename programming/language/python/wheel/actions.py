@@ -13,10 +13,7 @@ WorkDir="wheel-%s" % get.srcVERSION()
 
 def setup():
     pythonmodules.compile(pyVer = "3")
-    pythonmodules.compile()
 
 
 def install():
-    pythonmodules.install()
-    inarytools.rename("/usr/bin/wheel", "wheel-2.7")
     pythonmodules.install(pyVer = "3")

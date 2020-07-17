@@ -11,10 +11,16 @@
         <IsA>library</IsA>
         <Summary>Cryptographic recipes and primitives to Python developers</Summary>
         <Description>A package designed to expose cryptographic recipes and primitives to Python developers</Description>
-        <Archive sha1sum="94ef5dc1261a4388572ce3ad9af1515691276d2c" type="targz">https://files.pythonhosted.org/packages/be/60/da377e1bed002716fb2d5d1d1cab720f298cb33ecff7bf7adea72788e4e4/cryptography-2.8.tar.gz</Archive>
+        <Archive sha1sum="af16e069cad7d36442f8481542de51f87c3c7708" type="targz">https://files.pythonhosted.org/packages/56/3b/78c6816918fdf2405d62c98e48589112669f36711e50158a0c15d804c30d/cryptography-2.9.2.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-cffi</Dependency>
             <Dependency>python-cffi</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3-enum34</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>python-enum34</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,6 +39,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>2.9.2</Version>
+            <Comment>Version bump to 2.9.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-02-01</Date>
             <Version>2.8</Version>

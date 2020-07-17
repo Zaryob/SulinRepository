@@ -12,9 +12,10 @@
         <IsA>app:console</IsA>
         <Summary>Run a subprocess in a pseudo terminal</Summary>
         <Description>Run a subprocess in a pseudo terminal</Description>
-        <Archive sha1sum="39622a2ff2cb456f17db542d60e5a0782e354128" >https://files.pythonhosted.org/packages/7d/2d/e4b8733cf79b7309d84c9081a4ab558c89d8c89da5961bf4ddb050ca1ce0/ptyprocess-0.6.0.tar.gz</Archive>
+        <Archive sha1sum="39622a2ff2cb456f17db542d60e5a0782e354128">https://files.pythonhosted.org/packages/7d/2d/e4b8733cf79b7309d84c9081a4ab558c89d8c89da5961bf4ddb050ca1ce0/ptyprocess-0.6.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -34,12 +35,19 @@
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>0.6.0</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-05-27</Date>
             <Version>0.6.0</Version>

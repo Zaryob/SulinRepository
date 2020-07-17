@@ -13,7 +13,7 @@
         <PartOf>system.base</PartOf>
         <Summary>Program to identify a file's format by scanning binary data for patterns</Summary>
         <Description>Program to identify a file's format by scanning binary data for patterns.</Description>
-        <Archive sha1sum="891176efa3006eff222bd364cd96135aad171941" type="targz">http://download.openpkg.org/components/cache/file/file-5.37.tar.gz</Archive>
+        <Archive sha1sum="a5a8941a8e4c436fe22933db6a71c5161c3fb10b" type="targz">http://download.openpkg.org/components/cache/file/file-5.39.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
             <Dependency>python3-devel</Dependency>
@@ -88,6 +88,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-06-21</Date>
+            <Version>5.39</Version>
+            <Comment>Python3.8 upgraded and release upgraded to 5.39</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>5.37</Version>

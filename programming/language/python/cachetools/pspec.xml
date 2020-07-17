@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>A Python library for providing various memoizing collections and decorators, including variants of the Python 3 Standard Library.</Summary>
         <Description>A Python library for providing various memoizing collections and decorators, including variants of the Python 3 Standard Library.</Description>
-        <Archive sha1sum="d030bfdfa91b0b1188993f5e8d7da077308c1eaf" type="targz">https://files.pythonhosted.org/packages/ae/37/7fd45996b19200e0cb2027a0b6bef4636951c4ea111bfad36c71287247f6/cachetools-3.1.1.tar.gz</Archive>
+        <Archive sha1sum="dd68daab9d3024ab06e3ab3778d64d2dad98df41" type="targz">https://files.pythonhosted.org/packages/fc/c8/0b52cf3132b4b85c9e83faa3e4d375575afeb3a1710c40b2b2cd2a3e5635/cachetools-4.1.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -48,6 +48,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>4.1.1</Version>
+            <Comment>Version bump to 4.1.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>0.10.0</Version>

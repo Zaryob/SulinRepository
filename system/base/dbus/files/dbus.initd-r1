@@ -20,7 +20,7 @@ depend() {
 
 start_pre() {
 	/usr/bin/dbus-uuidgen --ensure=/etc/machine-id
-	rm -rf /var/run/dbus/
+	rm -rf /var/run/dbus/ 
 	mkdir -p /var/run/dbus
 }
 

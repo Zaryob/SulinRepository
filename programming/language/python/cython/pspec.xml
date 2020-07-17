@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>C extensions for the Python Programming language</Summary>
         <Description>Cython is a language that makes writing C extensions for the Python2 and Python3 languages as easy as Python's itself.</Description>
-        <Archive sha1sum="f86f2dddde3cc7499cb47d48c0ab98026493d5a8" type="targz">https://files.pythonhosted.org/packages/9c/9b/706dac7338c2860cd063a28cdbf5e9670995eaea408abbf2e88ba070d90d/Cython-0.29.14.tar.gz</Archive>
+        <Archive sha1sum="695704d96f18451f05a709fcb2eb616636ed6a87" type="targz">https://files.pythonhosted.org/packages/3f/61/16a435de52fcda15246597a602aab6132cea50bedeb0919cb8874a068a20/Cython-0.29.20.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
             <Dependency>python-setuptools</Dependency>
@@ -53,6 +53,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>0.29.20</Version>
+            <Comment>Version bump to 0.29.20</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>0.29.14</Version>

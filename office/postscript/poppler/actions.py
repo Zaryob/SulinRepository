@@ -14,24 +14,26 @@ from inary.actionsapi import inarytools
 def setup():
 
     shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig" if get.buildTYPE() == "emul32" else  "/usr/lib/pkgconfig" )
+    if get.buildTYPE() == "emul32":
+        shelltools.system("sed -i 's|ENABLE_NSS3 ON|ENABLE_NSS3 OFF|' CMakeLists.txt")
 
     options = "-DCMAKE_BUILD_TYPE=Release   \
                -DCMAKE_INSTALL_PREFIX=/usr  \
                -DTESTDATADIR=$PWD/testfiles \
+               -DENABLE_GLIB=ON \
                -DENABLE_UNSTABLE_API_ABI_HEADERS=ON     \
-               "
+               {} \
+               ".format("-DENABLE_LIBOPENJPEG='unmaintained' \
+               -DENABLE_NSS3=OFF \
+               -DENABLE_QT5=OFF \
+               " if get.buildTYPE()=="emul32" else "")
 
     cmaketools.configure(options)
 
 def build():
+    shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig" if get.buildTYPE() == "emul32" else  "/usr/lib/pkgconfig" )
+
     cmaketools.make()
 
 def install():
-    if get.buildTYPE() == "emul32":
-        inarytools.insinto("/usr/lib32", "poppler/.libs/libpoppler.so*")
-        inarytools.insinto("/usr/lib32", "glib/.libs/libpoppler-glib.so*")
-        for f in ["poppler.pc", "poppler-glib.pc"]:
-            inarytools.insinto("/usr/lib32/pkgconfig", f)
-            inarytools.dosed("%s/usr/lib32/pkgconfig/%s" % (get.installDIR(), f), get.emul32prefixDIR(), get.defaultprefixDIR())
-        return
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())

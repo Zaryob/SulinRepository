@@ -11,9 +11,10 @@
         <IsA>library</IsA>
         <Summary>Event driven network framework</Summary>
         <Description>Twisted is an event-driven networking framework written in Python and licensed under the MIT license. Twisted projects variously support TCP, UDP, SSL/TLS, multicast, Unix sockets, a large number of protocols (including HTTP, NNTP, IMAP, SSH, IRC, FTP, and others), and much more.</Description>
-        <Archive sha1sum="a5b6f7feb801272fddae4cc19b037c7a53ea03fc">https://github.com/twisted/twisted/archive/twisted-19.10.0.zip</Archive>
+        <Archive sha1sum="bccb74754930079e0bdf3d17167793cb5a348a20">https://github.com/twisted/twisted/archive/twisted-20.3.0.zip</Archive>
         <BuildDependencies>
             <Dependency>python-zope-interface</Dependency>
+            <Dependency>python3-zope-interface</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -23,13 +24,29 @@
             <Dependency>python-zope-interface</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-Twisted</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-zope-interface</Dependency>
+        </RuntimeDependencies>
+        <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>20.3.0</Version>
+            <Comment>Version bump to 20.3.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-31</Date>
             <Version>19.10.0</Version>

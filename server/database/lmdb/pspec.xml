@@ -14,7 +14,7 @@
         <IsA>app:console</IsA>
         <Summary>Symas Lightning Memory-Mapped Database</Summary>
         <Description>An ultra-fast, ultra-compact key-value embedded data store.</Description>
-        <Archive sha1sum="76f4bc1827474403a78e5f8eb225233d67144286" type="targz">https://github.com/LMDB/lmdb/archive/LMDB_0.9.24.tar.gz</Archive>
+        <Archive sha1sum="0e5c00277eb70274ee00bcd3ee7c4dfb4db5163b" >https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.25/openldap-LMDB_0.9.25.tar</Archive>
     </Source>
 
     <Package>
@@ -39,6 +39,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-07-01</Date>
+            <Version>0.9.25</Version>
+            <Comment>Archive address has been changed.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-23</Date>
             <Version>0.9.24</Version>

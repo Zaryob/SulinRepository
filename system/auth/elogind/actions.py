@@ -16,4 +16,7 @@ def build():
 
 def install():
     mesontools.ninja_install()
-    inarytools.dodoc("NEWS", "README*", "LICENSE.GPL2", "LICENSE.LGPL2.1")
+    if get.buildTYPE()=="emul32":
+        inarytools.unlinkDir("{}/usr/pkgconfig".format(get.installDIR()))
+        return
+    inarytools.dodoc("README*", "LICENSE.GPL2", "LICENSE.LGPL2.1")

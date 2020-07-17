@@ -12,16 +12,11 @@
         <IsA>app:console</IsA>
         <Summary>Python 2 and 3 compatibility utilities.</Summary>
         <Description>python-six provides simple utilities for wrapping over differences between Python 2 and Python 3.</Description>
-        <Archive sha1sum="e6c12160e3da5e164dac9846a1f171fca24e1a8c" type="targz">https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>python-devel</Dependency>
-        </BuildDependencies>
+        <Archive sha1sum="a785c20658b3676333c749436f088394c12b0c26">https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>python3-six</Name>
-        <RuntimeDependencies>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
         </Files>
@@ -43,6 +38,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>1.15.0</Version>
+            <Comment>Version bump to 1.15.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-11</Date>
             <Version>1.13.0</Version>

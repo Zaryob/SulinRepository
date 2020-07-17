@@ -11,20 +11,30 @@ from inary.actionsapi import shelltools
 
 Libdir = "/usr/lib32" if get.buildTYPE() == "emul32" else "/usr/lib"
 
+
+def clangize():
+    clang="{}".format("clang" if get.buildTYPE()!="emul32" else "clang -m32")
+    clangpp="{}".format("clang++" if get.buildTYPE()!="emul32" else "clang++ -m32")
+    shelltools.export("CC", clang)
+    shelltools.export("CXX", clangpp)
 def setup():
+    #clangize()
+
     options ="\
     -D b_lto=false \
     -D b_ndebug=true \
     -D platforms=x11,wayland,drm,surfaceless \
     -D dri-drivers=i915,i965,r100,r200,nouveau \
-    -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,iris \
+    -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,swr,iris \
     -D vulkan-drivers=amd,intel \
+    -D vulkan-overlay-layer=true \
+    -D vulkan-device-select-layer=true \
     -D swr-arches=avx,avx2 \
     -D dri3=true \
     -D egl=true \
     -D gallium-extra-hud=true \
     -D gallium-nine=true \
-    -D gallium-omx=disabled \
+    -D gallium-omx=bellagio \
     -D gallium-opencl=icd \
     -D gallium-va=true \
     -D gallium-vdpau=true \
@@ -35,29 +45,34 @@ def setup():
     -D gles2=true \
     -D glvnd=true \
     -D glx=dri \
-    -D libunwind=false \
+    -D libunwind=true \
     -D llvm=true \
     -D lmsensors=true \
     -D osmesa=gallium \
     -D shared-glapi=true \
-    -D valgrind=false"
+    -D valgrind=true"
 
     if get.buildTYPE() == "emul32":
         shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
         options += " --libdir=/usr/lib32 --native-file crossfile.ini "
+    else:
+        shelltools.export("PKG_CONFIG_PATH","/usr/lib/pkgconfig")
+        options += " --libdir=/usr/lib"
+
 
     mesontools.meson_configure(options)
 
 def build():
-    mesontools.ninja_build()
+    #clangize()
+    mesontools.ninja_build("xmlpool-pot xmlpool-update-po xmlpool-gmo")
+    shelltools.system("meson compile -C inaryPackageBuild")
 
 def install():
-    mesontools.ninja_install("DESTDIR=%s" % get.installDIR())
+    #clangize()
+    if get.buildTYPE() == "emul32":
+        shelltools.system("DESTDIR='{}' ninja -C inaryPackageBuild install".format(get.installDIR()))
+        return
+    mesontools.ninja_install()
 
     #inarytools.domove("%s/libGL.so.1.2.0" % Libdir, "%s/mesa" % Libdir)
     #inarytools.dosym("mesa/libGL.so.1.2.0", "%s/libGL.so.1.2" % Libdir)
-
-    if get.buildTYPE() == "emul32":
-        return
-
-

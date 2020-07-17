@@ -13,7 +13,7 @@
         <PartOf>util.crypt</PartOf>
         <Summary>Library to work with PKCS#11 modules</Summary>
         <Description>The p11-kit package Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules.</Description>
-        <Archive sha1sum="1869a48bdaea6c6d1c89348b4f8964b14d6c2949">https://github.com/p11-glue/p11-kit/releases/download/0.23.18.1/p11-kit-0.23.18.1.tar.gz</Archive>
+        <Archive sha1sum="35b8b044c5ce4f45aebc5391f24d94ecbba7a1f4">https://github.com/p11-glue/p11-kit/releases/download/0.23.20/p11-kit-0.23.20.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libtasn1-devel</Dependency>
         </BuildDependencies>
@@ -27,6 +27,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
             <Path fileType="doc">/usr/share/p11-kit</Path>
             <Path fileType="library">/usr/lib</Path>
@@ -67,6 +68,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-06-21</Date>
+            <Version>0.23.20</Version>
+            <Comment>Version bump to 0.23.20</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2020-01-19</Date>
             <Version>0.23.18.1</Version>

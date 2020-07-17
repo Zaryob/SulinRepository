@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>GStreamer Python3 bindings</Summary>
         <Description>gst-python3 is a Python frontend to GStreamer.</Description>
-        <Archive sha1sum="839fd35bd924a768c05288ce45a057a29c1e736c" type="tarxz">https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.16.2.tar.xz</Archive>
+        <Archive sha1sum="8527338c15770ab3f74a4e33c909128fde39049c" type="tarxz">https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.17.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>pygobject3-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
@@ -30,7 +30,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
-            <Path fileType="library">/usr/lib/gstreamer-1.0/libgstpython.cpython-37m-x86_64-linux-gnu.so</Path>
+            <Path fileType="library">/usr/lib/gstreamer-1.0/libgstpython.cpython-38-x86_64-linux-gnu.so</Path>
         </Files>
     </Package>
     <Package>
@@ -48,6 +48,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-07-02</Date>
+            <Version>1.17.1</Version>
+            <Comment>Version bump to 1.17.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-12-09</Date>
             <Version>1.16.2</Version>

@@ -6,6 +6,8 @@
 
 from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
+from inary.actionsapi import get
 
 def setup():
     mesontools.meson_configure("-D package-name=\"GStreamer Bad Plugins (Sulin)\" \
@@ -16,5 +18,5 @@ def build():
 
 def install():
     mesontools.ninja_install()
-    inarytools.dodoc("AUTHORS", "README", "RELEASE")
 
+    inarytools.dodoc( "AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README", "RELEASE", "REQUIREMENTS")

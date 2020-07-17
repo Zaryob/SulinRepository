@@ -38,6 +38,15 @@ def build():
     autotools.make("-j1")
 
 def install():
+    if get.buildTYPE()=="emul32":
+        for lib in ["*.a","*.chk","*.so"]:
+            inarytools.insinto("/usr/lib32","dist/Linux*/lib/%s" % lib, sym=False)
+        # Install nss-config and nss.pc
+        inarytools.insinto("/usr/lib32/pkgconfig", "nss/config/nss.pc")
+        shelltools.system("sed -i 's|libdir=${{prefix}}/lib|libdir=${{prefix}}/lib32|' {}/usr/lib32/pkgconfig/nss.pc".format(get.installDIR()))
+        shelltools.system("sed -i 's|-L${{prefix}}/lib|-L${{prefix}}/lib32|' {}/usr/lib32/pkgconfig/nss.pc".format(get.installDIR()))
+        return
+
     for binary in ["certutil","nss-config","pk12util", "*util", "shlibsign", "signtool", "signver", "ssltap"]:
         inarytools.insinto("/usr/bin","dist/Linux*/bin/%s" % binary, sym=False)
 

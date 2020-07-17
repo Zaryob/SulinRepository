@@ -17,7 +17,6 @@
             <Dependency>swig</Dependency>
             <Dependency>nss-devel</Dependency>
             <Dependency>gpgme-devel</Dependency>
-            <Dependency>python-devel</Dependency>
             <Dependency>libassuan</Dependency>
             <Dependency>libcryptsetup-devel</Dependency>
         </BuildDependencies>
@@ -28,7 +27,6 @@
         <RuntimeDependencies>
             <Dependency>nss</Dependency>
             <Dependency>gpgme</Dependency>
-            <Dependency>python</Dependency>
             <Dependency>libassuan</Dependency>
             <Dependency>libcryptsetup</Dependency>
         </RuntimeDependencies>

@@ -11,17 +11,10 @@ from inary.actionsapi import get
 WorkDir="setuptools-%s" % get.srcVERSION()
 
 def build():
-    if get.buildTYPE()=="rebuild_python":
-        pythonmodules.run("bootstrap.py", pyVer="3")
-        pythonmodules.compile(pyVer="3")
-    else:
-        pythonmodules.run("bootstrap.py")
-        pythonmodules.compile()
+    pythonmodules.run("bootstrap.py", pyVer="3")
+    pythonmodules.compile(pyVer="3")
 
 
 def install():
-    if get.buildTYPE()=="rebuild_python":
-        pythonmodules.install(pyVer="3")
-    else:
-        pythonmodules.install()
+    pythonmodules.install(pyVer="3")
     inarytools.remove("/usr/lib/*/site-packages/setuptools/*.exe")

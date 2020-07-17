@@ -12,7 +12,7 @@
         <IsA>app</IsA>
         <Summary>Python 3 compatible port of Python 2 random module</Summary>
         <Description>Python 3 compatible port of Python 2 random module</Description>
-        <Archive sha1sum="02e35dd53fa534dbb8f6e7baa8cf609ea1368eef" type="zip">https://files.pythonhosted.org/packages/ee/b5/5aca5217501fbd06b1e5aed6d5986baa0da5380880e6bb6f421ed18e3a32/random2-1.0.1.zip</Archive>
+        <Archive sha1sum="02e35dd53fa534dbb8f6e7baa8cf609ea1368eef">https://files.pythonhosted.org/packages/ee/b5/5aca5217501fbd06b1e5aed6d5986baa0da5380880e6bb6f421ed18e3a32/random2-1.0.1.zip</Archive>
         <BuildDependencies>
             <Dependency>python3-six</Dependency>
             <Dependency>python3-setuptools</Dependency>
@@ -53,6 +53,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>1.0.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-11</Date>
             <Version>1.0.1</Version>

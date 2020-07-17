@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>Pretty-print tabular data in Python, a library and a command-line utility.</Summary>
         <Description>Pretty-print tabular data in Python, a library and a command-line utility.</Description>
-        <Archive sha1sum="60a6aac78905f74ea147f73a8747446568161ed7" type="targz">https://files.pythonhosted.org/packages/c4/41/523f6a05e6dc3329a5660f6a81254c6cd87e5cfb5b7482bae3391d86ec3a/tabulate-0.8.6.tar.gz</Archive>
+        <Archive sha1sum="60a6aac78905f74ea147f73a8747446568161ed7">https://files.pythonhosted.org/packages/c4/41/523f6a05e6dc3329a5660f6a81254c6cd87e5cfb5b7482bae3391d86ec3a/tabulate-0.8.6.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -35,8 +35,6 @@
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
-        <RuntimeDependencies>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/bin/tabulate</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
@@ -50,6 +48,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>3.1.1</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>3.1.1</Version>

@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>The fundamental package needed for scientific computing with Python</Summary>
         <Description>Numpy contains a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, and useful linear algebra, Fourier transform, and random number capabilities.</Description>
-        <Archive sha1sum="86094dfb9774c766af02eb9e4ddc56d9296cba4c">https://github.com/numpy/numpy/releases/download/v1.18.1/numpy-1.18.1.tar.gz</Archive>
+        <Archive sha1sum="ba35592527bd01f53244ae1bb55c896101bbf0f3">https://github.com/numpy/numpy/releases/download/v1.19.0/numpy-1.19.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>lapack-devel</Dependency>
         </BuildDependencies>
@@ -42,6 +42,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-07-01</Date>
+            <Version>1.19.0</Version>
+            <Comment>Version bump to 1.19.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
     <Update release="2">
         <Date>2019-12-12</Date>
         <Version>1.18.1</Version>

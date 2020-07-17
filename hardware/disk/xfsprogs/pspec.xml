@@ -12,8 +12,9 @@
         <IsA>app:console</IsA>
         <Summary>XFS filesystem utilities</Summary>
         <Description>xfsprogs contains a number of administrative utilities to work with and manage XFS filesystems.</Description>
-        <Archive sha1sum="c4555b2641ca76785079296080fb306a3d559424" type="tarxz">https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-5.2.1.tar.xz</Archive>
+        <Archive sha1sum="838f878120c0ebdc85e961bd40d597131bed17bd" type="tarxz">https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-5.6.0.tar.xz</Archive>
         <BuildDependencies>
+            <Dependency>device-mapper-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -45,6 +46,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-03</Date>
+            <Version>5.6.0</Version>
+            <Comment>Version bump to 5.6.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>5.2.1</Version>

@@ -11,7 +11,7 @@
         <License>OPENLDAP</License>
         <Summary>Open-source suite of LDAP applications and development tools</Summary>
         <Description>OpenLDAP is an open-source suite of LDAP (Lightweight Directory Access Protocol) applications and development tools</Description>
-        <Archive sha1sum="c1984e80f6db038b317bf931866adb38e5537dcd" type="targz">ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-2.4.48.tgz</Archive>
+        <Archive sha1sum="82f576e0d0d334e9e798d9de8936683546247bb9" type="targz">ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-2.4.50.tgz</Archive>
         <BuildDependencies>
             <Dependency>nss-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
@@ -97,6 +97,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-06-21</Date>
+            <Version>2.4.50</Version>
+            <Comment>Version bump to 2.4.50</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-13</Date>
             <Version>2.4.48</Version>

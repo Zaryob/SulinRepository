@@ -15,17 +15,24 @@
         <BuildDependencies>
             <Dependency>python3</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="92c56858468d4278fed5448e6b7b8021d4a4b382">https://github.com/pygments/pygments/archive/2.5.2.tar.gz</Archive>
+        <Archive sha1sum="513c99f47a79e94b35f93a8aa3a9ef036462c69c">https://github.com/pygments/pygments/archive/2.6.1.tar.gz</Archive>
     </Source>
     <Package>
         <Name>python3-pygments</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/python3.7</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>2.6.1</Version>
+            <Comment>Version bump to 2.6.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>2.5.2</Version>

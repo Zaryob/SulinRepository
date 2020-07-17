@@ -11,7 +11,7 @@
         <Summary>A built-package format for Python.</Summary>
         <Description>A built-package format for Python.</Description>
         <License>MIT</License>
-        <Archive sha1sum="7fb61bcca7afdd18e087b75c649792c49988f815" type="targz">https://github.com/pypa/wheel/archive/0.33.6.tar.gz</Archive>
+        <Archive sha1sum="75d5e395ab1278de340a83d04fd7264a88becfad" type="targz">https://github.com/pypa/wheel/archive/0.34.2.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -27,21 +27,6 @@
             <Path fileType="data">/usr/lib/python3*</Path>
         </Files>
     </Package>
-
-    <Package>
-        <Name>python-wheel</Name>
-        <Files>
-            <Path fileType="data">/usr/bin/wheel-2.7</Path>
-            <Path fileType="data">/usr/lib/python2*</Path>
-        </Files>
-        <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
-        </BuildDependencies>
-        <RuntimeDependencies>
-            <Dependency>python-setuptools</Dependency>
-        </RuntimeDependencies>
-    </Package>
     <Package>
         <Name>python-wheel-docs</Name>
         <Files>
@@ -50,6 +35,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>0.34.2</Version>
+            <Comment>Version bump to 0.34.2</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-26</Date>
             <Version>0.33.6</Version>

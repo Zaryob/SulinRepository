@@ -9,24 +9,31 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
 def setup():
-    shelltools.unlinkDir("%s/tcl8.6.9/pkgs/sqlite3.25.3" % get.workDIR())
+    sql_ver="3.30.1.2"
+    shelltools.unlinkDir("{}/tcl{}/pkgs/sqlite{}".format(get.workDIR(), get.srcVERSION(), sql_ver))
     shelltools.cd("unix")
 
     autotools.autoreconf("-fi")
+    if get.buildTYPE()=="emul32":
+        option="--enable-32bit"
+    else:
+        option="--enable-64bit"
     autotools.configure("--with-encoding=utf-8 \
                          --enable-threads \
                          --enable-man-compression=gzip \
                          --mandir=/usr/share/man \
                          --enable-man-symlinks \
                          --enable-shared \
-                         --enable-64bit")
-
+                         {}".format(option))
 def build():
     shelltools.cd("unix")
     autotools.make()
 
 def install():
     shelltools.cd("unix")
+    if get.buildTYPE()=="emul32":
+        autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+        return
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     # Collect private headers, 3rd party apps like Tile depends on this
@@ -55,4 +62,4 @@ def install():
 
     inarytools.dosym("tclsh8.6","/usr/bin/tclsh")
 
-    inarytools.dodoc("ChangeLog","changes","license.terms","README")
+    inarytools.dodoc("ChangeLog","changes","license.terms","README.md")

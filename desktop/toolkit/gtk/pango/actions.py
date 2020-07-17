@@ -20,11 +20,4 @@ def build():
 
 
 def install():
-    if get.buildTYPE()=="emul32":
-        shelltools.system('DESTDIR="{}/emul32" ninja install -C inaryPackageBuild'.format(get.installDIR()))
-        inarytools.domove("/emul32/usr/lib32", "/usr/")
-        inarytools.removeDir("/emul32")
-        return
-
-    else:
-        mesontools.ninja_install()
+    mesontools.ninja_install()

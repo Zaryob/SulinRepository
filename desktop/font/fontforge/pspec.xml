@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>Font editor and converter</Summary>
         <Description>FontForge is a font editor that lets you create your own postscript, truetype, opentype, cid-keyed, multi-master, cff, svg and bitmap (bdf, FON, NFNT) fonts, or edit existing ones. Also lets you convert one format to another. FontForge also has support for many macintosh font formats.</Description>
-        <Archive sha1sum="b0a248b8c7709550347a8d8cf6d2dbbb2e28d252" type="targz">https://github.com/fontforge/fontforge/releases/download/20190801/fontforge-20190801.tar.gz</Archive>
+        <Archive sha1sum="63c13a6f1773b04f87342a2553e28be844401498" >https://github.com/fontforge/fontforge/releases/download/20200314/fontforge-20200314.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>tiff</Dependency>
@@ -28,7 +28,6 @@
             <Dependency>libspiro-devel</Dependency>
             <Dependency>xdg-utils</Dependency>
             <Dependency>fontconfig-devel</Dependency>
-            <Dependency>python-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -37,7 +36,6 @@
         <RuntimeDependencies>
             <Dependency>libX11</Dependency>
             <Dependency>libpng</Dependency>
-            <Dependency>python</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>tiff</Dependency>
             <Dependency>cairo</Dependency>
@@ -65,23 +63,14 @@
         </Files>
     </Package>
 
-    <Package>
-        <Name>fontforge-devel</Name>
-        <Summary>Development files for fontforge</Summary>
-        <RuntimeDependencies>
-            <Dependency>tiff</Dependency>
-            <Dependency>libuninamelist-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency release="current">fontforge</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
-        </Files>
-    </Package>
-
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>20200314</Version>
+            <Comment>Version bump to 20200314</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>20190801</Version>

@@ -12,7 +12,7 @@
         <IsA>service</IsA>
         <Summary>A suite of SMB and CIFS client/server programs for UNIX</Summary>
         <Description>samba is a free software implementation of Microsoft's networking protocol released under the GNU General Public License. As of version 4, Samba not only provides file and print services for various Microsoft Windows clients but can also integrate with a Windows Server domain, either as a Primary Domain Controller (PDC) or as a Domain Member. It can also be part of an Active Directory domain.</Description>
-        <Archive sha1sum="cd90090cbe834d9aa86b065eca4dbf3ff7e521f4" type="targz">https://download.samba.org/pub/samba/stable/samba-4.11.3.tar.gz</Archive>
+        <Archive sha1sum="08109949a70c88010dd4b53d1ae088b7e1a282eb" >https://download.samba.org/pub/samba/stable/samba-4.12.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>keyutils</Dependency>
             <Dependency>jansson-devel</Dependency>
@@ -37,6 +37,7 @@
             <Dependency>docbook-xsl</Dependency>
             <Dependency>libtdb-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
+            <Dependency>perl-Parse-Yapp-Driver</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -59,6 +60,7 @@
             <Dependency>openldap-client</Dependency>
             <Dependency>cyrus-sasl</Dependency>
             <Dependency>libtdb</Dependency>
+            <Dependency>perl-Parse-Yapp-Driver</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/run</Path>
@@ -109,7 +111,14 @@
     </Package>
 
     <History>
-		 <Update release="2">
+        <Update release="3">
+            <Date>2019-07-01</Date>
+            <Version>4.12.3</Version>
+            <Comment>4.12.3 sürümüne yükseltildi.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="2">
             <Date>2019-12-12</Date>
             <Version>4.11.3</Version>
             <Comment>postOps uyumluluğu</Comment>

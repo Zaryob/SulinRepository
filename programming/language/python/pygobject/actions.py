@@ -15,7 +15,7 @@ def setup():
     # autoreconf is for under linking problem
     autotools.autoreconf("-fi")
     if get.buildTYPE()=="rebuild_python":
-        shelltools.export("PYTHON", "/usr/bin/python3.7")
+        shelltools.export("PYTHON", "/usr/bin/python3.8")
     else:
         shelltools.export("PYTHON", "/usr/bin/python2.7")
     autotools.configure("--disable-introspection")

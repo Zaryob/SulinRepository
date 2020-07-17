@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>A high performance build system</Summary>
         <Description>A high performance build system</Description>
-        <Archive sha1sum="557bef3b58917af04d4ac58eb3d0dad595317d08">https://github.com/mesonbuild/meson/archive/0.54.0.tar.gz</Archive>
+        <Archive sha1sum="741e42a3c8237abe74eb9f189cd8978897ef144d" >https://github.com/mesonbuild/meson/archive/0.54.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3</Dependency>
             <Dependency>python3-setuptools</Dependency>
@@ -37,6 +37,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="6">
+            <Date>2020-06-21</Date>
+            <Version>0.54.3</Version>
+            <Comment>Version bump to 0.54.3</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="5">
             <Date>2020-02-15</Date>
             <Version>0.54.0</Version>

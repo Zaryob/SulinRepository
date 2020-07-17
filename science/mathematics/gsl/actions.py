@@ -19,6 +19,7 @@ def build():
     autotools.make()
 
 def install():
-    autotools.install()
+    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
+    if get.buildTYPE()=="emul32": return
 
     inarytools.dodoc("README","BUGS","ChangeLog","NEWS","THANKS")

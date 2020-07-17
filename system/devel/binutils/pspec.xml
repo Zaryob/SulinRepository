@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Toolkit for handling assembly object files.</Summary>
         <Description>Contains linker, assembler and other tools like as, ld, nm, objdump, ar, ranlib for compiling assembly code to the machine language, and for linking and manipulating the binary object files.</Description>
-        <Archive sha1sum="cd45a512af1c8a508976c1beb4f5825b3bb89f4d" type="tarxz">http://ftp.gnu.org/gnu/binutils/binutils-2.32.tar.xz</Archive>
+        <Archive sha1sum="78f7ba4c0775ae75f5b906dc9af03d70b39b0785" type="tarxz">http://ftp.gnu.org/gnu/binutils/binutils-2.34.tar.xz</Archive>
         <Patches>
         </Patches>
     </Source>
@@ -43,6 +43,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-06-23</Date>
+            <Version>2.34</Version>
+            <Comment>Version bump to 2.34</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-17</Date>
             <Version>2.32</Version>

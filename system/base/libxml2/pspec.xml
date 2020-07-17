@@ -42,6 +42,7 @@
             <Path fileType="library">/usr/lib/cmake</Path>
             <Path fileType="library">/usr/lib/xml2Conf.sh</Path>
             <Path fileType="library">/usr/lib/libxml2.so*</Path>
+            <Path fileType="library">/usr/lib/libxml2.la</Path>
         </Files>
     </Package>
     <Package>
@@ -51,7 +52,7 @@
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/lib/python3.7</Path>
+            <Path fileType="executable">/usr/lib/python3.8</Path>
         </Files>
     </Package>
     <Package>
@@ -123,10 +124,18 @@
             <Path fileType="library">/usr/lib32/cmake</Path>
             <Path fileType="library">/usr/lib32/xml2Conf.sh</Path>
             <Path fileType="library">/usr/lib32/libxml2.so*</Path>
+            <Path fileType="library">/usr/lib32/libxml2.la</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-06-21</Date>
+            <Version>2.9.9</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2020-05-09</Date>
             <Version>2.9.9</Version>

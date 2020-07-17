@@ -16,7 +16,7 @@ depend() {
 	need localmount
 	use logger dbus
 	after bootmisc modules entropy udev-settle
-	before dns dhcpcd net
+	before dns dhcpcd net 
 	keyword -shutdown
 }
 

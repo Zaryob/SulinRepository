@@ -3,9 +3,9 @@
 import os
 
 def postInstall():
-    if not os.path.exists("/home/samba"):
-        os.system("/bin/mkdir /home/samba")
-        os.system("/bin/chmod 0777 /home/samba")
+    if not os.path.exists("/data/user/samba"):
+        os.system("/bin/mkdir /data/user/samba")
+        os.system("/bin/chmod 0777 /data/user/samba")
 
     # needed by non-root sharing support.
     os.system("/bin/mkdir /var/lib/samba/usershares")

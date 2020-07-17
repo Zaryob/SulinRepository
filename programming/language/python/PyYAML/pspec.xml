@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>The next generation YAML parser and emitter for Python</Summary>
         <Description>python-pyyaml is the next generation YAML parser and emitter for Python.</Description>
-        <Archive sha1sum="53fc16036940089ceadd4127381e40fd6106a7ed" type="targz">https://pyyaml.org/download/pyyaml/PyYAML-5.1.tar.gz</Archive>
+        <Archive sha1sum="d578323401abc8b3b47ff9d6257e5eef31798836" type="targz">https://pyyaml.org/download/pyyaml/PyYAML-5.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libyaml-devel</Dependency>
         </BuildDependencies>
@@ -52,6 +52,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>5.3</Version>
+            <Comment>Version bump to 5.3</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>5.1</Version>

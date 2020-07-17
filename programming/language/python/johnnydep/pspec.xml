@@ -11,7 +11,7 @@
         <Summary>A dependency tracker for Python.</Summary>
         <Description>A dependency tracker for Python.</Description>
         <License>MIT</License>
-        <Archive sha1sum="37c072fd187d34dfccfe9f3c02138b015ca5360b" type="targz">https://github.com/wimglenn/johnnydep/archive/v1.0.tar.gz</Archive>
+        <Archive sha1sum="4113d2c3c1b7df931ceb902a40b0ca423ef42601" type="targz">https://github.com/wimglenn/johnnydep/archive/v1.5.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -82,6 +82,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>1.5</Version>
+            <Comment>Version bump to 1.5</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-21</Date>
             <Version>1.0</Version>

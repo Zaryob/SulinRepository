@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Python wrapper for cairo graphics library</Summary>
         <Description>Pycairo is set of Python bindings for the cairo graphics library.</Description>
-        <Archive sha1sum="a8bbc00b500be85b2d2a2613b1f1103f30c2143d" type="targz">https://files.pythonhosted.org/packages/48/20/5e83af98eb897935bf7dc39455e892ba866feebb9b7c3b392982866f9958/pycairo-1.18.1.tar.gz</Archive>
+        <Archive sha1sum="af8f72fd7bf9f3a234357e38589bbd58d3a0ba0d" type="targz">https://files.pythonhosted.org/packages/e8/9d/c8be300fc6b1298559d37a071c3833b0b251e0fff334d2e4c408d5789162/pycairo-1.19.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
         </BuildDependencies>
@@ -43,6 +43,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>1.19.1</Version>
+            <Comment>Version bump to 1.19.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-15</Date>
             <Version>1.18.1</Version>

@@ -11,18 +11,32 @@
         <IsA>library</IsA>
         <Summary>zope.interface library</Summary>
         <Description>Interfaces are objects that specify (document) the external behavior of objects that provide them.</Description>
-        <Archive sha1sum="693e793efc3e03746c12cf2269861a5369545b0e">https://files.pythonhosted.org/packages/c3/05/bf3130eb799548882ce61b7c3d2dbc5d4d5cc6e821efa8786c5273d56844/zope.interface-4.7.1.tar.gz</Archive>
+        <Archive sha1sum="0b8c7f3a489cc02b303de60f6abf94cf509e7aae">https://files.pythonhosted.org/packages/af/d2/9675302d7ced7ec721481f4bbecd28a390a8db4ff753d28c64057b975396/zope.interface-5.1.0.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>python-zope-interface</Name>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-zope-interface</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.8</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-07-01</Date>
+            <Version>5.1.0</Version>
+            <Comment>Version bump to 5.1.0</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-31</Date>
             <Version>4.7.1</Version>
