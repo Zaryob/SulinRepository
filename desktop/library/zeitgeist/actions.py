@@ -17,4 +17,7 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    # remove unused binary
+    inarytools.removeDir("/etc")
+    inarytools.remove("/usr/bin/zeitgeist-datahub")
 

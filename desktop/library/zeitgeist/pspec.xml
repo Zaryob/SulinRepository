@@ -40,6 +40,9 @@
             <Path fileType="data">/usr/share</Path>
             <Path fileType="executable">/usr/bin</Path>
         </Files>
+        <AdditionalFiles>
+             <AdditionalFile target="/usr/bin/zeitgeist-daemon" owner="root" permission="0755" >zeitgeist-daemon</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <Package>
