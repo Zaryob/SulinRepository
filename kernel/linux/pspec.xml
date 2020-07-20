@@ -13,10 +13,10 @@
         <PartOf>kernel.linux</PartOf>
         <Summary>The Linux kernel (the core of the Linux operating system) for Sulin</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="b565a7606d9d91eef1e331d96e46adb83c544a23">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.2.tar.xz</Archive>
+        <Archive sha1sum="5012f2f0f2fa05b2e9a9a12381e32753b9c05f27">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.9.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
-            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.7.2</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.7.9</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>
@@ -61,6 +61,13 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>2020-05-06</Date>
+            <Version>5.7.9</Version>
+            <Comment>Bir kernel de benden olsun.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="10">
             <Date>2020-05-06</Date>
             <Version>5.7.2</Version>
