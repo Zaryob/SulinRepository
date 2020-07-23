@@ -1,0 +1,105 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>gnome-builder</Name>
+        <Homepage>https://live.gnome.org/gnome-builder</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>An IDE for writing GNOME-based software</Summary>
+        <Description>An IDE for writing GNOME-based software</Description>
+        <Archive sha1sum="c84fe37737d4a7aec0e2cb94729ceb6f9120dd82">https://download.gnome.org/sources/gnome-builder/3.36/gnome-builder-3.36.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>vte3</Dependency>
+            <Dependency>gtksourceview4</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>libdazzle-devel</Dependency>
+            <Dependency>jsonrpc-glib-devel</Dependency>
+            <Dependency>template-glib-devel</Dependency>
+            <Dependency>devhelp-devel</Dependency>
+            <Dependency>flatpak-devel</Dependency>
+            <Dependency>libgit2-devel</Dependency>
+            <Dependency>libgit2-glib-devel</Dependency>
+            <Dependency>glade-devel</Dependency>
+            <Dependency>gspell-devel</Dependency>
+            <Dependency>libportal-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-builder</Name>
+        <RuntimeDependencies>
+            <Dependency>libpeas</Dependency>
+            <Dependency>gtksourceview4</Dependency>
+            <Dependency>vte3</Dependency>
+            <Dependency>libdazzle</Dependency>
+            <Dependency>jsonrpc-glib</Dependency>
+            <Dependency>template-glib</Dependency>
+            <Dependency>devhelp</Dependency>
+            <Dependency>flatpak</Dependency>
+            <Dependency>libgit2</Dependency>
+            <Dependency>libgit2-glib</Dependency>
+            <Dependency>glade</Dependency>
+            <Dependency>gspell</Dependency>
+            <Dependency>libportal</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/gnome-builder</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/thumbnailers</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gtksourceview-3.0</Path>
+            <Path fileType="data">/usr/share/gtksourceview-4</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-builder-devel</Name>
+        <IsA>library</IsA>
+        <Summary>Development files for gnome-builder</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-builder</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-builder-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>gnome-builder reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.36.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

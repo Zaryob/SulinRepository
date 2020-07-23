@@ -1,0 +1,77 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>devhelp</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>API documentation browser for GNOME</Summary>
+        <Description>API documentation browser for GNOME</Description>
+        <Archive sha1sum="4f59e93bbb8e09f9b1c9849d6e652acd56c9d27a" >https://gitlab.gnome.org/GNOME/devhelp/-/archive/3.37.1/devhelp-3.37.1.tar.gz</Archive>
+         <BuildDependencies>
+           <Dependency>webkit2gtk-devel</Dependency>
+           <Dependency>amtk-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>devhelp</Name>
+        <RuntimeDependencies>
+           <Dependency>webkit2gtk</Dependency>
+           <Dependency>amtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/devhelp</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>devhelp-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>devhelp reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>devhelp-devel</Name>
+        <Summary>Development files for devhelp</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency release="current">devhelp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>3.37.1</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
