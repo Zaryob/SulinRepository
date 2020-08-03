@@ -16,7 +16,7 @@
         <Archive sha1sum="1f52755a5128c1a6719b3294b73c59aa9597937e">https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.8.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
-            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.8</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.8.0</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>
@@ -63,7 +63,7 @@
     <History>
         <Update release="11">
             <Date>2020-05-06</Date>
-            <Version>5.8</Version>
+            <Version>5.8.0</Version>
             <Comment>Bir kernel de benden olsun.</Comment>
             <Name>Ali Rıza Keskin</Name>
             <Email>parduscix@yandex.ru</Email>
