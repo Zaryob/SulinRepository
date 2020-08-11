@@ -29,8 +29,7 @@ def setup():
         options +=" \
                     --enable-dwz \
                     --enable-thread-safety \
-                    --with-bzlib \
-                    --with-lzma"
+                    --enable-deterministic-archives"
     
     autotools.configure(options)
 
