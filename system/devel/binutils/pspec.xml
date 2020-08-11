@@ -25,7 +25,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="library">/usr/x86_64-pc-linux-gnu</Path>
+            <Path fileType="library">/usr/share/locale</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="info">/usr/share/info</Path>
         </Files>

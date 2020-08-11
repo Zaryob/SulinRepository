@@ -11,7 +11,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("-Dplugin_sysprof=false")
+    mesontools.meson_configure("-Dplugin_sysprof=false -Dplugin_flatpak=false")
 
 def build():
     mesontools.ninja_build()

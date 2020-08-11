@@ -20,7 +20,6 @@
             <Dependency>jsonrpc-glib-devel</Dependency>
             <Dependency>template-glib-devel</Dependency>
             <Dependency>devhelp-devel</Dependency>
-            <Dependency>flatpak-devel</Dependency>
             <Dependency>libgit2-devel</Dependency>
             <Dependency>libgit2-glib-devel</Dependency>
             <Dependency>glade-devel</Dependency>
@@ -39,7 +38,6 @@
             <Dependency>jsonrpc-glib</Dependency>
             <Dependency>template-glib</Dependency>
             <Dependency>devhelp</Dependency>
-            <Dependency>flatpak</Dependency>
             <Dependency>libgit2</Dependency>
             <Dependency>libgit2-glib</Dependency>
             <Dependency>glade</Dependency>

@@ -15,42 +15,31 @@ multilib = "--enable-multilib" if get.ARCH() == "x86_64" else ""
 
 
 def setup():
-    shelltools.system('sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" libiberty/configure')
+    shelltools.system('sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O3 -s/" libiberty/configure')
 
-    autotools.configure('--enable-shared \
+    autotools.rawConfigure('--prefix=/usr \
+                         --libdir=/usr/lib --enable-shared \
+                         --with-lib-path=/usr/lib:/usr/local/lib \
                          --build=x86_64-pc-linux-gnu \
                          --enable-threads \
                          --enable-ld=default \
                          --enable-gold \
                          --enable-plugins \
+                         --enable-relro \
+                         --enable-cet \
+                         --with-mmap \
+                         --enable-deterministic-archives \
                          --with-pkgversion="Sulin" \
                          --with-bugurl=http://gitlab.com/sulinos/main/issues \
                          %s \
                          --with-pic \
-                         --disable-nls \
                          --disable-werror' % ( multilib))
 
 def build():
-    autotools.make("configure-host")
-    autotools.make()
+    autotools.make("tooldir=/usr")
 
-def check():
-    autotools.make("check -j1")
+#def check():
+#    autotools.make("check -j1")
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    autotools.make("-C libiberty clean")
-    autotools.make('CFLAGS="-fPIC %s" -C libiberty' % get.CFLAGS())
-
-    autotools.make("-C bfd clean")
-    autotools.make('CFLAGS="-fPIC %s" -C bfd' % get.CFLAGS())
-
-    inarytools.insinto("/usr/lib", "bfd/libbfd.a")
-    inarytools.insinto("/usr/lib", "libiberty/libiberty.a")
-    inarytools.insinto("/usr/include", "include/libiberty.h")
-    inarytools.insinto("/usr/include", "include/demangle.h")
-
-    # Copy plugin-api.h file to build LLVM with LLVM gold plugin
-    inarytools.insinto("/usr/include", "include/plugin-api.h")
-    #inarytools.remove("/usr/share/info/configure.info")
-    #inarytools.remove("/usr/share/info/standards.info")
+    autotools.rawInstall("tooldir=/usr DESTDIR=%s" % get.installDIR())
