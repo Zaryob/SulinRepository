@@ -11,14 +11,8 @@ from inary.actionsapi import get
 
 NoStrip = ["/"]
 
-if "_" in get.srcVERSION():
-    WorkDir = get.srcNAME()
 
 def setup():
-    inarytools.dosed("configure.ac", "multisound/Makefile", "")
-    inarytools.dosed("Makefile.am", "multisound", "")
-
-    autotools.autoreconf("-fi")
     autotools.configure("--with-hotplug-dir=/lib/firmware")
 
 def build():
@@ -29,6 +23,7 @@ def install():
 
     #Remove conflicted file, it is in linux-firmware package
     inarytools.remove("lib/firmware/ctefx.bin")
+    inarytools.remove("lib/firmware/ctspeq.bin")
 
     # Install additional readme files
     for d in ["hdsploader", "mixartloader", "pcxhrloader", "usx2yloader", "vxloader"]:

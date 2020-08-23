@@ -24,7 +24,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 
@@ -44,7 +43,7 @@
         <Name>libssh-docs</Name>
         <Summary>Development documentation for libssh</Summary>
         <Files>
-            <Path fileType="doc">/usr/share/doc/libssh/html</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>

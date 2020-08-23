@@ -26,7 +26,7 @@ def setup():
 
 def build():
 
-    autotools.make("-j1") # -j5 not good
+    autotools.make()
 
 def install():
     autotools.rawInstall('DESTDIR="{}"'.format(get.installDIR()))

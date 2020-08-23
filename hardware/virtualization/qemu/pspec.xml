@@ -11,7 +11,7 @@
         <IsA>app:console</IsA>
         <Summary>Userspace virtual machine and processor emulator</Summary>
         <Description>QEMU emulates a full system (for example a PC), including a processor and various peripherials. It can be used to launch different operating systems without rebooting the PC or to debug system code. In user-mode emulation mode, QEMU can launch Linux processes compiled for one CPU on another CPU.</Description>
-        <Archive sha1sum="52d1c0e6025a212d4fde471e4d9b5913f2615f86" >https://download.qemu.org/qemu-5.0.0.tar.xz</Archive>
+        <Archive sha1sum="8c70ce2b65349e9b42bd20c9dec2c90f8e7b960a" >http://download.qemu-project.org/qemu-5.1.0.tar.xz</Archive>
   
         <BuildDependencies>
             <Dependency>aalib</Dependency>
@@ -75,23 +75,19 @@
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="localedata">/usr/share/locale/</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>qemu-devel</Name>
-        <Summary>Development files for qemu</Summary>
-        <RuntimeDependencies>
-            <Dependency>nss-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency release="current">qemu</Dependency>
-        </RuntimeDependencies>
-        <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig/libcacard.pc</Path>
+            <Path fileType="data">/usr/lib/pkgconfig/</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-01-17</Date>
+            <Version>5.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2020-01-17</Date>
             <Version>5.0.0</Version>

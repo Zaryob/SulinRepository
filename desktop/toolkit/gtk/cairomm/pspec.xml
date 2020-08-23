@@ -27,7 +27,6 @@
             <Dependency>libsigc2++</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
@@ -49,7 +48,7 @@
         <Name>cairomm-docs</Name>
         <Summary>Development documents for cairomm</Summary>
         <Files>
-            <Path fileType="doc">/usr/share/doc/cairomm/html</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
     <History>
