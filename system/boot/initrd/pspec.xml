@@ -11,7 +11,7 @@
         <IsA>app:console</IsA>
         <Summary>Sulin initrd system</Summary>
         <Description>Sulin initramfs creation system with live boot support.</Description>
-        <Archive sha1sum="fdeef23c504286f0914f25a9abdd1ca80f475f39">https://gitlab.com/sulinos/devel/initrd/-/archive/1.1.2/initrd-1.1.2.tar.gz</Archive>
+        <Archive sha1sum="066a1e176237e32d16fbb195aa28402e47e5635d">https://gitlab.com/sulinos/devel/initrd/-/archive/1.1.3/initrd-1.1.3.tar.gz</Archive>
     </Source>
     <Package>
         <Name>initrd</Name>
@@ -25,6 +25,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="3">
+            <Date>2020-01-18</Date>
+            <Version>1.1.3</Version>
+            <Comment>Fix hid</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2020-01-18</Date>
             <Version>1.1</Version>

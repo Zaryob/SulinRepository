@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>elsa</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/sulin-manager</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>SulinOS instaler</Summary>
+        <Description>Sulin console installer.</Description>
+        <Archive sha1sum="e19185401111a7ae52a4e259be79cd1bdfabe91d">https://gitlab.com/sulinos/devel/elsa/-/archive/1.0/elsa-1.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+    <RuntimeDependencies>
+        <Dependency>rsync</Dependency>
+        <Dependency>dialog</Dependency>
+    </RuntimeDependencies>
+        <Name>elsa</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <History>
+
+        <Update release="1">
+            <Date>2020-01-28</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
