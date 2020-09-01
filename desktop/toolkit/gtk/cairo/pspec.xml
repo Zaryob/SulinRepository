@@ -95,7 +95,6 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">cairo</Dependency>
-            <Dependency>mesa-32bit</Dependency>
             <Dependency>zlib-32bit</Dependency>
             <Dependency>glib2-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
