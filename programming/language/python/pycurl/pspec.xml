@@ -20,7 +20,6 @@
 
     <Package>
         <Name>python3-pycurl</Name>
-        <PartOf>system.base</PartOf>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
         </RuntimeDependencies>
@@ -30,7 +29,6 @@
     </Package>
     <Package>
         <Name>python-pycurl</Name>
-        <PartOf>programming.language.python</PartOf>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
         </RuntimeDependencies>

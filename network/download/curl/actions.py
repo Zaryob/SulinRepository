@@ -10,6 +10,10 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
+    if get.buildTYPE() == "emul32":
+        shelltools.export("CFLAGS","-m32")
+        shelltools.export("CXXFLAGS","-m32")
+        shelltools.export("LDFLAGS","-m32")
     autotools.configure("--disable-static \
                          --enable-dependency-tracking \
                          --disable-ldap \
@@ -23,6 +27,8 @@ def setup():
                          --with-nghttp2 \
                          --with-libmetalink \
                          --without-librtmp \
+                         --without-zstd \
+                         --without-brotli \
                          --enable-ipv6 \
                          --enable-http \
                          --enable-ftp \
@@ -44,12 +50,16 @@ def setup():
 
 
 def build():
+    if get.buildTYPE() == "emul32":
+        shelltools.export("CFLAGS","-m32")
+        shelltools.export("CXXFLAGS","-m32")
+        shelltools.export("LDFLAGS","-m32")
     autotools.make()
 
 def check():
+    pass
     #shelltools.export("LD_LIBRARY_PATH", "%s/lib" % get.curDIR())
     #autotools.make("-C tests test")
-    pass
 
 def install():
     

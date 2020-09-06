@@ -12,10 +12,12 @@ from inary.actionsapi import get
 
 shelltools.export("PYCURL_SSL_LIBRARY", "openssl")
 
+WorkDir="pycurl-REL_7_43_0_5"
+
 def install():
 
     # no static libs
-    inarytools.dosed("setup.py", ", \"--static-libs\"")
+    #inarytools.dosed("setup.py", ", \"--static-libs\"")
     if get.buildTYPE()=="rebuild_python":
         pyVer=3
     else:
