@@ -68,5 +68,5 @@ def install():
         shelltools.copytree("%s/emul32/usr/lib32" % get.installDIR(), "%s/usr/lib32" % get.installDIR())
         inarytools.removeDir("/emul32")
         return
-    autotools.install()
+    shelltools.system("make install DESTDIR=%s/" % get.installDIR())
     inarytools.dodoc("CHANGES", "docs/*.md")

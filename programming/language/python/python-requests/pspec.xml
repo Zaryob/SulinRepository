@@ -20,9 +20,12 @@
 
     <Package>
         <Name>python3-requests</Name>
-        <PartOf>system.base</PartOf>
         <BuildType>rebuild_python</BuildType>
         <RuntimeDependencies>
+            <Dependency>python3-urllib3</Dependency>
+            <Dependency>python3-chardet</Dependency>
+            <Dependency>python3-idna</Dependency>
+            <Dependency>python3-certifi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
@@ -33,6 +36,10 @@
         <PartOf>programming.language.python</PartOf>
         <RuntimeDependencies>
             <Dependency>python</Dependency>
+            <Dependency>python-urllib3</Dependency>
+            <Dependency>python-chardet</Dependency>
+            <Dependency>python-certifi</Dependency>
+            <Dependency>python-idna</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>

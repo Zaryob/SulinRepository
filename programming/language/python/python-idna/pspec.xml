@@ -1,0 +1,41 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>python-idna</Name>
+        <Homepage>http://www.zope.org/Products/ZopeInterface/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>ZPL</License>
+        <IsA>library</IsA>
+        <Summary>The Universal Character Encoding Detector</Summary>
+        <Description>The Universal Character Encoding Detector</Description>
+        <Archive sha1sum="15797f4f29a03429d6176c09aae7a93fdc979636">https://github.com/kjd/idna/archive/v2.10.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-idna</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python3-idna</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python3.8</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-31</Date>
+            <Version>2.10</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
