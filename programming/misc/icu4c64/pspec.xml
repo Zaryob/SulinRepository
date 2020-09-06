@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>icu4c64</Name>
+        <Homepage>http://site.icu-project.org/home</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <PartOf>programming.misc</PartOf>
+        <Summary>International Components for Unicode</Summary>
+        <Description>ICU is a mature, widely used set of C/C++ and Java libraries for Unicode support, software internationalization and globalization (i18n/g11n). This package contains the C/C++ libraries.</Description>
+        <!-- CAUTION! This package has a great potential to break API/ABI in minor version bumps, check for a file like:
+        http://source.icu-project.org/repos/icu/icu/tags/release-55-1/APIChangeReport.html -->
+        <Archive sha1sum="a8bb62151fb2dd4564a73c752052c1915058626e" type="targz">https://github.com/unicode-org/icu/archive/release-64-2.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>icu4c64</Name>
+        <RuntimeDependencies>
+            <Dependency>icu4c</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/icu4c64/html</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>icu4c64-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for icu4c64</Summary>
+        <BuildType>_emul32</BuildType>
+        <BuildDependencies>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>icu4c-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libicu*</Path>
+            <Path fileType="library">/usr/lib32/icu</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>64.2</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
