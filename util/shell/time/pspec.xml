@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>time</Name>
+        <Homepage>ftp://prep.ai.mit.edu/pub/gnu/time</Homepage>
+        <Packager>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A GNU utility for monitoring a program's use of system resources</Summary>
+        <Description>time utility runs another program, collects information about the resources used by that program while it is running, and displays the results.</Description>
+        <Archive sha1sum="dde0c28c7426960736933f3e763320680356cc6a" type="targz">ftp://prep.ai.mit.edu/pub/gnu/time/time-1.7.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">time-1.7-destdir.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>time</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2019-09-19</Date>
+            <Version>1.7</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2018-12-22</Date>
+            <Version>1.7</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman POYRAZ</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

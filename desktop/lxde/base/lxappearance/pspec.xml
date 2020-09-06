@@ -14,7 +14,7 @@
         <PartOf>desktop.lxde.base</PartOf>
         <Summary>A new feature-rich GTK+ theme switcher</Summary>
         <Description>LXAppearance is a new GTK+ theme switcher developed for project LXDE.</Description>
-        <Archive sha1sum="1c281756b240694d0262edd9d40041d5b127d552" type="tarxz">https://downloads.sourceforge.net/lxde/lxappearance-0.6.3.tar.xz</Archive>
+        <Archive sha1sum="1c281756b240694d0262edd9d40041d5b127d552" type="tarxz">https://master.dl.sourceforge.net/project/lxde/LXAppearance/lxappearance-0.6.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
