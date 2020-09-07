@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>xfce4-polkit</Name>
+        <Homepage>http://www.xfce.org</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Xfce polkit</Summary>
+        <Description>Xfce polkit</Description>
+        <Archive sha1sum="a57c36f01e3f30bcc796ca35f05a360d7adb4b2b" >https://github.com/ncopa/xfce-polkit/releases/download/v0.3/xfce-polkit-0.3.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>xfce4-polkit</Name>
+      <RuntimeDependencies>
+        <Dependency>polkit</Dependency>
+      </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+           <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>0.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

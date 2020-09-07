@@ -6,16 +6,17 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
+WorkDir="eatmonkey-master"
+
 def setup():
-    autotools.configure()
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure("--with-download-manager=gio")
 
 def build():
     autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    inarytools.dosed("%s/usr/bin/eatmonkey" % get.installDIR(), "/usr/local/", "/usr/")
-    inarytools.dosed("%s/usr/share/eatmonkey/eatmanager.rb" % get.installDIR(), "/usr/local/", "/usr/")
-    inarytools.dodoc("README", "COPYING", "ChangeLog", "AUTHORS")

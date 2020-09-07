@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Xfce GUI library</Summary>
         <Description>Libxfcegui4 is a various GTK+ widgets for Xfce desktop environment.</Description>
-        <Archive sha1sum="6d6f24a7f69dfee359b96bd2867fbe9e3262549f" type="tarbz2">http://archive.xfce.org/src/xfce/libxfcegui4/4.10/libxfcegui4-4.10.0.tar.bz2</Archive>
+        <Archive sha1sum="6d6f24a7f69dfee359b96bd2867fbe9e3262549f" type="tarbz2">http://deb.debian.org/debian/pool/main/libx/libxfcegui4/libxfcegui4_4.10.0.orig.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>

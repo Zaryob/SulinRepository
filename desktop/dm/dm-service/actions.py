@@ -9,6 +9,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
+WorkDir="start-dm-1.0.2"
 
 def install():
     autotools.install("DESTDIR={}".format(get.installDIR()))

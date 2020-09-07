@@ -42,6 +42,8 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="doc">/usr/share/gtk-doc</Path>
         </Files>

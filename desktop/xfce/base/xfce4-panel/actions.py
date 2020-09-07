@@ -7,25 +7,22 @@
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
+from inary.actionsapi import get
 
 def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib \
                          --disable-static \
                          --enable-gio-unix \
-                         --disable-gtk-doc \
-                         --enable-debug")
-
-    inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
-    inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
-    inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
+                         --disable-gtk-doc  \
+                         --disable-debug ")
 
 def build():
     autotools.make()
 
 def install():
-    autotools.install()
+    autotools.make("install DESTDIR={}".format(get.installDIR()))
 
-    inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
+    #inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
 
     inarytools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS", "README", "TODO")

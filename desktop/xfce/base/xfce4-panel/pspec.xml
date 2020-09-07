@@ -63,6 +63,8 @@
             <Path fileType="data">/usr/share/xfce4</Path>
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
         </Files>
     </Package>
 
