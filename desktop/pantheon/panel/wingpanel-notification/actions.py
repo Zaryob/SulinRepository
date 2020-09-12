@@ -8,6 +8,8 @@ from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="wingpanel-indicator-notifications-2.1.4"
+
 def setup():
     mesontools.meson_configure("-D with-unity=false")
 

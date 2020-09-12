@@ -80,6 +80,10 @@
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/icons/hicolor/scalable/status/notification-new-symbolic.svg" permission="0644" owner="root">notification-new-symbolic.svg</AdditionalFile>
+            <AdditionalFile target="/usr/share/icons/hicolor/scalable/status/notification-symbolic.svg" permission="0644" owner="root">notification-symbolic.svg</AdditionalFile>
+        </AdditionalFiles>
     </Package>
 
     <Package>
