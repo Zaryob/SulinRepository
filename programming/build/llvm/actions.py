@@ -14,6 +14,7 @@ lib = "lib32" if get.buildTYPE() == "emul32" else "lib"
 
 WorkDir="llvm-10.0.0.src"
 
+
 def setup():
     shelltools.export("PYTHON", "/usr/bin/python3")
     for dirs in ["tools", "projects"]:
