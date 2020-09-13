@@ -12,6 +12,7 @@ from inary.actionsapi import cmaketools
 libdir = "/usr/lib32/llvm" if get.buildTYPE() == "emul32" else "/usr/lib/llvm"
 lib = "lib32" if get.buildTYPE() == "emul32" else "lib"
 
+WorkDir="llvm-10.0.0.src"
 
 def setup():
     shelltools.export("PYTHON", "/usr/bin/python3")
@@ -72,10 +73,6 @@ def setup():
 
     cmaketools.configure("-DCMAKE_BUILD_TYPE=Release \
                                         %s \
-                                        -DLLVM_BUILD_LLVM_DYLIB=ON \
-                                        -DLLVM_LINK_LLVM_DYLIB=ON \
-                                        -DLLVM_INSTALL_UTILS=ON \
-                                        -DLLVM_ENABLE_RTTI=ON \
                                         -DLLVM_ENABLE_FFI=ON \
                                         -DLLVM_BUILD_DOCS=OFF \
                                         -DBUILD_SHARED_LIBS=ON \
