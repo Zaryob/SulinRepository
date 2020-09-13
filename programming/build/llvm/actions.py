@@ -27,6 +27,10 @@ def setup():
         shelltools.system("tar xf ../lldb-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/lldb-*", "tools/lldb")
 
+    if get.buildTYPE() != "emul32":
+        shelltools.system("tar xf ../polly-%s.src.tar.xz -C tools" % get.srcVERSION())
+        shelltools.move("tools/polly-*", "tools/lldb")
+
     if not shelltools.can_access_directory("projects/compiler-rt"):
         shelltools.system("tar xf ../compiler-rt-%s.src.tar.xz -C projects" % get.srcVERSION())
         shelltools.move("projects/compiler-rt-%s.src" % get.srcVERSION(), "projects/compiler-rt")
