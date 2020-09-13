@@ -27,9 +27,9 @@ def setup():
         shelltools.system("tar xf ../lldb-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/lldb-*", "tools/lldb")
 
-    if get.buildTYPE() != "emul32":
+    if not shelltools.can_access_directory("tools/polly"):
         shelltools.system("tar xf ../polly-%s.src.tar.xz -C tools" % get.srcVERSION())
-        shelltools.move("tools/polly-*", "tools/lldb")
+        shelltools.move("tools/polly-*", "tools/polly")
 
     if not shelltools.can_access_directory("projects/compiler-rt"):
         shelltools.system("tar xf ../compiler-rt-%s.src.tar.xz -C projects" % get.srcVERSION())
@@ -81,7 +81,6 @@ def setup():
                                         -DLLVM_ENABLE_ASSERTIONS=OFF \
                                         -DPOLLY_ENABLE_GPGPU_CODEGEN=ON \
                                         -DFFI_INCLUDE_DIR=/usr/lib/libffi-3.2.1/include \
-                                        -D LLVM_ENABLE_PROJECTS=\"polly;lldb;lld;compiler-rt;clang-tools-extra;clang\" \
                                         -DENABLE_SHARED=ON" % options, sourceDir=".." )
 
 def build():
