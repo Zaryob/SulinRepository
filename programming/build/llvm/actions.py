@@ -15,7 +15,9 @@ lib = "lib32" if get.buildTYPE() == "emul32" else "lib"
 
 def setup():
     shelltools.export("PYTHON", "/usr/bin/python3")
-
+    if not shelltools.can_access_directory("tools"):
+        shelltools.makedirs("tools")
+        
     if not shelltools.can_access_directory("tools/clang"):
         shelltools.system("tar -xf ../clang-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/clang-%s.src" % get.srcVERSION(), "tools/clang")
