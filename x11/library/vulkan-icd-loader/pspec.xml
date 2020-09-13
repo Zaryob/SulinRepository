@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vulkan-icd-loader</Name>
+        <Homepage>http://vulkan-icd-loader.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>Vulkan Installable Client Driver (ICD) Loader</Summary>
+        <Description>Vulkan Installable Client Driver (ICD) Loader</Description>
+        <Archive sha1sum="07cad664c40ca6a8842b997ef4b152925709a59d" >https://github.com/KhronosGroup/Vulkan-Loader/archive/v1.2.153.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>vulkan-headers</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>vulkan-icd-loader</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec/</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>vulkan-icd-loader-devel</Name>
+        <Summary>Development files for vulkan-icd-loader</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">vulkan-icd-loader</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.2.153</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>admins@inarylnux.org</Email>
+        </Update>
+    </History>
+</INARY>

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>vulkan-headers</Name>
+        <Homepage>http://vulkan-headers.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>x11.library</PartOf>
+        <Summary>Vulkan header files and API registry</Summary>
+        <Description>Vulkan header files and API registry</Description>
+        <Archive sha1sum="f96ddb21701d7cc4999401405745db31dfa028b7" >https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.2.153.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>vulkan-headers</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec/</Path>
+            <Path fileType="data">/usr/share/vulkan</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.2.153</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>admins@inarylnux.org</Email>
+        </Update>
+    </History>
+</INARY>
