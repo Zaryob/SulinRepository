@@ -17,22 +17,22 @@ def setup():
     shelltools.export("PYTHON", "/usr/bin/python3")
 
     if not shelltools.can_access_directory("tools/clang"):
-        shelltools.system("tar xf ../clang-%s.src.tar.xz -C tools" % get.srcVERSION())
+        shelltools.system("tar -xf ../clang-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/clang-%s.src" % get.srcVERSION(), "tools/clang")
 
-        shelltools.system("tar xf ../clang-tools-extra-%s.src.tar.xz -C tools" % get.srcVERSION())
+        shelltools.system("tar -xf ../clang-tools-extra-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/clang-tools-extra-*", "tools/clang/extra")
 
     if get.buildTYPE() != "emul32":
-        shelltools.system("tar xf ../lldb-%s.src.tar.xz -C tools" % get.srcVERSION())
+        shelltools.system("tar -xf ../lldb-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/lldb-*", "tools/lldb")
 
     if not shelltools.can_access_directory("tools/polly"):
-        shelltools.system("tar xf ../polly-%s.src.tar.xz -C tools" % get.srcVERSION())
+        shelltools.system("tar -xf ../polly-%s.src.tar.xz -C tools" % get.srcVERSION())
         shelltools.move("tools/polly-*", "tools/polly")
 
     if not shelltools.can_access_directory("projects/compiler-rt"):
-        shelltools.system("tar xf ../compiler-rt-%s.src.tar.xz -C projects" % get.srcVERSION())
+        shelltools.system("tar -xf ../compiler-rt-%s.src.tar.xz -C projects" % get.srcVERSION())
         shelltools.move("projects/compiler-rt-%s.src" % get.srcVERSION(), "projects/compiler-rt")
 
 
