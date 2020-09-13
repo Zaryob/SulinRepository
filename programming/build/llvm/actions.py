@@ -65,13 +65,19 @@ def setup():
 
     cmaketools.configure("-DCMAKE_BUILD_TYPE=Release \
                                         %s \
+                                        -DLLVM_BUILD_LLVM_DYLIB=ON \
+                                        -DLLVM_LINK_LLVM_DYLIB=ON \
+                                        -DLLVM_INSTALL_UTILS=ON \
+                                        -DLLVM_ENABLE_RTTI=ON \
                                         -DLLVM_ENABLE_FFI=ON \
                                         -DLLVM_BUILD_DOCS=OFF \
                                         -DBUILD_SHARED_LIBS=ON \
                                         -DLLVM_ENABLE_RTTI=ON \
                                         -DLLVM_INCLUDEDIR=/usr/include \
                                         -DLLVM_ENABLE_ASSERTIONS=OFF \
+                                        -DPOLLY_ENABLE_GPGPU_CODEGEN=ON \
                                         -DFFI_INCLUDE_DIR=/usr/lib/libffi-3.2.1/include \
+                                        -D LLVM_ENABLE_PROJECTS=\"polly;lldb;lld;compiler-rt;clang-tools-extra;clang\" \
                                         -DENABLE_SHARED=ON" % options, sourceDir=".." )
 
 def build():
