@@ -1,0 +1,42 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>pyudev</Name>
+        <Homepage>http://pyudev.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <License>ZPL</License>
+        <IsA>library</IsA>
+        <Summary>Python UDev bindings</Summary>
+        <Description>Python UDev bindings</Description>
+        <Archive sha1sum="03fda37e2e01de5b978743fb0f8cfc2a19ee3cc2">https://github.com/pyudev/pyudev/archive/v0.22.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>pyudev</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>pyudev3</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.8</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>0.22</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
