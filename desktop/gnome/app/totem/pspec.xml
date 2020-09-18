@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>Video player for the GNOME desktop</Summary>
         <Description>Totem is default video player for the GNOME desktop.</Description>
-        <Archive sha1sum="c8ec27f81c6163b86a84e466275342fb52a2f9e3">https://download.gnome.org/sources/totem/3.34/totem-3.34.1.tar.xz</Archive>
+        <Archive sha1sum="e706c9faa350788bae851fe86a5ba4695b4596dc">https://download.gnome.org/sources/totem/3.38/totem-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gconf-devel</Dependency>
             <Dependency>libpeas-devel</Dependency>
@@ -30,6 +30,8 @@
             <Dependency>clutter-gtk-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
+            <Dependency>cogl-devel</Dependency>
+            <Dependency>totem-pl-parser-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -110,7 +112,14 @@
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+            <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.34.1</Version>
             <Comment>First release</Comment>

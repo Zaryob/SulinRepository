@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>GNOME configuration tools</Summary>
         <Description>gnome-control-center is GNOME's main interface for configuration of various aspects of your GNOME desktop.</Description>
-        <Archive sha1sum="1897ddb79a49a63c77d3c39c4efcbfabf27a41af">http://ftp.gnome.org/pub/gnome/sources/gnome-control-center/3.36/gnome-control-center-3.36.1.tar.xz</Archive>
+        <Archive sha1sum="8dc599d569f1de7c940e3380880945874e56f503">http://ftp.acc.umu.se/pub/gnome/sources/gnome-control-center/3.38/gnome-control-center-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libcanberra-devel</Dependency>
             <Dependency>gnome-desktop-devel</Dependency>
@@ -46,6 +46,13 @@
             <Dependency>samba-devel</Dependency>
             <Dependency>colord-gtk-devel</Dependency>
             <Dependency>libpwquality-devel</Dependency>
+            <Dependency>accountsservice-devel</Dependency>
+            <Dependency>gnome-online-accounts-devel</Dependency>
+            <Dependency>network-manager-applet-devel</Dependency>
+            <Dependency>libmm-glib-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+          <Dependency>gsound-devel</Dependency>
+          
         </BuildDependencies>
     </Source>
 
@@ -130,7 +137,14 @@
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>
             <Comment>First release</Comment>

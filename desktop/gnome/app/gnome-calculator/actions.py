@@ -10,6 +10,8 @@ from inary.actionsapi import cmaketools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="gnome-calculator-3.38.0"
+
 def setup():
     mesontools.meson_configure()
 

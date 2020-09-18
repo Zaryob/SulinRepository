@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>An IDE for writing GNOME-based software</Summary>
         <Description>An IDE for writing GNOME-based software</Description>
-        <Archive sha1sum="c84fe37737d4a7aec0e2cb94729ceb6f9120dd82">https://download.gnome.org/sources/gnome-builder/3.36/gnome-builder-3.36.0.tar.xz</Archive>
+        <Archive sha1sum="3dd681ab71cb4ba61ae085834f2756635e9a3d4f">https://download.gnome.org/sources/gnome-builder/3.38/gnome-builder-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>vte3</Dependency>
             <Dependency>gtksourceview4</Dependency>
@@ -92,6 +92,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.0</Version>

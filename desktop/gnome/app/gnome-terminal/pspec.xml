@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>Terminal emulation application for the GNOME desktop.</Summary>
         <Description>GNOME terminal is a emulation application that designed to run xterm, VT102 and VT220</Description>
-        <Archive sha1sum="2f354c5d987f87b144236874d614a49a71632a7e" >https://gitlab.gnome.org/GNOME/gnome-terminal/-/archive/3.36.1.1/gnome-terminal-3.36.1.1.tar.gz</Archive>
+        <Archive sha1sum="86a0cc9fd7a2e11224c2e0be92027a690d53e478" >https://gitlab.gnome.org/GNOME/gnome-terminal/-/archive/3.38.0/gnome-terminal-3.38.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>vte3</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -73,6 +73,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>

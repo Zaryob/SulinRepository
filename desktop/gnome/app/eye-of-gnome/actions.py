@@ -10,6 +10,8 @@ from inary.actionsapi import cmaketools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="eog-3.38.0"
+
 def setup():
     mesontools.meson_configure()
 

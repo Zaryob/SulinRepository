@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>Default text editor for GNOME</Summary>
         <Description>gedit is a small and lightweight text editor for the GNOME environment.</Description>
-        <Archive sha1sum="60f0213d09e443042f8dfb43a71ae646cc4360bd" >http://deb.debian.org/debian/pool/main/g/gedit/gedit_3.36.1.orig.tar.xz</Archive>
+        <Archive sha1sum="222c23791f1b8b10549cea0a6ca0cb2965b23197" >https://download.gnome.org/sources/gedit/3.38/gedit-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
@@ -82,6 +82,14 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>Bağımlılık hatası düzelttim</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+      
         <Update release="2">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>

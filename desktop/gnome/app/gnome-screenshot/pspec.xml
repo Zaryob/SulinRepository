@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>Screenshot application for the GNOME desktop</Summary>
         <Description>Gnome-screenshot is default screenshot application for the GNOME desktop.</Description>
-        <Archive sha1sum="680daea28724830c12432492d8c85e41d09ff9bb">http://ftp.gnome.org/pub/gnome/sources/gnome-screenshot/3.36/gnome-screenshot-3.36.0.tar.xz</Archive>
+        <Archive sha1sum="2bf23cda0a5deeda6d3ff70df5c7a45513a19a6d">http://ftp.acc.umu.se/pub/gnome/sources/gnome-screenshot/3.38/gnome-screenshot-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>libcanberra-gtk3-devel</Dependency>
@@ -47,6 +47,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.0</Version>

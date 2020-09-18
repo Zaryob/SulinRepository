@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Gnome tracker library</Summary>
         <Description>Tracker is an efficient search engine and triplestore for desktop, embedded and mobile.</Description>
-        <Archive sha1sum="351ceb9ea160b8e61b750b92589f1b5b361923cb" >https://gitlab.gnome.org/GNOME/tracker-miners/-/archive/2.3.3/tracker-miners-2.3.3.tar.gz</Archive>
+        <Archive sha1sum="64cc580d0a30f87e28d703e3f5c589b78151cf99" >https://gitlab.gnome.org/GNOME/tracker-miners/-/archive/3.0.0/tracker-miners-3.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>json-glib-devel</Dependency>
             <Dependency>libseccomp-devel</Dependency>
@@ -42,6 +42,13 @@
     </Package>
 
     <History>
+       <Update release="3">
+            <Date>2019-09-18</Date>
+            <Version>3.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
        <Update release="2">
             <Date>2019-09-18</Date>
             <Version>2.3.3</Version>

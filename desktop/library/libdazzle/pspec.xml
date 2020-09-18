@@ -11,7 +11,7 @@
         <IsA>library</IsA>
         <Summary>A GPLv3-based library to delight your users with fancy features.</Summary>
         <Description>A GPLv3-based library to delight your users with fancy features.</Description>
-        <Archive sha1sum="c126d7b0b8280d740e7e3a17e2161bde39c5caca" >https://gitlab.gnome.org/GNOME/libdazzle/-/archive/3.36.0/libdazzle-3.36.0.tar.gz</Archive>
+        <Archive sha1sum="b4c8b12ac2bd9291e45ded9585ab5a481aacbb5c" >https://gitlab.gnome.org/GNOME/libdazzle/-/archive/3.38.0/libdazzle-3.38.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
@@ -73,6 +73,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.26.0</Version>

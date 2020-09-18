@@ -8,6 +8,7 @@ from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="vte-0.62.0"
 
 def setup():
     mesontools.meson_configure("-D_systemd=false")
@@ -18,4 +19,3 @@ def build():
 def install():
     mesontools.ninja_install()
 
-    inarytools.dodoc("AUTHORS", "ChangeLog.*","COPYING.*", "NEWS", "README.md")

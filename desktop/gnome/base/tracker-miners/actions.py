@@ -10,7 +10,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("-Dminer_rss=false")
+    mesontools.meson_configure("-Dminer_rss=false -Dsystemd_user_services=false -Ddocbook=false -Dman=false")
 
 def build():
     mesontools.ninja_build()

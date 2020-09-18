@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Gnome tracker library</Summary>
         <Description>Tracker is the file indexing and search provider used in the GNOME desktop environment. </Description>
-        <Archive sha1sum="eb881dd305e24e51eac8644ba7262bd2f1dc9cbc" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/tracker/2.2/tracker-2.2.2.tar.xz</Archive>
+        <Archive sha1sum="46f0413a016390e60dbe314df7d4f568dec9898f">https://download.gnome.org/sources/tracker/3.0/tracker-3.0.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>json-glib-devel</Dependency>
             <Dependency>libseccomp-devel</Dependency>
@@ -56,6 +56,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-09-18</Date>
+            <Version>3.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-18</Date>
             <Version>2.2.2</Version>

@@ -13,7 +13,7 @@
         <Description>gnome-session manages X11-compliant sessions with ConsoleKit daemon and starts GNOME core services</Description>
         <!-- Gentoo patched-->
         <!--Archive sha1sum="b9c0edfdec5ccc971bb1281717145272d9655ab0">https://gitlab.gnome.org/Community/gentoo/gnome-session/-/archive/3.32.0/gnome-session-3.32.0.tar.gz</Archive-->
-        <Archive sha1sum="dcdecdd85a40894408aa36eceb13ea9b256dd208">http://ftp.gnome.org/pub/gnome/sources/gnome-session/3.36/gnome-session-3.36.0.tar.xz</Archive>
+        <Archive sha1sum="2e367bad7e2a483f3adda2f5b09cc03209700332">http://ftp.acc.umu.se/pub/gnome/sources/gnome-session/3.38/gnome-session-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
@@ -80,6 +80,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-18</Date>
             <Version>3.36.2</Version>

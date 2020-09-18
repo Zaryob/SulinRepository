@@ -10,7 +10,8 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("")
+    mesontools.meson_configure("-Ddocs=false \
+		-Dsystemd_user_services=false -Dman=false")
 
 def build():
     mesontools.ninja_build()

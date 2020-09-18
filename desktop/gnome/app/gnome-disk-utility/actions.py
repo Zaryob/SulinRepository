@@ -11,7 +11,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure("-Dlogind=libelogind")
+    mesontools.meson_configure("-Dlogind=libelogind -Ddocbook=false -Dman=false")
 
 def build():
     mesontools.ninja_build()

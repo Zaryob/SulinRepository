@@ -11,7 +11,7 @@
         <IsA>service</IsA>
         <Summary>System settings daemon for GNOME desktop</Summary>
         <Description>gnome-settings-daemon shares GNOME specific settings with other applications via DBus connection.</Description>
-        <Archive sha1sum="59668ceac43f847f38aad4bac1b55fdf066dea18" >http://ftp.acc.umu.se/pub/gnome/sources/gnome-settings-daemon/3.36/gnome-settings-daemon-3.36.1.tar.xz</Archive>
+        <Archive sha1sum="0571e796834bb4293ddb8aab7bd6e6e12b63e536" >http://ftp.acc.umu.se/pub/gnome/sources/gnome-settings-daemon/3.38/gnome-settings-daemon-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>nss-devel</Dependency>
             <Dependency>nspr-devel</Dependency>
@@ -26,6 +26,7 @@
             <Dependency>libxklavier-devel</Dependency>
             <Dependency>gnome-desktop-devel</Dependency>
             <Dependency>gnome-common</Dependency>
+            <Dependency>geoclue-devel</Dependency>
             <Dependency>libwacom-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -85,6 +86,13 @@
     </Package>
 
     <History>
+       <Update release="3">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>Update</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
        <Update release="2">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>

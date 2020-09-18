@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>calcutalor application for the GNOME desktop</Summary>
         <Description>Gnome-calcutalor is default calcutalor application for the GNOME desktop.</Description>
-        <Archive sha1sum="5584421113b89e6f965649f3b3f8a529dc222e6b">http://ftp.gnome.org/pub/gnome/sources/gnome-calculator/3.36/gnome-calculator-3.36.0.tar.xz</Archive>
+        <Archive sha1sum="bbb523bd945c7c9401134892dbfa1e9ac41dd90e">http://ftp.acc.umu.se/pub/gnome/sources/gnome-calculator/3.38/gnome-calculator-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.0</Version>

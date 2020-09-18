@@ -38,7 +38,7 @@
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
         </BuildDependencies>
-    </Source>
+      </Source>
 
     <Package>
         <Name>gala</Name>

@@ -11,7 +11,7 @@
         <IsA>data</IsA>
         <Summary>Adwaita icon theme</Summary>
         <Description>icon-theme-adwaita package contains the default icon theme used by the GNOME desktop.</Description>
-        <Archive sha1sum="af31f39f0a8e3a2ea55d606cd03b2924d004836e">http://ftp.gnome.org/pub/gnome/sources/adwaita-icon-theme/3.36/adwaita-icon-theme-3.36.0.tar.xz</Archive>
+        <Archive sha1sum="64a4c9b75a2264ff301e48cfb29e675ee6a9164e">http://ftp.acc.umu.se/pub/gnome/sources/adwaita-icon-theme/3.38/adwaita-icon-theme-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>icon-naming-utils</Dependency>
         </BuildDependencies>
@@ -28,6 +28,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.0</Version>

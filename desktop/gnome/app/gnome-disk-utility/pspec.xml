@@ -11,7 +11,7 @@
         <IsA>data</IsA>
         <Summary>Disk Utility for GNOME using devicekit-disks</Summary>
         <Description>gnome-disk-utility is a disk utility for GNOME using devicekit-disks.</Description>
-        <Archive sha1sum="7e4a4bfc7f48abca5beb653e90e8ca8f3cd7e72b">https://download.gnome.org/sources/gnome-disk-utility/3.36/gnome-disk-utility-3.36.1.tar.xz</Archive>
+        <Archive sha1sum="e48f733a417becb28cbe2d242ea3c09f79445ab3">https://download.gnome.org/sources/gnome-disk-utility/3.38/gnome-disk-utility-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>udisks</Dependency>
@@ -75,7 +75,14 @@
     </Package>
 
     <History>
-        <Update release="1">
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+             <Update release="1">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>
             <Comment>First release</Comment>

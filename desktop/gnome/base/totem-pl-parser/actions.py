@@ -6,6 +6,8 @@
 
 from inary.actionsapi import mesontools
 
+WorkDir="totem-pl-parser-V_3_26_5"
+
 def setup():
     mesontools.meson_configure()
 

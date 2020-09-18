@@ -13,7 +13,9 @@ from inary.actionsapi import get
 
 def setup():
     #folce-elogind iş başında olacak. o yüzden systemd açık bırakıyoz. yoksa derlenmiyo
-    mesontools.meson_configure("-Dsystemd=true -Dsystemd_journal=false")
+    mesontools.meson_configure("-Dsystemd=false -Dsystemd_session=disable \
+    -Dsystemd_journal=false -Dman=false -Ddocbook=false\
+    -Dinstall_dir={}".format(get.installDIR()))
 
 def build():
     mesontools.ninja_build()

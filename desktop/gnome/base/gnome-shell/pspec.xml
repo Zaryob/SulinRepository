@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>GNOME Shell is the defining technology of the GNOME 3 user experience</Summary>
         <Description>GNOME Shell is the defining technology of the GNOME 3 user experience. It provides core interface functions like switching to windows and launching applications.</Description>
-        <Archive sha1sum="21e02f5fba5a051018f3d1dc7500259c6d4b779b" >https://download.gnome.org/sources/gnome-shell/3.36/gnome-shell-3.36.1.tar.xz</Archive>
+        <Archive sha1sum="04171979bfed4ae6ecb4345732d8a385afce664e" >https://download.gnome.org/sources/gnome-shell/3.38/gnome-shell-3.38.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>mutter-devel</Dependency>
@@ -37,9 +37,11 @@
             <Dependency>gnome-autoar-devel</Dependency>
             <Dependency>upower-devel</Dependency>
             <Dependency>asciidoc</Dependency>
+            <Dependency>libsass-devel</Dependency>
+            <Dependency>sassc</Dependency>
         </BuildDependencies>
     </Source>
-
+<Dependency>libsass-devel</Dependency>
     <Package>
         <Name>gnome-shell</Name>
         <RuntimeDependencies>
@@ -74,6 +76,8 @@
             <Dependency>mesa</Dependency>
             <Dependency>ibus</Dependency>
             <Dependency>hyphen</Dependency>
+            <Dependency>libsass</Dependency>
+            <Dependency>sassc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -102,6 +106,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-09-18</Date>
+            <Version>3.38.0</Version>
+            <Comment>Update</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2019-09-18</Date>
             <Version>3.36.1</Version>
