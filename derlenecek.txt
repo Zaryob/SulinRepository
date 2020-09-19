@@ -1,4 +1,2 @@
 epiphany -> webkit2gtk
-debian # debiana gelmemiş :D
-gnome-builder -> glib2 -> libdbus # libdbus hatalı paketlenmiş
 gnome-terminal -> libxslt # bu hiç çalışmıyo

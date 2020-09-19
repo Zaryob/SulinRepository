@@ -10,13 +10,18 @@ from inary.actionsapi import shelltools
 from inary.actionsapi import get
 
 
+if get.buildTYPE()=="emul32":
+    shelltools.export("CC", "gcc -m32")
+    shelltools.export("CXX", "g++ -m32")
+    shelltools.export("LDFLAGS","-m32")
+    shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+    
+
 def setup():
     shelltools.export("CFLAGS", "{} -DG_DISABLE_CAST_CHECKS".format(get.CFLAGS()))
-    options="-Dselinux=disabled -Dman=true"
+    options="-Dselinux=disabled -Dman=false -Ddoc=false -Dinternal_pcre=true\
+            "
     if get.buildTYPE()=="emul32":
-        shelltools.export("CC", "gcc -m32")
-        shelltools.export("CXX", "g++ -m32")
-        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
         shelltools.system("patch -p1 < multilib.patch")
     mesontools.meson_configure(options)
 

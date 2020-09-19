@@ -41,6 +41,10 @@ def setup():
 
 
     if get.buildTYPE() == "emul32":
+        shelltools.export("CC", "gcc -m32")
+        shelltools.export("CXX", "g++ -m32")
+        shelltools.export("LDFLAGS","-m32")
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
         options += "\
                     --libdir=/usr/lib32 \
                     --disable-doxygen-docs"
