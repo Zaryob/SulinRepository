@@ -20,6 +20,9 @@
             <Dependency>python-libxml2</Dependency>
             <Dependency>python3-libxml2</Dependency>
         </BuildDependencies>
+      <Patches>
+        <Patch>0002-Fix-manpage.patch</Patch>
+      </Patches>
     </Source>
 
     <Package>

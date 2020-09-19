@@ -9,12 +9,18 @@ from inary.actionsapi import autotools
 from inary.actionsapi import shelltools
 from inary.actionsapi import inarytools
 
+if get.buildTYPE() == "emul32":
+    shelltools.export("CC", "gcc -m32")
+    shelltools.export("CXX", "g++ -m32")
+    shelltools.export("LDFLAGS","-m32")
+    shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+    
 def setup():
+    shelltools.system("sed -i s/3000/5000/ libxslt/transform.c doc/xsltproc.{1,xml}")
+    shelltools.system("sed -e 's@http://cdn.docbook.org/release/xsl@https://cdn.docbook.org/release/xsl-nons@' \
+    -e 's@\$Date\$@31 October 2019@' -i doc/xsltproc.xml")
     config_opt="--disable-static --without-threads"
-    if get.buildTYPE() == "emul32":
-        shelltools.export("CC","gcc -m32")
-        shelltools.export("CXX","g++ -m32")
-        shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
+    if get.buildTYPE() == "emul32":    
         config_opt+=" --without-python"
     else:
         if get.buildTYPE()=="rebuild_python":
@@ -27,10 +33,7 @@ def setup():
     autotools.configure(config_opt)
 
 def build():
-    if get.buildTYPE() == "emul32":
-        shelltools.export("CC","gcc -m32")
-        shelltools.export("CXX","g++ -m32")
-        shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
+    
     autotools.make()
 
 #def check():
