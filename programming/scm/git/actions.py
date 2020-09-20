@@ -38,15 +38,17 @@ V                       = 1
 """ % (get.CFLAGS(), get.LDFLAGS(), get.installDIR())
 
 
+shelltools.export("XML_CATALOG_FILES","/etc/xml/catalog")
+
 def setup():
     shelltools.echo("config.mak", config)
 
 def build():
     inarytools.dosed("Makefile", "^CC = .*$", "CC = %s" % get.CC())
-    autotools.make("all doc")
+    autotools.make("all")
 
 def install():
-    autotools.rawInstall("DESTDIR={} install-doc install-html all".format(get.installDIR()))
+    autotools.rawInstall("DESTDIR={} install-html all".format(get.installDIR()))
 
     # Install bash completion
     inarytools.insinto("/etc/bash_completion.d", "contrib/completion/git-completion.bash", "git")

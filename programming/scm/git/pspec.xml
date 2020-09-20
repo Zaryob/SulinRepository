@@ -11,13 +11,14 @@
         <License>GPLv2</License>
         <Summary>Fast Version Control System</Summary>
         <Description>Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.</Description>
-        <Archive sha1sum="fc627f8cb994c60ae6c4580ca514af2a18c464d7" type="tarxz">https://www.kernel.org/pub/software/scm/git/git-2.23.0.tar.xz</Archive>
+        <Archive sha1sum="29a70cd3e7bccbbc4233e9c948b036e0b7b6d46a" >https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.28.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>tcltk-devel</Dependency>
             <Dependency>libpcre2-devel</Dependency>
             <Dependency>xmlto</Dependency>
             <Dependency>asciidoc</Dependency>
             <Dependency>perl-Error</Dependency>
+            <Dependency>libpsl-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,9 +31,10 @@
             <Dependency>perl-Authen-SASL</Dependency>
             <Dependency>perl-libwww</Dependency>
             <Dependency>libpcre2</Dependency>
-            <Dependency version="current">perl-Git</Dependency>
+            <Dependency>perl-Git</Dependency>
             <Dependency>openssh</Dependency>
             <Dependency>rsync</Dependency>
+            <Dependency>libpsl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -63,7 +65,7 @@
         <Summary>GIT protocol daemon</Summary>
         <RuntimeDependencies>
             <Dependency>libpcre2</Dependency>
-            <Dependency version="current">git</Dependency>
+            <Dependency >git</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/conf.d/git-daemon</Path>
@@ -115,7 +117,7 @@
         <IsA>app:console</IsA>
         <Summary>Git tools for importing Subversion repositories</Summary>
         <RuntimeDependencies>
-            <Dependency version="current">git</Dependency>
+            <Dependency>git</Dependency>
             <Dependency>subversion</Dependency>
             <Dependency>perl-Term-ReadKey</Dependency>
         </RuntimeDependencies>
@@ -130,7 +132,7 @@
         <IsA>app:console</IsA>
         <Summary>Git tools for importing CVS repositories</Summary>
         <RuntimeDependencies>
-            <Dependency version="current">git</Dependency>
+            <Dependency >git</Dependency>
             <Dependency>cvs</Dependency>
             <Dependency>cvsps</Dependency>
         </RuntimeDependencies>
@@ -147,7 +149,7 @@
         <IsA>app:gui</IsA>
         <Summary>Git revision tree visualiser</Summary>
         <RuntimeDependencies>
-            <Dependency version="current">git</Dependency>
+            <Dependency >git</Dependency>
             <Dependency>tcltk</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -162,8 +164,8 @@
         <IsA>app:gui</IsA>
         <Summary>Git GUI tool</Summary>
         <RuntimeDependencies>
-            <Dependency version="current">git</Dependency>
-            <Dependency version="current">gitk</Dependency>
+            <Dependency >git</Dependency>
+            <Dependency >gitk</Dependency>
             <Dependency>tcltk</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -181,7 +183,7 @@
         <PartOf>server.web</PartOf>
         <Summary>Simple web interface to GIT repositories</Summary>
         <RuntimeDependencies>
-            <Dependency version="current">git</Dependency>
+            <Dependency >git</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/var/www/localhost</Path>
@@ -196,6 +198,13 @@
     </Package>
 
     <History>
+        <Update release="1">
+            <Date>2019-09-15</Date>
+            <Version>2.28.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-15</Date>
             <Version>2.23.0</Version>

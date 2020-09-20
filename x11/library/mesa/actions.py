@@ -50,11 +50,16 @@ def setup():
     -D lmsensors=true \
     -D osmesa=gallium \
     -D shared-glapi=true \
-    -D valgrind=false"
+    -D valgrind=false \
+    -D zstd=false"
+    
 
     if get.buildTYPE() == "emul32":
+        shelltools.export("CC","gcc -m32")
+        shelltools.export("CXX","g++ -m32")
+        shelltools.export("LDFLAGS","-m32")
         shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
-        options += " --libdir=/usr/lib32 --native-file crossfile.ini "
+        options += " --libdir=/usr/lib32 --native-file crossfile.ini"
     else:
         shelltools.export("PKG_CONFIG_PATH","/usr/lib/pkgconfig")
         options += " --libdir=/usr/lib"
