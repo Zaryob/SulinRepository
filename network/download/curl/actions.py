@@ -51,8 +51,8 @@ def setup():
 
 def build():
     if get.buildTYPE() == "emul32":
-        shelltools.export("CFLAGS","-m32")
-        shelltools.export("CXXFLAGS","-m32")
+        shelltools.export("CC","gcc -m32")
+        shelltools.export("CXX","g++ -m32")
         shelltools.export("LDFLAGS","-m32")
     autotools.make()
 

@@ -10,6 +10,11 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
 WorkDir = "."
+if get.buildTYPE() == "_emul32":
+        shelltools.export("CC","gcc -m32")
+        shelltools.export("CXX","g++ -m32")
+        shelltools.export("LDFLAGS","-m32")
+        shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
 WORKDIR = "%s/%s-%s" % (get.workDIR(), get.srcNAME(), get.srcVERSION())
 NCURSES = "ncurses-build"
 NCURSESW = "ncursesw-build"
@@ -26,9 +31,6 @@ def setup():
     global CONFIGPARAMS
 
     if get.buildTYPE() == "_emul32":
-        shelltools.export("CFLAGS","-m32")
-        shelltools.export("CXXFLAGS","-m32")
-        shelltools.export("LDFLAGS","-m32")
         shelltools.export("PKG_CONFIG_LIBDIR", "/usr/lib32/pkgconfig")
         inarytools.dosed("%s/misc/gen-pkgconfig.in" % WORKDIR, "^(show_prefix=).*", "\\1'/usr'")
         CONFIGPARAMS += " --prefix=/_emul32 \
