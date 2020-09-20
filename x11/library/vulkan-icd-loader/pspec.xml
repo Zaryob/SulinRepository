@@ -31,6 +31,13 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
+      <Package>
+        <Name>vulkan-icd-loader-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>vulkan-icd-loader-devel</Name>
         <Summary>Development files for vulkan-icd-loader</Summary>
