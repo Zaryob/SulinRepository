@@ -26,8 +26,9 @@ def setup():
     global CONFIGPARAMS
 
     if get.buildTYPE() == "_emul32":
-        inarytools.flags.add("-m32")
-        inarytools.ldflags.add("-m32")
+        shelltools.export("CFLAGS","-m32")
+        shelltools.export("CXXFLAGS","-m32")
+        shelltools.export("LDFLAGS","-m32")
         shelltools.export("PKG_CONFIG_LIBDIR", "/usr/lib32/pkgconfig")
         inarytools.dosed("%s/misc/gen-pkgconfig.in" % WORKDIR, "^(show_prefix=).*", "\\1'/usr'")
         CONFIGPARAMS += " --prefix=/_emul32 \
@@ -64,7 +65,7 @@ def install():
     for lib in ["ncurses", "form", "panel", "menu"]:
         shelltools.echo("lib%s.so" % lib, "INPUT(-l%sw)" % lib)
         inarytools.dolib("lib%s.so" % lib, destinationDirectory = LIB)
-        inarytools.dosym("lib%sw.a" % lib, "%s/lib%s.a" % (LIB, lib))
+        #inarytools.dosym("lib%sw.a" % lib, "%s/lib%s.a" % (LIB, lib))
     inarytools.dosym("libncurses++w.a", "%s/libncurses++.a" % LIB)
 
     shelltools.copy("%s/usr/share/pkgconfig/" % get.installDIR(), "%s/%s" % (get.installDIR(), LIB))
@@ -72,18 +73,18 @@ def install():
         inarytools.dosym("%sw.pc" % lib, "%s/pkgconfig/%s.pc" % (LIB, lib))
 
     shelltools.echo("libcursesw.so", "INPUT(-lncursesw)")
-    inarytools.dolib("libcursesw.so", destinationDirectory = LIB)
-    inarytools.dosym("libncurses.so", "%s/libcurses.so" % LIB)
-    inarytools.dosym("libncursesw.a", "%s/libcursesw.a" % LIB)
-    inarytools.dosym("libncurses.a", "%s/libcurses.a" % LIB)
+    #inarytools.dolib("libcursesw.so", destinationDirectory = LIB)
+    #inarytools.dosym("libncurses.so", "%s/libcurses.so" % LIB)
+    #inarytools.dosym("libncursesw.a", "%s/libcursesw.a" % LIB)
+    #inarytools.dosym("libncurses.a", "%s/libcurses.a" % LIB)
 
     #for fix
-    inarytools.dosym("libncursesw.so.6.1", "%s/libncursesw.so.5" % LIB)
-    inarytools.dosym("libncurses.so.6.1", "%s/libncurses.so.5" % LIB)
-    inarytools.dosym("libncurses.so.6.1", "%s/libtinfo.so.5" % LIB)
-    inarytools.dosym("libpanelw.so.6.1", "%s/libpanelw.so.5" % LIB)
-    inarytools.dosym("libformw.so.6.1", "%s/libformw.so.5" % LIB)
-    inarytools.dosym("libmenuw.so.6.1", "%s/libmenuw.so.5" % LIB)
+    inarytools.dosym("libncursesw.so.6.2", "%s/libncursesw.so.5" % LIB)
+    inarytools.dosym("libncurses.so.6.2", "%s/libncurses.so.5" % LIB)
+    inarytools.dosym("libncurses.so.6.2", "%s/libtinfo.so.5" % LIB)
+    inarytools.dosym("libpanelw.so.6.2", "%s/libpanelw.so.5" % LIB)
+    inarytools.dosym("libformw.so.6.2", "%s/libformw.so.5" % LIB)
+    inarytools.dosym("libmenuw.so.6.2", "%s/libmenuw.so.5" % LIB)
 
     shelltools.cd("../%s" % NCURSES)
     for lib in ["ncurses", "form", "panel", "menu"]:
