@@ -13,7 +13,7 @@
         <IsA>service</IsA>
         <Summary>Linux Infrared Remote Control system</Summary>
         <Description>lirc is a package that allows you to decode and send infra-red signals of many (but not all) commonly used remote controls.</Description>
-        <Archive sha1sum="9d6f6d18ac566a96ef4ca1d6909a4e8bc517d48a" type="tarbz2">https://sourceforge.net/projects/lirc/files/LIRC/0.10.1/lirc-0.10.1.tar.bz2</Archive>
+        <Archive sha1sum="9d6f6d18ac566a96ef4ca1d6909a4e8bc517d48a" type="tarbz2">https://master.dl.sourceforge.net/project/lirc/LIRC/0.10.1/lirc-0.10.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>alsa-lib-devel</Dependency>
             <Dependency>libftdi-devel</Dependency>
@@ -40,7 +40,7 @@
             <Path fileType="man">/usr/share/man/man5</Path>
             <Path fileType="man">/usr/share/man/man8</Path>
             <Path fileType="data">/usr/share/lirc</Path>
-            <Path fileType="data">/run</Path>
+            <Path fileType="data">/var</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/etc/conf.d/lircmd">lircmd.confd</AdditionalFile>

@@ -20,6 +20,9 @@
             <Dependency>perl</Dependency>
             <Dependency>ncurses</Dependency>
         </BuildDependencies>
+      <Patches>
+        <Patch>0012-gcc-10.patch</Patch>
+      </Patches>
     </Source>
     <Package>
         <Name>openrc</Name>
@@ -29,6 +32,7 @@
             <Dependency>ncurses</Dependency>
             <Dependency>sysvinit</Dependency>
             <Dependency>elogind</Dependency>
+            <Dependency>openrc-tmpfiles</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

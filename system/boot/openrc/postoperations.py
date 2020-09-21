@@ -17,6 +17,8 @@ def postInstall():
         os.system("rc-update add busybox-ntpd default")
         os.system("rc-update add busybox-syslogd default")
         os.system("rc-update add busybox-watchdog default")
+        os.system("rc-update add opentmpfiles-dev default nonetwork")
+        os.system("rc-update add opentmpfiles-setup default nonetwork")
     except: pass
 
 

@@ -31,9 +31,5 @@ def build():
 
 def install():
     autotools.install("DESTDIR=%s %s" % (get.installDIR(),args))
-    shelltools.unlink("{}/sbin/rc-sstat".format(get.installDIR()))
-    shelltools.unlink("{}/etc/init.d/functions.sh".format(get.installDIR()))
-    inarytools.dosym("../../usr/lib/openrc/sh/functions.sh", "/etc/init.d/functions.sh")
-    inarytools.dosym("../usr/lib/openrc/bin/rc-sstat","/sbin/rc-sstat")
-
+    
     inarytools.dodoc("LICENSE*", "*guide.*", "AUTHORS", "ChangeLog", "README.*")

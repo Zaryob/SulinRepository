@@ -11,13 +11,12 @@
         <License>OPENLDAP</License>
         <Summary>Open-source suite of LDAP applications and development tools</Summary>
         <Description>OpenLDAP is an open-source suite of LDAP (Lightweight Directory Access Protocol) applications and development tools</Description>
-        <Archive sha1sum="82f576e0d0d334e9e798d9de8936683546247bb9" type="targz">ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/openldap-2.4.50.tgz</Archive>
+        <Archive sha1sum="9a03db5cc02fd8b0afc5bf11fb10f7cd5260bcf0">https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.4.53.tgz</Archive>
         <BuildDependencies>
             <Dependency>nss-devel</Dependency>
             <Dependency>cyrus-sasl-devel</Dependency>
             <Dependency>icu4c-devel</Dependency>
             <Dependency>unixODBC-devel</Dependency>
-            <Dependency>mariadb-bin-server</Dependency>
         </BuildDependencies>
 
     </Source>
@@ -30,7 +29,6 @@
         <RuntimeDependencies>
             <Dependency>nss</Dependency>
             <Dependency>cyrus-sasl</Dependency>
-            <Dependency>mariadb-bin-client</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/openldap/ldap.conf*</Path>
@@ -97,6 +95,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-06-21</Date>
+            <Version>2.4.53</Version>
+            <Comment>Update</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2020-06-21</Date>
             <Version>2.4.50</Version>

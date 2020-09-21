@@ -34,6 +34,9 @@
             <Path fileType="data">/usr/share</Path>
            <Path fileType="header">/usr/include/</Path>
         </Files>
+       <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/init.d/opentmpfils-setup">opentmpfiles-setup</AdditionalFile>
+         </AdditionalFiles>
     </Package>
 
     <History>

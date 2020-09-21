@@ -11,7 +11,7 @@ from inary.actionsapi import get
 #WorkDir = "lirc-%s" % get.srcVERSION().replace("_", "-")
 
 def setup():
-    autotools.configure("--localstatedir=/run \
+    autotools.configure("--localstatedir=/var \
                          --enable-sandboxed \
                          --with-systemdsystemunitdir=no \
                          --enable-shared \
@@ -32,9 +32,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     inarytools.dobin("contrib/irman2lirc")
 
-    # needed for lircd pid
-    inarytools.dodir("/run/lirc")
-
+    
     # example configs
     inarytools.insinto("/etc", "contrib/lircd.conf", "lircd.conf")
     inarytools.insinto("/etc", "contrib/lircmd.conf", "lircmd.conf")
@@ -44,4 +42,5 @@ def install():
 
     inarytools.insinto("/%s/lirc/contrib" % get.docDIR(), "contrib/*")
     inarytools.insinto("/lib/udev/rules.d", "contrib/*.rules", "60-lirc.rules")
+    inarytools.remove("/var/run/lirc")
 
