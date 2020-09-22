@@ -12,7 +12,8 @@ from inary.actionsapi import shelltools
 shelltools.export("ALT_PARALLEL_COMPILE_JOBS", get.makeJOBS())
 shelltools.export("HOTSPOT_BUILD_JOBS", get.makeJOBS())
 shelltools.export("LC_ALL", "C")
-shelltools.export("CFLAGS","-Wno-error=deprecated-declarations -Wno-error=stringop-overflow= -Wno-error=return-type -Wno-error=cpp -fno-lifetime-dse -fno-delete-null-pointer-checks")
+shelltools.export("CFLAGS","-Wno-error -fno-lifetime-dse -fno-delete-null-pointer-checks")
+shelltools.export("LDFLAGS","--allow-multiple-definition -Wl")
 
 def setup():
     shelltools.export("CC", "gcc")
@@ -118,3 +119,4 @@ def install():
 
     #seems we need to add this symlink into ca-certificates-java package ?
     inarytools.dosym("/etc/ssl/certs/java/cacerts", "%s/jre/lib/security/cacerts" % jvmdir)
+
