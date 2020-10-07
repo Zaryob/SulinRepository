@@ -52,11 +52,9 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
-
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/etc/lightdm/Xsession">Xsession</AdditionalFile>
         </AdditionalFiles>
-
     </Package>
 
 

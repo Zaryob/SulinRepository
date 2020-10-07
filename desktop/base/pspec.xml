@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>desktop-base</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/desktop-base</Homepage>
+        <Packager>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Sulinos desktop base</Summary>
+        <Description>Sulinos desktop base files and settings</Description>
+        <Archive sha1sum="b63e42ab52d4a0072fbf10380c97c5b46b1cb4cb">https://gitlab.com/sulinos/devel/desktop-base/-/archive/1.0/desktop-base-1.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>desktop-base</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="library">/usr/lib/</Path>
+            <Path fileType="library">/usr/libexec/</Path>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <RuntimeDependencies>
+            <!--audio-->
+            <Dependency>alsa-utils</Dependency>
+            <Dependency>alsa-firmware</Dependency>
+            <Dependency>pavucontrol</Dependency>
+            <!--image-->
+            <Dependency>librsvg</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libpng12</Dependency>
+            <!--gtk-->
+            <Dependency>gtk3</Dependency>
+            <Dependency>python3-pygobject3</Dependency>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>wxGTK30</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>libglademm</Dependency>
+            <Dependency>libhandy-1</Dependency>
+            <Dependency>libhandy</Dependency>
+            <!--gnome parts-->
+            <Dependency>gnome-themes-extra</Dependency>
+            <Dependency>network-manager-applet</Dependency>
+            <Dependency>icon-theme-adwaita</Dependency>
+            <!--forts-->
+            <Dependency>dejavu-fonts</Dependency>
+            <Dependency>noto-fonts</Dependency>
+            <!--dm-->
+            <Dependency>lightdm</Dependency>
+            <Dependency>lightdm-gtk-greeter</Dependency>
+            <Dependency>dm-service</Dependency>
+            <!--misc-->
+            <Dependency>tumbler</Dependency>
+            <Dependency>zenity</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>pavucontrol</Dependency>
+            <Dependency>feh</Dependency>
+        </RuntimeDependencies>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-10</Date>
+            <Version>1.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

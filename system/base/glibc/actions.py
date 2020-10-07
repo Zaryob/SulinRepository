@@ -126,5 +126,14 @@ def install():
             #inarytools.remove("/usr/sbin/%s" % i)
 
     shelltools.cd("..")
+    #remove unused locale
+    for l in ["ku","hy"]:
+        shelltools.system("rm -rf {}/usr/lib/locale/{}_*".format(get.installDIR(),l))
+        shelltools.system("rm -rf {}/usr/share/locale/{}*".format(get.installDIR(),l))
+        shelltools.system("rm -rf {}/usr/share/i18n/locales/{}_*".format(get.installDIR(),l))
+    #clean
+    if shelltools.isFile("%s/usr/lib/locale/locale-archive" % get.installDIR()):
+        inarytools.remove("/usr/lib/locale/locale-archive")
+
     inarytools.dodoc("NEWS", "README*", "LICENSES")
 
