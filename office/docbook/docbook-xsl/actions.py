@@ -20,3 +20,5 @@ def install():
     shelltools.system("install -dm755 {}/etc/xml || return 1".format(get.installDIR()))
     shelltools.system("install -v -m644 -D README  {}/usr/share/xml/docbook/xsl-stylesheets-{}/README.txt".format(get.installDIR(),ver))
     shelltools.system("install -v -m644    RELEASE-NOTES* NEWS*  {}/usr/share/xml/docbook/xsl-stylesheets-{}".format(get.installDIR(),ver))
+    shelltools.system("ln -s xsl-stylesheets-{1} {0}/usr/share/xml/docbook/xsl-stylesheets".format(get.installDIR(),ver))
+    shelltools.system("ln -s xsl-stylesheets-{1} {0}/usr/share/xml/docbook/xsl-stylesheets--nons".format(get.installDIR(),ver))
