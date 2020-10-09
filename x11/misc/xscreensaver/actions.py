@@ -11,32 +11,14 @@ from inary.actionsapi import get
 
 def setup():
     autotools.autoconf()
-    autotools.configure("--enable-locking \
-                         --disable-root-passwd \
-                         --with-x-app-defaults=/usr/share/X11/app-defaults \
-                         --with-dpms-ext \
-                         --with-xinerama-ext \
-                         --with-xf86vmode-ext \
-                         --with-xf86gamma-ext \
-                         --with-randr-ext \
-                         --with-proc-interrupts \
-                         --with-pam \
-                         --without-kerberos \
-                         --without-shadow \
-                         --without-passwd-helper \
-                         --without-login-manager \
-                         --with-gtk \
-                         --without-motif \
-                         --with-gl \
-                         --with-gle \
-                         --without-pixbuf \
-                         --with-xpm \
-                         --with-jpeg \
-                         --with-xshm-ext \
-                         --with-xdbe-ext \
-                         --without-readdisplay \
-                         --with-browser=xdg-open \
-                         --without-setuid-hacks")
+    autotools.configure("--with-x-app-defaults=/usr/share/X11/app-defaults \
+    --with-pam \
+    --with-login-manager \
+    --with-gtk \
+    --with-gl \
+    --without-gle \
+    --with-pixbuf \
+    --with-jpeg")
 
 def build():
     autotools.make()
@@ -45,8 +27,10 @@ def install():
     inarytools.dodir("/etc/pam.d")
 
     autotools.rawInstall("install_prefix=%s" % get.installDIR())
+    f=open("{}//etc/pam.d/xscreensaver".format(get.installDIR()),"w")
+    f.write("# Begin /etc/pam.d/xscreensaver\n")
+    f.write("auth    include system-auth\n")
+    f.write("account include system-account\n")
+    f.write("# End /etc/pam.d/xscreensaver\n")
+    f.close()
 
-    # Remove webcollage its pr0n enabled
-    inarytools.remove("/usr/libexec/xscreensaver/webcollage")
-    inarytools.remove("/usr/share/man/man6/webcollage.*")
-    inarytools.remove("/usr/share/xscreensaver/config/webcollage.xml")

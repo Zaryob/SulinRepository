@@ -1,0 +1,46 @@
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>light-locker</Name>
+        <Homepage>http://www.sharpley.org.uk</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Lockscreen using the LightDM framework.</Summary>
+        <Description>Lockscreen using the LightDM framework.</Description>
+        <Archive sha1sum="16120b8599e82e876db0d1a9b7081b9709296060">https://github.com/the-cavalry/light-locker/releases/download/v1.8.0/light-locker-1.8.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>elogind-devel</Dependency>
+            <Dependency>force-elogind</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>light-locker</Name>
+        <RuntimeDependencies>
+            <Dependency>lightdm</Dependency>
+            <Dependency>lightdm-gtk-greeter</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-18</Date>
+            <Version>1.8.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

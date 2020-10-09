@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>SulinOS userplace apps</Summary>
         <Description>Sulin userspace app manager.</Description>
-        <Archive sha1sum="08f2fae80fdd5ebe8b2fb94cc480667942879ae4">https://gitlab.com/sulinos/devel/tekel/-/archive/1.0.1/tekel-1.0.1.tar.gz</Archive>
+        <Archive sha1sum="280ee3ab13edeffffe4eb57dbc9cc4636be6a9fa">https://gitlab.com/sulinos/devel/tekel/-/archive/1.1.1/tekel-1.1.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -23,6 +23,13 @@
     </Package>
 
     <History>
+       <Update release="3">
+            <Date>2020-01-28</Date>
+            <Version>1.1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
        <Update release="2">
             <Date>2020-01-28</Date>
             <Version>1.0.1</Version>

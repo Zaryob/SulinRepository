@@ -11,3 +11,4 @@ from inary.actionsapi import get
 def install():
     autotools.make("gendir DESTDIR=%s" % get.installDIR())
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    

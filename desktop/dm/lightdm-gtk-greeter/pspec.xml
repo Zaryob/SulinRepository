@@ -26,10 +26,6 @@
         <RuntimeDependencies>
             <Dependency>lightdm</Dependency>
             <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxklavier</Dependency>
-            <Dependency>exo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/sbin/lightdm-gtk-greeter</Path>

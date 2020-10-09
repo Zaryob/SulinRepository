@@ -15,7 +15,7 @@ def install():
               "/tmp", "/usr", "/usr/bin","/kernel/modules","/data/app/system",
               "/usr/lib", "/usr/lib32", "/usr/libexec", "/usr/share","/kernel/firmware",
               "/run", "/usr/local", "/usr/local/bin", "/usr/local/lib", "/usr/local/libexec",
-              "/usr/local/lib32","/data/log","/data/lock","/var"}:
+              "/usr/local/lib32","/data/log","/data/lock","/var","/data/srv/www","/usr/src"}:
         inarytools.dodir(i)
 
     autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
@@ -33,6 +33,7 @@ def install():
 #        ->misc         = Is an unused directory
 #        ->tmp          = Temp directory ( linked /tmp )
 #        ->srv          = Served directory
+#            ->www      = Web directory
 #        ->log          = System logs
 #        ->lock         = System locks
 #
@@ -53,6 +54,7 @@ def install():
     inarytools.dosym("../tmp/", "/data/tmp")
     inarytools.dosym("../data", "/data/data")
     inarytools.dosym("../data/log", "/var/log")
+    inarytools.dosym("../data/srv/www", "/var/www")
     inarytools.dosym("../data/lock", "/var/lock")
     inarytools.dosym("../run/media", "/data/media")
 
