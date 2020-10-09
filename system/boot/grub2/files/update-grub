@@ -1,2 +1,2 @@
 #! /bin/sh
-grub-mkconfig -o /boot/grub/grub.cfg
+LANG=C grub-mkconfig -o /boot/grub/grub.cfg

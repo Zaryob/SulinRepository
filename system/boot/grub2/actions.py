@@ -21,6 +21,7 @@ def setup():
         --sbindir=/sbin        \
         --sysconfdir=/etc      \
         --disable-efiemu       \
+        --disable-nls          \
         --with-platform='+platform+'    \
         --disable-werror')
 

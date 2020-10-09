@@ -63,6 +63,13 @@
         </AdditionalFiles>
     </Package>
     <History>
+        <Update release="4">
+            <Date>2020-02-05</Date>
+            <Version>2.04</Version>
+            <Comment>Fixes</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
        <Update release="3">
             <Date>2020-02-05</Date>
             <Version>2.04</Version>
