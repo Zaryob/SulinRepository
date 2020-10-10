@@ -13,6 +13,10 @@
         <Summary>Xfce polkit</Summary>
         <Description>Xfce polkit</Description>
         <Archive sha1sum="a57c36f01e3f30bcc796ca35f05a360d7adb4b2b" >https://github.com/ncopa/xfce-polkit/releases/download/v0.3/xfce-polkit-0.3.tar.gz</Archive>
+        <BuildDependencies>
+          <Dependency>libxfce4ui-devel</Dependency>
+          
+        </BuildDependencies>
     </Source>
 
     <Package>
@@ -30,6 +34,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-14</Date>
+            <Version>0.3.0</Version>
+            <Comment>Only start xfce</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-14</Date>
             <Version>0.3.0</Version>

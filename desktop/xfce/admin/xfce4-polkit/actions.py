@@ -18,4 +18,8 @@ def build():
 
 def install():
     autotools.make("install DESTDIR={}".format(get.installDIR()))
+    #only start with xfce
+    f=open("{}/etc/xdg/autostart/xfce-polkit.desktop".format(get.installDIR()),"a")
+    f.write("OnlyShowIn=XFCE;")
+    f.close()
 

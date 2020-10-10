@@ -6,17 +6,20 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
+from inary.actionsapi import get
 
 def setup():
     autotools.autoreconf("-vif")
-    autotools.configure()
+    autotools.configure("--enable-gtk --enable-buildin-clipboard \
+    --enable-buildin-polkit")
 
 def build():
     autotools.make()
 
 def install():
     autotools.install()
-    inarytools.removeDir("/etc")
-    inarytools.remove("/usr/bin/lxpolkit")
-    inarytools.remove("/usr/share/lxsession/ui/lxpolkit.ui")
+    #lxpolkit only start with lxde
+    f=open("{}/etc/xdg/autostart/lxpolkit.desktop".format(get.installDIR()),"a")
+    f.write("OnlyShowIn=LXDE;")
+    f.close()
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
