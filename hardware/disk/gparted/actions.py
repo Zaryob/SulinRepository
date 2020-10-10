@@ -20,5 +20,7 @@ def build():
     autotools.make()
 
 def install():
-    autotools.install()
+    autotools.make("install DESTDIR={}".format(get.installDIR()))
     shelltools.unlink("{}/usr/share/icons/hicolor/icon-theme.cache".format(get.installDIR()))
+    shelltools.system("install -D -m0644 org.gnome.gparted.policy \
+               {}/usr/share/polkit-1/actions/org.gnome.gparted.policy".format(get.installDIR()))
