@@ -11,8 +11,7 @@ from inary.actionsapi import shelltools
 def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib/xfce4 \
-                         --disable-static \
-                         --disable-debug")
+                         --disable-static")
 
 def build():
     autotools.make()

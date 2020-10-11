@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>A thumbnail service</Summary>
         <Description>Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>
-        <Archive sha1sum="f45f6e7fe1a7c38072bead3b5f18514671a18908" type="tarbz2">http://archive.xfce.org/src/xfce/tumbler/0.2/tumbler-0.2.7.tar.bz2</Archive>
+        <Archive sha1sum="3222d6748c9a249ef3abe94868fabd8542f31dd4">https://archive.xfce.org/src/xfce/tumbler/0.3/tumbler-0.3.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-14</Date>
+            <Version>0.3.0</Version>
+            <Comment>Update</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-14</Date>
             <Version>0.2.7</Version>

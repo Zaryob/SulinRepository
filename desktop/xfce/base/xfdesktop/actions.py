@@ -12,10 +12,8 @@ def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib \
                          --disable-static \
-                         --enable-gio-unix \
                          --enable-thunarx \
-                         --enable-notifications \
-                         --disable-debug")
+                         --enable-notifications")
 
 def build():
     autotools.make()
@@ -23,4 +21,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS", "README", "TODO")
+    inarytools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS", "TODO")

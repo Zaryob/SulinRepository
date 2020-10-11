@@ -10,14 +10,13 @@ from inary.actionsapi import inarytools
 def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib \
-                         --disable-static \
-                         --disable-debug")
+                         --disable-static")
 
 def build():
     autotools.make()
 
 def install():
     autotools.install()
+    inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
 
-
-    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "TODO")
+    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "TODO")

@@ -17,4 +17,4 @@ def build():
 def install():
     autotools.install()
 
-    inarytools.dodoc("README", "COPYING", "NEWS", "HACKING", "ChangeLog", "AUTHORS")
+    inarytools.dodoc("COPYING", "NEWS", "HACKING", "ChangeLog", "AUTHORS")

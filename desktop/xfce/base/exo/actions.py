@@ -13,9 +13,7 @@ def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib/xfce4 \
                          --disable-static \
-                         --disable-gtk-doc \
-                         --enable-gtk3 \
-                         --disable-debug")
+                         --disable-gtk-doc")
 
 def build():
     autotools.make()
@@ -23,4 +21,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.dodoc("AUTHORS", "COPYING*", "ChangeLog", "NEWS", "README", "THANKS", "TODO")
+    inarytools.dodoc("AUTHORS", "COPYING*", "ChangeLog", "NEWS", "README", "THANKS")

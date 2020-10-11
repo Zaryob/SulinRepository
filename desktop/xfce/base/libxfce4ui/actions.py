@@ -14,7 +14,7 @@ def setup():
                          --libexecdir=/usr/lib \
                          --disable-static \
                          --disable-gtk-doc \
-                         --enable-gladeui \
+                         --enable-gladeui2 \
                          --enable-debug \
                          --with-vendor-info='Sulin'")
 

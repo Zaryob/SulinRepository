@@ -8,6 +8,8 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="thunar-4.15.2"
+
 def setup():
     autotools.configure("--enable-gio-unix \
                          --enable-dbus \
@@ -16,7 +18,6 @@ def setup():
                          --enable-notifications \
                          --enable-exif \
                          --enable-pcre \
-                         --enable-gtk-doc \
                          --enable-debug")
 
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
@@ -27,4 +28,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "FAQ", "HACKING", "NEWS", "README", "THANKS", "TODO")
+    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "FAQ", "HACKING", "NEWS", "THANKS", "TODO")

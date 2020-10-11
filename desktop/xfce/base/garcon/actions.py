@@ -12,8 +12,7 @@ from inary.actionsapi import get
 def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib \
-                         --disable-static \
-                         --disable-debug")
+                         --disable-static ")
 
 def build():
     autotools.make()
@@ -21,4 +20,4 @@ def build():
 def install():
     autotools.install()
 
-    inarytools.dodoc('AUTHORS', 'ChangeLog', 'COPYING', 'HACKING', 'NEWS', 'README', 'STATUS', 'THANKS', 'TODO')
+    inarytools.dodoc('AUTHORS', 'ChangeLog', 'COPYING', 'HACKING', 'NEWS', 'STATUS', 'THANKS', 'TODO')

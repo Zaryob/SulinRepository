@@ -12,15 +12,16 @@ def setup():
     autotools.configure("--prefix=/usr \
                          --sbindir=/usr/bin \
                          --libexecdir=/usr/lib \
-                         --disable-network-manager \
                          --enable-polkit \
-                         --enable-dpms \
-                         --disable-debug")
+                         --enable-dpms")
 
 def build():
     autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    f=open("{}/etc/xdg/autostart/xfce4-power-manager.desktop".format(get.installDIR()),"a")
+    f.write("OnlyShowIn=XFCE;")
+    f.close()
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "TODO")

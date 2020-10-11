@@ -12,7 +12,6 @@ def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib/xfce4 \
                          --disable-static \
-                         --disable-debug \
                          --disable-gstreamer-thumbnailer")
 
     inarytools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")

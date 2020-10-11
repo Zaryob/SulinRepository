@@ -14,14 +14,18 @@ def setup():
                          --enable-xcursor \
                          --enable-libnotify \
                          --enable-libxklavier \
+                         --enable-xorg-libinput \
+                         --enable-colord \
                          --enable-pluggable-dialogs \
-                         --enable-sound-settings \
-                         --disable-debug")
+                         --enable-sound-settings")
 
 def build():
     autotools.make()
 
 def install():
     autotools.install()
-
+    # fix conflict with exo
+    inarytools.removeDir("/usr/share/xfce4/helpers/")
+    inarytools.remove("/etc/xdg/xfce4/helpers.rc")
+    inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "TODO")

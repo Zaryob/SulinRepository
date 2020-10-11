@@ -6,16 +6,13 @@
 
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
-from inary.actionsapi import perlmodules
 from inary.actionsapi import get
 
 def setup():
     autotools.configure('--prefix=/usr \
                         --libexecdir=/usr/lib/xfce4 \
                         --disable-static \
-                        --disable-gtk-doc \
-                        --with-perl-options=INSTALLDIRS="vendor" \
-                        --disable-debug')
+                        --disable-gsettings-backend')
 
     inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
     inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
@@ -26,8 +23,12 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    try:
+        inarytools.dosym("libxfconf-0.so.3.0.0","/usr/lib/libxfconf-0.so.3")
+        inarytools.dosym("libxfconf-0.so.3.0.0","/usr/lib/libxfconf-0.so")
+    except Exception:
+        print()
+        
     
     inarytools.dodoc('AUTHORS', 'ChangeLog', 'NEWS', 'README', 'TODO', 'COPYING')
 
-    # remove unneeded files
-    perlmodules.removePodfiles()

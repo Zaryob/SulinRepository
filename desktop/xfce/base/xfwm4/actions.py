@@ -16,8 +16,7 @@ def setup():
                          --enable-startup-notification \
                          --enable-randr \
                          --enable-compositor \
-                         --enable-xsync \
-                         --disable-debug")
+                         --enable-xsync")
 
 def build():
     autotools.make()

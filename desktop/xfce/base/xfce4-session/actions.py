@@ -11,8 +11,7 @@ from inary.actionsapi import get
 def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib/xfce4 \
-                         --disable-static \
-                         --disable-debug")
+                         --disable-static")
 
     inarytools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
     inarytools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")

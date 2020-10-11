@@ -12,8 +12,6 @@ def setup():
     autotools.configure("--prefix=/usr \
                          --libexecdir=/usr/lib \
                          --disable-static \
-                         --disable-debug \
-                         --disable-gladeui \
                          --enable-startup-notification")
     
     # for fix unused dependency
@@ -28,3 +26,4 @@ def install():
     #inarytools.removeDir("/etc")
 
     inarytools.dodoc("COPYING*", "NEWS", "README", "TODO", "ChangeLog", "AUTHORS")
+

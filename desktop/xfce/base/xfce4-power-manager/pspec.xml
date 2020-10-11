@@ -13,7 +13,7 @@
         <Summary>A power manager for the Xfce desktop</Summary>
         <Description>This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption.
 (such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
-        <Archive sha1sum="d50e77401b81f5118d4db424546b7b712dd71beb" type="tarbz2">http://archive.xfce.org/src/xfce/xfce4-power-manager/1.6/xfce4-power-manager-1.6.5.tar.bz2</Archive>
+        <Archive sha1sum="b732bf3f39c0a9028df0e1c7bd4510058c618bef" >https://archive.xfce.org/src/xfce/xfce4-power-manager/1.7/xfce4-power-manager-1.7.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>upower-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
@@ -55,6 +55,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-14</Date>
+            <Version>1.7.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-14</Date>
             <Version>1.6.5</Version>

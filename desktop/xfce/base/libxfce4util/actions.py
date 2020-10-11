@@ -14,8 +14,7 @@ def setup():
                          --libexecdir=/usr/lib \
                          --localstatedir=/var \
                          --disable-static \
-                         --disable-gtk-doc \
-                         --enable-debug")
+                         --disable-gtk-doc")
 
     inarytools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 

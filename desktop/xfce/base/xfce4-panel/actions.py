@@ -14,8 +14,7 @@ def setup():
                          --libexecdir=/usr/lib \
                          --disable-static \
                          --enable-gio-unix \
-                         --disable-gtk-doc  \
-                         --disable-debug ")
+                         --disable-gtk-doc")
 
 def build():
     autotools.make()
