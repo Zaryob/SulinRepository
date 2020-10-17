@@ -1,2 +1,1 @@
 epiphany -> webkit2gtk
-gnome-terminal -> libxslt # bu hiç çalışmıyo

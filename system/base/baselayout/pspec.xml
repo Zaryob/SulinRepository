@@ -14,14 +14,11 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin main filesystem hierarchy.</Description>
-        <Archive sha1sum="5b092b87a266fb8cf3ef48f2615a606728419294">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0.6/baselayout-3.0.6.tar.gz</Archive>
+        <Archive sha1sum="9ff7cd85c5487412a81fe319f1d22c164ef44586">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0.7/baselayout-3.0.7.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>baselayout</Name>
-        <RuntimeDependencies>
-            <Dependency>python3-libuser</Dependency>
-        </RuntimeDependencies>
         <IsA>postOps</IsA>
         <Files>
             <Path fileType="executable" permanent="true">/bin</Path>
@@ -52,6 +49,13 @@
     </Package>
 
     <History>
+      <Update release="12">
+          <Date>2019-10-10</Date>
+          <Version>3.0.7</Version>
+          <Comment>more tweaks</Comment>
+          <Name>Ali Rıza KESKİN</Name>
+          <Email>parduscix@yandex.ru</Email>
+      </Update>
       <Update release="11">
           <Date>2019-10-10</Date>
           <Version>3.0.6</Version>

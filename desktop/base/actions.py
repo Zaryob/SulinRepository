@@ -10,7 +10,7 @@ from inary.actionsapi import shelltools
 
 
 def build():
-    autotools.make()
+    shelltools.system("make -j1")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

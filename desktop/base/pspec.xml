@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Sulinos desktop base</Summary>
         <Description>Sulinos desktop base files and settings</Description>
-        <Archive sha1sum="b63e42ab52d4a0072fbf10380c97c5b46b1cb4cb">https://gitlab.com/sulinos/devel/desktop-base/-/archive/1.0/desktop-base-1.0.tar.gz</Archive>
+        <Archive sha1sum="16770bf9eced565abe4913e25d046c772d61cbf5">https://gitlab.com/sulinos/devel/desktop-base/-/archive/1.1/desktop-base-1.1.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -58,12 +58,17 @@
             <Dependency>tumbler</Dependency>
             <Dependency>zenity</Dependency>
             <Dependency>ffmpeg</Dependency>
-            <Dependency>pavucontrol</Dependency>
-            <Dependency>feh</Dependency>
         </RuntimeDependencies>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-10</Date>
+            <Version>1.1</Version>
+            <Comment>Fixes</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-10</Date>
             <Version>1.0</Version>
