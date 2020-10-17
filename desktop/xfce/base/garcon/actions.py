@@ -18,6 +18,6 @@ def build():
     autotools.make()
 
 def install():
-    autotools.install()
+    shelltools.system("make install DESTDIR={}".format(get.installDIR()))
 
     inarytools.dodoc('AUTHORS', 'ChangeLog', 'COPYING', 'HACKING', 'NEWS', 'STATUS', 'THANKS', 'TODO')

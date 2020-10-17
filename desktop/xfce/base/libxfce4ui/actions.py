@@ -23,4 +23,7 @@ def build():
 
 def install():
     autotools.rawInstall('DESTDIR=%s' % get.installDIR())
+    #legacy support
+    inarytools.dosym("libxfce4ui-2.so","/usr/lib/libxfce4ui-1.so")
+    inarytools.dosym("libxfce4ui-2.so","/usr/lib/libxfce4ui-1.so.0")
     inarytools.dodoc('NEWS', 'COPYING', 'README', 'TODO', 'ChangeLog', 'AUTHORS', 'THANKS')

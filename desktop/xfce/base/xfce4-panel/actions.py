@@ -22,6 +22,10 @@ def build():
 def install():
     autotools.make("install DESTDIR={}".format(get.installDIR()))
 
+    #legacy applet support
+    inarytools.dosym("libxfce4panel-2.0.so","/usr/lib/libxfce4panel-1.0.so")
+    inarytools.dosym("libxfce4panel-2.0.so","/usr/lib/libxfce4panel-1.0.so.4")
+
     #inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
 
     inarytools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS", "README", "TODO")
