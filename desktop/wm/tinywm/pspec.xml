@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>tinywm</Name>
+        <Homepage>http://tinywm.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A standarts compliant, fast, lightweight window manager</Summary>
+        <Description>tinywm is a window manager for the X11 windowing system.</Description>
+        <Archive sha1sum="b8a3e429a303f2c68abbd80fe20208b6d431ef5d" >https://github.com/mackstann/tinywm/archive/master.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+        <Patch>0001-fix-keyboard-input.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>tinywm</Name>
+        <RuntimeDependencies>
+            <Dependency>xterm</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXcursor</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/libexec/tinywm-session">tinywm-session</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/xsessions/tinywm.desktop">tinywm.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2019-04-12</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>

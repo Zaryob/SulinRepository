@@ -1,0 +1,29 @@
+#!/bin/bash
+export XDG_SESSION_DESKTOP=TINYWM
+xdgrun(){
+	file="$XDG_DIR/$1"
+	if cat $file | grep "NotShowIn" | grep "$XDG_SESSION_DESKTOP" &>/dev/null; then
+		echo -ne "Skip: $1"
+	elif cat $file | grep "OnlyShowIn" &>/dev/null ; then
+		if cat $file | grep "OnlyShowIn" | grep "$XDG_SESSION_DESKTOP" &>/dev/null; then
+			echo "Starting: $1"
+			$(cat $file | grep "Exec=" | sed "s/^Exec=//g") &	
+		fi
+	else
+		echo "Starting: $1"
+		$(cat $file | grep "^Exec=" | sed "s/^Exec=//g") &
+	fi
+
+}
+
+#Run autostart
+ls /etc/xdg/autostart | while read name
+do
+	XDG_DIR="/etc/xdg/autostart" xdgrun $name
+done
+#Run user autostart
+ls $HOME/.local/share/autostart/ | while read name
+do
+	XDG_DIR="$HOME/.local/share/autostart/" xdgrun $name
+done
+exec tinywm

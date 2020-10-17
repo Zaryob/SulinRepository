@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=XSession
+Exec=/usr/libexec/tinywm-session
+TryExec=/usr/libexec/tinywm-session
+DesktopNames=tinywm
+Name=tinywm
+Comment=tinywm
