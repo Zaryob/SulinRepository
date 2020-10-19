@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>debootstrap</Name>
+        <Homepage>https://debootstrap.samba.org/</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>system.devel</PartOf>
+        <Summary>Debian chroot creator</Summary>
+        <Description>Chroot builder for debian.</Description>
+        <Archive sha1sum="712119633529d089648052e5971928ab06cb1d03" >http://deb.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.123.tar.gz</Archive>
+        <Patches>
+            <Patch>0001-remove-dpkg-support.patch</Patch>
+            <Patch>0002-remove-merged-user.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>debootstrap</Name>
+        <RuntimeDependencies>
+            <Dependency>binutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/debootstrap</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2020-01-28</Date>
+            <Version>1.0.123</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>

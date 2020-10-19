@@ -1,0 +1,34 @@
+--- debootstrap
++++ debootstrap
+@@ -28,7 +28,7 @@
+ DISABLE_KEYRING=""
+ FORCE_KEYRING=""
+ VARIANT=""
+-MERGED_USR=""
++MERGED_USR=no
+ ARCH=""
+ HOST_ARCH=""
+ HOST_OS=""
+@@ -107,7 +107,6 @@
+       --variant=X            use variant X of the bootstrap scripts
+                              (currently supported variants: buildd, fakechroot,
+                               minbase)
+-      --no-merged-usr        do not make /{bin,sbin,lib}/ symlinks to /usr/
+       --keyring=K            check Release files against keyring K
+       --no-check-gpg         avoid checking Release file signatures
+       --force-check-gpg      force checking Release file signatures
+@@ -363,14 +362,6 @@
+ 		if [ ! -d "$CACHE_DIR" ] ; then
+ 			error 1 NOCACHEDIR "%s: No such directory" "$CACHE_DIR"
+ 		fi
+-		;;
+-            --merged-usr)
+-		MERGED_USR=yes
+-		shift
+-		;;
+-	    --no-merged-usr)
+-		MERGED_USR=no
+-		shift
+ 		;;
+ 	    --keyring|--keyring=?*)
+ 		if ! gpgv --version >/dev/null 2>&1; then
