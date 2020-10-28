@@ -14,7 +14,7 @@
         <IsA>data</IsA>
         <Summary>Filesystem baselayout</Summary>
         <Description>baselayout creates the Sulin main filesystem hierarchy.</Description>
-        <Archive sha1sum="331b1e96d7a647c90e74cf490303273de1781ba4">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0.7/baselayout-3.0.7.tar.gz</Archive>
+        <Archive sha1sum="4489e4c991775c2bc9fa2bd381a3c50a109c5862">https://gitlab.com/sulinos/devel/baselayout/-/archive/3.0.8/baselayout-3.0.8.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -49,6 +49,13 @@
     </Package>
 
     <History>
+      <Update release="13">
+          <Date>2019-10-10</Date>
+          <Version>3.0.8</Version>
+          <Comment>more tweaks</Comment>
+          <Name>Ali Rıza KESKİN</Name>
+          <Email>parduscix@yandex.ru</Email>
+      </Update>
       <Update release="12">
           <Date>2019-10-10</Date>
           <Version>3.0.7</Version>
