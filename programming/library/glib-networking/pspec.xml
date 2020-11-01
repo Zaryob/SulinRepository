@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Network extensions for GLib</Summary>
         <Description>glib-networking provides network-related giomodules for glib.</Description>
-        <Archive sha1sum="7ebe8a2802ddb5e43107baefc7eb05b6f41b8fb4" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/glib-networking/2.62/glib-networking-2.62.0.tar.xz</Archive>
+        <Archive sha1sum="7ebe8a2802ddb5e43107baefc7eb05b6f41b8fb4" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/glib-networking/2.62/glib-networking-2.62.0.tar.xz</Archive>
     </Source>
 
     <Package>

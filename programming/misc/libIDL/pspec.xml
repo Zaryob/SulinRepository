@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>CORBA tree builder</Summary>
         <Description>libIDL provides parsing .idl files and generate errors and warning messages in gcc-like format.</Description>
-        <Archive sha1sum="abedf091bef0c7e65162111baf068dcb739ffcd3" type="tarbz2">https:// http://ftp.gnome.org/pub/gnome/sources/libIDL/0.8/libIDL-0.8.14.tar.bz2</Archive>
+        <Archive sha1sum="abedf091bef0c7e65162111baf068dcb739ffcd3" type="tarbz2">http://ftp.gnome.org/pub/gnome/sources/libIDL/0.8/libIDL-0.8.14.tar.bz2</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>

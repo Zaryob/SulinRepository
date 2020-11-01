@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Object-oriented framework for creating UPnP devices and control points</Summary>
         <Description>GUPnP implements the UPnP specification: resource announcement and discovery, description, control, event notification, and presentation (GUPnP includes basic web server functionality through libsoup).</Description>
-        <Archive sha1sum="16fa8d44caa82db33c04f7764121190635c5184b" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gupnp/1.2/gupnp-1.2.1.tar.xz</Archive>
+        <Archive sha1sum="16fa8d44caa82db33c04f7764121190635c5184b" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gupnp/1.2/gupnp-1.2.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>

@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Gnome video-effects</Summary>
         <Description>The GNOME Video Effects package contains a collection of GStreamer effects.</Description>
-        <Archive sha1sum="40a729136da028ffea343d57fd7810c0dfb35d28" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gnome-video-effects/0.5/gnome-video-effects-0.5.0.tar.xz</Archive>
+        <Archive sha1sum="40a729136da028ffea343d57fd7810c0dfb35d28" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gnome-video-effects/0.5/gnome-video-effects-0.5.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>

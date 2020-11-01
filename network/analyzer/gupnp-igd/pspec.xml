@@ -11,7 +11,7 @@
         <IsA>library</IsA>
         <Summary>A library to handle UPnP IGD port mapping</Summary>
         <Description>GUPnP-IGD is a plugin to handle Internet Gateway Device port mappings for UPnP connections.</Description>
-        <Archive sha1sum="8650df82fff054bc703a0a8662d117761c3b5aea" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gupnp-igd/0.2/gupnp-igd-0.2.5.tar.xz</Archive>
+        <Archive sha1sum="8650df82fff054bc703a0a8662d117761c3b5aea" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gupnp-igd/0.2/gupnp-igd-0.2.5.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gupnp-devel</Dependency>
             <Dependency>gssdp-devel</Dependency>

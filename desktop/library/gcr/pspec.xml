@@ -13,7 +13,7 @@
         <PartOf>desktop.library</PartOf>
         <Summary>The Gcr package contains libraries used for displaying certificates and accessing key stores.</Summary>
         <Description>The Gcr package contains libraries used for displaying certificates and accessing key stores. It also provides the viewer for crypto files on the GNOME Desktop.</Description>
-        <Archive sha1sum="947ca5958d20f9d648e82210f056ff5ed63d9ccc" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gcr/3.28/gcr-3.28.1.tar.xz</Archive>
+        <Archive sha1sum="947ca5958d20f9d648e82210f056ff5ed63d9ccc" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gcr/3.28/gcr-3.28.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gnupg</Dependency>
             <Dependency>intltool</Dependency>

@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>A GObject-based API for doing SSDP transparently</Summary>
         <Description>GSSDP implements resource discovery and announcement over SSDP and is part of gUPnP.</Description>
-        <Archive sha1sum="4f48e321419a97c4e504a513ce7d82756d016b3f" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gssdp/1.2/gssdp-1.2.1.tar.xz</Archive>
+        <Archive sha1sum="4f48e321419a97c4e504a513ce7d82756d016b3f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gssdp/1.2/gssdp-1.2.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>

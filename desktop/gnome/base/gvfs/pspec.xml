@@ -11,7 +11,7 @@
         <IsA>library</IsA>
         <Summary>New generation gnome-virtual-file-system</Summary>
         <Description>GVFS is a userspace virtual filesystem designed to work with the I/O abstractions, especially HAL. It supports fuse for directly access for GVFS mounts. It installs several modules and backends that are automatically used by applications.</Description>
-        <Archive sha1sum="b79b5d98caf088987884b9d4f076a2afd4bf9181" >https:// http://ftp.gnome.org/pub/gnome/sources/gvfs/1.42/gvfs-1.42.2.tar.xz</Archive>
+        <Archive sha1sum="b79b5d98caf088987884b9d4f076a2afd4bf9181" >http://ftp.gnome.org/pub/gnome/sources/gvfs/1.42/gvfs-1.42.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gconf-devel</Dependency>
             <Dependency>elogind-devel</Dependency>

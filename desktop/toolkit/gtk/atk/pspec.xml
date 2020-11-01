@@ -13,7 +13,7 @@
         <PartOf>desktop.toolkit.gtk</PartOf>
         <Summary>GTK+ and GNOME Accessibility Toolkit</Summary>
         <Description>These libraries provide tools for making software for people with disabilities.</Description>
-        <Archive sha1sum="e0ea7c9c87e988091253e3fe76047691600776cd" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz</Archive>
+        <Archive sha1sum="e0ea7c9c87e988091253e3fe76047691600776cd" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>gtk-doc</Dependency>

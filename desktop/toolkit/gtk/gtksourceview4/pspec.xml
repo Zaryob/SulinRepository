@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A text widget implementing syntax highlighting and other features</Summary>
         <Description>Gtksourceview improves the gtk+ text widget by implementing syntax highlighting and other features typical of a source editor.</Description>
-        <Archive sha1sum="0caa0c686fad90f27e75d2af9488182ff295a02e" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gtksourceview/4.4/gtksourceview-4.4.0.tar.xz</Archive>
+        <Archive sha1sum="0caa0c686fad90f27e75d2af9488182ff295a02e" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtksourceview/4.4/gtksourceview-4.4.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>fridibi-devel</Dependency>
             <Dependency>vala-devel</Dependency>
