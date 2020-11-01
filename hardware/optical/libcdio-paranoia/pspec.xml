@@ -14,7 +14,7 @@
         <IsA>library</IsA>
         <Summary>CD paranoia libraries from libcdio</Summary>
         <Description>An advanced CDDA reader with error correction.</Description>
-        <Archive sha1sum="6e289aa9a6bbccf3aa55e2cde9c5bfc0ac8ff058" type="tarbz2">mirrors://gnu/libcdio/libcdio-paranoia-10.2+2.0.0.tar.bz2</Archive>
+        <Archive sha1sum="6e289aa9a6bbccf3aa55e2cde9c5bfc0ac8ff058" type="tarbz2">https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+2.0.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libcdio-devel</Dependency>
         </BuildDependencies>

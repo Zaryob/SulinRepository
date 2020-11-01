@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>A multi-language spellchecker</Summary>
         <Description>Aspell is a spellchecker that has dictionaries for more than one language and is written as a replacement to ispell.</Description>
-        <Archive sha1sum="ae554df297aee676b4d16f261fa5c60e285478f6" type="targz">mirrors://gnu/aspell/aspell-0.60.8.tar.gz</Archive>
+        <Archive sha1sum="ae554df297aee676b4d16f261fa5c60e285478f6" type="targz">https://ftp.gnu.org/gnu/aspell/aspell-0.60.8.tar.gz</Archive>
     </Source>
 
     <Package>

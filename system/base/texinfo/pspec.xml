@@ -14,7 +14,7 @@
         <Summary>The GNU info program and utilities</Summary>
         <Description>Texinfo is a documentation system that can produce both online information and printed output from a single source file. The GNU Project uses the Texinfo file format for most of its documentation.</Description>
         <!-- @@@gnu texinfo -->
-        <Archive sha1sum="3eb87fe3f4241ba4305255f8a47d867dbc4f96fc" type="targz">mirrors://gnu/texinfo/texinfo-6.7.tar.gz</Archive>
+        <Archive sha1sum="3eb87fe3f4241ba4305255f8a47d867dbc4f96fc" type="targz">https://ftp.gnu.org/gnu/texinfo/texinfo-6.7.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>ncurses-devel</Dependency>
             <Dependency>perl</Dependency>

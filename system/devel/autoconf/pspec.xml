@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Used to create autoconfiguration files</Summary>
         <Description>Used to create autoconfiguration files, Autoconf is an extensible package of m4 macros that produce shell scripts to automatically configure software source code packages.</Description>
-        <Archive sha1sum="e891c3193029775e83e0534ac0ee0c4c711f6d23" type="tarxz">mirrors://gnu/autoconf/autoconf-2.69.tar.xz</Archive>
+        <Archive sha1sum="e891c3193029775e83e0534ac0ee0c4c711f6d23" type="tarxz">https://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>texinfo</Dependency>
             <Dependency>m4</Dependency>

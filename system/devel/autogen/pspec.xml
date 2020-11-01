@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>The automated text and program generation tool</Summary>
         <Description>autogen is a tool designed to simplify the creation and maintenance of programs that contain large amounts of repetitious text.</Description>
-        <Archive sha1sum="e539a6340e4bde7409593c03be012036d37a9ca9" type="targz">mirrors://gnu/autogen/rel5.18.16/autogen-5.18.16.tar.gz</Archive>
+        <Archive sha1sum="e539a6340e4bde7409593c03be012036d37a9ca9" type="targz">https://ftp.gnu.org/gnu/autogen/rel5.18.16/autogen-5.18.16.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gc-devel</Dependency>
             <Dependency>gmp-devel</Dependency>

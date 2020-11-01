@@ -14,7 +14,7 @@
             <Dependency>autoconf</Dependency>
             <Dependency>automake</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="25986729b9a156a6aee058e6bcf90406659eac83" type="tarxz">mirrors://gnu/autoconf-archive/autoconf-archive-2019.01.06.tar.xz</Archive>
+        <Archive sha1sum="25986729b9a156a6aee058e6bcf90406659eac83" type="tarxz">https://ftp.gnu.org/gnu/autoconf-archive/autoconf-archive-2019.01.06.tar.xz</Archive>
     </Source>
     <Package>
         <Name>autoconf-archive</Name>

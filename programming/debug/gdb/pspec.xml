@@ -12,7 +12,7 @@
         <Summary>GNU debugger</Summary>
         <PartOf>programming.debug</PartOf>
         <Description>GDB, the GNU Project debugger, allows you to see what is going on 'inside' another program while it executes -- or what another program was doing at the moment it crashed.</Description>
-        <Archive sha1sum="356ee474a24bfb2f133894730916557dfea9da2e" type="tarxz">mirrors://gnu/gdb/gdb-9.2.tar.xz</Archive>
+        <Archive sha1sum="356ee474a24bfb2f133894730916557dfea9da2e" type="tarxz">https://ftp.gnu.org/gnu/gdb/gdb-9.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
         </BuildDependencies>

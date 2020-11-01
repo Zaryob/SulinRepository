@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>GNU macro processor</Summary>
         <Description>The m4 utility is a macro processor that shall read one or more text files, process them according to their included macro statements, and write the results to standard output</Description>
-        <Archive sha1sum="228604686ca23f42e48b98930babeb5d217f1899" type="tarxz">mirrors://gnu/m4/m4-1.4.18.tar.xz</Archive>
+        <Archive sha1sum="228604686ca23f42e48b98930babeb5d217f1899" type="tarxz">https://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gettext</Dependency>
             <Dependency>libsigsegv-devel</Dependency>

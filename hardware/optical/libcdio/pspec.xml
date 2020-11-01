@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A library to encapsulate CD-ROM reading and control</Summary>
         <Description>This library provides an interface for CD-ROM access. It can be used by applications that need OS- and device-independent access to CD-ROM devices.</Description>
-        <Archive sha1sum="921f17842ea2bf3cd06ab3616849555aaae903ad" type="targz">mirrors://gnu/libcdio/libcdio-0.94.tar.gz</Archive>
+        <Archive sha1sum="921f17842ea2bf3cd06ab3616849555aaae903ad" type="targz">https://ftp.gnu.org/gnu/libcdio/libcdio-0.94.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libgcc</Dependency>
         </BuildDependencies>

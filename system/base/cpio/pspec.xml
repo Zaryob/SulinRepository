@@ -14,7 +14,7 @@
         <Summary>A file archival tool which can also read and write tar files</Summary>
         <Description>GNU cpio copies files into or out of a cpio or tar archive. The archive can be another file on the disk, a magnetic tape, or a pipe. GNU cpio supports the following archive formats: binary, old ASCII, new ASCII, crc, HPUX binary, HPUX old ASCII, old tar, and POSIX.1 tar.</Description>
         <!-- @@@gnu attr -->
-        <Archive sha1sum="4dcefc0e1bc36b11506a354768d82b15e3fe6bb8" type="tarbz2">mirrors://gnu/cpio/cpio-2.13.tar.bz2</Archive>
+        <Archive sha1sum="4dcefc0e1bc36b11506a354768d82b15e3fe6bb8" type="tarbz2">https://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2</Archive>
     </Source>
 
     <Package>

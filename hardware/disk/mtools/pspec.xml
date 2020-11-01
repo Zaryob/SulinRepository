@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>Utilities to access MS-DOS disks without mounting them</Summary>
         <Description>Mtools are utilities to access MS-DOS disks without mounting them.</Description>
-        <Archive sha1sum="ef4b90b057a55cacac457b57906e2ce4f48bf2f8" type="targz">mirrors://gnu/mtools/mtools-4.0.23.tar.gz</Archive>
+        <Archive sha1sum="ef4b90b057a55cacac457b57906e2ce4f48bf2f8" type="targz">https://ftp.gnu.org/gnu/mtools/mtools-4.0.23.tar.gz</Archive>
     </Source>
 
     <Package>

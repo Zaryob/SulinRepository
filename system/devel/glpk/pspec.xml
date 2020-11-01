@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>GNU Linear Programming Kit</Summary>
         <Description>The GLPK (GNU Linear Programming Kit) package is intended for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. It is a set of routines written in ANSI C and organized in the form of a callable library.</Description>
-        <Archive sha1sum="d9b607a9cf3a25b754a0cd9a842ea5043f8604db" type="targz">mirrors://gnu/glpk/glpk-4.65.tar.gz</Archive>
+        <Archive sha1sum="d9b607a9cf3a25b754a0cd9a842ea5043f8604db" type="targz">https://ftp.gnu.org/gnu/glpk/glpk-4.65.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>gmp-devel</Dependency>
         </BuildDependencies>
