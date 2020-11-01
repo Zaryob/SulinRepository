@@ -83,7 +83,7 @@
         <Name>pantheon-terminal-devel</Name>
         <Summary>Development files for terminal</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">phanteon-terminal</Dependency>
+            <Dependency release="current">pantheon-terminal</Dependency>
             <Dependency>gtk2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
