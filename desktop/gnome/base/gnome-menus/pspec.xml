@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Gnome Menus</Summary>
         <Description>gnome-menus has got desktop-directories, GNOME menus library and its python bindings.</Description>
-        <Archive sha1sum="f846a26031e75abbc46a7cc6e0fe129ad3072b36" type="tarxz">mirrors://gnome/gnome-menus/3.32/gnome-menus-3.32.0.tar.xz</Archive>
+        <Archive sha1sum="f846a26031e75abbc46a7cc6e0fe129ad3072b36" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/gnome-menus/3.32/gnome-menus-3.32.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>

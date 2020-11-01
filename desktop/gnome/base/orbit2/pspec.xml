@@ -14,7 +14,7 @@
         <PartOf>desktop.gnome.base</PartOf>
         <Summary>High-performance CORBA ORB</Summary>
         <Description>Orbit2 allows to communication between two programs objects.</Description>
-        <Archive sha1sum="76074570d3fc08d4e62d37f02023fe1af3b7be3f" type="tarbz2">mirrors://gnome/ORBit2/2.14/ORBit2-2.14.18.tar.bz2</Archive>
+        <Archive sha1sum="76074570d3fc08d4e62d37f02023fe1af3b7be3f" type="tarbz2">https:// http://ftp.gnome.org/pub/gnome/sources/ORBit2/2.14/ORBit2-2.14.18.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libIDL-devel</Dependency>
         </BuildDependencies>

@@ -13,7 +13,7 @@
         <PartOf>programming.library</PartOf>
         <Summary>Library for JavaScript Object Notation format</Summary>
         <Description>json-glib is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format.</Description>
-        <Archive sha1sum="d9b6d58c0a5b45aa86fbf0da31c65c19254edf96" type="tarxz">mirrors://gnome/json-glib/1.4/json-glib-1.4.4.tar.xz</Archive>
+        <Archive sha1sum="d9b6d58c0a5b45aa86fbf0da31c65c19254edf96" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/json-glib/1.4/json-glib-1.4.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>

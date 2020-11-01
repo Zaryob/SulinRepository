@@ -13,7 +13,7 @@
         <PartOf>desktop.misc</PartOf>
         <Summary>Protocol definitions and daemons for D-Bus at-spi</Summary>
         <Description>at-spi allows assistive technologies to access GTK-based applications. Essentially it exposes the internals of applications over D-Bus for automation.</Description>
-        <Archive sha1sum="172a99cb7c87d23193dc1a2ad9bb05b06fff0194" type="tarxz">mirrors://gnome/at-spi2-core/2.32/at-spi2-core-2.32.0.tar.xz</Archive>
+        <Archive sha1sum="172a99cb7c87d23193dc1a2ad9bb05b06fff0194" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/at-spi2-core/2.32/at-spi2-core-2.32.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libXtst-devel</Dependency>
             <Dependency>libXi-devel</Dependency>

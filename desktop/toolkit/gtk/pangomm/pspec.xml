@@ -11,7 +11,7 @@
         <IsA>library</IsA>
         <Summary>C++ interface for Pango</Summary>
         <Description>Pangomm is a library that provides pango based C++ interface for object-oriented gtkmm applications.</Description>
-        <Archive sha1sum="6d85e5600389c7ee04cc08b6a826832cd360e944" type="tarxz">mirrors://gnome/pangomm/2.42/pangomm-2.42.0.tar.xz</Archive>
+        <Archive sha1sum="6d85e5600389c7ee04cc08b6a826832cd360e944" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/pangomm/2.42/pangomm-2.42.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>grep</Dependency>
             <Dependency>libtool</Dependency>

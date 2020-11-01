@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>An HTTP library implementation in C</Summary>
         <Description>libsoup is an HTTP client/server library for GNOME.</Description>
-        <Archive sha1sum="d3f15038fae4f48ae386cfdf53ae12382ab7524b" type="tarxz">mirrors://gnome/libsoup/2.68/libsoup-2.68.1.tar.xz</Archive>
+        <Archive sha1sum="d3f15038fae4f48ae386cfdf53ae12382ab7524b" type="tarxz">https:// http://ftp.gnome.org/pub/gnome/sources/libsoup/2.68/libsoup-2.68.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
             <Dependency>python-libbrotli</Dependency>

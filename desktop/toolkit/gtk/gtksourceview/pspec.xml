@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A text widget implementing syntax highlighting and other features</Summary>
         <Description>Gtksourceview improves the gtk+ text widget by implementing syntax highlighting and other features typical of a source editor.</Description>
-        <Archive sha1sum="ea89007c4d2765ff7c09fd77042de08d38e7047b" type="tarbz2">mirrors://gnome/gtksourceview/2.11/gtksourceview-2.11.2.tar.bz2</Archive>
+        <Archive sha1sum="ea89007c4d2765ff7c09fd77042de08d38e7047b" type="tarbz2">https:// http://ftp.gnome.org/pub/gnome/sources/gtksourceview/2.11/gtksourceview-2.11.2.tar.bz2</Archive>
         <Patches>
             <Patch level="1">gtksourceview-2.11.2-cflags.patch</Patch>
             <Patch level="1">gtksourceview-2.11-fix-GCONST-def.patch</Patch>

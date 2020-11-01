@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>C++ binding for libglade</Summary>
         <Description>libglademm provides a C++ interface for glade2. It is a subpackage of the gnomemm project. The interface provides a convenient interface for C++ programmers to create glade2 objects.</Description>
-        <Archive sha1sum="d7c0138c80ea337d2e9ae55f74a6953ce2eb9f5d" type="tarbz2">mirrors://gnome/libglademm/2.6/libglademm-2.6.7.tar.bz2</Archive>
+        <Archive sha1sum="d7c0138c80ea337d2e9ae55f74a6953ce2eb9f5d" type="tarbz2">https:// http://ftp.gnome.org/pub/gnome/sources/libglademm/2.6/libglademm-2.6.7.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>gtkmm2-devel</Dependency>
             <Dependency>glibmm-devel</Dependency>
