@@ -11,14 +11,12 @@ from inary.actionsapi import shelltools
 
 Libdir = "/usr/lib32" if get.buildTYPE() == "emul32" else "/usr/lib"
 
+shelltools.export("CFLAGS","")
+shelltools.export("CXXFLAGS","")
+shelltools.export("LDFLAGS","")
 
-def clangize():
-    clang="{}".format("clang" if get.buildTYPE()!="emul32" else "clang -m32")
-    clangpp="{}".format("clang++" if get.buildTYPE()!="emul32" else "clang++ -m32")
-    shelltools.export("CC", clang)
-    shelltools.export("CXX", clangpp)
+
 def setup():
-    #clangize()
 
     options ="\
     -D b_lto=false \
@@ -34,8 +32,8 @@ def setup():
     -D egl=true \
     -D gallium-extra-hud=true \
     -D gallium-nine=true \
-    -D gallium-omx=bellagio \
-    -D gallium-opencl=icd \
+    -D gallium-omx=disabled \
+	-D gallium-opencl=icd \
     -D gallium-va=true \
     -D gallium-vdpau=true \
     -D gallium-xa=true \
@@ -45,35 +43,30 @@ def setup():
     -D gles2=true \
     -D glvnd=true \
     -D glx=dri \
-    -D libunwind=true \
+    -D libunwind=enabled \
     -D llvm=true \
     -D lmsensors=true \
     -D osmesa=gallium \
-    -D shared-glapi=true \
-    -D valgrind=false \
-    -D zstd=false"
-    
+    -D zstd=false \
+    -D shared-glapi=true"
 
     if get.buildTYPE() == "emul32":
         shelltools.export("CC","gcc -m32")
         shelltools.export("CXX","g++ -m32")
-        shelltools.export("LDFLAGS","-m32")
-        shelltools.export("PKG_CONFIG_PATH","/usr/lib32/pkgconfig")
         options += " --libdir=/usr/lib32 --native-file crossfile.ini"
     else:
-        shelltools.export("PKG_CONFIG_PATH","/usr/lib/pkgconfig")
+        shelltools.export("CC","gcc")
+        shelltools.export("CXX","g++")
         options += " --libdir=/usr/lib"
 
 
     mesontools.meson_configure(options)
 
 def build():
-    #clangize()
-    mesontools.ninja_build("xmlpool-pot xmlpool-update-po xmlpool-gmo")
+    #mesontools.ninja_build("xmlpool-pot xmlpool-update-po xmlpool-gmo")
     shelltools.system("meson compile -C inaryPackageBuild")
 
 def install():
-    #clangize()
     if get.buildTYPE() == "emul32":
         shelltools.system("DESTDIR='{}' ninja -C inaryPackageBuild install".format(get.installDIR()))
         return

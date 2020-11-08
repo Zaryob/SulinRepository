@@ -15,7 +15,7 @@
         <PartOf>x11.library</PartOf>
         <Summary>Mesa graphics libraries and utilities</Summary>
         <Description>Mesa is an open-source implementation of the OpenGL specification - a system for rendering interactive 3D graphics.</Description>
-        <Archive sha1sum="9f48d8f48499018fb685b592591db351324e983b" >https://mesa.freedesktop.org/archive/mesa-20.1.2.tar.xz</Archive>
+        <Archive sha1sum="08c161d477bf9510e0a911996521ef248de288c4" >https://archive.mesa3d.org/mesa-20.2.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libdrm-devel</Dependency>
             <Dependency>clang</Dependency>
@@ -39,6 +39,7 @@
             <Dependency>llvm</Dependency>
             <Dependency>llvm-libs</Dependency>
             <Dependency>libxshmfence-devel</Dependency>
+            <Dependency>zstd-devel</Dependency>
         </BuildDependencies>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="crossfile.ini">crossfile.ini</AdditionalFile>
@@ -47,6 +48,7 @@
     <Package>
         <Name>mesa</Name>
         <RuntimeDependencies>
+           <Dependency>zstd</Dependency>
             <Dependency>lm_sensors</Dependency>
             <Dependency>libdrm-amd</Dependency>
             <Dependency>libX11</Dependency>
@@ -163,6 +165,13 @@
         </Files>
     </Package>
     <History>
+      <Update release="5">
+            <Date>2020-06-21</Date>
+            <Version>20.2.2</Version>
+            <Comment>Version bump to 20.2.1</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="4">
             <Date>2020-06-21</Date>
             <Version>20.1.2</Version>

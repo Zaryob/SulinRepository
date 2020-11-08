@@ -32,6 +32,16 @@
             <Path fileType="man">/usr/share/man</Path>
         </Files>
     </Package>
+      <Package>
+        <Name>zstd-32bit</Name>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency>lz4</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>zstd-devel</Name>
         <RuntimeDependencies>
@@ -39,6 +49,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+          <Path fileType="library">/usr/lib32/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>

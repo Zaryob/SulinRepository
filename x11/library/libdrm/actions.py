@@ -8,6 +8,8 @@ from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
+shelltools.system("export")
+
 def setup():
     #inarytools.dosed("configure.ac", "pthread-stubs", deleteLine=True)
     mesontools.meson_configure("--prefix=/usr -Dudev=true")
