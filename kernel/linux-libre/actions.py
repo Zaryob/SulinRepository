@@ -11,6 +11,7 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 import time
 
+
 NoStrip = ["/lib", "/boot"]
 
 shelltools.export("KBUILD_BUILD_USER", "sulin")
@@ -26,6 +27,7 @@ def build():
 
 
 def install():
+    shelltools.cd("../linux-5.9.6")
     kerneltools.install(distro="libre-sulinos")
     kerneltools.installModuleHeaders(distro="libre-sulinos")
     # add objtool for external module building and enabled VALIDATION_STACK option
