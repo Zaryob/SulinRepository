@@ -1,0 +1,71 @@
+<INARY>
+    <Source>
+        <Name>gtkglext</Name>
+        <Homepage>http://gtkmm.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>opengl extensions for gtk</Summary>
+        <Description>opengl extensions for gtk.</Description>
+        <Archive sha1sum="8e0adb213ea7198331705c7dbf7d6f3438cb61e7">http://archive.ubuntu.com/ubuntu/pool/universe/g/gtkglext/gtkglext_1.2.0.orig.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>atkmm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>cairomm-devel</Dependency>
+            <Dependency>pangomm-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+        </BuildDependencies>
+      <Patches>
+        <Patch>kill-pangox.patch</Patch>
+        <Patch>0002-GCC-8-fixes.patch</Patch>        
+      </Patches>
+    </Source>
+
+    <Package>
+        <Name>gtkglext</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>cairomm</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gtkglext-devel</Name>
+        <Summary>Development files for gtkglext</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkglext</Dependency>
+            <Dependency>atkmm-devel</Dependency>
+            <Dependency>pangomm-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-09</Date>
+            <Version>1.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
