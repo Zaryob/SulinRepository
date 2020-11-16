@@ -13,7 +13,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Library for reading and writing streaming archives</Summary>
         <Description>libarchive includes a library and command-line tools for reading and writing tar, cpio, zip, ISO, and other archive formats.</Description>
-        <Archive sha1sum="47804d0dc164edb43b6184949b3d8a3687e1cddd" >https://github.com/libarchive/libarchive/releases/download/v3.4.2/libarchive-3.4.2.tar.gz</Archive>
+        <Archive sha1sum="6528f38fa03a44bfcf58435ec8512ffea2851c99" >https://github.com/libarchive/libarchive/releases/download/v3.4.3/libarchive-3.4.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>
             <Dependency>nettle-devel</Dependency>
@@ -26,6 +26,9 @@
             <Dependency>lz4-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
+      <Patches>
+        <Patch>0000-sync-support.patch</Patch>
+      </Patches>
     </Source>
 
     <Package>
@@ -90,9 +93,16 @@
 	<Name>Ali Rıza KESKİN</Name>
 	<Email>parduscix@yandex.ru</Email>
 	</Update>
+        <Update release="3">
+            <Date>2020-11-14</Date>
+            <Version>3.4.3</Version>
+            <Comment>Version UP</Comment>
+            <Name>Upstream</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
         <Update release="2">
             <Date>2020-01-31</Date>
-            <Version>3.4.1</Version>
+            <Version>3.4.2</Version>
             <Comment>First release</Comment>
             <Name>Upstream</Name>
             <Email>parduscix@yandex.ru</Email>

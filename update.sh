@@ -1,2 +1,2 @@
-find | grep __pycache__ | xargs rm -rvf
+find ./* | grep __pycache__ | xargs rm -rvf
 inary ix --skip-sign

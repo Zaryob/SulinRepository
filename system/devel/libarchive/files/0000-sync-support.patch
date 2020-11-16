@@ -1,0 +1,78 @@
+diff --git a/configure.ac b/configure.ac
+index 65c889a2..b73d1452 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -318,6 +318,14 @@ AC_CHECK_HEADERS([wincrypt.h winioctl.h],[],[],
+ #endif
+ ]])
+ 
++# Checks for libraries.
++AC_ARG_WITH([nosync],
++  AS_HELP_STRING([--without-nosync], [Enable sync after extract support]))
++
++if test "x$with_nosync" != "xno"; then
++  AC_DEFINE([NO_SYNC], [1], [Define to 1 if NO_SYNC needs to be defined.])
++fi
++
+ # Checks for libraries.
+ AC_ARG_WITH([zlib],
+   AS_HELP_STRING([--without-zlib], [Don't build support for gzip through zlib]))
+diff --git a/libarchive/archive_read_extract.c b/libarchive/archive_read_extract.c
+index b7973fa8..73386e35 100644
+--- a/libarchive/archive_read_extract.c
++++ b/libarchive/archive_read_extract.c
+@@ -30,6 +30,10 @@ __FBSDID("$FreeBSD: src/lib/libarchive/archive_read_extract.c,v 1.61 2008/05/26
+ #include <errno.h>
+ #endif
+ 
++#ifndef NO_SYNC
++#include <unistd.h>
++#endif
++
+ #include "archive.h"
+ #include "archive_entry.h"
+ #include "archive_private.h"
+@@ -56,5 +60,8 @@ archive_read_extract(struct archive *_a, struct archive_entry *entry, int flags)
+ 	}
+ 
+ 	archive_write_disk_set_options(extract->ad, flags);
++  # ifndef NO_SYNC
++  sync();
++  #endif
+ 	return (archive_read_extract2(&a->archive, entry, extract->ad));
+ }
+diff --git a/libarchive/archive_read_extract2.c b/libarchive/archive_read_extract2.c
+index 4febd8ce..8ba82117 100644
+--- a/libarchive/archive_read_extract2.c
++++ b/libarchive/archive_read_extract2.c
+@@ -36,6 +36,10 @@ __FBSDID("$FreeBSD: src/lib/libarchive/archive_read_extract.c,v 1.61 2008/05/26
+ #include <string.h>
+ #endif
+ 
++#ifndef NO_SYNC
++#include <unistd.h>
++#endif
++
+ #include "archive.h"
+ #include "archive_entry.h"
+ #include "archive_private.h"
+@@ -59,6 +63,9 @@ __archive_read_get_extract(struct archive_read *a)
+ 		}
+ 		a->cleanup_archive_extract = archive_read_extract_cleanup;
+ 	}
++  # ifndef NO_SYNC
++  sync();
++  #endif
+ 	return (a->extract);
+ }
+ 
+@@ -107,6 +114,9 @@ archive_read_extract2(struct archive *_a, struct archive_entry *entry,
+ 	/* Use the worst error return. */
+ 	if (r2 < r)
+ 		r = r2;
++  # ifndef NO_SYNC
++  sync();
++  #endif
+ 	return (r);
+ }
+ 

@@ -29,7 +29,6 @@
         <Name>ModemManager</Name>
         <RuntimeDependencies>
             <Dependency>libqmi</Dependency>
-            <Dependency>polkit</Dependency>
             <Dependency>libmbim</Dependency>
             <Dependency>libgudev</Dependency>
             <Dependency>libmm-glib</Dependency>
