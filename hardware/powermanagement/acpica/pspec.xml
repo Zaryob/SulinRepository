@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>acpica</Name>
+        <Homepage>http://acpica.freedesktop.org</Homepage>
+        <Packager>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>ACPI tools, including Intel ACPI Source Language compiler</Summary>
+        <Description>ACPI tools, including Intel ACPI Source Language compiler</Description>
+        <Archive sha1sum="6291500087666ee427e03e9f444d55ebfb04f3bd" >https://acpica.org/sites/acpica/files/acpica-unix-20201113.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>acpica</Name>
+        <Files>
+            <Path fileType="data">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/var/lib/</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>acpica-devel</Name>
+        <Summary>Development files for acpica</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">acpica</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-09-14</Date>
+            <Version>20201113</Version>
+            <Comment>First release</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
+    </History>
+</INARY>
