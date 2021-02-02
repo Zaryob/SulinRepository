@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>GNU GPL'd Pico clone with more functionality</Summary>
         <Description>Nano is a small, free and friendly editor which aims to replace Pico, the default editor included in the non-free Pine package. Rather than just copying Pico's look and feel, nano also implements some missing (or disabled by default) features in Pico, such as "search and replace" and "go to line number".</Description>
-        <Archive sha1sum="ed3dd9eec9e1ef680ef2baf491de1a50ecf22e24">https://www.nano-editor.org/dist/v4/nano-4.7.tar.xz</Archive>
+        <Archive sha1sum="b727bcd583498312f52307ed39b83d7515401c58">https://www.nano-editor.org/dist/v5/nano-5.5.tar.xz</Archive>
         <BuildDependencies>
         </BuildDependencies>
     </Source>
@@ -34,7 +34,14 @@
     </Package>
 
     <History>
-		<Update release="2">
+	<Update release="3">
+            <Date>2021-02-02</Date>
+            <Version>5.5</Version>
+            <Comment>Update and rebuild.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+	<Update release="2">
             <Date>2020-01-19</Date>
             <Version>4.7</Version>
             <Comment>Update and rebuild.</Comment>

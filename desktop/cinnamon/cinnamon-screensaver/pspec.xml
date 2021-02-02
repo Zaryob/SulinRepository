@@ -76,7 +76,7 @@
             <Path fileType="library">/usr/lib/cinnamon-screensaver</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile target="/etc/pam.d/cinnamon-screensaver" permission="0644" owner="root">cinnamon-screensaver.pam</AdditionalFile>
+            <!--AdditionalFile target="/etc/pam.d/cinnamon-screensaver" permission="0644" owner="root">cinnamon-screensaver.pam</AdditionalFile-->
         </AdditionalFiles>
     </Package>
 

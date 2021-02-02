@@ -9,7 +9,6 @@ def setup():
 #    autotools.autoreconf("-fvi")
     autotools.configure("--enable-utf8 \
                          --enable-color \
-                         --with-slang\
                          --enable-nanorc \
                          --enable-multibuffer")
 
