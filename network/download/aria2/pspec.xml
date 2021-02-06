@@ -28,8 +28,21 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+        <Package>
+        <Name>aria2-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>c-ares-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="pkgconfig">/usr/lib/pkgconfig/</Path>
         </Files>
     </Package>
 

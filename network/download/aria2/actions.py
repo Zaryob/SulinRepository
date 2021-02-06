@@ -9,6 +9,7 @@ from inary.actionsapi import get
 
 def setup():
     autotools.configure("--enable-bittorrent \
+                         --enable-libaria2 \
                          --enable-metalink \
                          --enable-epoll \
                          --enable-nls \
@@ -19,7 +20,7 @@ def setup():
                          --with-libxml2 \
                          --with-libcares \
                          --with-libz \
-                         --with-ca-bundle=/etc/pki/tls/certs/ca-bundle.crt")
+           --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt")
 
 def build():
     autotools.make("-C po update-gmo")
