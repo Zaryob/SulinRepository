@@ -30,6 +30,9 @@
             <Dependency>nautilus-devel</Dependency>
             <Dependency>yelp-tool</Dependency>
         </BuildDependencies>
+    <Patches>
+        <Patch>gnome-terminal-always-headerbar.patch</Patch>
+    </Patches>
     </Source>
 
     <Package>

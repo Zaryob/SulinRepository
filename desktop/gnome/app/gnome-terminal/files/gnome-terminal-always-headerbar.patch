@@ -1,0 +1,12 @@
+diff --git a/src/terminal-app.c b/src/terminal-app.c
+index ff91e156..c834b314 100644
+--- a/src/terminal-app.c
++++ b/src/terminal-app.c
+@@ -236,6 +236,7 @@ strv_contains_gnome (char **strv)
+ static gboolean
+ terminal_app_should_use_headerbar (TerminalApp *app)
+ {
++  return TRUE;
+   gboolean set, use;
+   g_settings_get (app->global_settings, TERMINAL_SETTING_HEADERBAR_KEY, "mb", &set, &use);
+   if (set)
