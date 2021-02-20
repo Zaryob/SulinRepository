@@ -5,6 +5,7 @@
 # See the file http://www.gnu.org/licenses/gpl.txt
 
 from inary.actionsapi import autotools
+from inary.actionsapi import get
 from inary.actionsapi import inarytools
 
 def setup():
@@ -18,6 +19,6 @@ def check():
     autotools.make("check")
 
 def install():
-    autotools.install()
+    autotools.rawInstall("DESTDIR={}".format(get.installDIR()))
 
     inarytools.dodoc("COPYING", "NEWS", "README")

@@ -14,7 +14,7 @@
         <Summary>pipeline manipulation library</Summary>
         <Description>libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way.</Description>
         <!-- @savannah libpipeline -->
-        <Archive sha1sum="fa296e37495d1874c736b7182770baaf390ad9de">http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.2.tar.gz</Archive>
+        <Archive sha1sum="725e1104b864f06835e5620bfe689a5a00cbeb1f" >http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.3.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -29,7 +29,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Development files for libpipeline</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">libpipeline</Dependency>
+            <Dependency>libpipeline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -42,7 +42,7 @@
         <PartOf>system.doc</PartOf>
         <Summary>Manpages for libpipeline</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">libpipeline</Dependency>
+            <Dependency>libpipeline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="man">/usr/share/man</Path>
@@ -54,13 +54,20 @@
         <PartOf>system.doc</PartOf>
         <Summary>Documentation files for libpipeline</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">libpipeline</Dependency>
+            <Dependency>libpipeline</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
 <History>
+	<Update release="5">
+	<Date>2021-02-20</Date>
+	<Version>1.5.3</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
 	<Update release="4">
 	<Date>2020-04-14</Date>
 	<Version>1.5.2</Version>

@@ -8,38 +8,46 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 from inary.actionsapi import get
+import os
 
+def resetenv():
+    os.environ.clear()
+    os.environ["PATH"]="/bin:/usr/bin:/usr/sbin:/sbin"
+    
+def run(cmd):
+    print(cmd)
+    i=os.system(cmd)
+    if i!=0:
+        exit(i)
 def setup():
-    inarytools.flags.add("-fPIC -D_GNU_SOURCE")
-
-    autotools.autoreconf("-fi")
-    autotools.configure("--libdir=/usr/lib{0} \
-                         --enable-nls \
-                         --enable-audit \
+    lib=("32" if get.buildTYPE()=="emul32" else "")
+    resetenv()
+    if lib =="32":
+        os.environ["CFLAGS"]="-m32"
+        os.environ["CXXFLAGS"]="-m32"
+        os.environ["LDFLAGS"]="-m32"
+    run("sed -e 's/pam_rhosts//g' -i modules/Makefile.am")
+    run(" autoreconf -fvi")
+    run("./configure --libdir=/usr/lib{0} \
+                         --disable-nls \
+                         --disable-db \
+                         --disable-selinux \
                          --enable-securedir=/lib{0}/security \
-                         --enable-isadir='.'".format("32" if get.buildTYPE()=="emul32" else ""))
-
-    inarytools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+                         --enable-isadir='.'".format(lib))
 
 def build():
-    # Update .po files
-    autotools.make("-C po update-gmo")
+    resetenv()
 
-    autotools.make()
+    os.system("make")
 
 def check():
-    autotools.make("check")
+    resetenv()
+    run("make check")
 
     # dlopen check
-    shelltools.system("./dlopen-test.sh")
-    pass
+    run("./dlopen-test.sh")
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    if get.buildTYPE()=="emul32":
-        return
-
-    inarytools.removeDir("/usr/share/doc/Linux-PAM/")
-
-    inarytools.doman("doc/man/*.[0-9]")
-    inarytools.dodoc("CHANGELOG", "Copyright", "README")
+    pkgdir=get.installDIR()
+    resetenv()
+    run("make install DESTDIR=%s" % pkgdir)

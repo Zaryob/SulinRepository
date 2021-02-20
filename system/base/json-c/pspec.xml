@@ -14,13 +14,13 @@
         <Summary>A JSON implementation in C</Summary>
         <Description>json-c implements a reference counting object model that allows you to easily construct JSON objects in C, output them as JSON formatted strings and parse JSON formatted strings back into the C representation of JSON objects.</Description>
         <!-- @@@github json-c json-c -->
-        <Archive sha1sum="d4c667ab94e7051b1e78aa727f0d937caba971e9" type="targz">https://github.com/json-c/json-c/archive/json-c-0.13.1-20180305.tar.gz</Archive>
+        <Archive sha1sum="dd6473818fe66f16e747ae0df626a2e1559343b9" >https://github.com/json-c/json-c/archive/json-c-0.15-20200726.tar.gz</Archive>
     </Source>
 
     <Package>
         <Name>json-c</Name>
         <Files>
-            <Path fileType="library">/usr/lib/libjson-c.so*</Path>
+            <Path fileType="library">/usr/lib/libjson-c.*</Path>
         </Files>
     </Package>
     <Package>
@@ -47,6 +47,8 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+            <Path fileType="data">/usr/lib32/cmake</Path>
         </Files>
     </Package>
 
@@ -56,11 +58,18 @@
         <Summary>32-bit shared libraries for json-c</Summary>
         <BuildType>emul32</BuildType>
         <Files>
-            <Path fileType="library">/usr/lib32/libjson-c.so*</Path>
+            <Path fileType="library">/usr/lib32/libjson-c.*</Path>
         </Files>
     </Package>
 
     <History>
+	<Update release="3">
+	<Date>2021-02-20</Date>
+	<Version>0.15</Version>
+	<Comment>Automatic version upgrade.</Comment>
+	<Name>Ali Rıza KESKİN</Name>
+	<Email>parduscix@yandex.ru</Email>
+	</Update>
         <Update release="2">
             <Date>2019-09-19</Date>
             <Version>0.13.1</Version>
