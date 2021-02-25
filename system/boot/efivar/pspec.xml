@@ -11,13 +11,13 @@
         <IsA>app:console</IsA>
         <Summary>Tools and library to manipulate EFI variables</Summary>
         <Description>Tools and library to manipulate EFI variables.</Description>
-        <Archive sha1sum="1ef24e0a06e1a42d7a93ba7a76b2970659c7c0c0">https://github.com/rhboot/efivar/releases/download/37/efivar-37.tar.bz2</Archive>
+        <Archive sha1sum="158774dc673b2d2fdbc5c1b5e5622b496ffa433d">https://github.com/rhboot/efivar/archive/cff88dd96b9d43e2c5875a24ba6180b196890ded.zip</Archive>
         <BuildDependencies>
            <Dependency>popt-devel</Dependency>
         </BuildDependencies>
-        <Patches>
+        <!--Patches>
            <Patch>efivar-37-gcc_9-1.patch</Patch>
-        </Patches>
+        </Patches-->
     </Source>
     <Package>
         <Name>efivar</Name>
@@ -38,6 +38,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="2">
+            <Date>2019-04-12</Date>
+            <Version>37</Version>
+            <Comment>Rebuilded master branch</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-12</Date>
             <Version>37</Version>
