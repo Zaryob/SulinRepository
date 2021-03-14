@@ -18,5 +18,9 @@ def build():
 
 def install():
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
+    if get.buildTYPE() == "emul32":
+        inarytools.dosym("libjson-c.so","/usr/lib32/libjson-c.so.4")
+    else:
+        inarytools.dosym("libjson-c.so","/usr/lib/libjson-c.so.4")
 
     inarytools.dodoc("COPYING", "README", "ChangeLog", "AUTHORS", "NEWS")
