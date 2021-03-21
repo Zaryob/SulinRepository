@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://raw.githubusercontent.com/Zaryob/inary/master/inary-spec.dtd">
+<Inary>
+
+	<Source>
+		<Name>galculator</Name>
+		<Homepage>https://gitlab.com/sulinos/devel/inary</Homepage>
+		<Packager>
+			<Name>Ali Rıza KESKİN</Name>
+			<Email>parduscix@yandex.ru</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<Summary>GTK+ based scientific calculator</Summary>
+		<Description>GTK+ based scientific calculator</Description>
+		<Archive sha1sum="6421b21abcbbf979e0dfd5e7b1684d8bee735eaa">https://github.com/galculator/galculator/archive/refs/tags/v2.1.4.zip</Archive>
+		<BuildDependencies>
+			<Dependency>gtk3</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>galculator</Name>
+		<RuntimeDependencies>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="config">/etc</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="info">/usr/share/info</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="library">/lib</Path>
+			<Path fileType="library">/usr/libexec</Path>
+			<Path fileType="executable">/bin</Path>
+		</Files>
+	</Package>
+
+
+	<Package>
+		<Name>galculator-pages</Name>
+		<RuntimeDependencies>
+			<Dependency>galculator</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/share/man/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-03-21</Date>
+			<Version>1.0.0</Version>
+			<Comment>First release</Comment>
+			<Name>Ali Rıza KESKİN</Name>
+			<Email>parduscix@yandex.ru</Email>
+		</Update>
+	</History>
+</Inary>
