@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>dropbear</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/inary</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>MIT</License>
+        <Summary>Lighweight ssh</Summary>
+        <Description>Lightweight openssh alternative</Description>
+        <Archive sha1sum="db9109e8798af12239163770f404ddd0c794996e">https://github.com/mkj/dropbear/archive/refs/tags/DROPBEAR_2020.81.zip</Archive>
+    </Source>
+    <Package>
+        <Name>dropbear</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="executable">/bin</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>dropbear-pages</Name>
+        <RuntimeDependencies>
+            <Dependency>dropbear</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>dropbear-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>dropbear</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>dropbear-devel</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-04-09</Date>
+            <Version>2020.81</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
