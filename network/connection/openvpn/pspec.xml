@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>openvpn</Name>
+        <Homepage>https://github.com/OpenVPN/openvpn</Homepage>
+        <Packager>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Virtual Private Network</Summary>
+        <Description>An easy-to-use, robust and highly configurable VPN (Virtual Private Network)</Description>
+        <Archive sha1sum="3cd781388bc11fe6242f1688bf8c1f9a7b3c22a4">http://deb.debian.org/debian/pool/main/o/openvpn/openvpn_2.5.1.orig.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>openvpn</Name>
+        <IsA>postOps</IsA>
+        <RuntimeDependencies>
+            <Dependency>lzo</Dependency>
+            <Dependency>lz4</Dependency>
+        </RuntimeDependencies>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/init.d/openvpn" permission="0644" owner="root">openvpn.initd</AdditionalFile>
+        </AdditionalFiles>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="executable">/bin</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>openvpn-pages</Name>
+        <RuntimeDependencies>
+            <Dependency>openvpn</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>openvpn-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>openvpn</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>openvpn-devel</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-04-14</Date>
+            <Version>2.5.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+    </History>
+</INARY>
