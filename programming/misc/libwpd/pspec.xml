@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libwpd</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/inary</Homepage>
+        <Packager>
+            <Name>Your Name</Name>
+            <Email>yourmane@example.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Library for importing WordPerfect (tm) documents</Summary>
+        <Description>Library for importing WordPerfect (tm) documents</Description>
+        <Archive sha1sum="dd058a409ca434353eb0c3036b865c7fd81e0ec9">https://master.dl.sourceforge.net/project/libwpd/libwpd/libwpd-0.9.8/libwpd-0.9.8.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>librevenge-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libwpd</Name>
+        <RuntimeDependencies>
+            <Dependency>librevenge</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="executable">/bin</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libwpd-pages</Name>
+        <RuntimeDependencies>
+            <Dependency>libwpd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libwpd-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>libwpd</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libwpd-32bit</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="library">/lib32</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libwpd-devel</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-05-05</Date>
+            <Version>0.9.8</Version>
+            <Comment>First release</Comment>
+            <Name>Your Name</Name>
+            <Email>yourmane@example.org</Email>
+        </Update>
+    </History>
+</INARY>

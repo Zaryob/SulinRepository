@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE INARY SYSTEM "https://gitlab.com/sulinos/sulinproject/inary/raw/master/inary-spec.dtd">
+<INARY>
+    <Source>
+        <Name>libvisio</Name>
+        <Homepage>https://gitlab.com/sulinos/devel/inary</Homepage>
+        <Packager>
+            <Name>Your Name</Name>
+            <Email>yourmane@example.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Library providing ability to interpret and import visio diagrams</Summary>
+        <Description>Library providing ability to interpret and import visio diagrams</Description>
+        <Archive sha1sum="c33ac8b574382b2c9f261dc80021746456d81582">https://dev-www.libreoffice.org/src/libvisio/libvisio-0.1.7.tar.xz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>libvisio</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="executable">/bin</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libvisio-pages</Name>
+        <RuntimeDependencies>
+            <Dependency>libvisio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/man/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libvisio-docs</Name>
+        <RuntimeDependencies>
+            <Dependency>libvisio</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libvisio-32bit</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+            <Path fileType="library">/lib32</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libvisio-devel</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-05-05</Date>
+            <Version>0.1.7</Version>
+            <Comment>First release</Comment>
+            <Name>Your Name</Name>
+            <Email>yourmane@example.org</Email>
+        </Update>
+    </History>
+</INARY>
