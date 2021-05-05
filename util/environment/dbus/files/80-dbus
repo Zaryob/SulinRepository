@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # launches a session dbus instance
-
+export XDG_RUNTIME_DIR=/run/user/`id -u`
 dbuslaunch="`which dbus-launch 2>/dev/null`"
 if [ -n "$dbuslaunch" ] && [ -x "$dbuslaunch" ] && [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
   if [ -n "$command" ]; then
@@ -11,3 +11,18 @@ if [ -n "$dbuslaunch" ] && [ -x "$dbuslaunch" ] && [ -z "$DBUS_SESSION_BUS_ADDRE
   fi
 fi
 
+if [ -n "$DBUS_SESSION_BUS_ADDRESS" ] && \
+    [ -x "/usr/bin/dbus-update-activation-environment" ]; then
+  # subshell so we can unset environment variables
+  (
+    # unset login-session-specifics
+    unset XDG_SEAT
+    unset XDG_SESSION_ID
+    unset XDG_VTNR
+
+    # tell dbus-daemon --session (and systemd --user, if running)
+    # to put the Xsession's environment in activated services'
+    # environments
+    dbus-update-activation-environment --verbose --systemd --all
+  )
+fi

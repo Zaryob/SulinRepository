@@ -3,7 +3,7 @@
 import os
 
 OUR_ID = 101
-OUR_NAME = "dbus"
+OUR_NAME = "messagebus"
 OUR_DESC = "dbus"
 
 

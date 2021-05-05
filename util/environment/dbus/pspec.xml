@@ -100,6 +100,7 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>expat-32bit</Dependency>
+           <Dependency>elogind-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/cmake</Path>
@@ -133,14 +134,21 @@
         </Files>
     </Package>
     <History>
-	<Update release="10">
+      	<Update release="11">
+            <Date>2020-07-05</Date>
+            <Version>1.13.18</Version>
+            <Comment>Dbus archlinuxtaki gibi derlendi.</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
+	      <Update release="10">
             <Date>2020-07-05</Date>
             <Version>1.13.18</Version>
             <Comment>Yeni sürüme göçürüldü. Eski sürümdeki postops ve diğer hatalar giderildi.</Comment>
             <Name>Süleyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-	<Update release="9">
+	      <Update release="9">
             <Date>2019-12-16</Date>
             <Version>1.13.14</Version>
             <Comment>Servis dosyasındaki hata giderildi</Comment>
