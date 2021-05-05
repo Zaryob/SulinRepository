@@ -27,6 +27,7 @@ command_args="
 	--writepid $pidfile
 	--setenv RC_SVCNAME $RC_SVCNAME
 	--setenv PEER_DNS $peer_dns
+	--dev tun-openvpn
 	$command_args"
 
 required_dirs="$cfgdir"

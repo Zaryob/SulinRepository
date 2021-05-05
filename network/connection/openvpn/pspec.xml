@@ -21,7 +21,11 @@
             <Dependency>lz4</Dependency>
         </RuntimeDependencies>
         <AdditionalFiles>
-            <AdditionalFile target="/etc/init.d/openvpn" permission="0644" owner="root">openvpn.initd</AdditionalFile>
+            <AdditionalFile target="/etc/init.d/openvpn" permission="0755" owner="root">openvpn.initd</AdditionalFile>
+            <AdditionalFile target="/etc/openvpn/openvpn.conf" permission="0644" owner="root">openvpn.conf</AdditionalFile>
+          <AdditionalFile target="/etc/conf.d/openvpn" permission="0644" owner="root">openvpn.confd</AdditionalFile>
+          <AdditionalFile target="/etc/openvpn/up.sh" permission="0755" owner="root">openvpn.up</AdditionalFile>
+          <AdditionalFile target="/etc/openvpn/down.sh" permission="0755" owner="root">openvpn.down</AdditionalFile>
         </AdditionalFiles>
         <Files>
             <Path fileType="config">/etc</Path>

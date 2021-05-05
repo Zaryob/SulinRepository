@@ -9,7 +9,8 @@ from inary.actionsapi import shelltools as shell
 from inary.actionsapi import get
 #more information : https://gitlab.com/sulinos/inary/tree/master/inary/actionsapi
 def setup():
-    tools.configure()
+    tools.configure("--enable-plugins \
+                    --enable-x509-alt-username")
 def build():
     tools.make()
 
