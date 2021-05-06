@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A framework for defining and tracking users, login sessions, and seats</Summary>
         <Description>ConsoleKit is a system daemon for tracking what users are logged into the system and how they interact with the computer (e.g. which keyboard and mouse they use).</Description>
-        <Archive sha1sum="bde79a4aa1bf3dc69a8e03731c7eb06e2dbda2d3">https://www.freedesktop.org/software/ConsoleKit/dist/ConsoleKit-0.4.6.tar.xz</Archive>
+        <Archive sha1sum="79d63c34e0bf60e1ae7b109e71098121f40ae3ab">https://github.com/ConsoleKit2/ConsoleKit2/archive/refs/tags/1.2.2.zip</Archive>
         <BuildDependencies>
             <Dependency>acl-devel</Dependency>
             <Dependency>pam-devel</Dependency>
@@ -77,6 +77,13 @@
     </Package>
 
     <History>
+     	<Update release="5">
+            <Date>2020-02-04</Date>
+            <Version>1.2.2</Version>
+            <Comment>Missing initd script added.</Comment>
+            <Name>Ali Rıza KESKİN</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
     	<Update release="4">
             <Date>2020-02-04</Date>
             <Version>0.4.6</Version>

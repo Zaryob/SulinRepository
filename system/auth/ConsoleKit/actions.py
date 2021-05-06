@@ -9,7 +9,10 @@ from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
 from inary.actionsapi import shelltools
 
+WorkDir="ConsoleKit2-1.2.2"
+
 def setup():
+    autotools.autogen()
     autotools.configure("")
 
 def build():

@@ -9,7 +9,15 @@ from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
 def setup():
-    mesontools.meson_configure()
+    mesontools.meson_configure("-Dcgroup-controller=elogind \
+		-Dhalt-path=/sbin/halt \
+		-Drootlibexecdir=/usr/libexec/elogind \
+		-Dreboot-path=/sbin/reboot \
+		-Ddefault-hierarchy=hybrid \
+		-Ddefault-kill-user-processes=false \
+		-Dpolkit=true \
+		-Ddebug=true --buildtype=debug \
+		-Dman=false")
 
 def build():
     mesontools.ninja_build()

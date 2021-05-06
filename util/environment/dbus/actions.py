@@ -17,19 +17,20 @@ def setup():
     #    inarytools.dosed(f, "\$\(localstatedir\)(\/run\/dbus)", "\\1")
     options = "PYTHON=/usr/bin/python3 \
                --disable-selinux \
-               --with-xml=expat \
-		       --with-dbus-user=messagebus \
-		       --with-system-pid-file=/var/run/dbus.pid \
-		       --disable-verbose-mode \
-		       --disable-static \
-		       --enable-inotify \
-		       --disable-dnotify \
-		       --enable-modular-tests=yes \
-		       --disable-asserts \
-		       --enable-user-session \
-		       --disable-xml-docs \
-		       --with-session-socket-dir=/tmp \
-		       --with-x"
+               --with-dbus-user=messagebus \
+		       --with-system-pid-file=/run/dbus/pid \
+               --with-system-socket=/run/dbus/system_bus_socket \
+               --with-console-auth-dir=/run/console/ \
+               --enable-inotify \
+               --enable-elogind \
+               --disable-static \
+               --disable-verbose-mode \
+               --disable-asserts \
+               --without-systemdsystemunitdir \
+               --disable-systemd \
+               --disable-user-session \
+               --enable-x11-autolaunch \
+               --disable-xml-docs"
 
 
     if get.buildTYPE() == "emul32":
