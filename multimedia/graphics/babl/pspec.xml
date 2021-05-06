@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A dynamic, any to any, pixel format translation library</Summary>
         <Description>babl is a library that allows converting between different methods of storing pixels known as pixel formats that have with different bitdepths and other data representations, color models and component permutations.</Description>
-        <Archive sha1sum="c9b3dc51c9e266f7431d31927b7c09fd01b42bc4">https://download.gimp.org/pub/babl/0.1/babl-0.1.74.tar.xz</Archive>
+        <Archive sha1sum="2bc00a664812c3980b2e8cf95a32ecefe943edf2">https://download.gimp.org/pub/babl/0.1/babl-0.1.86.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gobject-introspection</Dependency>
             <Dependency>lcms2-devel</Dependency>
@@ -30,6 +30,13 @@
 
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>0.1.86</Version>
+            <Comment>First release</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>0.1.74</Version>

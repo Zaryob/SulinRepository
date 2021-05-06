@@ -10,7 +10,7 @@
         <License>GPLv2</License>
         <Summary>GNU Image Manipulation Program</Summary>
         <Description>GIMP is a mature image editor with many advanced features and plugin support.</Description>
-        <Archive sha1sum="9dd171ca05c60816d641ca2edf4806639eda99a4">https://download.gimp.org/pub/gimp/v2.10/gimp-2.10.18.tar.bz2</Archive>
+        <Archive sha1sum="89aba13967e4eb1a101af6229da15c1d976f9576">https://download.gimp.org/pub/gimp/v2.10/gimp-2.10.24.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xdg-utils</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
@@ -101,6 +101,7 @@
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/application-registry</Path>
             <Path fileType="data">/usr/share/applications</Path>
@@ -115,6 +116,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-09-18</Date>
+            <Version>2.10.24</Version>
+            <Comment>Update</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-09-18</Date>
             <Version>2.10.18</Version>
