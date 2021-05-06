@@ -3,7 +3,7 @@
 <INARY>
     <Source>
         <Name>curl</Name>
-        <Homepage>http://curl.haxx.se/</Homepage>
+        <Homepage>http://curl.se/</Homepage>
         <Packager>
           <Name>Süleyman POYRAZ</Name>
           <Email>zaryob.dev@gmail.com</Email>
@@ -14,7 +14,7 @@
         <IsA>library</IsA>
         <Summary>A ut ility for getting files from remote servers</Summary>
         <Description>curl is a command line tool for transferring data with URL syntax, supporting various protocols.</Description>
-        <Archive sha1sum="b8c8d8f33e9fa99d7ba6e35036715f8a76356f66">https://curl.haxx.se/download/curl-7.72.0.tar.xz</Archive>
+        <Archive sha1sum="d38ab79ef7a6d92df91ca8dfcf9a5eaf7e25b725">https://curl.se/download/curl-7.76.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>glibc-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
@@ -103,6 +103,13 @@
         </Files>
     </Package>
     <History>
+      <Update release="7">
+            <Date>2019-12-13</Date>
+            <Version>7.76.1</Version>
+            <Comment>Release up</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
       <Update release="6">
             <Date>2019-12-13</Date>
             <Version>7.72.0</Version>

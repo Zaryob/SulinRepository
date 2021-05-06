@@ -3,7 +3,8 @@
 #
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
-
+import os
+env=os.environ.copy()
 from inary.actionsapi import shelltools
 from inary.actionsapi import autotools
 from inary.actionsapi import inarytools
@@ -11,9 +12,7 @@ from inary.actionsapi import get
 
 def setup():
     if get.buildTYPE() == "emul32":
-        shelltools.export("CFLAGS","-m32")
-        shelltools.export("CXXFLAGS","-m32")
-        shelltools.export("LDFLAGS","-m32")
+        set_emul32()
     autotools.configure("--disable-static \
                          --enable-dependency-tracking \
                          --disable-ldap \
@@ -29,6 +28,8 @@ def setup():
                          --without-librtmp \
                          --without-zstd \
                          --without-brotli \
+                         --with-nghttp2 \
+                         --with-ngtcp2\
                          --enable-ipv6 \
                          --enable-http \
                          --enable-ftp \
@@ -51,10 +52,18 @@ def setup():
 
 def build():
     if get.buildTYPE() == "emul32":
-        shelltools.export("CC","gcc -m32")
-        shelltools.export("CXX","g++ -m32")
-        shelltools.export("LDFLAGS","-m32")
+        set_emul32()
+        shelltools.system("make -j$(nproc)")
+        return
     autotools.make()
+
+def set_emul32():
+    os.environ.clear()
+    os.environ.update(env)
+    shelltools.export("CC", "gcc -m32")
+    shelltools.export("CXX", "g++ -m32")
+    shelltools.export("HOST", "x86_64")
+    shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
 
 def check():
     pass

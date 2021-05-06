@@ -75,9 +75,13 @@ def install():
         inarytools.dosym("lib", "/lib64")
         inarytools.dosym("lib32", "/libx32")
         inarytools.dosym("lib", "/usr/lib64")
+        inarytools.dosym("../lib", "/usr/lib/x86_64-linux-gnu")
+        inarytools.dosym("../lib32", "/usr/lib32/i686-linux-gnu")
         inarytools.dosym("lib32", "/usr/libx32")
         inarytools.dosym("lib", "/usr/local/lib64")
         inarytools.dosym("lib32", "/usr/local/libx32")
+        inarytools.dosym("../lib", "/usr/local/lib/x86_64-linux-gnu")
+        inarytools.dosym("../lib32", "/usr/local/lib32/i686-linux-gnu")
 
     # Adjust permissions
     shelltools.system("chmod 755 -R {}/".format(get.installDIR()))
