@@ -8,6 +8,8 @@ from inary.actionsapi import mesontools
 from inary.actionsapi import inarytools
 from inary.actionsapi import get
 
+WorkDir="switchboard-2.4.0"
+
 def setup():
     mesontools.meson_configure()
 

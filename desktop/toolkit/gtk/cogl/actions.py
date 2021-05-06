@@ -15,10 +15,9 @@ from inary.actionsapi import get
 
 def setup():
     shelltools.system("NOCONFIGURE=1 ./autogen.sh")
-    autotools.configure("--enable-egl-backend        \
-            --enable-evdev-input        \
-            --enable-wayland-backend    \
-            --enable-wayland-composito\
+    autotools.configure("--enable-gles2 \
+            --enable-{kms,wayland}-egl-platform \
+            --enable-wayland-egl-server \
             --disable-gtk-doc --disable-docs --disable-gtk-doc-html")
 
 def build():
