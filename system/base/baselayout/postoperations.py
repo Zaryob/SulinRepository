@@ -40,6 +40,7 @@ def postInstall():
         os.chown("/data/user/root/", 0, 0)
         os.chmod("/data/user/root/", 0o700)
 
+    os.chmod("/tmp",0o777)
 
     # Save user defined DNS
     if not os.access("/etc/resolv.default.conf", os.R_OK):

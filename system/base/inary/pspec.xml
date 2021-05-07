@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>INARY is the package management system of Sulin</Summary>
         <Description>INARY is a modern package management system implemented in Python. Some of its main features are: package sources are written in XML and python, implements all functions through a simple-to-use API, integrates low-level and high-level package management features.</Description>
-        <Archive sha1sum="805169d79fd2b447de52679b316168880c8bf82a">https://gitlab.com/sulinos/devel/inary/-/archive/1.5.0/inary-1.5.0.zip</Archive>
+        <Archive sha1sum="04f8eacf34cca636db0f64747b4cbef6a248d0ce">https://gitlab.com/sulinos/devel/inary/-/archive/1.5.0/inary-1.5.0.zip</Archive>
         <BuildDependencies>
             <Dependency>python3</Dependency>
             <Dependency>gettext</Dependency>

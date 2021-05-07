@@ -85,7 +85,6 @@ def install():
 
     # Adjust permissions
     shelltools.system("chmod 755 -R {}/".format(get.installDIR()))
-    shelltools.chmod("{}/tmp".format(get.installDIR()), 0o1777)
     shelltools.chmod("{}/usr/share/baselayout/shadow".format(get.installDIR()), 0o600)
     shelltools.chmod("{}/data/user/root".format(get.installDIR()), 0o600)
 

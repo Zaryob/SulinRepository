@@ -1,5 +1,6 @@
 *.inary
 *.swp
+*.pyc
 blib
 Makefile
 !Makefile.PL
