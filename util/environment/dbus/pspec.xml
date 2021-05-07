@@ -23,6 +23,9 @@
             <Dependency>xmlto</Dependency>
             <Dependency>docbook-xml</Dependency>
         </BuildDependencies>
+        <Patches>
+        <Patch>dbus-elogind.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>

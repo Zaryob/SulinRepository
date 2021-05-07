@@ -16,21 +16,22 @@ def setup():
     #for f in ["bus/Makefile.am", "bus/Makefile.in"]:
     #    inarytools.dosed(f, "\$\(localstatedir\)(\/run\/dbus)", "\\1")
     options = "PYTHON=/usr/bin/python3 \
-               --disable-selinux \
-               --with-dbus-user=messagebus \
-		       --with-system-pid-file=/run/dbus/pid \
-               --with-system-socket=/run/dbus/system_bus_socket \
-               --with-console-auth-dir=/run/console/ \
-               --enable-inotify \
-               --enable-elogind \
-               --disable-static \
-               --disable-verbose-mode \
-               --disable-asserts \
-               --without-systemdsystemunitdir \
-               --disable-systemd \
-               --disable-user-session \
-               --enable-x11-autolaunch \
-               --disable-xml-docs"
+        --disable-xml-docs\
+        --disable-selinux \
+        --enable-verbose-mode \
+        --libexecdir=/usr/lib/dbus-1.0 \
+        --with-dbus-user=dbus \
+        --with-system-pid-file=/run/dbus/pid \
+        --with-system-socket=/run/dbus/system_bus_socket \
+        --with-console-auth-dir=/run/console/ \
+        --enable-inotify \
+        --enable-elogind \
+        --disable-static \
+        --disable-asserts \
+        --without-systemdsystemunitdir \
+        --disable-systemd \
+        --disable-user-session \
+        --enable-x11-autolaunch"
 
 
     if get.buildTYPE() == "emul32":
