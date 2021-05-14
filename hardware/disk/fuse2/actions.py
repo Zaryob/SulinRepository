@@ -36,6 +36,6 @@ def install():
     inarytools.dosym("/bin/ulockmgr_server", "/usr/bin/ulockmgr_server2")
 
     # Move pkgconfig file to /usr/lib
-    inarytools.domove("/lib/pkgconfig", "/usr/lib/")
+    #inarytools.domove("/lib/pkgconfig", "/usr/lib/")
 
     inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README.NFS")

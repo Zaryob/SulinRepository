@@ -14,12 +14,13 @@
     </Source>
 
     <Package>
+        <IsA>postOps</IsA>
         <Name>fuse2</Name>
         <Files>
             <Path fileType="executable">/bin</Path>
             <Path fileType="executable">/sbin</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
