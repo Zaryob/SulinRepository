@@ -27,7 +27,7 @@ def build():
 
 
 def install():
-    shelltools.cd("../linux-5.9.6")
+    shelltools.cd("../linux-5.12.6")
     kerneltools.install(distro="libre-sulinos")
     kerneltools.installModuleHeaders(distro="libre-sulinos")
     # add objtool for external module building and enabled VALIDATION_STACK option
