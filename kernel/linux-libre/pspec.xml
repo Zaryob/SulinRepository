@@ -13,10 +13,10 @@
         <PartOf>kernel.linux</PartOf>
         <Summary>The Linux libre kernel (the core of the Linux operating system) for Sulin</Summary>
         <Description>kernel contains the Linux kernel, the core of any Linux operating system. ddtionally libre kernel is a cleant up version of original kernel. The kernel handles the basic functions of the operating system: memory allocation, process allocation, device input and output, etc.</Description>
-        <Archive sha1sum="652a2af892eee900fb31438339dccf0ad1e639aa">http://linux-libre.fsfla.org/pub/linux-libre/releases/5.9.6-gnu/linux-libre-5.9.6-gnu.tar.xz</Archive>
+        <Archive sha1sum="f78c003e1d9190118b2c947db24e06d7272b9e1c">https://linux-libre.fsfla.org/pub/linux-libre/releases/5.12.6-gnu/linux-libre-5.12.6-gnu.tar.xz</Archive>
         <AdditionalFiles>
             <AdditionalFile permission="0755" target="generate-module-list">scripts/generate-module-list</AdditionalFile>
-            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.8.0-gnu</AdditionalFile>
+            <AdditionalFile permission="0755" target=".config">configs/kernel-x86_64-config-5.12.6-gnu</AdditionalFile>
         </AdditionalFiles>
         <BuildDependencies>
             <Dependency>bc</Dependency>
@@ -52,6 +52,13 @@
     </Package>
         
     <History>
+        <Update release="7">
+            <Date>2020-04-24</Date>
+            <Version>5.12.6</Version>
+            <Comment>Package is rebuilded and released up.</Comment>
+            <Name>S��leyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="6">
             <Date>2020-04-24</Date>
             <Version>5.9.6</Version>
@@ -59,7 +66,6 @@
             <Name>S��leyman Poyraz</Name>
             <Email>zaryob.dev@gmail.com</Email>
         </Update>
-
         <Update release="5">
             <Date>2020-04-24</Date>
             <Version>5.7.2</Version>
