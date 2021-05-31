@@ -50,6 +50,7 @@ def setup():
                --enable-kernel=4.19.217 \
                --with-headers=/usr/include \
                --enable-stackguard-randomization \
+               --without-selinux \
                --disable-werror"
 
     if get.buildTYPE() == "emul32":
