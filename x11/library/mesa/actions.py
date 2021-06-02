@@ -18,20 +18,19 @@ shelltools.export("LDFLAGS","")
 def setup():
 
     options ="\
-     -D b_lto=false \
+    -D b_lto=true \
     -D b_ndebug=true \
     -D platforms=x11,wayland \
     -D dri-drivers=i915,i965,r100,r200,nouveau \
-    -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,iris \
-    -D vulkan-drivers=amd,intel \
-    -D vulkan-overlay-layer=true \
-    -D vulkan-device-select-layer=true \
+    -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,swr,iris,zink \
+    -D vulkan-drivers=amd,intel,swrast \
+    -D vulkan-layers=device-select,intel-nullhw,overlay \
     -D swr-arches=avx,avx2 \
     -D dri3=enabled \
     -D egl=enabled \
     -D gallium-extra-hud=true \
     -D gallium-nine=true \
-    -D gallium-omx=disabled \
+    -D gallium-omx=bellagio \
     -D gallium-opencl=icd \
     -D gallium-va=enabled \
     -D gallium-vdpau=enabled \
@@ -45,8 +44,12 @@ def setup():
     -D libunwind=enabled \
     -D llvm=enabled \
     -D lmsensors=enabled \
-    -D osmesa=gallium \
-    -D shared-glapi=enabled "
+    -D osmesa=true \
+    -D shared-glapi=enabled \
+    -D microsoft-clc=disabled \
+    -D valgrind=disabled \
+    -D LLVM_BUILD_LLVM_DYLIB=ON \
+    -D LLVM_LINK_LLVM_DYLIB=ON "
 
     if get.buildTYPE() == "emul32":
         shelltools.export("CC","gcc -m32")
