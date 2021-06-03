@@ -20,6 +20,7 @@ def setup():
     options ="\
     -D b_lto=true \
     -D b_ndebug=true \
+    -D zstd=disabled \
     -D platforms=x11,wayland \
     -D dri-drivers=i915,i965,r100,r200,nouveau \
     -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,swr,iris,zink \
