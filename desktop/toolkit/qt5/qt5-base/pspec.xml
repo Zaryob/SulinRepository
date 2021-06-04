@@ -14,7 +14,7 @@
         <License>LGPL3</License>
         <License>FDL</License>
         <License>custom</License>
-        <Archive sha1sum="f5191757d1125aa7750a3f5d39321490477cfb65" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.0/submodules/qtbase-everywhere-src-5.15.0.tar.xz</Archive>
+        <Archive sha1sum="b5ad67fc6381ad7fae0296944734198488d096a3" type="tarxz">http://download.qt.io/official_releases/qt/5.15/5.15.2/submodules/qtbase-everywhere-src-5.15.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>at-spi2-core-devel</Dependency>
             <Dependency>ccache</Dependency>
@@ -82,6 +82,9 @@
             <Dependency>llvm-clang-devel</Dependency>
             <Dependency>dbus-x11</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>qt5-qtbase-gcc11.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -319,6 +322,13 @@
     </Package-->
 
     <History>
+        <Update release="8">
+            <Date>2020-05-27</Date>
+            <Version>5.15.2</Version>
+            <Comment>qt5.15.2 has been compiled.</Comment>
+            <Name>Suleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="7">
             <Date>2020-05-27</Date>
             <Version>5.15.0</Version>
