@@ -15,7 +15,7 @@
         <PartOf>desktop.xfce.base</PartOf>
         <Summary>Xfce extension library</Summary>
         <Description>exo is an extension library to Xfce, developed by os-cillation. While Xfce comes with quite a few libraries that are targeted at desktop development, exo is targeted at application development.</Description>
-        <Archive sha1sum="a81182cc937bef22d0224231f88246757a8c136f" >https://archive.xfce.org/src/xfce/exo/4.15/exo-4.15.2.tar.bz2</Archive>
+        <Archive sha1sum="7f5fa747df1a9b48531b4ff13fb7f7671088f0aa" >https://archive.xfce.org/src/xfce/exo/4.16/exo-4.16.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>perl-URI</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
@@ -83,6 +83,13 @@
     </Package>
 
     <History>
+          <Update release="3">
+            <Date>2019-09-14</Date>
+            <Version>4.16.0</Version>
+            <Comment>Update</Comment>
+            <Name>Ali Rıza Keskin</Name>
+            <Email>parduscix@yandex.ru</Email>
+        </Update>
           <Update release="2">
             <Date>2019-09-14</Date>
             <Version>4.15</Version>

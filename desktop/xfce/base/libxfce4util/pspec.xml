@@ -13,7 +13,7 @@
         <PartOf>desktop.xfce.base</PartOf>
         <Summary>Xfce basic utility library</Summary>
         <Description>Libxfce4util is a basic utility non-GUI functions for Xfce desktop environment.</Description>
-        <Archive sha1sum="44fdcf3d3896fe7798a50dc295f86f5c74624132" >https://archive.xfce.org/src/xfce/libxfce4util/4.15/libxfce4util-4.15.3.tar.bz2</Archive>
+        <Archive sha1sum="67889fcd5cfff9b9c14fd90c2d4e3f3383633fbc" >https://archive.xfce.org/src/xfce/libxfce4util/4.16/libxfce4util-4.16.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xdg-user-dirs</Dependency>
         </BuildDependencies>
@@ -50,6 +50,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-09-14</Date>
+            <Version>4.16.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Süleyman Poyraz</Name>
+            <Email>zaryob.dev@gmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-09-14</Date>
             <Version>4.15.3</Version>

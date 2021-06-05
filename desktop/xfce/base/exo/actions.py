@@ -22,7 +22,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     #legacy support
-    inarytools.dosym("libexo-1.so","/usr/lib/libexo-1.so")
-    inarytools.dosym("libexo-1.so","/usr/lib/libexo-1.so.0")
-    
-    inarytools.dodoc("AUTHORS", "COPYING*", "ChangeLog", "NEWS", "README", "THANKS")
+    inarytools.dosym("libexo-2.so","/usr/lib/libexo-1.so")
+    inarytools.dosym("libexo-2.so.0","/usr/lib/libexo-1.so.0")
+
+    inarytools.dodoc("AUTHORS", "COPYING*", "ChangeLog", "NEWS", "THANKS")

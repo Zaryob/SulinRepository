@@ -21,4 +21,4 @@ def install():
     
     inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
 
-    inarytools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS", "README")
+    inarytools.dodoc("AUTHORS", "COPYING", "ChangeLog", "NEWS")

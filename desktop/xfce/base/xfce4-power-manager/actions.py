@@ -24,4 +24,4 @@ def install():
     f.write("OnlyShowIn=XFCE;")
     f.close()
 
-    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "TODO")
+    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "TODO")

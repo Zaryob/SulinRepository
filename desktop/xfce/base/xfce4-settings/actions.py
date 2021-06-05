@@ -28,4 +28,4 @@ def install():
     inarytools.removeDir("/usr/share/xfce4/helpers/")
     inarytools.remove("/etc/xdg/xfce4/helpers.rc")
     inarytools.remove("/usr/share/icons/hicolor/icon-theme.cache")
-    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "TODO")
+    inarytools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "TODO")

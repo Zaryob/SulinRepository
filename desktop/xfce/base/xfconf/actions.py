@@ -27,8 +27,7 @@ def install():
         inarytools.dosym("libxfconf-0.so.3.0.0","/usr/lib/libxfconf-0.so.3")
         inarytools.dosym("libxfconf-0.so.3.0.0","/usr/lib/libxfconf-0.so")
     except Exception:
-        print()
-        
-    
-    inarytools.dodoc('AUTHORS', 'ChangeLog', 'NEWS', 'README', 'TODO', 'COPYING')
+        pass
+
+    inarytools.dodoc('AUTHORS', 'ChangeLog', 'NEWS', 'TODO', 'COPYING')
 
